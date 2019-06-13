@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Abeille's documentation!
+Welcome to Abeille!
 ===================================
 
 Le manuel de l'utilisateur possède plusieurs chapitre essayant de détailler chaque sujet.
@@ -26,7 +26,7 @@ En tant qu'utilisateur final, le chapitre :doc:`Tuto` vous sera probablement le 
 Cagnotte
 ========
 
-`Cagnotte pour acheter des équipements pour supporter le développement. <https://paypal.me/KiwiHC16>`_
+`Participez à la cagnotte pour acheter des équipements pour supporter le développement. <https://paypal.me/KiwiHC16>`_
 
 .. image:: images/Cagnote.png
 
@@ -35,7 +35,7 @@ Cagnotte
 Le budget depuis le début est assez conséquent, surtout quand j'investis dans des équipements que je n'utiliserai pas moi même.
 Alors j'ouvre une cagnotte pour financer l'achat d'équipements pour faciliter l'intégration dans Abeille.
 L'idée est d'avoir au moins un exemplaire de ce que les utilisateurs d'Abeille utilisent.
-Je n'ai aucune idée de votre participation à cette cagnotte mais comme tout est open source depuis le début, la cagnotte sera aussi `complètement transparente (Tous les détails) <https://github.com/KiwiHC16/Abeille/blob/master/README.md>`_.
+Je n'ai aucune idée de votre participation à cette cagnotte mais comme tout est open source depuis le début, la :doc:`Cagnotte` est aussi complètement transparente.
 
 Abeille
 ========
@@ -206,6 +206,7 @@ J'ai developpé mon propre module :doc:`Wifi` du fait de petits soucis sur le pr
    :maxdepth: 3
    :caption: Contents:
 
+   Cagnotte
    Changelog
    Cron
    Debug

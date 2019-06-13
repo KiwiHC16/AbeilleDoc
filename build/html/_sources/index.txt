@@ -200,48 +200,6 @@ Ce chapitre ne devrait être utilisé que pour les personnes qui developpe le fi
 Wifi
 ====
 
-J'ai developpé mon propre module :doc:`Wifi` du fait de petits soucis sur le premier module disponible. Finalement il fonctionne tellement bien et fourni une protection coupure electrique avec une batterie que je l'utilise dans toutes configuration et mêm avec mon sniffer ZigBee ...
+J'ai développé mon propre module :doc:`Wifi` du fait de petits soucis sur le premier module disponible. Finalement il fonctionne tellement bien et fourni une protection coupure électrique avec une batterie que je l'utilise dans toutes configuration et même avec mon sniffer ZigBee ...
 
-.. toctree::
-   :maxdepth: 3
-   :caption: Contents:
 
-   Cagnotte
-   Changelog
-   Cron
-   Debug
-   Developpement
-   Docker
-   Eurotronics
-   Groups
-   Health
-   Help
-   Ikea
-   Inclusion
-   InstallationPiZiGate
-   Installation
-   Livolo
-   ModeleJson
-   OSRAM
-   Parametrage
-   PhilipsHue
-   Polling
-   Presentation
-   Profalux
-   Radio
-   Remplacement
-   Scenes
-   Systeme
-   Timer
-   Tuto
-   Widget
-   Wifi
-   Xiaomi
-   ZiGateBackupRestore
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

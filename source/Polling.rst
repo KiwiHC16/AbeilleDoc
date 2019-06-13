@@ -1,20 +1,26 @@
+#######
 Polling
-=======
+#######
 
+****
 Ping
-----
+****
 
 Ping toutes les 15 minutes
 
-Par défaut le cron, toutes les 15 minutes, fait un ping des équipements qui n'ont pas de batterie définie. On suppose qu'ils sont sur secteur et que donc ils écoutent et qu'ils répondent à la requête.
+Par défaut le cron, toutes les 15 minutes, fait un "ping" des équipements qui n'ont pas de batterie définie. On suppose qu'ils sont sur secteur et que donc ils écoutent et qu'ils répondent à la requête.
 
-== État
+****
+État
+****
 
 État toutes les minutes
 
 Récupère les infos que ne remonte pas par défaut toutes les minutes si défini dans l'équipement.
 
-== Santé
+*****
+Santé
+*****
 
 Santé des équipements
 

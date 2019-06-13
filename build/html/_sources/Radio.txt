@@ -4,7 +4,7 @@ Radio
 
 La solution zigbee fonctionne sur la base d'ondes radios. Je vais essayer dans cette page de vous partager des informations pour optimiser votre installation.
 
-La bande de fréquence utilisée est autour de 2.4GHz comme le wifi. Cette bande de fréquence est sub-divisée en 16 canaux numérotés de 11 à 26 pour le zigbee. Le wifi utilise cette même bande mais de façon différente avec des canaux bien plus larges numérotés de 1 à 13. Ne pas confondre les deux. Le Bluetooth utilise lui aussi cette bande de fréquences. 
+La bande de fréquence utilisée est autour de 2.4GHz comme le wifi. Cette bande de fréquence est sub-divisée en 16 canaux numérotés de 11 à 26 pour le zigbee. Le wifi utilise cette même bande mais de façon différente avec des canaux bien plus larges numérotés de 1 à 13. Ne pas confondre les deux. Le Bluetooth utilise lui aussi cette bande de fréquences.
 
 .. image:: images/Capture_d_ecran_2019_06_13_a_11_54_03.png
 
@@ -14,11 +14,11 @@ Une grosse difference entre le zigbee et le wifi est que l'un fonctionne en rés
 
 .. image:: images/Capture_d_ecran_2019_06_13_a_11.23_50.png
 
-Mais un réseau maillé doit s'organiser pour propager les messages. C'est comme à la poste, vous mettez l'adresse sur l'enveloppe, vous donner l'enveloppe au facteur, qui la donner au prochaine facteur en fonction de l'adresse, etc. Ca suppose que les facteurs connaissent les autres facteurs et s'ils sont capables de distribuer l'enveloppe au prochain facteur jusqu'à destination. La magie de Zigbee est que tous les équipements sur secteur (220V) sont des facteurs, qu'ils discutent entre eux, s'organisent et que tous cela est transparent pour nous utilisateurs. 
+Mais un réseau maillé doit s'organiser pour propager les messages. C'est comme à la poste, vous mettez l'adresse sur l'enveloppe, vous donner l'enveloppe au facteur, qui la donner au prochaine facteur en fonction de l'adresse, etc. Ca suppose que les facteurs connaissent les autres facteurs et s'ils sont capables de distribuer l'enveloppe au prochain facteur jusqu'à destination. La magie de Zigbee est que tous les équipements sur secteur (220V) sont des facteurs, qu'ils discutent entre eux, s'organisent et que tous cela est transparent pour nous utilisateurs.
 
 Maintenant que faire si notre enveloppe n'arrive jamais à destination. Par exemple depuis Jeedom on envoie une demande d'allumage d'une ampoule et celle ci ne réagit pas. Comme dit ci dessus, les facteurs (routeurs) s'auto-organise et nous ne pouvons pas les forcer. Heureusement, ils partagent certaines informations si on leur demande. Par exemple, il partage les LQI.
 
-LQI ? 
+LQI ?
 Cela veut dire Link Quality Index. C'est un indicateur de la qualité d'une liaison entre deux équipements. Chaque routeur peut nous dire les équipements qu'il voit et avec qu'elle qualité. Abeille récupère ces informations et fait des graphes permettant de les visualiser. Si dans votre cas l'ampoule destinatrice n'est visible de personne il est normale qu'elle ne reçoive jamais son message... Il sera probablement nécessaire de la déplacer ou d'ajouter un routeur à mi chemin pour arriver à la joindre.
 
 Pour voir ce qu'il se passe vous pouvez accéder à ces trois représentations:
@@ -29,7 +29,7 @@ Pour voir ce qu'il se passe vous pouvez accéder à ces trois représentations:
 
 .. important::
 
-    Dans les graphes suivants ce n'est pas le chemin suivi par les messages qui est représenté mais la qualité des liens entre équipements. Les routes suivies par les messages n'est pas accessible. Il est for probable qu'un message prenne un chemin de bonne qualité mais le réseau peut en decider autrement. En gros vous avez la carte IGN mais le GPS de votre voiture peut en decider autrement. 
+    Dans les graphes suivants ce n'est pas le chemin suivi par les messages qui est représenté mais la qualité des liens entre équipements. Les routes suivies par les messages n'est pas accessible. Il est for probable qu'un message prenne un chemin de bonne qualité mais le réseau peut en decider autrement. En gros vous avez la carte IGN mais le GPS de votre voiture peut en decider autrement.
 
 .. important::
 
@@ -92,7 +92,7 @@ Le menu sous le graphe permet de modifier l'affichage:
 Filtrage
 --------
 
-Vous pouvez choisir les équipements Dources et les équipements Destination afin de ne voir que les relations pour un équipement. 
+Vous pouvez choisir les équipements Dources et les équipements Destination afin de ne voir que les relations pour un équipement.
 
 Par exemple si vous souhaitez voir les équipements qui disent voir la ZiGate(Ruche) vous mettez "none" dans la source et "Ruche" dans la destination.
 
@@ -116,7 +116,7 @@ Utilisation du filtre par l'exemple:
 Positionnement
 --------------
 
-Vous pouvez positionner sur la page les équipements par un drag and drop. 
+Vous pouvez positionner sur la page les équipements par un drag and drop.
 Le bouton "Ruche Centered" positionne la Ruche(ZiGate) au centre.
 Le bouton "Placement Auto" positionnera tous les équipements sur un cercle.
 "Local Save" et "Local Restore" permet de sauvegarder les positions dans votre browser web.
@@ -257,6 +257,7 @@ Puis dans le tableau Abeilles, définissez les coordonnées de chaque équipemen
    'T4'       => array('position' => array( 'x'=>450, 'y'=>250), 'color'=>'orange',),
 
 
+.. _radio-routes:
 
 Routes
 ----------
@@ -286,7 +287,3 @@ Je me suis retrouvé avec des prises outdoor Osram qui refusaient de fonctionner
 Dans le cas présent les prises OSRAM utilisent des messages différents des autres équipements pour mettre en place le routage. Visiblement ces messages (qui semble ok pour Wireshark) ne sont pas compris par les autres types d'équipements donc le routage ne peut pas se mettre en place, et donc les équipements finaux ne peuvent être joins.
 
 Alors pour monter le mesh il faut vérifier que les équipements sont compatibles même si en théorie les routeurs routent, en pratique...
-
-
-
-

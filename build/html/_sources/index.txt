@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to Abeille!
-===================================
+===================
 
 Le manuel de l'utilisateur possède plusieurs chapitre essayant de détailler chaque sujet.
 En tant qu'utilisateur final, le chapitre :doc:`Tuto` vous sera probablement le plus intéressant, mais noubliez pas les autres surtout si vous débutez avec Abeille et Zigate.
@@ -203,3 +203,7 @@ Wifi
 J'ai développé mon propre module :doc:`Wifi` du fait de petits soucis sur le premier module disponible. Finalement il fonctionne tellement bien et fourni une protection coupure électrique avec une batterie que je l'utilise dans toutes configuration et même avec mon sniffer ZigBee ...
 
 
+TOC
+====
+
+:doc:`toctree`.

@@ -1,7 +1,7 @@
 Timer
 =====
 
-.. image:: images/node_Timer.png[]
+.. image:: images/node_Timer.png
 
 Introduction
 ------------
@@ -13,7 +13,7 @@ _Dans le futur, il est possible que ce "sous-plugin" soit dédié et indépendan
 
 == Fonctionnement
 
-image:Capture_d_ecran_2018_03_21_a_13_16_53.png[]
+.. image:: images/Capture_d_ecran_2018_03_21_a_13_16_53.png
 
 Le timer possède 4 phases:
 
@@ -60,11 +60,11 @@ Pour créer un objet Timer, clic sur le bouton "Timer" dans la configuration du 
 
 Un message doit apparaitre pour annoncer la création du Timer avec un Id Abeille-NombreAléatoire.
 
-image:Capture_d_ecran_2018_03_21_a_13_14_36.png[]
+.. image:: images/Capture_d_ecran_2018_03_21_a_13_14_36.png
 
 Apres avoir rafraichi l'écran vous devriez avoir l objet:
 
-image:Capture_d_ecran_2018_03_21_a_13_16_53.png[]
+.. image:: images/Capture_d_ecran_2018_03_21_a_13_16_53.png
 
 
 == Configuration du Timer
@@ -110,11 +110,11 @@ Cela vous permet beaucoup plus de flexibilité comme le lancement d'une série d
 
 La syntaxe: scenarioStart=Id,scenarioCancel=Id,scenarioStop=Id, en remplaçant Id pour l'identifiant du scénario que vous trouvez dans la définition du scénario.
 
-image:Capture_d_ecran_2018_03_27_a_12_52_53.png[]
+.. image:: images/Capture_d_ecran_2018_03_27_a_12_52_53.png
 
 L'Id du scénario est dans le tab de la page de configuration du scenario.
 
-image:Capture_d_ecran_2018_03_27_a_12_55_27.png[]
+.. image:: images/Capture_d_ecran_2018_03_27_a_12_55_27.png
 
 Ici vous pouvez voir l'ID 3 du scénario utilisé.
 

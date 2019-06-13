@@ -52,7 +52,7 @@ Le plugin contient une fonctionalité :doc:`Timer` qui peut être utilisé avec 
 .. image:: images/node_Timer.png
 
 Installation
-========
+============
 
 Pre-requis
 ----------
@@ -79,7 +79,7 @@ Utilisation
 Inclusion
 =========
 
-La première étape pour pouvoir utiliser un équipement est de l' :doc:`Inclusion` dans le réseau zigbee géré par la zigate. Il n'existe pas de méthode universelle car chaque fabriquant est libre de procéder de la façon qu'il souhaite. Le grand principe est de mettre la zigate en mode link:Inclusion.html[inclusion] et de faire des manipulations sur l'équipement pour qu'il s' :doc:`Inclusion.html` et rejoigne le réseau.
+La première étape pour pouvoir utiliser un équipement est de l' :doc:`Inclusion` dans le réseau zigbee géré par la zigate. Il n'existe pas de méthode universelle car chaque fabriquant est libre de procéder de la façon qu'il souhaite. Le grand principe est de mettre la zigate en mode :doc:`Inclusion` et de faire des manipulations sur l'équipement pour qu'il s' :doc:`Inclusion` et rejoigne le réseau.
 
 Groups
 ======
@@ -105,7 +105,7 @@ Certains équipements communiquent naturellement et échangent des messages avec
 Cron
 ====
 
-Abeille de façon régulière fait :doc:`Cron`un certain nombre de taches pour maintenir/monitorer le système.
+Abeille de façon régulière fait :doc:`Cron` un certain nombre de taches pour maintenir/monitorer le système.
 
 Radio
 =====

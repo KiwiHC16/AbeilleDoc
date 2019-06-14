@@ -27,8 +27,6 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="top" title="documentation Abeille 27.04.2019" href="index.html" />
-    <link rel="next" title="Livolo" href="Livolo.html" />
-    <link rel="prev" title="Installation PiZiGate" href="InstallationPiZiGate.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -45,71 +43,103 @@
             
   <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="installation-standard">
+<h2>Installation Standard<a class="headerlink" href="#installation-standard" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="etape-1-zigate">
-<h2>Etape 1: Zigate<a class="headerlink" href="#etape-1-zigate" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>Etape 1: Zigate<a class="headerlink" href="#etape-1-zigate" title="Lien permanent vers ce titre">¶</a></h3>
 <p>La Zigate peut être connectée au port USB, par module Wifi ou sur le port GPIO d&#8217;un Raspberry Pi.</p>
-<p>Pour la PiZiGate, des étapes spécifiques sont nécessaires, link:InstallationPiZiGate.html[visitez cette page].</p>
+<p>Pour la PiZiGate, des étapes spécifiques sont nécessaires, <a class="reference internal" href="InstallationPiZiGate.html"><span class="doc">Installation PiZiGate</span></a>.</p>
 <p>Le firmware supporté est le 3.0F</p>
-<p>== Etape 2: Widget</p>
-<p>Widget (option)</p>
+</div>
+<div class="section" id="etape-2-widget">
+<h3>Etape 2: Widget<a class="headerlink" href="#etape-2-widget" title="Lien permanent vers ce titre">¶</a></h3>
+<p>L&#8217;installation de Widget est une option permettant d&#8217;avoir un visuel plus joli.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">Sur les dernières versions de Jeedom, il y a des problèmes de rafraichissement de widget.</p>
+</div>
 <p>Vous pouvez installer quelques widgets (officiels) pour que le rendu soit plus sympa</p>
 <ul class="simple">
 <li>baromètre pour le capteur Xiaomi Carré (dashboard.info.numeric.barometre )</li>
 <li>thermomètre pour les capteurs Xiaomi ronds et carrés (dashboard.info.numeric.tempIMG)</li>
 <li>humidité pour les capteurs Xiaomi ronds et carrés (dashboard.info.numeric.hydro3IMG)</li>
 </ul>
-<p>image:Capture_d_ecran_2018_01_21_a_11_30_2.png[]</p>
-<p>== Etape 3: Référence</p>
+<img alt="_images/Capture_d_ecran_2018_01_21_a_11_30_20.png" src="_images/Capture_d_ecran_2018_01_21_a_11_30_20.png" />
+</div>
+<div class="section" id="etape-3-reference">
+<h3>Etape 3: Référence<a class="headerlink" href="#etape-3-reference" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Créer un objet Jeedom pour retrouver rapidement et facilement les nouveaux équipements.</p>
-<p>image:Capture_d_ecran_2018_01_21_a_10_53_59.png[]</p>
-<p>image:Capture_d_ecran_2018_01_21_a_10_54_13.png[]</p>
-<p>== Etape 4: Market</p>
+<img alt="_images/Capture_d_ecran_2018_01_21_a_10_53_59.png" src="_images/Capture_d_ecran_2018_01_21_a_10_53_59.png" />
+<img alt="_images/Capture_d_ecran_2018_01_21_a_10_54_13.png" src="_images/Capture_d_ecran_2018_01_21_a_10_54_13.png" />
+<p>Tous les nouveaux équipements seront attachés à cet objet.</p>
+</div>
+<div class="section" id="etape-4-market">
+<h3>Etape 4: Market<a class="headerlink" href="#etape-4-market" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Installation du plugin Depuis le market.
 Rien de spécifique. Suivre la procédure classique.</p>
-<p>== Etape 5: Activation</p>
+</div>
+<div class="section" id="etape-5-activation">
+<h3>Etape 5: Activation<a class="headerlink" href="#etape-5-activation" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li>Aller sur &#8220;Plugins&#8221; et cliquer sur &#8220;Gestion des plugins&#8221;.</li>
 <li>Cliquer sur &#8220;Abeille&#8221;</li>
 <li>Cliquer sur &#8220;Activer&#8221;</li>
 </ul>
-<p>image:Capture_d_ecran_2018_01_21_a_11_05_58.png[]</p>
+<img alt="_images/Capture_d_ecran_2018_01_21_a_11_05_58.png" src="_images/Capture_d_ecran_2018_01_21_a_11_05_58.png" />
 <ul class="simple">
 <li>Choisir le niveau de log (debug si besoin) et cliquer sur &#8220;Sauvegarder&#8221;</li>
 <li>Lancer l&#8217;installation des dépendances avec le bouton &#8220;Relancer&#8221; et patienter (vous pouvez suivre l&#8217;avancement dans le fichier de log: Abeille_dep)</li>
 </ul>
-<p>image:Capture_d_ecran_2018_01_21_a_11_06_33.png[]</p>
+<img alt="_images/Capture_d_ecran_2018_01_21_a_11_06_33.png" src="_images/Capture_d_ecran_2018_01_21_a_11_06_33.png" />
 <ul class="simple">
 <li>Patienter 2-3 minutes jusqu&#8217;à l&#8217;obtention du statut &#8220;OK&#8221;</li>
 </ul>
-<dl class="docutils">
-<dt>Puis:</dt>
-<dd><ul class="first last simple">
+<p>Puis:</p>
+<blockquote>
+<div><ul class="simple">
 <li>Si vous avez un Zigate USB, dans &#8220;Abeille Serial Port :&#8221; choisissez le bon port /dev/ttyUSBx.</li>
 <li>Si vous avez une Zigate Wifi dans &#8220;IP (IP:Port) de Zigate Wifi :&#8221; indiquer son adresse IP.</li>
 <li>Si vous avez un Zigate GPIO, dans &#8220;Abeille Serial Port :&#8221; choisissez le bon port /dev/ttyS0.</li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 <ul class="simple">
 <li>Définir l&#8216;&#8220;Objet Parent&#8221; (C&#8217;est ici que les objets &#8220;Abeille&#8221; se créeront par défaut)</li>
 <li>Démarrer les Démons en cliquant sur la flèche verte &#8220;(Re)Démarrer&#8221;</li>
 </ul>
-<p>image:Capture_d_ecran_2018_01_21_a_11_07_14.png[]</p>
+<img alt="_images/Capture_d_ecran_2018_01_21_a_11_07_14.png" src="_images/Capture_d_ecran_2018_01_21_a_11_07_14.png" />
 <p>A noter: Toute sauvegarde de la configuration provoque une relance du cron du plugin et donc un rechargement de la configuration.</p>
-<p>== Avancés</p>
+</div>
+</div>
+<div class="section" id="avances">
+<h2>Avancés<a class="headerlink" href="#avances" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Installation pour les utilisateurs avancés</p>
-<p>=== Depuis Github</p>
+<div class="section" id="depuis-github">
+<h3>Depuis Github<a class="headerlink" href="#depuis-github" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Connecter vous par ssh sur votre Jeedom</p>
-<p>==== Zip</p>
-<p>cd Abeille
-unzip le fichier téléchargé de GitHub dans le répertoire
-cd ..
-&#8212;-</p>
-<p>==== Git</p>
+<div class="section" id="zip">
+<h4>Zip<a class="headerlink" href="#zip" title="Lien permanent vers ce titre">¶</a></h4>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">cd /var/www/html/plugins/</span>
+<span class="x">mkdir Abeille</span>
+<span class="x">cd Abeille</span>
+<span class="x">unzip le fichier téléchargé de GitHub dans le répertoire</span>
+<span class="x">cd ..</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="git">
+<h4>Git<a class="headerlink" href="#git" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Directement avec git (Le plus simple et le plus rapide)</p>
-<div class="section" id="git-clone-https-github-com-kiwihc16-abeille-git-abeille">
-<h3>git clone <a class="reference external" href="https://github.com/KiwiHC16/Abeille.git">https://github.com/KiwiHC16/Abeille.git</a> Abeille<a class="headerlink" href="#git-clone-https-github-com-kiwihc16-abeille-git-abeille" title="Lien permanent vers ce titre">¶</a></h3>
-<p>=== Alternative</p>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">git clone https://github.com/KiwiHC16/Abeille.git Abeille</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="alternative">
+<h3>Alternative<a class="headerlink" href="#alternative" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Alternative : Installation du plugin Abeille avec github depuis le market</p>
 <ul class="simple">
 <li>Aller sur Configuration (Roues crantées) puis Configuration</li>
@@ -122,23 +152,45 @@ cd ..
 <li>Branche: master</li>
 <li>Cliquer sur Enregistrer.</li>
 </ul>
-<p>== Mise a jour</p>
+</div>
+</div>
+<div class="section" id="mise-a-jour">
+<h2>Mise a jour<a class="headerlink" href="#mise-a-jour" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Mise a jour du plugin</p>
-<p>=== Market</p>
+<div class="section" id="market">
+<h3>Market<a class="headerlink" href="#market" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Mise à jour à partir du market
 Rien de particulier, suivre la méthode de base de Jeedom</p>
-<p>=== Github</p>
+</div>
+<div class="section" id="github">
+<h3>Github<a class="headerlink" href="#github" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Mise à jour à partir de github</p>
-<hr class="docutils" />
-<p>== Bidouilles</p>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">cd /var/www/html/plugins/Abeille</span>
+<span class="x">sudo git pull https://github.com/KiwiHC16/Abeille</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="bidouilles">
+<h3>Bidouilles<a class="headerlink" href="#bidouilles" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Pour écraser des &#8220;bidouilles&#8221; locales :</p>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">cd /var/www/html/plugins/Abeille</span>
+<span class="x">sudo git reset --hard HEAD</span>
+<span class="x">sudo git pull https://github.com/KiwiHC16/Abeille</span>
+</pre></div>
+</td></tr></table></div>
 </div>
-</div>
-<div class="section" id="sudo-git-pull-https-github-com-kiwihc16-abeille">
-<h2>sudo git pull <a class="reference external" href="https://github.com/KiwiHC16/Abeille">https://github.com/KiwiHC16/Abeille</a><a class="headerlink" href="#sudo-git-pull-https-github-com-kiwihc16-abeille" title="Lien permanent vers ce titre">¶</a></h2>
-<p>== Droits</p>
+<div class="section" id="droits">
+<h3>Droits<a class="headerlink" href="#droits" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Pour appliquer les bons droits :</p>
-<hr class="docutils" />
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">chmod -R 777 /var/www/html/plugins/Abeille</span>
+<span class="x">chown -R www-data:www-data /var/www/html/plugins/Abeille</span>
+</pre></div>
+</td></tr></table></div>
+</div>
 </div>
 </div>
 
@@ -151,11 +203,30 @@ Rien de particulier, suivre la méthode de base de Jeedom</p>
   <h3><a href="index.html">Table des Matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Installation</a><ul>
-<li><a class="reference internal" href="#etape-1-zigate">Etape 1: Zigate</a><ul>
-<li><a class="reference internal" href="#git-clone-https-github-com-kiwihc16-abeille-git-abeille">git clone https://github.com/KiwiHC16/Abeille.git Abeille</a></li>
+<li><a class="reference internal" href="#installation-standard">Installation Standard</a><ul>
+<li><a class="reference internal" href="#etape-1-zigate">Etape 1: Zigate</a></li>
+<li><a class="reference internal" href="#etape-2-widget">Etape 2: Widget</a></li>
+<li><a class="reference internal" href="#etape-3-reference">Etape 3: Référence</a></li>
+<li><a class="reference internal" href="#etape-4-market">Etape 4: Market</a></li>
+<li><a class="reference internal" href="#etape-5-activation">Etape 5: Activation</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#sudo-git-pull-https-github-com-kiwihc16-abeille">sudo git pull https://github.com/KiwiHC16/Abeille</a></li>
+<li><a class="reference internal" href="#avances">Avancés</a><ul>
+<li><a class="reference internal" href="#depuis-github">Depuis Github</a><ul>
+<li><a class="reference internal" href="#zip">Zip</a></li>
+<li><a class="reference internal" href="#git">Git</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#alternative">Alternative</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#mise-a-jour">Mise a jour</a><ul>
+<li><a class="reference internal" href="#market">Market</a></li>
+<li><a class="reference internal" href="#github">Github</a></li>
+<li><a class="reference internal" href="#bidouilles">Bidouilles</a></li>
+<li><a class="reference internal" href="#droits">Droits</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -163,8 +234,6 @@ Rien de particulier, suivre la méthode de base de Jeedom</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="InstallationPiZiGate.html" title="Chapitre précédent">Installation PiZiGate</a></li>
-      <li>Next: <a href="Livolo.html" title="Chapitre suivant">Livolo</a></li>
   </ul></li>
 </ul>
 </div>

@@ -96,7 +96,7 @@ Mettez les valeurs qui vous conviennent:
 Script / Widget
 ************************
 
-Dans les premieres versions d'abeille, des scripts étaient nécessaires pour suivre l'état des équipements. Depuis ces scripts ont été inclus dans Abeille et ne sont plus necessaires. Je garde la doc en souvenir et on sait jamais pourrai servir dans le future.
+Dans les premieres versions d'abeille, des scripts étaient nécessaires pour suivre l'état des équipements. Depuis ces scripts ont été inclus dans Abeille et ne sont plus necessaires. Je garde la doc en souvenir et on ne sait jamais pourrai servir dans le futur.
 
 Donc vous pouvez passer tout ce qui est dans le bas de cette page.
 

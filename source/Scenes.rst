@@ -1,8 +1,10 @@
+######
 Scènes
-======
+######
 
+*****
 Intro
------
+*****
 
 Les scènes permettent d'envoyer un seul message Zigbee et d'avoir multiple équipement qui se mette en position automatiquement.
 
@@ -12,19 +14,25 @@ Pour ce faire chaque équipement doit savoir ce qu'il doit faire lorsqu'il reço
 
 Pour l'instant tout le paramétrage se fait depuis l'objet Ruche.
 
-== Ajout
+*****
+Ajout
+*****
 
 Ajout d une scène à un équipement
 
 * en cours ...
 
-== Retrait
+*******
+Retrait
+*******
 
 Retrait d une scène à un équipement
 
 * en cours ...
 
-== Récupérer
+*********
+Récupérer
+*********
 
 Récupérer les scènes d'un équipement
 

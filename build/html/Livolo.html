@@ -27,8 +27,6 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="top" title="documentation Abeille 27.04.2019" href="index.html" />
-    <link rel="next" title="Modele et Fichier JSON" href="ModeleJson.html" />
-    <link rel="prev" title="Installation" href="Installation.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -50,24 +48,45 @@
 <div class="section" id="en-cours">
 <h3>En cours<a class="headerlink" href="#en-cours" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Fonctionne pendant  une minute puis ne répond plus. Je n&#8217;avais pas ce soucis avec le modèle 2 boutons...</p>
-<p>=== Inclure</p>
+<div class="section" id="inclure">
+<h4>Inclure<a class="headerlink" href="#inclure" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Un appui long (&gt; 5s) sur le bouton central jusqu&#8217;à émission d&#8217;un bip doit provoquer l&#8217;association (Zigate en mode inclusion) l&#8217;équipement doit se connecter et un objet doit apparaître dans Jeedom.</p>
-<p>=== Caracteristiques</p>
-<p>EP: 6
-(Simple Descriptor Response)
-profile : 0104 (ZigBee Home Automation (ZHA)); deviceId : 0000 (On/Off Switch); bitField : 00;
-InClusterCount : 02
-In cluster: 0000 - General: Basic
-In cluster: 0003 - General: Identify
-OutClusterCount : 01
-Out cluster: 0006 - General: On/Off</p>
-<p>=== Retour d&#8217;état</p>
+</div>
+<div class="section" id="caracteristiques">
+<h4>Caracteristiques<a class="headerlink" href="#caracteristiques" title="Lien permanent vers ce titre">¶</a></h4>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">EP: 6</span>
+<span class="x">(Simple Descriptor Response)</span>
+<span class="x">profile : 0104 (ZigBee Home Automation (ZHA)); deviceId : 0000 (On/Off Switch); bitField : 00;</span>
+<span class="x">InClusterCount : 02</span>
+<span class="x">In cluster: 0000 - General: Basic</span>
+<span class="x">In cluster: 0003 - General: Identify</span>
+<span class="x">OutClusterCount : 01</span>
+<span class="x">Out cluster: 0006 - General: On/Off</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="retour-d-etat">
+<h4>Retour d&#8217;état<a class="headerlink" href="#retour-d-etat" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Abeille fait la demande après envoie d&#8217;une commande.</p>
-<p>== Interrupteur 2 btn</p>
+</div>
+</div>
+<div class="section" id="interrupteur-2-btn">
+<h3>Interrupteur 2 btn<a class="headerlink" href="#interrupteur-2-btn" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Un appui long (&gt; ?s) sur un bouton jusqu&#8217;à émission d&#8217;un bip doit provoquer l&#8217;association (Zigate en mode inclusion) l&#8217;équipement doit se connecter et un objet doit apparaître dans Jeedom.</p>
-<p>=== Retour d&#8217;état</p>
+<div class="section" id="id1">
+<h4>Retour d&#8217;état<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Abeille fait la demande après envoie d&#8217;une commande.</p>
-<p>== Remarques</p>
+</div>
+</div>
+<div class="section" id="remarques">
+<h3>Remarques<a class="headerlink" href="#remarques" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li>les deux interrupteurs s&#8217;annonce sous le même nom &#8220;TI0001&#8221;.</li>
 <li>par defaut Abeille crée un modèle 2 boutons. Effacer les commandes On et Off pour le second boutons si vous avez un modèle 1 bouton.</li>
@@ -87,7 +106,17 @@ Out cluster: 0006 - General: On/Off</p>
   <ul>
 <li><a class="reference internal" href="#">Livolo</a><ul>
 <li><a class="reference internal" href="#interrupteur-1-btn">Interrupteur 1 btn</a><ul>
-<li><a class="reference internal" href="#en-cours">En cours</a></li>
+<li><a class="reference internal" href="#en-cours">En cours</a><ul>
+<li><a class="reference internal" href="#inclure">Inclure</a></li>
+<li><a class="reference internal" href="#caracteristiques">Caracteristiques</a></li>
+<li><a class="reference internal" href="#retour-d-etat">Retour d&#8217;état</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#interrupteur-2-btn">Interrupteur 2 btn</a><ul>
+<li><a class="reference internal" href="#id1">Retour d&#8217;état</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#remarques">Remarques</a></li>
 </ul>
 </li>
 </ul>
@@ -97,8 +126,6 @@ Out cluster: 0006 - General: On/Off</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="Installation.html" title="Chapitre précédent">Installation</a></li>
-      <li>Next: <a href="ModeleJson.html" title="Chapitre suivant">Modele et Fichier JSON</a></li>
   </ul></li>
 </ul>
 </div>

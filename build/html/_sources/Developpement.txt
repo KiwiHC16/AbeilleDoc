@@ -1,19 +1,28 @@
+#############
 Developpement
-=============
+#############
 
+**************
 Grandes lignes
---------------
+**************
 
 * branche master : pour tous les développements en cours a condition que les pushs soient utilisables et "stabilisés" pour la phase de test.
 * branche beta: pour figer un développement et le mettre en test avant de passer en stable
 * branche stable: version stable
 * Dev en cours: autre branche
 
-== Vue générale
+Vue générale
+============
+
+.. attention::
+
+   Ces graphes ne sont pas à jour car la partie Mosquitto n'existe plus.
 
 Vue générale de la solution
 
-image:../images/Capture_d_ecran_2018_01_21_a_13_13_26.png[]
+.. image:: images/Capture_d_ecran_2018_01_21_a_13_13_26.png
+
+.. code-block:: php
 
                     +------------+
                     |   Jeedom   |
@@ -21,7 +30,7 @@ image:../images/Capture_d_ecran_2018_01_21_a_13_13_26.png[]
                     +------------+
                     |  Abeille   |
                     +-+-----+----+
-CmdAbeille/Addr/Action     |         ^               Abeille/=
+   CmdAbeille/Addr/Action     |         ^               Abeille/=
                                             v         |              CmdRuche/Ruche/CreateRuche
                                             +-------+----+
                           +-----+ Mosquitto  + <----+

@@ -62,7 +62,7 @@ Avant de vous lancer dans l'installation d'Abeille, vérifiez que vous avez un :
 Installation
 ------------
 
-La première étape est l'link:Installation.html[installation] du plugin dans Jeedom.
+La première étape est l':doc:`Installation` du plugin dans Jeedom.
 
 Parametrage
 -----------

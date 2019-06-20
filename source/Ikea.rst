@@ -198,8 +198,10 @@ Vous avez maintenant une télécommande pour contrôler le groupe AAAA.
 
 .. image:: images/Capture_d_ecran_2018_03_02_a_10_35_28.png
 
+.. _telecommande-ikea-recuperation:
+
 Récupération
-^^^^^^^^^^^^
+------------
 
 Récupération des appuis Télécommande Ikea dans Abeille
 

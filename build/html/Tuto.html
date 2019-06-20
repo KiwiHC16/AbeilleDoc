@@ -27,8 +27,6 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="top" title="documentation Abeille 27.04.2019" href="index.html" />
-    <link rel="next" title="Widget" href="Widget.html" />
-    <link rel="prev" title="Timer" href="Timer.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -69,8 +67,8 @@
 </div>
 <div class="section" id="scenario-2">
 <h2>Scénario 2<a class="headerlink" href="#scenario-2" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pilotage d’une ampoule à partir d’un capteur de présence avec un scénario (=Scenario 1) plus commande de cette même ampoule à l&#8217;aide d&#8217;une télécommande physique.</p>
 <p>Présence-&gt;Ampoule&lt;-Télécommande</p>
-<p>A cette étape cet objet &#8220;Tele&#8221; dans Jeedom ne peut être utilisé. Il faut exécuter les étapes de du chapitre &#8220;Simuler la télécommande&#8221; ci-dessous.</p>
 <p>Continuons en configurant l&#8217;ampoule depuis la &#8220;Tele&#8221;:</p>
 <ul class="simple">
 <li>Allumer l&#8217;ampoule.</li>
@@ -78,6 +76,43 @@
 <li>Appuyer plus de 10s sur le bouton OO au dos de la télécommande: la led rouge sur la face avant de la télécommande doit clignoter et l&#8217;ampoule doit se mettre à à clignoter.</li>
 </ul>
 <p>La télécommande pilote l&#8217;ampoule et l&#8217;ampoule remonte son état à Jeedom.</p>
+</div>
+<div class="section" id="scenario-3">
+<h2>Scenario 3<a class="headerlink" href="#scenario-3" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vous avez des télécommandes réelles incluses dans le réseau zigbee. Par exemple une télécommande ronde 5 boutons Ikea. Si vous avez associé des ampoules (ou une seule) avec elle vous pouvez télécommander les ampoules simultanémant directement depuis la télécommande réelle. Mais vous ne pouvez pas le faire depuis Jeedom. Comment faire ? Normalement cette télécommande est aussi dans dans Abeille. Ouvrez les paramètres (deuxième tab) et ajoutez le groupe de votre télécommande réelle. Maintenant vous pouvez commander depuis Abeille/Jeedom.</p>
+<p>Ci dessous exemple avec le groupe &#8220;ABCD&#8221;.</p>
+<img alt="_images/Capture_d_ecran_2019_06_20_a_16_25_15.png" src="_images/Capture_d_ecran_2019_06_20_a_16_25_15.png" />
+</div>
+<div class="section" id="scenario-4">
+<h2>Scénario 4<a class="headerlink" href="#scenario-4" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Récupérer les boutons d&#8217;une télécommande dans Jeedom.</p>
+<div class="section" id="fonctionnement">
+<h3>Fonctionnement<a class="headerlink" href="#fonctionnement" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le principe est qu&#8217;une télécommande zigbee (Ikea, Hue,..) envoie des commandes directement à un <a class="reference internal" href="Groups.html"><span class="doc">Groupes</span></a> d&#8217;équipements zigbee (Ampoules,...) qui agissent en fonction. Mais dans la configuration de base la ZiGate ne prend pas en compte ces messages. Le firmware ZiGate a donc été modifier pour traiter ces messages. L&#8217;idée a été de faire passer la ZiGate pour un équipement classique qui réagit aux messages de groupes. La réaction est d&#8217;envoyer un message à Abeille/Jeedom. Cela suppose que la ZiGate possède l&#8217;adresse de groupe auquel elle doit réagir.</p>
+</div>
+<div class="section" id="id1">
+<h3>Pré-requis<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Vous avez une télécommande dans votre réseau zigbee et vous connaissez le groupe qu&#8217;elle utilise.</p>
+</div>
+<div class="section" id="id2">
+<h3>Réalisation<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour connaitre les groupes configurés dans la zigate allez dans la page de configuration du plugin, sélectionnez la zigate et faite un &#8220;Get Group&#8221;.</p>
+<img alt="_images/Capture_d_ecran_2019_05_28_a_23_36_22.png" src="_images/Capture_d_ecran_2019_05_28_a_23_36_22.png" />
+<p>Si la zigate possede un groupe alors on doit avoir quelque chose comme:</p>
+<img alt="_images/Capture_d_ecran_2019_05_28_a_23_36_39.png" src="_images/Capture_d_ecran_2019_05_28_a_23_36_39.png" />
+<p>Ici elle indique réagir au groupe &#8220;0001&#8221; (Colonne &#8220;Membre&#8221; / C&#8217;est une valeur hexadécimale de 4 digits).</p>
+<p>Si elle ne possède pas de groupe ajoutez le groupe de votre télécommande. Je vais prendre pour exemple une télécommande Ikea et leur donner le groupe &#8220;ABCD&#8221;.</p>
+<p>Pour se faire je sélectionne la ruche, je mets &#8220;ABCD&#8221; dans l&#8217;Id et j&#8217;appuie sur le bouton &#8220;Add Group&#8221;.</p>
+<img alt="_images/Capture_d_ecran_2019_06_20_a_16_14_18.png" src="_images/Capture_d_ecran_2019_06_20_a_16_14_18.png" />
+<p>Puis un &#8220;get group&#8221;:</p>
+<img alt="_images/Capture_d_ecran_2019_06_20_a_16_14_38.png" src="_images/Capture_d_ecran_2019_06_20_a_16_14_38.png" />
+<p>J&#8217;ai bien &#8220;ABCD&#8221; dans la zigate en plus de &#8220;0001&#8221;.</p>
+<p>La zigate est limitée à 5 groupes.</p>
+<p>Une fois la ZiGate configurée, vous devriez recevoir les informations sur l&#8217;objet Télécommande Ikea and Abeille.</p>
+<img alt="_images/Capture_d_ecran_2019_06_20_a_17_00_17.png" src="_images/Capture_d_ecran_2019_06_20_a_17_00_17.png" />
+<p>En fonction des boutons sur lesquels vous avez appuyé, les commandes de la télécommande doivent se mettre à jour. Commande Up-Down pour les bouton Haut et Bas, etc...
+Vous trouverez la table de correspondance ici <a class="reference internal" href="Ikea.html#telecommande-ikea-recuperation"><span class="std std-ref">Récupération</span></a>.</p>
+</div>
 </div>
 </div>
 
@@ -96,6 +131,13 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#scenario-2">Scénario 2</a></li>
+<li><a class="reference internal" href="#scenario-3">Scenario 3</a></li>
+<li><a class="reference internal" href="#scenario-4">Scénario 4</a><ul>
+<li><a class="reference internal" href="#fonctionnement">Fonctionnement</a></li>
+<li><a class="reference internal" href="#id1">Pré-requis</a></li>
+<li><a class="reference internal" href="#id2">Réalisation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -103,8 +145,6 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="Timer.html" title="Chapitre précédent">Timer</a></li>
-      <li>Next: <a href="Widget.html" title="Chapitre suivant">Widget</a></li>
   </ul></li>
 </ul>
 </div>

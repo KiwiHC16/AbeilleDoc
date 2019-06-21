@@ -13,7 +13,7 @@ La Zigate peut être connectée au port USB, par module Wifi ou sur le port GPIO
 
 Pour la PiZiGate, des étapes spécifiques sont nécessaires, :doc:`InstallationPiZiGate`.
 
-Le firmware supporté est le 3.0F
+Le firmware supporté est le 3.0F. Pour mettre a jour le :doc:`InstallationFirmware`.
 
 Etape 2: Widget
 ===============

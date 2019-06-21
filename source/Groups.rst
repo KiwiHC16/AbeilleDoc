@@ -25,6 +25,11 @@ Vous pouvez aussi utiliser un scénario dans Jeedom pour adresser un groupe d'é
 
 	Les groupes Zigbee sont nécessaires pour la gestion des scènes.
 
+*****
+Video
+*****
+
+`Groupe Ajout Supprime. <https://youtu.be/H7ndFMK0zFY>`_
 
 *******************
 Gestion des groupes
@@ -113,5 +118,3 @@ Option B:
 ---------
 
 Sélectionnez l'équipement et utilisez le bouton"Get Group".
-
-

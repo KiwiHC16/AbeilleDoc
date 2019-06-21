@@ -1,17 +1,20 @@
+#####
 Timer
-=====
+#####
 
 .. image:: images/node_Timer.png
 
+************
 Introduction
-------------
+************
 
 Dans le plugin Abeille, il a été inclus un "sous-plugin" TIMER qui fonctionne à la seconde.
 
 [NOTE]
 _Dans le futur, il est possible que ce "sous-plugin" soit dédié et indépendant._
 
-== Fonctionnement
+Fonctionnement
+==============
 
 .. image:: images/Capture_d_ecran_2018_03_21_a_13_16_53.png
 
@@ -27,21 +30,29 @@ T3-> : n existe plus
 
 Exemple d'application: allumage progressif d une ampoule, maintient allumé pendant x secondes puis extinction progressive.
 
-
-
 [NOTE]
 Il est important de noter que chaque phase fait au minimum 1s.
 
 [NOTE]
 Le rafraichissement du widget se fait toutes les 5s mais la mise à jour des valeurs se fait toutes les secondes.
 
-=== Trois commandes
+
+*****
+Video
+*****
+
+`Video expliquant les fonctionnements des Timers.  <https://youtu.be/B3qullXc-_s>`_
+
+
+Trois commandes
+===============
 
 * Start: permet d'exécuter une commande et de démarrer le Timer.
 * Cancel: permet d'exécuter une commande et d'annuler le Timer.
 * Stop: permet d'exécuter une commande, à l'expiration du Timer.
 
-=== Retour d'information
+Retour d'information
+====================
 
 * Time-Time: Date de la dernière action sur le Timer
 * Time-TimeStamp: Heure système de la dernière action
@@ -54,7 +65,8 @@ Elles ne sont pas forcement toutes visibles, à vous de choisir.
 
 Dans les phase de ramp Up ou Down, la commande actionRamp/scenarioRamp est exécutée régulièrement avec pour paramètre la valeur en cours de RampUpDown.
 
-== Creation d un Timers
+Creation d un Timers
+====================
 
 Pour créer un objet Timer, clic sur le bouton "Timer" dans la configuration du plugin.
 
@@ -67,14 +79,17 @@ Apres avoir rafraichi l'écran vous devriez avoir l objet:
 .. image:: images/Capture_d_ecran_2018_03_21_a_13_16_53.png
 
 
-== Configuration du Timer
+Configuration du Timer
+======================
 
-=== Equipement
+Equipement
+----------
 
 Comme pour tous les objets, dans l'onglet Équipement, vous pouvez changer son nom, le rattacher à un objet Parent, etc...
 
 
-=== Param
+Param
+-----
 
 Dans l'onglet paramétrage du Timer, remplissez les champs:
 
@@ -89,7 +104,8 @@ Dans l'onglet paramétrage du Timer, remplissez les champs:
 [NOTE]
 Toutes les commandes sont au format \#[objet][equipement][cmd]# par exemple \#[test][Ruban][Level]#
 
-=== Commandes
+Commandes
+=========
 
 Dans les premières versions du timer, il fallait configurer directement dans les Commandes les parametres. Maintenant cela se fait dans la page Param.
 
@@ -97,7 +113,8 @@ Dans les premières versions du timer, il fallait configurer directement dans le
 Certaines captures d'écran datent de cette période, ne pas modifier les commandes comme pourrait le faire croire les images mais bien faire le parametrage dans la page Param.
 
 
-== Commande ou Scénario
+Commande ou Scénario
+====================
 
 [TIP]
 Il faut que je revois cette partie suite aux derniers changements, je ne suis pas sût que cela fonctionne encore.

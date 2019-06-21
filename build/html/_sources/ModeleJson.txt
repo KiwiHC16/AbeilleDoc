@@ -4,6 +4,12 @@ Modele et Fichier JSON
 
 (Cette partie doit être revue et mie a jour sur la base des dernieres evolutions)
 
+*****
+Video
+*****
+
+`Video expliquant la gestion des modeles JSON.  <https://youtu.be/WDeFK0OQETQ>`_
+
 *************************
 Configuration  des objets
 *************************

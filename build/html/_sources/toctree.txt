@@ -19,6 +19,7 @@ Table des matieres complete
    Inclusion
    index
    InstallationPiZiGate
+   InstallationFirmware
    Installation
    Livolo
    ModeleJson
@@ -38,4 +39,3 @@ Table des matieres complete
    Wifi
    Xiaomi
    ZiGateBackupRestore
-

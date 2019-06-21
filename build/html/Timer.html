@@ -27,8 +27,6 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="top" title="documentation Abeille 27.04.2019" href="index.html" />
-    <link rel="next" title="Tuto" href="Tuto.html" />
-    <link rel="prev" title="Système" href="Systeme.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -51,7 +49,8 @@
 <p>Dans le plugin Abeille, il a été inclus un &#8220;sous-plugin&#8221; TIMER qui fonctionne à la seconde.</p>
 <p>[NOTE]
 _Dans le futur, il est possible que ce &#8220;sous-plugin&#8221; soit dédié et indépendant._</p>
-<p>== Fonctionnement</p>
+<div class="section" id="fonctionnement">
+<h3>Fonctionnement<a class="headerlink" href="#fonctionnement" title="Lien permanent vers ce titre">¶</a></h3>
 <img alt="_images/Capture_d_ecran_2018_03_21_a_13_16_53.png" src="_images/Capture_d_ecran_2018_03_21_a_13_16_53.png" />
 <p>Le timer possède 4 phases:</p>
 <p>T0-&gt;T1: RampUp de 0 à 100% =&gt; RampUp</p>
@@ -63,13 +62,21 @@ _Dans le futur, il est possible que ce &#8220;sous-plugin&#8221; soit dédié et
 Il est important de noter que chaque phase fait au minimum 1s.</p>
 <p>[NOTE]
 Le rafraichissement du widget se fait toutes les 5s mais la mise à jour des valeurs se fait toutes les secondes.</p>
-<p>=== Trois commandes</p>
+</div>
+</div>
+<div class="section" id="video">
+<h2>Video<a class="headerlink" href="#video" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://youtu.be/B3qullXc-_s">Video expliquant les fonctionnements des Timers.</a></p>
+<div class="section" id="trois-commandes">
+<h3>Trois commandes<a class="headerlink" href="#trois-commandes" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li>Start: permet d&#8217;exécuter une commande et de démarrer le Timer.</li>
 <li>Cancel: permet d&#8217;exécuter une commande et d&#8217;annuler le Timer.</li>
 <li>Stop: permet d&#8217;exécuter une commande, à l&#8217;expiration du Timer.</li>
 </ul>
-<p>=== Retour d&#8217;information</p>
+</div>
+<div class="section" id="retour-d-information">
+<h3>Retour d&#8217;information<a class="headerlink" href="#retour-d-information" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li>Time-Time: Date de la dernière action sur le Timer</li>
 <li>Time-TimeStamp: Heure système de la dernière action</li>
@@ -79,16 +86,23 @@ Le rafraichissement du widget se fait toutes les 5s mais la mise à jour des val
 </ul>
 <p>Elles ne sont pas forcement toutes visibles, à vous de choisir.</p>
 <p>Dans les phase de ramp Up ou Down, la commande actionRamp/scenarioRamp est exécutée régulièrement avec pour paramètre la valeur en cours de RampUpDown.</p>
-<p>== Creation d un Timers</p>
+</div>
+<div class="section" id="creation-d-un-timers">
+<h3>Creation d un Timers<a class="headerlink" href="#creation-d-un-timers" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Pour créer un objet Timer, clic sur le bouton &#8220;Timer&#8221; dans la configuration du plugin.</p>
 <p>Un message doit apparaitre pour annoncer la création du Timer avec un Id Abeille-NombreAléatoire.</p>
 <img alt="_images/Capture_d_ecran_2018_03_21_a_13_14_36.png" src="_images/Capture_d_ecran_2018_03_21_a_13_14_36.png" />
 <p>Apres avoir rafraichi l&#8217;écran vous devriez avoir l objet:</p>
 <img alt="_images/Capture_d_ecran_2018_03_21_a_13_16_53.png" src="_images/Capture_d_ecran_2018_03_21_a_13_16_53.png" />
-<p>== Configuration du Timer</p>
-<p>=== Equipement</p>
+</div>
+<div class="section" id="configuration-du-timer">
+<h3>Configuration du Timer<a class="headerlink" href="#configuration-du-timer" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="equipement">
+<h4>Equipement<a class="headerlink" href="#equipement" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Comme pour tous les objets, dans l&#8217;onglet Équipement, vous pouvez changer son nom, le rattacher à un objet Parent, etc...</p>
-<p>=== Param</p>
+</div>
+<div class="section" id="param">
+<h4>Param<a class="headerlink" href="#param" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Dans l&#8217;onglet paramétrage du Timer, remplissez les champs:</p>
 <ul class="simple">
 <li>action sur demarrage: Action a éxecuter au démarrage du Timer</li>
@@ -101,11 +115,16 @@ Le rafraichissement du widget se fait toutes les 5s mais la mise à jour des val
 </ul>
 <p>[NOTE]
 Toutes les commandes sont au format #[objet][equipement][cmd]# par exemple #[test][Ruban][Level]#</p>
-<p>=== Commandes</p>
+</div>
+</div>
+<div class="section" id="commandes">
+<h3>Commandes<a class="headerlink" href="#commandes" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Dans les premières versions du timer, il fallait configurer directement dans les Commandes les parametres. Maintenant cela se fait dans la page Param.</p>
 <p>[NOTE]
 Certaines captures d&#8217;écran datent de cette période, ne pas modifier les commandes comme pourrait le faire croire les images mais bien faire le parametrage dans la page Param.</p>
-<p>== Commande ou Scénario</p>
+</div>
+<div class="section" id="commande-ou-scenario">
+<h3>Commande ou Scénario<a class="headerlink" href="#commande-ou-scenario" title="Lien permanent vers ce titre">¶</a></h3>
 <p>[TIP]
 Il faut que je revois cette partie suite aux derniers changements, je ne suis pas sût que cela fonctionne encore.</p>
 <p>Par défaut l&#8217;objet Timer est créé avec des commande Start, Stop, Cancel qui font référence à l&#8217;exécution d&#8217;une commande.</p>
@@ -120,6 +139,7 @@ Il faut que je revois cette partie suite aux derniers changements, je ne suis pa
 <p>actionStart=#put_the_cmd_here#=&amp;durationSeconde=300&amp;RampUp=10&amp;RampDown=10&amp;actionRamp=#put_the_cmd_here#</p>
 </div>
 </div>
+</div>
 
 
           </div>
@@ -130,7 +150,23 @@ Il faut que je revois cette partie suite aux derniers changements, je ne suis pa
   <h3><a href="index.html">Table des Matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Timer</a><ul>
-<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li><a class="reference internal" href="#fonctionnement">Fonctionnement</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#video">Video</a><ul>
+<li><a class="reference internal" href="#trois-commandes">Trois commandes</a></li>
+<li><a class="reference internal" href="#retour-d-information">Retour d&#8217;information</a></li>
+<li><a class="reference internal" href="#creation-d-un-timers">Creation d un Timers</a></li>
+<li><a class="reference internal" href="#configuration-du-timer">Configuration du Timer</a><ul>
+<li><a class="reference internal" href="#equipement">Equipement</a></li>
+<li><a class="reference internal" href="#param">Param</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#commandes">Commandes</a></li>
+<li><a class="reference internal" href="#commande-ou-scenario">Commande ou Scénario</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -138,8 +174,6 @@ Il faut que je revois cette partie suite aux derniers changements, je ne suis pa
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="Systeme.html" title="Chapitre précédent">Système</a></li>
-      <li>Next: <a href="Tuto.html" title="Chapitre suivant">Tuto</a></li>
   </ul></li>
 </ul>
 </div>

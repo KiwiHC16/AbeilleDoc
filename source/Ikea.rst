@@ -115,6 +115,15 @@ Télécommande Ronde 5 boutons
 Télécommande réelle
 ^^^^^^^^^^^^^^^^^^^
 
+
+Video
+-----
+
+`Inclusion Telecommande 5 Boutons Ronde Ikea et ampoule Ikea. <https://youtu.be/eDTDXg1dBzY>`_
+
+Introduction
+------------
+
 (Pour l'instant c'est aux équipements qui reçoivent les demandes de la télécommande réelle de renvoyer leur état vers Jeedom, sur un appui bouton télécommande, la Zigate ne transmet rien au plugin Abeille, à partir du firmware 3.0f on peut récupérer des appuis sur les boutons de la télécommande avec une configuration spécifique, voir ci dessous).
 
 Pour créer l'objet Abeille Automatiquement,
@@ -179,6 +188,8 @@ Il existe un bouton « link » à côté de la pile bouton de la télécommande.
 
 Télécommande Virtuelle
 ^^^^^^^^^^^^^^^^^^^^^^
+
+`Configuration Telecommande Ikea Réelle et simulée dans Jeedom.  <https://youtu.be/_ScmWoSXVr8>`_
 
 La télécommande virtuelle est un objet Jeedom qui envoies les commandes Zigbee comme si c'était une vrai télécommande IKEA.
 

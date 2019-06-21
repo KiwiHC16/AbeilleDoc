@@ -14,6 +14,16 @@ Pour ce faire chaque équipement doit savoir ce qu'il doit faire lorsqu'il reço
 
 Pour l'instant tout le paramétrage se fait depuis l'objet Ruche.
 
+
+*****
+Video
+*****
+
+`Scene et telecommande.  <https://youtu.be/SKYQxPAb9W0>`_
+
+`Gestion des scenes sur une ampoule IKEA.  <https://youtu.be/yzhu3Hu_ibs>`_
+
+
 *****
 Ajout
 *****

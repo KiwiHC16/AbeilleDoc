@@ -20,11 +20,11 @@ Je n'ai aucune idée de votre participation à cette cagnotte mais comme tout es
 Budget
 ======
 
-Cagnotte au 13 mai 2019:
+Cagnotte au 1 Juillet 2019:
 
 Recettes:
 
-* 637,48€ (666€ moins la com paypal)
+* 708,01€ (740,01€ moins la com paypal)
 
 Dépense:
 
@@ -36,6 +36,6 @@ Dépense:
 
 Reste:
 
-* 407,32€
+* 435,64€
 
 Échanges sur la cagnotte: https://github.com/KiwiHC16/Abeille/issues/584

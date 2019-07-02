@@ -9,12 +9,13 @@ Statut des équipements
 .. image:: images/Capture_d_ecran_2018_05_11_a_13_46_17.png
 
 Dans cette page vous trouverez des informations relatives à l'état de fonctionnement des équipements.
+
 Dans cette table vous trouverez:
-* Le nom de l'équipement ainsi que son objet de rattachement. Vous pouvez cliquer dessus pour ouvrir l'équipement.
-* Son ID, qui est la référence dans la base Jeedom
-* Son statut, voir les détails ci dessous.
-* La date de derniere communication, c'est la date du dernier message reçu par la zigate venant de cet équipement.
-* La date de création de l'équipement dans Jeedom.
+- Le nom de l'équipement ainsi que son objet de rattachement. Vous pouvez cliquer dessus pour ouvrir l'équipement.
+- Son ID, qui est la référence dans la base Jeedom
+- Son statut, voir les détails ci dessous.
+- La date de derniere communication, c'est la date du dernier message reçu par la zigate venant de cet équipement.
+- La date de création de l'équipement dans Jeedom.
 
 Actuellement il existe 4 statuts:
 
@@ -26,6 +27,34 @@ Actuellement il existe 4 statuts:
 Si l'équipement n'a pas de TimeOut defini ou est null alors il ne tombera pas en time out.
 
 Pour rafraichir ces informations, un cron tourne *toutes les minutes* (il faut donc attendre une minute et rafraichir la page) pour vérifier la date du dernier message reçu pour chaque équipement.
+
+
+************************
+TimeOut
+************************
+
+Les timeout ... 
+
+Je vais essayer de vous éclairer. J'ai introduit cette notion pour essayer de voir si un équipement est en vie ou non.
+Je veux dire par la qu'il est dans le réseau zigbee et en capable de faire ce qu'on lui demande.
+Chaque équipement dans abeille possede la date du dernier message reçu.
+Chaque fois qu'Abeille reçoit un message provenant d'un équipement, Abeille met à jour cette date.
+Toutes les minutes Abeille regarde si cette date est plus vieille que la valeur du TimeOut de l'équipement et si c est le cas le déclare en TimeOut.
+Si un équipement est en timeout il peut y avoir plein de raison. Voici quelques cas classiques.
+
+- les ampoules n'envoient pas d'informations par defaut à Abeille. Pour contrecarrer ce point, Abeille interroge les ampoules de temps en temps pour avoir une réponse qui provoque la mise à jour la date.
+- Il faut que le modèle utilisé par Abeille pour l'équipement soient bien defini, par exemple la valeur du timeout, ce qui n'est pas forcement le cas.
+- Les equipements xiaomi par defaut remontent des infos environ toutes les heures ce qui doit mettre à jour la date, si Abeille décode le message.
+- ...
+
+En gros le TimeOut ne veut pas dire que l'équipement ne fonctionne pas mais est une indication qu'il y a un soucis:
+
+- bug Abeille
+- problème de Configuration
+- equipement hors de portée du réseau Zigbee
+- probleme de routage dans le reseau Zigbee
+- probleme avec la zigate qui ne transmet pas les Messages
+- ...
 
 ************************
 Alerte

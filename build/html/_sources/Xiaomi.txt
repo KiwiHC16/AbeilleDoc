@@ -229,6 +229,36 @@ Il répond au getName sur EP 01 s.
 
 Exclusion
 
+
+"retour d'expérience" sur l'utilisation des Wall Switch Xiaomi
+
+J'ai remplacé un double inter par un Wall Switch Double 220V Sans Neutre (lumi.ctrl_neutral2)
+J'ai ajouté un Wall Switch Double Battery (lumi.remote.b286acn01) pour donc simuler un double va-et-viens avec l'autre Wall switch.
+
+Inclusion nickel pour les 2.
+Comme d'habitude, j'ai du attendre 1 bonne journée pour que le réseau intègre bien les 2 Device (sans cela les commandes du neutral2 ne fonctionnaient pas toutes)
+
+1) problèmes notés sur le Wall Switch Double 220V Sans Neutre (lumi.ctrl_neutral2) :
+Les commandes depuis jeedom "On1", "Off1", "On2", "Off2" sont très lentes
+A l'inverse les commandes "Toggle1" et "2" sont assez réactives
+évidement la commande par appui sur les poussoirs du bouton est très réactive quant à elle.
+
+2) problèmes notés sur le Wall Switch Double sur Battery (lumi.remote.b286acn01) :
+lors d'un appui sur n'importe quel switch, un événement est bien déclenché par l'info "etat1" "2", ou "3".
+Donc un message très vite chopé et on peut déclencher un scénario.
+MAIS (car il y a un mais) si on test la valeur d'un des informations "état.." et bien elle ne change pas
+
+Donc conclusion, comment utiliser tout ce matos ?
+et bien c'est simple :
+
+Pour le Wall Switch Double sur Battery, on déclenche les scénarios sur changement des info "état..".
+mais on se fout des valeurs de ces info, on ne les teste pas, c'est du temps perdu.
+au lieu de cela faire directement l'action "Toggle" sur le Wall Switch Double 220V.
+
+Ca marche, et c'est assez réactif (la pire latence notée était juste au dessus de la seconde)
+
+
+
 *********
 Vibration
 *********
@@ -256,6 +286,55 @@ Pourrait être la rotation après l'envoi de l'attribut 0055 à la valeur 2
 * Attribute 0508
 
 Inconnu, est envoyé après attribut 0055.
+
+"
+Si ça peut servir a quelqu'un
+J'ai 'presque' compris le fonctionnement de l'angle du capteur de vibration Xiaomi.
+
+Donc, sensibilité réglée en 'High', on récupère :
+
+- Une Info 'Evenement' qui va de 1 à 3
+3 = choc violent
+2 = je touche / bouge le capteur / fait tourner le capteur
+1 = ... ? retour a 1 après un 3 mais pas toujours, en résumé je n'ai pas trouvé de comportement répétitif et clair qui explique comment j'ai eu 1
+
+- Une info 'Angle'
+Je ne comprenais rien au valeur remontées mais j'ai enfin compris.
+Il ne s'agit PAS d'une mesure d'angle absolue.
+C'est en fait la variation d'angle effectuée depuis la dernière remontée de valeur.
+Mais attention, c'est un valeur non signée, donc impossible de déterminer si il a continué de tourner ou bien si il est revenu en arrière.
+Autre chose importante, le capteur n'envoi une nouvelle info d'angle QUE lorsqu'il s'est arrêté de tourner.
+Il n'envoi rien durant le mouvement.
+Donc en résumé, si vous lui faites faire doucement 3 tours sur lui-même et revenez à une position proche de quelques degrés ... impossible de le savoir et vous ne recevrez dans l'info que ces quelques degrés de delta.
+Dernière chose, la mesure se fait en rotation autour de 2 axes seulement. La rotation autour de l'axe vertical ne renvoi rien quel que soit la position du capteur.
+
+Donc impossible avoir un angle d'ouverture de porte par exemple (rotation autour de la verticale).
+
+Utilisation typique : un truc qui bascule puis s'arrête se stabilise... et qui revient a sa position ensuite. Il y a alors un envoi d'info a chaque position stable.
+ex : porte de garage, lucarne basculante, lames de pergola bioclimatique, etc..
+
+----------------
+
+Petit complément sur l'utilisation du capteur de vibration Xiaomi avec Abeille.
+
+J'ai réussi sa mise en oeuvre comme détecteur de vent sur un store banne : Installé en bout de bras, juste protégé de la pluie au cas ou.. réglé en sensibilité "high"
+
+Ca marche !!  :D
+
+Vent fort ou rafale, le capteur envoi Evenement "1" ou "3" ou bien "1 puis 3".. peu importe donc je commande le "Repli" du store si "1" ou "3"
+(j'ai simulé le vent en secouant ou en tapant sur l'extrémité du store)
+
+Et puis un erratum.
+J'avais écrit "Il n'envoi rien durant le mouvement.".. c'est FAUX.
+Sur un mouvement lent et constant, il envoi régulièrement un Evenement "2"
+Vu la position en bout de bras que je lui ai donné, le capteur détecte un changement d'angle et envoi trois message "2" avec un delta d'angle de 5 ou 6° durant le mouvement.
+
+Le risque aurait été qu'il envoi "1" ou "3" durant l'extension du store, entraînant un repli immédiat mais non, tout se passe bien, il envoi seulement des "2".
+
+
+
+"
+
 
 *****
 Fumée

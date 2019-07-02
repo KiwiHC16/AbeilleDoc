@@ -46,13 +46,13 @@
 <div class="section" id="statut-des-equipements">
 <h2>Statut des équipements<a class="headerlink" href="#statut-des-equipements" title="Lien permanent vers ce titre">¶</a></h2>
 <img alt="_images/Capture_d_ecran_2018_05_11_a_13_46_17.png" src="_images/Capture_d_ecran_2018_05_11_a_13_46_17.png" />
-<p>Dans cette page vous trouverez des informations relatives à l&#8217;état de fonctionnement des équipements.
-Dans cette table vous trouverez:
-* Le nom de l&#8217;équipement ainsi que son objet de rattachement. Vous pouvez cliquer dessus pour ouvrir l&#8217;équipement.
-* Son ID, qui est la référence dans la base Jeedom
-* Son statut, voir les détails ci dessous.
-* La date de derniere communication, c&#8217;est la date du dernier message reçu par la zigate venant de cet équipement.
-* La date de création de l&#8217;équipement dans Jeedom.</p>
+<p>Dans cette page vous trouverez des informations relatives à l&#8217;état de fonctionnement des équipements.</p>
+<p>Dans cette table vous trouverez:
+- Le nom de l&#8217;équipement ainsi que son objet de rattachement. Vous pouvez cliquer dessus pour ouvrir l&#8217;équipement.
+- Son ID, qui est la référence dans la base Jeedom
+- Son statut, voir les détails ci dessous.
+- La date de derniere communication, c&#8217;est la date du dernier message reçu par la zigate venant de cet équipement.
+- La date de création de l&#8217;équipement dans Jeedom.</p>
 <p>Actuellement il existe 4 statuts:</p>
 <ul class="simple">
 <li>Un carré vert avec un &#8220;-&#8221;: Pas de test fait. Par exemple Abeille ne reçoit pas de message venant d&#8217;une télécommande Ikea n&#8217;ont paramétré spécifiquement, fonctionnement par défaut.</li>
@@ -62,6 +62,31 @@ Dans cette table vous trouverez:
 </ul>
 <p>Si l&#8217;équipement n&#8217;a pas de TimeOut defini ou est null alors il ne tombera pas en time out.</p>
 <p>Pour rafraichir ces informations, un cron tourne <em>toutes les minutes</em> (il faut donc attendre une minute et rafraichir la page) pour vérifier la date du dernier message reçu pour chaque équipement.</p>
+</div>
+<div class="section" id="timeout">
+<h2>TimeOut<a class="headerlink" href="#timeout" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les timeout ...</p>
+<p>Je vais essayer de vous éclairer. J&#8217;ai introduit cette notion pour essayer de voir si un équipement est en vie ou non.
+Je veux dire par la qu&#8217;il est dans le réseau zigbee et en capable de faire ce qu&#8217;on lui demande.
+Chaque équipement dans abeille possede la date du dernier message reçu.
+Chaque fois qu&#8217;Abeille reçoit un message provenant d&#8217;un équipement, Abeille met à jour cette date.
+Toutes les minutes Abeille regarde si cette date est plus vieille que la valeur du TimeOut de l&#8217;équipement et si c est le cas le déclare en TimeOut.
+Si un équipement est en timeout il peut y avoir plein de raison. Voici quelques cas classiques.</p>
+<ul class="simple">
+<li>les ampoules n&#8217;envoient pas d&#8217;informations par defaut à Abeille. Pour contrecarrer ce point, Abeille interroge les ampoules de temps en temps pour avoir une réponse qui provoque la mise à jour la date.</li>
+<li>Il faut que le modèle utilisé par Abeille pour l&#8217;équipement soient bien defini, par exemple la valeur du timeout, ce qui n&#8217;est pas forcement le cas.</li>
+<li>Les equipements xiaomi par defaut remontent des infos environ toutes les heures ce qui doit mettre à jour la date, si Abeille décode le message.</li>
+<li>...</li>
+</ul>
+<p>En gros le TimeOut ne veut pas dire que l&#8217;équipement ne fonctionne pas mais est une indication qu&#8217;il y a un soucis:</p>
+<ul class="simple">
+<li>bug Abeille</li>
+<li>problème de Configuration</li>
+<li>equipement hors de portée du réseau Zigbee</li>
+<li>probleme de routage dans le reseau Zigbee</li>
+<li>probleme avec la zigate qui ne transmet pas les Messages</li>
+<li>...</li>
+</ul>
 </div>
 <div class="section" id="alerte">
 <h2>Alerte<a class="headerlink" href="#alerte" title="Lien permanent vers ce titre">¶</a></h2>
@@ -192,6 +217,7 @@ Dans cette table vous trouverez:
   <ul>
 <li><a class="reference internal" href="#">Santé</a><ul>
 <li><a class="reference internal" href="#statut-des-equipements">Statut des équipements</a></li>
+<li><a class="reference internal" href="#timeout">TimeOut</a></li>
 <li><a class="reference internal" href="#alerte">Alerte</a></li>
 <li><a class="reference internal" href="#batterie">Batterie</a><ul>
 <li><a class="reference internal" href="#niveau">Niveau</a></li>

@@ -41,3 +41,10 @@ Reset
 *****
 
 Il est possible de faire un reset "forcé" depuis Jeedom de la ZiGate si celle ci ne repond plus aux commandes avec le bouton "Reset" (on peut aussi demander un reset avec le commandes: bouton reset sur l équipement ruche).
+
+
+*****
+Super doc faite par @Gnaag
+*****
+
+https://jeedomiser.fr/article/pilotez-vos-appareils-zigbee-avec-la-pizigate/

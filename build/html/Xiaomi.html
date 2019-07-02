@@ -238,6 +238,25 @@ Remonte d&#8217;autres informations</p>
 <li>Appui Tres Long (&gt;8s) sur bouton de gauche</li>
 </ul>
 <p>Exclusion</p>
+<p>&#8220;retour d&#8217;expérience&#8221; sur l&#8217;utilisation des Wall Switch Xiaomi</p>
+<p>J&#8217;ai remplacé un double inter par un Wall Switch Double 220V Sans Neutre (lumi.ctrl_neutral2)
+J&#8217;ai ajouté un Wall Switch Double Battery (lumi.remote.b286acn01) pour donc simuler un double va-et-viens avec l&#8217;autre Wall switch.</p>
+<p>Inclusion nickel pour les 2.
+Comme d&#8217;habitude, j&#8217;ai du attendre 1 bonne journée pour que le réseau intègre bien les 2 Device (sans cela les commandes du neutral2 ne fonctionnaient pas toutes)</p>
+<p>1) problèmes notés sur le Wall Switch Double 220V Sans Neutre (lumi.ctrl_neutral2) :
+Les commandes depuis jeedom &#8220;On1&#8221;, &#8220;Off1&#8221;, &#8220;On2&#8221;, &#8220;Off2&#8221; sont très lentes
+A l&#8217;inverse les commandes &#8220;Toggle1&#8221; et &#8220;2&#8221; sont assez réactives
+évidement la commande par appui sur les poussoirs du bouton est très réactive quant à elle.</p>
+<p>2) problèmes notés sur le Wall Switch Double sur Battery (lumi.remote.b286acn01) :
+lors d&#8217;un appui sur n&#8217;importe quel switch, un événement est bien déclenché par l&#8217;info &#8220;etat1&#8221; &#8220;2&#8221;, ou &#8220;3&#8221;.
+Donc un message très vite chopé et on peut déclencher un scénario.
+MAIS (car il y a un mais) si on test la valeur d&#8217;un des informations &#8220;état..&#8221; et bien elle ne change pas</p>
+<p>Donc conclusion, comment utiliser tout ce matos ?
+et bien c&#8217;est simple :</p>
+<p>Pour le Wall Switch Double sur Battery, on déclenche les scénarios sur changement des info &#8220;état..&#8221;.
+mais on se fout des valeurs de ces info, on ne les teste pas, c&#8217;est du temps perdu.
+au lieu de cela faire directement l&#8217;action &#8220;Toggle&#8221; sur le Wall Switch Double 220V.</p>
+<p>Ca marche, et c&#8217;est assez réactif (la pire latence notée était juste au dessus de la seconde)</p>
 </div>
 <div class="section" id="vibration">
 <h2>Vibration<a class="headerlink" href="#vibration" title="Lien permanent vers ce titre">¶</a></h2>
@@ -263,6 +282,42 @@ Remonte d&#8217;autres informations</p>
 <li>Attribute 0508</li>
 </ul>
 <p>Inconnu, est envoyé après attribut 0055.</p>
+<p>&#8221;
+Si ça peut servir a quelqu&#8217;un
+J&#8217;ai &#8216;presque&#8217; compris le fonctionnement de l&#8217;angle du capteur de vibration Xiaomi.</p>
+<p>Donc, sensibilité réglée en &#8216;High&#8217;, on récupère :</p>
+<ul class="simple">
+<li>Une Info &#8216;Evenement&#8217; qui va de 1 à 3</li>
+</ul>
+<p>3 = choc violent
+2 = je touche / bouge le capteur / fait tourner le capteur
+1 = ... ? retour a 1 après un 3 mais pas toujours, en résumé je n&#8217;ai pas trouvé de comportement répétitif et clair qui explique comment j&#8217;ai eu 1</p>
+<ul class="simple">
+<li>Une info &#8216;Angle&#8217;</li>
+</ul>
+<p>Je ne comprenais rien au valeur remontées mais j&#8217;ai enfin compris.
+Il ne s&#8217;agit PAS d&#8217;une mesure d&#8217;angle absolue.
+C&#8217;est en fait la variation d&#8217;angle effectuée depuis la dernière remontée de valeur.
+Mais attention, c&#8217;est un valeur non signée, donc impossible de déterminer si il a continué de tourner ou bien si il est revenu en arrière.
+Autre chose importante, le capteur n&#8217;envoi une nouvelle info d&#8217;angle QUE lorsqu&#8217;il s&#8217;est arrêté de tourner.
+Il n&#8217;envoi rien durant le mouvement.
+Donc en résumé, si vous lui faites faire doucement 3 tours sur lui-même et revenez à une position proche de quelques degrés ... impossible de le savoir et vous ne recevrez dans l&#8217;info que ces quelques degrés de delta.
+Dernière chose, la mesure se fait en rotation autour de 2 axes seulement. La rotation autour de l&#8217;axe vertical ne renvoi rien quel que soit la position du capteur.</p>
+<p>Donc impossible avoir un angle d&#8217;ouverture de porte par exemple (rotation autour de la verticale).</p>
+<p>Utilisation typique : un truc qui bascule puis s&#8217;arrête se stabilise... et qui revient a sa position ensuite. Il y a alors un envoi d&#8217;info a chaque position stable.
+ex : porte de garage, lucarne basculante, lames de pergola bioclimatique, etc..</p>
+<hr class="docutils" />
+<p>Petit complément sur l&#8217;utilisation du capteur de vibration Xiaomi avec Abeille.</p>
+<p>J&#8217;ai réussi sa mise en oeuvre comme détecteur de vent sur un store banne : Installé en bout de bras, juste protégé de la pluie au cas ou.. réglé en sensibilité &#8220;high&#8221;</p>
+<p>Ca marche !!  :D</p>
+<p>Vent fort ou rafale, le capteur envoi Evenement &#8220;1&#8221; ou &#8220;3&#8221; ou bien &#8220;1 puis 3&#8221;.. peu importe donc je commande le &#8220;Repli&#8221; du store si &#8220;1&#8221; ou &#8220;3&#8221;
+(j&#8217;ai simulé le vent en secouant ou en tapant sur l&#8217;extrémité du store)</p>
+<p>Et puis un erratum.
+J&#8217;avais écrit &#8220;Il n&#8217;envoi rien durant le mouvement.&#8221;.. c&#8217;est FAUX.
+Sur un mouvement lent et constant, il envoi régulièrement un Evenement &#8220;2&#8221;
+Vu la position en bout de bras que je lui ai donné, le capteur détecte un changement d&#8217;angle et envoi trois message &#8220;2&#8221; avec un delta d&#8217;angle de 5 ou 6° durant le mouvement.</p>
+<p>Le risque aurait été qu&#8217;il envoi &#8220;1&#8221; ou &#8220;3&#8221; durant l&#8217;extension du store, entraînant un repli immédiat mais non, tout se passe bien, il envoi seulement des &#8220;2&#8221;.</p>
+<p>&#8220;</p>
 </div>
 <div class="section" id="fumee">
 <h2>Fumée<a class="headerlink" href="#fumee" title="Lien permanent vers ce titre">¶</a></h2>

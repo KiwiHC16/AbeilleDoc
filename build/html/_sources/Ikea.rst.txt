@@ -365,4 +365,4 @@ Maintenant vous pouvez commander votre ampoule depuis la Télécommande physique
 PS: Les scénarios ne sont pas implémentés pour l'instant (30/10/2018):
 
 * Sc1, Sc2, SC3 sur la télécommande dans Jeedom,
-* et les boutons "Fleche Gauche", "Fleche Droite" de la télécommande physi
+* et les boutons "Fleche Gauche", "Fleche Droite" de la télécommande physique.

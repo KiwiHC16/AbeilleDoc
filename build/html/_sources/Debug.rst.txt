@@ -230,4 +230,4 @@ Dans Abeille/resources/AbeilleDeamon/Debug, vous trouverez le script verificatio
 
 L'execution permet de tester, vérifier et donner des infos qui sont souvent interessantes pour des problème de base. Ce script n'est pas forcement bien maintenu alors les résultats ne sont pas forcement fiables.
 
-Je ne suis pas sûre que ce script soit toujours �
+Je ne suis pas sûre que ce script soit toujours à jour...

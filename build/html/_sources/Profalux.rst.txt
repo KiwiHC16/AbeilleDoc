@@ -1,8 +1,13 @@
+########
 Profalux
-========
+########
+
+*****
+Volet
+*****
 
 Inclusion d'un volet
---------------------
+====================
 
 Comme pour tous modules Zigbee et pour bien comprendre la procédure, il faut savoir que :
 
@@ -12,7 +17,8 @@ N’ayant pas de boutons ou d’interfaces, un volet Profalux Zigbee ne peux pas
 
 A savoir tout au long de cette procédure : lorsque le volet fait un petit va et vient c'est le signe que la commande a bien été reçue.
 
-=== Etape 1
+Etape 1
+-------
 
 Étape 1: Remise à zéro de la télécommande et du volet.
 
@@ -21,7 +27,7 @@ A savoir tout au long de cette procédure : lorsque le volet fait un petit va et
 
 La télécommande va clignoter rouge puis vert.
 
-image:profalux_inclusion_etape1.png[]
+.. image:: images/profalux_inclusion_etape1.png
 
 Le volet va faire un va et vient (attendre un petit moment).
 
@@ -37,7 +43,8 @@ Si jamais les commandes de votre volet sont inversées, il suffit à l'aide d'un
 
 * Fermer le volet complètement.
 
-=== Étape 2
+Étape 2
+-------
 
 Inclusion du volet
 
@@ -45,7 +52,7 @@ Mettre la ruche en mode inclusion
 
 * Pour cela appuyer sur le bouton inclusion depuis le plugin Abeille (La Zigate doit clignoter bleue)
 
-image:inclusion.png[]
+.. image:: images/inclusion.png
 
 Une fois le réseau de la Zigate ouvert, il ne vous reste plus qu’à:
 
@@ -65,11 +72,14 @@ A la fin de la 2ème fermeture, le volet fera un petit va et vient.
 Faites un rafraichissement de votre dashboard et votre volet devrait apparaitre !!!
 
 
-== Résolution
+Résolution
+==========
 
 Résolution de problèmes
 
-=== Le volet
+
+Le volet
+--------
 
 Le volet ne répond plus à la télécommande.
 
@@ -78,24 +88,24 @@ Si par une mauvaise manipulation votre volet ne répond plus à la télécommand
 * Retourner l’appareil
 * A l’aide d’un trombone, appuyer 5 fois sur le bouton R
 
-image:profalux_inclusion_etape1.png[]
+.. image:: images/profalux_inclusion_etape1.png
 
 Attention c'est une manipulation dangereuse !
 
 * Couper l'alimentation électrique
 * Réunir les fils noir et marron puis les brancher sur la borne de phase
 
-image:profalux_inclusion_reset_volet2.png[]
+.. image:: images/profalux_inclusion_reset_volet2.png
 
 * Remettre l'alimentation électrique pendant 5 secondes. Le volet devrait faire un petit mouvement.
 * Couper l'alimentation électrique
 * Séparer les fils noir et marron. Brancher le fils marron sur la phase. Si votre fils noir était brancher avec le bleu aupparavant, rebrancher le avec le bleu sinon laisser le fils noir seul en pensant à l'isoler(capuchon noir)
 
-image:profalux_inclusion_reset_volet3.pn)
+.. image:: images/profalux_inclusion_reset_volet3.png
 
 * Remettre l'alimentation électrique et dans la minute appuyer sur le bouton stop
 
-image:profalux_inclusion_reset_volet4.png[]
+.. image:: images/profalux_inclusion_reset_volet4.png
 
 Le volet devrait faire des mouvement de va-et-vient puis s'arrêter
 * La télécommande devrait à nouveau fonctionner

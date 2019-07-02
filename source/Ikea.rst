@@ -1,11 +1,12 @@
+****
 Ikea
-====
+****
 
 Ampoule
--------
+*******
 
 Mémo
-^^^^
+====
 
 Un petit mémo avec la télécommande Hue à 20€ pour ceux qui, comme moi, vont devoir ré-inclure toutes leurs ampoules Ikea avec l'upgrade en 3.0F...
 
@@ -23,24 +24,24 @@ ON du spot
 Boucle qui fait 6 fois : OFF / sleep 2s / ON / sleep 0.5s .
 
 Nouvelle inclusion
-^^^^^^^^^^^^^^^^^^
+==================
 
 * Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter...
 * Faire un reset de l'ampoule en partant de la position allumée, puis 6 fois, éteindre-allumer. Il n'est pas facile d'avoir le reset... et après maintes tentatives, vous devriez récupérer l'ampoule dans Jeedom. Autre solution bien plus simple utiliser une télécommande Philips Hue (Hue Dimmer Switch) et forcer le reset par un bouton I + bouton O appuyés suffisamment longtemps. Une fois associée, il est possible d'avoir besoin d'éteindre, attendre 10 secondes et allumer.
 
 Déjà inclue
-^^^^^^^^^^^
+===========
 
 * Zigate en fonctionnement normale
 * Éteindre l'ampoule 15s puis la rallumer
 
 Identify
-^^^^^^^^
+========
 
 Ce bouton est créé au moment de la création de l'objet. Celui ci permet de demander à l'ampoule de se manifester. Elle se met à changer d'intensité ce qui nous permet de la repérer dans une groupe d'ampoules par exemple.
 
 Bind
-^^^^
+====
 
 Identifiez l'ampoule que vous voulez paramétrer:
 
@@ -76,7 +77,7 @@ qui confirme la prise en compte par l'ampoule. Status 00 si Ok.
 
 
 Rapport Manuel
-^^^^^^^^^^^^^^
+==============
 
 Ensuite paramétrer l'envoie de rapport:
 
@@ -104,16 +105,16 @@ Après sur un changement d'état l'ampoule doit remonter l'info vers Abeille, av
 pour un retour Off de l'ampoule.
 
 HomeBridge
-^^^^^^^^^^
+==========
 
 .. image:: images/Capture_d_ecran_2019_04_14_a_00_44_29.png
 
 
 Télécommande Ronde 5 boutons
-----------------------------
+****************************
 
 Télécommande réelle
-^^^^^^^^^^^^^^^^^^^
+===================
 
 
 Video
@@ -129,7 +130,7 @@ Introduction
 Pour créer l'objet Abeille Automatiquement,
 
 Première solution:
-""""""""""""""""""
+~~~~~~~~~~~~~~~~~~
 
 Faire une inclusion de la télécommande et un objet doit être créé.
 Ensuite paramétrer l'adresse du groupe comme indiqué ci dessous (voir deuxième solution).=
@@ -137,7 +138,7 @@ Ensuite paramétrer l'adresse du groupe comme indiqué ci dessous (voir deuxièm
 
 
 Deuxième solution:
-""""""""""""""""""
+~~~~~~~~~~~~~~~~~~
 
 Il faut connaitre l'adresse de la télécommande (voir mode semi automatique pour récupérer l'adresse).
 
@@ -164,7 +165,7 @@ va devenir
 pour le groupe 5FBD.
 
 Nouvelle inclusion
-^^^^^^^^^^^^^^^^^^
+------------------
 
 * Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter...
 * 4x sur bouton arrière
@@ -172,12 +173,12 @@ Nouvelle inclusion
 Mais rien d'autre ne remonte, il faut interroger le nom pour créer l'objet.
 
 Leave
-^^^^^
+-----
 
 * 4x sur bouton arrière
 
 Groupes
-^^^^^^^
+-------
 
 Récupérer le groupe utilisé par une télécommande
 
@@ -186,8 +187,21 @@ Avoir une télécommande et une ampoule Ikea sur le même réseau Zigbee. Attent
 Il existe un bouton « link » à côté de la pile bouton de la télécommande. 4 clicks pour appairer la télécommande à la Zigate. Un appuie long près de l’ampoule pour le touchlink.
 
 
+Programmer
+
+Il est aussi possible de définir le Groupes d'une télécommande depuis Abeille (Ikea Telecommande ronde 5 boutons et telecommande Ikea 2 bouton On/Off).
+
+Pour ce faire, il faut utiliser la commande "Set Group Remote" et réveiller la télécommande. En gros la tetecommande étant sur pile, elle dort pour ne pas consommer de courant et ne peut pas entendre les demandes d'Abeille/ZiGate.
+Il faut donc la reveiller, pour cela un appui sur un de ses 5 boutons la reveille pendant quelques secondes. En fait, elle envoie l info d un bouton appuyé puis ecoute pendant quelques secondes et c est la qu on peut lui demander de prendre une configuration de groupe.
+Donc definir le group dans le champ Id, appui sur un bouton de la telecommande et "Set Group Remote".
+
+.. image:: images/Capture_d_ecran_2019_07_02_a_15_12_26.png
+
+Attention: "Set Group Remote" ne devrait fonctionner que pour les telecommande Ikea.
+Attention: Comme il faut etre synchrone, il peut etre necessaire de ci prendre à plusieurs fois pour que cela fonctionne.
+
 Télécommande Virtuelle
-^^^^^^^^^^^^^^^^^^^^^^
+======================
 
 `Configuration Telecommande Ikea Réelle et simulée dans Jeedom.  <https://youtu.be/_ScmWoSXVr8>`_
 
@@ -270,41 +284,41 @@ Attention lors de l'utilisation de la télécommande, dans Abeille elle sera mis
 Par exemple vous pouvez avoir une Ampoule Ikea sur le groupe de la télécommande qui réagira aux demandes de la télécommande directement en Zigbee (même si Jeedom est HS) et avoir un scénario qui se déclenche en même temps pour ouvrir les volets en zwave ou autre.
 
 Gradateur
----------
+=========
 
 Un clic sur OO
-^^^^^^^^^^^^^^
+--------------
 
 Un clic sur OO envoie un Beacon Request. Même si la zigate est en inclusion, il n'y a pas d'association (Probablement le cas si déjà associé à un autre réseau).
 
 4 clics sur OO
-^^^^^^^^^^^^^^
+--------------
 
 Message Leave, puis Beacon Requets puis association si réseau en mode inclusion. Une fois associé, un getName avec un réveil du gradateur permet de récupérer le nom.
 
 Voir la télécommande 5 boutons pour avoir plus de détails sur le contrôle de groupe,...
 
 Prise
------
+=====
 
 Nouvelle inclusion
-^^^^^^^^^^^^^^^^^^
+------------------
 
 * Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter...
 * Faire un reset de la prise en insérant un petit trombone dans le trou pres de la led de la prise. Attendre 5s, la prise doit apparaitre dans Jeedom.
 
 Télécommande
-------------
+============
 
 Nouvelle inclusion
-^^^^^^^^^^^^^^^^^^
+------------------
 
 * Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter...
 * Prendre la telecommande Ikea et faire 4 appuis sur le bouton OO au dos de la télécommande. La télécommande doit se mettre à flasher rouge en face avant. La télécommande doit apparaitre dans Jeedom.
 
 
 Simuler la télécommande
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
 
 Cette opération est un peu délicate mais doit permettre de récupérer l'adresse de groupe utilisée par la télécommande suite aux opérations ci dessus. Dans le futur ce devrait être automatique.
 

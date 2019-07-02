@@ -20,25 +20,28 @@ Si vous trouvez un problème qui demande une correction dans le plugin, merci d 
 
 Si vous ouvrez une "issue" merci de fournir le plus d'information possible et en particulier:
 
-- Votre configuration Jeedom:
-* Le HW sur lequel vous faite tourner le plugin,
-* la Version de l'OS,
-* la version de Jeedom
-* ...
-- Votre configuration Gateway
-* Type de Zigate
-* quel firmware
-* ...
-- Les logs, aussi nombreux que possibles surtout
-* AbeilleParser
-* AbeilleMQTT
-* Abeille
-*...
-- Description
-* ce que vous cherchez à faire
-* les résultats
-* captures d'ecrans
-* ...
+Votre configuration Jeedom:
+ * Le HW sur lequel vous faite tourner le plugin,
+ * la Version de l'OS,
+ * la version de Jeedom
+ * ...
+
+Votre configuration Gateway
+ * Type de Zigate
+ * quel firmware
+ * ...
+
+Les logs, aussi nombreux que possibles surtout
+ * AbeilleParser
+ * AbeilleMQTT
+ * Abeille
+ *...
+
+Description
+ * ce que vous cherchez à faire
+ * les résultats
+ * captures d'ecrans
+ * ...
 
 *********
 Evolution

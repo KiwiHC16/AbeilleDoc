@@ -1,30 +1,37 @@
+######
 Xiaomi
-======
+######
 
+****
 Tous
-----
+****
 
 Tous les périphériques classiques
 
 
-=== Nouvelle inclusion
+Nouvelle inclusion
+==================
 
 * Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter...
 * Appui long de 7s sur le bouton du flanc de l'équipement, l'équipement doit se connecter et un objet doit apparaître dans Jeedom.
 
-=== Déjà inclue
+Déjà inclue
+===========
 
 * Zigate en fonctionnement normale
 * Appui court sur le bouton du flanc de l'équipement et l'objet Abeille doit être créé.
 
-
-== Bouton Rond
+***********
+Bouton Rond
+***********
 
 Bouton Rond (lumi.sensor_switch)
 
 Ce bouton envoie un message lors de l'appui mais aussi lors du relâchement. L'état dans Abeille/Jeedom reflète l'état du bouton.
 
-== Bouton Carre
+************
+Bouton Carre
+************
 
 Bouton Carre (lumi.sensor_switch.aq2)
 
@@ -32,7 +39,9 @@ Contrairement au bouton rond ci dessus, le bouton carré n'envoie pas d'informat
 
 Afin d'avoir le visuel sur le dashboard, l'état passe à 1 sur la réception du message et Jeedom attend 1 minute avant de le remettre à 0.
 
-=== Informations
+************
+Informations
+************
 
 Informations complémentaires
 
@@ -44,18 +53,22 @@ Lors de l'exécution du scénario, si vous testé l'état du bouton est qu'il es
 
 Par exemple pour commander une ampoule Ikea:
 
-image:Capture_d_ecran_2018_09_04_a_13_05_49.png[]
+.. image:: images/Capture_d_ecran_2018_09_04_a_13_05_49.png
 
-image:Capture_d_ecran_2018_09_04_a_13_05_.36.png[]
+.. image:: images/Capture_d_ecran_2018_09_04_a_13_05_.36.png
 
-== Multi
+*****
+Multi
+*****
 
 Pour l'information multi, celle ci remonte quand on fait plus d'un appui sur le bouton. Multi prend alors la valeur remontée. Le bouton n'envoie pas d'autre information et donc la valeur reste indéfiniment. Par défaut l'objet créé demande à Jeedom de faire un retour d'état à 0 après une minute. Cela peut être enlevé dans les paramètres de la commande.
 
 Le fonctionnement de base va provoquer 2 événements, un lors de l'appui multiple, puis un second après 1 minute (généré par Jeedom pour le retour d'état). Si vous enlevez de la commande le retour d'état alors vous n'aurez que l'événement appui multiple.
 Par défaut, en gros, le scénario se déclenche et si vous testez la valeur multi > 1, c'est un événement appui multiple et si valeur à 0 alors événement Jeedom de retour d'état.
 
-== Inondation
+**********
+Inondation
+**********
 
 Capteur Inondation (lumi.sensor_wleak.aq1)
 
@@ -63,7 +76,9 @@ Capteur Inondation (lumi.sensor_wleak.aq1)
 
 Remonte son nom et attribut ff01 (longueur 34)
 
-== Porte V1
+********
+Porte V1
+********
 
 Capteur de Porte Ovale (lumi.sensor_magnet)
 
@@ -72,7 +87,9 @@ Capteur de Porte Ovale (lumi.sensor_magnet)
 Remonte un champ ff02 avec 6 éléments
 Puis son nom lumi.sensor_magnet
 
-== Porte V2
+********
+Porte V2
+********
 
 Capteur Porte Rectangle (lumi.sensor_magnet.aq2)
 
@@ -100,7 +117,9 @@ Remonte ff02 avec 6 éléments
 
 Visiblement quand le capteur fait un rejoin après avoir perdu le réseau par exemple, il fait un double flash bleu.
 
-== Présence V2
+***********
+Présence V2
+***********
 
 Capteur de Présence V2
 
@@ -118,7 +137,9 @@ Remonte FF01 (len 33)
 
 Il remonte une info a chaque détection de présence et remonte en même temps la luminosité. Sinon la luminosité ne remonte pas d'elle même. Ce n'est pas un capteur de luminosité qui remonte l'information périodiquement.
 
-== Température V1
+**************
+Température V1
+**************
 
 Capteur Température Rond (lumi.sensor_ht)
 
@@ -133,7 +154,9 @@ Inclusion
 Remonte son nom et appli version
 Remonte ff01 (len 31)
 
-== Température V2
+**************
+Température V2
+**************
 
 Capteur Température Carré (lumi.weather)
 
@@ -160,11 +183,15 @@ Remonte ff01 (len 37)
 	* Température +-0,3°C
 	* Humidité +-3%
 
-== Cube Aqara
+**********
+Cube Aqara
+**********
 
-image:../images/Capture_d_ecran_2018_06_12_a_22_00_03.png[]
+.. image:: images/Capture_d_ecran_2018_06_12_a_22_00_03.png
 
-== Wall Switch 1
+*************
+Wall Switch 1
+*************
 
 Wall Switch Double Battery (lumi.sensor_86sw2)
 
@@ -182,7 +209,9 @@ Il répond au getName sur EP 01 si on fait un appuie long sur l'interrupteur de 
 
 Exclusion
 
-== Wall Switch 2
+*************
+Wall Switch 2
+*************
 
 Wall Switch Double 220V Sans Neutre (lumi.ctrl_neutral2)
 
@@ -200,7 +229,39 @@ Il répond au getName sur EP 01 s.
 
 Exclusion
 
-== Vibration
+
+"retour d'expérience" sur l'utilisation des Wall Switch Xiaomi
+
+J'ai remplacé un double inter par un Wall Switch Double 220V Sans Neutre (lumi.ctrl_neutral2)
+J'ai ajouté un Wall Switch Double Battery (lumi.remote.b286acn01) pour donc simuler un double va-et-viens avec l'autre Wall switch.
+
+Inclusion nickel pour les 2.
+Comme d'habitude, j'ai du attendre 1 bonne journée pour que le réseau intègre bien les 2 Device (sans cela les commandes du neutral2 ne fonctionnaient pas toutes)
+
+1) problèmes notés sur le Wall Switch Double 220V Sans Neutre (lumi.ctrl_neutral2) :
+Les commandes depuis jeedom "On1", "Off1", "On2", "Off2" sont très lentes
+A l'inverse les commandes "Toggle1" et "2" sont assez réactives
+évidement la commande par appui sur les poussoirs du bouton est très réactive quant à elle.
+
+2) problèmes notés sur le Wall Switch Double sur Battery (lumi.remote.b286acn01) :
+lors d'un appui sur n'importe quel switch, un événement est bien déclenché par l'info "etat1" "2", ou "3".
+Donc un message très vite chopé et on peut déclencher un scénario.
+MAIS (car il y a un mais) si on test la valeur d'un des informations "état.." et bien elle ne change pas
+
+Donc conclusion, comment utiliser tout ce matos ?
+et bien c'est simple :
+
+Pour le Wall Switch Double sur Battery, on déclenche les scénarios sur changement des info "état..".
+mais on se fout des valeurs de ces info, on ne les teste pas, c'est du temps perdu.
+au lieu de cela faire directement l'action "Toggle" sur le Wall Switch Double 220V.
+
+Ca marche, et c'est assez réactif (la pire latence notée était juste au dessus de la seconde)
+
+
+
+*********
+Vibration
+*********
 
 Capteur Vibration
 
@@ -226,7 +287,58 @@ Pourrait être la rotation après l'envoi de l'attribut 0055 à la valeur 2
 
 Inconnu, est envoyé après attribut 0055.
 
-== Fumée
+"
+Si ça peut servir a quelqu'un
+J'ai 'presque' compris le fonctionnement de l'angle du capteur de vibration Xiaomi.
+
+Donc, sensibilité réglée en 'High', on récupère :
+
+- Une Info 'Evenement' qui va de 1 à 3
+3 = choc violent
+2 = je touche / bouge le capteur / fait tourner le capteur
+1 = ... ? retour a 1 après un 3 mais pas toujours, en résumé je n'ai pas trouvé de comportement répétitif et clair qui explique comment j'ai eu 1
+
+- Une info 'Angle'
+Je ne comprenais rien au valeur remontées mais j'ai enfin compris.
+Il ne s'agit PAS d'une mesure d'angle absolue.
+C'est en fait la variation d'angle effectuée depuis la dernière remontée de valeur.
+Mais attention, c'est un valeur non signée, donc impossible de déterminer si il a continué de tourner ou bien si il est revenu en arrière.
+Autre chose importante, le capteur n'envoi une nouvelle info d'angle QUE lorsqu'il s'est arrêté de tourner.
+Il n'envoi rien durant le mouvement.
+Donc en résumé, si vous lui faites faire doucement 3 tours sur lui-même et revenez à une position proche de quelques degrés ... impossible de le savoir et vous ne recevrez dans l'info que ces quelques degrés de delta.
+Dernière chose, la mesure se fait en rotation autour de 2 axes seulement. La rotation autour de l'axe vertical ne renvoi rien quel que soit la position du capteur.
+
+Donc impossible avoir un angle d'ouverture de porte par exemple (rotation autour de la verticale).
+
+Utilisation typique : un truc qui bascule puis s'arrête se stabilise... et qui revient a sa position ensuite. Il y a alors un envoi d'info a chaque position stable.
+ex : porte de garage, lucarne basculante, lames de pergola bioclimatique, etc..
+
+----------------
+
+Petit complément sur l'utilisation du capteur de vibration Xiaomi avec Abeille.
+
+J'ai réussi sa mise en oeuvre comme détecteur de vent sur un store banne : Installé en bout de bras, juste protégé de la pluie au cas ou.. réglé en sensibilité "high"
+
+Ca marche !!  :D
+
+Vent fort ou rafale, le capteur envoi Evenement "1" ou "3" ou bien "1 puis 3".. peu importe donc je commande le "Repli" du store si "1" ou "3"
+(j'ai simulé le vent en secouant ou en tapant sur l'extrémité du store)
+
+Et puis un erratum.
+J'avais écrit "Il n'envoi rien durant le mouvement.".. c'est FAUX.
+Sur un mouvement lent et constant, il envoi régulièrement un Evenement "2"
+Vu la position en bout de bras que je lui ai donné, le capteur détecte un changement d'angle et envoi trois message "2" avec un delta d'angle de 5 ou 6° durant le mouvement.
+
+Le risque aurait été qu'il envoi "1" ou "3" durant l'extension du store, entraînant un repli immédiat mais non, tout se passe bien, il envoi seulement des "2".
+
+
+
+"
+
+
+*****
+Fumée
+*****
 
 Capteur de fumée
 
@@ -246,7 +358,9 @@ Avec le bouton tester, vous envoyez un message au capteur qui doit réagir avec 
 
 Le capteur se réveille toutes les 15s pour savoir si la Zigate à des infos pour lui.
 
-== Gaz
+***
+Gaz
+***
 
 Capteur Gaz
 

@@ -1,40 +1,34 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>FAQ &#8212; documentation Abeille 27.04.2019</title>
-    
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <title>FAQ &#8212; Documentation Abeille 27.04.2019</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '27.04.2019',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
+    
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Recherche" href="search.html" />
-    <link rel="top" title="documentation Abeille 27.04.2019" href="index.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
-  </head>
-  <body role="document">
-  
+    <link rel="search" title="Recherche" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation Abeille 27.04.2019</a> &#187;</li> 
+      </ul>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -45,13 +39,13 @@
 <h1>FAQ<a class="headerlink" href="#faq" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="pont-hue-et-zigate-abeille">
 <h2>Pont Hue et ZiGate/Abeille<a class="headerlink" href="#pont-hue-et-zigate-abeille" title="Lien permanent vers ce titre">¶</a></h2>
-<p>&#8221; Savez vous si je peux mettre mon matos Hue dans le maillage du plugin Abeille, même si tout passe par le Pont Hue ?&#8221;</p>
+<p>&nbsp;» Savez vous si je peux mettre mon matos Hue dans le maillage du plugin Abeille, même si tout passe par le Pont Hue ?&nbsp;»</p>
 <p>La ZiGate et le Pont Hue joue le même role dans le reseau zigbee: le coordinateur.
 Il ne peut pas y avoir deux coordinateurs dans un réseau ZigBee. Tu ne peux pas avoir la Zigate et le pont Hue sur le même réseau.
-Abeille ne fonctionne qu&#8217;avec la ZiGate.
+Abeille ne fonctionne qu’avec la ZiGate.
 Soit tu as ton équipement connecté avec le pont Hue et le plugin associé dans Jeedom.
 Soit tu as ton équipement connecté avec la ZiGate et le plugin Abeille dans Jeedom.
-L&#8217;équipement est soit sur l un ou sur l autre, pas possible d&#8217;etre sur les deux en même temps.
+L’équipement est soit sur l un ou sur l autre, pas possible d’etre sur les deux en même temps.
 La magie de Jeedom te permet de tout piloter meme si tu as un equipement sur le pont hue et un autre sur zigate/abeille.</p>
 </div>
 <div class="section" id="matos-hue-et-zigate-abeille">
@@ -72,13 +66,13 @@ Matos ZigBee avec Pont Hue et ZiGate dans un même réseau radio zigbee.</p>
 </div>
 <div class="section" id="etat-evenement-pour-les-scenarii">
 <h2>Etat / Evenement pour les scenarii<a class="headerlink" href="#etat-evenement-pour-les-scenarii" title="Lien permanent vers ce titre">¶</a></h2>
-<p>&#8221;
-MAIS (car il y a un mais) si on test la valeur d&#8217;un des informations &#8220;état..&#8221; et bien elle ne change pas
-en fait les info &#8220;état..&#8221; passent difficilement de 0 à 1 et de 1 à 0.
-A tel point qu&#8217;il faut de nombreux message pour chaque transition d&#8217;état..
-&#8220;</p>
-<p>Le &#8220;soucis&#8221; ne vient pas de la ZiGate ou d&#8217;Abeille mais de Jeedom. Quand des valeurs changent trop, vite comme c&#8217;est la cas ici, les scenario ne recuperent pas les bonnes valeurs.
-Certains équipements (Xiaomi par exemple) envoient l&#8217;appui(On) et le relache(Off) du bouton dans un meme message alors que d&#8217;autres envoient un message lors de l appui(On) et un autre lors de la relâche(Off). Donc on ne peut pas gérer les scenario sur la valeur d etat mais sur l&#8217;événement.</p>
+<p>&nbsp;»
+MAIS (car il y a un mais) si on test la valeur d’un des informations «&nbsp;état..&nbsp;» et bien elle ne change pas
+en fait les info «&nbsp;état..&nbsp;» passent difficilement de 0 à 1 et de 1 à 0.
+A tel point qu’il faut de nombreux message pour chaque transition d’état..
+«&nbsp;</p>
+<p>Le «&nbsp;soucis&nbsp;» ne vient pas de la ZiGate ou d’Abeille mais de Jeedom. Quand des valeurs changent trop, vite comme c’est la cas ici, les scenario ne recuperent pas les bonnes valeurs.
+Certains équipements (Xiaomi par exemple) envoient l’appui(On) et le relache(Off) du bouton dans un meme message alors que d’autres envoient un message lors de l appui(On) et un autre lors de la relâche(Off). Donc on ne peut pas gérer les scenario sur la valeur d etat mais sur l’événement.</p>
 </div>
 </div>
 
@@ -88,7 +82,7 @@ Certains équipements (Xiaomi par exemple) envoient l&#8217;appui(On) et le rela
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table des Matières</a></h3>
+  <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">FAQ</a><ul>
 <li><a class="reference internal" href="#pont-hue-et-zigate-abeille">Pont Hue et ZiGate/Abeille</a></li>
@@ -98,48 +92,42 @@ Certains équipements (Xiaomi par exemple) envoient l&#8217;appui(On) et le rela
 </ul>
 </li>
 </ul>
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-  </ul></li>
-</ul>
-</div>
+
   <div role="note" aria-label="source link">
     <h3>Cette page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/FAQ.txt"
+      <li><a href="_sources/FAQ.rst.txt"
             rel="nofollow">Montrer le code source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Recherche rapide</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2019, KiwiHC16.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.9</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
-      
-      |
-      <a href="_sources/FAQ.txt"
-          rel="nofollow">Page source</a>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation Abeille 27.04.2019</a> &#187;</li> 
+      </ul>
     </div>
-
-    
-
-    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, KiwiHC16.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
   </body>
 </html>

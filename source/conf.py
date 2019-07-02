@@ -75,8 +75,8 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
-#html_theme = 'classic'
+#html_theme = 'alabaster'
+html_theme = 'classic'
 #html_theme = 'bizstyle'
 #html_theme = 'nature'
 #html_theme = 'scrolls'

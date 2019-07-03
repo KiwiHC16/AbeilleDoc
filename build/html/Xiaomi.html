@@ -65,9 +65,8 @@
 <p>Bouton Carre (lumi.sensor_switch.aq2)</p>
 <p>Contrairement au bouton rond ci dessus, le bouton carré n’envoie pas d’information sur l’appui. Il envoie l’information que sur la relache.</p>
 <p>Afin d’avoir le visuel sur le dashboard, l’état passe à 1 sur la réception du message et Jeedom attend 1 minute avant de le remettre à 0.</p>
-</div>
 <div class="section" id="informations">
-<h2>Informations<a class="headerlink" href="#informations" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>Informations<a class="headerlink" href="#informations" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Informations complémentaires</p>
 <p>Du fait de ce fonctionnement, nous ne pouvons avoir une approche changement d’état. Il faut avoir une approche événement. De ce fait la gestion des scénarii est un peu différente du bouton rond.</p>
 <p>Par défaut le bouton est configuré pour déclencher les scénarii à chaque appui (même si l’état était déjà à 1). Mais Jeedom va aussi provoquer un événement au bout d’une minute en passant la valeur à 0.</p>
@@ -77,10 +76,11 @@
 <img alt="_images/Capture_d_ecran_2018_09_04_a_13_05_.36.png" src="_images/Capture_d_ecran_2018_09_04_a_13_05_.36.png" />
 </div>
 <div class="section" id="multi">
-<h2>Multi<a class="headerlink" href="#multi" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>Multi<a class="headerlink" href="#multi" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Pour l’information multi, celle ci remonte quand on fait plus d’un appui sur le bouton. Multi prend alors la valeur remontée. Le bouton n’envoie pas d’autre information et donc la valeur reste indéfiniment. Par défaut l’objet créé demande à Jeedom de faire un retour d’état à 0 après une minute. Cela peut être enlevé dans les paramètres de la commande.</p>
 <p>Le fonctionnement de base va provoquer 2 événements, un lors de l’appui multiple, puis un second après 1 minute (généré par Jeedom pour le retour d’état). Si vous enlevez de la commande le retour d’état alors vous n’aurez que l’événement appui multiple.
 Par défaut, en gros, le scénario se déclenche et si vous testez la valeur multi &gt; 1, c’est un événement appui multiple et si valeur à 0 alors événement Jeedom de retour d’état.</p>
+</div>
 </div>
 <div class="section" id="inondation">
 <h2>Inondation<a class="headerlink" href="#inondation" title="Lien permanent vers ce titre">¶</a></h2>
@@ -232,7 +232,8 @@ Remonte d’autres informations</p>
 <li>Appui Tres Long (&gt;8s) sur bouton de gauche</li>
 </ul>
 <p>Exclusion</p>
-<p>«&nbsp;retour d’expérience&nbsp;» sur l’utilisation des Wall Switch Xiaomi</p>
+<div class="section" id="retour-d-experience-sur-l-utilisation-des-wall-switch-xiaomi">
+<h3>«&nbsp;retour d’expérience&nbsp;» sur l’utilisation des Wall Switch Xiaomi<a class="headerlink" href="#retour-d-experience-sur-l-utilisation-des-wall-switch-xiaomi" title="Lien permanent vers ce titre">¶</a></h3>
 <p>J’ai remplacé un double inter par un Wall Switch Double 220V Sans Neutre (lumi.ctrl_neutral2)
 J’ai ajouté un Wall Switch Double Battery (lumi.remote.b286acn01) pour donc simuler un double va-et-viens avec l’autre Wall switch.</p>
 <p>Inclusion nickel pour les 2.
@@ -251,6 +252,15 @@ et bien c’est simple :</p>
 mais on se fout des valeurs de ces info, on ne les teste pas, c’est du temps perdu.
 au lieu de cela faire directement l’action «&nbsp;Toggle&nbsp;» sur le Wall Switch Double 220V.</p>
 <p>Ca marche, et c’est assez réactif (la pire latence notée était juste au dessus de la seconde)</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Si je me souviens bien ces switch se comportent comme des équipements terminaux sur pile (ils s’endorment), pas comme des routeurs (ampoules). La difference est que les ampoules sont en ecoute tout le temps et peuvent reagir immédiatement sur reception d’un message. Mais pour les interrupteurs le processus est different. La zigate envoie la demande qui est recue par les routeurs, ceux ci conserve la demande pendant 7s, l’interrupteur se reveille toutes les 5s (je crois me souvenir) et demande les commandes en attente pour lui. Le routeur qui sert l’interruptuer lui envoie la commande. Ceci explique ton delai observé. Le delai sera entre 0s et 5s en fonction du moment de reveil par rapport a l envoie de la demande. C est la meme chose pour On,Off et Toggle. On ne peut rien y faire c’est lié au firmware de l inter. Si tu veux cette meme fonction en instantané il faut que tu passes par un module relai xiaomi par exemple.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Voir le chapitre information du bouton carré ci dessus.</p>
+</div>
+</div>
 </div>
 <div class="section" id="vibration">
 <h2>Vibration<a class="headerlink" href="#vibration" title="Lien permanent vers ce titre">¶</a></h2>
@@ -280,16 +290,12 @@ Remonte d’autres informations</p>
 Si ça peut servir a quelqu’un
 J’ai “presque” compris le fonctionnement de l’angle du capteur de vibration Xiaomi.</p>
 <p>Donc, sensibilité réglée en “High”, on récupère :</p>
-<ul class="simple">
-<li>Une Info “Evenement” qui va de 1 à 3</li>
-</ul>
-<p>3 = choc violent
+<p>Une Info “Evenement” qui va de 1 à 3
+3 = choc violent
 2 = je touche / bouge le capteur / fait tourner le capteur
 1 = … ? retour a 1 après un 3 mais pas toujours, en résumé je n’ai pas trouvé de comportement répétitif et clair qui explique comment j’ai eu 1</p>
-<ul class="simple">
-<li>Une info “Angle”</li>
-</ul>
-<p>Je ne comprenais rien au valeur remontées mais j’ai enfin compris.
+<p>Une info “Angle”
+Je ne comprenais rien au valeur remontées mais j’ai enfin compris.
 Il ne s’agit PAS d’une mesure d’angle absolue.
 C’est en fait la variation d’angle effectuée depuis la dernière remontée de valeur.
 Mais attention, c’est un valeur non signée, donc impossible de déterminer si il a continué de tourner ou bien si il est revenu en arrière.
@@ -363,9 +369,11 @@ Vu la position en bout de bras que je lui ai donné, le capteur détecte un chan
 </ul>
 </li>
 <li><a class="reference internal" href="#bouton-rond">Bouton Rond</a></li>
-<li><a class="reference internal" href="#bouton-carre">Bouton Carre</a></li>
+<li><a class="reference internal" href="#bouton-carre">Bouton Carre</a><ul>
 <li><a class="reference internal" href="#informations">Informations</a></li>
 <li><a class="reference internal" href="#multi">Multi</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#inondation">Inondation</a></li>
 <li><a class="reference internal" href="#porte-v1">Porte V1</a></li>
 <li><a class="reference internal" href="#porte-v2">Porte V2</a></li>
@@ -374,7 +382,10 @@ Vu la position en bout de bras que je lui ai donné, le capteur détecte un chan
 <li><a class="reference internal" href="#temperature-v2">Température V2</a></li>
 <li><a class="reference internal" href="#cube-aqara">Cube Aqara</a></li>
 <li><a class="reference internal" href="#wall-switch-1">Wall Switch 1</a></li>
-<li><a class="reference internal" href="#wall-switch-2">Wall Switch 2</a></li>
+<li><a class="reference internal" href="#wall-switch-2">Wall Switch 2</a><ul>
+<li><a class="reference internal" href="#retour-d-experience-sur-l-utilisation-des-wall-switch-xiaomi">«&nbsp;retour d’expérience&nbsp;» sur l’utilisation des Wall Switch Xiaomi</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#vibration">Vibration</a></li>
 <li><a class="reference internal" href="#fumee">Fumée</a></li>
 <li><a class="reference internal" href="#gaz">Gaz</a></li>

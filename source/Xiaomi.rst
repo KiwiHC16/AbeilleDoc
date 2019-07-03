@@ -1,8 +1,7 @@
-######
+******
 Xiaomi
-######
+******
 
-****
 Tous
 ****
 
@@ -21,7 +20,9 @@ Déjà inclue
 * Zigate en fonctionnement normale
 * Appui court sur le bouton du flanc de l'équipement et l'objet Abeille doit être créé.
 
-***********
+
+
+
 Bouton Rond
 ***********
 
@@ -29,7 +30,7 @@ Bouton Rond (lumi.sensor_switch)
 
 Ce bouton envoie un message lors de l'appui mais aussi lors du relâchement. L'état dans Abeille/Jeedom reflète l'état du bouton.
 
-************
+
 Bouton Carre
 ************
 
@@ -39,9 +40,9 @@ Contrairement au bouton rond ci dessus, le bouton carré n'envoie pas d'informat
 
 Afin d'avoir le visuel sur le dashboard, l'état passe à 1 sur la réception du message et Jeedom attend 1 minute avant de le remettre à 0.
 
-************
+
 Informations
-************
+============
 
 Informations complémentaires
 
@@ -57,16 +58,15 @@ Par exemple pour commander une ampoule Ikea:
 
 .. image:: images/Capture_d_ecran_2018_09_04_a_13_05_.36.png
 
-*****
+
 Multi
-*****
+=====
 
 Pour l'information multi, celle ci remonte quand on fait plus d'un appui sur le bouton. Multi prend alors la valeur remontée. Le bouton n'envoie pas d'autre information et donc la valeur reste indéfiniment. Par défaut l'objet créé demande à Jeedom de faire un retour d'état à 0 après une minute. Cela peut être enlevé dans les paramètres de la commande.
 
 Le fonctionnement de base va provoquer 2 événements, un lors de l'appui multiple, puis un second après 1 minute (généré par Jeedom pour le retour d'état). Si vous enlevez de la commande le retour d'état alors vous n'aurez que l'événement appui multiple.
 Par défaut, en gros, le scénario se déclenche et si vous testez la valeur multi > 1, c'est un événement appui multiple et si valeur à 0 alors événement Jeedom de retour d'état.
 
-**********
 Inondation
 **********
 
@@ -76,7 +76,7 @@ Capteur Inondation (lumi.sensor_wleak.aq1)
 
 Remonte son nom et attribut ff01 (longueur 34)
 
-********
+
 Porte V1
 ********
 
@@ -87,7 +87,7 @@ Capteur de Porte Ovale (lumi.sensor_magnet)
 Remonte un champ ff02 avec 6 éléments
 Puis son nom lumi.sensor_magnet
 
-********
+
 Porte V2
 ********
 
@@ -117,7 +117,7 @@ Remonte ff02 avec 6 éléments
 
 Visiblement quand le capteur fait un rejoin après avoir perdu le réseau par exemple, il fait un double flash bleu.
 
-***********
+
 Présence V2
 ***********
 
@@ -137,7 +137,7 @@ Remonte FF01 (len 33)
 
 Il remonte une info a chaque détection de présence et remonte en même temps la luminosité. Sinon la luminosité ne remonte pas d'elle même. Ce n'est pas un capteur de luminosité qui remonte l'information périodiquement.
 
-**************
+
 Température V1
 **************
 
@@ -154,7 +154,7 @@ Inclusion
 Remonte son nom et appli version
 Remonte ff01 (len 31)
 
-**************
+
 Température V2
 **************
 
@@ -183,13 +183,13 @@ Remonte ff01 (len 37)
 	* Température +-0,3°C
 	* Humidité +-3%
 
-**********
+
 Cube Aqara
 **********
 
 .. image:: images/Capture_d_ecran_2018_06_12_a_22_00_03.png
 
-*************
+
 Wall Switch 1
 *************
 
@@ -209,7 +209,6 @@ Il répond au getName sur EP 01 si on fait un appuie long sur l'interrupteur de 
 
 Exclusion
 
-*************
 Wall Switch 2
 *************
 
@@ -231,6 +230,7 @@ Exclusion
 
 
 "retour d'expérience" sur l'utilisation des Wall Switch Xiaomi
+==============================================================
 
 J'ai remplacé un double inter par un Wall Switch Double 220V Sans Neutre (lumi.ctrl_neutral2)
 J'ai ajouté un Wall Switch Double Battery (lumi.remote.b286acn01) pour donc simuler un double va-et-viens avec l'autre Wall switch.
@@ -257,9 +257,10 @@ au lieu de cela faire directement l'action "Toggle" sur le Wall Switch Double 22
 
 Ca marche, et c'est assez réactif (la pire latence notée était juste au dessus de la seconde)
 
+.. note:: Si je me souviens bien ces switch se comportent comme des équipements terminaux sur pile (ils s'endorment), pas comme des routeurs (ampoules). La difference est que les ampoules sont en ecoute tout le temps et peuvent reagir immédiatement sur reception d'un message. Mais pour les interrupteurs le processus est different. La zigate envoie la demande qui est recue par les routeurs, ceux ci conserve la demande pendant 7s, l'interrupteur se reveille toutes les 5s (je crois me souvenir) et demande les commandes en attente pour lui. Le routeur qui sert l'interruptuer lui envoie la commande. Ceci explique ton delai observé. Le delai sera entre 0s et 5s en fonction du moment de reveil par rapport a l envoie de la demande. C est la meme chose pour On,Off et Toggle. On ne peut rien y faire c'est lié au firmware de l inter. Si tu veux cette meme fonction en instantané il faut que tu passes par un module relai xiaomi par exemple.
 
+.. note:: Voir le chapitre information du bouton carré ci dessus.
 
-*********
 Vibration
 *********
 
@@ -293,12 +294,12 @@ J'ai 'presque' compris le fonctionnement de l'angle du capteur de vibration Xiao
 
 Donc, sensibilité réglée en 'High', on récupère :
 
-- Une Info 'Evenement' qui va de 1 à 3
+Une Info 'Evenement' qui va de 1 à 3
 3 = choc violent
 2 = je touche / bouge le capteur / fait tourner le capteur
 1 = ... ? retour a 1 après un 3 mais pas toujours, en résumé je n'ai pas trouvé de comportement répétitif et clair qui explique comment j'ai eu 1
 
-- Une info 'Angle'
+Une info 'Angle'
 Je ne comprenais rien au valeur remontées mais j'ai enfin compris.
 Il ne s'agit PAS d'une mesure d'angle absolue.
 C'est en fait la variation d'angle effectuée depuis la dernière remontée de valeur.
@@ -336,7 +337,6 @@ Le risque aurait été qu'il envoi "1" ou "3" durant l'extension du store, entra
 "
 
 
-*****
 Fumée
 *****
 
@@ -358,7 +358,6 @@ Avec le bouton tester, vous envoyez un message au capteur qui doit réagir avec 
 
 Le capteur se réveille toutes les 15s pour savoir si la Zigate à des infos pour lui.
 
-***
 Gaz
 ***
 

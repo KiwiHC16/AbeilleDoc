@@ -23,6 +23,7 @@ Table des matieres complete
    InstallationPiZiGate
    InstallationFirmware
    Installation
+   listeCompatibilite
    Livolo
    ModeleJson
    OSRAM

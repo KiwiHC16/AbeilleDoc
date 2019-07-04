@@ -126,6 +126,11 @@ D'autres fonctions de Jeedom sont bien pratiques, par exemple si vous devez :doc
 Equipements
 ===========
 
+Equipements
+-----------
+
+Liste des équipements compatibles :doc:`listeCompatibilite`
+
 Ikea
 ----
 

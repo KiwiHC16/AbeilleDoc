@@ -1,4 +1,6 @@
-
+*********************************
+Liste des équipements compatibles
+*********************************
 
 .. image:: imagesDevices/node_CLA60RGBWOSRAM.png
    :width: 200px

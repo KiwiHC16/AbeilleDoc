@@ -161,6 +161,10 @@ Livolo
 
 Ce chapithre regroupe les informations sur les équipements :doc:`Livolo`
 
+Heiman
+------
+
+Ce chapithre regroupe les informations sur les équipements :doc:`Heiman`
 
 Changelog
 =========

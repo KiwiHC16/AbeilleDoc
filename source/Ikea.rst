@@ -265,7 +265,7 @@ https://github.com/fairecasoimeme/Zigate/issues/6
 +---------+------------+----------+--------------+---------------------------------------+
 |right    |hold        |0x80A7    |0x08          |direction: 0    => can t get that one  |
 +---------+------------+----------+--------------+---------------------------------------+
-|left/right |release   |0x80A7    |0x09          |None            => can t get that one  |
+|left/right |release   |0x80A7    |0x09          | None            => can t get that one |
 +---------+------------+----------+--------------+---------------------------------------+
 
 down = brightness down, up = brightness up,

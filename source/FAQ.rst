@@ -47,3 +47,15 @@ A tel point qu'il faut de nombreux message pour chaque transition d'état..
 
 Le "soucis" ne vient pas de la ZiGate ou d'Abeille mais de Jeedom. Quand des valeurs changent trop, vite comme c'est la cas ici, les scenario ne recuperent pas les bonnes valeurs.
 Certains équipements (Xiaomi par exemple) envoient l'appui(On) et le relache(Off) du bouton dans un meme message alors que d'autres envoient un message lors de l appui(On) et un autre lors de la relâche(Off). Donc on ne peut pas gérer les scenario sur la valeur d etat mais sur l'événement.
+
+************************
+Duplication d'équipement
+************************
+
+Lors de l'inclusion d'un équipement, un modele est utilisé pour le construire dans Jeedom/Abeille. Ensuite toutes les informations collectées du réseau sont injectées dans l'équipemetn Abeille.
+Une information à une role specifique: l'adresse IEEE. Cette adresse est une valeur unique par chaque équipement zigbee. On ne peut pas trouver deux équiepments Zigbee avec la même adresse dans le monde.
+Cette information est stockée dans la commande IEEE de l'équipement lors de sa reception.
+Si un équipement s'annonce de nouveau, Abeille va chercher dans les équipements s'il existe déjà.
+Une fois trouvé, rien n'est fait car l'équipement existe déjà.
+Si pour une raison ou une autre l'information adresse IEEE n'est pas remontée dans l'objet initial alors Abeille ne va pas le trouver et va créer un nouvel équipement dans Jeedom.
+Si vous trouvez des doublons du même équipement, alors vérifiez le contenu de la commande IEEE.

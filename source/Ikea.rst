@@ -109,13 +109,13 @@ HomeBridge
 
 .. image:: images/Capture_d_ecran_2019_04_14_a_00_44_29.png
 
+.. _telecommandeRonde5Boutons:
 
 Télécommande Ronde 5 boutons
 ****************************
 
 Télécommande réelle
 ===================
-
 
 Video
 -----
@@ -125,22 +125,28 @@ Video
 Introduction
 ------------
 
-(Pour l'instant c'est aux équipements qui reçoivent les demandes de la télécommande réelle de renvoyer leur état vers Jeedom, sur un appui bouton télécommande, la Zigate ne transmet rien au plugin Abeille, à partir du firmware 3.0f on peut récupérer des appuis sur les boutons de la télécommande avec une configuration spécifique, voir ci dessous).
+.. note:: Les télécommandes envoient des commandes directement aux équipements mais pas à la zigate. De ce fait Abeille/Jeedom ne recoive pas d'info sur l'utilisation des télécommandes.
 
-Pour créer l'objet Abeille Automatiquement,
+.. note:: C'est aux équipements qui reçoivent les demandes de la télécommande réelle de renvoyer leur état vers Jeedom.
 
-Première solution:
-~~~~~~~~~~~~~~~~~~
-
-Faire une inclusion de la télécommande et un objet doit être créé.
-Ensuite paramétrer l'adresse du groupe comme indiqué ci dessous (voir deuxième solution).=
+.. note:: A partir du firmware 3.0f on peut récupérer des appuis sur les boutons de la télécommande avec une configuration spécifique de groupe au niveau de la ZiGate, ce qui permet de déclancher des scénarii par exemple.
 
 
+Nouvelle inclusion
+------------------
 
-Deuxième solution:
-~~~~~~~~~~~~~~~~~~
+* Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter...
+* Prendre la telecommande Ikea et faire 4 appuis sur le bouton OO au dos de la télécommande. La télécommande doit se mettre à flasher rouge en face avant. La télécommande doit apparaitre dans Jeedom.
 
-Il faut connaitre l'adresse de la télécommande (voir mode semi automatique pour récupérer l'adresse).
+Si cela ne fonctionne pas, il est possible d'interroger le nom pour créer l'objet (Originale solution).
+
+
+Originale solution:
+~~~~~~~~~~~~~~~~~~~
+
+.. note:: Cette solution est la toute premiere version dans Abeille et est dans la documentation pour garder une trace mais ce n'est pas la méthode recommandée.
+
+Il faut connaitre l'adresse de la télécommande.
 
 Puis dans la ruche demander son nom. Par exemple pour la télécommande à l'adresse ec15
 
@@ -154,6 +160,8 @@ Et après un rafraichissement de l'écran vous devez avoir un objet
 
 Il faut ensuite éditer les commandes en remplaçant l'adresse de la télécommande par le groupe que l'on veut contrôler
 
+.. note:: Il n'est plus nécessaire de faire la modification dans les commandes mais mettre l'Id du groupe dans les parametres.
+
 La configuration
 
 .. image:: images/Capture_d_ecran_2018_02_28_a_14_03_26.png
@@ -164,13 +172,7 @@ va devenir
 
 pour le groupe 5FBD.
 
-Nouvelle inclusion
-------------------
 
-* Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter...
-* 4x sur bouton arrière
-
-Mais rien d'autre ne remonte, il faut interroger le nom pour créer l'objet.
 
 Leave
 -----
@@ -188,6 +190,7 @@ Il existe un bouton « link » à côté de la pile bouton de la télécommande.
 
 
 Programmer
+----------
 
 Il est aussi possible de définir le Groupes d'une télécommande depuis Abeille (Ikea Telecommande ronde 5 boutons et telecommande Ikea 2 bouton On/Off).
 
@@ -197,17 +200,18 @@ Donc definir le group dans le champ Id, appui sur un bouton de la telecommande e
 
 .. image:: images/Capture_d_ecran_2019_07_02_a_15_12_26.png
 
-Attention: "Set Group Remote" ne devrait fonctionner que pour les telecommande Ikea.
-Attention: Comme il faut etre synchrone, il peut etre necessaire de ci prendre à plusieurs fois pour que cela fonctionne.
+.. Attention:: "Set Group Remote" ne devrait fonctionner que pour les telecommande Ikea.
+
+.. Attention:: Comme il faut etre synchrone, il peut etre necessaire de ci prendre à plusieurs fois pour que cela fonctionne.
 
 Télécommande Virtuelle
 ======================
 
-`Configuration Telecommande Ikea Réelle et simulée dans Jeedom.  <https://youtu.be/_ScmWoSXVr8>`_
-
 La télécommande virtuelle est un objet Jeedom qui envoies les commandes Zigbee comme si c'était une vrai télécommande IKEA.
 
-Utiliser les commandes cachées dans la ruche:
+Vidéo: `Configuration Telecommande Ikea Réelle et simulée dans Jeedom.  <https://youtu.be/_ScmWoSXVr8>`_
+
+Pour créer un télécommande, utilisez les commandes cachées dans la ruche:
 
 * Ouvrir la page commande de la ruche et trouver la commande "TRADFRI remote control".
 
@@ -222,6 +226,12 @@ Sauvegardez et faites "Tester".
 Vous avez maintenant une télécommande pour contrôler le groupe AAAA.
 
 .. image:: images/Capture_d_ecran_2018_03_02_a_10_35_28.png
+
+Ouvrez l'équipement "Abeille-AAAA" et ouvrez le tab "Parameter".
+
+.. image:: images/Capture_d_ecran_2019_07_05_a_11_42_05.png
+
+et définissez le groupe à controller dans le champ Groupe.
 
 .. _telecommande-ikea-recuperation:
 
@@ -268,6 +278,7 @@ https://github.com/fairecasoimeme/Zigate/issues/6
 |left/right |release   |0x80A7    |0x09          | None            => can t get that one |
 +---------+------------+----------+--------------+---------------------------------------+
 
+
 down = brightness down, up = brightness up,
 middle = Power button,
 left and right = when brightness up is up left is left and right is right.
@@ -310,15 +321,15 @@ Nouvelle inclusion
 Télécommande
 ============
 
-Nouvelle inclusion
-------------------
 
-* Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter...
-* Prendre la telecommande Ikea et faire 4 appuis sur le bouton OO au dos de la télécommande. La télécommande doit se mettre à flasher rouge en face avant. La télécommande doit apparaitre dans Jeedom.
-
+.. _telecommandeRonde5BoutonsSimulation:
 
 Simuler la télécommande
 -----------------------
+
+
+Récupérer un groupe
+-------------------
 
 Cette opération est un peu délicate mais doit permettre de récupérer l'adresse de groupe utilisée par la télécommande suite aux opérations ci dessus. Dans le futur ce devrait être automatique.
 

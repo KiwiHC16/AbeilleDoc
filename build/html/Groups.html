@@ -42,17 +42,17 @@
 <p>Les équipements peuvent être adressés de deux façons:</p>
 <ul class="simple">
 <li>Adresse Zigbee courte: Les adresses courtes permettent de contacter un équipement directement.</li>
-<li>Adresse Zigbee de groupe: Les adresses de groupes permettent de joindre un ensembles d’équipement en même temps.</li>
+<li>Adresse Zigbee de groupe: Les adresses de groupes permettent de joindre un ensembles d’équipements en même temps.</li>
 </ul>
 <p>Les adresses de groupe sont typiquement utilisées pas les télécommandes Zigbee: Hue, Ikea,…</p>
 <p>L’intérêt est qu’un seul message sera envoyé sur le réseau Zigbee, répété par tous les routeurs et tous les équipements ayant cette adresse de groupe réagiront donnant une impression d’exécution simultanée.</p>
-<div class="admonition hint">
-<p class="first admonition-title">Indication</p>
-<p class="last">Astuce: Ça peut aussi vous sortir d’une situation ou la couverture radio n’est pas bonne et ou vous avez du mal à joindre un équipement. Si vous l’adressez avec son adresse courte, le message doit être routé jusqu’à sa destination par une route spécifique. Si vous l’adressez avec une adresse de groupe, le message va être répété par tous les routeurs et vous augmentez la chance que l’équipement reçoive l’information.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Astuce: Ça peut aussi vous sortir d’une situation ou la couverture radio n’est pas bonne et ou vous avez du mal à joindre un équipement. Si vous l’adressez avec son adresse courte, le message doit être routé jusqu’à sa destination par une route spécifique qui peut être interrompu par une muvaise liaison radio. Si vous l’adressez avec une adresse de groupe, le message va être répété par tous les routeurs et vous augmentez la chance que l’équipement reçoive l’information.</p>
 </div>
-<p>Vous pouvez aussi utiliser un scénario dans Jeedom pour adresser un groupe d’équipements, en envoyant à chacun d’eux une commande. Cette solution ne permet pas d’avoir l’impression d’instantanéité mais est très flexible si vous avez des produit zwave et Zigbee par exemple.</p>
-<div class="admonition important">
-<p class="first admonition-title">Important</p>
+<p>Vous pouvez aussi utiliser un scénario dans Jeedom pour adresser un groupe d’équipements, en envoyant à chacun d’eux une commande. Cette solution ne permet pas d’avoir l’impression d’instantanéité mais est très flexible si vous avez un mix de produit zwave et Zigbee par exemple.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Avertissement</p>
 <p class="last">Les groupes Zigbee sont nécessaires pour la gestion des scènes.</p>
 </div>
 </div>
@@ -63,6 +63,10 @@
 <div class="section" id="gestion-des-groupes">
 <h2>Gestion des groupes<a class="headerlink" href="#gestion-des-groupes" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La gestion des groupes se fait de deux façons</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">L option A n’est pas très user friendly et est l’héritage des premieres versions d’Abeille. Je l a garde car elle me permet de faire des tests, et comme j’oubli, je reli ma doc de temps en temps pour savoir comment faire. Utilisez Option B.</p>
+</div>
 <div class="section" id="option-a">
 <h3>Option A:<a class="headerlink" href="#option-a" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Soit depuis la ruche avec 3 commandes (Version initiale pour les développeurs):</p>
@@ -131,6 +135,10 @@
 <p>Sélectionnez l’équipement et utilisez le bouton&nbsp;»Get Group&nbsp;».</p>
 </div>
 </div>
+<div class="section" id="commande-des-groupes">
+<h3>Commande des Groupes<a class="headerlink" href="#commande-des-groupes" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Une fois que les groupes sont en place, il faut les commander. Pour cela vous pouvez par exemple utiliser les <a class="reference internal" href="Ikea.html#telecommanderonde5boutons"><span class="std std-ref">Télécommande Ronde 5 boutons</span></a> de chez Ikea ou simuler une télécommande ronde Ikea avec Jeedom: <a class="reference internal" href="Ikea.html#telecommanderonde5boutonssimulation"><span class="std std-ref">Simuler la télécommande</span></a>.</p>
+</div>
 </div>
 </div>
 
@@ -163,6 +171,7 @@
 <li><a class="reference internal" href="#id6">Option B:</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#commande-des-groupes">Commande des Groupes</a></li>
 </ul>
 </li>
 </ul>

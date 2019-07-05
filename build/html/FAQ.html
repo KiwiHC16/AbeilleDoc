@@ -40,28 +40,30 @@
 <div class="section" id="pont-hue-et-zigate-abeille">
 <h2>Pont Hue et ZiGate/Abeille<a class="headerlink" href="#pont-hue-et-zigate-abeille" title="Lien permanent vers ce titre">¶</a></h2>
 <p>&nbsp;» Savez vous si je peux mettre mon matos Hue dans le maillage du plugin Abeille, même si tout passe par le Pont Hue ?&nbsp;»</p>
-<p>La ZiGate et le Pont Hue joue le même role dans le reseau zigbee: le coordinateur.
-Il ne peut pas y avoir deux coordinateurs dans un réseau ZigBee. Tu ne peux pas avoir la Zigate et le pont Hue sur le même réseau.
-Abeille ne fonctionne qu’avec la ZiGate.
-Soit tu as ton équipement connecté avec le pont Hue et le plugin associé dans Jeedom.
-Soit tu as ton équipement connecté avec la ZiGate et le plugin Abeille dans Jeedom.
-L’équipement est soit sur l un ou sur l autre, pas possible d’etre sur les deux en même temps.
-La magie de Jeedom te permet de tout piloter meme si tu as un equipement sur le pont hue et un autre sur zigate/abeille.</p>
+<p>La ZiGate et le Pont Hue joue le même role dans le reseau zigbee: le coordinateur.</p>
+<p>Il ne peut pas y avoir deux coordinateurs dans un réseau ZigBee. Tu ne peux pas avoir la Zigate et le pont Hue sur le même réseau.</p>
+<p>Abeille ne fonctionne qu’avec la ZiGate.</p>
+<p>Soit tu as ton équipement connecté avec le pont Hue et le plugin associé dans Jeedom.</p>
+<p>Soit tu as ton équipement connecté avec la ZiGate et le plugin Abeille dans Jeedom.</p>
+<p>L’équipement est soit sur l un ou sur l autre, pas possible d’etre sur les deux en même temps.</p>
+<p>La magie de Jeedom te permet de tout piloter meme si tu as un equipement sur le pont hue et un autre sur zigate/abeille.</p>
 </div>
 <div class="section" id="matos-hue-et-zigate-abeille">
 <h2>Matos Hue et ZiGate/Abeille<a class="headerlink" href="#matos-hue-et-zigate-abeille" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour faire simple vous pouvez faire:
-Matos Hue -&gt; Pont Hue -&gt; Plugin Hue -&gt; Jeedom
-Matos Hue -&gt; ZiGate -&gt; Plugin Abeille -&gt; Jeedom</p>
-<p>Vous ne pouvez pas faire:
-Matos Hue -&gt; Pont Hue -&gt; Abeille -&gt; Jeedom
-Matos ZigBee avec Pont Hue et ZiGate dans un même réseau radio zigbee.</p>
+<p>Pour faire simple vous pouvez faire:</p>
+<p>Matos Hue -&gt; Pont Hue -&gt; Plugin Hue -&gt; Jeedom</p>
+<p>Matos Hue -&gt; ZiGate -&gt; Plugin Abeille -&gt; Jeedom</p>
+<p>Vous ne pouvez pas faire:</p>
+<p>Matos Hue -&gt; Pont Hue -&gt; Abeille -&gt; Jeedom</p>
+<p>Matos ZigBee avec Pont Hue et ZiGate dans un même réseau radio zigbee.</p>
 </div>
 <div class="section" id="le-probleme-que-je-rencontre-est-la-portee">
 <h2>Le problème que je rencontre est la portée<a class="headerlink" href="#le-probleme-que-je-rencontre-est-la-portee" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li>les murs de ta maison sont épais et le signal ne passe pas</li>
 <li>les produits Osram ont des problemes de compatibilité pour le routage</li>
+<li>ajouter des routeurs pour améliorer la courverture radio</li>
+<li>SI tout les LQI donnés par la ZiGate sont très très bas alors que les équipements sont dans la même pièce, probablement un problème radio avec le module ZIGate.</li>
 </ul>
 </div>
 <div class="section" id="etat-evenement-pour-les-scenarii">
@@ -73,6 +75,16 @@ A tel point qu’il faut de nombreux message pour chaque transition d’état..
 «&nbsp;</p>
 <p>Le «&nbsp;soucis&nbsp;» ne vient pas de la ZiGate ou d’Abeille mais de Jeedom. Quand des valeurs changent trop, vite comme c’est la cas ici, les scenario ne recuperent pas les bonnes valeurs.
 Certains équipements (Xiaomi par exemple) envoient l’appui(On) et le relache(Off) du bouton dans un meme message alors que d’autres envoient un message lors de l appui(On) et un autre lors de la relâche(Off). Donc on ne peut pas gérer les scenario sur la valeur d etat mais sur l’événement.</p>
+</div>
+<div class="section" id="duplication-d-equipement">
+<h2>Duplication d’équipement<a class="headerlink" href="#duplication-d-equipement" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Lors de l’inclusion d’un équipement, un modele est utilisé pour le construire dans Jeedom/Abeille. Ensuite toutes les informations collectées du réseau sont injectées dans l’équipemetn Abeille.
+Une information à une role specifique: l’adresse IEEE. Cette adresse est une valeur unique par chaque équipement zigbee. On ne peut pas trouver deux équiepments Zigbee avec la même adresse dans le monde.
+Cette information est stockée dans la commande IEEE de l’équipement lors de sa reception.
+Si un équipement s’annonce de nouveau, Abeille va chercher dans les équipements s’il existe déjà.
+Une fois trouvé, rien n’est fait car l’équipement existe déjà.
+Si pour une raison ou une autre l’information adresse IEEE n’est pas remontée dans l’objet initial alors Abeille ne va pas le trouver et va créer un nouvel équipement dans Jeedom.
+Si vous trouvez des doublons du même équipement, alors vérifiez le contenu de la commande IEEE.</p>
 </div>
 </div>
 
@@ -89,6 +101,7 @@ Certains équipements (Xiaomi par exemple) envoient l’appui(On) et le relache(
 <li><a class="reference internal" href="#matos-hue-et-zigate-abeille">Matos Hue et ZiGate/Abeille</a></li>
 <li><a class="reference internal" href="#le-probleme-que-je-rencontre-est-la-portee">Le problème que je rencontre est la portée</a></li>
 <li><a class="reference internal" href="#etat-evenement-pour-les-scenarii">Etat / Evenement pour les scenarii</a></li>
+<li><a class="reference internal" href="#duplication-d-equipement">Duplication d’équipement</a></li>
 </ul>
 </li>
 </ul>

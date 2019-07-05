@@ -9,21 +9,17 @@ Intro
 Les équipements peuvent être adressés de deux façons:
 
 * Adresse Zigbee courte: Les adresses courtes permettent de contacter un équipement directement.
-* Adresse Zigbee de groupe: Les adresses de groupes permettent de joindre un ensembles d'équipement en même temps.
+* Adresse Zigbee de groupe: Les adresses de groupes permettent de joindre un ensembles d'équipements en même temps.
 
 Les adresses de groupe sont typiquement utilisées pas les télécommandes Zigbee: Hue, Ikea,...
 
 L'intérêt est qu'un seul message sera envoyé sur le réseau Zigbee, répété par tous les routeurs et tous les équipements ayant cette adresse de groupe réagiront donnant une impression d'exécution simultanée.
 
-.. hint::
+.. note:: Astuce: Ça peut aussi vous sortir d'une situation ou la couverture radio n'est pas bonne et ou vous avez du mal à joindre un équipement. Si vous l'adressez avec son adresse courte, le message doit être routé jusqu'à sa destination par une route spécifique qui peut être interrompu par une muvaise liaison radio. Si vous l'adressez avec une adresse de groupe, le message va être répété par tous les routeurs et vous augmentez la chance que l'équipement reçoive l'information.
 
-	Astuce: Ça peut aussi vous sortir d'une situation ou la couverture radio n'est pas bonne et ou vous avez du mal à joindre un équipement. Si vous l'adressez avec son adresse courte, le message doit être routé jusqu'à sa destination par une route spécifique. Si vous l'adressez avec une adresse de groupe, le message va être répété par tous les routeurs et vous augmentez la chance que l'équipement reçoive l'information.
+Vous pouvez aussi utiliser un scénario dans Jeedom pour adresser un groupe d'équipements, en envoyant à chacun d'eux une commande. Cette solution ne permet pas d'avoir l'impression d'instantanéité mais est très flexible si vous avez un mix de produit zwave et Zigbee par exemple.
 
-Vous pouvez aussi utiliser un scénario dans Jeedom pour adresser un groupe d'équipements, en envoyant à chacun d'eux une commande. Cette solution ne permet pas d'avoir l'impression d'instantanéité mais est très flexible si vous avez des produit zwave et Zigbee par exemple.
-
-.. important::
-
-	Les groupes Zigbee sont nécessaires pour la gestion des scènes.
+.. warning:: Les groupes Zigbee sont nécessaires pour la gestion des scènes.
 
 *****
 Video
@@ -36,6 +32,8 @@ Gestion des groupes
 *******************
 
 La gestion des groupes se fait de deux façons
+
+.. note:: L option A n'est pas très user friendly et est l'héritage des premieres versions d'Abeille. Je l a garde car elle me permet de faire des tests, et comme j'oubli, je reli ma doc de temps en temps pour savoir comment faire. Utilisez Option B.
 
 Option A:
 =========
@@ -118,3 +116,9 @@ Option B:
 ---------
 
 Sélectionnez l'équipement et utilisez le bouton"Get Group".
+
+
+Commande des Groupes
+====================
+
+Une fois que les groupes sont en place, il faut les commander. Pour cela vous pouvez par exemple utiliser les :ref:`telecommandeRonde5Boutons` de chez Ikea ou simuler une télécommande ronde Ikea avec Jeedom: :ref:`telecommandeRonde5BoutonsSimulation`.

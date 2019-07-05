@@ -9,11 +9,17 @@ Pont Hue et ZiGate/Abeille
 " Savez vous si je peux mettre mon matos Hue dans le maillage du plugin Abeille, même si tout passe par le Pont Hue ?"
 
 La ZiGate et le Pont Hue joue le même role dans le reseau zigbee: le coordinateur.
+
 Il ne peut pas y avoir deux coordinateurs dans un réseau ZigBee. Tu ne peux pas avoir la Zigate et le pont Hue sur le même réseau.
+
 Abeille ne fonctionne qu'avec la ZiGate.
+
 Soit tu as ton équipement connecté avec le pont Hue et le plugin associé dans Jeedom.
+
 Soit tu as ton équipement connecté avec la ZiGate et le plugin Abeille dans Jeedom.
+
 L'équipement est soit sur l un ou sur l autre, pas possible d'etre sur les deux en même temps.
+
 La magie de Jeedom te permet de tout piloter meme si tu as un equipement sur le pont hue et un autre sur zigate/abeille.
 
 ***************************
@@ -21,11 +27,15 @@ Matos Hue et ZiGate/Abeille
 ***************************
 
 Pour faire simple vous pouvez faire:
+
 Matos Hue -> Pont Hue -> Plugin Hue -> Jeedom
+
 Matos Hue -> ZiGate -> Plugin Abeille -> Jeedom
 
 Vous ne pouvez pas faire:
+
 Matos Hue -> Pont Hue -> Abeille -> Jeedom
+
 Matos ZigBee avec Pont Hue et ZiGate dans un même réseau radio zigbee.
 
 ******************************************
@@ -34,6 +44,8 @@ Le problème que je rencontre est la portée
 
 - les murs de ta maison sont épais et le signal ne passe pas
 - les produits Osram ont des problemes de compatibilité pour le routage
+- ajouter des routeurs pour améliorer la courverture radio
+- SI tout les LQI donnés par la ZiGate sont très très bas alors que les équipements sont dans la même pièce, probablement un problème radio avec le module ZIGate.
 
 **********************************
 Etat / Evenement pour les scenarii

@@ -55,6 +55,8 @@
 <li>Toggle</li>
 <li>Lecture etat On/Off</li>
 <li>Retour état automatique On/Off (Bind On/Off, Report On/Off)</li>
+<li>Groupe</li>
+<li>Scene (Devrait être ok d apres retour utilisateur)</li>
 <li>Puissance (Bind, Report)</li>
 <li>Routeur (elle diffuse les Link Status)</li>
 </ul>
@@ -70,6 +72,10 @@
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Dixit Akila: NB: J’ai remarqué que sur certaines prises, la mesure de la consommation d’énergie n’existe pas. En effet, il faudra la centrale (à l’aide de l’OTA) pour que la prise se mette à jour et libère la fonctionnalité. Du coup, c’est le gros inconvénient, si vous n’avez que la ZiGate. Vous risquerez en achetant les produits Legrand Celiane Netatmo de ne pas avoir toutes les fonctionnalités …</p>
+</div>
 </div>
 <div class="section" id="premiere-mise-sous-tension">
 <h3>Premiere mise sous tension<a class="headerlink" href="#premiere-mise-sous-tension" title="Lien permanent vers ce titre">¶</a></h3>
@@ -82,6 +88,70 @@ Un appui long de 8s sur le reset derriere l anneau fait flasher une fois la led 
 <p>(En cours d’écriture, Pas encore très clair)</p>
 <p>Le bouton «&nbsp;reset&nbsp;» se trouve en façade en enlevant tous les caches et le bouton.
 Ensuite, il faut mettre la ZiGate en mode inclusion puis effectuer un appuie long 5-10 sec sur le reset … attendre 10 sec … puis faire un simple clic sur le reset.</p>
+</div>
+</div>
+<div class="section" id="module-encastre">
+<h2>Module Encastré<a class="headerlink" href="#module-encastre" title="Lien permanent vers ce titre">¶</a></h2>
+<img alt="_images/Capture_d_ecran_2019_07_06_a_13_29_06.png" src="_images/Capture_d_ecran_2019_07_06_a_13_29_06.png" />
+<div class="section" id="specifications">
+<h3>Spécifications<a class="headerlink" href="#specifications" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Module On/Off
+1.3A max
+100-240V
+50Hz/60Hz
+0.4A max
+Bouton On/Off
+Ref: 0 648 88
+300W max
+Interrupteur poussoir distant
+Controle Charge Resistive
+(Necessite un neutre)</p>
+</div>
+<div class="section" id="id1">
+<h3>Inclusion<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>A la sortie de la boite, sur alimentation électrique le module envoie des Beacons et la Led Rouge est allumée.</li>
+<li>Si je mets la ZiGate en inclusion et branche le module, il s’appaire au réseau zigbee, LED rouge s’éteind.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h3>Fonctions<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h3>
+<dl class="docutils">
+<dt>Fonctionne:</dt>
+<dd><ul class="first simple">
+<li>On</li>
+<li>Off</li>
+<li>Toggle</li>
+<li>Lecture etat On/Off</li>
+<li>Retour état automatique On/Off (Bind On/Off, Report On/Off).</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Sur appui bouton poussoir du boitier l’etat remonte. Le bouton provoque un toggle ( &lt;= Bouton Poussoir).</li>
+<li>Sur changement etat commandé depuis la ZiGate, il ne rapporte pas son état ! Heureusement Abeille demande !!!</li>
+</ul>
+</div></blockquote>
+<ul class="last simple">
+<li>Groupe</li>
+<li>Scene (Devrait être ok d apres retour utilisateur)</li>
+<li>Routeur (elle diffuse les Link Status)</li>
+</ul>
+</dd>
+<dt>Pas supporté:</dt>
+<dd><ul class="first last simple">
+<li>Level (C’est normal le module contient un relai et ne contient pas le cluster level).</li>
+<li>Puissance (Pas dans le module)</li>
+<li>Consommation (Pas dans le module)</li>
+</ul>
+</dd>
+</dl>
+<p>En cours d investigation:</p>
+</div>
+<div class="section" id="bouton-pourssoir-sur-le-boitier">
+<h3>Bouton Pourssoir sur le boitier<a class="headerlink" href="#bouton-pourssoir-sur-le-boitier" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Sur appui on entend le relai claquer. Rien sur la relache. Rien ne remonte sur le ZigBee suaf si Bind/Report fait sur etat.</p>
 </div>
 </div>
 </div>
@@ -99,6 +169,13 @@ Ensuite, il faut mettre la ZiGate en mode inclusion puis effectuer un appuie lon
 <li><a class="reference internal" href="#fonctions">Fonctions</a></li>
 <li><a class="reference internal" href="#premiere-mise-sous-tension">Premiere mise sous tension</a></li>
 <li><a class="reference internal" href="#inclusion">inclusion</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-encastre">Module Encastré</a><ul>
+<li><a class="reference internal" href="#specifications">Spécifications</a></li>
+<li><a class="reference internal" href="#id1">Inclusion</a></li>
+<li><a class="reference internal" href="#id2">Fonctions</a></li>
+<li><a class="reference internal" href="#bouton-pourssoir-sur-le-boitier">Bouton Pourssoir sur le boitier</a></li>
 </ul>
 </li>
 </ul>

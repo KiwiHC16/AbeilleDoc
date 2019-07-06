@@ -44,6 +44,14 @@ Le retour d'état ne remonte que si l'état change. Donc si l'icone n'est pas sy
 
 ------------------------------------------------------- A clarifier
 
+Remove
+======
+
+..image:: images/Capture_d_ecran_2019_07_06_a_10_43_00.png
+
+Un remove exclue la prise OSRAM Outdoor du reseau avec un Leave (Rejoin: False, Request: False, Remove Children: False). Lors de l exclusion on entend la prise faire un aller-retour du relai. Et l'équipement dans Abeille est conservé mais désactivé.
+Vous pouvez garder l'équipement dans Abeille si vous le souhaitez ou le supprimer. Si vous le gardez, lors de la prochaine inclusion de cette même prise il sera ré-utilisé.
+
 ********
 Ampoules
 ********

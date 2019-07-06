@@ -327,6 +327,15 @@ Télécommande
 Simuler la télécommande
 -----------------------
 
+Pour créer une Telecommande simulée, clic sur l icone Télécommande:
+
+.. image:: images/Capture_d_ecran_2019_07_06_a_09_54_26.png
+
+apres rafraichissement de l'écran vous aurez une telecommande:
+
+.. image:: images/Capture_d_ecran_2019_07_06_a_09_55_32.png
+
+Il suffit maintenant de mettre l'Id du groupe dans ses parametres.
 
 Récupérer un groupe
 -------------------

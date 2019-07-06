@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Heiman &#8212; Documentation Abeille 27.04.2019</title>
+    <title>Legrand &#8212; Documentation Abeille 27.04.2019</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
@@ -35,23 +35,53 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="heiman">
-<h1>Heiman<a class="headerlink" href="#heiman" title="Lien permanent vers ce titre">¶</a></h1>
-<div class="section" id="detecteur-de-fumee">
-<h2>Detecteur de fumée<a class="headerlink" href="#detecteur-de-fumee" title="Lien permanent vers ce titre">¶</a></h2>
+  <div class="section" id="legrand">
+<h1>Legrand<a class="headerlink" href="#legrand" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="prise-220v">
+<h2>Prise 220V<a class="headerlink" href="#prise-220v" title="Lien permanent vers ce titre">¶</a></h2>
+<img alt="_images/Capture_d_ecran_2019_07_06_a_09_17_19.png" src="_images/Capture_d_ecran_2019_07_06_a_09_17_19.png" />
+<div class="section" id="fonctions">
+<h3>Fonctions<a class="headerlink" href="#fonctions" title="Lien permanent vers ce titre">¶</a></h3>
+<dl class="docutils">
+<dt>Fonctionne:</dt>
+<dd><ul class="first last simple">
+<li>Inclusion automatique dans Abeille.</li>
+</ul>
+</dd>
+<dt>Commandes:</dt>
+<dd><ul class="first last simple">
+<li>On</li>
+<li>Off</li>
+<li>Toggle</li>
+<li>Lecture etat On/Off</li>
+<li>Retour état automatique On/Off (Bind On/Off, Report On/Off)</li>
+<li>Puissance (Bind, Report)</li>
+<li>Routeur (elle diffuse les Link Status)</li>
+</ul>
+</dd>
+<dt>Pas supporté:</dt>
+<dd><ul class="first last simple">
+<li>Level (C’est normal la prise contient un relai)</li>
+</ul>
+</dd>
+<dt>En cours d investigation:</dt>
+<dd><ul class="first last simple">
+<li>Peut on avoir la conso ?</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="premiere-mise-sous-tension">
+<h3>Premiere mise sous tension<a class="headerlink" href="#premiere-mise-sous-tension" title="Lien permanent vers ce titre">¶</a></h3>
+<p>(En cours d’écriture, Pas encore très clair)</p>
+<p>Premiere mise sous tension avec la zigate en inclusion. La prise allume la Led en rouge et on entend claquer le relai mais pas de message radio zigbee.
+Un appui long de 8s sur le reset derriere l anneau fait flasher une fois la led puis quand je relance le reset la led cligonte 1 fois et le relai claque mais rien ni en ch11, ni en ch15.</p>
+</div>
 <div class="section" id="inclusion">
-<h3>Inclusion<a class="headerlink" href="#inclusion" title="Lien permanent vers ce titre">¶</a></h3>
-<p>ZiGate en mode Inclusion
-Trombone dans petit trou sur le côté pendant 4s, le device fait un Beacon, flash en vert en face avant, s’appaire et est créé dans Abeille.</p>
-<p>..image:: images/Capture_d_ecran_2019_07_06_a_11_40_01.png</p>
-</div>
-<div class="section" id="exclusion">
-<h3>Exclusion<a class="headerlink" href="#exclusion" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Trombone dans petit trou sur le côté pendant 7 ou 8s, le device fait un Leave. Bouton face avant flash plusieurs fois en vert.</p>
-<div class="section" id="dans-le-reseau">
-<h4>Dans le réseau<a class="headerlink" href="#dans-le-reseau" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Le bouton en face avant flash une fois de temps en temps en rouge environ toutes les 45 secondes.</p>
-</div>
+<h3>inclusion<a class="headerlink" href="#inclusion" title="Lien permanent vers ce titre">¶</a></h3>
+<p>(En cours d’écriture, Pas encore très clair)</p>
+<p>Le bouton «&nbsp;reset&nbsp;» se trouve en façade en enlevant tous les caches et le bouton.
+Ensuite, il faut mettre la ZiGate en mode inclusion puis effectuer un appuie long 5-10 sec sur le reset … attendre 10 sec … puis faire un simple clic sur le reset.</p>
 </div>
 </div>
 </div>
@@ -64,13 +94,11 @@ Trombone dans petit trou sur le côté pendant 4s, le device fait un Beacon, fla
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Heiman</a><ul>
-<li><a class="reference internal" href="#detecteur-de-fumee">Detecteur de fumée</a><ul>
-<li><a class="reference internal" href="#inclusion">Inclusion</a></li>
-<li><a class="reference internal" href="#exclusion">Exclusion</a><ul>
-<li><a class="reference internal" href="#dans-le-reseau">Dans le réseau</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">Legrand</a><ul>
+<li><a class="reference internal" href="#prise-220v">Prise 220V</a><ul>
+<li><a class="reference internal" href="#fonctions">Fonctions</a></li>
+<li><a class="reference internal" href="#premiere-mise-sous-tension">Premiere mise sous tension</a></li>
+<li><a class="reference internal" href="#inclusion">inclusion</a></li>
 </ul>
 </li>
 </ul>
@@ -80,7 +108,7 @@ Trombone dans petit trou sur le côté pendant 4s, le device fait un Beacon, fla
   <div role="note" aria-label="source link">
     <h3>Cette page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/Heiman.rst.txt"
+      <li><a href="_sources/Legrand.rst.txt"
             rel="nofollow">Montrer le code source</a></li>
     </ul>
    </div>

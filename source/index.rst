@@ -131,10 +131,30 @@ Equipements
 
 Liste des équipements compatibles :doc:`listeCompatibilite`
 
+Eurotronics
+-----------
+
+Ce chapithre regroupe les informations sur les équipements :doc:`Eurotronics`
+
+Heiman
+------
+
+Ce chapithre regroupe les informations sur les équipements :doc:`Heiman`
+
 Ikea
 ----
 
 Ce chapitre regroupe les informations sur les équipements :doc:`Ikea`
+
+Legrand
+-------
+
+Ce chapitre regroupe les informations sur les équipements :doc:`Legrand`
+
+Livolo
+------
+
+Ce chapithre regroupe les informations sur les équipements :doc:`Livolo`
 
 Osram
 -----
@@ -156,20 +176,6 @@ Xiaomi
 
 Ce chapithre regroupe les informations sur les équipements :doc:`Xiaomi`
 
-Eurotronics
------------
-
-Ce chapithre regroupe les informations sur les équipements :doc:`Eurotronics`
-
-Livolo
-------
-
-Ce chapithre regroupe les informations sur les équipements :doc:`Livolo`
-
-Heiman
-------
-
-Ce chapithre regroupe les informations sur les équipements :doc:`Heiman`
 
 Changelog
 =========

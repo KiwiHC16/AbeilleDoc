@@ -154,6 +154,64 @@ Controle Charge Resistive
 <p>Sur appui on entend le relai claquer. Rien sur la relache. Rien ne remonte sur le ZigBee suaf si Bind/Report fait sur etat.</p>
 </div>
 </div>
+<div class="section" id="interrupteur-sans-neutre">
+<h2>Interrupteur Sans neutre<a class="headerlink" href="#interrupteur-sans-neutre" title="Lien permanent vers ce titre">¶</a></h2>
+<img alt="_images/Capture_d_ecran_2019_07_07_a_08_56_58.png" src="_images/Capture_d_ecran_2019_07_07_a_08_56_58.png" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Bien lui mettre une charge résistive.</p>
+</div>
+<div class="section" id="id3">
+<h3>Inclusion<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>Zigate en mode Inclusion</li>
+<li>Mise sous tension de l’interrupteur,</li>
+<li>il rejoint le réseau (Dimmer switch w/o neutral),</li>
+<li>il est créé dans Abeille.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h3>Fonctions<a class="headerlink" href="#id4" title="Lien permanent vers ce titre">¶</a></h3>
+<dl class="docutils">
+<dt>Fonctionne:</dt>
+<dd><ul class="first simple">
+<li>On</li>
+<li>Off</li>
+<li>Toggle</li>
+<li>Lecture etat On/Off</li>
+<li>Lecture Level</li>
+<li>Routeur (elle diffuse les Link Status)</li>
+<li>Retour état automatique On/Off (Bind On/Off, Report On/Off).</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Sur appui bouton On ou Off de l interrupteur l’etat remonte.</li>
+<li>Sur changement etat commandé depuis la ZiGate, il ne rapporte pas son état ! Heureusement Abeille demande !!!</li>
+</ul>
+</div></blockquote>
+<ul class="last simple">
+<li>Groupe</li>
+<li>Scene (Devrait être ok pas testé)</li>
+</ul>
+</dd>
+<dt>Pas supporté:</dt>
+<dd><ul class="first last simple">
+<li>Puissance (Pas de cluster trouvé)</li>
+<li>Consommation (Pas de cluster trouvé)</li>
+</ul>
+</dd>
+<dt>En cours d investigation:</dt>
+<dd><ul class="first last simple">
+<li>Cmd  Zigate Move to level with On/off ne fonctionne pas</li>
+<li>Appui prolongé haut ou bas de l interrupteur ne provoque pas de variatieon ! Ou est le dimmer ?</li>
+<li>D’après la doc option variateur: Activable depuis l’application.</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
 </div>
 
 
@@ -176,6 +234,11 @@ Controle Charge Resistive
 <li><a class="reference internal" href="#id1">Inclusion</a></li>
 <li><a class="reference internal" href="#id2">Fonctions</a></li>
 <li><a class="reference internal" href="#bouton-pourssoir-sur-le-boitier">Bouton Pourssoir sur le boitier</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#interrupteur-sans-neutre">Interrupteur Sans neutre</a><ul>
+<li><a class="reference internal" href="#id3">Inclusion</a></li>
+<li><a class="reference internal" href="#id4">Fonctions</a></li>
 </ul>
 </li>
 </ul>

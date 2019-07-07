@@ -86,8 +86,10 @@ Fonctionne:
  * Toggle
  * Lecture etat On/Off
  * Retour état automatique On/Off (Bind On/Off, Report On/Off).
+
   * Sur appui bouton poussoir du boitier l'etat remonte. Le bouton provoque un toggle ( <= Bouton Poussoir).
   * Sur changement etat commandé depuis la ZiGate, il ne rapporte pas son état ! Heureusement Abeille demande !!!
+
  * Groupe
  * Scene (Devrait être ok d apres retour utilisateur)
  * Routeur (elle diffuse les Link Status)
@@ -108,3 +110,48 @@ Bouton Pourssoir sur le boitier
 -------------------------------
 
 Sur appui on entend le relai claquer. Rien sur la relache. Rien ne remonte sur le ZigBee suaf si Bind/Report fait sur etat.
+
+
+************************
+Interrupteur Sans neutre
+************************
+
+.. image:: images/Capture_d_ecran_2019_07_07_a_08_56_58.png
+
+.. note:: Bien lui mettre une charge résistive.
+
+Inclusion
+---------
+
+ * Zigate en mode Inclusion
+ * Mise sous tension de l'interrupteur,
+ * il rejoint le réseau (Dimmer switch w/o neutral),
+ * il est créé dans Abeille.
+
+Fonctions
+---------
+
+Fonctionne:
+ * On
+ * Off
+ * Toggle
+ * Lecture etat On/Off
+ * Lecture Level
+ * Routeur (elle diffuse les Link Status)
+ * Retour état automatique On/Off (Bind On/Off, Report On/Off).
+
+  * Sur appui bouton On ou Off de l interrupteur l'etat remonte.
+  * Sur changement etat commandé depuis la ZiGate, il ne rapporte pas son état ! Heureusement Abeille demande !!!
+
+ * Groupe
+ * Scene (Devrait être ok pas testé)
+
+
+Pas supporté:
+ * Puissance (Pas de cluster trouvé)
+ * Consommation (Pas de cluster trouvé)
+
+En cours d investigation:
+ * Cmd  Zigate Move to level with On/off ne fonctionne pas
+ * Appui prolongé haut ou bas de l interrupteur ne provoque pas de variatieon ! Ou est le dimmer ?
+ * D'après la doc option variateur: Activable depuis l'application.

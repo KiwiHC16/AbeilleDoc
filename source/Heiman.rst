@@ -11,7 +11,7 @@ Inclusion
 ZiGate en mode Inclusion
 Trombone dans petit trou sur le côté pendant 4s, le device fait un Beacon, flash en vert en face avant, s'appaire et est créé dans Abeille.
 
-..image:: images/Capture_d_ecran_2019_07_06_a_11_40_01.png
+.. image:: images/Capture_d_ecran_2019_07_06_a_11_40_01.png
 
 Exclusion
 =========

@@ -38,3 +38,5 @@ Un appui sur le bouton de la face avant provoque une alarme (un message remonte)
 Vous pouvez décoder les informations remontant sur la base de :
 
 .. image:: images/Capture_d_ecran_2019_07_09_a_15_51_27.png
+
+.. note:: Pour tester, prendre un briquet, l'allumer et le placer sous le capteur. Le capteur active son alarme, attention aux oreilles, et le champ passe à 21 dans Abeille.

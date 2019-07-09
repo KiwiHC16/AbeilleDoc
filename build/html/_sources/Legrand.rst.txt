@@ -117,8 +117,13 @@ Interrupteur Sans neutre
 ************************
 
 .. image:: images/Capture_d_ecran_2019_07_07_a_08_56_58.png
+  :width: 200px
 
-.. note:: Bien lui mettre une charge résistive.
+.. note:: Bien mettre une charge résistive.
+
+.. note:: Charge entre 5W et 300W d'après la doc.
+
+.. note:: Contrairement aux interrupteurs Xiaomi qui se comportent en End Device qui s'endorment qui donc ne routent pas et poll les commandes et sont donc lent à réagir aux commandes. Les interrupteurs Legrand sont des routeurs en éveille permanent, donc réagisse immédiatement et participe au mesh.
 
 Inclusion
 ---------

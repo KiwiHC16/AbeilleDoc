@@ -37,55 +37,45 @@
             
   <div class="section" id="livolo">
 <h1>Livolo<a class="headerlink" href="#livolo" title="Lien permanent vers ce titre">¶</a></h1>
-<div class="section" id="interrupteur-1-btn">
-<h2>Interrupteur 1 btn<a class="headerlink" href="#interrupteur-1-btn" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="en-cours">
-<h3>En cours<a class="headerlink" href="#en-cours" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Fonctionne pendant  une minute puis ne répond plus. Je n’avais pas ce soucis avec le modèle 2 boutons…</p>
-<div class="section" id="inclure">
-<h4>Inclure<a class="headerlink" href="#inclure" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Un appui long (&gt; 5s) sur le bouton central jusqu’à émission d’un bip doit provoquer l’association (Zigate en mode inclusion) l’équipement doit se connecter et un objet doit apparaître dans Jeedom.</p>
-</div>
 <div class="section" id="caracteristiques">
-<h4>Caracteristiques<a class="headerlink" href="#caracteristiques" title="Lien permanent vers ce titre">¶</a></h4>
-<div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">EP: 6</span>
-<span class="x">(Simple Descriptor Response)</span>
-<span class="x">profile : 0104 (ZigBee Home Automation (ZHA)); deviceId : 0000 (On/Off Switch); bitField : 00;</span>
-<span class="x">InClusterCount : 02</span>
-<span class="x">In cluster: 0000 - General: Basic</span>
-<span class="x">In cluster: 0003 - General: Identify</span>
-<span class="x">OutClusterCount : 01</span>
-<span class="x">Out cluster: 0006 - General: On/Off</span>
-</pre></div>
-</td></tr></table></div>
+<h2>Caracteristiques<a class="headerlink" href="#caracteristiques" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Visiblement Livolo utilise uniquement le canal radio 26. Cela implique de mettre la zigate sur ce canal. Pour définir le canal allez dans la page du plugin et suivez les instructions du chapitre «&nbsp;Channel Mask&nbsp;».</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">quand vous faites cela, la zigate va changer de canal mais si vous avez des équipements déjà sur le réseau ils ne seront pas au courant et vous allez les perdre.
+Vous devrez refaire une inclusion pour les retrouver.</p>
+</div>
+</div>
+<div class="section" id="interrupteur-1-btn-2-btn">
+<h2>Interrupteur 1 btn &amp; 2 btn<a class="headerlink" href="#interrupteur-1-btn-2-btn" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="inclure">
+<h3>Inclure<a class="headerlink" href="#inclure" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Un appui long (&gt; 6s) sur le bouton sensitif au centre de la face avant jusqu’à émission d’un bip doit provoquer l’association (Zigate en mode inclusion).</p>
+<p>l’équipement doit se connecter et un objet doit apparaître dans Jeedom.</p>
 </div>
 <div class="section" id="retour-d-etat">
-<h4>Retour d’état<a class="headerlink" href="#retour-d-etat" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Abeille fait la demande après envoie d’une commande.</p>
-</div>
-</div>
-<div class="section" id="interrupteur-2-btn">
-<h3>Interrupteur 2 btn<a class="headerlink" href="#interrupteur-2-btn" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Un appui long (&gt; ?s) sur un bouton jusqu’à émission d’un bip doit provoquer l’association (Zigate en mode inclusion) l’équipement doit se connecter et un objet doit apparaître dans Jeedom.</p>
-<div class="section" id="id1">
-<h4>Retour d’état<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Abeille fait la demande après envoie d’une commande.</p>
-</div>
-</div>
-<div class="section" id="remarques">
-<h3>Remarques<a class="headerlink" href="#remarques" title="Lien permanent vers ce titre">¶</a></h3>
-<ul class="simple">
-<li>les deux interrupteurs s’annonce sous le même nom «&nbsp;TI0001&nbsp;».</li>
-<li>par defaut Abeille crée un modèle 2 boutons. Effacer les commandes On et Off pour le second boutons si vous avez un modèle 1 bouton.</li>
-<li>ils ne semblent pas aimer les commandes non supportées et se met en carafe et ne répond plus.</li>
+<h3>Retour d’état<a class="headerlink" href="#retour-d-etat" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour l’instant en version 3.1a de la zigate, le retour d’état envoyé par le bouton (si vous utilisez le bouton directement par exemple) n’est pas transmis par la zigate à Abeille. Sera certainement dans les versions futures.</p>
+<p>Si vous controllez le bouton depuis Abeille, alors Abeille fait la demande d’état après envoie d’une commande.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Les deux types d’interrupteurs s’annoncent sous le même nom «&nbsp;TI0001&nbsp;». Il n’y dans Abeille qu’un modèle car les deux types se comportent de la même facon.</li>
+<li>Par defaut Abeille crée un modèle 2 boutons. Rendre non visible les commandes On et Off pour le second boutons si vous avez un modèle 1 bouton.</li>
 </ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Ils ne semblent pas aimer les commandes non supportées et se met en carafe et ne répond plus.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Ces interrupteurs peuvent avoir un comportement ou ils ne repondent plus après quelques minutes. Il y a un trick Livolo pour qu’ils restent actifs. Si cela se produit refaite une inclusion pour qu’abeille applique le trick.</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -99,18 +89,10 @@
   <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Livolo</a><ul>
-<li><a class="reference internal" href="#interrupteur-1-btn">Interrupteur 1 btn</a><ul>
-<li><a class="reference internal" href="#en-cours">En cours</a><ul>
-<li><a class="reference internal" href="#inclure">Inclure</a></li>
 <li><a class="reference internal" href="#caracteristiques">Caracteristiques</a></li>
+<li><a class="reference internal" href="#interrupteur-1-btn-2-btn">Interrupteur 1 btn &amp; 2 btn</a><ul>
+<li><a class="reference internal" href="#inclure">Inclure</a></li>
 <li><a class="reference internal" href="#retour-d-etat">Retour d’état</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#interrupteur-2-btn">Interrupteur 2 btn</a><ul>
-<li><a class="reference internal" href="#id1">Retour d’état</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#remarques">Remarques</a></li>
 </ul>
 </li>
 </ul>

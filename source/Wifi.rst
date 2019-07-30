@@ -14,7 +14,7 @@ Ce montage possede un ESP8266, un étage de "puissance" avec batterie, un CP2104
 
 J'ai aussi ma Zigate version bidouille:
 
-image:IMG_6207.jpg[]
+.. image:: images/IMG_6207.jpg[]
 
 Restait à les connecter.
 

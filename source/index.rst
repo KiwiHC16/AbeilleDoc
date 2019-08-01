@@ -146,6 +146,11 @@ Ikea
 
 Ce chapitre regroupe les informations sur les équipements :doc:`Ikea`
 
+Konke
+-----
+
+Ce chapitre regroupe les informations sur les équipements :doc:`Konke`
+
 Legrand
 -------
 

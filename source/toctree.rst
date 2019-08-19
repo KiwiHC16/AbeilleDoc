@@ -37,6 +37,7 @@ Table des matieres complete
    Radio
    Remplacement
    Scenes
+   Suppression
    Systeme
    Timer
    Tuto

@@ -386,3 +386,35 @@ PS: Les scénarios ne sont pas implémentés pour l'instant (30/10/2018):
 
 * Sc1, Sc2, SC3 sur la télécommande dans Jeedom,
 * et les boutons "Fleche Gauche", "Fleche Droite" de la télécommande physique.
+
+Transfo
+*******
+
+Inclusion
+---------
+appui bouton reset 3s avec zigate en mode inclusion.
+
+Store
+*****
+
+Inclusion en appuyant 8s sur les deux boutons en face avant du store et zigate en mode inclusion.
+
+Un device doit se créer dans Abeille et vous pouvez commander le store.
+
+Si vous voulez controler le store avec la telecommande store, lui ajouter un groupe.
+
+Telecommande Store
+******************
+
+Inclusion en 4x fois appui sur bouton arriere avec zigate en mode inclusion.
+
+Par defaut la telecommande adresse les messages au groupe 0000. Positionner l'adresse du groupe que vous souhaitez avec la command "Set Group Remote" afin que la telecommande physique utilise ce groupe. Et renseigner dans les parametres de la telecommande dans jeedom la valeur du groupe pour que la telecommande virtuelle utilise le meme groupe.
+
+Attention cette telecommande n'est pas identique à la télécommande I/O, elles n'envoient pas les même commandes. Celle ci envoie des commandes pour des stores (Up/Down) alors que celle I/O envoie des commandes de type On/Off. Donc une I/O ne peut pas commander un store et une telecommande store ne peut pas commander une prise ou une ampoule.
+
+Routeur (Repeteur)
+******************
+
+Mettre la zigate en mode inclusion et un clic sur le bouton reset du routeur et il doit rejoindre le réseau.
+
+Note: ce n'est pas un répéteur comme on peut le lire partout mais c'est un routeur.

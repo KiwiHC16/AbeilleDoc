@@ -231,3 +231,29 @@ Dans Abeille/resources/AbeilleDeamon/Debug, vous trouverez le script verificatio
 L'execution permet de tester, vérifier et donner des infos qui sont souvent interessantes pour des problème de base. Ce script n'est pas forcement bien maintenu alors les résultats ne sont pas forcement fiables.
 
 Je ne suis pas sûre que ce script soit toujours à jour...
+
+Messages
+========
+Les different module d'Abeille discutent entre eux par message passing. Ils est possible de voir l'etat avec la commande ipcs (en ssh).
+
+.. code-block:: php
+
+  ------ Files de messages --------
+  clef       msqid      propriétaire perms      octets utilisés messages
+  0x0000007b 0          www-data   666        0            0
+  0x000000df 32769      www-data   666        0            0
+  0x00000143 65538      www-data   666        0            0
+  0x00000141 98307      www-data   666        0            0
+  0x0000020b 131076     www-data   666        0            0
+  0x0000026f 163845     www-data   666        0            0
+  0x000002d3 196614     www-data   666        0            0
+  0x00000336 229383     www-data   666        0            0
+  0x00000079 262152     www-data   666        0            0
+  0x000000dd 294921     www-data   666        0            0
+  0x000001a5 327690     www-data   666        0            0
+  0x0000026d 360459     www-data   666        0            0
+  0x0000007c 393228     www-data   666        0            0
+  0x000000e1 425997     www-data   666        0            0
+
+Ici on voit dans la derniere colonne qu'il n'y a pas de message en attente, ils ont tous été traités.
+  

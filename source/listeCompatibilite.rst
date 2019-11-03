@@ -2,6 +2,52 @@
 Liste des équipements compatibles
 *********************************
 
+
+
+
+
+.. image:: imagesDevices/node_3AFE130104020015.png
+   :width: 200px
+
+Konke Door Sensor
+
+
+.. image:: imagesDevices/node_3AFE140103020000.png
+   :width: 200px
+
+Konke Temperature Humidité Rond
+
+
+.. image:: imagesDevices/node_3AFE14010402000D.png
+   :width: 200px
+
+Konke IR INfra Rouge Presence
+
+
+.. image:: imagesDevices/node_3AFE170100510001.png
+   :width: 200px
+
+Xiaomi Interrupteur simple
+
+
+.. image:: imagesDevices/node_511.201.png
+   :width: 200px
+
+511.201 Iluminize
+
+
+.. image:: imagesDevices/node_511.202.png
+   :width: 200px
+
+Module 511.202 iluminize
+
+
+.. image:: imagesDevices/node_bsoProFalux.png
+   :width: 200px
+
+BSO ProFalux (brise-soleil orientables)
+
+
 .. image:: imagesDevices/node_CLA60RGBWOSRAM.png
    :width: 200px
 
@@ -29,13 +75,25 @@ OSRAM Classic A60 W clear - LIGHTIFY
 .. image:: imagesDevices/node_Connectedoutlet.png
    :width: 200px
 
-Legrand Prise Connected Outlet
+Legrand Prise Connected Outlet Mural 220V avec Neutre
 
 
 .. image:: imagesDevices/node_Dimmerswitchwoneutral.png
    :width: 200px
 
 Legrand Dimmer Switch w/o neutral
+
+
+.. image:: imagesDevices/node_FLOALTpanelWS60x60.png
+   :width: 200px
+
+IKEA Panneau TRADFRI FLOALT White Spectre 2800 lm
+
+
+.. image:: imagesDevices/node_FYRTURblock-outrollerblind.png
+   :width: 200px
+
+FYRTUR blind
 
 
 .. image:: imagesDevices/node_FlexRGBW.png
@@ -98,6 +156,12 @@ ampoule philips hue couleur de première génération
 ampoule philips hue couleur
 
 
+.. image:: imagesDevices/node_LIGHTIFYIndoorFlexRGBW.png
+   :width: 200px
+
+LIGHTIFY Indoor Flex RGBW
+
+
 .. image:: imagesDevices/node_LIGHTIFYOutdoorFlexRGBW.png
    :width: 200px
 
@@ -137,7 +201,7 @@ Philips Hue white ambiance
 .. image:: imagesDevices/node_LTW012.png
    :width: 200px
 
-Ampoule e14 Philips Hue White ambiance 6w 2200-6500k 470lm 55ma
+Ampoule e14 Philips Hue White ambiance 6w 2200-6500k 470lm 55ma 
 
 
 .. image:: imagesDevices/node_LTW013.png
@@ -176,6 +240,24 @@ ZigBee On Off Controller
 MR16 TW OSRAM OSRAM Spot LED dimmable connecté Smart
 
 
+.. image:: imagesDevices/node_Micromoduleswitch.png
+   :width: 200px
+
+Legrand Micro Module Encastrable 220V avec Neutre et un bouton poussoir
+
+
+.. image:: imagesDevices/node_MotionSensor-A.png
+   :width: 200px
+
+Osram Motion Sensor-A
+
+
+.. image:: imagesDevices/node_Switch4xEU-LIGHTIFY.png
+   :width: 200px
+
+OSRAMSwitch
+
+
 .. image:: imagesDevices/node_PAR1650TW.png
    :width: 200px
 
@@ -206,10 +288,34 @@ OSRAM Prise Lightify
 Ampoule Innr spectre blanc 2200K-2700K E27
 
 
+.. image:: imagesDevices/node_RF263.png
+   :width: 200px
+
+Ampoule Innr Edison RF263 Vintage E27
+
+
+.. image:: imagesDevices/node_RF265.png
+   :width: 200px
+
+Ampoule Innr Edison RF265 White E27
+
+
 .. image:: imagesDevices/node_RWL021.png
    :width: 200px
 
 Hue Telecommande RWL021
+
+
+.. image:: imagesDevices/node_LegrandRemoteSwitch.png
+   :width: 200px
+
+Legrand Télécommande Depart Arrivée
+
+
+.. image:: imagesDevices/node_SA-003-Zigbee.png
+   :width: 200px
+
+ZigBee On Off Controller
 
 
 .. image:: imagesDevices/node_SML001.png
@@ -236,10 +342,28 @@ Eurotronic Spirit
 Heiman Smoke Sensor
 
 
+.. image:: imagesDevices/node_SmokeSensor-EM.png
+   :width: 200px
+
+Humein Smoke Sensor
+
+
+.. image:: imagesDevices/node_Switch4xEU-LIGHTIFY.png
+   :width: 200px
+
+OSRAM Switch Switch4xEU-LIGHTIFY
+
+
 .. image:: imagesDevices/node_TI0001.png
    :width: 200px
 
 Livolo Switch TI0001
+
+
+.. image:: imagesDevices/node_TRADFRIbulbE14CWSopal600lm.png
+   :width: 200px
+
+IKEA Ampoule TRADFRI bulb E14 Color White Spectre Opal 600lm
 
 
 .. image:: imagesDevices/node_IkeaTradfriBulbE14WSOpal400lm.png
@@ -270,6 +394,12 @@ IKEA Ampoule TRADFRI bulb E27 White Spectre opal 1000 lm
    :width: 200px
 
 IKEA Ampoule TRADFRI bulb E27 White Spectre opal 980 lm
+
+
+.. image:: imagesDevices/node_TRADFRIbulbE27WW806lm.png
+   :width: 200px
+
+TRADFRI bulb E27 WW 806lm 
 
 
 .. image:: imagesDevices/node_IkeaTradfriBulbE27Opal1000lm.png
@@ -318,6 +448,12 @@ IKEA TRADFRI Detecteur Presence (Type: E1525)
    :width: 200px
 
 IKEA TRADFRI Carre 2 Boutons Remote Control
+
+
+.. image:: imagesDevices/node_TRADFRIopencloseremote.png
+   :width: 200px
+
+IKEA TRADFRI Carre 2 Boutons Remote Control livré avec Fyrtur Store
 
 
 .. image:: imagesDevices/node_IkeaTradfri5BtnRond.png
@@ -572,6 +708,12 @@ Template for ZigBee - Dimmable Light
 zigbee Extended color light
 
 
+.. image:: imagesDevices/node_.png
+   :width: 200px
+
+zigbeeIASZone
+
+
 .. image:: imagesDevices/node_zigbeeNon-colorscenecontroller.png
    :width: 200px
 
@@ -582,3 +724,21 @@ Template for ZigBee - Non Color Scene Controller
    :width: 200px
 
 zigbee Non color controller
+
+
+.. image:: imagesDevices/node_.png
+   :width: 200px
+
+zigbeeOccupencySensor
+
+
+.. image:: imagesDevices/node_zigbeeOnOffLight.png
+   :width: 200px
+
+zigbeeOnOffLight
+
+
+.. image:: imagesDevices/node_zigbeeWindowCoveringDevice.png
+   :width: 200px
+
+zigbeeWindowCoveringDevice

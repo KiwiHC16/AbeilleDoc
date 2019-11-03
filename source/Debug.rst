@@ -35,7 +35,7 @@ Les logs, aussi nombreux que possibles surtout
  * AbeilleParser
  * AbeilleMQTT
  * Abeille
- *...
+ * ...
 
 Description
  * ce que vous cherchez à faire
@@ -256,4 +256,3 @@ Les different module d'Abeille discutent entre eux par message passing. Ils est 
   0x000000e1 425997     www-data   666        0            0
 
 Ici on voit dans la derniere colonne qu'il n'y a pas de message en attente, ils ont tous été traités.
-  

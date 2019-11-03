@@ -66,12 +66,12 @@
 </ul>
 </dd>
 <dt>Les logs, aussi nombreux que possibles surtout</dt>
-<dd><ul class="first simple">
+<dd><ul class="first last simple">
 <li>AbeilleParser</li>
 <li>AbeilleMQTT</li>
 <li>Abeille</li>
+<li>…</li>
 </ul>
-<p class="last"><a href="#id1"><span class="problematic" id="id2">*</span></a>…</p>
 </dd>
 <dt>Description</dt>
 <dd><ul class="first last simple">
@@ -229,6 +229,29 @@
 <p>L’execution permet de tester, vérifier et donner des infos qui sont souvent interessantes pour des problème de base. Ce script n’est pas forcement bien maintenu alors les résultats ne sont pas forcement fiables.</p>
 <p>Je ne suis pas sûre que ce script soit toujours à jour…</p>
 </div>
+<div class="section" id="messages">
+<h3>Messages<a class="headerlink" href="#messages" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les different module d’Abeille discutent entre eux par message passing. Ils est possible de voir l’etat avec la commande ipcs (en ssh).</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">------ Files de messages --------</span>
+<span class="x">clef       msqid      propriétaire perms      octets utilisés messages</span>
+<span class="x">0x0000007b 0          www-data   666        0            0</span>
+<span class="x">0x000000df 32769      www-data   666        0            0</span>
+<span class="x">0x00000143 65538      www-data   666        0            0</span>
+<span class="x">0x00000141 98307      www-data   666        0            0</span>
+<span class="x">0x0000020b 131076     www-data   666        0            0</span>
+<span class="x">0x0000026f 163845     www-data   666        0            0</span>
+<span class="x">0x000002d3 196614     www-data   666        0            0</span>
+<span class="x">0x00000336 229383     www-data   666        0            0</span>
+<span class="x">0x00000079 262152     www-data   666        0            0</span>
+<span class="x">0x000000dd 294921     www-data   666        0            0</span>
+<span class="x">0x000001a5 327690     www-data   666        0            0</span>
+<span class="x">0x0000026d 360459     www-data   666        0            0</span>
+<span class="x">0x0000007c 393228     www-data   666        0            0</span>
+<span class="x">0x000000e1 425997     www-data   666        0            0</span>
+</pre></div>
+</div>
+<p>Ici on voit dans la derniere colonne qu’il n’y a pas de message en attente, ils ont tous été traités.</p>
+</div>
 </div>
 </div>
 
@@ -255,6 +278,7 @@
 </li>
 <li><a class="reference internal" href="#equipements-zigbee">Equipements ZigBee</a></li>
 <li><a class="reference internal" href="#script">Script</a></li>
+<li><a class="reference internal" href="#messages">Messages</a></li>
 </ul>
 </li>
 </ul>

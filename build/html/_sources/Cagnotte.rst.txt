@@ -20,22 +20,34 @@ Je n'ai aucune idée de votre participation à cette cagnotte mais comme tout es
 Budget
 ======
 
-Cagnotte au 1 Juillet 2019:
+Cagnotte au 22 octobre 2019:
 
 Recettes:
 
-* 708,01€ (740,01€ moins la com paypal)
+* 780,01€ (745,44€ moins la com paypal)
 
 Dépense:
 
-* Capteur Motion Hue Indoor - 39,95€ - Dans la version stable du 16/3/2019
-* Capteur Motion Hue Outdoor - 49,99€ - Dans la version master
-* Ampoule Aqara Xiaomi / Prise en encastrée Aqara - 39,17€  - Dans le master du 13 mai 2019
-* Double relai Aqara Mural - 18,06€ - Dans le master du 25 avril 2019
-* Une prise et un micro module Legrand - 82,90€ - Livré.
+* Motion Hue Indoor
+* Motion Hue Outdoor
+* Ampoule Aqara BestGear
+* Prise integrée Aqara BestGear
+* Prise Legrand
+* Module Legrand
+* Double Switch Aqara Mural
+* Prise de courant connectée 16A Dooxie with Netatmo - Blanc - 600391 - Legrand
+* OSRAM Smart+ Détecteur de Mouvement Motion Sensor Connecté | Blanc
+* Innr RC 110
+* JOYKK Contrôleur Marche/arrêt Zigbee Smart Switch APP Module de contrôle à Distance Smart Home AC85-265V 10A - Blanc
+* Eurotronic 700045 Spirit Mitigeur thermostatique pour radiateur Zigbee Blanc Taille unique
+* Store Fyrtur
+* Osram Lightify Interrupteur Télécommande Gris
+* OSRAM Smart+ Détecteur de Mouvement
+
+Total de 605,77€
 
 Reste:
 
-* 435,64€
+* 139,67€
 
 Échanges sur la cagnotte: https://github.com/KiwiHC16/Abeille/issues/584

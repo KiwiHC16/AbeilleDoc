@@ -84,7 +84,7 @@ La première étape pour pouvoir utiliser un équipement est de l' :doc:`Inclusi
 Suppression
 ===========
 
-Vous avez la possibilité de faire une :doc:`Suppression` d'un équipement du réseau zigbee géré par la zigate. 
+Vous avez la possibilité de faire une :doc:`Suppression` d'un équipement du réseau zigbee géré par la zigate.
 
 
 Groups
@@ -197,6 +197,11 @@ Bien évidement pour les personnes qui savent développer toutes les information
 
 Avancé
 ======
+
+OnLine
+======
+
+Un statut Online est géré pour les équipements sur secteur. Le besoins était né du fait du plugin Homebridge. Plus de détails dans :doc:`OnLine`.
 
 Debug
 =====

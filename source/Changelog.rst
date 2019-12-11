@@ -4,6 +4,11 @@ ChangeLog
 Mise à jour
 -----------
 
+06/2019 => 11/2019
+^^^^^^^^^^^^^^^^^^
+
+Rien de spécifique à faire. Juste a faire la mise à jour depuis jeedom.
+
 03/2019 => 06/2019
 ^^^^^^^^^^^^^^^^^^
 
@@ -117,10 +122,28 @@ ou issue dans GitHub: `ISSUE <https://github.com/KiwiHC16/Abeille/issues?utf8=�
 Changelog
 ---------
 
-En fait le ChangeLog est dans GitHub alors je perds mon temps a essayer de la mettre a jour dans cette doc. Je ne fais plus de mise à jour.
+En fait le ChangeLog est dans GitHub alors je perds mon temps a essayer de la mettre a jour dans cette doc. Je ne fais plus de mise à jour ou que des principales choses quand j'ai le temps.
 
 Voir directement dans `GitHub <https://github.com/KiwiHC16/Abeille/commits/master>`_
 
+
+2019-11-25
+^^^^^^^^^^^^^^^^^^
+
+Ce dernières semaines le focus a été sur:
+- Compatibilité avec Jeedom V4 et Buster (Debian 10)
+- mise en place de la gestion des messages envoyés à la zigate avec creation de fil d'attente.
+- Repetition d'un message vers la zigate si elle dit n'avoir pas réussi à le gérer
+- Refonte de la détection de équipements lors de l inclusion
+- Store et Télécommande Store Ikea
+- Demarrage automatique du réseau Zigbee
+- Iluminize Dimmable 511.201
+- Iluminize 511.202
+- Osram Smart+ Motion Sensor
+- Télécommande OSRAM
+- Ajout ampoules INNR RF263 et RF265
+- Corrections de bugs
+- .....
 
 2019-03-20
 ^^^^^^^^^^^^^^^^^^

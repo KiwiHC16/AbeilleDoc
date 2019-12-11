@@ -406,13 +406,14 @@ Par exemple vous pouvez avoir une Ampoule Ikea sur le groupe de la télécommand
 <h2>Store<a class="headerlink" href="#store" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Inclusion en appuyant 8s sur les deux boutons en face avant du store et zigate en mode inclusion.</p>
 <p>Un device doit se créer dans Abeille et vous pouvez commander le store.</p>
-<p>Si vous voulez controler le store avec la telecommande store, lui ajouter un groupe.</p>
+<p>Si vous voulez controler le store avec la telecommande store, lui ajouter un groupe. Par defaut la télécommande utilise le groupe 0000.</p>
 </div>
 <div class="section" id="telecommande-store">
 <h2>Telecommande Store<a class="headerlink" href="#telecommande-store" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Inclusion en 4x fois appui sur bouton arriere avec zigate en mode inclusion.</p>
 <p>Par defaut la telecommande adresse les messages au groupe 0000. Positionner l’adresse du groupe que vous souhaitez avec la command «&nbsp;Set Group Remote&nbsp;» afin que la telecommande physique utilise ce groupe. Et renseigner dans les parametres de la telecommande dans jeedom la valeur du groupe pour que la telecommande virtuelle utilise le meme groupe.</p>
 <p>Attention cette telecommande n’est pas identique à la télécommande I/O, elles n’envoient pas les même commandes. Celle ci envoie des commandes pour des stores (Up/Down) alors que celle I/O envoie des commandes de type On/Off. Donc une I/O ne peut pas commander un store et une telecommande store ne peut pas commander une prise ou une ampoule.</p>
+<p>L’objet Telecommande créé dans Abeille permet d’avoir les trois commandes Up/Stop/Down. Par défaut, la télécommande dans Abeille enverra les commandes à tous les stores en même temps. La fonction de groupe ne fonctionne pas. Renseigné tout de même le parametre Groupe dans le tab Param mettre une valeur commme 0000. Peut être qu’un jour cette valeur sera utilisable.</p>
 </div>
 <div class="section" id="routeur-repeteur">
 <h2>Routeur (Repeteur)<a class="headerlink" href="#routeur-repeteur" title="Lien permanent vers ce titre">¶</a></h2>

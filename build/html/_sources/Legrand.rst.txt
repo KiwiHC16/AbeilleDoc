@@ -48,6 +48,10 @@ inclusion
 
 Le bouton "reset" se trouve en façade en enlevant tous les caches et le bouton.
 Ensuite, il faut mettre la ZiGate en mode inclusion puis effectuer un appuie long 5-10 sec sur le reset ... attendre 10 sec ... puis faire un simple clic sur le reset.
+Si deja associé, faire un reset bouton proche roue crantée sur le Bouton au fond du trou. Avec un trombone appuyer environ 8 secondes. Une led s'allume vert, puis flash bleu, puis flash rouge, 1s apres faire un appui rapide sur le reset (Si ce n'est pas fait le module s'appaire puis passe en Beacon request Loop, très surprenant) et la le module fait un appairage. Et doit apparaitre dans Abeille. (Tests fait sur Channel 11, je ne sais pas si il y a des limitations sur ce point.)
+
+Aussi une bonne description ici: https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Legrand-corner.md#pairing-process
+
 
 ***************
 Module Encastré
@@ -76,6 +80,8 @@ Inclusion
 
  * A la sortie de la boite, sur alimentation électrique le module envoie des Beacons et la Led Rouge est allumée.
  * Si je mets la ZiGate en inclusion et branche le module, il s'appaire au réseau zigbee, LED rouge s'éteind.
+ * Si deja associé, faire un reset bouton proche roue crantée sur le Bouton au fond du trou. Avec un trombone appuyer environ 8 secondes. Une led s'allume vert, puis flash bleu, puis flash rouge, 1s apres faire un appui rapide sur le reset (Si ce n'est pas fait le module s'appaire puis passe en Beacon request Loop, très surprenant) et la le module fait un appairage. Et doit apparaitre dans Abeille. (Tests fait sur Channel 11, je ne sais pas si il y a des limitations sur ce point.)
+ * Aussi une bonne description ici: https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Legrand-corner.md#pairing-process
 
 Fonctions
 ---------
@@ -132,6 +138,7 @@ Inclusion
  * Mise sous tension de l'interrupteur,
  * il rejoint le réseau (Dimmer switch w/o neutral),
  * il est créé dans Abeille.
+ * Aussi une bonne description ici: https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Legrand-corner.md#pairing-process
 
 Fonctions
 ---------

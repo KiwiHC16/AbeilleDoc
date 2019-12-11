@@ -57,6 +57,21 @@
 </ul>
 <p>Je vous propose 2 méthodes.</p>
 </div>
+<div class="section" id="heartbeat">
+<h2>Heartbeat<a class="headerlink" href="#heartbeat" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dixit: <a class="reference external" href="https://www.jeedom.com/forum/viewtopic.php?p=716483#p718402">https://www.jeedom.com/forum/viewtopic.php?p=716483#p718402</a></p>
+<p>Toutes les 5 min, le core va faire les actions suivantes pour tous les plugins:</p>
+<ul class="simple">
+<li>Si aucune config (hearbeat vide), ca sera par défaut 0</li>
+<li>Si vide donc ou 0 ou une valeur non numérique, aucun check</li>
+<li>Si aucun équipement actif, aucun check</li>
+<li>ensuite il regarde si un équipement a eu un «&nbsp;changement&nbsp;» (en vérifiant que la «&nbsp;lastcommunication&nbsp;» est supérieur à l’heure actuelle moins le temps définit par le hearbeat)</li>
+<li>s’il ne trouve pas d’équipement répondant à cette condition, il poste un message (dans le centre de notification)</li>
+<li>s’il la case «&nbsp;relancer le démon&nbsp;» est coché, le démon est relancé</li>
+</ul>
+<p>Dans notre cas, les devices ont des timeout de l ordre de l heure, donc descendre en dessous n’est pas une bonne idée à moins de redescendre le timeout du la ruche.
+Je vais le mettre à 2h (120min) avec restart sur mon système de prod.</p>
+</div>
 </div>
 
 
@@ -71,6 +86,7 @@
 <li><a class="reference internal" href="#ping">Ping</a></li>
 <li><a class="reference internal" href="#etat">État</a></li>
 <li><a class="reference internal" href="#sante">Santé</a></li>
+<li><a class="reference internal" href="#heartbeat">Heartbeat</a></li>
 </ul>
 </li>
 </ul>

@@ -391,7 +391,8 @@ Transfo
 *******
 
 Inclusion
----------
+*********
+
 appui bouton reset 3s avec zigate en mode inclusion.
 
 Store

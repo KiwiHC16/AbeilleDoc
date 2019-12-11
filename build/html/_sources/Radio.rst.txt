@@ -199,7 +199,7 @@ Routage
 Les chapitres suivants ne sont pas disponibles dans Abeille et nécessitent un sniffer Zigbee associé à Wireshark. Disons que c'est pour les utilisateurs très très avancés. Il est fort probable d'avoir à adapter le code...
 
 Link Status
-----------
+-----------
 
 Afin de comprendre la situation radio de votre réseau, vous pouvez utiliser ce script RadioVoisinesMap.php et visualiser les résultats dans un browser web:
 

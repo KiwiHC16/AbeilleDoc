@@ -26,7 +26,7 @@ author = u'KiwiHC16'
 # The short X.Y version
 version = u''
 # The full version, including alpha/beta/rc tags
-release = u'27.04.2019'
+release = u'12.12.2019'
 
 
 # -- General configuration ---------------------------------------------------

@@ -19,8 +19,8 @@ En retour d'experience sur le forum:
 - Windows ne fonctionne pas, car pas Linux (fichier fifo)
 - link:Docker.html#Ubuntu[Ubuntu fonctionne mais demande de mettre les mains dans le cambouis], l'installation même de Jeedom n'est pas immédiate.
 - Odroid/HardKernel devrait fonctionner
-* U3 sous debian: install classique
-* link:Docker.html#XU4[XU4 sous ubuntu]
+- U3 sous debian: install classique
+- link:Docker.html#XU4[XU4 sous ubuntu]
 
 == Equipements
 

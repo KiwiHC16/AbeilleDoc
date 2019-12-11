@@ -401,7 +401,7 @@ Inclusion en appuyant 8s sur les deux boutons en face avant du store et zigate e
 
 Un device doit se créer dans Abeille et vous pouvez commander le store.
 
-Si vous voulez controler le store avec la telecommande store, lui ajouter un groupe.
+Si vous voulez controler le store avec la telecommande store, lui ajouter un groupe. Par defaut la télécommande utilise le groupe 0000.
 
 Telecommande Store
 ******************
@@ -411,6 +411,8 @@ Inclusion en 4x fois appui sur bouton arriere avec zigate en mode inclusion.
 Par defaut la telecommande adresse les messages au groupe 0000. Positionner l'adresse du groupe que vous souhaitez avec la command "Set Group Remote" afin que la telecommande physique utilise ce groupe. Et renseigner dans les parametres de la telecommande dans jeedom la valeur du groupe pour que la telecommande virtuelle utilise le meme groupe.
 
 Attention cette telecommande n'est pas identique à la télécommande I/O, elles n'envoient pas les même commandes. Celle ci envoie des commandes pour des stores (Up/Down) alors que celle I/O envoie des commandes de type On/Off. Donc une I/O ne peut pas commander un store et une telecommande store ne peut pas commander une prise ou une ampoule.
+
+L'objet Telecommande créé dans Abeille permet d'avoir les trois commandes Up/Stop/Down. Par défaut, la télécommande dans Abeille enverra les commandes à tous les stores en même temps. La fonction de groupe ne fonctionne pas. Renseigné tout de même le parametre Groupe dans le tab Param mettre une valeur commme 0000. Peut être qu'un jour cette valeur sera utilisable.
 
 Routeur (Repeteur)
 ******************

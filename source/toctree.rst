@@ -38,6 +38,7 @@ Table des matieres complete
    Radio
    Remplacement
    Scenes
+   Solutions
    Suppression
    Systeme
    Timer

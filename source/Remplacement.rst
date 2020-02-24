@@ -19,6 +19,14 @@ Si vous voulez remplacer un équipement par un autre (identique) par exemple par
 
    Cette fonction était intéressante dans les premières versions d'Abeille car le changement d'adresse des équipements zigbee n'était pas géré. Maintenant c'est automatique et donc le remplacement manuelle non nécessaire. A n'utiliser que pour des besoins très spécifiques.
 
+.. attention::
+
+  La méthode décrite ci dessous est valable pour les versions d'Abeille jusqu'à Decembre 2019. Ensuite la version multi zigate est apparau et demande une adaptation de la procedure ci dessous. Les adresses doivent être complete comme Abeille/xxxx et Abeille3/yyyy t non plus que xxxx et yyyy.
+
+.. attention::
+
+  Si vous souhaitez basculer une abeille d'une zigate à une autre vous pouvez utiliser cette méthode: 1/ Remove Abeille de la zigate A (Commande remove de la ruche A). 2/ Inclusion de l'équipement dans la Zigate C (Une nouvelle Abeille doit être créée). 3/ Remplacer.
+
 Prenons l'exemple du remplacement d'un bouton carre Xiaomi ayant pour adresse 21ce remplacé par un nouveau bouton.
 
 .. image:: images/Capture_d_ecran_2018_03_01_a_16_53_29.png

@@ -58,6 +58,19 @@ Cela veut dire Link Quality Index. C’est un indicateur de la qualité d’une 
 <p class="first admonition-title">Important</p>
 <p class="last">Gardez en tête que le réseau peut évoluer (ajout, retrait d’équipement, obstacle ajouté,…) et qu’aucune information n’est valide pour l’éternité. Donc chaque valeur est conservée un certain temps puis effacée ou rafraichie si une information permet de le faire. Par example vous pouvez très bien avoir une ampoule A dire voir l ampoule B, puis 10 minutes plus tard dire ne plus la voir simplement car elle ne la pas entendu discuter depuis 20 minutes.</p>
 </div>
+<div class="section" id="zigate-channel-selection">
+<h2>Zigate Channel Selection<a class="headerlink" href="#zigate-channel-selection" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour l instant le mask doit être défini à la main, je verrai comment faire une belle interface plus tard. Vous devez definir les canaux qui sont authorisés pour la zigate. Si 1 canal authorisé, si 0 canal pas authorisé.
+Au démarrage la zigate choisira parmi ces canaux en fonction de sa mesure d occupation du canal.
+Dans le zigbee vous avez les canaux 11 à 26 disponibles.
+Le mask couvre les canaux 0 à 31. De ce fait il faut positionner à 0 les canaux 0 à 10 et les canaux 27 à 31, on commence par canal 31 et on fini par canal 0 =&gt; 00000xxxxxxxxxxxxxxxx00000000000
+Les x étant les canaux 26 à 11. Si vous voulez tous les activer alors le mask vaut: 00000111111111111111100000000000 (en Hexa: 0x07FFF800)
+Si vous ne voulez que le canal 26 alors ca donne: 00000100000000000000000000000000 (en Hexa: 0x04000000)
+Si vous ne voulez que le canal 20 alors ca donne: 00000000000100000000000000000000 (en Hexa: 0x00100000)
+Si vous ne voulez que le canal 15 alors ca donne: 00000000000000001000000000000000 (en Hexa: 0x00008000)
+Dans le champ il faut mettre la valeur en hexa. Il faut bien 8 digit sans le 0x devant.
+Pour convertir le binaire en hexa vous avez: <a class="reference external" href="https://www.binaryhexconverter.com/binary-to-hex-converter">https://www.binaryhexconverter.com/binary-to-hex-converter</a></p>
+</div>
 <div class="section" id="network-list">
 <h2>Network List<a class="headerlink" href="#network-list" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Depuis le menu: Plugins-&gt;Protocole Domotique-&gt;Abeille-&gt;Network List vous allez arriver sur une page contenant 3 volets.</p>
@@ -248,6 +261,7 @@ Le deuxième graphe est le LQI en fonction de la distance à vol d’oiseau.</p>
   <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Radio</a><ul>
+<li><a class="reference internal" href="#zigate-channel-selection">Zigate Channel Selection</a></li>
 <li><a class="reference internal" href="#network-list">Network List</a><ul>
 <li><a class="reference internal" href="#resume">Résumé</a></li>
 <li><a class="reference internal" href="#graphique">Graphique</a></li>

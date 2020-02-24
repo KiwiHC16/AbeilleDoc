@@ -421,3 +421,23 @@ Routeur (Repeteur)
 Mettre la zigate en mode inclusion et un clic sur le bouton reset du routeur et il doit rejoindre le réseau.
 
 Note: ce n'est pas un répéteur comme on peut le lire partout mais c'est un routeur.
+
+
+IR - Detecteur de presence (E1525/E1575)
+****************************************
+
+ En fait le E1575 se comporte comme le E1525 (avec de subtilités).
+Il faut voir qu'une fois qu'il a envoyé une demande d'allumage il ne renverra pas de nouvelle demande avant 95s. C'est important pour la suite. Par defaut il utilise le groupe 0000.
+Pour définir le groupe avec lequel il va discuté, il faut faire un set Group Remote avec le bon timing.
+Pas évident car aucune indication n'est visible (Perso je peux le voir avec le sniffer). La manip a faire est la suivante.
+
+mettre le detecteur en mode jour et nuit
+Cacher le detecteur pendant au moins 95s
+selectionner le detecteur dans la conf abeille
+saisir le groupe, par exemple AAAA
+faire Set Group Remote
+et immediatement de-caché le capteur pour qu il vous detecte et se reveille pour envoyer sa commande
+Voila le capteur doit etre programmé, sinon refaire la manip.
+Ajouter le groupe a une ampoule ici AAAA
+attendre 95s
+declencher le capteur en bougeant devant lui et l ampoule doit s allumer.

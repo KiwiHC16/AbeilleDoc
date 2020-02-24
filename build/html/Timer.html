@@ -40,15 +40,13 @@
 <img alt="_images/node_Timer.png" src="_images/node_Timer.png" />
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Dans le plugin Abeille, il a été inclus un «&nbsp;sous-plugin&nbsp;» TIMER qui fonctionne à la seconde.</p>
-<p>[NOTE]
-_Dans le futur, il est possible que ce «&nbsp;sous-plugin&nbsp;» soit dédié et indépendant._</p>
+<p>plugin TIMER qui fonctionne à la seconde.</p>
 <div class="section" id="fonctionnement">
 <h3>Fonctionnement<a class="headerlink" href="#fonctionnement" title="Lien permanent vers ce titre">¶</a></h3>
 <img alt="_images/Capture_d_ecran_2018_03_21_a_13_16_53.png" src="_images/Capture_d_ecran_2018_03_21_a_13_16_53.png" />
 <p>Le timer possède 4 phases:</p>
 <p>T0-&gt;T1: RampUp de 0 à 100% =&gt; RampUp</p>
-<p>T1-&gt;T2: Stable à 100% =&gt; durationSeconde</p>
+<p>T1-&gt;T2: Stable à 100% =&gt; duration (Seconde)</p>
 <p>T2-&gt;T3: Ramp Down de 100% à 0% =&gt; RampDown</p>
 <p>T3-&gt; : n existe plus</p>
 <p>Exemple d’application: allumage progressif d une ampoule, maintient allumé pendant x secondes puis extinction progressive.</p>
@@ -56,6 +54,12 @@ _Dans le futur, il est possible que ce «&nbsp;sous-plugin&nbsp;» soit dédié 
 Il est important de noter que chaque phase fait au minimum 1s.</p>
 <p>[NOTE]
 Le rafraichissement du widget se fait toutes les 5s mais la mise à jour des valeurs se fait toutes les secondes.</p>
+</div>
+<div class="section" id="commandes">
+<h3>Commandes<a class="headerlink" href="#commandes" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Dans les premières versions du timer, il fallait configurer directement dans les Commandes les parametres. Maintenant cela se fait dans la page Param.</p>
+<p>[NOTE]
+Certaines captures d’écran datent de cette période, ne pas modifier les commandes comme pourrait le faire croire les images mais bien faire le parametrage dans la page Param.</p>
 </div>
 </div>
 <div class="section" id="video">
@@ -99,38 +103,68 @@ Le rafraichissement du widget se fait toutes les 5s mais la mise à jour des val
 <h4>Param<a class="headerlink" href="#param" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Dans l’onglet paramétrage du Timer, remplissez les champs:</p>
 <ul class="simple">
-<li>action sur demarrage: Action a éxecuter au démarrage du Timer</li>
 <li>Duration: c’est la durée en secondes entre T1 et T2, soit entre la fin du ramp up et le début du ramp down.</li>
 <li>Ramp Up duration: temps en secondes pour passer de T0 à T1</li>
 <li>Ramp Down duration: temps en secondes pour passer de T2 à T3</li>
-<li>Ramp Action: action qui sera executer lors de la variation de la commande info RampUpDown.</li>
+<li>action sur demarrage: Action a éxecuter au démarrage du Timer</li>
+<li>«&nbsp;Trigger Action sur demarrage&nbsp;»: vous pouvez declencher l action sur changement d’une valeur d une commande info. Definir la commande info qui sert de timer.</li>
+<li>Trigger Test Start: la formule est utilisée pour définir si l ation doit être lancé. Si l evalution du test est vrai alors la comande sera executée. Par exemple: #valueTrigger# == 4. La valeur de la commande qui a trigger l evenement sera comparé à la valeur 4.</li>
 <li>Action sur arret: arret executée lors de l’expiration du timer.</li>
+<li>«&nbsp;Trigger Action sur Stop: idem description start</li>
+<li>Trigger Test Stop: idem description start</li>
 <li>Action sur annulation: action excutée si le timer est annulé</li>
+<li>«&nbsp;Trigger Action sur Cancel: idem description start</li>
+<li>Trigger Test Cancel: idem description start</li>
+<li>Ramp Action: action qui sera executer lors de la variation de la commande info RampUpDown.</li>
 </ul>
 <p>[NOTE]
 Toutes les commandes sont au format #[objet][equipement][cmd]# par exemple #[test][Ruban][Level]#</p>
-</div>
-</div>
-<div class="section" id="commandes">
-<h3>Commandes<a class="headerlink" href="#commandes" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Dans les premières versions du timer, il fallait configurer directement dans les Commandes les parametres. Maintenant cela se fait dans la page Param.</p>
 <p>[NOTE]
-Certaines captures d’écran datent de cette période, ne pas modifier les commandes comme pourrait le faire croire les images mais bien faire le parametrage dans la page Param.</p>
+la possibilié d’utiliser le fonctionnement avec des trigger demande de rajouter une ligne de code dans le core du code Jeedom.
+Dans le fichier /var/www/html/core/class/cmd.class.php, en ligne 1497 ajouter la ligne:
+cmd-&gt;execute(array(“cmdIdUpdated”=&gt;$this-&gt;getId()));</p>
+<p>Ca donne
+if (!$repeat) {</p>
+<blockquote>
+<div><p>$this-&gt;setCache(array(“value” =&gt; $value, “valueDate” =&gt; $this-&gt;getValueDate()));
+scenario::check($this);
+$level = $this-&gt;checkAlertLevel($value);
+$events[] = array(“cmd_id” =&gt; $this-&gt;getId(), “value” =&gt; $value, “display_value” =&gt; $display_value, “valueDate” =&gt; $this-&gt;getValueDate(), “collectDate” =&gt; $this-&gt;getCollectDate(), “alertLevel” =&gt; $level);
+$foundInfo = false;
+$value_cmd = self::byValue($this-&gt;getId(), null, true);
+if (is_array($value_cmd) &amp;&amp; count($value_cmd) &gt; 0) {</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>foreach ($value_cmd as $cmd) {</dt>
+<dd><dl class="first last docutils">
+<dt>if ($cmd-&gt;getType() == “action”) {</dt>
+<dd>$events[] = array(“cmd_id” =&gt; $cmd-&gt;getId(), “value” =&gt; $value, “display_value” =&gt; $display_value, “valueDate” =&gt; $this-&gt;getValueDate(), “collectDate” =&gt; $this-&gt;getCollectDate());</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>$cmd-&gt;execute(array(“cmdIdUpdated”=&gt;$this-&gt;getId()));</dt>
+<dd>} else {</dd>
+</dl>
+</div></blockquote>
+</div>
 </div>
 <div class="section" id="commande-ou-scenario">
 <h3>Commande ou Scénario<a class="headerlink" href="#commande-ou-scenario" title="Lien permanent vers ce titre">¶</a></h3>
-<p>[TIP]
-Il faut que je revois cette partie suite aux derniers changements, je ne suis pas sût que cela fonctionne encore.</p>
 <p>Par défaut l’objet Timer est créé avec des commande Start, Stop, Cancel qui font référence à l’exécution d’une commande.</p>
 <p>Mais vous avez la possibilité d’appeler un scénario à la place d’une commande.</p>
 <p>Cela vous permet beaucoup plus de flexibilité comme le lancement d’une série de commandes.</p>
-<p>La syntaxe: scenarioStart=Id,scenarioCancel=Id,scenarioStop=Id, en remplaçant Id pour l’identifiant du scénario que vous trouvez dans la définition du scénario.</p>
-<img alt="_images/Capture_d_ecran_2018_03_27_a_12_52_53.png" src="_images/Capture_d_ecran_2018_03_27_a_12_52_53.png" />
 <p>L’Id du scénario est dans le tab de la page de configuration du scenario.</p>
 <img alt="_images/Capture_d_ecran_2018_03_27_a_12_55_27.png" src="_images/Capture_d_ecran_2018_03_27_a_12_55_27.png" />
 <p>Ici vous pouvez voir l’ID 3 du scénario utilisé.</p>
-<p>Commande Start Complete</p>
-<p>actionStart=#put_the_cmd_here#=&amp;durationSeconde=300&amp;RampUp=10&amp;RampDown=10&amp;actionRamp=#put_the_cmd_here#</p>
+<p>Exemple:</p>
+<p>Trop fort : il suffit de chainer les timers !!! =&gt; Timer 2 se declenche sur arret du timer 1.</p>
+<ul class="simple">
+<li>timer 1 pour lumière pendant 4h sur ouverture de porte</li>
+<li>fermeture de porte au bout de x minutes qui provoque le stop du timer 1</li>
+<li>timer 1 passe a zero et declenche le timer 2 start qui reste allumé pour 5 minutes</li>
+</ul>
 </div>
 </div>
 </div>
@@ -146,6 +180,7 @@ Il faut que je revois cette partie suite aux derniers changements, je ne suis pa
 <li><a class="reference internal" href="#">Timer</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a><ul>
 <li><a class="reference internal" href="#fonctionnement">Fonctionnement</a></li>
+<li><a class="reference internal" href="#commandes">Commandes</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#video">Video</a><ul>
@@ -157,7 +192,6 @@ Il faut que je revois cette partie suite aux derniers changements, je ne suis pa
 <li><a class="reference internal" href="#param">Param</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#commandes">Commandes</a></li>
 <li><a class="reference internal" href="#commande-ou-scenario">Commande ou Scénario</a></li>
 </ul>
 </li>

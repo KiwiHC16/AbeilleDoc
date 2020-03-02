@@ -201,7 +201,7 @@ Philips Hue white ambiance
 .. image:: imagesDevices/node_LTW012.png
    :width: 200px
 
-Ampoule e14 Philips Hue White ambiance 6w 2200-6500k 470lm 55ma 
+Ampoule e14 Philips Hue White ambiance 6w 2200-6500k 470lm 55ma
 
 
 .. image:: imagesDevices/node_LTW013.png
@@ -280,6 +280,12 @@ PROFALUX Light
    :width: 200px
 
 OSRAM Prise Lightify
+
+
+.. image:: imagesDevices/node_PlugZ3.png
+   :width: 200px
+
+Plug Z3 Ledvance
 
 
 .. image:: imagesDevices/node_RB175W.png
@@ -399,7 +405,13 @@ IKEA Ampoule TRADFRI bulb E27 White Spectre opal 980 lm
 .. image:: imagesDevices/node_TRADFRIbulbE27WW806lm.png
    :width: 200px
 
-TRADFRI bulb E27 WW 806lm 
+TRADFRI bulb E27 WW 806lm
+
+
+.. image:: imagesDevices/node_TRADFRIbulbE27WWclear250lm.png
+   :width: 200px
+
+TRADFRI bulb E27 WW clear 250lm
 
 
 .. image:: imagesDevices/node_IkeaTradfriBulbE27Opal1000lm.png
@@ -441,7 +453,7 @@ IKEA Prise
 .. image:: imagesDevices/node_IkeaTradfriMotionSensor.png
    :width: 200px
 
-IKEA TRADFRI Detecteur Presence (Type: E1525)
+IKEA TRADFRI Detecteur Presence (Type: E1525 / E1745)
 
 
 .. image:: imagesDevices/node_IkeaTradfri2BtnCarre.png
@@ -486,10 +498,16 @@ IKEA Ampoule TRADFRI transformer 30W
 IKEA TRADFRI Dimmer Jaune
 
 
-.. image:: imagesDevices/node_Timer.png
+.. image:: imagesDevices/node_TS0003.png
    :width: 200px
 
-Timer
+Zemismart 3 boutons
+
+
+.. image:: imagesDevices/node_TY0A01.png
+   :width: 200px
+
+Wima Lock
 
 
 .. image:: imagesDevices/node_ZLO-DimmableLight.png
@@ -520,6 +538,12 @@ ZLO-OccupancySensor for Dev
    :width: 200px
 
 Xiaomi Prise Murale Encastrée
+
+
+.. image:: imagesDevices/node_ctrl_neutral2.png
+   :width: 200px
+
+Xiaomi Wall Switch w Neutral 2
 
 
 .. image:: imagesDevices/node_ctrl_neutral1.png
@@ -574,6 +598,18 @@ Xiaomi Bouton Aqara 2 Copy
    :width: 200px
 
 Xiaomi Interrupteur Mural Carré Double
+
+
+.. image:: imagesDevices/node_remotecontrol.png
+   :width: 200px
+
+Remote Control Virtuel pour piloter des groupes
+
+
+.. image:: imagesDevices/node_sen_ill_mgl01.png
+   :width: 200px
+
+Xiaomi Smart Ligth Sensor
 
 
 .. image:: imagesDevices/node_XiaomiButtonSW861.png
@@ -736,6 +772,12 @@ zigbeeOccupencySensor
    :width: 200px
 
 zigbeeOnOffLight
+
+
+.. image:: imagesDevices/node_zigbeeWindowCoveringDevice.png
+   :width: 200px
+
+zigbeeShade
 
 
 .. image:: imagesDevices/node_zigbeeWindowCoveringDevice.png

@@ -7,18 +7,25 @@ Mise à jour
 12/2019 => 03/2019
 ^^^^^^^^^^^^^^^^^^
 
+::
+
+    !!!! Ne pas faire ces manipulations sans avoir fait de backup !!!!
+
 Attention: cette nouvelle version apporte:
-- le multi-zigate
-- la gestion de queue de message avec priorité
-- quelques équipements supplémentaires
-- corrections de bugs
+
+* le multi-zigate
+* la gestion de queue de message avec priorité
+* quelques équipements supplémentaires
+* corrections de bugs
 
 Mais comme les changements sont importants et que j'ai pas beaucoup de temps pour tester il peut y avoir des soucis. Donc faites bien une sauvegarde pour revenir en arrière si besoin.
 
 A noter:
-- La partie graphs n'a pas été complètement vérifiée et il reste des soucis
-- les timers ne sont plus dans le Plugin
-- un bug critique si vous faites l inclusion d'un type d equipement inconnu par Abeille, il faut redemarrer le demon.
+
+* La partie graphs n'a pas été complètement vérifiée et il reste des soucis
+* les timers ne sont plus dans le Plugin
+* un bug critique si vous faites l inclusion d'un type d equipement inconnu par Abeille, il faut redemarrer le demon.
+
 
 06/2019 => 11/2019
 ^^^^^^^^^^^^^^^^^^

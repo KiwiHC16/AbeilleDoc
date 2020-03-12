@@ -4,8 +4,15 @@ ChangeLog
 Mise à jour
 -----------
 
-12/2019 => 03/2019
+12/2019 => 03/2020
 ^^^^^^^^^^^^^^^^^^
+
+::
+
+    !!!! Le plugin a été testé avec 1 ou 5 Zigate dans le panneau de configuration  !!!!
+    !!!! Avec d'autres valeur 2, 3, 4, 6... il est for possible que tout            !!!!
+    !!!! ne fonctionne pas comme prévu. Si vous avez 2 zigate, mettez le nombre de  !!!!
+    !!!! zigate à 5 et activer uniquement les zigates presentent.                   !!!!
 
 ::
 

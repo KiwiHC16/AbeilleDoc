@@ -44,13 +44,6 @@ Le chapitre :doc:`Presentation` contient les premières informations nécessaire
 
 .. image:: images/Abeille_icon.png
 
-Timer
-=====
-
-Le plugin contient une fonctionalité :doc:`Timer` qui peut être utilisé avec ou sans la zigate et le réseau zigbee associé. Le :doc:`Timer` fonctionne à la seconde ce qui n'existe pas à ma connaissance dans Jeedom.
-
-.. image:: images/node_Timer.png
-
 Installation
 ============
 
@@ -132,8 +125,8 @@ D'autres fonctions de Jeedom sont bien pratiques, par exemple si vous devez :doc
 Equipements
 ===========
 
-Equipements
------------
+Compatible
+----------
 
 Liste des équipements compatibles :doc:`listeCompatibilite`
 

@@ -41,7 +41,6 @@ Table des matieres complete
    Solutions
    Suppression
    Systeme
-   Timer
    Tuto
    Widget
    Wifi

@@ -8,13 +8,13 @@ Timer
 Introduction
 ************
 
-plugin TIMER qui fonctionne à la seconde.
+Ce plugin fonctionne à la seconde.
 
 
 Fonctionnement
 ==============
 
-.. image:: images/Capture_d_ecran_2018_03_21_a_13_16_53.png
+.. image:: images/Capture_d_ecran_2018_03_21_a_13_16_54.png
 
 Le timer possède 4 phases:
 
@@ -34,19 +34,6 @@ Il est important de noter que chaque phase fait au minimum 1s.
 [NOTE]
 Le rafraichissement du widget se fait toutes les 5s mais la mise à jour des valeurs se fait toutes les secondes.
 
-Commandes
-=========
-
-Dans les premières versions du timer, il fallait configurer directement dans les Commandes les parametres. Maintenant cela se fait dans la page Param.
-
-[NOTE]
-Certaines captures d'écran datent de cette période, ne pas modifier les commandes comme pourrait le faire croire les images mais bien faire le parametrage dans la page Param.
-
-*****
-Video
-*****
-
-`Video expliquant les fonctionnements des Timers.  <https://youtu.be/B3qullXc-_s>`_
 
 
 Trois commandes
@@ -64,6 +51,7 @@ Retour d'information
 * Duration: Temps restant avant expiration du Timer en secondes
 * ExpiryTime: Heure d'expiration du Timer
 * RampUpDown: Pourcentage entre 0 et 100 (Ramp Up 0->100, Ramp Down 100->0)
+* Etat: 0 ou 1. 1 si timer demarré.
 
 Elles ne sont pas forcement toutes visibles, à vous de choisir.
 
@@ -81,7 +69,7 @@ Un message doit apparaitre pour annoncer la création du Timer avec un Id Abeill
 
 Apres avoir rafraichi l'écran vous devriez avoir l objet:
 
-.. image:: images/Capture_d_ecran_2018_03_21_a_13_16_53.png
+.. image:: images/Capture_d_ecran_2018_03_21_a_13_16_55.png
 
 
 Configuration du Timer
@@ -98,43 +86,16 @@ Param
 
 Dans l'onglet paramétrage du Timer, remplissez les champs:
 
-* Duration: c'est la durée en secondes entre T1 et T2, soit entre la fin du ramp up et le début du ramp down.
-* Ramp Up duration: temps en secondes pour passer de T0 à T1
-* Ramp Down duration: temps en secondes pour passer de T2 à T3
+* Ramp Up (s)): temps en secondes pour passer de T0 à T1
+* Active (s): c'est la durée en secondes entre T1 et T2, soit entre la fin du ramp up et le début du ramp down.
+* Ramp Down (s)): temps en secondes pour passer de T2 à T3
 * action sur demarrage: Action a éxecuter au démarrage du Timer
-* "Trigger Action sur demarrage": vous pouvez declencher l action sur changement d'une valeur d une commande info. Definir la commande info qui sert de timer.
-* Trigger Test Start: la formule est utilisée pour définir si l ation doit être lancé. Si l evalution du test est vrai alors la comande sera executée. Par exemple: #valueTrigger# == 4. La valeur de la commande qui a trigger l evenement sera comparé à la valeur 4.
 * Action sur arret: arret executée lors de l'expiration du timer.
-* "Trigger Action sur Stop: idem description start
-* Trigger Test Stop: idem description start
 * Action sur annulation: action excutée si le timer est annulé
-* "Trigger Action sur Cancel: idem description start
-* Trigger Test Cancel: idem description start
 * Ramp Action: action qui sera executer lors de la variation de la commande info RampUpDown.
+
 [NOTE]
 Toutes les commandes sont au format \#[objet][equipement][cmd]# par exemple \#[test][Ruban][Level]#
-
-[NOTE]
-la possibilié d'utiliser le fonctionnement avec des trigger demande de rajouter une ligne de code dans le core du code Jeedom.
-Dans le fichier /var/www/html/core/class/cmd.class.php, en ligne 1497 ajouter la ligne:
-cmd->execute(array('cmdIdUpdated'=>$this->getId()));
-
-Ca donne
-if (!$repeat) {
-			$this->setCache(array('value' => $value, 'valueDate' => $this->getValueDate()));
-			scenario::check($this);
-			$level = $this->checkAlertLevel($value);
-			$events[] = array('cmd_id' => $this->getId(), 'value' => $value, 'display_value' => $display_value, 'valueDate' => $this->getValueDate(), 'collectDate' => $this->getCollectDate(), 'alertLevel' => $level);
-			$foundInfo = false;
-			$value_cmd = self::byValue($this->getId(), null, true);
-			if (is_array($value_cmd) && count($value_cmd) > 0) {
-				foreach ($value_cmd as $cmd) {
-					if ($cmd->getType() == 'action') {
-						$events[] = array('cmd_id' => $cmd->getId(), 'value' => $value, 'display_value' => $display_value, 'valueDate' => $this->getValueDate(), 'collectDate' => $this->getCollectDate());
-                        $cmd->execute(array('cmdIdUpdated'=>$this->getId()));
-					} else {
-
-
 
 
 Commande ou Scénario
@@ -153,10 +114,29 @@ L'Id du scénario est dans le tab de la page de configuration du scenario.
 
 Ici vous pouvez voir l'ID 3 du scénario utilisé.
 
+[NOTE]
+Vous pouvez declencher le Timer depuis une (ou plusieures) commandes info d'autres équipements. Pour cela selectionner la commande Trigger du Timer comme ci dessous:
+
+.. image:: images/Capture_d_ecran_2018_03_21_a_13_16_59.png
+
+Vous pouver provoquer cette execution uniquement si certains criteres ou tout le temps en mettant un critere toujours valide. Ici par exemple different de -1 qui est toujours vrai pour une valeur binaire.
+
+Ensuite le Timer va regarder qu'elle action executer (Start, Stop, Cancel) en fonction des critères définis dans les parametres:
+
+.. image:: images/Capture_d_ecran_2018_03_27_a_12_55_34.png
+
+Ce qui interressant ici est que la formule peut inclure ce que vous voulez et pas forcement la commande qui a provoqué le trigger.
+
+
 Exemple:
 
-Trop fort : il suffit de chainer les timers !!! => Timer 2 se declenche sur arret du timer 1.
+Controler un eclairage sur ouverture d'un porte. Le scenario le plus simple est: j'ouvre la porte l'eclairage s allume, je ferme la port l eclairage s eteint.
+Mais comment faire par exemple si je veux sortir 3 minutes en refermant la porte alors qu'il fait nuit ?
+Et etre sure que si la porte reste ouverte toute la nuit, l'eclairage lui s'eteigne apres 1 heure d'eclairage ?
 
-* timer 1 pour lumière pendant 4h sur ouverture de porte
-* fermeture de porte au bout de x minutes qui provoque le stop du timer 1
-* timer 1 passe a zero et declenche le timer 2 start qui reste allumé pour 5 minutes
+Il suffit de chainer les timers !!!
+
+* Sur la commande "etat" du capteur de porte, je met un trigger sur timer 1.
+* Je donne au timer 1 une durée d'1h sur ouverture de porte
+* Je demande le declenchement du timer 2 sur Stop du Timer 1 (Quand je ferme la porte)
+* Le timer 2 start et reste allumé pour 5 minutes ce qui me laisse le temps de faire mes trois minutes avant de rentrer.

@@ -40,10 +40,10 @@
 <img alt="_images/node_Timer.png" src="_images/node_Timer.png" />
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h2>
-<p>plugin TIMER qui fonctionne à la seconde.</p>
+<p>Ce plugin fonctionne à la seconde.</p>
 <div class="section" id="fonctionnement">
 <h3>Fonctionnement<a class="headerlink" href="#fonctionnement" title="Lien permanent vers ce titre">¶</a></h3>
-<img alt="_images/Capture_d_ecran_2018_03_21_a_13_16_53.png" src="_images/Capture_d_ecran_2018_03_21_a_13_16_53.png" />
+<img alt="_images/Capture_d_ecran_2018_03_21_a_13_16_54.png" src="_images/Capture_d_ecran_2018_03_21_a_13_16_54.png" />
 <p>Le timer possède 4 phases:</p>
 <p>T0-&gt;T1: RampUp de 0 à 100% =&gt; RampUp</p>
 <p>T1-&gt;T2: Stable à 100% =&gt; duration (Seconde)</p>
@@ -55,16 +55,6 @@ Il est important de noter que chaque phase fait au minimum 1s.</p>
 <p>[NOTE]
 Le rafraichissement du widget se fait toutes les 5s mais la mise à jour des valeurs se fait toutes les secondes.</p>
 </div>
-<div class="section" id="commandes">
-<h3>Commandes<a class="headerlink" href="#commandes" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Dans les premières versions du timer, il fallait configurer directement dans les Commandes les parametres. Maintenant cela se fait dans la page Param.</p>
-<p>[NOTE]
-Certaines captures d’écran datent de cette période, ne pas modifier les commandes comme pourrait le faire croire les images mais bien faire le parametrage dans la page Param.</p>
-</div>
-</div>
-<div class="section" id="video">
-<h2>Video<a class="headerlink" href="#video" title="Lien permanent vers ce titre">¶</a></h2>
-<p><a class="reference external" href="https://youtu.be/B3qullXc-_s">Video expliquant les fonctionnements des Timers.</a></p>
 <div class="section" id="trois-commandes">
 <h3>Trois commandes<a class="headerlink" href="#trois-commandes" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
@@ -81,6 +71,7 @@ Certaines captures d’écran datent de cette période, ne pas modifier les comm
 <li>Duration: Temps restant avant expiration du Timer en secondes</li>
 <li>ExpiryTime: Heure d’expiration du Timer</li>
 <li>RampUpDown: Pourcentage entre 0 et 100 (Ramp Up 0-&gt;100, Ramp Down 100-&gt;0)</li>
+<li>Etat: 0 ou 1. 1 si timer demarré.</li>
 </ul>
 <p>Elles ne sont pas forcement toutes visibles, à vous de choisir.</p>
 <p>Dans les phase de ramp Up ou Down, la commande actionRamp/scenarioRamp est exécutée régulièrement avec pour paramètre la valeur en cours de RampUpDown.</p>
@@ -91,7 +82,7 @@ Certaines captures d’écran datent de cette période, ne pas modifier les comm
 <p>Un message doit apparaitre pour annoncer la création du Timer avec un Id Abeille-NombreAléatoire.</p>
 <img alt="_images/Capture_d_ecran_2018_03_21_a_13_14_36.png" src="_images/Capture_d_ecran_2018_03_21_a_13_14_36.png" />
 <p>Apres avoir rafraichi l’écran vous devriez avoir l objet:</p>
-<img alt="_images/Capture_d_ecran_2018_03_21_a_13_16_53.png" src="_images/Capture_d_ecran_2018_03_21_a_13_16_53.png" />
+<img alt="_images/Capture_d_ecran_2018_03_21_a_13_16_55.png" src="_images/Capture_d_ecran_2018_03_21_a_13_16_55.png" />
 </div>
 <div class="section" id="configuration-du-timer">
 <h3>Configuration du Timer<a class="headerlink" href="#configuration-du-timer" title="Lien permanent vers ce titre">¶</a></h3>
@@ -103,51 +94,16 @@ Certaines captures d’écran datent de cette période, ne pas modifier les comm
 <h4>Param<a class="headerlink" href="#param" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Dans l’onglet paramétrage du Timer, remplissez les champs:</p>
 <ul class="simple">
-<li>Duration: c’est la durée en secondes entre T1 et T2, soit entre la fin du ramp up et le début du ramp down.</li>
-<li>Ramp Up duration: temps en secondes pour passer de T0 à T1</li>
-<li>Ramp Down duration: temps en secondes pour passer de T2 à T3</li>
+<li>Ramp Up (s)): temps en secondes pour passer de T0 à T1</li>
+<li>Active (s): c’est la durée en secondes entre T1 et T2, soit entre la fin du ramp up et le début du ramp down.</li>
+<li>Ramp Down (s)): temps en secondes pour passer de T2 à T3</li>
 <li>action sur demarrage: Action a éxecuter au démarrage du Timer</li>
-<li>«&nbsp;Trigger Action sur demarrage&nbsp;»: vous pouvez declencher l action sur changement d’une valeur d une commande info. Definir la commande info qui sert de timer.</li>
-<li>Trigger Test Start: la formule est utilisée pour définir si l ation doit être lancé. Si l evalution du test est vrai alors la comande sera executée. Par exemple: #valueTrigger# == 4. La valeur de la commande qui a trigger l evenement sera comparé à la valeur 4.</li>
 <li>Action sur arret: arret executée lors de l’expiration du timer.</li>
-<li>«&nbsp;Trigger Action sur Stop: idem description start</li>
-<li>Trigger Test Stop: idem description start</li>
 <li>Action sur annulation: action excutée si le timer est annulé</li>
-<li>«&nbsp;Trigger Action sur Cancel: idem description start</li>
-<li>Trigger Test Cancel: idem description start</li>
 <li>Ramp Action: action qui sera executer lors de la variation de la commande info RampUpDown.</li>
 </ul>
 <p>[NOTE]
 Toutes les commandes sont au format #[objet][equipement][cmd]# par exemple #[test][Ruban][Level]#</p>
-<p>[NOTE]
-la possibilié d’utiliser le fonctionnement avec des trigger demande de rajouter une ligne de code dans le core du code Jeedom.
-Dans le fichier /var/www/html/core/class/cmd.class.php, en ligne 1497 ajouter la ligne:
-cmd-&gt;execute(array(“cmdIdUpdated”=&gt;$this-&gt;getId()));</p>
-<p>Ca donne
-if (!$repeat) {</p>
-<blockquote>
-<div><p>$this-&gt;setCache(array(“value” =&gt; $value, “valueDate” =&gt; $this-&gt;getValueDate()));
-scenario::check($this);
-$level = $this-&gt;checkAlertLevel($value);
-$events[] = array(“cmd_id” =&gt; $this-&gt;getId(), “value” =&gt; $value, “display_value” =&gt; $display_value, “valueDate” =&gt; $this-&gt;getValueDate(), “collectDate” =&gt; $this-&gt;getCollectDate(), “alertLevel” =&gt; $level);
-$foundInfo = false;
-$value_cmd = self::byValue($this-&gt;getId(), null, true);
-if (is_array($value_cmd) &amp;&amp; count($value_cmd) &gt; 0) {</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>foreach ($value_cmd as $cmd) {</dt>
-<dd><dl class="first last docutils">
-<dt>if ($cmd-&gt;getType() == “action”) {</dt>
-<dd>$events[] = array(“cmd_id” =&gt; $cmd-&gt;getId(), “value” =&gt; $value, “display_value” =&gt; $display_value, “valueDate” =&gt; $this-&gt;getValueDate(), “collectDate” =&gt; $this-&gt;getCollectDate());</dd>
-</dl>
-</dd>
-</dl>
-</div></blockquote>
-<dl class="docutils">
-<dt>$cmd-&gt;execute(array(“cmdIdUpdated”=&gt;$this-&gt;getId()));</dt>
-<dd>} else {</dd>
-</dl>
-</div></blockquote>
 </div>
 </div>
 <div class="section" id="commande-ou-scenario">
@@ -158,12 +114,23 @@ if (is_array($value_cmd) &amp;&amp; count($value_cmd) &gt; 0) {</p>
 <p>L’Id du scénario est dans le tab de la page de configuration du scenario.</p>
 <img alt="_images/Capture_d_ecran_2018_03_27_a_12_55_27.png" src="_images/Capture_d_ecran_2018_03_27_a_12_55_27.png" />
 <p>Ici vous pouvez voir l’ID 3 du scénario utilisé.</p>
+<p>[NOTE]
+Vous pouvez declencher le Timer depuis une (ou plusieures) commandes info d’autres équipements. Pour cela selectionner la commande Trigger du Timer comme ci dessous:</p>
+<img alt="_images/Capture_d_ecran_2018_03_21_a_13_16_59.png" src="_images/Capture_d_ecran_2018_03_21_a_13_16_59.png" />
+<p>Vous pouver provoquer cette execution uniquement si certains criteres ou tout le temps en mettant un critere toujours valide. Ici par exemple different de -1 qui est toujours vrai pour une valeur binaire.</p>
+<p>Ensuite le Timer va regarder qu’elle action executer (Start, Stop, Cancel) en fonction des critères définis dans les parametres:</p>
+<img alt="_images/Capture_d_ecran_2018_03_27_a_12_55_34.png" src="_images/Capture_d_ecran_2018_03_27_a_12_55_34.png" />
+<p>Ce qui interressant ici est que la formule peut inclure ce que vous voulez et pas forcement la commande qui a provoqué le trigger.</p>
 <p>Exemple:</p>
-<p>Trop fort : il suffit de chainer les timers !!! =&gt; Timer 2 se declenche sur arret du timer 1.</p>
+<p>Controler un eclairage sur ouverture d’un porte. Le scenario le plus simple est: j’ouvre la porte l’eclairage s allume, je ferme la port l eclairage s eteint.
+Mais comment faire par exemple si je veux sortir 3 minutes en refermant la porte alors qu’il fait nuit ?
+Et etre sure que si la porte reste ouverte toute la nuit, l’eclairage lui s’eteigne apres 1 heure d’eclairage ?</p>
+<p>Il suffit de chainer les timers !!!</p>
 <ul class="simple">
-<li>timer 1 pour lumière pendant 4h sur ouverture de porte</li>
-<li>fermeture de porte au bout de x minutes qui provoque le stop du timer 1</li>
-<li>timer 1 passe a zero et declenche le timer 2 start qui reste allumé pour 5 minutes</li>
+<li>Sur la commande «&nbsp;etat&nbsp;» du capteur de porte, je met un trigger sur timer 1.</li>
+<li>Je donne au timer 1 une durée d’1h sur ouverture de porte</li>
+<li>Je demande le declenchement du timer 2 sur Stop du Timer 1 (Quand je ferme la porte)</li>
+<li>Le timer 2 start et reste allumé pour 5 minutes ce qui me laisse le temps de faire mes trois minutes avant de rentrer.</li>
 </ul>
 </div>
 </div>
@@ -180,10 +147,6 @@ if (is_array($value_cmd) &amp;&amp; count($value_cmd) &gt; 0) {</p>
 <li><a class="reference internal" href="#">Timer</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a><ul>
 <li><a class="reference internal" href="#fonctionnement">Fonctionnement</a></li>
-<li><a class="reference internal" href="#commandes">Commandes</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#video">Video</a><ul>
 <li><a class="reference internal" href="#trois-commandes">Trois commandes</a></li>
 <li><a class="reference internal" href="#retour-d-information">Retour d’information</a></li>
 <li><a class="reference internal" href="#creation-d-un-timers">Creation d un Timers</a></li>

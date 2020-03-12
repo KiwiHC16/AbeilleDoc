@@ -20,11 +20,11 @@ Je n'ai aucune idée de votre participation à cette cagnotte mais comme tout es
 Budget
 ======
 
-Cagnotte au 22 octobre 2019:
+Cagnotte au 12 mars 2020:
 
 Recettes:
 
-* 780,01€ (745,44€ moins la com paypal)
+* 1116,21€ (1162€ moins la com paypal)
 
 Dépense:
 
@@ -43,11 +43,21 @@ Dépense:
 * Store Fyrtur
 * Osram Lightify Interrupteur Télécommande Gris
 * OSRAM Smart+ Détecteur de Mouvement
+* Composants et ensembles iluminescents, Zigbee 3.0 Dimm-set
+* iluminize Zigbee 3.0 Produit haute tension, Zigbee 3.0 Schalt-aktor 230.00volts
+* Vanne Eau/Gaz Zigbee Tuya
+* Interrupteur 3 boutons tuya
+* Détecteur de mouvements sans fil IP 44 with Netatmo - Legrand - 064875
+* Sortie de câble connectée 14A fil pilote with Netatmo - blanc - Legrand - 064879
+* SONOFF
+* Xiaomi Light Sensor
+* 2020 New ZigBee Temperature Humidity Sensor Smart Home Automation With LCD Screen Display Work With TuYa Smart Life ZigBee Hub
+* Tuya ZigBee passerelle Hub
 
-Total de 605,77€
+Total de 946,84€
 
 Reste:
 
-* 139,67€
+* 169,37€
 
 Échanges sur la cagnotte: https://github.com/KiwiHC16/Abeille/issues/584

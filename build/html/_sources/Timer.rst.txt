@@ -42,6 +42,10 @@ Trois commandes
 * Start: permet d'exécuter une commande et de démarrer le Timer.
 * Cancel: permet d'exécuter une commande et d'annuler le Timer.
 * Stop: permet d'exécuter une commande, à l'expiration du Timer.
+* Trigger: a un role particulier. Si vous appeler cette commande, le plugin va parcourir les commandes Start, STop, Cancel pour trouver si une condition associée est vri et dans ce cas executer la commande.
+
+
+
 
 Retour d'information
 ====================
@@ -89,13 +93,21 @@ Dans l'onglet paramétrage du Timer, remplissez les champs:
 * Ramp Up (s)): temps en secondes pour passer de T0 à T1
 * Active (s): c'est la durée en secondes entre T1 et T2, soit entre la fin du ramp up et le début du ramp down.
 * Ramp Down (s)): temps en secondes pour passer de T2 à T3
-* action sur demarrage: Action a éxecuter au démarrage du Timer
+* Action sur demarrage: Action a éxecuter au démarrage du Timer
 * Action sur arret: arret executée lors de l'expiration du timer.
 * Action sur annulation: action excutée si le timer est annulé
 * Ramp Action: action qui sera executer lors de la variation de la commande info RampUpDown.
+* Parametre: parametres fournis à la commande STart/Stop/Cancel lors de son execution.
+* Scenario sur demarrage: Scenario a éxecuter au démarrage du Timer
+* Scenario sur arret: Scenario executée lors de l'expiration du timer.
+* Scenario sur annulation: Scenario excutée si le timer est annulé
+* Trigger: Chaque commande Start/Stop/Cancel peut avoir une condition qui sera vérifiée lors d'un appel à la commande Trigger.
 
 [NOTE]
 Toutes les commandes sont au format \#[objet][equipement][cmd]# par exemple \#[test][Ruban][Level]#
+
+[Note]
+Dans les parametres actions, vous pouvez mentionner plusieurs actions a executer en les separant par &&. Par exemple #[Cuisine][Ampoule1][On]# &&  #[Cuisine][Ampoule2][On]#
 
 
 Commande ou Scénario

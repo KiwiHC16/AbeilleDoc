@@ -60,16 +60,17 @@ Cela veut dire Link Quality Index. C’est un indicateur de la qualité d’une 
 </div>
 <div class="section" id="zigate-channel-selection">
 <h2>Zigate Channel Selection<a class="headerlink" href="#zigate-channel-selection" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour l instant le mask doit être défini à la main, je verrai comment faire une belle interface plus tard. Vous devez definir les canaux qui sont authorisés pour la zigate. Si 1 canal authorisé, si 0 canal pas authorisé.
-Au démarrage la zigate choisira parmi ces canaux en fonction de sa mesure d occupation du canal.
-Dans le zigbee vous avez les canaux 11 à 26 disponibles.
-Le mask couvre les canaux 0 à 31. De ce fait il faut positionner à 0 les canaux 0 à 10 et les canaux 27 à 31, on commence par canal 31 et on fini par canal 0 =&gt; 00000xxxxxxxxxxxxxxxx00000000000
-Les x étant les canaux 26 à 11. Si vous voulez tous les activer alors le mask vaut: 00000111111111111111100000000000 (en Hexa: 0x07FFF800)
-Si vous ne voulez que le canal 26 alors ca donne: 00000100000000000000000000000000 (en Hexa: 0x04000000)
-Si vous ne voulez que le canal 20 alors ca donne: 00000000000100000000000000000000 (en Hexa: 0x00100000)
-Si vous ne voulez que le canal 15 alors ca donne: 00000000000000001000000000000000 (en Hexa: 0x00008000)
-Dans le champ il faut mettre la valeur en hexa. Il faut bien 8 digit sans le 0x devant.
-Pour convertir le binaire en hexa vous avez: <a class="reference external" href="https://www.binaryhexconverter.com/binary-to-hex-converter">https://www.binaryhexconverter.com/binary-to-hex-converter</a></p>
+<p>Pour l instant le mask doit être défini à la main, je verrai comment faire une belle interface plus tard. Vous devez definir les canaux qui sont authorisés pour la zigate.</p>
+<p>Si 1 canal authorisé, si 0 canal pas authorisé.</p>
+<p>Au démarrage la zigate choisira parmi ces canaux en fonction de sa mesure d occupation du canal.</p>
+<p>Dans le zigbee vous avez les canaux 11 à 26 disponibles.</p>
+<p>Le mask couvre les canaux 0 à 31. De ce fait il faut positionner à 0 les canaux 0 à 10 et les canaux 27 à 31, on commence par canal 31 et on fini par canal 0 =&gt; 00000xxxxxxxxxxxxxxxx00000000000</p>
+<p>Les x étant les canaux 26 à 11. Si vous voulez tous les activer alors le mask vaut: 00000111111111111111100000000000 (en Hexa: 0x07FFF800)</p>
+<p>Si vous ne voulez que le canal 26 alors ca donne: 00000100000000000000000000000000 (en Hexa: 0x04000000)</p>
+<p>Si vous ne voulez que le canal 20 alors ca donne: 00000000000100000000000000000000 (en Hexa: 0x00100000)</p>
+<p>Si vous ne voulez que le canal 15 alors ca donne: 00000000000000001000000000000000 (en Hexa: 0x00008000)</p>
+<p>Dans le champ il faut mettre la valeur en hexa. Il faut bien 8 digit sans le 0x devant.</p>
+<p>Pour convertir le binaire en hexa vous avez: <a class="reference external" href="https://www.binaryhexconverter.com/binary-to-hex-converter">https://www.binaryhexconverter.com/binary-to-hex-converter</a></p>
 </div>
 <div class="section" id="network-list">
 <h2>Network List<a class="headerlink" href="#network-list" title="Lien permanent vers ce titre">¶</a></h2>

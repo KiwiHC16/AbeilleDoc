@@ -14,44 +14,6 @@ Grandes lignes
 Vue générale
 ============
 
-.. attention::
-
-   Ces graphes ne sont pas à jour car la partie Mosquitto n'existe plus.
-
 Vue générale de la solution
 
-.. image:: images/Capture_d_ecran_2018_01_21_a_13_13_26.png
-
-.. code-block:: php
-
-                    +------------+
-                    |   Jeedom   |
-                    +------------+
-                    +------------+
-                    |  Abeille   |
-                    +-+-----+----+
-   CmdAbeille/Addr/Action     |         ^               Abeille/=
-                                            v         |              CmdRuche/Ruche/CreateRuche
-                                            +-------+----+
-                          +-----+ Mosquitto  + <----+
-            cmdAbeille /=|        +-------------+           |   Abeille/Addr/xxxx
-                      v                         |   CmdAbeille/Addr/xxx
-            +--------------+---+                +----+----------------+
-            |AbeilleMQTTCmd.php|                |AbeilleParser.php    |
-            |CmdToAbeille.php  |                |AbeilleSerialRead.php|
-            +----+-------------+                +----+----------------+
-                    |                                 ^
-                    |           +--------------+      |
-                    +---------->+ /deb/ttyUSBX +------+
-                                +--------------+
-                               +-------------+
-                               |   Zigate    |
-                              X+-------------+X
-                            X                   X
-                +---------+X                     X+----------+
-                | Abeille  |                      | Abeille  |
-                |---------+X                     X+----------+
-                            X                  X
-                              X+------------+X
-                              |   Abeille   |
-                              +-------------+
+.. image:: images/Capture_d_ecran_2020-04-09_a_10_31_23.png

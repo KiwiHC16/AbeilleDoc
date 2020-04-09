@@ -47,45 +47,8 @@
 </ul>
 <div class="section" id="vue-generale">
 <h3>Vue générale<a class="headerlink" href="#vue-generale" title="Lien permanent vers ce titre">¶</a></h3>
-<div class="admonition attention">
-<p class="first admonition-title">Attention</p>
-<p class="last">Ces graphes ne sont pas à jour car la partie Mosquitto n’existe plus.</p>
-</div>
 <p>Vue générale de la solution</p>
-<img alt="_images/Capture_d_ecran_2018_01_21_a_13_13_26.png" src="_images/Capture_d_ecran_2018_01_21_a_13_13_26.png" />
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">                 +------------+</span>
-<span class="x">                 |   Jeedom   |</span>
-<span class="x">                 +------------+</span>
-<span class="x">                 +------------+</span>
-<span class="x">                 |  Abeille   |</span>
-<span class="x">                 +-+-----+----+</span>
-<span class="x">CmdAbeille/Addr/Action     |         ^               Abeille/=</span>
-<span class="x">                                         v         |              CmdRuche/Ruche/CreateRuche</span>
-<span class="x">                                         +-------+----+</span>
-<span class="x">                       +-----+ Mosquitto  + &lt;----+</span>
-<span class="x">         cmdAbeille /=|        +-------------+           |   Abeille/Addr/xxxx</span>
-<span class="x">                   v                         |   CmdAbeille/Addr/xxx</span>
-<span class="x">         +--------------+---+                +----+----------------+</span>
-<span class="x">         |AbeilleMQTTCmd.php|                |AbeilleParser.php    |</span>
-<span class="x">         |CmdToAbeille.php  |                |AbeilleSerialRead.php|</span>
-<span class="x">         +----+-------------+                +----+----------------+</span>
-<span class="x">                 |                                 ^</span>
-<span class="x">                 |           +--------------+      |</span>
-<span class="x">                 +----------&gt;+ /deb/ttyUSBX +------+</span>
-<span class="x">                             +--------------+</span>
-<span class="x">                            +-------------+</span>
-<span class="x">                            |   Zigate    |</span>
-<span class="x">                           X+-------------+X</span>
-<span class="x">                         X                   X</span>
-<span class="x">             +---------+X                     X+----------+</span>
-<span class="x">             | Abeille  |                      | Abeille  |</span>
-<span class="x">             |---------+X                     X+----------+</span>
-<span class="x">                         X                  X</span>
-<span class="x">                           X+------------+X</span>
-<span class="x">                           |   Abeille   |</span>
-<span class="x">                           +-------------+</span>
-</pre></div>
-</div>
+<img alt="_images/Capture_d_ecran_2020-04-09_a_10_31_23.png" src="_images/Capture_d_ecran_2020-04-09_a_10_31_23.png" />
 </div>
 </div>
 </div>

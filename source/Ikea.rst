@@ -415,6 +415,24 @@ Attention cette telecommande n'est pas identique à la télécommande I/O, elles
 
 L'objet Telecommande créé dans Abeille permet d'avoir les trois commandes Up/Stop/Down. Par défaut, la télécommande dans Abeille enverra les commandes à tous les stores en même temps. La fonction de groupe ne fonctionne pas. Renseigné tout de même le parametre Groupe dans le tab Param mettre une valeur commme 0000. Peut être qu'un jour cette valeur sera utilisable.
 
+
+Bouton des store IKEA Open/close E1766 TRADFRI et son store associé
+*******************************************************************
+
+Merci a seraf pour son petit texte:
+
+Globalement, ce que j’ai fait:
+
+J’ai inclus le repeteur (j’en vois toujours pas l’utilité …) en restant appuyé 5 secondes sur le bouton reset
+J’ai inclus la télécommande en appuyant 4 fois sur le bouton d’association
+J’ai inclus mes stores en appuyant 5 secondes sur 2 boutons
+Une fois cela fait, j’ai assigné un groupe aux appareils. C’est expliqué dans la documentation, mais c’est vrai que c’est pas « user friendly ».
+Il faut selectionner les stores que l’on va utiliser avec la télécommande via la checkbox au dessus des équipements.
+Dans la section en dessous des équipements (celle ci s’appelle groupes), il faut mettre un numero de groupe à 4 chiffres. Par exemple on peut mettre 0000, mais aussi 0001 etc.
+Donc j’ai « ajouté » le groupe 0000 à mes 2 stores. (Add Group).
+
+Pour la télécommande, même procédure, je lui ai mis 0000 par contre il faut cliquer sur « Set Group Remote ». Une fois cela fait, la télécommande peut controler les stores ;-)
+
 Routeur (Repeteur)
 ******************
 

@@ -2,7 +2,7 @@
 Modele et Fichier JSON
 ######################
 
-(Cette partie doit être revue et mie a jour sur la base des dernieres evolutions)
+(Cette partie doit être revue et mise a jour sur la base des dernieres evolutions)
 
 *****
 Video
@@ -171,3 +171,23 @@ Puis choisissez Ruche-joinLeave:
 et là vous devez avoir toutes les informations:
 
 .. image:: images/Capture_d_ecran_2018_02_07_a_12_50_09.png
+
+Points specifiques
+==================
+
+Structure des repertoires:
+
+Exemple pour le modele TOTO.
+
+Le modele json doit etre : /var/www/html/plugins/Abeille/core/config/devices/TOTO/TOTO.JSON
+
+Son icone doit etre /var/www/html/plugins/Abeille/images/node_TOTO.png
+
+Les documentations doivent etre dans le repertoire : /var/www/html/plugins/Abeille/core/config/devices/TOTO/doc
+
+
+Parametres:
+
+Par defaut tous les parametres possibles sont affichés si non définis dans le modele.
+
+Actuellement les set de parametres sont: paramBatterie[true], paramType[telecommande][paramABC].

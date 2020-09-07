@@ -280,19 +280,31 @@ https://github.com/fairecasoimeme/Zigate/issues/6
 
 
 down = brightness down, up = brightness up,
+
 middle = Power button,
+
 left and right = when brightness up is up left is left and right is right.
+
 Holding down power button for ~10 sec will result multiple commands sent, but it wont send any hold command only release.
+
 Remote won't tell which button was released left or right, but it will be same button that was last hold.
+
 Remote is unable to send other button commands at least when left or right is hold down.
 
+
 Reponse 0x8085 correspond à l'info Up-Down dans le widget.
+
 Reponse 0x8095 correspond à l'info Click-Middle dans le widget.
+
 Reponse 0x80A7 correspond à l'info Left-Right-Cmd et Left-Right-Direction dans le widget.
 
+
 A partir de la vous pouvez déclencher des scénarii dans Jeedom.
+
 Attention lors de l'utilisation de la télécommande, dans Abeille elle sera mis a jour et vos scénarii déclenchés mais si vous avez des équipements Zigbee sur ce groupe ils seront aussi activés.
 Par exemple vous pouvez avoir une Ampoule Ikea sur le groupe de la télécommande qui réagira aux demandes de la télécommande directement en Zigbee (même si Jeedom est HS) et avoir un scénario qui se déclenche en même temps pour ouvrir les volets en zwave ou autre.
+
+Le capteur IR Exterieur Ikea envoie Click-Middle lors de la detection d'une présence.
 
 Gradateur
 =========

@@ -1,5 +1,5 @@
 ##########################
-Actions réguliaires (cron)
+Actions régulières (cron)
 ##########################
 
 *****
@@ -28,17 +28,17 @@ Les ampoules Ikea ont une certaine tendance à oublier leur configuration alors 
 pl2303
 ------
 
-Le driver pl2303 sur les RPI qui controle le module TTL-USB n'est pas super stable donc on verifie que tout va bien sinon on redemarre.
+Le driver pl2303 sur les RPI qui controle le module TTL-USB n'est pas super stable donc on verifie que tout va bien sinon on redémarre.
 
 Ping
 ----
 
-Tous les équipements qui ont un champ "battery_type" vide vont recevoir un message auquel ils doivent répondre pour vérifier qui sont bien en vie.
+Tous les équipements qui ont un champ "battery_type" vide vont recevoir un message auquel ils doivent répondre pour vérifier qu'ils sont bien en vie.
 
 Poll
 ----
 
-Les équipments qui ont une variable poll dans leur configuration à *_15_*, vont recevoir deux messages (Manufacturer/Location) auquels ils doivent répondre pour vérifier qu'ils sont en vie.
+Les équipments qui ont une variable poll dans leur configuration à *_15_*, vont recevoir deux messages (Manufacturer/Location) auxquels ils doivent répondre pour vérifier qu'ils sont en vie.
 
 Pour vérifier la valeur, dans ce cas c'est 1 par exemple.
 
@@ -55,7 +55,7 @@ Ping (getVersion) de la zigate pour être sûr qu'elle est présente et fonction
 Poll
 ----
 
-Les équipments qui ont une variable poll dans leur configuration à *_1_*, vont recevoir deux messages (Manufacturer/Location) auquels ils doivent répondre pour vérifier qu'ils sont en vie.
+Les équipments qui ont une variable poll dans leur configuration à *_1_*, vont recevoir deux messages (Manufacturer/Location) auxquels ils doivent répondre pour vérifier qu'ils sont en vie.
 
 Pour vérifier la valeur, dans ce cas c'est 1.
 

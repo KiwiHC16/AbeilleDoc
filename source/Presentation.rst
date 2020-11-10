@@ -33,7 +33,7 @@ Il supporte aussi des fonctions avancées pour faciliter la gestion d’un gros 
 
 Pour toute difficulté, deux possibilités :
 
-* un fil de discussion sur le link:https://www.Jeedom.com/forum/viewtopic.php?f=184&t=33573[forum de Jeedom]
+* un fil de discussion sur le link:https://community.jeedom.com/tag/plugin-abeille[forum de Jeedom]
 * une link:https://github.com/KiwiHC16/Abeille/issues?utf8=✓&q=is%3Aissue[« issue » dans Github]
 
 == Périphériques compatibles

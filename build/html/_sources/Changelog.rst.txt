@@ -4,6 +4,17 @@ ChangeLog
 Mise à jour
 -----------
 
+
+Beta 13/11/2010
+^^^^^^^^^^^^^^^
+
+Surtout faites un backup pour pouvoir revenir en arrière.
+
+- Premiere version Abeille qui prend en charge le firmware Zigate 3.1d.
+- Tous les details dans:
+https://github.com/KiwiHC16/Abeille/commits/beta?after=61b027c84f673f484073d6f0a73ad0bad08fef0d+34&branch=beta
+
+
 12/2019 => 03/2020
 ^^^^^^^^^^^^^^^^^^
 

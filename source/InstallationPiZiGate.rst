@@ -48,3 +48,9 @@ Super doc faite par @Gnaag
 **************************
 
 https://jeedomiser.fr/article/pilotez-vos-appareils-zigbee-avec-la-pizigate/
+
+**********************************
+Super doc faite par @F Charpentier
+**********************************
+
+http://kiwihc16.free.fr/orangepizero_pizigate_jeedom_fr-07fev20.pdf

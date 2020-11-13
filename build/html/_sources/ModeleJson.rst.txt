@@ -147,6 +147,23 @@ uniqId
 
 Vous trouverez un champ uniqId dans les modeles. Celui ci n'est pas utilisé actuellement. L'idée est d'avoir une identifiant unique pour chaque fichier JSON. C'est une chaine de caracteres aleatoires.
 
+Definition commandes
+====================
+
+  "execAtCreation": "Yes",    (Not implemented yet)
+  "execAtCreationDelay": "60",(Not implemented yet)
+  "Polling": "No", cron -> toutes les minutes, cron15 -> toutes les 15 minutes, cronHourly -> 1 h, cronDaily Daily
+  "PollingOnCmdChange": "No", / "PollingOnCmdChange": "0006-01-0000",
+  "PollingOnCmdChangeDelay": 1, en secondes
+
+Explications:
+
+- si ces defintions sont dans la configuration d'une commande elles seront traitées de al facon suivante.
+- les crons vont rechercher les commandes a executer. Exemple un commande getEtat a en config "Polling": "cron15", le polling se fera toutes les 15 minutes.
+- Lors d'une remontée de valeur pour une commande info, Abeille va chercher les commandes actions du device.
+- Si une cmd action a pour PollingOnCmdChange la cmd info qui vient de remonter alors la commande est executée avec un delay de PollingOnCmdChangeDelay s.
+- Cela permet pas exemple sur la prise Blittzwolf-BW-SHP13 (TS0121) de declencher la lecture de mA, W, V sur changement d etat.
+
 A noter
 =======
 
@@ -192,5 +209,3 @@ Pour les developpeurs
 * Vous avez la possibilité de demander la liste des voisines connues dans la base interne de la Zigate. Pour ce faire vous avez le bouton "Liste Equipements" sur la ruche.
 
 .. image:: images/Capture_d_ecran_2018_01_26_a_10_46_04.png
-
-

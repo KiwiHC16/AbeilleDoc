@@ -119,6 +119,23 @@
 <h3>uniqId<a class="headerlink" href="#uniqid" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Vous trouverez un champ uniqId dans les modeles. Celui ci n’est pas utilisé actuellement. L’idée est d’avoir une identifiant unique pour chaque fichier JSON. C’est une chaine de caracteres aleatoires.</p>
 </div>
+<div class="section" id="definition-commandes">
+<h3>Definition commandes<a class="headerlink" href="#definition-commandes" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div>«&nbsp;execAtCreation&nbsp;»: «&nbsp;Yes&nbsp;»,    (Not implemented yet)
+«&nbsp;execAtCreationDelay&nbsp;»: «&nbsp;60&nbsp;»,(Not implemented yet)
+«&nbsp;Polling&nbsp;»: «&nbsp;No&nbsp;», cron -&gt; toutes les minutes, cron15 -&gt; toutes les 15 minutes, cronHourly -&gt; 1 h, cronDaily Daily
+«&nbsp;PollingOnCmdChange&nbsp;»: «&nbsp;No&nbsp;», / «&nbsp;PollingOnCmdChange&nbsp;»: «&nbsp;0006-01-0000&nbsp;»,
+«&nbsp;PollingOnCmdChangeDelay&nbsp;»: 1, en secondes</div></blockquote>
+<p>Explications:</p>
+<ul class="simple">
+<li>si ces defintions sont dans la configuration d’une commande elles seront traitées de al facon suivante.</li>
+<li>les crons vont rechercher les commandes a executer. Exemple un commande getEtat a en config «&nbsp;Polling&nbsp;»: «&nbsp;cron15&nbsp;», le polling se fera toutes les 15 minutes.</li>
+<li>Lors d’une remontée de valeur pour une commande info, Abeille va chercher les commandes actions du device.</li>
+<li>Si une cmd action a pour PollingOnCmdChange la cmd info qui vient de remonter alors la commande est executée avec un delay de PollingOnCmdChangeDelay s.</li>
+<li>Cela permet pas exemple sur la prise Blittzwolf-BW-SHP13 (TS0121) de declencher la lecture de mA, W, V sur changement d etat.</li>
+</ul>
+</div>
 <div class="section" id="a-noter">
 <h3>A noter<a class="headerlink" href="#a-noter" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Je ne vais pas expliquer tous les modeles car cela demanderait beaucoup trop de temps. Donc essayer de faire votre modele par similitude avec d’autres equipemetns.</p>
@@ -177,6 +194,7 @@
 <li><a class="reference internal" href="#points-specifiques">Points specifiques</a></li>
 <li><a class="reference internal" href="#parametres">Parametres:</a></li>
 <li><a class="reference internal" href="#uniqid">uniqId</a></li>
+<li><a class="reference internal" href="#definition-commandes">Definition commandes</a></li>
 <li><a class="reference internal" href="#a-noter">A noter</a></li>
 <li><a class="reference internal" href="#pour-les-developpeurs">Pour les developpeurs</a></li>
 </ul>

@@ -20,13 +20,11 @@ Je n'ai aucune idée de votre participation à cette cagnotte mais comme tout es
 Budget
 ======
 
-Cagnotte au 12 mars 2020:
+Recettes au 4 novembre 2020:
 
-Recettes:
+* 1356,27€ (1409€ moins la com paypal)
 
-* 1116,21€ (1162€ moins la com paypal)
-
-Dépense:
+Dépense au 12 mars 2020:
 
 * Motion Hue Indoor
 * Motion Hue Outdoor
@@ -53,11 +51,14 @@ Dépense:
 * Xiaomi Light Sensor
 * 2020 New ZigBee Temperature Humidity Sensor Smart Home Automation With LCD Screen Display Work With TuYa Smart Life ZigBee Hub
 * Tuya ZigBee passerelle Hub
+* .
+* Il faut que j ajoute tous les equipements achetes depuis mars 2020...
+* .
 
-Total de 946,84€
+Total de xxxx.xx€ (a mettre a jour)
 
 Reste:
 
-* 169,37€
+* xxxx,xx€ (a mettre a jour)
 
 Échanges sur la cagnotte: https://github.com/KiwiHC16/Abeille/issues/584

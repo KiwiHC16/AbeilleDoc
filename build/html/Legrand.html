@@ -225,6 +225,44 @@ Controle Charge Resistive
 </dl>
 </div>
 </div>
+<div class="section" id="interrupteur-on-off-sur-pile">
+<h2>Interrupteur On/Off sur pile<a class="headerlink" href="#interrupteur-on-off-sur-pile" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Fonctionne:
+* On
+* Off</p>
+<p>Fonctionne pas:
+* Niveau batterie</p>
+<div class="section" id="id5">
+<h3>inclusion<a class="headerlink" href="#id5" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li>Cet interrupteur n’est pas facile à inclure</li>
+<li>Ce qui semble fonctionner:</li>
+</ul>
+<ul class="simple">
+<li>Réseau zigbee sur canal 11</li>
+<li>Activer le «&nbsp;Blocage traitement Annonces&nbsp;» dans la config du plugin</li>
+<li>Mettre la zigate en Inclusion</li>
+<li>Appui d environ 20s sur le bouton “reset” (bouton caché, legerement en en bas a droite sur le PCB)</li>
+<li>L inclusion doit se produire, sinon faire un clic court quelques secondes plus tard sur ce meme bouton.</li>
+<li>L’équipement doit être créé dans Abeille</li>
+<li>Desactiver le mode inclusion de la Zigate</li>
+<li>Desactiver le «&nbsp;Blocage traitement Annonces&nbsp;» dans la config du plugin</li>
+</ul>
+</div>
+<div class="section" id="parametrer">
+<h3>parametrer<a class="headerlink" href="#parametrer" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li>Pour fonctionner, le bouton doit connaitre le groupe à utiliser pour envoyer les commandes On et Off aux equipements.</li>
+<li>Renseigner le groupe dans le champ Id par exemple AAAA</li>
+<li>Réveiller le bouton avec un appui court sur le on (Bas) ou off (Haut)</li>
+<li>Envoyer le groupe avec la commande «&nbsp;Set Group Remote Legrand&nbsp;»</li>
+</ul>
+</div>
+</div>
+<div class="section" id="interrupteur-entree-sortie-sur-pile">
+<h2>Interrupteur Entrée/Sortie sur pile<a class="headerlink" href="#interrupteur-entree-sortie-sur-pile" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pas supporté actuellement.</p>
+</div>
 </div>
 
 
@@ -254,6 +292,12 @@ Controle Charge Resistive
 <li><a class="reference internal" href="#id4">Fonctions</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#interrupteur-on-off-sur-pile">Interrupteur On/Off sur pile</a><ul>
+<li><a class="reference internal" href="#id5">inclusion</a></li>
+<li><a class="reference internal" href="#parametrer">parametrer</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#interrupteur-entree-sortie-sur-pile">Interrupteur Entrée/Sortie sur pile</a></li>
 </ul>
 </li>
 </ul>

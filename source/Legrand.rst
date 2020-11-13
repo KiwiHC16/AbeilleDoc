@@ -167,3 +167,43 @@ En cours d investigation:
  * Cmd  Zigate Move to level with On/off ne fonctionne pas
  * Appui prolongé haut ou bas de l interrupteur ne provoque pas de variatieon ! Ou est le dimmer ?
  * D'après la doc option variateur: Activable depuis l'application.
+
+****************************
+Interrupteur On/Off sur pile
+****************************
+
+Fonctionne:
+* On
+* Off
+
+Fonctionne pas:
+* Niveau batterie
+
+inclusion
+---------
+
+* Cet interrupteur n'est pas facile à inclure
+* Ce qui semble fonctionner:
+- Réseau zigbee sur canal 11
+- Activer le "Blocage traitement Annonces" dans la config du plugin
+- Mettre la zigate en Inclusion
+- Appui d environ 20s sur le bouton 'reset' (bouton caché, legerement en en bas a droite sur le PCB)
+- L inclusion doit se produire, sinon faire un clic court quelques secondes plus tard sur ce meme bouton.
+- L'équipement doit être créé dans Abeille
+- Desactiver le mode inclusion de la Zigate
+- Desactiver le "Blocage traitement Annonces" dans la config du plugin
+
+parametrer
+----------
+
+* Pour fonctionner, le bouton doit connaitre le groupe à utiliser pour envoyer les commandes On et Off aux equipements.
+* Renseigner le groupe dans le champ Id par exemple AAAA
+* Réveiller le bouton avec un appui court sur le on (Bas) ou off (Haut)
+* Envoyer le groupe avec la commande "Set Group Remote Legrand"
+
+
+***********************************
+Interrupteur Entrée/Sortie sur pile
+***********************************
+
+Pas supporté actuellement.

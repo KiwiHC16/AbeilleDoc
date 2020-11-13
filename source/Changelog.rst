@@ -156,7 +156,7 @@ Bugs
 
 Il est fort probable que des bugs soient découverts.
 
-Dans ce cas aller voir le forum: `FORUM <https://www.jeedom.com/forum/viewtopic.php?f=59&t=33573&p=575280&hilit=abeille>`_
+Dans ce cas aller voir le forum: `FORUM <https://community.jeedom.com/tag/plugin-abeille>`_
 
 ou issue dans GitHub: `ISSUE <https://github.com/KiwiHC16/Abeille/issues?utf8=✓&q=is%3Aissue+>`_
 

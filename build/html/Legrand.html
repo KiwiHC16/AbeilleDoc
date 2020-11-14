@@ -258,6 +258,16 @@ Controle Charge Resistive
 <li>Envoyer le groupe avec la commande «&nbsp;Set Group Remote Legrand&nbsp;»</li>
 </ul>
 </div>
+<div class="section" id="fonctionnement">
+<h3>Fonctionnement<a class="headerlink" href="#fonctionnement" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Appui court -&gt; Cluster 0x0006 On/Off
+Appui Long -&gt; Cluster 0x0008 Level Move sur appui et level stop</p>
+<p>Ampoule Ikea attend un Move to level with OnOff (04) / level 48 / Transition Time : 1s
+mais l inter envoi move (01) / mode Down / rate 255</p>
+<p>Ampoule Ikea fonctionne en On/Off.
+Si Elle est On elle semble accepter les level mais va du max au min (et vis versa) et je parviens pas a régler des level intermédiaires.</p>
+<p>Si la ruche est ajoutée dans le groupe alors on récupère l appui bouton sur la commande click middle et le level sur Up-Down (1 pour depart move et 3 pour stop move), le temps entre les deux messages donne le temps d appui.</p>
+</div>
 </div>
 <div class="section" id="interrupteur-entree-sortie-sur-pile">
 <h2>Interrupteur Entrée/Sortie sur pile<a class="headerlink" href="#interrupteur-entree-sortie-sur-pile" title="Lien permanent vers ce titre">¶</a></h2>
@@ -295,6 +305,7 @@ Controle Charge Resistive
 <li><a class="reference internal" href="#interrupteur-on-off-sur-pile">Interrupteur On/Off sur pile</a><ul>
 <li><a class="reference internal" href="#id5">inclusion</a></li>
 <li><a class="reference internal" href="#parametrer">parametrer</a></li>
+<li><a class="reference internal" href="#fonctionnement">Fonctionnement</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#interrupteur-entree-sortie-sur-pile">Interrupteur Entrée/Sortie sur pile</a></li>

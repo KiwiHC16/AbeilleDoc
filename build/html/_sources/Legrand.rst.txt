@@ -201,6 +201,23 @@ parametrer
 * Réveiller le bouton avec un appui court sur le on (Bas) ou off (Haut)
 * Envoyer le groupe avec la commande "Set Group Remote Legrand"
 
+Fonctionnement
+--------------
+
+Appui court -> Cluster 0x0006 On/Off
+Appui Long -> Cluster 0x0008 Level Move sur appui et level stop
+
+Ampoule Ikea attend un Move to level with OnOff (04) / level 48 / Transition Time : 1s
+mais l inter envoi move (01) / mode Down / rate 255
+
+Ampoule Ikea fonctionne en On/Off.
+Si Elle est On elle semble accepter les level mais va du max au min (et vis versa) et je parviens pas a régler des level intermédiaires.
+
+Si la ruche est ajoutée dans le groupe alors on récupère l appui bouton sur la commande click middle et le level sur Up-Down (1 pour depart move et 3 pour stop move), le temps entre les deux messages donne le temps d appui.
+
+
+
+
 
 ***********************************
 Interrupteur Entrée/Sortie sur pile

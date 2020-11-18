@@ -40,9 +40,11 @@ Table des matieres complete
    Remplacement
    Scenes
    Solutions
+   SonOff
    Suppression
    Systeme
    Tuto
+   Tuya
    Widget
    Wifi
    Xiaomi

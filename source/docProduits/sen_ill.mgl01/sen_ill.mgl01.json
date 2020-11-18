@@ -1,0 +1,26 @@
+{
+  "sen_ill.mgl01": {
+    "nameJeedom": "Xiaomi Smart Ligth Sensor",
+    "timeout": "60",
+    "Comment": "Xiaomi Mijia Smart Light Sensor Detection Sensor GZCGQ01LM blanc",
+    "Categorie": {
+      "security": "1"
+    },
+    "configuration": {
+      "uniqId": "5c07c766264bfaz",
+      "icone": "sen_ill_mgl01",
+      "battery_type": "1x3V CR2032",
+      "mainEP": "#EP#"
+    },
+    "Commandes": {
+      "include1": "SW",
+      "include2": "nom",
+      "include4": "luminositeXiaomi",
+      "include5": "Batterie-Volt",
+      "include6": "Batterie-Pourcent",
+      "include7": "Xiaomi-ff01",
+      "include7 2": "BindToZigateIlluminance",
+      "include7 2 2": "setReportIlluminanceXiaomi"
+    }
+  }
+}

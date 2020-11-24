@@ -38,3 +38,4 @@ Règles à suivre additionnelles pour Abeille
 * Abeille doit tourner sur un docker
 * Abeille ne doit pas faire plus de 50Mo
 * La doc n'est pas dans le github du plugin
+* Pour éviter d'avoir deux personnes qui travaillent sur le meme sujet, nous utilisons les issues Github. Pour chaque dev que vous faites vous créé une issue et on vous l assigne. Une seule et unique personne assignée par issue.

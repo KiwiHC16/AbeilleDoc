@@ -17,3 +17,23 @@ Vue générale
 Vue générale de la solution
 
 .. image:: images/Capture_d_ecran_2020-04-09_a_10_31_23.png
+
+Règles à suivre
+===============
+
+* La structure des plugin est présentée dans la doc Jeedom: https://doc.jeedom.com/fr_FR/dev/plugin_template
+* Un template est fourni par Jeedom: https://github.com/jeedom/plugin-template
+
+Il faut que l'on se cale le plus possible sur ces documents.
+
+Règles à suivre additionnelles pour Abeille
+===========================================
+
+* Outils de dev: Visual Studio Code avec les paramètres par défaut.
+* Git: garder le master toujours fonctionnel après un commit.
+* Git: beaucoup de petit commit et souvent mais pas de gros commit pas souvent.
+* Abeille / Core OS: Garder Abeille le plus loin possible de l'OS. Uniquement quand cela n'est pas possible faire du code spécifique.
+* Abeille doit tourner sur une VM
+* Abeille doit tourner sur un docker
+* Abeille ne doit pas faire plus de 50Mo
+* La doc n'est pas dans le github du plugin

@@ -35,8 +35,6 @@ Je vous propose 2 méthodes.
 Heartbeat
 *********
 
-Dixit: https://www.jeedom.com/forum/viewtopic.php?p=716483#p718402
-
 Toutes les 5 min, le core va faire les actions suivantes pour tous les plugins:
 
 * Si aucune config (hearbeat vide), ca sera par défaut 0

@@ -8,7 +8,7 @@ Je vais essayer de consolider ici tous les retours d'expériences et les vérifi
 Forum
 *****
 
-* Liste des sujets en cours de discussions: `Forum Jeedom <https://www.Jeedom.com/forum/viewtopic.php?f=59&t=33573&hilit=Abeille>`_
+* Liste des sujets en cours de discussions: `Forum Jeedom <https://community.jeedom.com/tag/plugin-abeille>`_
 
 * Liste des sujets en investigations : `GitHub Abeille <https://github.com/KiwiHC16/Abeille/issues?utf8=✓&q=is%3Aissue>`_
 
@@ -215,18 +215,12 @@ Faire de même pour SingleDescriptorRequest en ajoutant le EndPoint voulu dans l
    AbeilleParser: 2018-02-06 17:42:25[DEBUG]Out cluster: 0004 - General: Groups
    AbeilleParser: 2018-02-06 17:42:25[DEBUG]Out cluster: 0005 - General: Scenes
 
-
 Nous avons maintenant les clusters supportés par cet objet sur son endpoint 01.
-
-
-
-
 
 Script
 ======
 
 Dans Abeille/resources/AbeilleDeamon/Debug, vous trouverez le script verification.sh.
-
 
 L'execution permet de tester, vérifier et donner des infos qui sont souvent interessantes pour des problème de base. Ce script n'est pas forcement bien maintenu alors les résultats ne sont pas forcement fiables.
 
@@ -262,14 +256,11 @@ Menus cachées pour developpeurs
 
 https://github.com/KiwiHC16/Abeille/issues/1292
 
-
 Créer le fichier debug.php si celui ci n'existe pas:
 
 touch /var/www/html/plugins/Abeille/tmp/debug.php
 
-***
-*** Résumé des fonctionalités accessibles en mode "developpeur"
-***
+Résumé des fonctionalités accessibles en mode "developpeur"
 
 mode developpeur = fichier debug.php present (meme vide) dans le repertoire racine du plugin Abeille
 

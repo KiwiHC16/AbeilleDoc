@@ -175,6 +175,16 @@ Profalux
 
 Ce chapithre regroupe les informations sur les équipements :doc:`Profalux`
 
+SonOff
+------
+
+Ce chapithre regroupe les informations sur les équipements :doc:`SonOff`
+
+Tuya
+----
+
+Ce chapithre regroupe les informations sur les équipements :doc:`Tuya`
+
 Xiaomi
 ------
 

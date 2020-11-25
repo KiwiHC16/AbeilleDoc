@@ -14,6 +14,7 @@ Surtout faites un backup pour pouvoir revenir en arrière.
 - J'ai passé toutes mes zigates en 3.1D (Je ne vais plus tester les evolutions d'Abeille avec les anciennes versions du firmware).
 - Essayez de passer sur le firmware 3.1D quand vous pourrez. Perso je vous recommande de faire un erase EEPROM lors de la mise à jour puis de faire un re-inclusion de tout les modules. Attention c'est une operation assez lourde. Assurez vous d'avoir l'adresse IEEE dans la page santé avant de faire cette operation.
 - Dans la page de configuration il y a un nouveau paramètre: "Blocage traitement Annonces". Par défaut il doit être sur Non. Il semble qui ai une certaine tendance à ce mettre sur Oui. Mettez le bien sur Non et redémarrer le Démon.
+- si vous restez avec une zigate en firmware inférieur à 3.1d, ne surtout pas passer la zigate en mode hybride.
 
 - Tous les details dans:
 https://github.com/KiwiHC16/Abeille/commits/beta?after=61b027c84f673f484073d6f0a73ad0bad08fef0d+34&branch=beta

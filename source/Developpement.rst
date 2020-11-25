@@ -22,7 +22,7 @@ Règles à suivre
 ===============
 
 * La structure des plugins est présentée dans la doc Jeedom: https://doc.jeedom.com/fr_FR/dev/plugin_template
-* Si les informations ne sont pas disponibles nous prenons le plugin openzwave comme modèle.
+* Si les informations ne sont pas disponibles nous prenons le plugin openzwave comme modèle: https://github.com/jeedom/plugin-openzwave
 * A noter: Un template est fourni par Jeedom: https://github.com/jeedom/plugin-template mais nous ne le prenons pas en compte.
 
 Il faut que l'on se cale le plus possible sur ces documents.

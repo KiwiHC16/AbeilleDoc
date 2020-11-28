@@ -682,6 +682,8 @@ Backup du Docker
 
 Plusieures solutions s'offrent à nous. Il est interessant de comprende ce qui se passe. Un bon article à lire: https://tuhrig.de/difference-between-save-and-export-in-docker/
 
+Save ou Export ? https://tuhrig.de/difference-between-save-and-export-in-docker/
+
 Toutes les operations suivantes se font depuis le host.
 
 Commit / Save / Load

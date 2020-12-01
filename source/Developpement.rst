@@ -49,7 +49,9 @@ Hiérarchie (répertoires) du plugin Abeille
 En cours de révision. Points ouverts notés.
 Basé sur "https://doc.jeedom.com/fr_FR/dev/plugin_template".
 
-* core : Dossier contenant tous les fichiers de fonctionnement interne.
+* core
+
+  Dossier contenant tous les fichiers de fonctionnement interne.
   Ne contient pas de fichiers gérant la partie "User Interface" donc pas d'html.
 
   * class : dossier contenant la classe du plugin.
@@ -61,22 +63,37 @@ Basé sur "https://doc.jeedom.com/fr_FR/dev/plugin_template".
     * A DETAILLER
   * ajax : dossier contenant les fichiers cibles d’appels AJAX.
     Les fichiers de type AJAX doivent se finir par ".ajax.php".
-* desktop : Dossier contenant la vue “bureau” du plugin (en opposition avec la vue “mobile”).
+* desktop
+
+  Dossier contenant la vue “bureau” du plugin (en opposition avec la vue “mobile”).
+
   * js : Dossier contenant tous les fichiers de type javascript.
   * php : Dossier contenant tous les fichiers de type php qui font de l’affichage.
   * css : Si nécessaire, fichier CSS pour la vue "desktop".
   * modal : Dossier contenant le code des modals du plugin.
-* mobile: fichiers gérant la UI "mobile"
-* plugin_info : Contient les fichiers permettant à Jeedom de qualifier le plugin, de faire son installation et sa configuration
+* mobile
+  Contient les fichiers gérant la UI "mobile".
+
+* plugin_info
+
+  Contient les fichiers permettant à Jeedom de qualifier le plugin, de faire son installation et sa configuration.
 
   * info.json : Fichier contenant les informations de base du plugin (il est obligatoire sinon Jeedom ne verra pas le plugin), il contient entre autre l’identifiant du module, la description, les instructions d’installation…​
   * install.php : Fichier contenant (si besoin) les méthodes d’installation et de désinstallation du plugin
   * configuration.php : Fichier contenant les paramètres à configurer du plugin indépendants des équipements de celui-ci (exemple pour le module Zwave l’ip du Raspberry Pi ayant la carte Razberry)
-* docs :
-  Pas utilisé pour ne pas dépasser la taille limite imposée par Jeedom.
+* docs
+
+  N'est pas utilisé pour ne pas dépasser la taille limite imposée par Jeedom.
   Les docs sont dans un repo séparé.
-* tmp :
-  Répertoire LOCAL (non versionné) contenant tous les fichiers temporaires ou générés (ex: qq logs, les données LQI...)
+* tmp
+
+  Répertoire LOCAL (non versionné) ne contenant que qq fichiers qui bougent rarement. Il contient entre autre le fichier de config "developpeur". Les logs sont migrés sous le "tmp" officiel Jeedom (jeedom::getTmpFolder("Abeille")).
+
+Répertoires hors plugin
+
+* tmp Jeedom (PAS dans le plugin)
+
+  Il s'agit du répertoire temporaire Jeedom (jeedom::getTmpFolder("Abeille")). Utilisé pour stocker les log "previous", les logs de support, ou comme zone tampon pour créer des fichiers compressés par ex.
 
 Points ouverts
 

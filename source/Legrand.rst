@@ -3,6 +3,14 @@ Legrand
 #######
 
 **********
+Contacteur
+**********
+
+Contacteur 20AX
+
+Mode: 00: Off, 02: Auto, 03: On
+
+**********
 Prise 220V
 **********
 

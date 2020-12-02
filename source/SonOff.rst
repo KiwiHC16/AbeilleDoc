@@ -34,7 +34,7 @@ Reveil
 ^^^^^^
 
 - Si le module n'a jamais été configuré, il faut faire une inclusion car il reste reveillé quelques secondes après inclusion.
-- Si le module est déjà configuré alors  un appui sur le bouton le reveille mais il ne fait pas de Data Request alors in ne peut pas lui parler.
+- Si le module est déjà configuré alors  un appui sur le bouton le reveille (J ai eu un cas ou il ne faisait pas de Data Request alors on ne peut pas lui parler, j ai du le re-inclure).
 
 Configurer
 ^^^^^^^^^^

@@ -10,9 +10,13 @@ https://github.com/KiwiHC16/Abeille/issues/1322
 Fonctionenment
 ^^^^^^^^^^^^^^
 
-Appui court: Toggle
-Double clic: On
-Clic long (4s): Off
+Appui court: Toggle (Valeur 2)
+
+Double clic: On (Valeur 1)
+
+Clic long (4s): Off (Valeur 0)
+
+Valeur dans la commande Click-Middle si inter bind sur la zigate.
 
 Inclusion
 ^^^^^^^^^

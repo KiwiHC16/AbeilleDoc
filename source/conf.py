@@ -180,3 +180,6 @@ epub_exclude_files = ['search.html']
 
 
 # -- Extension configuration -------------------------------------------------
+
+# Don't copy ".rst" source to build directory
+html_copy_source = False

@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SonOff &#8212; Documentation Abeille 12.12.2019</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/translations.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation Abeille 12.12.2019</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SonOff</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="sonoff">
+<h1>SonOff<a class="headerlink" href="#sonoff" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="sonoff-snzb-01-interrupteur">
+<h2>SonOff SNZB-01: Interrupteur<a class="headerlink" href="#sonoff-snzb-01-interrupteur" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues/1322">https://github.com/KiwiHC16/Abeille/issues/1322</a></p>
+<div class="section" id="fonctionenment">
+<h3>Fonctionenment<a class="headerlink" href="#fonctionenment" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Appui court: Toggle (Valeur 2)</p>
+<p>Double clic: On (Valeur 1)</p>
+<p>Clic long (4s): Off (Valeur 0)</p>
+<p>Valeur dans la commande Click-Middle si inter bind sur la zigate.</p>
+</div>
+<div class="section" id="inclusion">
+<h3>Inclusion<a class="headerlink" href="#inclusion" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>mettre la zigate en Inclusion</p></li>
+<li><p>Avec trombone, 10s sur inter au dos</p></li>
+</ul>
+</div>
+<div class="section" id="exclusion">
+<h3>Exclusion<a class="headerlink" href="#exclusion" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>La zigate ne doit pas être en mode Inclusion</p></li>
+<li><p>Avec trombone, 10s sur inter au dos</p></li>
+</ul>
+</div>
+<div class="section" id="reveil">
+<h3>Reveil<a class="headerlink" href="#reveil" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Si le module n’a jamais été configuré, il faut faire une inclusion car il reste reveillé quelques secondes après inclusion.</p></li>
+<li><p>Si le module est déjà configuré alors  un appui sur le bouton le reveille (J ai eu un cas ou il ne faisait pas de Data Request alors on ne peut pas lui parler, j ai du le re-inclure).</p></li>
+</ul>
+</div>
+<div class="section" id="configurer">
+<h3>Configurer<a class="headerlink" href="#configurer" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Faire un bind vers l’équipement à piloter. Il fait ensuite On/Off/Toggle sur l’adresse de l’équipement.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="sonoff-snzb-02-temperature-humidite">
+<h2>SonOff SNZB-02: Temperature / Humidité<a class="headerlink" href="#sonoff-snzb-02-temperature-humidite" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues/1323">https://github.com/KiwiHC16/Abeille/issues/1323</a></p>
+<div class="section" id="id1">
+<h3>Fonctionenment<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="id2">
+<h3>Inclusion<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Zigate en inclusion</p></li>
+<li><p>Appui long &gt;10s sur bouton lateral</p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h3>Exclusion<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Zigate pas en mode inclusion</p></li>
+<li><p>Appui long &gt;10s sur bouton lateral</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Reveil<a class="headerlink" href="#id4" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Je ne parviens pas à le réveiller à l’aide du bouton lateral.</p></li>
+<li><p>Si pas configuré, l’inclure et le configurer immédiatement</p></li>
+<li><p>Une fois configuré, faire changer la temperature ou humidité (le mettre dans ses mains) et il doit se reveiller.</p></li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h3>Configurer<a class="headerlink" href="#id5" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>bind/setreport sur temperature et humidite</p></li>
+<li><p>bind sur Power</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="sonoff-snzb-03-capteur-ir">
+<h2>SonOff SNZB-03: Capteur IR<a class="headerlink" href="#sonoff-snzb-03-capteur-ir" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues/1324">https://github.com/KiwiHC16/Abeille/issues/1324</a></p>
+<div class="section" id="id6">
+<h3>Fonctionenment<a class="headerlink" href="#id6" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="id7">
+<h3>Inclusion<a class="headerlink" href="#id7" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="id8">
+<h3>Exclusion<a class="headerlink" href="#id8" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="id9">
+<h3>Reveil<a class="headerlink" href="#id9" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="id10">
+<h3>Configurer<a class="headerlink" href="#id10" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+</div>
+<div class="section" id="sonoff-snzb-04-capteur-de-porte">
+<h2>SonOff SNZB-04: Capteur de porte<a class="headerlink" href="#sonoff-snzb-04-capteur-de-porte" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues/1325">https://github.com/KiwiHC16/Abeille/issues/1325</a></p>
+<div class="section" id="id11">
+<h3>Fonctionenment<a class="headerlink" href="#id11" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="id12">
+<h3>Inclusion<a class="headerlink" href="#id12" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="id13">
+<h3>Exclusion<a class="headerlink" href="#id13" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="id14">
+<h3>Reveil<a class="headerlink" href="#id14" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="id15">
+<h3>Configurer<a class="headerlink" href="#id15" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">SonOff</a><ul>
+<li><a class="reference internal" href="#sonoff-snzb-01-interrupteur">SonOff SNZB-01: Interrupteur</a><ul>
+<li><a class="reference internal" href="#fonctionenment">Fonctionenment</a></li>
+<li><a class="reference internal" href="#inclusion">Inclusion</a></li>
+<li><a class="reference internal" href="#exclusion">Exclusion</a></li>
+<li><a class="reference internal" href="#reveil">Reveil</a></li>
+<li><a class="reference internal" href="#configurer">Configurer</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sonoff-snzb-02-temperature-humidite">SonOff SNZB-02: Temperature / Humidité</a><ul>
+<li><a class="reference internal" href="#id1">Fonctionenment</a></li>
+<li><a class="reference internal" href="#id2">Inclusion</a></li>
+<li><a class="reference internal" href="#id3">Exclusion</a></li>
+<li><a class="reference internal" href="#id4">Reveil</a></li>
+<li><a class="reference internal" href="#id5">Configurer</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sonoff-snzb-03-capteur-ir">SonOff SNZB-03: Capteur IR</a><ul>
+<li><a class="reference internal" href="#id6">Fonctionenment</a></li>
+<li><a class="reference internal" href="#id7">Inclusion</a></li>
+<li><a class="reference internal" href="#id8">Exclusion</a></li>
+<li><a class="reference internal" href="#id9">Reveil</a></li>
+<li><a class="reference internal" href="#id10">Configurer</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sonoff-snzb-04-capteur-de-porte">SonOff SNZB-04: Capteur de porte</a><ul>
+<li><a class="reference internal" href="#id11">Fonctionenment</a></li>
+<li><a class="reference internal" href="#id12">Inclusion</a></li>
+<li><a class="reference internal" href="#id13">Exclusion</a></li>
+<li><a class="reference internal" href="#id14">Reveil</a></li>
+<li><a class="reference internal" href="#id15">Configurer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Documentation Abeille 12.12.2019</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SonOff</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, KiwiHC16.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

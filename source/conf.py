@@ -20,13 +20,13 @@
 # -- Project information -----------------------------------------------------
 
 project = u'Abeille'
-copyright = u'2019, KiwiHC16'
+copyright = u'2019-20, KiwiHC16'
 author = u'KiwiHC16'
 
 # The short X.Y version
 version = u''
 # The full version, including alpha/beta/rc tags
-release = u'12.12.2019'
+release = u'08.12.2020'
 
 
 # -- General configuration ---------------------------------------------------
@@ -75,8 +75,10 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-#html_theme = 'alabaster'
-html_theme = 'classic'
+#html_theme = 'default'
+html_theme = 'alabaster'
+#html_theme = 'classic'
+#html_theme = 'sphinxdoc'
 #html_theme = 'bizstyle'
 #html_theme = 'nature'
 #html_theme = 'scrolls'
@@ -102,7 +104,10 @@ html_static_path = []
 # 'searchbox.html']``.
 #
 # html_sidebars = {}
-
+html_sidebars = {
+   '**': ['searchbox.html', 'localtoc.html'],
+   'using/windows': ['windowssidebar.html', 'searchbox.html'],
+}
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
@@ -183,3 +188,4 @@ epub_exclude_files = ['search.html']
 
 # Don't copy ".rst" source to build directory
 html_copy_source = False
+html_logo = "images/Abeille_icon.png"

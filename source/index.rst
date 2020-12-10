@@ -1,7 +1,4 @@
-.. Abeille documentation master file, created by
-   sphinx-quickstart on Sat Apr 28 11:38:14 2019.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. Abeille documentation master file
 
 Welcome to Abeille!
 ===================
@@ -13,11 +10,9 @@ En tant qu'utilisateur final, le chapitre :doc:`Tuto` vous sera probablement le 
 
     Cette documentation est en cours de "ré-écriture".
 
-
 .. attention::
 
     Plugin en développement continu. Le développement n est pas terminé. De nombreux ajustements sont en cours ...
-
 
 .. hint::
 
@@ -64,8 +59,6 @@ Une fois l' :doc:`Installation` faite, il est nécessaire de vérifier la config
 
 Quand tout est en place, vous allez ajouter des équipements. Afin d'avoir une interface graphique jolie dans Jeedom vous pouvez adapter les :doc:`Widget` qui seront utilisés. C'est optionel. C'est juste pour faire beau.
 
-
-
 Utilisation
 ===========
 
@@ -78,7 +71,6 @@ Suppression
 ===========
 
 Vous avez la possibilité de faire une :doc:`Suppression` d'un équipement du réseau zigbee géré par la zigate.
-
 
 Groups
 ======
@@ -95,21 +87,6 @@ Santé
 =====
 
 Le réseau est constitué de nombreux équipements qui vivent au rythme et aléa du réseau radio, des coupures de courant, etc. Afin de monitorer le réseau Abeille propose plusieurs outils: :doc:`Health`
-
-Polling
-=======
-
-Certains équipements communiquent naturellement et échangent des messages avec la Zigate, ce qui nous permet de s'assurer qu'ils sont en vie. D'autres restent silencieux et nous devons les interroger pour savoir s'ils sont toujours dans le réseau ou simplement connaitre leur état. Abeille contient une fonction de :doc:`Polling` interrogeant régulièrement les équipements.
-
-Cron
-====
-
-Abeille de façon régulière fait :doc:`Cron` un certain nombre de taches pour maintenir/monitorer le système.
-
-Radio
-=====
-
-Le ZigBee fonctionne en :doc:`Radio`. La :doc:`Radio` est sujette à divers problemes. Même si la norme Zigbee inclus plein de fonction pour nous faciliter la vie, il arrive que cela ne fonctionne pas aussi bien qu'attendu. Pour avoir une meilleur comprehension de ce qui se passe, Abeille inclus des informations, graphes representant les informations :doc:`Radio` récupérées par les équipements.
 
 Tuto
 ====
@@ -190,16 +167,11 @@ Xiaomi
 
 Ce chapithre regroupe les informations sur les équipements :doc:`Xiaomi`
 
-
 Changelog
 =========
 
 Afin de vous donner de la visibilité sur l'évolution du plugin vous trouverez des informations génériques dans :doc:`Changelog`.
 Bien évidement pour les personnes qui savent développer toutes les informations sont disponibles dans link:https://github.com/KiwiHC16/Abeille/commits/master[Abeille GitHub]
-
-
-Avancé
-======
 
 OnLine
 ======
@@ -211,35 +183,10 @@ Debug
 
 Si vous rencontrez des soucis, je vous propose ce chapitre :doc:`Debug` vous donnant les méthodes à suivre pour vérifier les points de bon fonctionnement.
 
-Developement
-============
-
-Si certains d'entre vous souhaitent comprendre ou modifier le code, vous des informations de base pour comprendre la structure de :doc:`Developpement`.
-
-Modèles
-=======
-
-Les équipements ZigBee sont representés dans Abeille par des fichiers de configuration appelés: :doc:`ModeleJson`. Ces fichiers peuvent être modifiés et d'autres peuvent être créer pour ajouter de nouveau équipements.
-
-Docker / VM
-===========
-
-Ce chapitre est très spécifique et pour les utilisateurs ayant de bonnes connaissances en informatique. Je partage ici mon installation :doc:`Docker` qui me permet de s'implifier mon developpement et de faire des backup de mes Jeedom distant et difficilement accessibles.
-
 Backup/Restore
 ==============
 
 Ce chapitre ne devrait être utilisé que pour les personnes qui developpe le firmware ZiGate et qui comprennent ce qu'ils font. Cela permet de faire un :doc:`ZiGateBackupRestore` de l'EEPROM Zigate. Pour les autres SVP ne jouez pas avec cette méthode cela vous amenera plus de soucis de de biens.
-
-Wifi
-====
-
-J'ai développé mon propre module :doc:`Wifi` du fait de petits soucis sur le premier module disponible. Finalement il fonctionne tellement bien et fourni une protection coupure électrique avec une batterie que je l'utilise dans toutes configuration et même avec mon sniffer ZigBee ...
-
-HW
-==
-
-Quelques informations sur la partie :doc:`HW`.
 
 FAQ
 ===
@@ -250,3 +197,53 @@ TOC
 ====
 
 :doc:`toctree`.
+
+Abeille avancé
+==============
+
+Si vous souhaitez comprendre un peu + le fonctionnement d'Abeille, c'est le chapitre qu'il vous faut parcourir.
+
+Utilisation sous Docker ou VM
+-----------------------------
+
+Ce chapitre est très spécifique et pour les utilisateurs ayant de bonnes connaissances en informatique. Je partage ici mon installation :doc:`Docker` qui me permet de s'implifier mon developpement et de faire des backup de mes Jeedom distant et difficilement accessibles.
+
+Modèles pour nouveaux équipements
+---------------------------------
+
+Les équipements ZigBee sont representés dans Abeille par des fichiers de configuration appelés: :doc:`ModeleJson`. Ces fichiers peuvent être modifiés et d'autres peuvent être créer pour ajouter de nouveau équipements.
+
+Cron
+----
+
+Abeille de façon régulière fait :doc:`Cron` un certain nombre de taches pour maintenir/monitorer le système.
+
+Polling
+-------
+
+Certains équipements communiquent naturellement et échangent des messages avec la Zigate, ce qui nous permet de s'assurer qu'ils sont en vie. D'autres restent silencieux et nous devons les interroger pour savoir s'ils sont toujours dans le réseau ou simplement connaitre leur état. Abeille contient une fonction de :doc:`Polling` interrogeant régulièrement les équipements.
+
+Radio
+-----
+
+Le ZigBee fonctionne en :doc:`Radio`. La :doc:`Radio` est sujette à divers problemes. Même si la norme Zigbee inclus plein de fonction pour nous faciliter la vie, il arrive que cela ne fonctionne pas aussi bien qu'attendu. Pour avoir une meilleur comprehension de ce qui se passe, Abeille inclus des informations, graphes representant les informations :doc:`Radio` récupérées par les équipements.
+
+Developpement
+=============
+
+Ce chapitre est dédié aux developpeurs.
+Si certains souhaitent comprendre ou modifier le code, voila qq infos de base pour comprendre la structure du plugin :doc:`Developpement`.
+
+Divers
+======
+
+Wifi
+----
+
+J'ai développé mon propre module :doc:`Wifi` du fait de petits soucis sur le premier module disponible. Finalement il fonctionne tellement bien et fourni une protection coupure électrique avec une batterie que je l'utilise dans toutes configuration et même avec mon sniffer ZigBee ...
+
+HW
+--
+
+Quelques informations sur la partie :doc:`HW`.
+

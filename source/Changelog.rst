@@ -18,7 +18,9 @@ Mise à jour
 
 03/12/2020: Detecteur de fumée HEIMAN HS1SA-E
 
+02/12/2020: TRADFRIDriver30W IKEA
 
+...
 
 
 Beta 24/11/2010

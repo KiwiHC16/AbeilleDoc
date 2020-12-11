@@ -10,6 +10,7 @@ Mise à jour
 
 10/12/2020: 
 - Ajout du modale Template pour afficher des differences entre les Abeilles dans Jeedom et leur Modele.
+- 
 
 09/12/2020: 
 - Ajout d un chapitre Update dans la page de configuration pour verifier que certaines contraintes sont satisfaites avant de faire la mise a jour.

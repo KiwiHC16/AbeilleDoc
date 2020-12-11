@@ -14,6 +14,11 @@ Mise à jour
 
 05/12/2020: Contactor 20AX Legrand : Pilotage sur ses fonctions ON/OFF et autre
 
+04/12/2020: Prise Blitzwolf
+
+03/12/2020: Detecteur de fumée HEIMAN HS1SA-E
+
+
 
 
 Beta 24/11/2010

@@ -8,19 +8,26 @@ Mise à jour
  - Prise Xiaomi: fonctions de base dans le master (On/Off/Retour etat). En cours retour de W, Conso, V, A et T°. 
  - LQI collect revisited & enhanced #1526
 
-10/12/2020: Ajout du modale Template pour afficher des differences entre les Abeilles dans Jeedom et leur Modele.
+10/12/2020: 
+- Ajout du modale Template pour afficher des differences entre les Abeilles dans Jeedom et leur Modele.
 
-09/12/2020: Ajout d un chapitre Update dans la page de configuration pour verifier que certaines contraintes sont satisfaites avant de faire la mise a jour.
+09/12/2020: 
+- Ajout d un chapitre Update dans la page de configuration pour verifier que certaines contraintes sont satisfaites avant de faire la mise a jour.
 
-08/12/20202: Ajout Télécommande 3 boutons Loratap #1406
+08/12/20202: 
+- Ajout Télécommande 3 boutons Loratap #1406
 
-05/12/2020: Contactor 20AX Legrand : Pilotage sur ses fonctions ON/OFF et autre
+05/12/2020: 
+- Contactor 20AX Legrand : Pilotage sur ses fonctions ON/OFF et autre
 
-04/12/2020: Prise Blitzwolf
+04/12/2020: 
+- Prise Blitzwolf
 
-03/12/2020: Detecteur de fumée HEIMAN HS1SA-E
+03/12/2020: 
+- Detecteur de fumée HEIMAN HS1SA-E
 
-02/12/2020: TRADFRIDriver30W IKEA
+02/12/2020: 
+- TRADFRIDriver30W IKEA
 
 ...
 

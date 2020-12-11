@@ -4,6 +4,7 @@ ChangeLog
 Mise à jour
 -----------
 
+11/12/2020: Prise Xiaomi: fonctions de base dans le master (On/Off/Retour etat). En cours retour de W, Conso, V, A et T°. 
 
 Beta 24/11/2010
 ^^^^^^^^^^^^^^^

@@ -10,6 +10,11 @@ Mise à jour
 
 09/12/2020: Ajout d un chapitre Update dans la page de configuration pour verifier que certaines contraintes sont satisfaites avant de faire la mise a jour.
 
+08/12/20202: Ajout Télécommande 3 boutons Loratap #1406
+
+
+
+c4f0d6b
 
 Beta 24/11/2010
 ^^^^^^^^^^^^^^^

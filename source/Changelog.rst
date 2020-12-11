@@ -12,9 +12,9 @@ Mise à jour
 
 08/12/20202: Ajout Télécommande 3 boutons Loratap #1406
 
+05/12/2020: Contactor 20AX Legrand : Pilotage sur ses fonctions ON/OFF et autre
 
 
-c4f0d6b
 
 Beta 24/11/2010
 ^^^^^^^^^^^^^^^

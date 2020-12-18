@@ -9,8 +9,10 @@ Le focus est fait sur les configurations suivantes:
 - Machine virtuelle sous debian 9 en x86 (KiwiHC16 en dev)
 - docker debian en x86 (edgd1er en dev)
 - raspberry Pi2 (edgd1er en prod)
+- OrangePi Zero
 
-== Les autres envirronements
+Les autres environnements
+-------------------------
 
 Les autres environnements ne sont pas testés par défaut mais nous vous aiderons dans la mesure du possible.
 
@@ -22,7 +24,8 @@ En retour d'experience sur le forum:
 - U3 sous debian: install classique
 - link:Docker.html#XU4[XU4 sous ubuntu]
 
-== Equipements
+Equipements
+-----------
 
 La liste des équipement supportés est consolidée dans link:https://github.com/KiwiHC16/Abeille/blob/master/Documentation/040_Compatibilite.adoc[la page GitHub].
 

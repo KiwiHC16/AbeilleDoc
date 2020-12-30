@@ -39,7 +39,7 @@
 <ul class="simple">
 <li><p>branche master : pour tous les développements en cours a condition que les pushs soient utilisables et « stabilisés » pour la phase de test.</p></li>
 <li><p>branche beta: pour figer un développement et le mettre en test avant de passer en stable</p></li>
-<li><p>branche stable: version stable</p></li>
+<li><p>branche stable: version stable. C’est la branche officielle vue par Jeedom, donc pour tous les utilisateurs.</p></li>
 <li><p>Dev en cours: autre branche</p></li>
 </ul>
 <div class="section" id="vue-generale">
@@ -50,9 +50,8 @@
 <div class="section" id="regles-a-suivre">
 <h3>Règles à suivre<a class="headerlink" href="#regles-a-suivre" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li><p>La structure des plugins est présentée dans la doc Jeedom: <a class="reference external" href="https://doc.jeedom.com/fr_FR/dev/plugin_template">https://doc.jeedom.com/fr_FR/dev/plugin_template</a></p></li>
-<li><p>Si les informations ne sont pas disponibles nous prenons le plugin openzwave comme modèle: <a class="reference external" href="https://github.com/jeedom/plugin-openzwave">https://github.com/jeedom/plugin-openzwave</a></p></li>
-<li><p>A noter: Un template est fourni par Jeedom: <a class="reference external" href="https://github.com/jeedom/plugin-template">https://github.com/jeedom/plugin-template</a> mais nous ne le prenons pas en compte.</p></li>
+<li><p>La structure de base des plugins est présentée dans la doc Jeedom: <a class="reference external" href="https://doc.jeedom.com/fr_FR/dev/plugin_template">https://doc.jeedom.com/fr_FR/dev/plugin_template</a>. Elle est similaire à la structure du “core” lui même.</p></li>
+<li><p>Un template est fourni par Jeedom: <a class="reference external" href="https://github.com/jeedom/plugin-template">https://github.com/jeedom/plugin-template</a> mais en dehors des informations déja présentées ci dessous, il n’est pas vraiment utilisé ni cohérent.</p></li>
 </ul>
 <p>Il faut que l’on se cale le plus possible sur ces documents.</p>
 </div>
@@ -75,72 +74,66 @@
 </div>
 <div class="section" id="hierarchie-repertoires-du-plugin-abeille">
 <h3>Hiérarchie (répertoires) du plugin Abeille<a class="headerlink" href="#hierarchie-repertoires-du-plugin-abeille" title="Lien permanent vers ce titre">¶</a></h3>
-<p>En cours de révision. Points ouverts notés.
-Basé sur « <a class="reference external" href="https://doc.jeedom.com/fr_FR/dev/plugin_template">https://doc.jeedom.com/fr_FR/dev/plugin_template</a> ».</p>
+<p>Basé sur « <a class="reference external" href="https://doc.jeedom.com/fr_FR/dev/plugin_template">https://doc.jeedom.com/fr_FR/dev/plugin_template</a> ».</p>
 <ul>
-<li><p>core</p>
-<p>Dossier contenant tous les fichiers de fonctionnement interne.
+<li><p><strong>core</strong> : Dossier contenant tous les fichiers de fonctionnement interne.
 Ne contient pas de fichiers gérant la partie « User Interface » donc pas d’html.</p>
 <ul class="simple">
-<li><p>class : dossier contenant la classe du plugin.
+<li><p><strong>class</strong> : dossier contenant la classe du plugin.
 Les fichiers de class php doivent obligatoirement se finir par « .class.php ».</p></li>
-<li><p>php : dossier pouvant contenir des fonctions ne devant pas forcément appartenir à une classe (souvent utilisé pour permettre l’inclusion de multiples classes ou fichiers de configuration en une fois)
+<li><p><strong>php</strong> : dossier pouvant contenir des fonctions ne devant pas forcément appartenir à une classe (souvent utilisé pour permettre l’inclusion de multiples classes ou fichiers de configuration en une fois)
 Toutes les librairies Abeille PHP.</p></li>
-<li><p>config : Fichiers de configuration du plugin.</p>
+<li><p><strong>config</strong> : Fichiers de configuration du plugin.</p>
 <ul>
 <li><p>A DETAILLER</p></li>
 </ul>
 </li>
-<li><p>ajax : dossier contenant les fichiers cibles d’appels AJAX.
+<li><p><strong>ajax</strong> : dossier contenant les fichiers cibles d’appels AJAX.
 Les fichiers de type AJAX doivent se finir par « .ajax.php ».</p></li>
 </ul>
 </li>
-<li><p>desktop</p>
-<p>Dossier contenant la vue “bureau” du plugin (en opposition avec la vue “mobile”).</p>
+<li><p><strong>desktop</strong> : Dossier contenant la vue “bureau” du plugin (en opposition avec la vue “mobile”).</p>
 <ul class="simple">
-<li><p>js : Dossier contenant tous les fichiers de type javascript.</p></li>
-<li><p>php : Dossier contenant tous les fichiers de type php qui font de l’affichage.</p></li>
-<li><p>css : Si nécessaire, fichier CSS pour la vue « desktop ».</p></li>
-<li><p>modal : Dossier contenant le code des modals du plugin.</p></li>
+<li><p><strong>js</strong> : Dossier contenant tous les fichiers de type javascript.</p></li>
+<li><p><strong>php</strong> : Dossier contenant tous les fichiers de type php qui font de l’affichage.</p></li>
+<li><p><strong>css</strong> : Si nécessaire, fichier CSS pour la vue « desktop ».</p></li>
+<li><p><strong>modal</strong> : Dossier contenant le code des modals du plugin.</p></li>
 </ul>
 </li>
-<li><p>mobile
-Contient les fichiers gérant la UI « mobile ».</p></li>
-<li><p>plugin_info</p>
-<p>Contient les fichiers permettant à Jeedom de qualifier le plugin, de faire son installation et sa configuration.</p>
+<li><p><strong>mobile</strong> : Contient les fichiers gérant la UI « mobile ».</p></li>
+<li><p><strong>plugin_info</strong> : Contient les fichiers permettant à Jeedom de qualifier le plugin, de faire son installation et sa configuration.</p>
 <ul class="simple">
-<li><p>info.json : Fichier contenant les informations de base du plugin (il est obligatoire sinon Jeedom ne verra pas le plugin), il contient entre autre l’identifiant du module, la description, les instructions d’installation…​</p></li>
-<li><p>install.php : Fichier contenant (si besoin) les méthodes d’installation et de désinstallation du plugin</p></li>
-<li><p>configuration.php : Fichier contenant les paramètres à configurer du plugin indépendants des équipements de celui-ci (exemple pour le module Zwave l’ip du Raspberry Pi ayant la carte Razberry)</p></li>
+<li><p><strong>info.json</strong> : Fichier contenant les informations de base du plugin (il est obligatoire sinon Jeedom ne verra pas le plugin), il contient entre autre l’identifiant du module, la description, les instructions d’installation…​</p></li>
+<li><p><strong>install.php</strong> : Fichier contenant (si besoin) les méthodes d’installation et de désinstallation du plugin</p></li>
+<li><p><strong>configuration.php</strong> : Fichier contenant les paramètres à configurer du plugin indépendants des équipements de celui-ci (exemple pour le module Zwave l’ip du Raspberry Pi ayant la carte Razberry)</p></li>
 </ul>
 </li>
-<li><p>docs</p>
+<li><p><strong>docs</strong></p>
 <p>N’est pas utilisé pour ne pas dépasser la taille limite imposée par Jeedom.
 Les docs sont dans un repo séparé.</p>
 </li>
-<li><p>tmp</p>
+<li><p><strong>tmp</strong></p>
 <p>Répertoire LOCAL (non versionné) ne contenant que qq fichiers qui bougent rarement. Il contient entre autre le fichier de config « developpeur ». Les logs sont migrés sous le « tmp » officiel Jeedom (jeedom::getTmpFolder(« Abeille »)).</p>
 </li>
 </ul>
 <p>Répertoires hors plugin</p>
 <ul>
-<li><p>tmp Jeedom (PAS dans le plugin)</p>
+<li><p><strong>tmp Jeedom</strong></p>
 <p>Il s’agit du répertoire temporaire Jeedom (jeedom::getTmpFolder(« Abeille »)). Utilisé pour stocker les log « previous », les logs de support, ou comme zone tampon pour créer des fichiers compressés par ex.</p>
 </li>
 </ul>
-<p>Points ouverts</p>
-<ul class="simple">
-<li><p>resources : On met quoi dedans ?</p>
-<ul>
-<li><p>resources/scripts ou pourraient aller dans « core/scripts »</p></li>
+<p>Propositions à discuter</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Network : a virer progressivement. Les fichiers devraient pouvoir trouver leur place dans « core », et/ou « desktop »/ »mobile »</p></li>
+<li><p>Scripts : « resources/scripts » ou pourraient aller dans « core/scripts ». Cette derniere possiblite est + en ligne avec la strucutre Jeedom.</p></li>
 <li><p>resources/fw_zigate : FW zigate.</p></li>
 <li><p>resources/fw_wifi : FW specific partie fw_wifi</p></li>
-</ul>
-</li>
-<li><p>une partie spécifique « démon » ??
-Au vu des recherches, ca n’a pas vraiment de sens. Aucun plugin a isolé son « démon », sauf « openzwave » qui lui meme se base sur un code exterieur. Le format du template n’est jamais utilisé par les plugin officiels.
+<li><p>Pas de partie « demond » : Tout comme « Network », il n’ya a pas de classification liée à une fonctionalité. Au vu des recherches, ca n’a pas vraiment de sens. Aucun plugin a isolé son « démon », sauf « openzwave » qui lui meme se base sur un code exterieur. Le format du template n’est jamais utilisé par les plugin officiels.
 Les démons n’étant rien d’autre que des codes ou classes, je suggère de coller à la structure Jeedom ci dessus et mettre ces codes dans « core ».</p></li>
+<li><p>tests : Vu dans Jeedom, ca fait du sens d’isoler les codes de test. Sous structure dans la lignée de core. Ex tests/php, tests/class …</p></li>
 </ul>
+</div></blockquote>
 </div>
 </div>
 </div>

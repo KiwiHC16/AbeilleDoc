@@ -32,12 +32,9 @@ Alors j'ouvre une cagnotte pour financer l'achat d'équipements pour faciliter l
 L'idée est d'avoir au moins un exemplaire de ce que les utilisateurs d'Abeille utilisent.
 Je n'ai aucune idée de votre participation à cette cagnotte mais comme tout est open source depuis le début, la :doc:`Cagnotte` est aussi complètement transparente.
 
-Abeille
-========
-
-Le chapitre :doc:`Presentation` contient les premières informations nécessaires à l'utilisation du plugin Abeille.
-
-.. image:: images/Abeille_icon.png
+Presentation
+============
+:doc:`Presentation`
 
 Installation
 ============
@@ -106,15 +103,13 @@ Compatible
 
 Liste des équipements compatibles :doc:`listeCompatibilite`
 
-Eurotronics
+:doc:`Eurotronics`
 -----------
-
-Ce chapithre regroupe les informations sur les équipements :doc:`Eurotronics`
 
 Heiman
 ------
 
-Ce chapithre regroupe les informations sur les équipements :doc:`Heiman`
+Ce chapitre regroupe les informations sur les équipements :doc:`Heiman`
 
 Ikea
 ----
@@ -134,7 +129,7 @@ Ce chapitre regroupe les informations sur les équipements :doc:`Legrand`
 Livolo
 ------
 
-Ce chapithre regroupe les informations sur les équipements :doc:`Livolo`
+Ce chapitre regroupe les informations sur les équipements :doc:`Livolo`
 
 Osram
 -----
@@ -144,27 +139,27 @@ Ce chapitre regroupe les informations sur les équipements :doc:`OSRAM`
 Philips Hue
 -----------
 
-Ce chapithre regroupe les informations sur les équipements :doc:`PhilipsHue`
+Ce chapitre regroupe les informations sur les équipements :doc:`PhilipsHue`
 
 Profalux
 --------
 
-Ce chapithre regroupe les informations sur les équipements :doc:`Profalux`
+Ce chapitre regroupe les informations sur les équipements :doc:`Profalux`
 
 SonOff
 ------
 
-Ce chapithre regroupe les informations sur les équipements :doc:`SonOff`
+Ce chapitre regroupe les informations sur les équipements :doc:`SonOff`
 
 Tuya
 ----
 
-Ce chapithre regroupe les informations sur les équipements :doc:`Tuya`
+Ce chapitre regroupe les informations sur les équipements :doc:`Tuya`
 
 Xiaomi
 ------
 
-Ce chapithre regroupe les informations sur les équipements :doc:`Xiaomi`
+Ce chapitre regroupe les informations sur les équipements :doc:`Xiaomi`
 
 Changelog
 =========

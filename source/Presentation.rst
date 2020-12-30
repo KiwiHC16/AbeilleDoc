@@ -1,16 +1,14 @@
-Presentation
-============
+Introduction
+------------
 
 .. image:: images/Abeille_icon.png
-
-Présentation rapide
--------------------
 
 [verse, Akila, from Zigate.fr]
 Zigate est une passerelle universelle compatible avec énormément de matériels radios Zigbee. Grâce à elle, vous offrez à votre domotique un large panel de possibilités. La Zigate est modulable , performante et ouverte pour qu'elle puisse évoluer selon vos besoins.
 
 
-== Le plugin Abeille
+Le plugin Abeille
+-----------------
 
 Le plugin  permet de mettre en place un réseau Zigbee avec des produits du marché et des réalisations personnelles (DIY) par l'intermédiaire de la passerelle Zigate (https://Zigate.fr/) dans Jeedom.
 
@@ -29,21 +27,24 @@ Il supporte aussi des fonctions avancées pour faciliter la gestion d’un gros 
 * En mode USB, en mode Wifi ou en mode GPIO (PiZigate)
 * Fonctionne avec Homebridge
 
-== Support
+Support
+-------
 
 Pour toute difficulté, deux possibilités :
 
 * un fil de discussion sur le link:https://community.jeedom.com/tag/plugin-abeille[forum de Jeedom]
 * une link:https://github.com/KiwiHC16/Abeille/issues?utf8=✓&q=is%3Aissue[« issue » dans Github]
 
-== Périphériques compatibles
+Périphériques compatibles
+-------------------------
 
 * les ampoules Zigbee
 * toute la famille Xiaomi Zigbee (Sensor presence, prise, temperature, humidité, pression, interrupteur, porte)
 * les volets Profalux
 * de nombreux autres périphériques Zigbee (https://github.com/KiwiHC16/Abeille/blob/master/Documentation/040_Compatibilite.adoc)
 
-== Les possibilités
+Les possibilités
+----------------
 
 * inclure des équipements Zigbee depuis Jeedom
 * avoir l'état d'une ampoule Zigbee, son niveau de brillance, ses caractéristiques (nom, fabriquant, SW level).

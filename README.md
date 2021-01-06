@@ -11,3 +11,21 @@ Mise à jour de la doc
 - Generer une "Push Request" à partir de GitHub
 
 Une fois intégrée la mise-à-jour est visualisable directement via https://kiwihc16.github.io/AbeilleDoc/
+
+Structure des repertoires
+
+- docs
+  C'est le point exporté et donc visible de l'exterieur via https://kiwihc16.github.io/AbeilleDoc/
+  En dehors de "products", le contenu est généré automatiquement.
+  docs/products: Documentations des produits (ATTENTION ! pas accessible de l'exterieur autrement que via un lien "blob" puis "download"
+  Ex: https://github.com/KiwiHC16/AbeilleDoc/blob/master/docs/products/SPZB0001/2020_01_14_13_52_22.pdf
+- docs_dev
+  Documents pour developpeurs
+- source
+  Source des pages du user manual au format 'rst' (ReStrucTurded) à convertir avec Sphinx
+  
+A faire
+
+- "docs/products" ne semble pas accessible de l'exterieur. Possible via "blob". Pourquoi ?
+- Virer les docs produits de source/docProduits une fois tous les liens à jour.
+  Les docs produits sont maintenant dans "docs/products" et donc accessible directement.

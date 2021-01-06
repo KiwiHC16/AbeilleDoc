@@ -16,13 +16,17 @@ if [ $? -ne 0 ]; then
     exit 2
 fi
 
-#find . -name "._*" -exec rm {} \;
 make html
 if [ $? -ne 0 ]; then
     echo "= ERR: Generation failed"
     exit 3
 fi
-rm -rf docs/*
+
+# Updating "docs" directory
+# Tcharp38 TODO: Better copying new/updated files only & check those to be deleted
+rm -rf docs/_images
+rm -rf docs/_static
+rm -f docs/*.html
 cp -r build/html/* docs
 
 exit 0

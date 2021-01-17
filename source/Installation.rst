@@ -1,10 +1,130 @@
-############
-Installation
-############
 
-*********************
-Installation Standard
-*********************
+######################
+Installation du plugin
+######################
+
+Depuis le market
+================
+
+Installation du plugin depuis le market.
+Rien de spécifique. Suivre la procédure classique et passez à l'activation du plugin.
+
+Alternative: Depuis GitHub via Jeedom
+=====================================
+
+* Aller sur Configuration (Roues crantées) puis Configuration
+* Dans l'onglet "Mise à jour", sélectionner en dessous l'onglet Github et cocher la case "Activer Github". Cliquer sur "Sauvegarder".
+* Aller sur "Plugins" et cliquer sur "Gestion des plugins". Cliquer sur "Sources"
+* Dans "Type de source", sélectionner Github
+* ID logique du plugin: Abeille
+* Utilisateur ou organisateur: KiwiHC16
+* Nom du dépôt: Abeille
+* Branche: master
+* Cliquer sur Enregistrer.
+
+Via un fichier Zip
+==================
+
+.. code-block:: php
+   :linenos:
+
+   cd /var/www/html/plugins/
+   mkdir Abeille
+   cd Abeille
+   unzip le fichier téléchargé de GitHub dans le répertoire
+   cd ..
+
+Puis appliquer les bons droits :
+
+.. code-block:: php
+   :linenos:
+
+   chmod -R 777 /var/www/html/plugins/Abeille
+   chown -R www-data:www-data /var/www/html/plugins/Abeille
+
+Via Git
+=======
+
+Directement avec git (Le plus simple et le plus rapide)
+
+.. code-block:: php
+   :linenos:
+
+   cd /var/www/html/plugins/
+   git clone https://github.com/KiwiHC16/Abeille.git Abeille
+
+Puis appliquer les bons droits :
+
+.. code-block:: php
+   :linenos:
+
+   chmod -R 777 /var/www/html/plugins/Abeille
+   chown -R www-data:www-data /var/www/html/plugins/Abeille
+
+Mise a jour du plugin
+=====================
+
+Market
+------
+
+Mise à jour à partir du market
+Rien de particulier, suivre la méthode de base de Jeedom
+
+Github
+------
+
+Mise à jour à partir de github
+
+.. code-block:: php
+   :linenos:
+
+   cd /var/www/html/plugins/Abeille
+   sudo git pull https://github.com/KiwiHC16/Abeille
+
+
+####################
+Activation du plugin
+####################
+
+Cette étape est independante de la methode d'installation du plugin (market, GitHub, direct Git repo) .
+Via la page de configuration du plugin, la première chose à faire est l'activer comme suit:
+
+.. image:: images/Installation-1.png
+
+Lancer l'installation des dépendances
+
+.. image:: images/Installation-2.png
+
+Enfin activer la gestion automatique des démons et les lancer.
+
+.. image:: images/Installation-3.png
+
+########################################
+Configuration d'une ou plusieurs zigates
+########################################
+
+'Abeille' supporte est dédié à la passerelle "Zigate" sous toutes ses formes (USB, Wifi, PIN ou DIN).
+Via la page de configuration il faut indiquer à Abeille comment acceder à la zigate.
+
+Etendre la zone "Zigates"
+
+.. image:: images/ConfigurationZigate-1.png
+
+Et configurez le port d'accès à la zigate.
+
+- Indiquez son type
+- Si type USB, PI ou DIN, indiquez sur quel port serie Abeille pourra communiquer avec la zigate. Si du type Wifi, il faudra remplir l'adresse IP.
+- Testez la communication. Le status OK, avec la version de firmware, devrait apparaitre en 4. Cette partie ne supporte pas le type Wifi actuellement.
+- Activez la zigate.
+- Sauvegardez. Ne pas oublier cette étape.
+
+.. image:: images/ConfigurationZigate-2.png
+
+Information complémentaires PiZigate: :doc:`InstallationPiZiGate`.
+
+############
+Ancienne doc
+############
 
 Etape 1: Zigate
 ===============
@@ -45,118 +165,6 @@ Créer un objet Jeedom pour retrouver rapidement et facilement les nouveaux équ
 
 Tous les nouveaux équipements seront attachés à cet objet.
 
-Etape 4: Market
-===============
-
-Installation du plugin Depuis le market.
-Rien de spécifique. Suivre la procédure classique.
-
-Etape 5: Activation
-===================
-
-* Aller sur "Plugins" et cliquer sur "Gestion des plugins".
-* Cliquer sur "Abeille"
-* Cliquer sur "Activer"
-
-.. image:: images/Capture_d_ecran_2018_01_21_a_11_05_58.png
-
-* Choisir le niveau de log (debug si besoin) et cliquer sur "Sauvegarder"
-* Lancer l'installation des dépendances avec le bouton "Relancer" et patienter (vous pouvez suivre l'avancement dans le fichier de log: Abeille_dep)
-
-.. image:: images/Capture_d_ecran_2018_01_21_a_11_06_33.png
-
-* Patienter 2-3 minutes jusqu'à l'obtention du statut "OK"
-
-Puis:
-
-  * Si vous avez un Zigate USB, dans "Abeille Serial Port :" choisissez le bon port /dev/ttyUSBx.
-  * Si vous avez une Zigate Wifi dans "IP (IP:Port) de Zigate Wifi :" indiquer son adresse IP.
-  * Si vous avez un Zigate GPIO, dans "Abeille Serial Port :" choisissez le bon port /dev/ttyS0.
-
-* Définir l'"Objet Parent" (C'est ici que les objets "Abeille" se créeront par défaut)
-* Démarrer les Démons en cliquant sur la flèche verte "(Re)Démarrer"
-
-
-.. image:: images/Capture_d_ecran_2018_01_21_a_11_07_14.png
-
-A noter: Toute sauvegarde de la configuration provoque une relance du cron du plugin et donc un rechargement de la configuration.
-
-*******
-Avancés
-*******
-
-Installation pour les utilisateurs avancés
-
-Depuis Github
-=============
-
-Connecter vous par ssh sur votre Jeedom
-
-Zip
----
-
-.. code-block:: php
-   :linenos:
-
-   cd /var/www/html/plugins/
-   mkdir Abeille
-   cd Abeille
-   unzip le fichier téléchargé de GitHub dans le répertoire
-   cd ..
-
-
-Git
----
-
-Directement avec git (Le plus simple et le plus rapide)
-
-.. code-block:: php
-   :linenos:
-
-   git clone https://github.com/KiwiHC16/Abeille.git Abeille
-
-
-
-Alternative
-===========
-
-Alternative : Installation du plugin Abeille avec github depuis le market
-
-* Aller sur Configuration (Roues crantées) puis Configuration
-* Dans l'onglet "Mise à jour", sélectionner en dessous l'onglet Github et cocher la case "Activer Github". Cliquer sur "Sauvegarder".
-* Aller sur "Plugins" et cliquer sur "Gestion des plugins". Cliquer sur "Sources"
-* Dans "Type de source", sélectionner Github
-* ID logique du plugin: Abeille
-* Utilisateur ou organisateur: KiwiHC16
-* Nom du dépôt: Abeille
-* Branche: master
-* Cliquer sur Enregistrer.
-
-
-***********
-Mise a jour
-***********
-
-Mise a jour du plugin
-
-Market
-======
-
-Mise à jour à partir du market
-Rien de particulier, suivre la méthode de base de Jeedom
-
-Github
-======
-
-Mise à jour à partir de github
-
-.. code-block:: php
-   :linenos:
-
-   cd /var/www/html/plugins/Abeille
-   sudo git pull https://github.com/KiwiHC16/Abeille
-
-
 Bidouilles
 ==========
 
@@ -168,15 +176,3 @@ Pour écraser des "bidouilles" locales :
    cd /var/www/html/plugins/Abeille
    sudo git reset --hard HEAD
    sudo git pull https://github.com/KiwiHC16/Abeille
-
-
-Droits
-======
-
-Pour appliquer les bons droits :
-
-.. code-block:: php
-   :linenos:
-
-   chmod -R 777 /var/www/html/plugins/Abeille
-   chown -R www-data:www-data /var/www/html/plugins/Abeille

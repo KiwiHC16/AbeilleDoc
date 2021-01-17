@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Installation &#8212; Documentation Abeille 08.12.2020</title>
+    <title>Installation du plugin &#8212; Documentation Abeille 08.12.2020</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -32,107 +32,15 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Lien permanent vers ce titre">¶</a></h1>
-<div class="section" id="installation-standard">
-<h2>Installation Standard<a class="headerlink" href="#installation-standard" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="etape-1-zigate">
-<h3>Etape 1: Zigate<a class="headerlink" href="#etape-1-zigate" title="Lien permanent vers ce titre">¶</a></h3>
-<p>La Zigate peut être connectée au port USB, par module Wifi ou sur le port GPIO d’un Raspberry Pi.</p>
-<p>Pour les utilisateurs très avertis, il existe des <a class="reference internal" href="Solutions.html"><span class="doc">Solutions Multiples et Distantes</span></a> plus complexes qui amène de la flexibilité que j’utilise personaellement.</p>
-<p>Pour la PiZiGate, des étapes spécifiques sont nécessaires, <a class="reference internal" href="InstallationPiZiGate.html"><span class="doc">Installation PiZiGate</span></a>.</p>
-<p>Le firmware supporté est le dernier publié avec un petit décalage le temps d’adapter Abeille dans cet entretemps c’est l’avant derniere version qui est supportée. Pour mettre a jour le <a class="reference internal" href="InstallationFirmware.html"><span class="doc">Installation Firmware</span></a>.</p>
+  <div class="section" id="installation-du-plugin">
+<h1>Installation du plugin<a class="headerlink" href="#installation-du-plugin" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="depuis-le-market">
+<h2>Depuis le market<a class="headerlink" href="#depuis-le-market" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Installation du plugin depuis le market.
+Rien de spécifique. Suivre la procédure classique et passez à l’activation du plugin.</p>
 </div>
-<div class="section" id="etape-2-widget">
-<h3>Etape 2: Widget<a class="headerlink" href="#etape-2-widget" title="Lien permanent vers ce titre">¶</a></h3>
-<p>L’installation de Widget est une option permettant d’avoir un visuel plus joli.</p>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>Sur les dernières versions de Jeedom, il y a des problèmes de rafraichissement de widget.</p>
-</div>
-<p>Vous pouvez installer quelques widgets (officiels) pour que le rendu soit plus sympa</p>
-<ul class="simple">
-<li><p>baromètre pour le capteur Xiaomi Carré (dashboard.info.numeric.barometre )</p></li>
-<li><p>thermomètre pour les capteurs Xiaomi ronds et carrés (dashboard.info.numeric.tempIMG)</p></li>
-<li><p>humidité pour les capteurs Xiaomi ronds et carrés (dashboard.info.numeric.hydro3IMG)</p></li>
-</ul>
-<img alt="_images/Capture_d_ecran_2018_01_21_a_11_30_20.png" src="_images/Capture_d_ecran_2018_01_21_a_11_30_20.png" />
-</div>
-<div class="section" id="etape-3-reference">
-<h3>Etape 3: Référence<a class="headerlink" href="#etape-3-reference" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Créer un objet Jeedom pour retrouver rapidement et facilement les nouveaux équipements.</p>
-<img alt="_images/Capture_d_ecran_2018_01_21_a_10_53_59.png" src="_images/Capture_d_ecran_2018_01_21_a_10_53_59.png" />
-<img alt="_images/Capture_d_ecran_2018_01_21_a_10_54_13.png" src="_images/Capture_d_ecran_2018_01_21_a_10_54_13.png" />
-<p>Tous les nouveaux équipements seront attachés à cet objet.</p>
-</div>
-<div class="section" id="etape-4-market">
-<h3>Etape 4: Market<a class="headerlink" href="#etape-4-market" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Installation du plugin Depuis le market.
-Rien de spécifique. Suivre la procédure classique.</p>
-</div>
-<div class="section" id="etape-5-activation">
-<h3>Etape 5: Activation<a class="headerlink" href="#etape-5-activation" title="Lien permanent vers ce titre">¶</a></h3>
-<ul class="simple">
-<li><p>Aller sur « Plugins » et cliquer sur « Gestion des plugins ».</p></li>
-<li><p>Cliquer sur « Abeille »</p></li>
-<li><p>Cliquer sur « Activer »</p></li>
-</ul>
-<img alt="_images/Capture_d_ecran_2018_01_21_a_11_05_58.png" src="_images/Capture_d_ecran_2018_01_21_a_11_05_58.png" />
-<ul class="simple">
-<li><p>Choisir le niveau de log (debug si besoin) et cliquer sur « Sauvegarder »</p></li>
-<li><p>Lancer l’installation des dépendances avec le bouton « Relancer » et patienter (vous pouvez suivre l’avancement dans le fichier de log: Abeille_dep)</p></li>
-</ul>
-<img alt="_images/Capture_d_ecran_2018_01_21_a_11_06_33.png" src="_images/Capture_d_ecran_2018_01_21_a_11_06_33.png" />
-<ul class="simple">
-<li><p>Patienter 2-3 minutes jusqu’à l’obtention du statut « OK »</p></li>
-</ul>
-<p>Puis:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Si vous avez un Zigate USB, dans « Abeille Serial Port : » choisissez le bon port /dev/ttyUSBx.</p></li>
-<li><p>Si vous avez une Zigate Wifi dans « IP (IP:Port) de Zigate Wifi : » indiquer son adresse IP.</p></li>
-<li><p>Si vous avez un Zigate GPIO, dans « Abeille Serial Port : » choisissez le bon port /dev/ttyS0.</p></li>
-</ul>
-</div></blockquote>
-<ul class="simple">
-<li><p>Définir l“« Objet Parent » (C’est ici que les objets « Abeille » se créeront par défaut)</p></li>
-<li><p>Démarrer les Démons en cliquant sur la flèche verte « (Re)Démarrer »</p></li>
-</ul>
-<img alt="_images/Capture_d_ecran_2018_01_21_a_11_07_14.png" src="_images/Capture_d_ecran_2018_01_21_a_11_07_14.png" />
-<p>A noter: Toute sauvegarde de la configuration provoque une relance du cron du plugin et donc un rechargement de la configuration.</p>
-</div>
-</div>
-<div class="section" id="avances">
-<h2>Avancés<a class="headerlink" href="#avances" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Installation pour les utilisateurs avancés</p>
-<div class="section" id="depuis-github">
-<h3>Depuis Github<a class="headerlink" href="#depuis-github" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Connecter vous par ssh sur votre Jeedom</p>
-<div class="section" id="zip">
-<h4>Zip<a class="headerlink" href="#zip" title="Lien permanent vers ce titre">¶</a></h4>
-<div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">cd /var/www/html/plugins/</span>
-<span class="x">mkdir Abeille</span>
-<span class="x">cd Abeille</span>
-<span class="x">unzip le fichier téléchargé de GitHub dans le répertoire</span>
-<span class="x">cd ..</span>
-</pre></div>
-</td></tr></table></div>
-</div>
-<div class="section" id="git">
-<h4>Git<a class="headerlink" href="#git" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Directement avec git (Le plus simple et le plus rapide)</p>
-<div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">git clone https://github.com/KiwiHC16/Abeille.git Abeille</span>
-</pre></div>
-</td></tr></table></div>
-</div>
-</div>
-<div class="section" id="alternative">
-<h3>Alternative<a class="headerlink" href="#alternative" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Alternative : Installation du plugin Abeille avec github depuis le market</p>
+<div class="section" id="alternative-depuis-github-via-jeedom">
+<h2>Alternative: Depuis GitHub via Jeedom<a class="headerlink" href="#alternative-depuis-github-via-jeedom" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Aller sur Configuration (Roues crantées) puis Configuration</p></li>
 <li><p>Dans l’onglet « Mise à jour », sélectionner en dessous l’onglet Github et cocher la case « Activer Github ». Cliquer sur « Sauvegarder ».</p></li>
@@ -145,10 +53,43 @@ Rien de spécifique. Suivre la procédure classique.</p>
 <li><p>Cliquer sur Enregistrer.</p></li>
 </ul>
 </div>
+<div class="section" id="via-un-fichier-zip">
+<h2>Via un fichier Zip<a class="headerlink" href="#via-un-fichier-zip" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">cd /var/www/html/plugins/</span>
+<span class="x">mkdir Abeille</span>
+<span class="x">cd Abeille</span>
+<span class="x">unzip le fichier téléchargé de GitHub dans le répertoire</span>
+<span class="x">cd ..</span>
+</pre></div>
+</td></tr></table></div>
+<p>Puis appliquer les bons droits :</p>
+<div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">chmod -R 777 /var/www/html/plugins/Abeille</span>
+<span class="x">chown -R www-data:www-data /var/www/html/plugins/Abeille</span>
+</pre></div>
+</td></tr></table></div>
 </div>
-<div class="section" id="mise-a-jour">
-<h2>Mise a jour<a class="headerlink" href="#mise-a-jour" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Mise a jour du plugin</p>
+<div class="section" id="via-git">
+<h2>Via Git<a class="headerlink" href="#via-git" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Directement avec git (Le plus simple et le plus rapide)</p>
+<div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">cd /var/www/html/plugins/</span>
+<span class="x">git clone https://github.com/KiwiHC16/Abeille.git Abeille</span>
+</pre></div>
+</td></tr></table></div>
+<p>Puis appliquer les bons droits :</p>
+<div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">chmod -R 777 /var/www/html/plugins/Abeille</span>
+<span class="x">chown -R www-data:www-data /var/www/html/plugins/Abeille</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="mise-a-jour-du-plugin">
+<h2>Mise a jour du plugin<a class="headerlink" href="#mise-a-jour-du-plugin" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="market">
 <h3>Market<a class="headerlink" href="#market" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Mise à jour à partir du market
@@ -163,8 +104,68 @@ Rien de particulier, suivre la méthode de base de Jeedom</p>
 </pre></div>
 </td></tr></table></div>
 </div>
+</div>
+</div>
+<div class="section" id="activation-du-plugin">
+<h1>Activation du plugin<a class="headerlink" href="#activation-du-plugin" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Cette étape est independante de la methode d’installation du plugin (market, GitHub, direct Git repo) .
+Via la page de configuration du plugin, la première chose à faire est l’activer comme suit:</p>
+<img alt="_images/Installation-1.png" src="_images/Installation-1.png" />
+<p>Lancer l’installation des dépendances</p>
+<img alt="_images/Installation-2.png" src="_images/Installation-2.png" />
+<p>Enfin activer la gestion automatique des démons et les lancer.</p>
+<img alt="_images/Installation-3.png" src="_images/Installation-3.png" />
+</div>
+<div class="section" id="configuration-d-une-ou-plusieurs-zigates">
+<h1>Configuration d’une ou plusieurs zigates<a class="headerlink" href="#configuration-d-une-ou-plusieurs-zigates" title="Lien permanent vers ce titre">¶</a></h1>
+<p>“Abeille” supporte est dédié à la passerelle « Zigate » sous toutes ses formes (USB, Wifi, PIN ou DIN).
+Via la page de configuration il faut indiquer à Abeille comment acceder à la zigate.</p>
+<p>Etendre la zone « Zigates »</p>
+<img alt="_images/ConfigurationZigate-1.png" src="_images/ConfigurationZigate-1.png" />
+<p>Et configurez le port d’accès à la zigate.</p>
+<ul class="simple">
+<li><p>Indiquez son type</p></li>
+<li><p>Si type USB, PI ou DIN, indiquez sur quel port serie Abeille pourra communiquer avec la zigate. Si du type Wifi, il faudra remplir l’adresse IP.</p></li>
+<li><p>Testez la communication. Le status OK, avec la version de firmware, devrait apparaitre en 4. Cette partie ne supporte pas le type Wifi actuellement.</p></li>
+<li><p>Activez la zigate.</p></li>
+<li><p>Sauvegardez. Ne pas oublier cette étape.</p></li>
+</ul>
+<img alt="_images/ConfigurationZigate-2.png" src="_images/ConfigurationZigate-2.png" />
+<p>Information complémentaires PiZigate: <a class="reference internal" href="InstallationPiZiGate.html"><span class="doc">Installation PiZiGate</span></a>.</p>
+</div>
+<div class="section" id="ancienne-doc">
+<h1>Ancienne doc<a class="headerlink" href="#ancienne-doc" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="etape-1-zigate">
+<h2>Etape 1: Zigate<a class="headerlink" href="#etape-1-zigate" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La Zigate peut être connectée au port USB, par module Wifi ou sur le port GPIO d’un Raspberry Pi.</p>
+<p>Pour les utilisateurs très avertis, il existe des <a class="reference internal" href="Solutions.html"><span class="doc">Solutions Multiples et Distantes</span></a> plus complexes qui amène de la flexibilité que j’utilise personaellement.</p>
+<p>Pour la PiZiGate, des étapes spécifiques sont nécessaires, <a class="reference internal" href="InstallationPiZiGate.html"><span class="doc">Installation PiZiGate</span></a>.</p>
+<p>Le firmware supporté est le dernier publié avec un petit décalage le temps d’adapter Abeille dans cet entretemps c’est l’avant derniere version qui est supportée. Pour mettre a jour le <a class="reference internal" href="InstallationFirmware.html"><span class="doc">Installation Firmware</span></a>.</p>
+</div>
+<div class="section" id="etape-2-widget">
+<h2>Etape 2: Widget<a class="headerlink" href="#etape-2-widget" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’installation de Widget est une option permettant d’avoir un visuel plus joli.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Sur les dernières versions de Jeedom, il y a des problèmes de rafraichissement de widget.</p>
+</div>
+<p>Vous pouvez installer quelques widgets (officiels) pour que le rendu soit plus sympa</p>
+<ul class="simple">
+<li><p>baromètre pour le capteur Xiaomi Carré (dashboard.info.numeric.barometre )</p></li>
+<li><p>thermomètre pour les capteurs Xiaomi ronds et carrés (dashboard.info.numeric.tempIMG)</p></li>
+<li><p>humidité pour les capteurs Xiaomi ronds et carrés (dashboard.info.numeric.hydro3IMG)</p></li>
+</ul>
+<img alt="_images/Capture_d_ecran_2018_01_21_a_11_30_20.png" src="_images/Capture_d_ecran_2018_01_21_a_11_30_20.png" />
+</div>
+<div class="section" id="etape-3-reference">
+<h2>Etape 3: Référence<a class="headerlink" href="#etape-3-reference" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Créer un objet Jeedom pour retrouver rapidement et facilement les nouveaux équipements.</p>
+<img alt="_images/Capture_d_ecran_2018_01_21_a_10_53_59.png" src="_images/Capture_d_ecran_2018_01_21_a_10_53_59.png" />
+<img alt="_images/Capture_d_ecran_2018_01_21_a_10_54_13.png" src="_images/Capture_d_ecran_2018_01_21_a_10_54_13.png" />
+<p>Tous les nouveaux équipements seront attachés à cet objet.</p>
+</div>
 <div class="section" id="bidouilles">
-<h3>Bidouilles<a class="headerlink" href="#bidouilles" title="Lien permanent vers ce titre">¶</a></h3>
+<h2>Bidouilles<a class="headerlink" href="#bidouilles" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour écraser des « bidouilles » locales :</p>
 <div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -173,16 +174,6 @@ Rien de particulier, suivre la méthode de base de Jeedom</p>
 <span class="x">sudo git pull https://github.com/KiwiHC16/Abeille</span>
 </pre></div>
 </td></tr></table></div>
-</div>
-<div class="section" id="droits">
-<h3>Droits<a class="headerlink" href="#droits" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Pour appliquer les bons droits :</p>
-<div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">chmod -R 777 /var/www/html/plugins/Abeille</span>
-<span class="x">chown -R www-data:www-data /var/www/html/plugins/Abeille</span>
-</pre></div>
-</td></tr></table></div>
-</div>
 </div>
 </div>
 
@@ -208,31 +199,25 @@ Rien de particulier, suivre la méthode de base de Jeedom</p>
 <script>$('#searchbox').show(0);</script>
   <h3><a href="index.html">Table des matières</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Installation</a><ul>
-<li><a class="reference internal" href="#installation-standard">Installation Standard</a><ul>
+<li><a class="reference internal" href="#">Installation du plugin</a><ul>
+<li><a class="reference internal" href="#depuis-le-market">Depuis le market</a></li>
+<li><a class="reference internal" href="#alternative-depuis-github-via-jeedom">Alternative: Depuis GitHub via Jeedom</a></li>
+<li><a class="reference internal" href="#via-un-fichier-zip">Via un fichier Zip</a></li>
+<li><a class="reference internal" href="#via-git">Via Git</a></li>
+<li><a class="reference internal" href="#mise-a-jour-du-plugin">Mise a jour du plugin</a><ul>
+<li><a class="reference internal" href="#market">Market</a></li>
+<li><a class="reference internal" href="#github">Github</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#activation-du-plugin">Activation du plugin</a></li>
+<li><a class="reference internal" href="#configuration-d-une-ou-plusieurs-zigates">Configuration d’une ou plusieurs zigates</a></li>
+<li><a class="reference internal" href="#ancienne-doc">Ancienne doc</a><ul>
 <li><a class="reference internal" href="#etape-1-zigate">Etape 1: Zigate</a></li>
 <li><a class="reference internal" href="#etape-2-widget">Etape 2: Widget</a></li>
 <li><a class="reference internal" href="#etape-3-reference">Etape 3: Référence</a></li>
-<li><a class="reference internal" href="#etape-4-market">Etape 4: Market</a></li>
-<li><a class="reference internal" href="#etape-5-activation">Etape 5: Activation</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#avances">Avancés</a><ul>
-<li><a class="reference internal" href="#depuis-github">Depuis Github</a><ul>
-<li><a class="reference internal" href="#zip">Zip</a></li>
-<li><a class="reference internal" href="#git">Git</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#alternative">Alternative</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#mise-a-jour">Mise a jour</a><ul>
-<li><a class="reference internal" href="#market">Market</a></li>
-<li><a class="reference internal" href="#github">Github</a></li>
 <li><a class="reference internal" href="#bidouilles">Bidouilles</a></li>
-<li><a class="reference internal" href="#droits">Droits</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>

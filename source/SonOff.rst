@@ -116,3 +116,42 @@ Reveil
 
 Configurer
 ^^^^^^^^^^
+
+SonOff Relai
+------------
+
+Comme je ne trouvais pas de relai piloté par zigbee j'ai fait ma propre bidouille. Comme d'habitude comme c'est sur le 220V, je ne suis pas responsable de vos actes. Vous faites ces manipulations que si vous savez ce que vous faites. Je ne pourrai être tenu responsable.
+
+Vue d'ensemble du boitié:
+
+.. image:: images/IMG_2369.jpg
+
+Il faut ouvrir la bête, le relai est le boitier noir vers le haut de la photo: 
+
+.. image:: images/IMG_2370.jpg
+
+On peut voir les pistes épaisses sous le dessous, allant sur les pattes du relai:
+
+.. image:: images/IMG_2371.jpg
+
+Le relai lui même en 10A:
+
+.. image:: images/IMG_2372.jpg
+
+Les deux grosses pistes qu'il va falloir couper:
+
+.. image:: images/IMG_2373.jpg
+
+Au cuteur, découpe des deux pistes:
+
+.. image:: images/IMG_2375.jpg
+
+Mais en faite cela ne suffit pas il faut prendre la perceuse et passer au travers completement:
+
+.. image:: images/IMG_2376.jpg
+
+Souder un bout de cuivre entre la patte du relai et la piste extérieure:
+
+.. image:: images/IMG_2377.jpg
+
+Et le tour est joué.

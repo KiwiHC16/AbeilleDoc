@@ -50,15 +50,16 @@ Basé sur "https://doc.jeedom.com/fr_FR/dev/plugin_template".
 * **core** : Dossier contenant tous les fichiers de fonctionnement interne.
   Ne contient pas de fichiers gérant la partie "User Interface" donc pas d'html.
 
+  * **ajax** : dossier contenant les fichiers cibles d’appels AJAX.
+    Les fichiers de type AJAX doivent se finir par ".ajax.php".
   * **class** : dossier contenant la classe du plugin.
     Les fichiers de class php doivent obligatoirement se finir par ".class.php".
-  * **php** : dossier pouvant contenir des fonctions ne devant pas forcément appartenir à une classe (souvent utilisé pour permettre l’inclusion de multiples classes ou fichiers de configuration en une fois)
-    Toutes les librairies Abeille PHP.
   * **config** : Fichiers de configuration du plugin.
 
     * A DETAILLER
-  * **ajax** : dossier contenant les fichiers cibles d’appels AJAX.
-    Les fichiers de type AJAX doivent se finir par ".ajax.php".
+  * **php** : dossier pouvant contenir des fonctions ne devant pas forcément appartenir à une classe (souvent utilisé pour permettre l’inclusion de multiples classes ou fichiers de configuration en une fois)
+    Toutes les librairies Abeille PHP.
+  * **scripts** : Dossier contenant les scripts internes d'Abeille.
 * **desktop** : Dossier contenant la vue “bureau” du plugin (en opposition avec la vue “mobile”).
 
   * **js** : Dossier contenant tous les fichiers de type javascript.
@@ -89,7 +90,6 @@ Répertoires hors plugin
 Propositions à discuter
 
   * Network : a virer progressivement. Les fichiers devraient pouvoir trouver leur place dans "core", et/ou "desktop"/"mobile"
-  * Scripts : "resources/scripts" ou pourraient aller dans "core/scripts". Cette derniere possiblite est + en ligne avec la strucutre Jeedom.
   * resources/fw_zigate : FW zigate.
   * resources/fw_wifi : FW specific partie fw_wifi
   * Pas de partie "demond" : Tout comme "Network", il n'ya a pas de classification liée à une fonctionalité. Au vu des recherches, ca n'a pas vraiment de sens. Aucun plugin a isolé son "démon", sauf "openzwave" qui lui meme se base sur un code exterieur. Le format du template n'est jamais utilisé par les plugin officiels.

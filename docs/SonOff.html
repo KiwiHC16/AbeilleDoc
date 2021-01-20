@@ -97,8 +97,12 @@
 <ul class="simple">
 <li><p>Je ne parviens pas à le réveiller à l’aide du bouton lateral.</p></li>
 <li><p>Si pas configuré, l’inclure et le configurer immédiatement</p></li>
-<li><p>Une fois configuré, faire changer la temperature ou humidité (le mettre dans ses mains) et il doit se reveiller.</p></li>
+<li><p>Une fois configuré, faire changer la temperature ou humidité (le mettre dans ses mains, souffler dans l ouverture) et il doit se reveiller.</p></li>
 </ul>
+</div>
+<div class="section" id="recuperation">
+<h3>Recuperation<a class="headerlink" href="#recuperation" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Si par erreur il a ete supprimé de jeedom, avec le plugin en mode « Blocage des annonce: non, blocage des recuperations: non », sur un changement de temperature il doit être re-créé dans Abeille.</p>
 </div>
 <div class="section" id="id5">
 <h3>Configurer<a class="headerlink" href="#id5" title="Lien permanent vers ce titre">¶</a></h3>
@@ -146,6 +150,27 @@
 <h3>Configurer<a class="headerlink" href="#id15" title="Lien permanent vers ce titre">¶</a></h3>
 </div>
 </div>
+<div class="section" id="sonoff-relai">
+<h2>SonOff Relai<a class="headerlink" href="#sonoff-relai" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Comme je ne trouvais pas de relai piloté par zigbee j’ai fait ma propre bidouille. Comme d’habitude comme c’est sur le 220V, je ne suis pas responsable de vos actes. Vous faites ces manipulations que si vous savez ce que vous faites. Je ne pourrai être tenu responsable.</p>
+<p>Vue d’ensemble du boitié:</p>
+<img alt="_images/IMG_2369.jpg" src="_images/IMG_2369.jpg" />
+<p>Il faut ouvrir la bête, le relai est le boitier noir vers le haut de la photo:</p>
+<img alt="_images/IMG_2370.jpg" src="_images/IMG_2370.jpg" />
+<p>On peut voir les pistes épaisses sous le dessous, allant sur les pattes du relai:</p>
+<img alt="_images/IMG_2371.jpg" src="_images/IMG_2371.jpg" />
+<p>Le relai lui même en 10A:</p>
+<img alt="_images/IMG_2372.jpg" src="_images/IMG_2372.jpg" />
+<p>Les deux grosses pistes qu’il va falloir couper:</p>
+<img alt="_images/IMG_2373.jpg" src="_images/IMG_2373.jpg" />
+<p>Au cuteur, découpe des deux pistes:</p>
+<img alt="_images/IMG_2375.jpg" src="_images/IMG_2375.jpg" />
+<p>Mais en faite cela ne suffit pas il faut prendre la perceuse et passer au travers completement:</p>
+<img alt="_images/IMG_2376.jpg" src="_images/IMG_2376.jpg" />
+<p>Souder un bout de cuivre entre la patte du relai et la piste extérieure:</p>
+<img alt="_images/IMG_2377.jpg" src="_images/IMG_2377.jpg" />
+<p>Et le tour est joué.</p>
+</div>
 </div>
 
 
@@ -184,6 +209,7 @@
 <li><a class="reference internal" href="#id2">Inclusion</a></li>
 <li><a class="reference internal" href="#id3">Exclusion</a></li>
 <li><a class="reference internal" href="#id4">Reveil</a></li>
+<li><a class="reference internal" href="#recuperation">Recuperation</a></li>
 <li><a class="reference internal" href="#id5">Configurer</a></li>
 </ul>
 </li>
@@ -203,6 +229,7 @@
 <li><a class="reference internal" href="#id15">Configurer</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#sonoff-relai">SonOff Relai</a></li>
 </ul>
 </li>
 </ul>

@@ -1,13 +1,86 @@
 
 ######################
-Installation du plugin
+Installation standard
 ######################
 
-Depuis le market
-================
+L'installation standard du plugin se fait directement depuis le market (Plugins > Gestion des plugins > Market)
 
-Installation du plugin depuis le market.
-Rien de spécifique. Suivre la procédure classique et passez à l'activation du plugin.
+.. image:: images/InstallationMarket-1.png
+
+Dans la partie "Rechercher" entrez "Abeille"
+
+.. image:: images/InstallationMarket-2.png
+
+Et enfin lancez l'installation via le bouton "Installer stable"
+
+.. image:: images/InstallationMarket-3.png
+
+Une fois installé passez à l'activation du plugin.
+
+####################
+Activation du plugin
+####################
+
+Cette étape est independante de la methode d'installation du plugin (market, GitHub, direct Git repo) .
+Via la page de configuration du plugin, la première chose à faire est l'activer comme suit:
+
+.. image:: images/Installation-1.png
+
+Lancer l'installation des dépendances
+
+.. image:: images/Installation-2.png
+
+Enfin activer la gestion automatique des démons et les lancer.
+
+.. image:: images/Installation-3.png
+
+########################################
+Configuration d'une ou plusieurs zigates
+########################################
+
+'Abeille' supporte est dédié à la passerelle "Zigate" sous toutes ses formes (USB, Wifi, PIN ou DIN).
+Via la page de configuration il faut indiquer à Abeille comment acceder à la zigate.
+
+Etendre la zone "Zigates"
+
+.. image:: images/ConfigurationZigate-1.png
+
+Et configurez le port d'accès à la zigate.
+
+- Indiquez son type
+- Si type USB, PI ou DIN, indiquez sur quel port serie Abeille pourra communiquer avec la zigate. Si du type Wifi, il faudra remplir l'adresse IP.
+- Testez la communication. Le status OK, avec la version de firmware, devrait apparaitre en 4. Cette partie ne supporte pas le type Wifi actuellement.
+- Activez la zigate.
+- Sauvegardez. Ne pas oublier cette étape.
+
+.. image:: images/ConfigurationZigate-2.png
+
+Information complémentaires PiZigate: :doc:`InstallationPiZiGate`.
+
+######################
+Mise a jour du plugin
+######################
+
+Market
+------
+
+Mise à jour à partir du market
+Rien de particulier, suivre la méthode de base de Jeedom
+
+Github
+------
+
+Mise à jour à partir de github
+
+.. code-block:: php
+   :linenos:
+
+   cd /var/www/html/plugins/Abeille
+   sudo git pull https://github.com/KiwiHC16/Abeille
+
+######################
+Installations avancées
+######################
 
 Alternative: Depuis GitHub via Jeedom
 =====================================
@@ -60,67 +133,6 @@ Puis appliquer les bons droits :
 
    chmod -R 777 /var/www/html/plugins/Abeille
    chown -R www-data:www-data /var/www/html/plugins/Abeille
-
-Mise a jour du plugin
-=====================
-
-Market
-------
-
-Mise à jour à partir du market
-Rien de particulier, suivre la méthode de base de Jeedom
-
-Github
-------
-
-Mise à jour à partir de github
-
-.. code-block:: php
-   :linenos:
-
-   cd /var/www/html/plugins/Abeille
-   sudo git pull https://github.com/KiwiHC16/Abeille
-
-
-####################
-Activation du plugin
-####################
-
-Cette étape est independante de la methode d'installation du plugin (market, GitHub, direct Git repo) .
-Via la page de configuration du plugin, la première chose à faire est l'activer comme suit:
-
-.. image:: images/Installation-1.png
-
-Lancer l'installation des dépendances
-
-.. image:: images/Installation-2.png
-
-Enfin activer la gestion automatique des démons et les lancer.
-
-.. image:: images/Installation-3.png
-
-########################################
-Configuration d'une ou plusieurs zigates
-########################################
-
-'Abeille' supporte est dédié à la passerelle "Zigate" sous toutes ses formes (USB, Wifi, PIN ou DIN).
-Via la page de configuration il faut indiquer à Abeille comment acceder à la zigate.
-
-Etendre la zone "Zigates"
-
-.. image:: images/ConfigurationZigate-1.png
-
-Et configurez le port d'accès à la zigate.
-
-- Indiquez son type
-- Si type USB, PI ou DIN, indiquez sur quel port serie Abeille pourra communiquer avec la zigate. Si du type Wifi, il faudra remplir l'adresse IP.
-- Testez la communication. Le status OK, avec la version de firmware, devrait apparaitre en 4. Cette partie ne supporte pas le type Wifi actuellement.
-- Activez la zigate.
-- Sauvegardez. Ne pas oublier cette étape.
-
-.. image:: images/ConfigurationZigate-2.png
-
-Information complémentaires PiZigate: :doc:`InstallationPiZiGate`.
 
 ############
 Ancienne doc

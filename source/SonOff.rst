@@ -69,6 +69,11 @@ Reveil
 - Si pas configuré, l'inclure et le configurer immédiatement
 - Une fois configuré, faire changer la temperature ou humidité (le mettre dans ses mains) et il doit se reveiller.
 
+Recuperation
+^^^^^^^^^^^^
+
+Si par erreur il a ete supprimé de jeedom, avec le plugin en mode "Blocage des annonce: non, blocage des recuperations: non", sur un changement de temperature il doit être re-créé dans Abeille.
+
 Configurer
 ^^^^^^^^^^
 

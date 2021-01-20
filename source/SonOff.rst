@@ -67,7 +67,7 @@ Reveil
 
 - Je ne parviens pas à le réveiller à l'aide du bouton lateral.
 - Si pas configuré, l'inclure et le configurer immédiatement
-- Une fois configuré, faire changer la temperature ou humidité (le mettre dans ses mains) et il doit se reveiller.
+- Une fois configuré, faire changer la temperature ou humidité (le mettre dans ses mains, souffler dans l ouverture) et il doit se reveiller.
 
 Recuperation
 ^^^^^^^^^^^^

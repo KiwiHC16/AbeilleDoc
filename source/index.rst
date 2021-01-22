@@ -106,6 +106,11 @@ Liste des équipements compatibles :doc:`listeCompatibilite`
 :doc:`Eurotronics`
 -----------
 
+Danfoss
+-------
+
+Ce chapitre regroupe les informations sur les équipements :doc:`Danfoss`
+
 Heiman
 ------
 
@@ -240,4 +245,3 @@ HW
 --
 
 Quelques informations sur la partie :doc:`HW`.
-

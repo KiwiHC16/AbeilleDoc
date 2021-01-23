@@ -122,8 +122,8 @@ Reveil
 Configurer
 ^^^^^^^^^^
 
-SonOff Relai
-------------
+SonOff BASICZBR3: Module 10A
+----------------------------
 
 Comme je ne trouvais pas de relai piloté par zigbee j'ai fait ma propre bidouille. Comme d'habitude comme c'est sur le 220V, je ne suis pas responsable de vos actes. Vous faites ces manipulations que si vous savez ce que vous faites. Je ne pourrai être tenu responsable.
 
@@ -160,3 +160,5 @@ Souder un bout de cuivre entre la patte du relai et la piste extérieure:
 .. image:: images/IMG_2377.jpg
 
 Et le tour est joué.
+
+Note: lors du retablissement du courant, suite à une coupure de secteur par exemple, le module se souvient de son état initial et reposition le relai dans cet état.   

@@ -18,34 +18,39 @@ Premiere mise sous tension
 * Un appui court sur le bouton proche écran
 * L'inclusion doit se faire et vous devez voir Ally dans la liste des équipements
 
+Observations
+------------
+
+* Test fait sur canal 15.
+* Répond dans les 7s à  un getName ou getEP.
+* Affichage éteint par défaut.
+
 inclusion
 ---------
+
+https://github.com/KiwiHC16/AbeilleDoc/blob/master/docs/products/eTRV0100/AN235786405824en-010101.pdf
+
+
 
 Fonctions
 ---------
 
 Fonctionne:
- * On
- * Off
- * Toggle
- * Lecture etat On/Off
- * Retour état automatique On/Off (Bind On/Off, Report On/Off).
-
-  * Sur appui bouton poussoir du boitier l'etat remonte. Le bouton provoque un toggle ( <= Bouton Poussoir).
-  * Sur changement etat commandé depuis la ZiGate, il ne rapporte pas son état ! Heureusement Abeille demande !!!
-
- * Groupe
- * Scene (Devrait être ok d apres retour utilisateur)
- * Routeur (elle diffuse les Link Status)
+ * Définition de la consigne de temperature de chauffage (Consigne)
+ * Lecture de la consigne de temperature de chauffage (Consigne)
+ * Lecture de la température ambiante
+ * Lecture du mode en cours (D apres la norme: 00: Off, 01: Auto, 03: Cool, 04: Heat, 05: Emergency Heating, 06: Pre Cooling, 07: Fan Onl )
+ * Lecture Batterie pourcentage
+ * Lecture Batterie voltage
+ * Lecture Mode Affichage (D apres norme: 00: Temperature en °C, 01: Temperature en °F)
+ * Definition du Mode d affichage (mais la tete refuse le mode °F)
+ * Lecture Key Lock (D apres norme: 00: No Lockout, 01: Level 1 Lockout, 02: Level 2, 03: Level 3, 04: Level 4, 05: Level 5 (le moins de fonctionalité pour l utilisateur))
+ * Definition du niveau de Lockout (1 à 5): il n accepte que les valeurs 0 et 1. A 1 on ne peut pas modifier la temperature en tournant la molette. A 0 oui.
 
 Pas supporté:
- * Level (C'est normal le module contient un relai et ne contient pas le cluster level).
- * Puissance (Pas dans le module)
- * Consommation (Pas dans le module)
+ *
 
 En cours d investigation:
 
 
-.. a noter:: Cependant, il y a un point à soulever. Une fois en position ON, l’application remonte une consommation de 50W … pourtant, côté sniffer, aucune trame ZigBee ne remonte cette information… alors je ne sais vraiment pas d’où ils sortent cette donnée.
-
-.. a noter:: Pour les 50W de consommation de la lampe dans l aplpli Legrand, c’est dans les parametres, pas de mesure, juste une valeur (estimée) a rentrer, par defaut 50W.
+.. a noter:: Cependa

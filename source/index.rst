@@ -136,6 +136,11 @@ Livolo
 
 Ce chapitre regroupe les informations sur les équipements :doc:`Livolo`
 
+OnOffController
+---------------
+
+Ce chapitre regroupe les informations sur les équipements :doc:`OnOffController`
+
 Osram
 -----
 

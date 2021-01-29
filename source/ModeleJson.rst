@@ -155,6 +155,7 @@ Definition commandes
   "Polling": "No", cron -> toutes les minutes, cron15 -> toutes les 15 minutes, cronHourly -> 1 h, cronDaily Daily
   "PollingOnCmdChange": "No", / "PollingOnCmdChange": "0006-01-0000",
   "PollingOnCmdChangeDelay": 1, en secondes
+  "RefreshData" : 1 / 0 - Executer cette commande pour rafraichir la valeur associée.
 
 Explications:
 

@@ -91,9 +91,9 @@ html_theme = 'alabaster'
 # html_theme_options = {}
 html_theme_options = {
     # 'prev_next_buttons_location': 'both',
-    'collapse_navigation': True,
+    #'collapse_navigation': True,
     # 'fixed_sidebar': True,
-    'sidebar_collapse': True,
+    # 'sidebar_collapse': True,
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,

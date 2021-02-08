@@ -111,6 +111,11 @@ Danfoss
 
 Ce chapitre regroupe les informations sur les équipements :doc:`Danfoss`
 
+DIY
+---
+
+Ce chapitre regroupe les informations sur les équipements :doc:`DIY`
+
 Heiman
 ------
 

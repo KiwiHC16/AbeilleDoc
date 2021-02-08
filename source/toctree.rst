@@ -25,6 +25,7 @@ Table des matieres complete
    InstallationFirmware
    Installation
    Danfoss
+   DIY
    Legrand
    Konke
    listeCompatibilite

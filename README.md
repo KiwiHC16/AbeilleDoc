@@ -16,7 +16,8 @@ A noter:
 - ./gen_docs.sh (Linux/MinGW): contient des ^M a virer avec dos2unix -n gen_docs.sh gen_docs_u.sh
 - ./gen_docs.sh (Linux/MinGW): chmod u+x ./gen_docs.sh
 - Installation de Sphinx: https://www.sphinx-doc.org/en/master/usage/installation.html
-    - apt-get install python3-sphinx
+    - apt-get install python3-sphinx -> erreur stemmer
+    - apt-get install python-sphinx
 
 Structure des repertoires
 

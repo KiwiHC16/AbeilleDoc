@@ -12,6 +12,10 @@ Mise à jour de la doc
 
 Une fois intégrée la mise-à-jour est visualisable directement via https://kiwihc16.github.io/AbeilleDoc/
 
+A noter:
+- ./gen_docs.sh (Linux/MinGW): contient des ^M a virer avec dos2unix -n gen_docs.sh gen_docs_u.sh
+- ./gen_docs.sh (Linux/MinGW): chmod u+x ./gen_docs.sh
+
 Structure des repertoires
 
 - docs

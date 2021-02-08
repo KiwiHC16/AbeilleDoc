@@ -1,35 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<!DOCTYPE html>
 
-<html lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Philips Hue &#8212; Documentation Abeille 08.12.2020</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Philips Hue &#8212; documentation Abeille 08.12.2020</title>
+    
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '08.12.2020',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
+    <link rel="top" title="documentation Abeille 08.12.2020" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
-  
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head><body>
+  </head>
+  <body role="document">
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          
-
           <div class="body" role="main">
             
   <div class="section" id="philips-hue">
@@ -40,11 +49,12 @@
 <div class="section" id="nouvelle-inclusion">
 <h3>Nouvelle inclusion<a class="headerlink" href="#nouvelle-inclusion" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li><p>Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter…</p></li>
-<li><dl class="simple">
-<dt>Avec une ampoule neuve Hue White</dt><dd><ul>
-<li><p>Allumer l’ampoule, elle s’associe et envoie des messages « annonce » mais pas son nom.</p></li>
-<li><p>Si vous faites un getName avec son adresse courte dans le champ Titre et 0B (destinationEndPoint) dans le champ Message, alors elle doit répondre avec son nom, ce qui va créer l’objet dans Jeedom.</p></li>
+<li>Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter...</li>
+<li><dl class="first docutils">
+<dt>Avec une ampoule neuve Hue White</dt>
+<dd><ul class="first last">
+<li>Allumer l&#8217;ampoule, elle s&#8217;associe et envoie des messages &#8220;annonce&#8221; mais pas son nom.</li>
+<li>Si vous faites un getName avec son adresse courte dans le champ Titre et 0B (destinationEndPoint) dans le champ Message, alors elle doit répondre avec son nom, ce qui va créer l&#8217;objet dans Jeedom.</li>
 </ul>
 </dd>
 </dl>
@@ -54,17 +64,17 @@
 <div class="section" id="deja-inclue">
 <h3>Déjà inclue<a class="headerlink" href="#deja-inclue" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li><p>Zigate en fonctionnement normale</p></li>
-<li><p>Éteindre l’ampoule 15s puis la rallumer</p></li>
+<li>Zigate en fonctionnement normale</li>
+<li>Éteindre l&#8217;ampoule 15s puis la rallumer</li>
 </ul>
 </div>
 <div class="section" id="deja-inclue-2">
 <h3>Déjà inclue 2<a class="headerlink" href="#deja-inclue-2" title="Lien permanent vers ce titre">¶</a></h3>
 <p>préalablement sur un autre réseau Zigbee</p>
 <ul class="simple">
-<li><p>Zigate en fonctionnement normale</p></li>
-<li><p>Avec une Télécommande Hue, Bouton « I » et « 0 », pour remettre d’usine l’ampoule.</p></li>
-<li><p>Faire une inclusion standard.</p></li>
+<li>Zigate en fonctionnement normale</li>
+<li>Avec une Télécommande Hue, Bouton &#8220;I&#8221; et &#8220;0&#8221;, pour remettre d&#8217;usine l&#8217;ampoule.</li>
+<li>Faire une inclusion standard.</li>
 </ul>
 </div>
 </div>
@@ -74,16 +84,16 @@
 <div class="section" id="id1">
 <h3>Nouvelle inclusion<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li><p>Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter…</p></li>
-<li><p>Appui très long sur le bouton arrière de l’ampoule plus de 40s, un objet doit apparaître dans Jeedom.</p></li>
+<li>Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter...</li>
+<li>Appui très long sur le bouton arrière de l&#8217;ampoule plus de 40s, un objet doit apparaître dans Jeedom.</li>
 </ul>
 </div>
 <div class="section" id="id2">
 <h3>Déjà inclue<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li><p>Zigate en fonctionnement normale</p></li>
-<li><p>Appui très long sur le bouton arrière de l’ampoule plus de 40s</p></li>
-<li><p>La lampe se met à flasher. Elle s’est déconnectée du réseau.</p></li>
+<li>Zigate en fonctionnement normale</li>
+<li>Appui très long sur le bouton arrière de l&#8217;ampoule plus de 40s</li>
+<li>La lampe se met à flasher. Elle s&#8217;est déconnectée du réseau.</li>
 </ul>
 </div>
 </div>
@@ -91,29 +101,29 @@
 <h2>Dimmer<a class="headerlink" href="#dimmer" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Philips Hue Dimmer Switch (Télécommande)</p>
 <ul class="simple">
-<li><p>Elle permet de faire une reset touchlink d’une ampoule Ikea</p></li>
-<li><p>elle peut fonctionner seule avec une ampoule (TouchLink): On/Off/+/-</p></li>
-<li><p>elle peut s’inclure dans le réseau zigate</p></li>
-<li><p>Abeille peut la configurer pour qu’elle envoie l’information du bouton appuyé. Abeille peut utiliser cette info dans un scénario par exemple.</p></li>
-<li><p>Je ne sais pas comment faire en sorte qu’elle commande une ampoule en direct</p></li>
+<li>Elle permet de faire une reset touchlink d&#8217;une ampoule Ikea</li>
+<li>elle peut fonctionner seule avec une ampoule (TouchLink): On/Off/+/-</li>
+<li>elle peut s&#8217;inclure dans le réseau zigate</li>
+<li>Abeille peut la configurer pour qu&#8217;elle envoie l&#8217;information du bouton appuyé. Abeille peut utiliser cette info dans un scénario par exemple.</li>
+<li>Je ne sais pas comment faire en sorte qu&#8217;elle commande une ampoule en direct</li>
 </ul>
 <div class="section" id="id3">
 <h3>Nouvelle inclusion<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li><p>Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter…</p></li>
-<li><p>Appui avec un trombone 5x sur le bouton « setup » en face arrière. Un objet télécommande doit être créé dans Abeille.</p></li>
+<li>Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter...</li>
+<li>Appui avec un trombone 5x sur le bouton &#8220;setup&#8221; en face arrière. Un objet télécommande doit être créé dans Abeille.</li>
 </ul>
 </div>
 <div class="section" id="groupe">
 <h3>Groupe<a class="headerlink" href="#groupe" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Récupérer le groupe utilisé</p>
 <ul class="simple">
-<li><p>Approcher la télécommande d’une ampoule de test qui est sur le réseau.</p></li>
-<li><p>Faire un appui long &gt;10s sur le I de la télécommande.</p></li>
-<li><p>Attendre le clignotement de l’ampoule.</p></li>
-<li><p>Si vous appuyez sur I ou O, elle doit s’allumer et s’éteindre.</p></li>
-<li><p>Et les bouton lumière plus et moins doivent changer l’intensité.</p></li>
-<li><p>Ensuite vous pouvez récupérer le groupe en interrogeant l’ampoule depuis la ruche avec un getGroupMembership.</p></li>
+<li>Approcher la télécommande d&#8217;une ampoule de test qui est sur le réseau.</li>
+<li>Faire un appui long &gt;10s sur le I de la télécommande.</li>
+<li>Attendre le clignotement de l&#8217;ampoule.</li>
+<li>Si vous appuyez sur I ou O, elle doit s&#8217;allumer et s&#8217;éteindre.</li>
+<li>Et les bouton lumière plus et moins doivent changer l&#8217;intensité.</li>
+<li>Ensuite vous pouvez récupérer le groupe en interrogeant l&#8217;ampoule depuis la ruche avec un getGroupMembership.</li>
 </ul>
 </div>
 <div class="section" id="reset">
@@ -121,58 +131,61 @@
 <p>Reset d une ampoule</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Appuyer sur I et O en même temps à moins de quelques centimètres d’une ampoule</p></li>
-<li><p>L’ampoule doit faire un reset et essayer de joindre un réseau.</p></li>
-<li><p>Si la Zigate est en mode inclusion alors vous récupérez votre ampoule.</p></li>
+<li>Appuyer sur I et O en même temps à moins de quelques centimètres d&#8217;une ampoule</li>
+<li>L&#8217;ampoule doit faire un reset et essayer de joindre un réseau.</li>
+<li>Si la Zigate est en mode inclusion alors vous récupérez votre ampoule.</li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="informations">
 <h3>Informations<a class="headerlink" href="#informations" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Informations supplémentaires</p>
-<p>Dans l’objet Abeille vous allez trouver:</p>
+<p>Dans l&#8217;objet Abeille vous allez trouver:</p>
 <ul class="simple">
-<li><dl class="simple">
-<dt>8 informations. 4 boutons x 2 infos (événement, durée)</dt><dd><ul>
-<li><p>Ce sont les informations qui remontent de la télécommande quand vous l’utilisez.</p></li>
-<li><p>Cela permet à Jeedom de savoir qu’un bouton a été utilisé et vous pouvez créer les scénario que vous voulez.</p></li>
+<li><dl class="first docutils">
+<dt>8 informations. 4 boutons x 2 infos (événement, durée)</dt>
+<dd><ul class="first last">
+<li>Ce sont les informations qui remontent de la télécommande quand vous l&#8217;utilisez.</li>
+<li>Cela permet à Jeedom de savoir qu&#8217;un bouton a été utilisé et vous pouvez créer les scénario que vous voulez.</li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p>4 Boutons: « I », « LumPlus », « LumMoins », « O ».</p></li>
-<li><p>4 types events: « Appui Court = 0 », « Appui Long = 1 », « Relâche appui court = 3 », « Relâche Appui Long = 4 »</p></li>
-<li><p>Durée, indique le temps d’appui d’un bouton (Il n’y pas de temps de nom appui).</p></li>
+<li>4 Boutons: &#8220;I&#8221;, &#8220;LumPlus&#8221;, &#8220;LumMoins&#8221;, &#8220;O&#8221;.</li>
+<li>4 types events: &#8220;Appui Court = 0&#8221;, &#8220;Appui Long = 1&#8221;, &#8220;Relâche appui court = 3&#8221;, &#8220;Relâche Appui Long = 4&#8221;</li>
+<li>Durée, indique le temps d&#8217;appui d&#8217;un bouton (Il n&#8217;y pas de temps de nom appui).</li>
 </ul>
 <ul class="simple">
-<li><p>00 appui</p></li>
-<li><p>01 appui maintenu</p></li>
-<li><p>02 relâche sur appui court</p></li>
-<li><p>03 relâche sur appui long</p></li>
+<li>00 appui</li>
+<li>01 appui maintenu</li>
+<li>02 relâche sur appui court</li>
+<li>03 relâche sur appui long</li>
 </ul>
 <ul class="simple">
-<li><p>5 icônes (On,Off,Toggle,Lumière plus, Lumière moins) pour simuler la télécommande depuis Jeedom.</p></li>
+<li>5 icônes (On,Off,Toggle,Lumière plus, Lumière moins) pour simuler la télécommande depuis Jeedom.</li>
 </ul>
-<p>C’est Jeedom qui envoie les commandes à la place de la télécommande. Pour se faire renseigner le champ « Groupe » dans la configuration.</p>
+<p>C&#8217;est Jeedom qui envoie les commandes à la place de la télécommande. Pour se faire renseigner le champ &#8220;Groupe&#8221; dans la configuration.</p>
 </div>
 </div>
 <div class="section" id="prise">
 <h2>Prise<a class="headerlink" href="#prise" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Prise de contrôle d’une ampoule</p>
+<p>Prise de contrôle d&#8217;une ampoule</p>
 <ul class="simple">
-<li><dl class="simple">
-<dt>Ampoule Hue White et télécommande déjà associées au réseau :</dt><dd><ul>
-<li><p>Mettre la télécommande proche de l ampoule et appuyer sur « I » assez longtemps.</p></li>
-<li><p>L’ampoule clignote et est configurée.</p></li>
-<li><p>Après l’ampoule est pilotable par la télécommande. On peut récupérer le groupe utilisé sur l’ampoule dans Jeedom.</p></li>
+<li><dl class="first docutils">
+<dt>Ampoule Hue White et télécommande déjà associées au réseau :</dt>
+<dd><ul class="first last">
+<li>Mettre la télécommande proche de l ampoule et appuyer sur &#8220;I&#8221; assez longtemps.</li>
+<li>L&#8217;ampoule clignote et est configurée.</li>
+<li>Après l&#8217;ampoule est pilotable par la télécommande. On peut récupérer le groupe utilisé sur l&#8217;ampoule dans Jeedom.</li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="simple">
-<dt>Ampoule Ikea et télécommande déjà associées au réseau :</dt><dd><ul>
-<li><p>La configuration depuis la télécommande et le bouton “I” ne fonctionne pas comme avec l’ampoule Hue.</p></li>
-<li><p>Mais si on récupère le groupe comme indiqué au paragraphe précédent et qu’on défini ce groupe dans l’ampoule Ikea, alors l’ampoule répond aux commandes de la télécommande.</p></li>
+<li><dl class="first docutils">
+<dt>Ampoule Ikea et télécommande déjà associées au réseau :</dt>
+<dd><ul class="first last">
+<li>La configuration depuis la télécommande et le bouton &#8216;I&#8217; ne fonctionne pas comme avec l&#8217;ampoule Hue.</li>
+<li>Mais si on récupère le groupe comme indiqué au paragraphe précédent et qu&#8217;on défini ce groupe dans l&#8217;ampoule Ikea, alors l&#8217;ampoule répond aux commandes de la télécommande.</li>
 </ul>
 </dd>
 </dl>
@@ -183,7 +196,7 @@
 <h2>Motion Sensor Indoor<a class="headerlink" href="#motion-sensor-indoor" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="inclusion">
 <h3>Inclusion<a class="headerlink" href="#inclusion" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Mettre la zigate en inclusion, puis un appui sur le bouton « setup » et l’objet doit se créer dans Abeille.</p>
+<p>Mettre la zigate en inclusion, puis un appui sur le bouton &#8220;setup&#8221; et l&#8217;objet doit se créer dans Abeille.</p>
 </div>
 <div class="section" id="presence">
 <h3>Présence<a class="headerlink" href="#presence" title="Lien permanent vers ce titre">¶</a></h3>
@@ -191,8 +204,8 @@
 </div>
 <div class="section" id="luminosite">
 <h3>Luminosité<a class="headerlink" href="#luminosite" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Le capteur remonte régulièrement la luminosité mesurée. Cela vous permet par exemple de faire de scénario en fonction du jour et de la nuit, vérifier que des lumières sont allumées dans une pièce,…
-Voir aussi <a class="reference external" href="https://en.wikipedia.org/wiki/Lux">https://en.wikipedia.org/wiki/Lux</a> pour avoir une idée de l’intensité lumineuse, une table fournie des indications interessante.</p>
+<p>Le capteur remonte régulièrement la luminosité mesurée. Cela vous permet par exemple de faire de scénario en fonction du jour et de la nuit, vérifier que des lumières sont allumées dans une pièce,...
+Voir aussi <a class="reference external" href="https://en.wikipedia.org/wiki/Lux">https://en.wikipedia.org/wiki/Lux</a> pour avoir une idée de l&#8217;intensité lumineuse, une table fournie des indications interessante.</p>
 </div>
 </div>
 <div class="section" id="temperature">
@@ -215,7 +228,6 @@ Voir aussi <a class="reference external" href="https://en.wikipedia.org/wiki/Lux
 
 
           </div>
-          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -224,16 +236,16 @@ Voir aussi <a class="reference external" href="https://en.wikipedia.org/wiki/Lux
               <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
             </a></p>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Recherche rapide</h3>
-    <div class="searchformwrapper">
+  <h3>Recherche rapide</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
-    </div>
 </div>
-<script>$('#searchbox').show(0);</script>
-  <h3><a href="index.html">Table des matières</a></h3>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+  <h3><a href="index.html">Table des Matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Philips Hue</a><ul>
 <li><a class="reference internal" href="#ampoule-1">Ampoule 1</a><ul>
@@ -280,8 +292,8 @@ Voir aussi <a class="reference external" href="https://en.wikipedia.org/wiki/Lux
       &copy;2019-20, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.9</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
       
     </div>
 

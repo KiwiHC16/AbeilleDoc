@@ -1,44 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<!DOCTYPE html>
 
-<html lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Solutions Multiples et Distantes &#8212; Documentation Abeille 08.12.2020</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Solutions Multiples et Distantes &#8212; documentation Abeille 08.12.2020</title>
+    
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '08.12.2020',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
+    <link rel="top" title="documentation Abeille 08.12.2020" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
-  
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head><body>
+  </head>
+  <body role="document">
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          
-
           <div class="body" role="main">
             
   <div class="section" id="solutions-multiples-et-distantes">
 <h1>Solutions Multiples et Distantes<a class="headerlink" href="#solutions-multiples-et-distantes" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Depuis decembre 2019, Abeille supporte le MultiZigate.
-L’idée est que vous pouvez connecter plusieurs ZiGate sur une même Abeille sur un unique Jeedom.
+L&#8217;idée est que vous pouvez connecter plusieurs ZiGate sur une même Abeille sur un unique Jeedom.
 Bien sûr vous pouvez toujours utiliser le plugin JeeLink qui est très performant. Mais si comme moi vous avez un gros système avec de multiple zigate, la solution JeeLink devient lourde à gérer quand vous avez de nobreux changements.</p>
 <p>Et comme dit Soyann:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Les raisons peuvent être multiples: deux zones à couvrir sans routeurs entre les deux,
+<div class="highlight-default"><div class="highlight"><pre><span></span>Les raisons peuvent être multiples: deux zones à couvrir sans routeurs entre les deux,
 trop d’équipements pour une seule passerelle, différents équipements qui dialoguent mal
 ensemble (ex: prises Osram avec capteurs Xiaomi)… ou alors (comme dans mon cas),
 faire de la sécurité: j’ai chez moi une deuxième Zigate à l’opposé de la maison pour que
@@ -51,46 +60,46 @@ passer de la VM sur ma Delta juste pour ça (avec Jeedom Link), par contre, ça 
 dire que je vais devoir investir dans un module Wifi
 </pre></div>
 </div>
-<p>Perso mon systeme tourne sur un serveur dans une VM, les connections physiques (port USB n’existent pas). Il existe la solution Wifi qui est très flexible mais peut dans certaines conditions ne pas être très stable. Mais j’ai des RPI cablés en ethernet dans la maison alors pourquoi ne pas les utiliser !!!</p>
-<p>L’idée est de connecter une ZiGate USB sur un port USB d’un RPI connecté en ethernet. En gros la conf est</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ZiGate</span> <span class="n">USB</span> <span class="o">&lt;-&gt;</span> <span class="n">Port</span> <span class="n">USB</span> <span class="o">&lt;-&gt;</span> <span class="n">RPI</span> <span class="o">&lt;-&gt;</span> <span class="n">ser2net</span> <span class="o">&lt;-&gt;</span> <span class="n">ethernet</span> <span class="o">&lt;-&gt;</span> <span class="n">socat</span> <span class="o">&lt;-&gt;</span> <span class="n">Abeille</span> <span class="o">&lt;-&gt;</span> <span class="n">Jeedom</span>
+<p>Perso mon systeme tourne sur un serveur dans une VM, les connections physiques (port USB n&#8217;existent pas). Il existe la solution Wifi qui est très flexible mais peut dans certaines conditions ne pas être très stable. Mais j&#8217;ai des RPI cablés en ethernet dans la maison alors pourquoi ne pas les utiliser !!!</p>
+<p>L&#8217;idée est de connecter une ZiGate USB sur un port USB d&#8217;un RPI connecté en ethernet. En gros la conf est</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ZiGate</span> <span class="n">USB</span> <span class="o">&lt;-&gt;</span> <span class="n">Port</span> <span class="n">USB</span> <span class="o">&lt;-&gt;</span> <span class="n">RPI</span> <span class="o">&lt;-&gt;</span> <span class="n">ser2net</span> <span class="o">&lt;-&gt;</span> <span class="n">ethernet</span> <span class="o">&lt;-&gt;</span> <span class="n">socat</span> <span class="o">&lt;-&gt;</span> <span class="n">Abeille</span> <span class="o">&lt;-&gt;</span> <span class="n">Jeedom</span>
 </pre></div>
 </div>
 <p>Pour ce faire dans la conf abeille il est proposé les ports monitZigate de 1 à 5.</p>
 <p>Pour mettre en place la configuration:</p>
 <p>Sur le RPI accueillant la Zigate:</p>
 <p>Installation de ser2net:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ser2net</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ser2net</span>
 </pre></div>
 </div>
 <p>Dans le fichier /etc/ser2net.conf mettre à la fin:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3336</span><span class="p">:</span><span class="n">raw</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyUSB5</span><span class="p">:</span><span class="mi">115200</span> <span class="mi">8</span><span class="n">DATABITS</span> <span class="n">NONE</span> <span class="mi">1</span><span class="n">STOPBIT</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">3336</span><span class="p">:</span><span class="n">raw</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyUSB5</span><span class="p">:</span><span class="mi">115200</span> <span class="mi">8</span><span class="n">DATABITS</span> <span class="n">NONE</span> <span class="mi">1</span><span class="n">STOPBIT</span>
 </pre></div>
 </div>
 <p>Evidement choisir le bon port serie.</p>
 <p>Après pour les plus fous vous pouvez comme moi déporter un dongle Zwave, RFXCom et SMS</p>
 <p>Pour un dongle Zwave:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3333</span><span class="p">:</span><span class="n">raw</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyACM0</span><span class="p">:</span><span class="mi">115200</span> <span class="mi">8</span><span class="n">DATABITS</span> <span class="n">NONE</span> <span class="mi">1</span><span class="n">STOPBIT</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">3333</span><span class="p">:</span><span class="n">raw</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyACM0</span><span class="p">:</span><span class="mi">115200</span> <span class="mi">8</span><span class="n">DATABITS</span> <span class="n">NONE</span> <span class="mi">1</span><span class="n">STOPBIT</span>
 </pre></div>
 </div>
 <p>Pour un dongle RFXCom:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3334</span><span class="p">:</span><span class="n">raw</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyUSB0</span><span class="p">:</span><span class="mi">38400</span> <span class="mi">8</span><span class="n">DATABITS</span> <span class="n">NONE</span> <span class="mi">1</span><span class="n">STOPBIT</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">3334</span><span class="p">:</span><span class="n">raw</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyUSB0</span><span class="p">:</span><span class="mi">38400</span> <span class="mi">8</span><span class="n">DATABITS</span> <span class="n">NONE</span> <span class="mi">1</span><span class="n">STOPBIT</span>
 </pre></div>
 </div>
 <p>Pour un dongle SMS:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3335</span><span class="p">:</span><span class="n">raw</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyUSB1</span><span class="p">:</span><span class="mi">115200</span> <span class="mi">8</span><span class="n">DATABITS</span> <span class="n">NONE</span> <span class="mi">1</span><span class="n">STOPBIT</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">3335</span><span class="p">:</span><span class="n">raw</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyUSB1</span><span class="p">:</span><span class="mi">115200</span> <span class="mi">8</span><span class="n">DATABITS</span> <span class="n">NONE</span> <span class="mi">1</span><span class="n">STOPBIT</span>
 </pre></div>
 </div>
 <p>Puis démarrer le service:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">ser2net</span> <span class="n">start</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">ser2net</span> <span class="n">start</span>
 </pre></div>
 </div>
-<p>Maintenant sur le jeedom, j’utilise monit pour maintenir la connection. Ici je ne couvre que le cas Zigate mais vous pouvez faire de meme pour le dongle Zwave, SMS et RFXCom:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">monit</span>
+<p>Maintenant sur le jeedom, j&#8217;utilise monit pour maintenir la connection. Ici je ne couvre que le cas Zigate mais vous pouvez faire de meme pour le dongle Zwave, SMS et RFXCom:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">monit</span>
 </pre></div>
 </div>
 <p>Editez le fichier de conf de monit en ouvrant le serveur monit et en ajoutant la connection Zigate:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">monit</span><span class="o">/</span><span class="n">monitrc</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">monit</span><span class="o">/</span><span class="n">monitrc</span>
 
 <span class="nb">set</span> <span class="n">httpd</span> <span class="n">port</span> <span class="mi">2812</span>
 <span class="n">allow</span> <span class="n">myuser</span><span class="p">:</span><span class="n">mypassword</span>
@@ -103,25 +112,25 @@ dire que je vais devoir investir dans un module Wifi
 </div>
 <p>Ensuite il faut créer 4 fichiers:</p>
 <p>fichier /root/monit_zigate_status.sh:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/sh
+<div class="highlight-default"><div class="highlight"><pre><span></span>#!/bin/sh
 ps -ef | grep &quot;/usr/bin/socat pty,raw,echo=0,waitslave,link=/dev/monitZigate1&quot; | grep -v grep
 exit $?
 </pre></div>
 </div>
 <p>fichier /root/monit_zigate_start.sh:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/sh
+<div class="highlight-default"><div class="highlight"><pre><span></span>#!/bin/sh
 /usr/bin/nohup /root/monit_zigate_process.sh &amp;
 exit $?
 </pre></div>
 </div>
 <p>fichier /root/monit_zigate_stop.sh:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/sh
+<div class="highlight-default"><div class="highlight"><pre><span></span>#!/bin/sh
 kill `ps -ef | grep &quot;/usr/bin/socat pty,raw,echo=0,waitslave,link=/dev/monitZigate1&quot; | grep -v grep | awk &#39;{ print $2 }&#39;`
 exit $?
 </pre></div>
 </div>
 <p>fichier /root/monit_zigate_process.sh:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/sh
+<div class="highlight-default"><div class="highlight"><pre><span></span>#!/bin/sh
 while true
   do
     /usr/bin/nohup /usr/bin/socat pty,raw,echo=0,waitslave,link=/dev/monitZigate1  tcp:_RPI_IP_:3336
@@ -131,12 +140,11 @@ while true
 exit $?
 </pre></div>
 </div>
-<p>Ensuite dans la configuration Abeille il faut choisir le port Monit (de 1 à 5) que vous avez defini ci dessus. par ex: Monit1 pour /dev/monitZigate1, etc…</p>
+<p>Ensuite dans la configuration Abeille il faut choisir le port Monit (de 1 à 5) que vous avez defini ci dessus. par ex: Monit1 pour /dev/monitZigate1, etc...</p>
 </div>
 
 
           </div>
-          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -145,15 +153,15 @@ exit $?
               <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
             </a></p>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Recherche rapide</h3>
-    <div class="searchformwrapper">
+  <h3>Recherche rapide</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
-    </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -163,8 +171,8 @@ exit $?
       &copy;2019-20, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.9</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
       
     </div>
 

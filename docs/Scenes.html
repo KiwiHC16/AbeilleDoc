@@ -1,45 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<!DOCTYPE html>
 
-<html lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scènes &#8212; Documentation Abeille 08.12.2020</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Scènes &#8212; documentation Abeille 08.12.2020</title>
+    
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '08.12.2020',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
+    <link rel="top" title="documentation Abeille 08.12.2020" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
-  
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head><body>
+  </head>
+  <body role="document">
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          
-
           <div class="body" role="main">
             
   <div class="section" id="scenes">
 <h1>Scènes<a class="headerlink" href="#scenes" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="intro">
 <h2>Intro<a class="headerlink" href="#intro" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les scènes permettent d’envoyer un seul message Zigbee et d’avoir multiple équipement qui se mette en position automatiquement.</p>
-<p>Une scène peut être: « Séance TV », qui allumera la TV, fermera les volets et mettra une lumière tamisée en place.</p>
-<p>Pour ce faire chaque équipement doit savoir ce qu’il doit faire lorsqu’il reçoit la commande. Il doit donc avoir été paramétré avant.</p>
-<p>Pour l’instant tout le paramétrage se fait depuis l’objet Ruche.</p>
+<p>Les scènes permettent d&#8217;envoyer un seul message Zigbee et d&#8217;avoir multiple équipement qui se mette en position automatiquement.</p>
+<p>Une scène peut être: &#8220;Séance TV&#8221;, qui allumera la TV, fermera les volets et mettra une lumière tamisée en place.</p>
+<p>Pour ce faire chaque équipement doit savoir ce qu&#8217;il doit faire lorsqu&#8217;il reçoit la commande. Il doit donc avoir été paramétré avant.</p>
+<p>Tout le parametrage se fait depuis la page menu-&gt;plugins-&gt;Protocole Domotique-&gt;Abeille.</p>
+<p>Note: in scene est rattachée à un groupe. Vous pouvez avoir plusieurs scenes dans un meme groupe. Vous ne pouvez pas avoir de scene sans groupe.</p>
+<p>Note: il faut Firmware 3.1D minimum et Abeille &gt; mi février 2021.</p>
 </div>
 <div class="section" id="video">
 <h2>Video<a class="headerlink" href="#video" title="Lien permanent vers ce titre">¶</a></h2>
@@ -50,36 +61,68 @@
 <h2>Ajout<a class="headerlink" href="#ajout" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Ajout d une scène à un équipement</p>
 <ul class="simple">
-<li><p>en cours …</p></li>
+<li>Preparation
+- identifiez tous les équipements qui doivent participer à une scene
+- positionnez les comme voulu (Eteint/Allumé, Couleur, Intensité,...)</li>
+<li>Créer un groupe.
+- selectionner les equipements souhaités (tic au dessus des icones)
+- indiquez dans le chmap &#8220;Id&#8221; un numero de champ (Hex: 4 digits)
+- Envoyez le groupe aux equipements avec le bouton &#8220;Add Group&#8221;</li>
+<li>Créer une scene
+- selectionner les equipements souhaités (tic au dessus des icones)
+- indiquez dans le champ &#8220;Group Id&#8221; un numero de groupe (Hex: 4 digits)
+- indiquez dans le champ &#8220;Scene Id&#8221; un numero de scene (Hex: 2 digits)
+- Demandez aux equipements d enregistrer la scene avec le bouton &#8220;Store Scene&#8221;</li>
+</ul>
+</div>
+<div class="section" id="activer">
+<h2>Activer<a class="headerlink" href="#activer" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li>Faites l ajout de deux scenes par exemple Group 1234 avec scene 01 et 02. cf chapitre precedent.</li>
+<li>Depuis cette meme page:
+- indiquez dans le champ &#8220;Group Id&#8221; un numero de groupe (Hex: 4 digits)
+- indiquez dans le champ &#8220;Scene Id&#8221; un numero de scene (Hex: 2 digits)
+- Demandez aux équipements d activer la scene avec le bouton &#8220;scene group recall&#8221;
+- Attention: ne fonctionne que sur Zigate1 pour l instant.
+- Vous pouvez le faire aussi juste pour un équipement avec la commande &#8220;Recall Scene&#8221; en l ayant selectionné auparavent.</li>
+<li>Depuis télécommande
+- pas encore implementé</li>
 </ul>
 </div>
 <div class="section" id="retrait">
 <h2>Retrait<a class="headerlink" href="#retrait" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Retrait d une scène à un équipement</p>
 <ul class="simple">
-<li><p>en cours …</p></li>
+<li>en cours ...</li>
 </ul>
 </div>
 <div class="section" id="recuperer">
 <h2>Récupérer<a class="headerlink" href="#recuperer" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Récupérer les scènes d’un équipement</p>
+<p>Récupérer les scènes d&#8217;un équipement</p>
 <ul class="simple">
-<li><p>en cours …</p></li>
+<li>en cours ...</li>
+</ul>
+</div>
+<div class="section" id="etat-info-pour-dev-json-dans-config">
+<h2>Etat (info pour dev: json dans config)<a class="headerlink" href="#etat-info-pour-dev-json-dans-config" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li>sceneRemainingCapacity = Max Scene - 1 Scene Utilisées, soit nombre de scene additinelle que l on peut creer</li>
+<li>sceneCount = Nombre de scene en memoire</li>
+<li>groupId</li>
+<li>sceneId = Identifiant des scene pour ce groupe</li>
 </ul>
 </div>
 <div class="section" id="remarques">
 <h2>Remarques<a class="headerlink" href="#remarques" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li><p>« Get Scene Membership » interroge l équipement pour avoir les scenes associées à un groupe mais Abeille ne peut traiter la réponse incomplète. La modification est en cours de dev cote firmware zigate et ne fonctionnent pas a ce stade. Par contre en attendant vous pouvez voir passer la réponse dans le log AbeilleParser message « Scene Membership »</p></li>
-<li><p>« View Scene » interroge l équipement pour avoir les détails d une scene mais Abeille ne peut traiter la réponse incomplète. La modification est en cours de dev cote firmware zigate et ne fonctionnent pas a ce stade. Par contre en attendant vous pouvez voir passer la réponse dans le log AbeilleParser message « Scene View »</p></li>
-<li><p>« scene Group Recal » n est pas encore fonctionnelle.</p></li>
+<li>&#8220;Get Scene Membership&#8221; interroge l équipement pour avoir les scenes associées à un groupe. Le resultat est enregistre en json dans la conf de l eqLogic. Par example: &#8220;sceneJson&#8221;:&#8221;{&#8220;SceneMembership&#8221;:{&#8220;sceneRemainingCapacity&#8221;:&#8221;05&#8221;,&#8221;sceneCount&#8221;:&#8221;03&#8221;,&#8221;1111&#8221;:{&#8220;sceneId&#8221;:&#8221;-11-AA-22&#8221;}}}&#8221;</li>
+<li>&#8220;View Scene&#8221; interroge l équipement pour avoir les détails d une scene mais Abeille ne peut traiter la réponse incomplète. La modification est en cours de dev cote firmware zigate et ne fonctionnent pas a ce stade. Par contre en attendant vous pouvez voir passer la réponse dans le log AbeilleParser message &#8220;Scene View&#8221;</li>
 </ul>
 </div>
 </div>
 
 
           </div>
-          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -88,23 +131,25 @@
               <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
             </a></p>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Recherche rapide</h3>
-    <div class="searchformwrapper">
+  <h3>Recherche rapide</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
-    </div>
 </div>
-<script>$('#searchbox').show(0);</script>
-  <h3><a href="index.html">Table des matières</a></h3>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+  <h3><a href="index.html">Table des Matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Scènes</a><ul>
 <li><a class="reference internal" href="#intro">Intro</a></li>
 <li><a class="reference internal" href="#video">Video</a></li>
 <li><a class="reference internal" href="#ajout">Ajout</a></li>
+<li><a class="reference internal" href="#activer">Activer</a></li>
 <li><a class="reference internal" href="#retrait">Retrait</a></li>
 <li><a class="reference internal" href="#recuperer">Récupérer</a></li>
+<li><a class="reference internal" href="#etat-info-pour-dev-json-dans-config">Etat (info pour dev: json dans config)</a></li>
 <li><a class="reference internal" href="#remarques">Remarques</a></li>
 </ul>
 </li>
@@ -119,8 +164,8 @@
       &copy;2019-20, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.9</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
       
     </div>
 

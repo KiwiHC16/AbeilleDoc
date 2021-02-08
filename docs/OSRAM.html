@@ -1,35 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<!DOCTYPE html>
 
-<html lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OSRAM &#8212; Documentation Abeille 08.12.2020</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>OSRAM &#8212; documentation Abeille 08.12.2020</title>
+    
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '08.12.2020',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
+    <link rel="top" title="documentation Abeille 08.12.2020" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
-  
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head><body>
+  </head>
+  <body role="document">
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          
-
           <div class="body" role="main">
             
   <div class="section" id="osram">
@@ -40,8 +49,8 @@
 <div class="section" id="nouvelle-inclusion">
 <h3>Nouvelle inclusion<a class="headerlink" href="#nouvelle-inclusion" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li><p>Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter…</p></li>
-<li><p>Appui long sur le bouton du flanc de la prise, la prise switche rapidement On/Off, lâcher le bouton, l’équipement doit se connecter et un objet doit apparaître dans Jeedom.</p></li>
+<li>Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter...</li>
+<li>Appui long sur le bouton du flanc de la prise, la prise switche rapidement On/Off, lâcher le bouton, l&#8217;équipement doit se connecter et un objet doit apparaître dans Jeedom.</li>
 </ul>
 <img alt="_images/plug01_new.png" src="_images/plug01_new.png" />
 </div>
@@ -49,26 +58,26 @@
 <h3>Inclue<a class="headerlink" href="#inclue" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Déjà inclue préalablement</p>
 <ul class="simple">
-<li><p>un appui long (&gt; 20s) sur le bouton latéral doit provoquer l’association (Zigate en mode inclusion) l’équipement doit se connecter et un objet doit apparaître dans Jeedom.</p></li>
+<li>un appui long (&gt; 20s) sur le bouton latéral doit provoquer l&#8217;association (Zigate en mode inclusion) l&#8217;équipement doit se connecter et un objet doit apparaître dans Jeedom.</li>
 </ul>
-<p>——————————————————- A clarifier</p>
+<p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;- A clarifier</p>
 </div>
 <div class="section" id="retour-d-etat">
-<h3>Retour d’état<a class="headerlink" href="#retour-d-etat" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Afin de configurer le retour d’état il faut avoir:
-- l’adresse IEEE sur l objet prise OSRAM
-- et sur l’objet ruche</p>
-<p>Si ce n’est pas le cas vous pouvez faire un « liste Equipements » sur la ruche. Si cela ne suffit pas il faut faire « menu-&gt;Plugins-&gt;Protocol domotique-&gt;Abeille-&gt;Network List-&gt;Table de noeuds-&gt;Recalcul du cache » (Soyez patient).</p>
-<p>Ensuite utilisez de préférence « BindShortToZigateEtat » puis « setReportEtat ». Maintenant un changement d’état doit remonter tout seul et mettre à jour l’icone.</p>
+<h3>Retour d&#8217;état<a class="headerlink" href="#retour-d-etat" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Afin de configurer le retour d&#8217;état il faut avoir:
+- l&#8217;adresse IEEE sur l objet prise OSRAM
+- et sur l&#8217;objet ruche</p>
+<p>Si ce n&#8217;est pas le cas vous pouvez faire un &#8220;liste Equipements&#8221; sur la ruche. Si cela ne suffit pas il faut faire &#8220;menu-&gt;Plugins-&gt;Protocol domotique-&gt;Abeille-&gt;Network List-&gt;Table de noeuds-&gt;Recalcul du cache&#8221; (Soyez patient).</p>
+<p>Ensuite utilisez de préférence &#8220;BindShortToZigateEtat&#8221; puis &#8220;setReportEtat&#8221;. Maintenant un changement d&#8217;état doit remonter tout seul et mettre à jour l&#8217;icone.</p>
 <img alt="_images/Capture_d_ecran_2018_06_27_a_11_24_09.png" src="_images/Capture_d_ecran_2018_06_27_a_11_24_09.png" />
-<p>Le retour d’état ne remonte que si l’état change. Donc si l’icone n’est pas synchro avec la prise vous pouvez avoir l’impression que cela ne fonctionne pas. Ex: la prise est Off et l’icone est on. Vous faites Off et rien ne se passe. Pour éviter cela un double Toggle doit réaligner tout le monde.</p>
-<p>——————————————————- A clarifier</p>
+<p>Le retour d&#8217;état ne remonte que si l&#8217;état change. Donc si l&#8217;icone n&#8217;est pas synchro avec la prise vous pouvez avoir l&#8217;impression que cela ne fonctionne pas. Ex: la prise est Off et l&#8217;icone est on. Vous faites Off et rien ne se passe. Pour éviter cela un double Toggle doit réaligner tout le monde.</p>
+<p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;- A clarifier</p>
 </div>
 <div class="section" id="remove">
 <h3>Remove<a class="headerlink" href="#remove" title="Lien permanent vers ce titre">¶</a></h3>
 <p>..image:: images/Capture_d_ecran_2019_07_06_a_10_43_00.png</p>
-<p>Un remove exclue la prise OSRAM Outdoor du reseau avec un Leave (Rejoin: False, Request: False, Remove Children: False). Lors de l exclusion on entend la prise faire un aller-retour du relai. Et l’équipement dans Abeille est conservé mais désactivé.
-Vous pouvez garder l’équipement dans Abeille si vous le souhaitez ou le supprimer. Si vous le gardez, lors de la prochaine inclusion de cette même prise il sera ré-utilisé.</p>
+<p>Un remove exclue la prise OSRAM Outdoor du reseau avec un Leave (Rejoin: False, Request: False, Remove Children: False). Lors de l exclusion on entend la prise faire un aller-retour du relai. Et l&#8217;équipement dans Abeille est conservé mais désactivé.
+Vous pouvez garder l&#8217;équipement dans Abeille si vous le souhaitez ou le supprimer. Si vous le gardez, lors de la prochaine inclusion de cette même prise il sera ré-utilisé.</p>
 </div>
 </div>
 <div class="section" id="ampoules">
@@ -77,21 +86,21 @@ Vous pouvez garder l’équipement dans Abeille si vous le souhaitez ou le suppr
 <div class="section" id="id1">
 <h3>Nouvelle inclusion<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li><p>Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter…</p></li>
-<li><p>Brancher l’ampoule OSRAM. Elle devrait joindre le réseau immédiatement et un objet doit être créé dans Jeedom.</p></li>
+<li>Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter...</li>
+<li>Brancher l&#8217;ampoule OSRAM. Elle devrait joindre le réseau immédiatement et un objet doit être créé dans Jeedom.</li>
 </ul>
 </div>
 <div class="section" id="deja-inclue">
 <h3>Déjà inclue<a class="headerlink" href="#deja-inclue" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li><p>Ampoule allumée. Éteindre/Allumer 5 fois toutes les 3 s et elle doit essayer de joindre le réseau et faire un flash.</p></li>
+<li>Ampoule allumée. Éteindre/Allumer 5 fois toutes les 3 s et elle doit essayer de joindre le réseau et faire un flash.</li>
 </ul>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=PaA0DV5BXH0">https://www.youtube.com/watch?v=PaA0DV5BXH0</a></p>
 </div>
 </div>
 <div class="section" id="routage">
 <h2>Routage<a class="headerlink" href="#routage" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le routage avec les prise OSRAM ne semble pas compatible avec les autres produits comme xiaomi, ikea,… voir plus de détail dans le chapitre route et les aspects <a class="reference internal" href="Radio.html#radio-routes"><span class="std std-ref">OSRAM</span></a>.</p>
+<p>Le routage avec les prise OSRAM ne semble pas compatible avec les autres produits comme xiaomi, ikea,... voir plus de détail dans le chapitre route et les aspects <a class="reference internal" href="Radio.html#radio-routes"><span class="std std-ref">OSRAM</span></a>.</p>
 </div>
 <div class="section" id="lightify-switch">
 <h2>Lightify Switch<a class="headerlink" href="#lightify-switch" title="Lien permanent vers ce titre">¶</a></h2>
@@ -102,22 +111,22 @@ Bouton en haut a gauche et en bas a droite plus de 10 secondes.</p>
 Bouton en haut a droite et bouton en bas à gauche pendant 3 secondes avec Zigate en mode inclusion.
 La Led au milieu semble passer au bleu pendant cette phase.</p>
 <p>Proprietés:
-Cette telecommande broadcast et n’utilise pas les groupes. Toutes les ampoules dans le réseau vont utiliser les commandes !
-Elle est visiblement configuratble avec la GW Osram mais je ne l’ai pas pour tester.</p>
+Cette telecommande broadcast et n&#8217;utilise pas les groupes. Toutes les ampoules dans le réseau vont utiliser les commandes !
+Elle est visiblement configuratble avec la GW Osram mais je ne l&#8217;ai pas pour tester.</p>
 </div>
 <div class="section" id="motion-sensor">
 <h2>Motion Sensor<a class="headerlink" href="#motion-sensor" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Reset:
-Bouton gauche 10 secondes d’apres la documentation mais personne ne touve que cela fonctionne.</p>
+Bouton gauche 10 secondes d&#8217;apres la documentation mais personne ne touve que cela fonctionne.</p>
 <p>Reveil:
 Appui sur le bouton lateral ou mouvement devant le capteur. Utile pour configurer le capteur depuis Abeille.</p>
 <p>Appairage:
 Retrait et remise de la batterie alors que la zigate en mode inclusion et l appairage se produit. Mais quitte le reseau et entre en boucle appairage / leave !!!
-Pour l inclure j’ai mis la zigate en inclusion, arreté Abeille, appui 10s sur bouton, attendu 20 seconde et redemarrer Abeille puis ask name. Et la il ne quitte plus le reseau !!!!
+Pour l inclure j&#8217;ai mis la zigate en inclusion, arreté Abeille, appui 10s sur bouton, attendu 20 seconde et redemarrer Abeille puis ask name. Et la il ne quitte plus le reseau !!!!
 Il est compliqué a appairé.</p>
 <p>Configuration:
 Il est fort probable que la configuration ne se realise pas correctement lors de l inclusion. Monsieur est recalcitrant.
-Dans ce cas, rendre visible la commande IEEE-Addr est vérifier qu’elle est bien reseignée.
+Dans ce cas, rendre visible la commande IEEE-Addr est vérifier qu&#8217;elle est bien reseignée.
 Rendre visible les commandes de Bind temperature, bind occupency, set report temperature, set report occupency, et les executer plusieurs fois tout en appuyant sur le bouton lateral.
 Une fois fait vous pouvez rendre invisible ces commandes.</p>
 <p>Additional info:
@@ -128,7 +137,6 @@ Pile: CR2</p>
 
 
           </div>
-          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -137,22 +145,22 @@ Pile: CR2</p>
               <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
             </a></p>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Recherche rapide</h3>
-    <div class="searchformwrapper">
+  <h3>Recherche rapide</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
-    </div>
 </div>
-<script>$('#searchbox').show(0);</script>
-  <h3><a href="index.html">Table des matières</a></h3>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+  <h3><a href="index.html">Table des Matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">OSRAM</a><ul>
 <li><a class="reference internal" href="#prise-smart">Prise Smart +</a><ul>
 <li><a class="reference internal" href="#nouvelle-inclusion">Nouvelle inclusion</a></li>
 <li><a class="reference internal" href="#inclue">Inclue</a></li>
-<li><a class="reference internal" href="#retour-d-etat">Retour d’état</a></li>
+<li><a class="reference internal" href="#retour-d-etat">Retour d&#8217;état</a></li>
 <li><a class="reference internal" href="#remove">Remove</a></li>
 </ul>
 </li>
@@ -177,8 +185,8 @@ Pile: CR2</p>
       &copy;2019-20, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.9</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
       
     </div>
 

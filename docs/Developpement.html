@@ -1,35 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<!DOCTYPE html>
 
-<html lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Developpement &#8212; Documentation Abeille 08.12.2020</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Developpement &#8212; documentation Abeille 08.12.2020</title>
+    
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '08.12.2020',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
+    <link rel="top" title="documentation Abeille 08.12.2020" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
-  
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head><body>
+  </head>
+  <body role="document">
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          
-
           <div class="body" role="main">
             
   <div class="section" id="developpement">
@@ -37,10 +46,10 @@
 <div class="section" id="grandes-lignes">
 <h2>Grandes lignes<a class="headerlink" href="#grandes-lignes" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li><p>branche master : pour tous les développements en cours a condition que les pushs soient utilisables et « stabilisés » pour la phase de test.</p></li>
-<li><p>branche beta: pour figer un développement et le mettre en test avant de passer en stable</p></li>
-<li><p>branche stable: version stable. C’est la branche officielle vue par Jeedom, donc pour tous les utilisateurs.</p></li>
-<li><p>Dev en cours: autre branche</p></li>
+<li>branche master : pour tous les développements en cours a condition que les pushs soient utilisables et &#8220;stabilisés&#8221; pour la phase de test.</li>
+<li>branche beta: pour figer un développement et le mettre en test avant de passer en stable</li>
+<li>branche stable: version stable. C&#8217;est la branche officielle vue par Jeedom, donc pour tous les utilisateurs.</li>
+<li>Dev en cours: autre branche</li>
 </ul>
 <div class="section" id="vue-generale">
 <h3>Vue générale<a class="headerlink" href="#vue-generale" title="Lien permanent vers ce titre">¶</a></h3>
@@ -50,88 +59,88 @@
 <div class="section" id="regles-a-suivre">
 <h3>Règles à suivre<a class="headerlink" href="#regles-a-suivre" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li><p>La structure de base des plugins est présentée dans la doc Jeedom: <a class="reference external" href="https://doc.jeedom.com/fr_FR/dev/plugin_template">https://doc.jeedom.com/fr_FR/dev/plugin_template</a>. Elle est similaire à la structure du “core” lui même.</p></li>
-<li><p>Un template est fourni par Jeedom: <a class="reference external" href="https://github.com/jeedom/plugin-template">https://github.com/jeedom/plugin-template</a> mais en dehors des informations déja présentées ci dessous, il n’est pas vraiment utilisé ni cohérent.</p></li>
+<li>La structure de base des plugins est présentée dans la doc Jeedom: <a class="reference external" href="https://doc.jeedom.com/fr_FR/dev/plugin_template">https://doc.jeedom.com/fr_FR/dev/plugin_template</a>. Elle est similaire à la structure du &#8216;core&#8217; lui même.</li>
+<li>Un template est fourni par Jeedom: <a class="reference external" href="https://github.com/jeedom/plugin-template">https://github.com/jeedom/plugin-template</a> mais en dehors des informations déja présentées ci dessous, il n&#8217;est pas vraiment utilisé ni cohérent.</li>
 </ul>
-<p>Il faut que l’on se cale le plus possible sur ces documents.</p>
+<p>Il faut que l&#8217;on se cale le plus possible sur ces documents.</p>
 </div>
 <div class="section" id="regles-a-suivre-additionnelles-pour-abeille">
 <h3>Règles à suivre additionnelles pour Abeille<a class="headerlink" href="#regles-a-suivre-additionnelles-pour-abeille" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li><p>Outils de dev: Visual Studio Code avec les paramètres par défaut.</p></li>
-<li><p>Git: garder le master toujours fonctionnel après un commit.</p></li>
-<li><p>Git: beaucoup de petit commit et souvent mais pas de gros commit pas souvent.</p></li>
-<li><p>Abeille / Core OS: Garder Abeille le plus loin possible de l’OS. Uniquement quand cela n’est pas possible faire du code spécifique.</p></li>
-<li><p>Abeille doit tourner sur une VM</p></li>
-<li><p>Abeille doit tourner sur un docker</p></li>
-<li><p>Abeille ne doit pas faire plus de 50Mo</p></li>
-<li><p>La doc n’est pas dans le github du plugin</p></li>
-<li><p>Pour éviter d’avoir deux personnes qui travaillent sur le meme sujet, nous utilisons les issues Github. Pour chaque dev que vous faites vous créé une issue et on vous l assigne. Une seule et unique personne assignée par issue.</p></li>
-<li><p>Le code est en Anglais</p></li>
-<li><p>Toutes les fonctions doivent avoir leur javadoc</p></li>
-<li><p>Est accepté: <a class="reference external" href="mailto:///&#37;&#52;&#48;TODO">///<span>&#64;</span>TODO</a>: blablabla dans le code</p></li>
+<li>Outils de dev: Visual Studio Code avec les paramètres par défaut.</li>
+<li>Git: garder le master toujours fonctionnel après un commit.</li>
+<li>Git: beaucoup de petit commit et souvent mais pas de gros commit pas souvent.</li>
+<li>Abeille / Core OS: Garder Abeille le plus loin possible de l&#8217;OS. Uniquement quand cela n&#8217;est pas possible faire du code spécifique.</li>
+<li>Abeille doit tourner sur une VM</li>
+<li>Abeille doit tourner sur un docker</li>
+<li>Abeille ne doit pas faire plus de 50Mo</li>
+<li>La doc n&#8217;est pas dans le github du plugin</li>
+<li>Pour éviter d&#8217;avoir deux personnes qui travaillent sur le meme sujet, nous utilisons les issues Github. Pour chaque dev que vous faites vous créé une issue et on vous l assigne. Une seule et unique personne assignée par issue.</li>
+<li>Le code est en Anglais</li>
+<li>Toutes les fonctions doivent avoir leur javadoc</li>
+<li>Est accepté: <a class="reference external" href="mailto:///&#37;&#52;&#48;TODO">///<span>&#64;</span>TODO</a>: blablabla dans le code</li>
 </ul>
 </div>
 <div class="section" id="hierarchie-repertoires-du-plugin-abeille">
 <h3>Hiérarchie (répertoires) du plugin Abeille<a class="headerlink" href="#hierarchie-repertoires-du-plugin-abeille" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Basé sur « <a class="reference external" href="https://doc.jeedom.com/fr_FR/dev/plugin_template">https://doc.jeedom.com/fr_FR/dev/plugin_template</a> ».</p>
+<p>Basé sur &#8220;<a class="reference external" href="https://doc.jeedom.com/fr_FR/dev/plugin_template">https://doc.jeedom.com/fr_FR/dev/plugin_template</a>&#8221;.</p>
 <ul>
-<li><p><strong>core</strong> : Dossier contenant tous les fichiers de fonctionnement interne.
-Ne contient pas de fichiers gérant la partie « User Interface » donc pas d’html.</p>
+<li><p class="first"><strong>core</strong> : Dossier contenant tous les fichiers de fonctionnement interne.
+Ne contient pas de fichiers gérant la partie &#8220;User Interface&#8221; donc pas d&#8217;html.</p>
 <ul class="simple">
-<li><p><strong>ajax</strong> : dossier contenant les fichiers cibles d’appels AJAX.
-Les fichiers de type AJAX doivent se finir par « .ajax.php ».</p></li>
-<li><p><strong>class</strong> : dossier contenant la classe du plugin.
-Les fichiers de class php doivent obligatoirement se finir par « .class.php ».</p></li>
-<li><p><strong>config</strong> : Fichiers de configuration du plugin.</p>
-<ul>
-<li><p>A DETAILLER</p></li>
+<li><strong>ajax</strong> : dossier contenant les fichiers cibles d’appels AJAX.
+Les fichiers de type AJAX doivent se finir par &#8221;.ajax.php&#8221;.</li>
+<li><strong>class</strong> : dossier contenant la classe du plugin.
+Les fichiers de class php doivent obligatoirement se finir par &#8221;.class.php&#8221;.</li>
+<li><strong>config</strong> : Fichiers de configuration du plugin.<ul>
+<li>A DETAILLER</li>
 </ul>
 </li>
-<li><p><strong>php</strong> : dossier pouvant contenir des fonctions ne devant pas forcément appartenir à une classe (souvent utilisé pour permettre l’inclusion de multiples classes ou fichiers de configuration en une fois)
-Toutes les librairies Abeille PHP.</p></li>
-<li><p><strong>scripts</strong> : Dossier contenant les scripts internes d’Abeille.</p></li>
+<li><strong>php</strong> : dossier pouvant contenir des fonctions ne devant pas forcément appartenir à une classe (souvent utilisé pour permettre l’inclusion de multiples classes ou fichiers de configuration en une fois)
+Toutes les librairies Abeille PHP.</li>
+<li><strong>scripts</strong> : Dossier contenant les scripts internes d&#8217;Abeille.</li>
 </ul>
 </li>
-<li><p><strong>desktop</strong> : Dossier contenant la vue “bureau” du plugin (en opposition avec la vue “mobile”).</p>
+<li><p class="first"><strong>desktop</strong> : Dossier contenant la vue “bureau” du plugin (en opposition avec la vue “mobile”).</p>
 <ul class="simple">
-<li><p><strong>js</strong> : Dossier contenant tous les fichiers de type javascript.</p></li>
-<li><p><strong>php</strong> : Dossier contenant tous les fichiers de type php qui font de l’affichage.</p></li>
-<li><p><strong>css</strong> : Si nécessaire, fichier CSS pour la vue « desktop ».</p></li>
-<li><p><strong>modal</strong> : Dossier contenant le code des modals du plugin.</p></li>
+<li><strong>js</strong> : Dossier contenant tous les fichiers de type javascript.</li>
+<li><strong>php</strong> : Dossier contenant tous les fichiers de type php qui font de l’affichage.</li>
+<li><strong>css</strong> : Si nécessaire, fichier CSS pour la vue &#8220;desktop&#8221;.</li>
+<li><strong>modal</strong> : Dossier contenant le code des modals du plugin.</li>
 </ul>
 </li>
-<li><p><strong>mobile</strong> : Contient les fichiers gérant la UI « mobile ».</p></li>
-<li><p><strong>plugin_info</strong> : Contient les fichiers permettant à Jeedom de qualifier le plugin, de faire son installation et sa configuration.</p>
+<li><p class="first"><strong>mobile</strong> : Contient les fichiers gérant la UI &#8220;mobile&#8221;.</p>
+</li>
+<li><p class="first"><strong>plugin_info</strong> : Contient les fichiers permettant à Jeedom de qualifier le plugin, de faire son installation et sa configuration.</p>
 <ul class="simple">
-<li><p><strong>info.json</strong> : Fichier contenant les informations de base du plugin (il est obligatoire sinon Jeedom ne verra pas le plugin), il contient entre autre l’identifiant du module, la description, les instructions d’installation…​</p></li>
-<li><p><strong>install.php</strong> : Fichier contenant (si besoin) les méthodes d’installation et de désinstallation du plugin</p></li>
-<li><p><strong>configuration.php</strong> : Fichier contenant les paramètres à configurer du plugin indépendants des équipements de celui-ci (exemple pour le module Zwave l’ip du Raspberry Pi ayant la carte Razberry)</p></li>
+<li><strong>info.json</strong> : Fichier contenant les informations de base du plugin (il est obligatoire sinon Jeedom ne verra pas le plugin), il contient entre autre l’identifiant du module, la description, les instructions d’installation…​</li>
+<li><strong>install.php</strong> : Fichier contenant (si besoin) les méthodes d’installation et de désinstallation du plugin</li>
+<li><strong>configuration.php</strong> : Fichier contenant les paramètres à configurer du plugin indépendants des équipements de celui-ci (exemple pour le module Zwave l’ip du Raspberry Pi ayant la carte Razberry)</li>
 </ul>
 </li>
-<li><p><strong>docs</strong></p>
-<p>N’est pas utilisé pour ne pas dépasser la taille limite imposée par Jeedom.
+<li><p class="first"><strong>docs</strong></p>
+<p>N&#8217;est pas utilisé pour ne pas dépasser la taille limite imposée par Jeedom.
 Les docs sont dans un repo séparé.</p>
 </li>
-<li><p><strong>tmp</strong></p>
-<p>Répertoire LOCAL (non versionné) ne contenant que qq fichiers qui bougent rarement. Il contient entre autre le fichier de config « developpeur ». Les logs sont migrés sous le « tmp » officiel Jeedom (jeedom::getTmpFolder(« Abeille »)).</p>
+<li><p class="first"><strong>tmp</strong></p>
+<p>Répertoire LOCAL (non versionné) ne contenant que qq fichiers qui bougent rarement. Il contient entre autre le fichier de config &#8220;developpeur&#8221;. Les logs sont migrés sous le &#8220;tmp&#8221; officiel Jeedom (jeedom::getTmpFolder(&#8220;Abeille&#8221;)).</p>
 </li>
 </ul>
 <p>Répertoires hors plugin</p>
 <ul>
-<li><p><strong>tmp Jeedom</strong></p>
-<p>Il s’agit du répertoire temporaire Jeedom (jeedom::getTmpFolder(« Abeille »)). Utilisé pour stocker les log « previous », les logs de support, ou comme zone tampon pour créer des fichiers compressés par ex.</p>
+<li><p class="first"><strong>tmp Jeedom</strong></p>
+<p>Il s&#8217;agit du répertoire temporaire Jeedom (jeedom::getTmpFolder(&#8220;Abeille&#8221;)). Utilisé pour stocker les log &#8220;previous&#8221;, les logs de support, ou comme zone tampon pour créer des fichiers compressés par ex.</p>
 </li>
 </ul>
 <p>Propositions à discuter</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Network : a virer progressivement. Les fichiers devraient pouvoir trouver leur place dans « core », et/ou « desktop »/ »mobile »</p></li>
-<li><p>resources/fw_zigate : FW zigate.</p></li>
-<li><p>resources/fw_wifi : FW specific partie fw_wifi</p></li>
-<li><p>Pas de partie « demond » : Tout comme « Network », il n’ya a pas de classification liée à une fonctionalité. Au vu des recherches, ca n’a pas vraiment de sens. Aucun plugin a isolé son « démon », sauf « openzwave » qui lui meme se base sur un code exterieur. Le format du template n’est jamais utilisé par les plugin officiels.
-Les démons n’étant rien d’autre que des codes ou classes, je suggère de coller à la structure Jeedom ci dessus et mettre ces codes dans « core ».</p></li>
-<li><p>tests : Vu dans Jeedom, ca fait du sens d’isoler les codes de test. Sous structure dans la lignée de core. Ex tests/php, tests/class …</p></li>
+<li>Network : a virer progressivement. Les fichiers devraient pouvoir trouver leur place dans &#8220;core&#8221;, et/ou &#8220;desktop&#8221;/&#8221;mobile&#8221;</li>
+<li>resources/fw_zigate : FW zigate.</li>
+<li>resources/fw_wifi : FW specific partie fw_wifi</li>
+<li>Pas de partie &#8220;demond&#8221; : Tout comme &#8220;Network&#8221;, il n&#8217;ya a pas de classification liée à une fonctionalité. Au vu des recherches, ca n&#8217;a pas vraiment de sens. Aucun plugin a isolé son &#8220;démon&#8221;, sauf &#8220;openzwave&#8221; qui lui meme se base sur un code exterieur. Le format du template n&#8217;est jamais utilisé par les plugin officiels.
+Les démons n&#8217;étant rien d&#8217;autre que des codes ou classes, je suggère de coller à la structure Jeedom ci dessus et mettre ces codes dans &#8220;core&#8221;.</li>
+<li>tests : Vu dans Jeedom, ca fait du sens d&#8217;isoler les codes de test. Sous structure dans la lignée de core. Ex tests/php, tests/class ...</li>
 </ul>
 </div></blockquote>
 </div>
@@ -140,7 +149,6 @@ Les démons n’étant rien d’autre que des codes ou classes, je suggère de c
 
 
           </div>
-          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -149,16 +157,16 @@ Les démons n’étant rien d’autre que des codes ou classes, je suggère de c
               <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
             </a></p>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Recherche rapide</h3>
-    <div class="searchformwrapper">
+  <h3>Recherche rapide</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
-    </div>
 </div>
-<script>$('#searchbox').show(0);</script>
-  <h3><a href="index.html">Table des matières</a></h3>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+  <h3><a href="index.html">Table des Matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Developpement</a><ul>
 <li><a class="reference internal" href="#grandes-lignes">Grandes lignes</a><ul>
@@ -181,8 +189,8 @@ Les démons n’étant rien d’autre que des codes ou classes, je suggère de c
       &copy;2019-20, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.9</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
       
     </div>
 

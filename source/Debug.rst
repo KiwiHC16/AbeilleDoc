@@ -1,20 +1,17 @@
-########################################
-Debug / Troubleshooting / Investigations
-########################################
+Debug
+=====
 
-Je vais essayer de consolider ici tous les retours d'expériences et les vérifications à faire pour résoudre un éventuel problème.
+Si vous rencontrez des soucis, ce chapitre vous donne quelque pistes à suivre pour vérifier les points de bon fonctionnement.
 
-*****
 Forum
-*****
+-----
 
 * Liste des sujets en cours de discussions: `Forum Jeedom <https://community.jeedom.com/tag/plugin-abeille>`_
 
-* Liste des sujets en investigations : `GitHub Abeille <https://github.com/KiwiHC16/Abeille/issues?utf8=✓&q=is%3Aissue>`_
+* Liste des sujets en cours d'investigations: `GitHub Abeille <https://github.com/KiwiHC16/Abeille/issues?utf8=✓&q=is%3Aissue>`_
 
-*********
-Problèmes
-*********
+Signaler un bug
+---------------
 
 Si vous trouvez un problème qui demande une correction dans le plugin, merci d ouvrir ùne issue <https://github.com/KiwiHC16/Abeille/issues>`_  dans GitHub.
 
@@ -43,18 +40,16 @@ Description
  * captures d'ecrans
  * ...
 
-*********
-Evolution
-*********
+Demander une amélioration
+------------------------
 
 Si vous souhaitez une évolution dans le plugin, merci d ouvrir une "issue" dans GitHub à l'adresse avec un "Labels" "enhancement": https://github.com/KiwiHC16/Abeille/issues
 
-*****
-Debug
-*****
+Divers
+---------
 
 Configuration
-=============
+~~~~~~~~~~~~~~~~
 
 * Verifier la configuration réseau et en particulier /hostname, /etc/hosts
 * Vérifier la configuration du plugin. Par exemple le message suivant indique très probablement que l'objet de rattachement de l'équipement Ruche n'est pas défini.
@@ -67,7 +62,7 @@ Configuration
 
 
 Connection
-==========
+------------
 
 Premier test
 ------------
@@ -151,7 +146,7 @@ Cela confirme Zigate vers Jeedom
 
 
 Equipements ZigBee
-==================
+------------
 
 La ruche possede des commandes pour interroger les objets. Les deux principales sont ActiveEndPoint et SingleDescriptorRequest.
 
@@ -218,7 +213,7 @@ Faire de même pour SingleDescriptorRequest en ajoutant le EndPoint voulu dans l
 Nous avons maintenant les clusters supportés par cet objet sur son endpoint 01.
 
 Script
-======
+------------
 
 Dans Abeille/resources/AbeilleDeamon/Debug, vous trouverez le script verification.sh.
 
@@ -227,7 +222,7 @@ L'execution permet de tester, vérifier et donner des infos qui sont souvent int
 Je ne suis pas sûre que ce script soit toujours à jour...
 
 Messages
-========
+------------
 Les different module d'Abeille discutent entre eux par message passing. Ils est possible de voir l'etat avec la commande ipcs (en ssh).
 
 .. code-block:: php
@@ -252,7 +247,7 @@ Les different module d'Abeille discutent entre eux par message passing. Ils est 
 Ici on voit dans la derniere colonne qu'il n'y a pas de message en attente, ils ont tous été traités.
 
 Menus cachées pour developpeurs
-===============================
+------------
 
 https://github.com/KiwiHC16/Abeille/issues/1292
 

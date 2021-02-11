@@ -1,57 +1,81 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>FAQ &#8212; documentation Abeille 08.12.2020</title>
-    
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ &#8212; Documentation Abeille 11.02.2021</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '08.12.2020',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  false
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="top" title="documentation Abeille 08.12.2020" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
+  
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body role="document">
-  
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div><h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Debug.html">Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
+</ul>
 
-    <div class="document">
+
+        </div>
+      </div>
       <div class="documentwrapper">
         <div class="bodywrapper">
+          
+
           <div class="body" role="main">
             
   <div class="section" id="faq">
 <h1>FAQ<a class="headerlink" href="#faq" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="pont-hue-et-zigate-abeille">
 <h2>Pont Hue et ZiGate/Abeille<a class="headerlink" href="#pont-hue-et-zigate-abeille" title="Lien permanent vers ce titre">¶</a></h2>
-<p>&#8221; Savez vous si je peux mettre mon matos Hue dans le maillage du plugin Abeille, même si tout passe par le Pont Hue ?&#8221;</p>
+<p> » Savez vous si je peux mettre mon matos Hue dans le maillage du plugin Abeille, même si tout passe par le Pont Hue ? »</p>
 <p>La ZiGate et le Pont Hue joue le même role dans le reseau zigbee: le coordinateur.</p>
 <p>Il ne peut pas y avoir deux coordinateurs dans un réseau ZigBee. Tu ne peux pas avoir la Zigate et le pont Hue sur le même réseau.</p>
-<p>Abeille ne fonctionne qu&#8217;avec la ZiGate.</p>
+<p>Abeille ne fonctionne qu’avec la ZiGate.</p>
 <p>Soit tu as ton équipement connecté avec le pont Hue et le plugin associé dans Jeedom.</p>
 <p>Soit tu as ton équipement connecté avec la ZiGate et le plugin Abeille dans Jeedom.</p>
-<p>L&#8217;équipement est soit sur l un ou sur l autre, pas possible d&#8217;etre sur les deux en même temps.</p>
+<p>L’équipement est soit sur l un ou sur l autre, pas possible d’etre sur les deux en même temps.</p>
 <p>La magie de Jeedom te permet de tout piloter meme si tu as un equipement sur le pont hue et un autre sur zigate/abeille.</p>
 </div>
 <div class="section" id="matos-hue-et-zigate-abeille">
@@ -66,76 +90,48 @@
 <div class="section" id="le-probleme-que-je-rencontre-est-la-portee">
 <h2>Le problème que je rencontre est la portée<a class="headerlink" href="#le-probleme-que-je-rencontre-est-la-portee" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>les murs de ta maison sont épais et le signal ne passe pas</li>
-<li>les produits Osram ont des problemes de compatibilité pour le routage</li>
-<li>ajouter des routeurs pour améliorer la courverture radio</li>
-<li>SI tout les LQI donnés par la ZiGate sont très très bas alors que les équipements sont dans la même pièce, probablement un problème radio avec le module ZIGate.</li>
+<li><p>les murs de ta maison sont épais et le signal ne passe pas</p></li>
+<li><p>les produits Osram ont des problemes de compatibilité pour le routage</p></li>
+<li><p>ajouter des routeurs pour améliorer la courverture radio</p></li>
+<li><p>SI tout les LQI donnés par la ZiGate sont très très bas alors que les équipements sont dans la même pièce, probablement un problème radio avec le module ZIGate.</p></li>
 </ul>
 </div>
 <div class="section" id="etat-evenement-pour-les-scenarii">
 <h2>Etat / Evenement pour les scenarii<a class="headerlink" href="#etat-evenement-pour-les-scenarii" title="Lien permanent vers ce titre">¶</a></h2>
-<p>&#8221;
-MAIS (car il y a un mais) si on test la valeur d&#8217;un des informations &#8220;état..&#8221; et bien elle ne change pas
-en fait les info &#8220;état..&#8221; passent difficilement de 0 à 1 et de 1 à 0.
-A tel point qu&#8217;il faut de nombreux message pour chaque transition d&#8217;état..
-&#8220;</p>
-<p>Le &#8220;soucis&#8221; ne vient pas de la ZiGate ou d&#8217;Abeille mais de Jeedom. Quand des valeurs changent trop, vite comme c&#8217;est la cas ici, les scenario ne recuperent pas les bonnes valeurs.
-Certains équipements (Xiaomi par exemple) envoient l&#8217;appui(On) et le relache(Off) du bouton dans un meme message alors que d&#8217;autres envoient un message lors de l appui(On) et un autre lors de la relâche(Off). Donc on ne peut pas gérer les scenario sur la valeur d etat mais sur l&#8217;événement.</p>
+<p> »
+MAIS (car il y a un mais) si on test la valeur d’un des informations « état.. » et bien elle ne change pas
+en fait les info « état.. » passent difficilement de 0 à 1 et de 1 à 0.
+A tel point qu’il faut de nombreux message pour chaque transition d’état..
+« </p>
+<p>Le « soucis » ne vient pas de la ZiGate ou d’Abeille mais de Jeedom. Quand des valeurs changent trop, vite comme c’est la cas ici, les scenario ne recuperent pas les bonnes valeurs.
+Certains équipements (Xiaomi par exemple) envoient l’appui(On) et le relache(Off) du bouton dans un meme message alors que d’autres envoient un message lors de l appui(On) et un autre lors de la relâche(Off). Donc on ne peut pas gérer les scenario sur la valeur d etat mais sur l’événement.</p>
 </div>
 <div class="section" id="duplication-d-equipement">
-<h2>Duplication d&#8217;équipement<a class="headerlink" href="#duplication-d-equipement" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Lors de l&#8217;inclusion d&#8217;un équipement, un modele est utilisé pour le construire dans Jeedom/Abeille. Ensuite toutes les informations collectées du réseau sont injectées dans l&#8217;équipemetn Abeille.
-Une information à une role specifique: l&#8217;adresse IEEE. Cette adresse est une valeur unique par chaque équipement zigbee. On ne peut pas trouver deux équiepments Zigbee avec la même adresse dans le monde.
-Cette information est stockée dans la commande IEEE de l&#8217;équipement lors de sa reception.
-Si un équipement s&#8217;annonce de nouveau, Abeille va chercher dans les équipements s&#8217;il existe déjà.
-Une fois trouvé, rien n&#8217;est fait car l&#8217;équipement existe déjà.
-Si pour une raison ou une autre l&#8217;information adresse IEEE n&#8217;est pas remontée dans l&#8217;objet initial alors Abeille ne va pas le trouver et va créer un nouvel équipement dans Jeedom.
+<h2>Duplication d’équipement<a class="headerlink" href="#duplication-d-equipement" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Lors de l’inclusion d’un équipement, un modele est utilisé pour le construire dans Jeedom/Abeille. Ensuite toutes les informations collectées du réseau sont injectées dans l’équipemetn Abeille.
+Une information à une role specifique: l’adresse IEEE. Cette adresse est une valeur unique par chaque équipement zigbee. On ne peut pas trouver deux équiepments Zigbee avec la même adresse dans le monde.
+Cette information est stockée dans la commande IEEE de l’équipement lors de sa reception.
+Si un équipement s’annonce de nouveau, Abeille va chercher dans les équipements s’il existe déjà.
+Une fois trouvé, rien n’est fait car l’équipement existe déjà.
+Si pour une raison ou une autre l’information adresse IEEE n’est pas remontée dans l’objet initial alors Abeille ne va pas le trouver et va créer un nouvel équipement dans Jeedom.
 Si vous trouvez des doublons du même équipement, alors vérifiez le contenu de la commande IEEE.</p>
 </div>
 </div>
 
 
           </div>
+          
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="index.html">
-              <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Recherche rapide</h3>
-    <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-  <h3><a href="index.html">Table des Matières</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">FAQ</a><ul>
-<li><a class="reference internal" href="#pont-hue-et-zigate-abeille">Pont Hue et ZiGate/Abeille</a></li>
-<li><a class="reference internal" href="#matos-hue-et-zigate-abeille">Matos Hue et ZiGate/Abeille</a></li>
-<li><a class="reference internal" href="#le-probleme-que-je-rencontre-est-la-portee">Le problème que je rencontre est la portée</a></li>
-<li><a class="reference internal" href="#etat-evenement-pour-les-scenarii">Etat / Evenement pour les scenarii</a></li>
-<li><a class="reference internal" href="#duplication-d-equipement">Duplication d&#8217;équipement</a></li>
-</ul>
-</li>
-</ul>
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
+    <div class="clearer"></div>
+  </div>
 
     <div class="footer">
-      &copy;2019-20, KiwiHC16.
+      &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.9</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>
 

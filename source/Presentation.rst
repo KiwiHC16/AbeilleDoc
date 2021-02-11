@@ -1,16 +1,17 @@
 Introduction
+===================
+
+
+Introduction
 ------------
 
-.. image:: images/Abeille_icon.png
-
-[verse, Akila, from Zigate.fr]
-Zigate est une passerelle universelle compatible avec énormément de matériels radios Zigbee. Grâce à elle, vous offrez à votre domotique un large panel de possibilités. La Zigate est modulable , performante et ouverte pour qu'elle puisse évoluer selon vos besoins.
+La Zigate (https://Zigate.fr/) est une passerelle universelle pour le protocole Zigbee. Elle est compatible avec énormément de matériels radios Zigbee. Grâce à elle, vous offrez à votre domotique un large panel de possibilités. La Zigate est modulable, performante et ouverte pour qu'elle puisse évoluer selon vos besoins.
 
 
 Le plugin Abeille
 -----------------
 
-Le plugin  permet de mettre en place un réseau Zigbee avec des produits du marché et des réalisations personnelles (DIY) par l'intermédiaire de la passerelle Zigate (https://Zigate.fr/) dans Jeedom.
+Le plugin Abeille permet d'ajouter la zigate dans un environnement Jeedom et ainsi de mettre en place un réseau Zigbee avec des produits du marché et des réalisations personnelles (DIY) par l'intermédiaire de la passerelle Zigate dans Jeedom.
 
 Ce plugin est né de besoins personnels : capteur de température radio distant avec un réseau sécurisé, mesh,…
 
@@ -26,6 +27,20 @@ Il supporte aussi des fonctions avancées pour faciliter la gestion d’un gros 
 * Informations radio sur les liaisons entre les équipements
 * En mode USB, en mode Wifi ou en mode GPIO (PiZigate)
 * Fonctionne avec Homebridge
+
+Cagnotte
+--------
+
+`Participez à la cagnotte pour acheter des équipements pour supporter le développement. <https://paypal.me/KiwiHC16>`_
+
+.. image:: images/Cagnote.png
+
+`Participer à la Cagnotte <https://paypal.me/KiwiHC16>`_
+
+Le budget depuis le début est assez conséquent, surtout quand j'investis dans des équipements que je n'utiliserai pas moi même.
+Alors j'ouvre une cagnotte pour financer l'achat d'équipements pour faciliter l'intégration dans Abeille.
+L'idée est d'avoir au moins un exemplaire de ce que les utilisateurs d'Abeille utilisent.
+Je n'ai aucune idée de votre participation à cette cagnotte mais comme tout est open source depuis le début, la :doc:`Cagnotte` est aussi complètement transparente.
 
 Support
 -------

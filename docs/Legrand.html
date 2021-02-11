@@ -1,44 +1,68 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Legrand &#8212; documentation Abeille 08.12.2020</title>
-    
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legrand &#8212; Documentation Abeille 11.02.2021</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '08.12.2020',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  false
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="top" title="documentation Abeille 08.12.2020" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
+  
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body role="document">
-  
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div><h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Debug.html">Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
+</ul>
 
-    <div class="document">
+
+        </div>
+      </div>
       <div class="documentwrapper">
         <div class="bodywrapper">
+          
+
           <div class="body" role="main">
             
   <div class="section" id="legrand">
@@ -53,53 +77,49 @@
 <img alt="_images/Capture_d_ecran_2019_07_06_a_09_17_19.png" src="_images/Capture_d_ecran_2019_07_06_a_09_17_19.png" />
 <div class="section" id="fonctions">
 <h3>Fonctions<a class="headerlink" href="#fonctions" title="Lien permanent vers ce titre">¶</a></h3>
-<dl class="docutils">
-<dt>Fonctionne:</dt>
-<dd><ul class="first last simple">
-<li>Inclusion automatique dans Abeille.</li>
+<dl class="simple">
+<dt>Fonctionne:</dt><dd><ul class="simple">
+<li><p>Inclusion automatique dans Abeille.</p></li>
 </ul>
 </dd>
-<dt>Commandes:</dt>
-<dd><ul class="first last simple">
-<li>On</li>
-<li>Off</li>
-<li>Toggle</li>
-<li>Lecture etat On/Off</li>
-<li>Retour état automatique On/Off (Bind On/Off, Report On/Off)</li>
-<li>Groupe</li>
-<li>Scene (Devrait être ok d apres retour utilisateur)</li>
-<li>Puissance (Bind, Report)</li>
-<li>Routeur (elle diffuse les Link Status)</li>
+<dt>Commandes:</dt><dd><ul class="simple">
+<li><p>On</p></li>
+<li><p>Off</p></li>
+<li><p>Toggle</p></li>
+<li><p>Lecture etat On/Off</p></li>
+<li><p>Retour état automatique On/Off (Bind On/Off, Report On/Off)</p></li>
+<li><p>Groupe</p></li>
+<li><p>Scene (Devrait être ok d apres retour utilisateur)</p></li>
+<li><p>Puissance (Bind, Report)</p></li>
+<li><p>Routeur (elle diffuse les Link Status)</p></li>
 </ul>
 </dd>
-<dt>Pas supporté:</dt>
-<dd><ul class="first last simple">
-<li>Level (C&#8217;est normal la prise contient un relai)</li>
+<dt>Pas supporté:</dt><dd><ul class="simple">
+<li><p>Level (C’est normal la prise contient un relai)</p></li>
 </ul>
 </dd>
-<dt>En cours d investigation:</dt>
-<dd><ul class="first last simple">
-<li>Peut on avoir la conso ?</li>
+<dt>En cours d investigation:</dt><dd><ul class="simple">
+<li><p>Peut on avoir la conso ?</p></li>
 </ul>
 </dd>
 </dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Dixit Akila: NB: J’ai remarqué que sur certaines prises, la mesure de la consommation d’énergie n’existe pas. En effet, il faudra la centrale (à l’aide de l’OTA) pour que la prise se mette à jour et libère la fonctionnalité. Du coup, c’est le gros inconvénient, si vous n’avez que la ZiGate. Vous risquerez en achetant les produits Legrand Celiane Netatmo de ne pas avoir toutes les fonctionnalités …</p>
+<p class="admonition-title">Note</p>
+<p>Dixit Akila: NB: J’ai remarqué que sur certaines prises, la mesure de la consommation d’énergie n’existe pas. En effet, il faudra la centrale (à l’aide de l’OTA) pour que la prise se mette à jour et libère la fonctionnalité. Du coup, c’est le gros inconvénient, si vous n’avez que la ZiGate. Vous risquerez en achetant les produits Legrand Celiane Netatmo de ne pas avoir toutes les fonctionnalités …</p>
 </div>
 </div>
 <div class="section" id="premiere-mise-sous-tension">
 <h3>Premiere mise sous tension<a class="headerlink" href="#premiere-mise-sous-tension" title="Lien permanent vers ce titre">¶</a></h3>
-<p>(En cours d&#8217;écriture, Pas encore très clair)</p>
+<p>(En cours d’écriture, Pas encore très clair)</p>
 <p>Premiere mise sous tension avec la zigate en inclusion. La prise allume la Led en rouge et on entend claquer le relai mais pas de message radio zigbee.
 Un appui long de 8s sur le reset derriere l anneau fait flasher une fois la led puis quand je relance le reset la led cligonte 1 fois et le relai claque mais rien ni en ch11, ni en ch15.</p>
 </div>
 <div class="section" id="inclusion">
 <h3>inclusion<a class="headerlink" href="#inclusion" title="Lien permanent vers ce titre">¶</a></h3>
-<p>(En cours d&#8217;écriture, Pas encore très clair)</p>
-<p>Le bouton &#8220;reset&#8221; se trouve en façade en enlevant tous les caches et le bouton.
-Ensuite, il faut mettre la ZiGate en mode inclusion puis effectuer un appuie long 5-10 sec sur le reset ... attendre 10 sec ... puis faire un simple clic sur le reset.
-Si deja associé, faire un reset bouton proche roue crantée sur le Bouton au fond du trou. Avec un trombone appuyer environ 8 secondes. Une led s&#8217;allume vert, puis flash bleu, puis flash rouge, 1s apres faire un appui rapide sur le reset (Si ce n&#8217;est pas fait le module s&#8217;appaire puis passe en Beacon request Loop, très surprenant) et la le module fait un appairage. Et doit apparaitre dans Abeille. (Tests fait sur Channel 11, je ne sais pas si il y a des limitations sur ce point.)</p>
+<p>(En cours d’écriture, Pas encore très clair)</p>
+<p>Le bouton « reset » se trouve en façade en enlevant tous les caches et le bouton.
+Ensuite, il faut mettre la ZiGate en mode inclusion puis effectuer un appuie long 5-10 sec sur le reset … attendre 10 sec … puis faire un simple clic sur le reset.
+Si deja associé, faire un reset bouton proche roue crantée sur le Bouton au fond du trou. Avec un trombone appuyer environ 8 secondes. Une led s’allume vert, puis flash bleu, puis flash rouge, 1s apres faire un appui rapide sur le reset (Si ce n’est pas fait le module s’appaire puis passe en Beacon request Loop, très surprenant) et la le module fait un appairage. Et doit apparaitre dans Abeille. (Tests fait sur Channel 11, je ne sais pas si il y a des limitations sur ce point.)</p>
 <p>Aussi une bonne description ici: <a class="reference external" href="https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Legrand-corner.md#pairing-process">https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Legrand-corner.md#pairing-process</a></p>
 </div>
 </div>
@@ -124,41 +144,39 @@ Controle Charge Resistive
 <h3>Inclusion<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
-<li>A la sortie de la boite, sur alimentation électrique le module envoie des Beacons et la Led Rouge est allumée.</li>
-<li>Si je mets la ZiGate en inclusion et branche le module, il s&#8217;appaire au réseau zigbee, LED rouge s&#8217;éteind.</li>
-<li>Si deja associé, faire un reset bouton proche roue crantée sur le Bouton au fond du trou. Avec un trombone appuyer environ 8 secondes. Une led s&#8217;allume vert, puis flash bleu, puis flash rouge, 1s apres faire un appui rapide sur le reset (Si ce n&#8217;est pas fait le module s&#8217;appaire puis passe en Beacon request Loop, très surprenant) et la le module fait un appairage. Et doit apparaitre dans Abeille. (Tests fait sur Channel 11, je ne sais pas si il y a des limitations sur ce point.)</li>
-<li>Aussi une bonne description ici: <a class="reference external" href="https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Legrand-corner.md#pairing-process">https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Legrand-corner.md#pairing-process</a></li>
+<li><p>A la sortie de la boite, sur alimentation électrique le module envoie des Beacons et la Led Rouge est allumée.</p></li>
+<li><p>Si je mets la ZiGate en inclusion et branche le module, il s’appaire au réseau zigbee, LED rouge s’éteind.</p></li>
+<li><p>Si deja associé, faire un reset bouton proche roue crantée sur le Bouton au fond du trou. Avec un trombone appuyer environ 8 secondes. Une led s’allume vert, puis flash bleu, puis flash rouge, 1s apres faire un appui rapide sur le reset (Si ce n’est pas fait le module s’appaire puis passe en Beacon request Loop, très surprenant) et la le module fait un appairage. Et doit apparaitre dans Abeille. (Tests fait sur Channel 11, je ne sais pas si il y a des limitations sur ce point.)</p></li>
+<li><p>Aussi une bonne description ici: <a class="reference external" href="https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Legrand-corner.md#pairing-process">https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Legrand-corner.md#pairing-process</a></p></li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="id2">
 <h3>Fonctions<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h3>
-<dl class="docutils">
-<dt>Fonctionne:</dt>
-<dd><ul class="first simple">
-<li>On</li>
-<li>Off</li>
-<li>Toggle</li>
-<li>Lecture etat On/Off</li>
-<li>Retour état automatique On/Off (Bind On/Off, Report On/Off).</li>
+<dl>
+<dt>Fonctionne:</dt><dd><ul class="simple">
+<li><p>On</p></li>
+<li><p>Off</p></li>
+<li><p>Toggle</p></li>
+<li><p>Lecture etat On/Off</p></li>
+<li><p>Retour état automatique On/Off (Bind On/Off, Report On/Off).</p></li>
 </ul>
 <blockquote>
 <div><ul class="simple">
-<li>Sur appui bouton poussoir du boitier l&#8217;etat remonte. Le bouton provoque un toggle ( &lt;= Bouton Poussoir).</li>
-<li>Sur changement etat commandé depuis la ZiGate, il ne rapporte pas son état ! Heureusement Abeille demande !!!</li>
+<li><p>Sur appui bouton poussoir du boitier l’etat remonte. Le bouton provoque un toggle ( &lt;= Bouton Poussoir).</p></li>
+<li><p>Sur changement etat commandé depuis la ZiGate, il ne rapporte pas son état ! Heureusement Abeille demande !!!</p></li>
 </ul>
 </div></blockquote>
-<ul class="last simple">
-<li>Groupe</li>
-<li>Scene (Devrait être ok d apres retour utilisateur)</li>
-<li>Routeur (elle diffuse les Link Status)</li>
+<ul class="simple">
+<li><p>Groupe</p></li>
+<li><p>Scene (Devrait être ok d apres retour utilisateur)</p></li>
+<li><p>Routeur (elle diffuse les Link Status)</p></li>
 </ul>
 </dd>
-<dt>Pas supporté:</dt>
-<dd><ul class="first last simple">
-<li>Level (C&#8217;est normal le module contient un relai et ne contient pas le cluster level).</li>
-<li>Puissance (Pas dans le module)</li>
-<li>Consommation (Pas dans le module)</li>
+<dt>Pas supporté:</dt><dd><ul class="simple">
+<li><p>Level (C’est normal le module contient un relai et ne contient pas le cluster level).</p></li>
+<li><p>Puissance (Pas dans le module)</p></li>
+<li><p>Consommation (Pas dans le module)</p></li>
 </ul>
 </dd>
 </dl>
@@ -173,64 +191,61 @@ Controle Charge Resistive
 <h2>Interrupteur Sans neutre<a class="headerlink" href="#interrupteur-sans-neutre" title="Lien permanent vers ce titre">¶</a></h2>
 <a class="reference internal image-reference" href="_images/Capture_d_ecran_2019_07_07_a_08_56_58.png"><img alt="_images/Capture_d_ecran_2019_07_07_a_08_56_58.png" src="_images/Capture_d_ecran_2019_07_07_a_08_56_58.png" style="width: 200px;" /></a>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Bien mettre une charge résistive.</p>
+<p class="admonition-title">Note</p>
+<p>Bien mettre une charge résistive.</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Charge entre 5W et 300W d&#8217;après la doc.</p>
+<p class="admonition-title">Note</p>
+<p>Charge entre 5W et 300W d’après la doc.</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Contrairement aux interrupteurs Xiaomi qui se comportent en End Device qui s&#8217;endorment qui donc ne routent pas et poll les commandes et sont donc lent à réagir aux commandes. Les interrupteurs Legrand sont des routeurs en éveille permanent, donc réagisse immédiatement et participe au mesh.</p>
+<p class="admonition-title">Note</p>
+<p>Contrairement aux interrupteurs Xiaomi qui se comportent en End Device qui s’endorment qui donc ne routent pas et poll les commandes et sont donc lent à réagir aux commandes. Les interrupteurs Legrand sont des routeurs en éveille permanent, donc réagisse immédiatement et participe au mesh.</p>
 </div>
 <div class="section" id="id3">
 <h3>Inclusion<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
-<li>Zigate en mode Inclusion</li>
-<li>Mise sous tension de l&#8217;interrupteur,</li>
-<li>il rejoint le réseau (Dimmer switch w/o neutral),</li>
-<li>il est créé dans Abeille.</li>
-<li>Aussi une bonne description ici: <a class="reference external" href="https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Legrand-corner.md#pairing-process">https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Legrand-corner.md#pairing-process</a></li>
+<li><p>Zigate en mode Inclusion</p></li>
+<li><p>Mise sous tension de l’interrupteur,</p></li>
+<li><p>il rejoint le réseau (Dimmer switch w/o neutral),</p></li>
+<li><p>il est créé dans Abeille.</p></li>
+<li><p>Aussi une bonne description ici: <a class="reference external" href="https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Legrand-corner.md#pairing-process">https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Legrand-corner.md#pairing-process</a></p></li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="id4">
 <h3>Fonctions<a class="headerlink" href="#id4" title="Lien permanent vers ce titre">¶</a></h3>
-<dl class="docutils">
-<dt>Fonctionne:</dt>
-<dd><ul class="first simple">
-<li>On</li>
-<li>Off</li>
-<li>Toggle</li>
-<li>Lecture etat On/Off</li>
-<li>Lecture Level</li>
-<li>Routeur (elle diffuse les Link Status)</li>
-<li>Retour état automatique On/Off (Bind On/Off, Report On/Off).</li>
+<dl>
+<dt>Fonctionne:</dt><dd><ul class="simple">
+<li><p>On</p></li>
+<li><p>Off</p></li>
+<li><p>Toggle</p></li>
+<li><p>Lecture etat On/Off</p></li>
+<li><p>Lecture Level</p></li>
+<li><p>Routeur (elle diffuse les Link Status)</p></li>
+<li><p>Retour état automatique On/Off (Bind On/Off, Report On/Off).</p></li>
 </ul>
 <blockquote>
 <div><ul class="simple">
-<li>Sur appui bouton On ou Off de l interrupteur l&#8217;etat remonte.</li>
-<li>Sur changement etat commandé depuis la ZiGate, il ne rapporte pas son état ! Heureusement Abeille demande !!!</li>
+<li><p>Sur appui bouton On ou Off de l interrupteur l’etat remonte.</p></li>
+<li><p>Sur changement etat commandé depuis la ZiGate, il ne rapporte pas son état ! Heureusement Abeille demande !!!</p></li>
 </ul>
 </div></blockquote>
-<ul class="last simple">
-<li>Groupe</li>
-<li>Scene (Devrait être ok pas testé)</li>
+<ul class="simple">
+<li><p>Groupe</p></li>
+<li><p>Scene (Devrait être ok pas testé)</p></li>
 </ul>
 </dd>
-<dt>Pas supporté:</dt>
-<dd><ul class="first last simple">
-<li>Puissance (Pas de cluster trouvé)</li>
-<li>Consommation (Pas de cluster trouvé)</li>
+<dt>Pas supporté:</dt><dd><ul class="simple">
+<li><p>Puissance (Pas de cluster trouvé)</p></li>
+<li><p>Consommation (Pas de cluster trouvé)</p></li>
 </ul>
 </dd>
-<dt>En cours d investigation:</dt>
-<dd><ul class="first last simple">
-<li>Cmd  Zigate Move to level with On/off ne fonctionne pas</li>
-<li>Appui prolongé haut ou bas de l interrupteur ne provoque pas de variatieon ! Ou est le dimmer ?</li>
-<li>D&#8217;après la doc option variateur: Activable depuis l&#8217;application.</li>
+<dt>En cours d investigation:</dt><dd><ul class="simple">
+<li><p>Cmd  Zigate Move to level with On/off ne fonctionne pas</p></li>
+<li><p>Appui prolongé haut ou bas de l interrupteur ne provoque pas de variatieon ! Ou est le dimmer ?</p></li>
+<li><p>D’après la doc option variateur: Activable depuis l’application.</p></li>
 </ul>
 </dd>
 </dl>
@@ -246,27 +261,27 @@ Controle Charge Resistive
 <div class="section" id="id5">
 <h3>inclusion<a class="headerlink" href="#id5" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>Cet interrupteur n&#8217;est pas facile à inclure</li>
-<li>Ce qui semble fonctionner:</li>
+<li><p>Cet interrupteur n’est pas facile à inclure</p></li>
+<li><p>Ce qui semble fonctionner:</p></li>
 </ul>
 <ul class="simple">
-<li>Réseau zigbee sur canal 11</li>
-<li>Activer le &#8220;Blocage traitement Annonces&#8221; dans la config du plugin</li>
-<li>Mettre la zigate en Inclusion</li>
-<li>Appui d environ 20s sur le bouton &#8216;reset&#8217; (bouton caché, legerement en en bas a droite sur le PCB)</li>
-<li>L inclusion doit se produire, sinon faire un clic court quelques secondes plus tard sur ce meme bouton.</li>
-<li>L&#8217;équipement doit être créé dans Abeille</li>
-<li>Desactiver le mode inclusion de la Zigate</li>
-<li>Desactiver le &#8220;Blocage traitement Annonces&#8221; dans la config du plugin</li>
+<li><p>Réseau zigbee sur canal 11</p></li>
+<li><p>Activer le « Blocage traitement Annonces » dans la config du plugin</p></li>
+<li><p>Mettre la zigate en Inclusion</p></li>
+<li><p>Appui d environ 20s sur le bouton “reset” (bouton caché, legerement en en bas a droite sur le PCB)</p></li>
+<li><p>L inclusion doit se produire, sinon faire un clic court quelques secondes plus tard sur ce meme bouton.</p></li>
+<li><p>L’équipement doit être créé dans Abeille</p></li>
+<li><p>Desactiver le mode inclusion de la Zigate</p></li>
+<li><p>Desactiver le « Blocage traitement Annonces » dans la config du plugin</p></li>
 </ul>
 </div>
 <div class="section" id="parametrer">
 <h3>parametrer<a class="headerlink" href="#parametrer" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>Pour fonctionner, le bouton doit connaitre le groupe à utiliser pour envoyer les commandes On et Off aux equipements.</li>
-<li>Renseigner le groupe dans le champ Id par exemple AAAA</li>
-<li>Réveiller le bouton avec un appui court sur le on (Bas) ou off (Haut)</li>
-<li>Envoyer le groupe avec la commande &#8220;Set Group Remote Legrand&#8221;</li>
+<li><p>Pour fonctionner, le bouton doit connaitre le groupe à utiliser pour envoyer les commandes On et Off aux equipements.</p></li>
+<li><p>Renseigner le groupe dans le champ Id par exemple AAAA</p></li>
+<li><p>Réveiller le bouton avec un appui court sur le on (Bas) ou off (Haut)</p></li>
+<li><p>Envoyer le groupe avec la commande « Set Group Remote Legrand »</p></li>
 </ul>
 </div>
 <div class="section" id="fonctionnement">
@@ -288,67 +303,18 @@ Si Elle est On elle semble accepter les level mais va du max au min (et vis vers
 
 
           </div>
+          
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="index.html">
-              <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Recherche rapide</h3>
-    <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-  <h3><a href="index.html">Table des Matières</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Legrand</a><ul>
-<li><a class="reference internal" href="#contacteur">Contacteur</a></li>
-<li><a class="reference internal" href="#prise-220v">Prise 220V</a><ul>
-<li><a class="reference internal" href="#fonctions">Fonctions</a></li>
-<li><a class="reference internal" href="#premiere-mise-sous-tension">Premiere mise sous tension</a></li>
-<li><a class="reference internal" href="#inclusion">inclusion</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-encastre">Module Encastré</a><ul>
-<li><a class="reference internal" href="#specifications">Spécifications</a></li>
-<li><a class="reference internal" href="#id1">Inclusion</a></li>
-<li><a class="reference internal" href="#id2">Fonctions</a></li>
-<li><a class="reference internal" href="#bouton-pourssoir-sur-le-boitier">Bouton Pourssoir sur le boitier</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#interrupteur-sans-neutre">Interrupteur Sans neutre</a><ul>
-<li><a class="reference internal" href="#id3">Inclusion</a></li>
-<li><a class="reference internal" href="#id4">Fonctions</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#interrupteur-on-off-sur-pile">Interrupteur On/Off sur pile</a><ul>
-<li><a class="reference internal" href="#id5">inclusion</a></li>
-<li><a class="reference internal" href="#parametrer">parametrer</a></li>
-<li><a class="reference internal" href="#fonctionnement">Fonctionnement</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#interrupteur-entree-sortie-sur-pile">Interrupteur Entrée/Sortie sur pile</a></li>
-</ul>
-</li>
-</ul>
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
+    <div class="clearer"></div>
+  </div>
 
     <div class="footer">
-      &copy;2019-20, KiwiHC16.
+      &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.9</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>
 

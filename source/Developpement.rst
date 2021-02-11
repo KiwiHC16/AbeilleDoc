@@ -1,10 +1,10 @@
-#############
 Developpement
-#############
+=============
 
-**************
+Cette section est dédiée aux developpeurs ou à ceux qui veulent entrer un peu + dans les entrailles d'Abeille.
+
 Grandes lignes
-**************
+--------------
 
 * branche master : pour tous les développements en cours a condition que les pushs soient utilisables et "stabilisés" pour la phase de test.
 * branche beta: pour figer un développement et le mettre en test avant de passer en stable
@@ -12,14 +12,14 @@ Grandes lignes
 * Dev en cours: autre branche
 
 Vue générale
-============
+--------------
 
 Vue générale de la solution
 
 .. image:: images/Capture_d_ecran_2020-04-09_a_10_31_23.png
 
 Règles à suivre
-===============
+--------------
 
 * La structure de base des plugins est présentée dans la doc Jeedom: https://doc.jeedom.com/fr_FR/dev/plugin_template. Elle est similaire à la structure du 'core' lui même.
 * Un template est fourni par Jeedom: https://github.com/jeedom/plugin-template mais en dehors des informations déja présentées ci dessous, il n'est pas vraiment utilisé ni cohérent.
@@ -27,7 +27,7 @@ Règles à suivre
 Il faut que l'on se cale le plus possible sur ces documents.
 
 Règles à suivre additionnelles pour Abeille
-===========================================
+--------------
 
 * Outils de dev: Visual Studio Code avec les paramètres par défaut.
 * Git: garder le master toujours fonctionnel après un commit.
@@ -43,9 +43,11 @@ Règles à suivre additionnelles pour Abeille
 * Est accepté: ///@TODO: blablabla dans le code
 
 Hiérarchie (répertoires) du plugin Abeille
-==========================================
+--------------
 
 Basé sur "https://doc.jeedom.com/fr_FR/dev/plugin_template".
+
+Note: Tous les noms de répertoire en **ANGLAIS** et en **MINUSCULES**
 
 * **core** : Dossier contenant tous les fichiers de fonctionnement interne.
   Ne contient pas de fichiers gérant la partie "User Interface" donc pas d'html.
@@ -77,6 +79,11 @@ Basé sur "https://doc.jeedom.com/fr_FR/dev/plugin_template".
 
   N'est pas utilisé pour ne pas dépasser la taille limite imposée par Jeedom.
   Les docs sont dans un repo séparé.
+* **resources**
+
+  * **fw_zigate** : FW zigbee commun à toutes les zigates actuelles.
+  * **fw_wifi** : FW specifique à la zigate WIFI.
+
 * **tmp**
 
   Répertoire LOCAL (non versionné) ne contenant que qq fichiers qui bougent rarement. Il contient entre autre le fichier de config "developpeur". Les logs sont migrés sous le "tmp" officiel Jeedom (jeedom::getTmpFolder("Abeille")).
@@ -90,9 +97,8 @@ Répertoires hors plugin
 Propositions à discuter
 
   * Network : a virer progressivement. Les fichiers devraient pouvoir trouver leur place dans "core", et/ou "desktop"/"mobile"
-  * resources/fw_zigate : FW zigate.
-  * resources/fw_wifi : FW specific partie fw_wifi
   * Pas de partie "demond" : Tout comme "Network", il n'ya a pas de classification liée à une fonctionalité. Au vu des recherches, ca n'a pas vraiment de sens. Aucun plugin a isolé son "démon", sauf "openzwave" qui lui meme se base sur un code exterieur. Le format du template n'est jamais utilisé par les plugin officiels.
     Les démons n'étant rien d'autre que des codes ou classes, je suggère de coller à la structure Jeedom ci dessus et mettre ces codes dans "core".
   * tests : Vu dans Jeedom, ca fait du sens d'isoler les codes de test. Sous structure dans la lignée de core. Ex tests/php, tests/class ...
 
+.. include:: IntegrityCheck.rst

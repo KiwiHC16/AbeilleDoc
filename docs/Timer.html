@@ -1,44 +1,68 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Timer &#8212; documentation Abeille 08.12.2020</title>
-    
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer &#8212; Documentation Abeille 11.02.2021</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '08.12.2020',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  false
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="top" title="documentation Abeille 08.12.2020" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
+  
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body role="document">
-  
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div><h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Debug.html">Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
+</ul>
 
-    <div class="document">
+
+        </div>
+      </div>
       <div class="documentwrapper">
         <div class="bodywrapper">
+          
+
           <div class="body" role="main">
             
   <div class="section" id="timer">
@@ -55,7 +79,7 @@
 <p>T1-&gt;T2: Stable à 100% =&gt; duration (Seconde)</p>
 <p>T2-&gt;T3: Ramp Down de 100% à 0% =&gt; RampDown</p>
 <p>T3-&gt; : n existe plus</p>
-<p>Exemple d&#8217;application: allumage progressif d une ampoule, maintient allumé pendant x secondes puis extinction progressive.</p>
+<p>Exemple d’application: allumage progressif d une ampoule, maintient allumé pendant x secondes puis extinction progressive.</p>
 <p>[NOTE]
 Il est important de noter que chaque phase fait au minimum 1s.</p>
 <p>[NOTE]
@@ -64,55 +88,55 @@ Le rafraichissement du widget se fait toutes les 5s mais la mise à jour des val
 <div class="section" id="trois-commandes">
 <h3>Trois commandes<a class="headerlink" href="#trois-commandes" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>Start: permet d&#8217;exécuter une commande et de démarrer le Timer.</li>
-<li>Cancel: permet d&#8217;exécuter une commande et d&#8217;annuler le Timer.</li>
-<li>Stop: permet d&#8217;exécuter une commande, à l&#8217;expiration du Timer.</li>
-<li>Trigger: a un role particulier. Si vous appeler cette commande, le plugin va parcourir les commandes Start, STop, Cancel pour trouver si une condition associée est vri et dans ce cas executer la commande.</li>
+<li><p>Start: permet d’exécuter une commande et de démarrer le Timer.</p></li>
+<li><p>Cancel: permet d’exécuter une commande et d’annuler le Timer.</p></li>
+<li><p>Stop: permet d’exécuter une commande, à l’expiration du Timer.</p></li>
+<li><p>Trigger: a un role particulier. Si vous appeler cette commande, le plugin va parcourir les commandes Start, STop, Cancel pour trouver si une condition associée est vri et dans ce cas executer la commande.</p></li>
 </ul>
 </div>
 <div class="section" id="retour-d-information">
-<h3>Retour d&#8217;information<a class="headerlink" href="#retour-d-information" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Retour d’information<a class="headerlink" href="#retour-d-information" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>Time-Time: Date de la dernière action sur le Timer</li>
-<li>Time-TimeStamp: Heure système de la dernière action</li>
-<li>Duration: Temps restant avant expiration du Timer en secondes</li>
-<li>ExpiryTime: Heure d&#8217;expiration du Timer</li>
-<li>RampUpDown: Pourcentage entre 0 et 100 (Ramp Up 0-&gt;100, Ramp Down 100-&gt;0)</li>
-<li>Etat: 0 ou 1. 1 si timer demarré.</li>
+<li><p>Time-Time: Date de la dernière action sur le Timer</p></li>
+<li><p>Time-TimeStamp: Heure système de la dernière action</p></li>
+<li><p>Duration: Temps restant avant expiration du Timer en secondes</p></li>
+<li><p>ExpiryTime: Heure d’expiration du Timer</p></li>
+<li><p>RampUpDown: Pourcentage entre 0 et 100 (Ramp Up 0-&gt;100, Ramp Down 100-&gt;0)</p></li>
+<li><p>Etat: 0 ou 1. 1 si timer demarré.</p></li>
 </ul>
 <p>Elles ne sont pas forcement toutes visibles, à vous de choisir.</p>
 <p>Dans les phase de ramp Up ou Down, la commande actionRamp/scenarioRamp est exécutée régulièrement avec pour paramètre la valeur en cours de RampUpDown.</p>
 </div>
 <div class="section" id="creation-d-un-timers">
 <h3>Creation d un Timers<a class="headerlink" href="#creation-d-un-timers" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Pour créer un objet Timer, clic sur le bouton &#8220;Timer&#8221; dans la configuration du plugin.</p>
+<p>Pour créer un objet Timer, clic sur le bouton « Timer » dans la configuration du plugin.</p>
 <p>Un message doit apparaitre pour annoncer la création du Timer avec un Id Abeille-NombreAléatoire.</p>
 <img alt="_images/Capture_d_ecran_2018_03_21_a_13_14_36.png" src="_images/Capture_d_ecran_2018_03_21_a_13_14_36.png" />
-<p>Apres avoir rafraichi l&#8217;écran vous devriez avoir l objet:</p>
+<p>Apres avoir rafraichi l’écran vous devriez avoir l objet:</p>
 <img alt="_images/Capture_d_ecran_2018_03_21_a_13_16_55.png" src="_images/Capture_d_ecran_2018_03_21_a_13_16_55.png" />
 </div>
 <div class="section" id="configuration-du-timer">
 <h3>Configuration du Timer<a class="headerlink" href="#configuration-du-timer" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="section" id="equipement">
 <h4>Equipement<a class="headerlink" href="#equipement" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Comme pour tous les objets, dans l&#8217;onglet Équipement, vous pouvez changer son nom, le rattacher à un objet Parent, etc...</p>
+<p>Comme pour tous les objets, dans l’onglet Équipement, vous pouvez changer son nom, le rattacher à un objet Parent, etc…</p>
 </div>
 <div class="section" id="param">
 <h4>Param<a class="headerlink" href="#param" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Dans l&#8217;onglet paramétrage du Timer, remplissez les champs:</p>
+<p>Dans l’onglet paramétrage du Timer, remplissez les champs:</p>
 <ul class="simple">
-<li>Ramp Up (s)): temps en secondes pour passer de T0 à T1</li>
-<li>Active (s): c&#8217;est la durée en secondes entre T1 et T2, soit entre la fin du ramp up et le début du ramp down.</li>
-<li>Ramp Down (s)): temps en secondes pour passer de T2 à T3</li>
-<li>Action sur demarrage: Action a éxecuter au démarrage du Timer</li>
-<li>Action sur arret: arret executée lors de l&#8217;expiration du timer.</li>
-<li>Action sur annulation: action excutée si le timer est annulé</li>
-<li>Ramp Action: action qui sera executer lors de la variation de la commande info RampUpDown.</li>
-<li>Parametre: parametres fournis à la commande STart/Stop/Cancel lors de son execution.</li>
-<li>Scenario sur demarrage: Scenario a éxecuter au démarrage du Timer</li>
-<li>Scenario sur arret: Scenario executée lors de l&#8217;expiration du timer.</li>
-<li>Scenario sur annulation: Scenario excutée si le timer est annulé</li>
-<li>Trigger: Chaque commande Start/Stop/Cancel peut avoir une condition qui sera vérifiée lors d&#8217;un appel à la commande Trigger.</li>
+<li><p>Ramp Up (s)): temps en secondes pour passer de T0 à T1</p></li>
+<li><p>Active (s): c’est la durée en secondes entre T1 et T2, soit entre la fin du ramp up et le début du ramp down.</p></li>
+<li><p>Ramp Down (s)): temps en secondes pour passer de T2 à T3</p></li>
+<li><p>Action sur demarrage: Action a éxecuter au démarrage du Timer</p></li>
+<li><p>Action sur arret: arret executée lors de l’expiration du timer.</p></li>
+<li><p>Action sur annulation: action excutée si le timer est annulé</p></li>
+<li><p>Ramp Action: action qui sera executer lors de la variation de la commande info RampUpDown.</p></li>
+<li><p>Parametre: parametres fournis à la commande STart/Stop/Cancel lors de son execution.</p></li>
+<li><p>Scenario sur demarrage: Scenario a éxecuter au démarrage du Timer</p></li>
+<li><p>Scenario sur arret: Scenario executée lors de l’expiration du timer.</p></li>
+<li><p>Scenario sur annulation: Scenario excutée si le timer est annulé</p></li>
+<li><p>Trigger: Chaque commande Start/Stop/Cancel peut avoir une condition qui sera vérifiée lors d’un appel à la commande Trigger.</p></li>
 </ul>
 <p>[NOTE]
 Toutes les commandes sont au format #[objet][equipement][cmd]# par exemple #[test][Ruban][Level]#</p>
@@ -122,29 +146,29 @@ Dans les parametres actions, vous pouvez mentionner plusieurs actions a executer
 </div>
 <div class="section" id="commande-ou-scenario">
 <h3>Commande ou Scénario<a class="headerlink" href="#commande-ou-scenario" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Par défaut l&#8217;objet Timer est créé avec des commande Start, Stop, Cancel qui font référence à l&#8217;exécution d&#8217;une commande.</p>
-<p>Mais vous avez la possibilité d&#8217;appeler un scénario à la place d&#8217;une commande.</p>
-<p>Cela vous permet beaucoup plus de flexibilité comme le lancement d&#8217;une série de commandes.</p>
-<p>L&#8217;Id du scénario est dans le tab de la page de configuration du scenario.</p>
+<p>Par défaut l’objet Timer est créé avec des commande Start, Stop, Cancel qui font référence à l’exécution d’une commande.</p>
+<p>Mais vous avez la possibilité d’appeler un scénario à la place d’une commande.</p>
+<p>Cela vous permet beaucoup plus de flexibilité comme le lancement d’une série de commandes.</p>
+<p>L’Id du scénario est dans le tab de la page de configuration du scenario.</p>
 <img alt="_images/Capture_d_ecran_2018_03_27_a_12_55_27.png" src="_images/Capture_d_ecran_2018_03_27_a_12_55_27.png" />
-<p>Ici vous pouvez voir l&#8217;ID 3 du scénario utilisé.</p>
+<p>Ici vous pouvez voir l’ID 3 du scénario utilisé.</p>
 <p>[NOTE]
-Vous pouvez declencher le Timer depuis une (ou plusieures) commandes info d&#8217;autres équipements. Pour cela selectionner la commande Trigger du Timer comme ci dessous:</p>
+Vous pouvez declencher le Timer depuis une (ou plusieures) commandes info d’autres équipements. Pour cela selectionner la commande Trigger du Timer comme ci dessous:</p>
 <img alt="_images/Capture_d_ecran_2018_03_21_a_13_16_59.png" src="_images/Capture_d_ecran_2018_03_21_a_13_16_59.png" />
 <p>Vous pouver provoquer cette execution uniquement si certains criteres ou tout le temps en mettant un critere toujours valide. Ici par exemple different de -1 qui est toujours vrai pour une valeur binaire.</p>
-<p>Ensuite le Timer va regarder qu&#8217;elle action executer (Start, Stop, Cancel) en fonction des critères définis dans les parametres:</p>
+<p>Ensuite le Timer va regarder qu’elle action executer (Start, Stop, Cancel) en fonction des critères définis dans les parametres:</p>
 <img alt="_images/Capture_d_ecran_2018_03_27_a_12_55_34.png" src="_images/Capture_d_ecran_2018_03_27_a_12_55_34.png" />
 <p>Ce qui interressant ici est que la formule peut inclure ce que vous voulez et pas forcement la commande qui a provoqué le trigger.</p>
 <p>Exemple:</p>
-<p>Controler un eclairage sur ouverture d&#8217;un porte. Le scenario le plus simple est: j&#8217;ouvre la porte l&#8217;eclairage s allume, je ferme la port l eclairage s eteint.
-Mais comment faire par exemple si je veux sortir 3 minutes en refermant la porte alors qu&#8217;il fait nuit ?
-Et etre sure que si la porte reste ouverte toute la nuit, l&#8217;eclairage lui s&#8217;eteigne apres 1 heure d&#8217;eclairage ?</p>
+<p>Controler un eclairage sur ouverture d’un porte. Le scenario le plus simple est: j’ouvre la porte l’eclairage s allume, je ferme la port l eclairage s eteint.
+Mais comment faire par exemple si je veux sortir 3 minutes en refermant la porte alors qu’il fait nuit ?
+Et etre sure que si la porte reste ouverte toute la nuit, l’eclairage lui s’eteigne apres 1 heure d’eclairage ?</p>
 <p>Il suffit de chainer les timers !!!</p>
 <ul class="simple">
-<li>Sur la commande &#8220;etat&#8221; du capteur de porte, je met un trigger sur timer 1.</li>
-<li>Je donne au timer 1 une durée d&#8216;1h sur ouverture de porte</li>
-<li>Je demande le declenchement du timer 2 sur Stop du Timer 1 (Quand je ferme la porte)</li>
-<li>Le timer 2 start et reste allumé pour 5 minutes ce qui me laisse le temps de faire mes trois minutes avant de rentrer.</li>
+<li><p>Sur la commande « etat » du capteur de porte, je met un trigger sur timer 1.</p></li>
+<li><p>Je donne au timer 1 une durée d’1h sur ouverture de porte</p></li>
+<li><p>Je demande le declenchement du timer 2 sur Stop du Timer 1 (Quand je ferme la porte)</p></li>
+<li><p>Le timer 2 start et reste allumé pour 5 minutes ce qui me laisse le temps de faire mes trois minutes avant de rentrer.</p></li>
 </ul>
 </div>
 </div>
@@ -152,54 +176,18 @@ Et etre sure que si la porte reste ouverte toute la nuit, l&#8217;eclairage lui 
 
 
           </div>
+          
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="index.html">
-              <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Recherche rapide</h3>
-    <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-  <h3><a href="index.html">Table des Matières</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Timer</a><ul>
-<li><a class="reference internal" href="#introduction">Introduction</a><ul>
-<li><a class="reference internal" href="#fonctionnement">Fonctionnement</a></li>
-<li><a class="reference internal" href="#trois-commandes">Trois commandes</a></li>
-<li><a class="reference internal" href="#retour-d-information">Retour d&#8217;information</a></li>
-<li><a class="reference internal" href="#creation-d-un-timers">Creation d un Timers</a></li>
-<li><a class="reference internal" href="#configuration-du-timer">Configuration du Timer</a><ul>
-<li><a class="reference internal" href="#equipement">Equipement</a></li>
-<li><a class="reference internal" href="#param">Param</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#commande-ou-scenario">Commande ou Scénario</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
+    <div class="clearer"></div>
+  </div>
 
     <div class="footer">
-      &copy;2019-20, KiwiHC16.
+      &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.9</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>
 

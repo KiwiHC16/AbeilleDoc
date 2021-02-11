@@ -1,44 +1,68 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Modele et Fichier JSON &#8212; documentation Abeille 08.12.2020</title>
-    
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modele et Fichier JSON &#8212; Documentation Abeille 11.02.2021</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '08.12.2020',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  false
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="top" title="documentation Abeille 08.12.2020" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
+  
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body role="document">
-  
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div><h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Debug.html">Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
+</ul>
 
-    <div class="document">
+
+        </div>
+      </div>
       <div class="documentwrapper">
         <div class="bodywrapper">
+          
+
           <div class="body" role="main">
             
   <div class="section" id="modele-et-fichier-json">
@@ -46,40 +70,40 @@
 <p>(Cette partie doit être revue et mise a jour sur la base des dernieres evolutions)</p>
 <div class="section" id="video">
 <h2>Video<a class="headerlink" href="#video" title="Lien permanent vers ce titre">¶</a></h2>
-<p><a class="reference external" href="https://youtu.be/WDeFK0OQETQ">Video montrant comment faire un modele à partir d&#8217;un modèle existant.</a></p>
+<p><a class="reference external" href="https://youtu.be/WDeFK0OQETQ">Video montrant comment faire un modele à partir d’un modèle existant.</a></p>
 </div>
 <div class="section" id="fonctionnement">
 <h2>Fonctionnement<a class="headerlink" href="#fonctionnement" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Losqu&#8217;un équipement Zigbee est appairé/inclus à la zigate, il (normalement) remonte son nom à Abeille.</p>
+<p>Losqu’un équipement Zigbee est appairé/inclus à la zigate, il (normalement) remonte son nom à Abeille.</p>
 <p>Le plugin Abeille utilise celui-ci pour créer un nouvel équipement dans Jeedom.</p>
-<p>Le nom permet de déterminer un type d&#8217;équipement. Chaque type d&#8217;équipement possède sa configuration, ses informations et ses actions.</p>
+<p>Le nom permet de déterminer un type d’équipement. Chaque type d’équipement possède sa configuration, ses informations et ses actions.</p>
 <p>Tout cela est stocké dans un fichier JSON au nom du périphérique (plugins/Abeille/core/config/devices/name/name.json).</p>
-<p>name = la valeur du message 0000-01-0005 que l on peut récupérer dans AbeilleParser lorsque le plugin est en mode debug lors de l&#8217;appairage/inclusion.</p>
-<p>Dans ce fichier JSON vous trouverer toutes les informations de l&#8217;équipement mais aussi les commandes info et les commandes actions.</p>
-<p>Les commandes infos recupèrent les informations qui remontent d&#8217;un équipement.</p>
-<p>Les commandes action permettent d&#8217;envoyer des commandes aux eéquipements.</p>
+<p>name = la valeur du message 0000-01-0005 que l on peut récupérer dans AbeilleParser lorsque le plugin est en mode debug lors de l’appairage/inclusion.</p>
+<p>Dans ce fichier JSON vous trouverer toutes les informations de l’équipement mais aussi les commandes info et les commandes actions.</p>
+<p>Les commandes infos recupèrent les informations qui remontent d’un équipement.</p>
+<p>Les commandes action permettent d’envoyer des commandes aux eéquipements.</p>
 <p>Ces commandes sont elles aussi definies dans des fichiers JSON que l on trouve dans le repertoire lugins/Abeille/core/config/devices/Template.</p>
 <p>Il est important de comprendre que les commandes infos ou actions sont en relation avec du code du plugin Abeille.</p>
 <p>La liste des commandes possibles commence à être importante ce qui doit vous permettre de faire un modele pour votre produit ou au moins en partie.</p>
-<p>Mais il existe encore plein de commandes inconnues qui vont demander de developper du code ce qui n&#8217;est pas couvert dans cette documentation.</p>
+<p>Mais il existe encore plein de commandes inconnues qui vont demander de developper du code ce qui n’est pas couvert dans cette documentation.</p>
 <div class="section" id="interface-jeedom">
 <h3>Interface Jeedom<a class="headerlink" href="#interface-jeedom" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Penons un exemple: Capteur de porte Xiaomi.</p>
 <p>Dans Jeedom, il apparaîtra sous le widget:</p>
 <img alt="_images/Screen_Shot_2018_01_29_at_19_39_52.png" src="_images/Screen_Shot_2018_01_29_at_19_39_52.png" />
-<p>Son nom est pour l&#8217;occasion &#8220;lumi.sensor_magnet.aq2&#8221;. C&#8217;est à partir de là que tout le reste a été déduit, par exemple le symbole de porte,...</p>
-<p>Si vous sélectionnez, l&#8217;objet vous arrivez dans la page suivante:</p>
+<p>Son nom est pour l’occasion « lumi.sensor_magnet.aq2 ». C’est à partir de là que tout le reste a été déduit, par exemple le symbole de porte,…</p>
+<p>Si vous sélectionnez, l’objet vous arrivez dans la page suivante:</p>
 <img alt="_images/Screen_Shot_2018_01_29_at_19_40_30.png" src="_images/Screen_Shot_2018_01_29_at_19_40_30.png" />
-<p>En sélectionnant &#8220;Configuration Avancée&#8221;:</p>
+<p>En sélectionnant « Configuration Avancée »:</p>
 <img alt="_images/Screen_Shot_2018_01_29_at_20_47_13.png" src="_images/Screen_Shot_2018_01_29_at_20_47_13.png" />
-<p>Vous pouvez voir tous les paramètres associés à l&#8217;équipement et vous en servir d&#8217;exemple pour définir les paramètres de configuration à mettre dans le fichier JSON.</p>
+<p>Vous pouvez voir tous les paramètres associés à l’équipement et vous en servir d’exemple pour définir les paramètres de configuration à mettre dans le fichier JSON.</p>
 <p>Attention tous les paramètres ne sont pas encore pris en compte.</p>
-<p>Puis si vous sélectionnez &#8220;Commandes&#8221;, puis une commande spécifique à l&#8217;aide du symbole engrenage:</p>
+<p>Puis si vous sélectionnez « Commandes », puis une commande spécifique à l’aide du symbole engrenage:</p>
 <img alt="_images/Screen_Shot_2018_01_29_at_19_42_20.png" src="_images/Screen_Shot_2018_01_29_at_19_42_20.png" />
-<p>Puis si vous sélectionnez une commande spécifique comme l&#8217;état:</p>
+<p>Puis si vous sélectionnez une commande spécifique comme l’état:</p>
 <img alt="_images/Screen_Shot_2018_01_29_at_19_42_44.png" src="_images/Screen_Shot_2018_01_29_at_19_42_44.png" />
-<p>Vous pouvez voir tous les paramètres associés à une commande et vous en servir d&#8217;exemple pour définir les paramatres de configuration à mettre dans le fichier JSON.</p>
-<p>Si vous modifiez à l&#8217;aide de Jeedom la présentation de la commande cela vous permet de savoir ce qu&#8217;il faut mettre dans le fichier de conf.</p>
+<p>Vous pouvez voir tous les paramètres associés à une commande et vous en servir d’exemple pour définir les paramatres de configuration à mettre dans le fichier JSON.</p>
+<p>Si vous modifiez à l’aide de Jeedom la présentation de la commande cela vous permet de savoir ce qu’il faut mettre dans le fichier de conf.</p>
 <p>Mais attention car il y a un mais, tous les paramètres ne sont pas encore gérés par Abeille.</p>
 </div>
 <div class="section" id="editer-json">
@@ -87,23 +111,23 @@
 <p>(Cette partie doit être mise à jour car les fichiers JSON ont beaucoup changés)</p>
 <p>Vous avez plusieurs façons pour éditer le fichier JSON.</p>
 <ul class="simple">
-<li>La premiere est d&#8217;éditer le fichier sous format texte mais je ne vous le conseille pas car ce n&#8217;est pas facile à lire et à modifier (beaucoup de parentheses ouvrantes et fermantes qu&#8217;il faut absolument respecter)</li>
-<li>Utiliser un éditeur JSON (il y en a plein sur internet).</li>
+<li><p>La premiere est d’éditer le fichier sous format texte mais je ne vous le conseille pas car ce n’est pas facile à lire et à modifier (beaucoup de parentheses ouvrantes et fermantes qu’il faut absolument respecter)</p></li>
+<li><p>Utiliser un éditeur JSON (il y en a plein sur internet).</p></li>
 </ul>
 <p>Une fois ouvert le fichier peut ressembler à quelque chose comme ca:</p>
 <img alt="_images/Capture_d_ecran_2018_01_29_a_21_15_55.png" src="_images/Capture_d_ecran_2018_01_29_a_21_15_55.png" />
 <p>Vous retrouvez les même informations que celles vues dans le chapitre précédent.</p>
 <p>Comparez les différents équipements entre eux cela vous aidera à comprendre les paramètres.</p>
-<p>Vous pouvez faire des copier / coller avec vos informations et sauvegarder. Le fichier est lu à chaque inclusion d&#8217;équipement donc vous pouvez rapidement voir le résultat. Pour cela supprimez l&#8217;équipement dans Jeedom et refaite une inclusion.</p>
-<p>Les fichiers JSON ont évolués et intègrent des inclusion d&#8217;autres fichiers JSON. Les fichiers JSON inclus sont dans le répertoire Template. Ces fichiers permettent de définir les commandes individuellement.</p>
-<p>PS: si vous supprimez un équipement, n&#8217;oubliez pas que cela supprime aussi l&#8217;historique des valeurs.</p>
+<p>Vous pouvez faire des copier / coller avec vos informations et sauvegarder. Le fichier est lu à chaque inclusion d’équipement donc vous pouvez rapidement voir le résultat. Pour cela supprimez l’équipement dans Jeedom et refaite une inclusion.</p>
+<p>Les fichiers JSON ont évolués et intègrent des inclusion d’autres fichiers JSON. Les fichiers JSON inclus sont dans le répertoire Template. Ces fichiers permettent de définir les commandes individuellement.</p>
+<p>PS: si vous supprimez un équipement, n’oubliez pas que cela supprime aussi l’historique des valeurs.</p>
 </div>
 <div class="section" id="ajout-des-icones-pour-les-objets-crees">
 <h3>Ajout des icônes pour les objets crées<a class="headerlink" href="#ajout-des-icones-pour-les-objets-crees" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Lorsqu&#8217;un équipement est créé, une icône lui est associée.</p>
+<p>Lorsqu’un équipement est créé, une icône lui est associée.</p>
 <p>Pour cela en meme temps que la creation du fichier JSON, il est important de lui associer une icône personnalisée.</p>
 <p>Le fichier image au format png nommé node_name.png est a déposer dans le répertoire plugins/Abeille/images/ (Dimension inferieure à 500x500 px semble correct)</p>
-<p>Vous devez definir le nom de l image dans le fichier JSON. Une bonne idée est de reprendre le nom de l&#8217;équipement pour faciliter la lecture (cofiguration-&gt;icone).</p>
+<p>Vous devez definir le nom de l image dans le fichier JSON. Une bonne idée est de reprendre le nom de l’équipement pour faciliter la lecture (cofiguration-&gt;icone).</p>
 <img alt="_images/Device_icone01.png" src="_images/Device_icone01.png" />
 </div>
 <div class="section" id="points-specifiques">
@@ -116,68 +140,69 @@
 </div>
 <div class="section" id="parametres">
 <h3>Parametres:<a class="headerlink" href="#parametres" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Quand vous consultez le definition d&#8217;un équipement dans jeedom/Abeille vous avez trois tab: Equipement, Param et Commandes.</p>
+<p>Quand vous consultez le definition d’un équipement dans jeedom/Abeille vous avez trois tab: Equipement, Param et Commandes.</p>
 <p>Pour des raisons historique du developpement du plugin, par defaut tous les parametres possibles sont affichés.</p>
-<p>Si vous voulez n&#8217;afficher que les parametres relatifs à votre équipement il faut choisir les set de parametres souhaitez dans le modele.</p>
+<p>Si vous voulez n’afficher que les parametres relatifs à votre équipement il faut choisir les set de parametres souhaitez dans le modele.</p>
 <p>Actuellement les set de parametres sont: paramBatterie[true], paramType[telecommande][paramABC].</p>
 </div>
 <div class="section" id="uniqid">
 <h3>uniqId<a class="headerlink" href="#uniqid" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Vous trouverez un champ uniqId dans les modeles. Celui ci n&#8217;est pas utilisé actuellement. L&#8217;idée est d&#8217;avoir une identifiant unique pour chaque fichier JSON. C&#8217;est une chaine de caracteres aleatoires.</p>
+<p>Vous trouverez un champ uniqId dans les modeles. Celui ci n’est pas utilisé actuellement. L’idée est d’avoir une identifiant unique pour chaque fichier JSON. C’est une chaine de caracteres aleatoires.</p>
 </div>
 <div class="section" id="definition-commandes">
 <h3>Definition commandes<a class="headerlink" href="#definition-commandes" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div>&#8220;execAtCreation&#8221;: &#8220;Yes&#8221;,    (Not implemented yet)
-&#8220;execAtCreationDelay&#8221;: &#8220;60&#8221;,(Not implemented yet)
-&#8220;Polling&#8221;: &#8220;No&#8221;, cron -&gt; toutes les minutes, cron15 -&gt; toutes les 15 minutes, cronHourly -&gt; 1 h, cronDaily Daily
-&#8220;PollingOnCmdChange&#8221;: &#8220;No&#8221;, / &#8220;PollingOnCmdChange&#8221;: &#8220;0006-01-0000&#8221;,
-&#8220;PollingOnCmdChangeDelay&#8221;: 1, en secondes
-&#8220;RefreshData&#8221; : 1 / 0 - Executer cette commande pour rafraichir la valeur associée.</div></blockquote>
+<div><p>« execAtCreation »: « Yes »,    (Not implemented yet)
+« execAtCreationDelay »: « 60 »,(Not implemented yet)
+« Polling »: « No », cron -&gt; toutes les minutes, cron15 -&gt; toutes les 15 minutes, cronHourly -&gt; 1 h, cronDaily Daily
+« PollingOnCmdChange »: « No », / « PollingOnCmdChange »: « 0006-01-0000 »,
+« PollingOnCmdChangeDelay »: 1, en secondes
+« RefreshData » : 1 / 0 - Executer cette commande pour rafraichir la valeur associée.</p>
+</div></blockquote>
 <p>Explications:</p>
 <ul class="simple">
-<li>si ces defintions sont dans la configuration d&#8217;une commande elles seront traitées de al facon suivante.</li>
-<li>les crons vont rechercher les commandes a executer. Exemple un commande getEtat a en config &#8220;Polling&#8221;: &#8220;cron15&#8221;, le polling se fera toutes les 15 minutes.</li>
-<li>Lors d&#8217;une remontée de valeur pour une commande info, Abeille va chercher les commandes actions du device.</li>
-<li>Si une cmd action a pour PollingOnCmdChange la cmd info qui vient de remonter alors la commande est executée avec un delay de PollingOnCmdChangeDelay s.</li>
-<li>Cela permet pas exemple sur la prise Blittzwolf-BW-SHP13 (TS0121) de declencher la lecture de mA, W, V sur changement d etat.</li>
+<li><p>si ces defintions sont dans la configuration d’une commande elles seront traitées de al facon suivante.</p></li>
+<li><p>les crons vont rechercher les commandes a executer. Exemple un commande getEtat a en config « Polling »: « cron15 », le polling se fera toutes les 15 minutes.</p></li>
+<li><p>Lors d’une remontée de valeur pour une commande info, Abeille va chercher les commandes actions du device.</p></li>
+<li><p>Si une cmd action a pour PollingOnCmdChange la cmd info qui vient de remonter alors la commande est executée avec un delay de PollingOnCmdChangeDelay s.</p></li>
+<li><p>Cela permet pas exemple sur la prise Blittzwolf-BW-SHP13 (TS0121) de declencher la lecture de mA, W, V sur changement d etat.</p></li>
 </ul>
 </div>
 <div class="section" id="a-noter">
 <h3>A noter<a class="headerlink" href="#a-noter" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Je ne vais pas expliquer tous les modeles car cela demanderait beaucoup trop de temps. Donc essayer de faire votre modele par similitude avec d&#8217;autres equipemetns.</p>
+<p>Je ne vais pas expliquer tous les modeles car cela demanderait beaucoup trop de temps. Donc essayer de faire votre modele par similitude avec d’autres equipemetns.</p>
 <p>Si vous faites un modele partagez le sur <a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues">https://github.com/KiwiHC16/Abeille/issues</a> pour que je l inclus dans Abeille.</p>
 <p>Si vous ne parvenez pas à vos fins, ouvrez une issue dans <a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues">https://github.com/KiwiHC16/Abeille/issues</a> pour que je vous aide.</p>
 </div>
 <div class="section" id="pour-les-developpeurs">
 <h3>Pour les developpeurs<a class="headerlink" href="#pour-les-developpeurs" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>L&#8217;appareil Ruche contient une commande cachée par type d&#8217;objet (identifié das le fichier JSON). Chaque commande cachée permet la création d&#8217;objets fictifs pour vérifier la bonne création de l&#8217;objet dans Jeedom. Pour avoir les commandes, il faut regénerer l&#8217;objet Ruche pour prendre en compte les modifications éventuelles du fichier json. Pour ce faire supprimer Ruche et relancer le démon. Puis un clic sur le bouton pour créer l&#8217;objet. Il est fort possible que cette option ne soit pas dispo par defaut et demande de l activer dans le soft.</li>
+<li><p>L’appareil Ruche contient une commande cachée par type d’objet (identifié das le fichier JSON). Chaque commande cachée permet la création d’objets fictifs pour vérifier la bonne création de l’objet dans Jeedom. Pour avoir les commandes, il faut regénerer l’objet Ruche pour prendre en compte les modifications éventuelles du fichier json. Pour ce faire supprimer Ruche et relancer le démon. Puis un clic sur le bouton pour créer l’objet. Il est fort possible que cette option ne soit pas dispo par defaut et demande de l activer dans le soft.</p></li>
 </ul>
 <img alt="_images/Capture_d_ecran_2018_01_23_a_22_31_19.png" src="_images/Capture_d_ecran_2018_01_23_a_22_31_19.png" />
 <ul class="simple">
-<li>Si vour rendez visible ces commandes cachées cela donne:</li>
+<li><p>Si vour rendez visible ces commandes cachées cela donne:</p></li>
 </ul>
 <img alt="_images/Capture_d_ecran_2018_01_23_a_22_31_43.png" src="_images/Capture_d_ecran_2018_01_23_a_22_31_43.png" />
 <ul class="simple">
-<li>En cliquant sur l&#8217;un de ces boutons vous vérifiez la bonne création des objets.</li>
-<li>Pas recommandé: Vous pouvez tester la création pure des objets en ligne de commande avec: &#8220;php Abeille.class.php 1&#8221; en ayant mis les bon paramètres en fin de fichier &#8220;Abeille.class.php&#8221; (A faire que par ceux qui comprennent ce qu&#8217;ils font et n est pas maintenu donc peut disparaitre)</li>
-<li>L&#8217;objet obtenu ressemble à cela pour un Xiaomi Temperature Rond:</li>
+<li><p>En cliquant sur l’un de ces boutons vous vérifiez la bonne création des objets.</p></li>
+<li><p>Pas recommandé: Vous pouvez tester la création pure des objets en ligne de commande avec: « php Abeille.class.php 1 » en ayant mis les bon paramètres en fin de fichier « Abeille.class.php » (A faire que par ceux qui comprennent ce qu’ils font et n est pas maintenu donc peut disparaitre)</p></li>
+<li><p>L’objet obtenu ressemble à cela pour un Xiaomi Temperature Rond:</p></li>
 </ul>
 <img alt="_images/Capture_d_ecran_2018_01_23_a_22_53_24.png" src="_images/Capture_d_ecran_2018_01_23_a_22_53_24.png" />
 <ul class="simple">
-<li>Si un objet a été effacé de Jeedom et qu il est toujours dans le réseau zigbee, vous pouvez l&#8217;interroger depuis la Ruche et cela devrait le recréer. Cela vous évite de faire un inclusion.</li>
-<li>Mettre dans le champ &#8220;Titre&#8221; de Get Name, l&#8217;adresse (ici example 7c54)  et faites Get Name. Rafraîchir la page et vous devriez avoir l&#8217;objet.</li>
+<li><p>Si un objet a été effacé de Jeedom et qu il est toujours dans le réseau zigbee, vous pouvez l’interroger depuis la Ruche et cela devrait le recréer. Cela vous évite de faire un inclusion.</p></li>
+<li><p>Mettre dans le champ « Titre » de Get Name, l’adresse (ici example 7c54)  et faites Get Name. Rafraîchir la page et vous devriez avoir l’objet.</p></li>
 </ul>
 <img alt="_images/Capture_d_ecran_2018_01_25_a_14_59_34.png" src="_images/Capture_d_ecran_2018_01_25_a_14_59_34.png" />
 <img alt="_images/Capture_d_ecran_2018_01_25_a_14_59_43.png" src="_images/Capture_d_ecran_2018_01_25_a_14_59_43.png" />
 <ul class="simple">
-<li>Pour un objet qui n&#8217;est pas un routeur, exemple Xiaomi IR Presence, qui donc s&#8217;endort 99% du temps, il est possible de l&#8217;interroger pour qu&#8217;il provoque la création de l objet dans Jeedom. Mais pour cela vous devez le reveiller pour qu&#8217;il ecoute les demandes venat d&#8217;Abeille et y reponde.</li>
-<li>Vous avez aussi la possibilité de lire des attributs de certains équipements en mettant l&#8217;adresse dans le titre et les paramètres de l attribut dans le Message comme dans la capture d&#8217;écran ci dessous. Regardez dans les logs si vous récupérez des infos (Attention il faut que l&#8217;équipement soit à l&#8217;écoute):</li>
+<li><p>Pour un objet qui n’est pas un routeur, exemple Xiaomi IR Presence, qui donc s’endort 99% du temps, il est possible de l’interroger pour qu’il provoque la création de l objet dans Jeedom. Mais pour cela vous devez le reveiller pour qu’il ecoute les demandes venat d’Abeille et y reponde.</p></li>
+<li><p>Vous avez aussi la possibilité de lire des attributs de certains équipements en mettant l’adresse dans le titre et les paramètres de l attribut dans le Message comme dans la capture d’écran ci dessous. Regardez dans les logs si vous récupérez des infos (Attention il faut que l’équipement soit à l’écoute):</p></li>
 </ul>
 <img alt="_images/Capture_d_ecran_2018_01_25_a_16_12_32.png" src="_images/Capture_d_ecran_2018_01_25_a_16_12_32.png" />
 <ul class="simple">
-<li>Vous avez la possibilité de demander la liste des voisines connues dans la base interne de la Zigate. Pour ce faire vous avez le bouton &#8220;Liste Equipements&#8221; sur la ruche.</li>
+<li><p>Vous avez la possibilité de demander la liste des voisines connues dans la base interne de la Zigate. Pour ce faire vous avez le bouton « Liste Equipements » sur la ruche.</p></li>
 </ul>
 <img alt="_images/Capture_d_ecran_2018_01_26_a_10_46_04.png" src="_images/Capture_d_ecran_2018_01_26_a_10_46_04.png" />
 </div>
@@ -186,54 +211,18 @@
 
 
           </div>
+          
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="index.html">
-              <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Recherche rapide</h3>
-    <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-  <h3><a href="index.html">Table des Matières</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Modele et Fichier JSON</a><ul>
-<li><a class="reference internal" href="#video">Video</a></li>
-<li><a class="reference internal" href="#fonctionnement">Fonctionnement</a><ul>
-<li><a class="reference internal" href="#interface-jeedom">Interface Jeedom</a></li>
-<li><a class="reference internal" href="#editer-json">Editer JSON</a></li>
-<li><a class="reference internal" href="#ajout-des-icones-pour-les-objets-crees">Ajout des icônes pour les objets crées</a></li>
-<li><a class="reference internal" href="#points-specifiques">Points specifiques</a></li>
-<li><a class="reference internal" href="#parametres">Parametres:</a></li>
-<li><a class="reference internal" href="#uniqid">uniqId</a></li>
-<li><a class="reference internal" href="#definition-commandes">Definition commandes</a></li>
-<li><a class="reference internal" href="#a-noter">A noter</a></li>
-<li><a class="reference internal" href="#pour-les-developpeurs">Pour les developpeurs</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
+    <div class="clearer"></div>
+  </div>
 
     <div class="footer">
-      &copy;2019-20, KiwiHC16.
+      &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.9</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>
 

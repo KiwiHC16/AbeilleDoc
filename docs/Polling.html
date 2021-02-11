@@ -1,44 +1,68 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Polling &#8212; documentation Abeille 08.12.2020</title>
-    
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polling &#8212; Documentation Abeille 11.02.2021</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '08.12.2020',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  false
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="top" title="documentation Abeille 08.12.2020" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
+  
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body role="document">
-  
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div><h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Debug.html">Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
+</ul>
 
-    <div class="document">
+
+        </div>
+      </div>
       <div class="documentwrapper">
         <div class="bodywrapper">
+          
+
           <div class="body" role="main">
             
   <div class="section" id="polling">
@@ -46,20 +70,20 @@
 <div class="section" id="ping">
 <h2>Ping<a class="headerlink" href="#ping" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Ping toutes les 15 minutes</p>
-<p>Par défaut le cron, toutes les 15 minutes, fait un &#8220;ping&#8221; des équipements qui n&#8217;ont pas de batterie définie. On suppose qu&#8217;ils sont sur secteur et que donc ils écoutent et qu&#8217;ils répondent à la requête.</p>
+<p>Par défaut le cron, toutes les 15 minutes, fait un « ping » des équipements qui n’ont pas de batterie définie. On suppose qu’ils sont sur secteur et que donc ils écoutent et qu’ils répondent à la requête.</p>
 </div>
 <div class="section" id="etat">
 <h2>État<a class="headerlink" href="#etat" title="Lien permanent vers ce titre">¶</a></h2>
 <p>État toutes les minutes</p>
-<p>Récupère les infos que ne remonte pas par défaut toutes les minutes si défini dans l&#8217;équipement.</p>
+<p>Récupère les infos que ne remonte pas par défaut toutes les minutes si défini dans l’équipement.</p>
 </div>
 <div class="section" id="sante">
 <h2>Santé<a class="headerlink" href="#sante" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Santé des équipements</p>
-<p>Il y a probablement deux informations qu&#8217;il est intéressant de monitorer pour vérifier que tout fonctionne:</p>
+<p>Il y a probablement deux informations qu’il est intéressant de monitorer pour vérifier que tout fonctionne:</p>
 <ul class="simple">
-<li>le niveau des batteries</li>
-<li>et le fait que des messages sont échangés.</li>
+<li><p>le niveau des batteries</p></li>
+<li><p>et le fait que des messages sont échangés.</p></li>
 </ul>
 <p>Je vous propose 2 méthodes.</p>
 </div>
@@ -67,59 +91,32 @@
 <h2>Heartbeat<a class="headerlink" href="#heartbeat" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Toutes les 5 min, le core va faire les actions suivantes pour tous les plugins:</p>
 <ul class="simple">
-<li>Si aucune config (hearbeat vide), ca sera par défaut 0</li>
-<li>Si vide donc ou 0 ou une valeur non numérique, aucun check</li>
-<li>Si aucun équipement actif, aucun check</li>
-<li>ensuite il regarde si un équipement a eu un &#8220;changement&#8221; (en vérifiant que la &#8220;lastcommunication&#8221; est supérieur à l&#8217;heure actuelle moins le temps définit par le hearbeat)</li>
-<li>s&#8217;il ne trouve pas d&#8217;équipement répondant à cette condition, il poste un message (dans le centre de notification)</li>
-<li>s&#8217;il la case &#8220;relancer le démon&#8221; est coché, le démon est relancé</li>
+<li><p>Si aucune config (hearbeat vide), ca sera par défaut 0</p></li>
+<li><p>Si vide donc ou 0 ou une valeur non numérique, aucun check</p></li>
+<li><p>Si aucun équipement actif, aucun check</p></li>
+<li><p>ensuite il regarde si un équipement a eu un « changement » (en vérifiant que la « lastcommunication » est supérieur à l’heure actuelle moins le temps définit par le hearbeat)</p></li>
+<li><p>s’il ne trouve pas d’équipement répondant à cette condition, il poste un message (dans le centre de notification)</p></li>
+<li><p>s’il la case « relancer le démon » est coché, le démon est relancé</p></li>
 </ul>
-<p>Dans notre cas, les devices ont des timeout de l ordre de l heure, donc descendre en dessous n&#8217;est pas une bonne idée à moins de redescendre le timeout du la ruche.
+<p>Dans notre cas, les devices ont des timeout de l ordre de l heure, donc descendre en dessous n’est pas une bonne idée à moins de redescendre le timeout du la ruche.
 Je vais le mettre à 2h (120min) avec restart sur mon système de prod.</p>
 </div>
 </div>
 
 
           </div>
+          
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="index.html">
-              <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Recherche rapide</h3>
-    <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-  <h3><a href="index.html">Table des Matières</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Polling</a><ul>
-<li><a class="reference internal" href="#ping">Ping</a></li>
-<li><a class="reference internal" href="#etat">État</a></li>
-<li><a class="reference internal" href="#sante">Santé</a></li>
-<li><a class="reference internal" href="#heartbeat">Heartbeat</a></li>
-</ul>
-</li>
-</ul>
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
+    <div class="clearer"></div>
+  </div>
 
     <div class="footer">
-      &copy;2019-20, KiwiHC16.
+      &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.9</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>
 

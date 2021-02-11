@@ -20,13 +20,13 @@
 # -- Project information -----------------------------------------------------
 
 project = u'Abeille'
-copyright = u'2019-20, KiwiHC16'
+copyright = u'2019-21, KiwiHC16'
 author = u'KiwiHC16'
 
 # The short X.Y version
 version = u''
 # The full version, including alpha/beta/rc tags
-release = u'08.12.2020'
+release = u'11.02.2021'
 
 
 # -- General configuration ---------------------------------------------------
@@ -92,14 +92,14 @@ html_theme = 'alabaster'
 html_theme_options = {
     # 'prev_next_buttons_location': 'both',
     #'collapse_navigation': True,
-    # 'fixed_sidebar': True,
-    # 'sidebar_collapse': True,
+    'fixed_sidebar': True,
+    'sidebar_collapse': True,
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = []
+html_static_path = ['_static']
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -111,7 +111,7 @@ html_static_path = []
 #
 # html_sidebars = {}
 html_sidebars = {
-   '**': ['searchbox.html', 'localtoc.html'],
+   '**': ['searchbox.html', 'relations.html', 'navigation.html'],
    'using/windows': ['windowssidebar.html', 'searchbox.html'],
 }
 

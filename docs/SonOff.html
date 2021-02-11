@@ -1,44 +1,68 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>SonOff &#8212; documentation Abeille 08.12.2020</title>
-    
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SonOff &#8212; Documentation Abeille 11.02.2021</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '08.12.2020',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  false
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="top" title="documentation Abeille 08.12.2020" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
+  
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body role="document">
-  
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div><h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Debug.html">Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
+</ul>
 
-    <div class="document">
+
+        </div>
+      </div>
       <div class="documentwrapper">
         <div class="bodywrapper">
+          
+
           <div class="body" role="main">
             
   <div class="section" id="sonoff">
@@ -56,28 +80,28 @@
 <div class="section" id="inclusion">
 <h3>Inclusion<a class="headerlink" href="#inclusion" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>mettre la zigate en Inclusion</li>
-<li>Avec trombone, 10s sur inter au dos</li>
+<li><p>mettre la zigate en Inclusion</p></li>
+<li><p>Avec trombone, 10s sur inter au dos</p></li>
 </ul>
 </div>
 <div class="section" id="exclusion">
 <h3>Exclusion<a class="headerlink" href="#exclusion" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>La zigate ne doit pas être en mode Inclusion</li>
-<li>Avec trombone, 10s sur inter au dos</li>
+<li><p>La zigate ne doit pas être en mode Inclusion</p></li>
+<li><p>Avec trombone, 10s sur inter au dos</p></li>
 </ul>
 </div>
 <div class="section" id="reveil">
 <h3>Reveil<a class="headerlink" href="#reveil" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>Si le module n&#8217;a jamais été configuré, il faut faire une inclusion car il reste reveillé quelques secondes après inclusion.</li>
-<li>Si le module est déjà configuré alors  un appui sur le bouton le reveille (J ai eu un cas ou il ne faisait pas de Data Request alors on ne peut pas lui parler, j ai du le re-inclure).</li>
+<li><p>Si le module n’a jamais été configuré, il faut faire une inclusion car il reste reveillé quelques secondes après inclusion.</p></li>
+<li><p>Si le module est déjà configuré alors  un appui sur le bouton le reveille (J ai eu un cas ou il ne faisait pas de Data Request alors on ne peut pas lui parler, j ai du le re-inclure).</p></li>
 </ul>
 </div>
 <div class="section" id="configurer">
 <h3>Configurer<a class="headerlink" href="#configurer" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>Faire un bind vers l&#8217;équipement à piloter. Il fait ensuite On/Off/Toggle sur l&#8217;adresse de l&#8217;équipement.</li>
+<li><p>Faire un bind vers l’équipement à piloter. Il fait ensuite On/Off/Toggle sur l’adresse de l’équipement.</p></li>
 </ul>
 </div>
 </div>
@@ -90,34 +114,34 @@
 <div class="section" id="id2">
 <h3>Inclusion<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>Zigate en inclusion</li>
-<li>Appui long &gt;10s sur bouton lateral</li>
+<li><p>Zigate en inclusion</p></li>
+<li><p>Appui long &gt;10s sur bouton lateral</p></li>
 </ul>
 </div>
 <div class="section" id="id3">
 <h3>Exclusion<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>Zigate pas en mode inclusion</li>
-<li>Appui long &gt;10s sur bouton lateral</li>
+<li><p>Zigate pas en mode inclusion</p></li>
+<li><p>Appui long &gt;10s sur bouton lateral</p></li>
 </ul>
 </div>
 <div class="section" id="id4">
 <h3>Reveil<a class="headerlink" href="#id4" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>Je ne parviens pas à le réveiller à l&#8217;aide du bouton lateral.</li>
-<li>Si pas configuré, l&#8217;inclure et le configurer immédiatement</li>
-<li>Une fois configuré, faire changer la temperature ou humidité (le mettre dans ses mains, souffler dans l ouverture) et il doit se reveiller.</li>
+<li><p>Je ne parviens pas à le réveiller à l’aide du bouton lateral.</p></li>
+<li><p>Si pas configuré, l’inclure et le configurer immédiatement</p></li>
+<li><p>Une fois configuré, faire changer la temperature ou humidité (le mettre dans ses mains, souffler dans l ouverture) et il doit se reveiller.</p></li>
 </ul>
 </div>
 <div class="section" id="recuperation">
 <h3>Recuperation<a class="headerlink" href="#recuperation" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Si par erreur il a ete supprimé de jeedom, avec le plugin en mode &#8220;Blocage des annonce: non, blocage des recuperations: non&#8221;, sur un changement de temperature il doit être re-créé dans Abeille.</p>
+<p>Si par erreur il a ete supprimé de jeedom, avec le plugin en mode « Blocage des annonce: non, blocage des recuperations: non », sur un changement de temperature il doit être re-créé dans Abeille.</p>
 </div>
 <div class="section" id="id5">
 <h3>Configurer<a class="headerlink" href="#id5" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>bind/setreport sur temperature et humidite</li>
-<li>bind sur Power</li>
+<li><p>bind/setreport sur temperature et humidite</p></li>
+<li><p>bind sur Power</p></li>
 </ul>
 </div>
 </div>
@@ -161,8 +185,8 @@
 </div>
 <div class="section" id="sonoff-basiczbr3-module-10a">
 <h2>SonOff BASICZBR3: Module 10A<a class="headerlink" href="#sonoff-basiczbr3-module-10a" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Comme je ne trouvais pas de relai piloté par zigbee j&#8217;ai fait ma propre bidouille. Comme d&#8217;habitude comme c&#8217;est sur le 220V, je ne suis pas responsable de vos actes. Vous faites ces manipulations que si vous savez ce que vous faites. Je ne pourrai être tenu responsable.</p>
-<p>Vue d&#8217;ensemble du boitié:</p>
+<p>Comme je ne trouvais pas de relai piloté par zigbee j’ai fait ma propre bidouille. Comme d’habitude comme c’est sur le 220V, je ne suis pas responsable de vos actes. Vous faites ces manipulations que si vous savez ce que vous faites. Je ne pourrai être tenu responsable.</p>
+<p>Vue d’ensemble du boitié:</p>
 <img alt="_images/IMG_2369.jpg" src="_images/IMG_2369.jpg" />
 <p>Il faut ouvrir la bête, le relai est le boitier noir vers le haut de la photo:</p>
 <img alt="_images/IMG_2370.jpg" src="_images/IMG_2370.jpg" />
@@ -170,7 +194,7 @@
 <img alt="_images/IMG_2371.jpg" src="_images/IMG_2371.jpg" />
 <p>Le relai lui même en 10A:</p>
 <img alt="_images/IMG_2372.jpg" src="_images/IMG_2372.jpg" />
-<p>Les deux grosses pistes qu&#8217;il va falloir couper:</p>
+<p>Les deux grosses pistes qu’il va falloir couper:</p>
 <img alt="_images/IMG_2373.jpg" src="_images/IMG_2373.jpg" />
 <p>Au cuteur, découpe des deux pistes:</p>
 <img alt="_images/IMG_2375.jpg" src="_images/IMG_2375.jpg" />
@@ -185,75 +209,18 @@
 
 
           </div>
+          
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="index.html">
-              <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Recherche rapide</h3>
-    <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-  <h3><a href="index.html">Table des Matières</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">SonOff</a><ul>
-<li><a class="reference internal" href="#sonoff-snzb-01-interrupteur">SonOff SNZB-01: Interrupteur</a><ul>
-<li><a class="reference internal" href="#fonctionenment">Fonctionenment</a></li>
-<li><a class="reference internal" href="#inclusion">Inclusion</a></li>
-<li><a class="reference internal" href="#exclusion">Exclusion</a></li>
-<li><a class="reference internal" href="#reveil">Reveil</a></li>
-<li><a class="reference internal" href="#configurer">Configurer</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#sonoff-snzb-02-temperature-humidite">SonOff SNZB-02: Temperature / Humidité</a><ul>
-<li><a class="reference internal" href="#id1">Fonctionenment</a></li>
-<li><a class="reference internal" href="#id2">Inclusion</a></li>
-<li><a class="reference internal" href="#id3">Exclusion</a></li>
-<li><a class="reference internal" href="#id4">Reveil</a></li>
-<li><a class="reference internal" href="#recuperation">Recuperation</a></li>
-<li><a class="reference internal" href="#id5">Configurer</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#sonoff-snzb-03-capteur-ir">SonOff SNZB-03: Capteur IR</a><ul>
-<li><a class="reference internal" href="#id6">Fonctionenment</a></li>
-<li><a class="reference internal" href="#id7">Inclusion</a></li>
-<li><a class="reference internal" href="#id8">Exclusion</a></li>
-<li><a class="reference internal" href="#id9">Reveil</a></li>
-<li><a class="reference internal" href="#id10">Configurer</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#sonoff-snzb-04-capteur-de-porte">SonOff SNZB-04: Capteur de porte</a><ul>
-<li><a class="reference internal" href="#id11">Fonctionenment</a></li>
-<li><a class="reference internal" href="#id12">Inclusion</a></li>
-<li><a class="reference internal" href="#id13">Exclusion</a></li>
-<li><a class="reference internal" href="#id14">Reveil</a></li>
-<li><a class="reference internal" href="#id15">Configurer</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#sonoff-basiczbr3-module-10a">SonOff BASICZBR3: Module 10A</a></li>
-</ul>
-</li>
-</ul>
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
+    <div class="clearer"></div>
+  </div>
 
     <div class="footer">
-      &copy;2019-20, KiwiHC16.
+      &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.9</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>
 

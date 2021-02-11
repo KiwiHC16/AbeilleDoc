@@ -1,5 +1,7 @@
 ._*
 .idea
 build/
+source/_build/
 .vscode/
 .DS_Store
+*.bak

@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utilisation avancée &#8212; Documentation Abeille 11.02.2021</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Debug" href="Debug.html" />
+    <link rel="prev" title="Utilisation" href="Utilisation.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="Utilisation.html" title="Chapitre précédent">Utilisation</a></li>
+      <li>Next: <a href="Debug.html" title="Chapitre suivant">Debug</a></li>
+  </ul></li>
+</ul>
+</div><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Utilisation avancée</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#utilisation-sous-docker-ou-vm">Utilisation sous Docker ou VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modeles-pour-nouveaux-equipements">Modèles pour nouveaux équipements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cron">Cron</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#polling">Polling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#radio">Radio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Debug.html">Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="utilisation-avancee">
+<h1>Utilisation avancée<a class="headerlink" href="#utilisation-avancee" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Si vous souhaitez comprendre un peu + le fonctionnement d’Abeille, c’est le chapitre qu’il vous faut parcourir.</p>
+<div class="section" id="utilisation-sous-docker-ou-vm">
+<h2>Utilisation sous Docker ou VM<a class="headerlink" href="#utilisation-sous-docker-ou-vm" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ce chapitre est très spécifique et pour les utilisateurs ayant de bonnes connaissances en informatique. Je partage ici mon installation <a class="reference internal" href="Docker.html"><span class="doc">Docker</span></a> qui me permet de s’implifier mon developpement et de faire des backup de mes Jeedom distant et difficilement accessibles.</p>
+</div>
+<div class="section" id="modeles-pour-nouveaux-equipements">
+<h2>Modèles pour nouveaux équipements<a class="headerlink" href="#modeles-pour-nouveaux-equipements" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les équipements ZigBee sont representés dans Abeille par des fichiers de configuration appelés: <a class="reference internal" href="ModeleJson.html"><span class="doc">Modele et Fichier JSON</span></a>. Ces fichiers peuvent être modifiés et d’autres peuvent être créer pour ajouter de nouveau équipements.</p>
+</div>
+<div class="section" id="cron">
+<h2>Cron<a class="headerlink" href="#cron" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Abeille de façon régulière fait <a class="reference internal" href="Cron.html"><span class="doc">Actions régulières (cron)</span></a> un certain nombre de taches pour maintenir/monitorer le système.</p>
+</div>
+<div class="section" id="polling">
+<h2>Polling<a class="headerlink" href="#polling" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Certains équipements communiquent naturellement et échangent des messages avec la Zigate, ce qui nous permet de s’assurer qu’ils sont en vie. D’autres restent silencieux et nous devons les interroger pour savoir s’ils sont toujours dans le réseau ou simplement connaitre leur état. Abeille contient une fonction de <a class="reference internal" href="Polling.html"><span class="doc">Polling</span></a> interrogeant régulièrement les équipements.</p>
+</div>
+<div class="section" id="radio">
+<h2>Radio<a class="headerlink" href="#radio" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le ZigBee fonctionne en <a class="reference internal" href="Radio.html"><span class="doc">Radio</span></a>. La <a class="reference internal" href="Radio.html"><span class="doc">Radio</span></a> est sujette à divers problemes. Même si la norme Zigbee inclus plein de fonction pour nous faciliter la vie, il arrive que cela ne fonctionne pas aussi bien qu’attendu. Pour avoir une meilleur comprehension de ce qui se passe, Abeille inclus des informations, graphes representant les informations <a class="reference internal" href="Radio.html"><span class="doc">Radio</span></a> récupérées par les équipements.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+
+    <div class="footer">
+      &copy;2019-21, KiwiHC16.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

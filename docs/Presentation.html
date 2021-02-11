@@ -1,143 +1,165 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Introduction &#8212; documentation Abeille 08.12.2020</title>
-    
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction &#8212; Documentation Abeille 11.02.2021</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '08.12.2020',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  false
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="top" title="documentation Abeille 08.12.2020" href="index.html" />
+    <link rel="next" title="Installation" href="Installation.html" />
+    <link rel="prev" title="Bienvenu" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
+  
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body role="document">
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
-<img alt="_images/Abeille_icon.png" src="_images/Abeille_icon.png" />
-<p>[verse, Akila, from Zigate.fr]
-Zigate est une passerelle universelle compatible avec énormément de matériels radios Zigbee. Grâce à elle, vous offrez à votre domotique un large panel de possibilités. La Zigate est modulable , performante et ouverte pour qu&#8217;elle puisse évoluer selon vos besoins.</p>
-</div>
-<div class="section" id="le-plugin-abeille">
-<h1>Le plugin Abeille<a class="headerlink" href="#le-plugin-abeille" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Le plugin  permet de mettre en place un réseau Zigbee avec des produits du marché et des réalisations personnelles (DIY) par l&#8217;intermédiaire de la passerelle Zigate (<a class="reference external" href="https://Zigate.fr/">https://Zigate.fr/</a>) dans Jeedom.</p>
-<p>Ce plugin est né de besoins personnels : capteur de température radio distant avec un réseau sécurisé, mesh,…</p>
-<p>Ce plugin inclus les fonctions de base pour la gestion d&#8217;équipements comme On/Off/Toggle/Up/Down/Detection/…</p>
-<p>Il supporte aussi des fonctions avancées pour faciliter la gestion d’un gros réseau :</p>
-<ul class="simple">
-<li>Retour d&#8217;état des équipements,</li>
-<li>Santé (Dernière communication,…)</li>
-<li>Niveau des batteries</li>
-<li>Graphe du réseau</li>
-<li>Liste de tous les équipements du réseau</li>
-<li>Informations radio sur les liaisons entre les équipements</li>
-<li>En mode USB, en mode Wifi ou en mode GPIO (PiZigate)</li>
-<li>Fonctionne avec Homebridge</li>
-</ul>
-</div>
-<div class="section" id="support">
-<h1>Support<a class="headerlink" href="#support" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Pour toute difficulté, deux possibilités :</p>
-<ul class="simple">
-<li>un fil de discussion sur le link:https://community.jeedom.com/tag/plugin-abeille[forum de Jeedom]</li>
-<li>une link:https://github.com/KiwiHC16/Abeille/issues?utf8=✓&amp;q=is%3Aissue[« issue » dans Github]</li>
-</ul>
-</div>
-<div class="section" id="peripheriques-compatibles">
-<h1>Périphériques compatibles<a class="headerlink" href="#peripheriques-compatibles" title="Lien permanent vers ce titre">¶</a></h1>
-<ul class="simple">
-<li>les ampoules Zigbee</li>
-<li>toute la famille Xiaomi Zigbee (Sensor presence, prise, temperature, humidité, pression, interrupteur, porte)</li>
-<li>les volets Profalux</li>
-<li>de nombreux autres périphériques Zigbee (<a class="reference external" href="https://github.com/KiwiHC16/Abeille/blob/master/Documentation/040_Compatibilite.adoc">https://github.com/KiwiHC16/Abeille/blob/master/Documentation/040_Compatibilite.adoc</a>)</li>
-</ul>
-</div>
-<div class="section" id="les-possibilites">
-<h1>Les possibilités<a class="headerlink" href="#les-possibilites" title="Lien permanent vers ce titre">¶</a></h1>
-<ul class="simple">
-<li>inclure des équipements Zigbee depuis Jeedom</li>
-<li>avoir l&#8217;état d&#8217;une ampoule Zigbee, son niveau de brillance, ses caractéristiques (nom, fabriquant, SW level).</li>
-<li>commander les ampoules une par une (On/Off, niveau, couleur,...)</li>
-<li>commander les ampoules et autre par groupe (On/Off, niveau)</li>
-<li>avoir l&#8217;état de la prise Xiaomi avec la puissance et la consommation (Nom et Fabriquant)</li>
-<li>avoir les températures, humidité, pression Xiaomi, son nom, tension batterie</li>
-<li>avoir la remontée d&#8217;une présence (capteur infrarouge Xiaomi)</li>
-<li>avoir la remontée d&#8217;ouverture de porte</li>
-<li>avoir les clics sur les interrupteurs (1, 2, 3 ou 4 clics)</li>
-<li>définir des groupes comprenant des ampoules IKEA et prise xiaomi (Je peux donc avoir un mix dans le même groupe qui est commandé par une télécommande IKEA par exemple, ou faire un va et vient sur des ampoules IKEA avec 2 télécommandes IKEA (ce qui n&#8217;est pas possible avec la solution pure IKEA),...)</li>
-<li>définir des va et vient facilement entre des marques de télécommande et d&#8217;ampoules différentes</li>
-<li>profiter du réseau &#8220;mesh&#8221; Zigbee étendu multi-marque</li>
-</ul>
-</div>
-
-
-          </div>
-        </div>
-      </div>
+  </head><body>
+  <div class="document">
+    
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="index.html">
               <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
             </a></p>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Recherche rapide</h3>
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-  <h3><a href="index.html">Table des Matières</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Introduction</a></li>
-<li><a class="reference internal" href="#le-plugin-abeille">Le plugin Abeille</a></li>
-<li><a class="reference internal" href="#support">Support</a></li>
-<li><a class="reference internal" href="#peripheriques-compatibles">Périphériques compatibles</a></li>
-<li><a class="reference internal" href="#les-possibilites">Les possibilités</a></li>
+<script>$('#searchbox').show(0);</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="Chapitre précédent">Bienvenu</a></li>
+      <li>Next: <a href="Installation.html" title="Chapitre suivant">Installation</a></li>
+  </ul></li>
 </ul>
+</div><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#le-plugin-abeille">Le plugin Abeille</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cagnotte">Cagnotte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#support">Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#peripheriques-compatibles">Périphériques compatibles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#les-possibilites">Les possibilités</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Debug.html">Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
+</ul>
+
 
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="id1">
+<h2>Introduction<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La Zigate (<a class="reference external" href="https://Zigate.fr/">https://Zigate.fr/</a>) est une passerelle universelle pour le protocole Zigbee. Elle est compatible avec énormément de matériels radios Zigbee. Grâce à elle, vous offrez à votre domotique un large panel de possibilités. La Zigate est modulable, performante et ouverte pour qu’elle puisse évoluer selon vos besoins.</p>
+</div>
+<div class="section" id="le-plugin-abeille">
+<h2>Le plugin Abeille<a class="headerlink" href="#le-plugin-abeille" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le plugin Abeille permet d’ajouter la zigate dans un environnement Jeedom et ainsi de mettre en place un réseau Zigbee avec des produits du marché et des réalisations personnelles (DIY) par l’intermédiaire de la passerelle Zigate dans Jeedom.</p>
+<p>Ce plugin est né de besoins personnels : capteur de température radio distant avec un réseau sécurisé, mesh,…</p>
+<p>Ce plugin inclus les fonctions de base pour la gestion d’équipements comme On/Off/Toggle/Up/Down/Detection/…</p>
+<p>Il supporte aussi des fonctions avancées pour faciliter la gestion d’un gros réseau :</p>
+<ul class="simple">
+<li><p>Retour d’état des équipements,</p></li>
+<li><p>Santé (Dernière communication,…)</p></li>
+<li><p>Niveau des batteries</p></li>
+<li><p>Graphe du réseau</p></li>
+<li><p>Liste de tous les équipements du réseau</p></li>
+<li><p>Informations radio sur les liaisons entre les équipements</p></li>
+<li><p>En mode USB, en mode Wifi ou en mode GPIO (PiZigate)</p></li>
+<li><p>Fonctionne avec Homebridge</p></li>
+</ul>
+</div>
+<div class="section" id="cagnotte">
+<h2>Cagnotte<a class="headerlink" href="#cagnotte" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://paypal.me/KiwiHC16">Participez à la cagnotte pour acheter des équipements pour supporter le développement.</a></p>
+<img alt="_images/Cagnote.png" src="_images/Cagnote.png" />
+<p><a class="reference external" href="https://paypal.me/KiwiHC16">Participer à la Cagnotte</a></p>
+<p>Le budget depuis le début est assez conséquent, surtout quand j’investis dans des équipements que je n’utiliserai pas moi même.
+Alors j’ouvre une cagnotte pour financer l’achat d’équipements pour faciliter l’intégration dans Abeille.
+L’idée est d’avoir au moins un exemplaire de ce que les utilisateurs d’Abeille utilisent.
+Je n’ai aucune idée de votre participation à cette cagnotte mais comme tout est open source depuis le début, la <a class="reference internal" href="Cagnotte.html"><span class="doc">Cagnotte</span></a> est aussi complètement transparente.</p>
+</div>
+<div class="section" id="support">
+<h2>Support<a class="headerlink" href="#support" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour toute difficulté, deux possibilités :</p>
+<ul class="simple">
+<li><p>un fil de discussion sur le link:https://community.jeedom.com/tag/plugin-abeille[forum de Jeedom]</p></li>
+<li><p>une link:https://github.com/KiwiHC16/Abeille/issues?utf8=✓&amp;q=is%3Aissue[« issue » dans Github]</p></li>
+</ul>
+</div>
+<div class="section" id="peripheriques-compatibles">
+<h2>Périphériques compatibles<a class="headerlink" href="#peripheriques-compatibles" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p>les ampoules Zigbee</p></li>
+<li><p>toute la famille Xiaomi Zigbee (Sensor presence, prise, temperature, humidité, pression, interrupteur, porte)</p></li>
+<li><p>les volets Profalux</p></li>
+<li><p>de nombreux autres périphériques Zigbee (<a class="reference external" href="https://github.com/KiwiHC16/Abeille/blob/master/Documentation/040_Compatibilite.adoc">https://github.com/KiwiHC16/Abeille/blob/master/Documentation/040_Compatibilite.adoc</a>)</p></li>
+</ul>
+</div>
+<div class="section" id="les-possibilites">
+<h2>Les possibilités<a class="headerlink" href="#les-possibilites" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p>inclure des équipements Zigbee depuis Jeedom</p></li>
+<li><p>avoir l’état d’une ampoule Zigbee, son niveau de brillance, ses caractéristiques (nom, fabriquant, SW level).</p></li>
+<li><p>commander les ampoules une par une (On/Off, niveau, couleur,…)</p></li>
+<li><p>commander les ampoules et autre par groupe (On/Off, niveau)</p></li>
+<li><p>avoir l’état de la prise Xiaomi avec la puissance et la consommation (Nom et Fabriquant)</p></li>
+<li><p>avoir les températures, humidité, pression Xiaomi, son nom, tension batterie</p></li>
+<li><p>avoir la remontée d’une présence (capteur infrarouge Xiaomi)</p></li>
+<li><p>avoir la remontée d’ouverture de porte</p></li>
+<li><p>avoir les clics sur les interrupteurs (1, 2, 3 ou 4 clics)</p></li>
+<li><p>définir des groupes comprenant des ampoules IKEA et prise xiaomi (Je peux donc avoir un mix dans le même groupe qui est commandé par une télécommande IKEA par exemple, ou faire un va et vient sur des ampoules IKEA avec 2 télécommandes IKEA (ce qui n’est pas possible avec la solution pure IKEA),…)</p></li>
+<li><p>définir des va et vient facilement entre des marques de télécommande et d’ampoules différentes</p></li>
+<li><p>profiter du réseau « mesh » Zigbee étendu multi-marque</p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
 
     <div class="footer">
-      &copy;2019-20, KiwiHC16.
+      &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.9</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>
 

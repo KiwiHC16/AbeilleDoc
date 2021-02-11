@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utilisation &#8212; Documentation Abeille 11.02.2021</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Utilisation avancée" href="UtilisationAvancee.html" />
+    <link rel="prev" title="Installation" href="Installation.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="Installation.html" title="Chapitre précédent">Installation</a></li>
+      <li>Next: <a href="UtilisationAvancee.html" title="Chapitre suivant">Utilisation avancée</a></li>
+  </ul></li>
+</ul>
+</div><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Utilisation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inclusion">Inclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#suppression">Suppression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#groups">Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scenes">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sante">Santé</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tuto">Tuto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trucs-et-astuces">Trucs et Astuces</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Debug.html">Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="utilisation">
+<h1>Utilisation<a class="headerlink" href="#utilisation" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="inclusion">
+<h2>Inclusion<a class="headerlink" href="#inclusion" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La première étape pour pouvoir utiliser un équipement est de l” <a class="reference internal" href="Inclusion.html"><span class="doc">Inclusion</span></a> dans le réseau zigbee géré par la zigate. Il n’existe pas de méthode universelle car chaque fabriquant est libre de procéder de la façon qu’il souhaite. Le grand principe est de mettre la zigate en mode <a class="reference internal" href="Inclusion.html"><span class="doc">Inclusion</span></a> et de faire des manipulations sur l’équipement pour qu’il s” <a class="reference internal" href="Inclusion.html"><span class="doc">Inclusion</span></a> et rejoigne le réseau.</p>
+</div>
+<div class="section" id="suppression">
+<h2>Suppression<a class="headerlink" href="#suppression" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vous avez la possibilité de faire une <a class="reference internal" href="Suppression.html"><span class="doc">Suppression</span></a> d’un équipement du réseau zigbee géré par la zigate.</p>
+</div>
+<div class="section" id="groups">
+<h2>Groups<a class="headerlink" href="#groups" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un fois l’équipement dans le réseau, la zigate lui attribue une adresse pour qu’il puisse dialoguer. La zigate peut lui envoyer des messages directement à cette adresse.
+Maintenant si la ZiGate souhaite envoyer un même message à plusieurs équipements en même temps, elle peut utiliser une adresse de <a class="reference internal" href="Groups.html"><span class="doc">Groupes</span></a> . Cela permet d’avoir par exemple des équipements qui réagissent simultanément.</p>
+</div>
+<div class="section" id="scenes">
+<h2>Scenes<a class="headerlink" href="#scenes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le <a class="reference internal" href="Groups.html"><span class="doc">Groupes</span></a> permet d’adresser des équipements en même temps pour une même action mais ne permet pas d’envoyer des demandes differentes. Ce point est résolu par les <a class="reference internal" href="Scenes.html"><span class="doc">Scènes</span></a>. Vous pouvez preconfigurer une ensemble d’équipments dans des configurations spécifiques est les associer à des <a class="reference internal" href="Scenes.html"><span class="doc">Scènes</span></a>. Ensuite il vous suffit de rappeler une <a class="reference internal" href="Scenes.html"><span class="doc">Scènes</span></a> pour remettre tout le monde dans la configuration désirée.</p>
+</div>
+<div class="section" id="sante">
+<h2>Santé<a class="headerlink" href="#sante" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le réseau est constitué de nombreux équipements qui vivent au rythme et aléa du réseau radio, des coupures de courant, etc. Afin de monitorer le réseau Abeille propose plusieurs outils: <a class="reference internal" href="Health.html"><span class="doc">Santé</span></a></p>
+</div>
+<div class="section" id="tuto">
+<h2>Tuto<a class="headerlink" href="#tuto" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans la mesure ou Abeille à pour objectif d’exploité le réseau, je vous propose quelques <a class="reference internal" href="Tuto.html"><span class="doc">Tuto</span></a> permettant de mettre en application et répondre à vos besoins.</p>
+</div>
+<div class="section" id="trucs-et-astuces">
+<h2>Trucs et Astuces<a class="headerlink" href="#trucs-et-astuces" title="Lien permanent vers ce titre">¶</a></h2>
+<p>D’autres fonctions de Jeedom sont bien pratiques, par exemple si vous devez <a class="reference internal" href="Remplacement.html"><span class="doc">Fonctions Jeedom</span></a> remplacer des équipements par d’autres, ou <a class="reference internal" href="Remplacement.html"><span class="doc">Fonctions Jeedom</span></a> des commandes par d’autres.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+
+    <div class="footer">
+      &copy;2019-21, KiwiHC16.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

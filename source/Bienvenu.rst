@@ -1,20 +1,3 @@
-.. Abeille documentation master file
-
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-
-   Bienvenu
-   Presentation
-   Equipements
-   Installation
-   Utilisation
-   UtilisationAvancee
-   Debug
-   Divers
-   Developpement
-
 Bienvenu
 ========
 

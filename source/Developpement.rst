@@ -12,14 +12,14 @@ Grandes lignes
 * Dev en cours: autre branche
 
 Vue générale
---------------
+------------
 
 Vue générale de la solution
 
 .. image:: images/Capture_d_ecran_2020-04-09_a_10_31_23.png
 
 Règles à suivre
---------------
+---------------
 
 * La structure de base des plugins est présentée dans la doc Jeedom: https://doc.jeedom.com/fr_FR/dev/plugin_template. Elle est similaire à la structure du 'core' lui même.
 * Un template est fourni par Jeedom: https://github.com/jeedom/plugin-template mais en dehors des informations déja présentées ci dessous, il n'est pas vraiment utilisé ni cohérent.
@@ -27,7 +27,7 @@ Règles à suivre
 Il faut que l'on se cale le plus possible sur ces documents.
 
 Règles à suivre additionnelles pour Abeille
---------------
+-------------------------------------------
 
 * Outils de dev: Visual Studio Code avec les paramètres par défaut.
 * Git: garder le master toujours fonctionnel après un commit.
@@ -43,7 +43,7 @@ Règles à suivre additionnelles pour Abeille
 * Est accepté: ///@TODO: blablabla dans le code
 
 Hiérarchie (répertoires) du plugin Abeille
---------------
+------------------------------------------
 
 Basé sur "https://doc.jeedom.com/fr_FR/dev/plugin_template".
 
@@ -101,4 +101,6 @@ Propositions à discuter
     Les démons n'étant rien d'autre que des codes ou classes, je suggère de coller à la structure Jeedom ci dessus et mettre ces codes dans "core".
   * tests : Vu dans Jeedom, ca fait du sens d'isoler les codes de test. Sous structure dans la lignée de core. Ex tests/php, tests/class ...
 
-.. include:: IntegrityCheck.rst
+.. include:: dev/IntegrityCheck.rst
+
+.. include:: dev/RulesLanguage.rst

@@ -14,12 +14,12 @@ En effet il se peut que par manque de place le processus de mise-à-jour se pass
 La solution adoptée est de générer un fichier de signature MD5 pour tous les fichiers versionnés (et uniquement ceux la), juste avant le push. Le script ".tools/gen_md5.sh" est fait pour ça.
 
 Problèmes
-~~~~~~
+~~~~~~~~~
 - Le fichier de signature doit être le DERNIER mis-à-jour avant le push
 - Il doit contenir une information permettant de savoir si il est toujours valide
 
 Solution actuelle
-~~~~~~
+~~~~~~~~~~~~~~~~~
 
 Le script ".tools/git_push.sh" doit être utilisé pour tout nouveau push. Il va
 
@@ -28,7 +28,7 @@ Le script ".tools/git_push.sh" doit être utilisé pour tout nouveau push. Il va
 - et faire le git add + commit + push
 
 Autres problèmes
-~~~~~~
+~~~~~~~~~~~~~~~~
 Si on a une solution pour les push, il n'y en a pour l'instant aucune lors des merge, surtout si le merge est fait directement côté GitHub.
 
 Apres n'importe quel merge, ni la version ni les signatures ne sont à jour. Il faut donc ne pas tenter le test d'intégrité en l'etat.
@@ -36,7 +36,7 @@ Apres n'importe quel merge, ni la version ni les signatures ne sont à jour. Il 
 Attention un "git pull" fait un merge. Seul celui qui clone la branche de 0, ou qui fait un "git reset --hard" sera parfaitement aligné et pourra effectuer le test d'intégrité.
 
 Format 'Abeille.version'
-~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 Le format actuel est du type::
 
   # Auto-generated Abeille's version
@@ -47,7 +47,7 @@ La branche est celle de départ, et en aucun cas la branche de destination.
 Le 'X' permet de numéroter differents push le même jour mais dans le cas d'une branche "stable" ou "beta" il est probable qu'il reste à 1 la plupart du temps.
 
 Format 'Abeille.md5'
-~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 Le format actuel est du type::
 
   # Auto-generated Abeille's MD5 file. DO NOT MODIFY !

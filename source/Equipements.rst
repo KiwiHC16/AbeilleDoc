@@ -1,10 +1,7 @@
-Equipements
-===========
+Equipements supportés
+=====================
 
-Compatible
-----------
-
-Liste des équipements compatibles :doc:`listeCompatibilite`
+La liste complète :doc:`listeCompatibilite`
 
 :doc:`Eurotronics`
 -----------

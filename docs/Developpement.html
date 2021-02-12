@@ -6,12 +6,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Developpement &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
@@ -48,12 +49,13 @@
 </ul>
 </div><h3>Navigation</h3>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements supportés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Debug.html">Debug</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Developpement</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#grandes-lignes">Grandes lignes</a></li>
@@ -62,6 +64,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#regles-a-suivre-additionnelles-pour-abeille">Règles à suivre additionnelles pour Abeille</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hierarchie-repertoires-du-plugin-abeille">Hiérarchie (répertoires) du plugin Abeille</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#test-d-integrite-du-plugin">Test d’intégrité du plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#langues-utilisateurs-et-developpeurs">Langues utilisateurs et developpeurs</a></li>
 </ul>
 </li>
 </ul>
@@ -243,6 +246,30 @@ Les démons n’étant rien d’autre que des codes ou classes, je suggère de c
 </div>
 </div>
 </div>
+<div class="section" id="langues-utilisateurs-et-developpeurs">
+<h2>Langues utilisateurs et developpeurs<a class="headerlink" href="#langues-utilisateurs-et-developpeurs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le plugin est initialement conçu pour la langue Française uniquement mais pour être aussi ouvert que Jeedom et permettre à la communauté internationale de l’utiliser, des règles de developpement sont nécessaires.</p>
+<p>Proposition pour l’aspect utilisateur final</p>
+<ul class="simple">
+<li><p>Tout ce qui est affichable à l’utilisateur final doit pouvoir être traduit via les fichiers JSON (ex: core/i18n/en_US.json)</p></li>
+</ul>
+<p>Proposition pour les developpements</p>
+<ul class="simple">
+<li><p>Tout ce qui est developpement doit être en Anglais (plus compact, plus « ouvert »). Ca inclut donc</p>
+<ul>
+<li><p>les noms de fonctions</p></li>
+<li><p>les commentaires internes</p></li>
+<li><p>les noms de répertoire</p></li>
+<li><p>les noms de variables</p></li>
+</ul>
+</li>
+</ul>
+<p>Propostion pour la doc</p>
+<ul class="simple">
+<li><p>Aucune pour l’instant. Elle n’existe qu’en Français et comme de gros changements sont en cours, ca semble prématuré.</p></li>
+<li><p>Contrairement au plugin, la doc n’a pas de « traduction ». Un traducteur automatique donnerait surement des résultats inappropriés.</p></li>
+</ul>
+</div>
 </div>
 
 
@@ -257,7 +284,7 @@ Les démons n’étant rien d’autre que des codes ou classes, je suggère de c
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

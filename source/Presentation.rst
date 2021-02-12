@@ -5,13 +5,10 @@ Introduction
 Introduction
 ------------
 
-La Zigate (https://Zigate.fr/) est une passerelle universelle pour le protocole Zigbee. Elle est compatible avec énormément de matériels radios Zigbee. Grâce à elle, vous offrez à votre domotique un large panel de possibilités. La Zigate est modulable, performante et ouverte pour qu'elle puisse évoluer selon vos besoins.
+La **Zigate** (https://Zigate.fr/) est une passerelle universelle pour le protocole Zigbee. Elle est compatible avec énormément de matériels radios Zigbee. Grâce à elle, vous offrez à votre domotique un large panel de possibilités. La Zigate est modulable, performante et ouverte pour qu'elle puisse évoluer selon vos besoins.
 
 
-Le plugin Abeille
------------------
-
-Le plugin Abeille permet d'ajouter la zigate dans un environnement Jeedom et ainsi de mettre en place un réseau Zigbee avec des produits du marché et des réalisations personnelles (DIY) par l'intermédiaire de la passerelle Zigate dans Jeedom.
+Le plugin **Abeille** permet d'ajouter la zigate dans un environnement Jeedom et ainsi de mettre en place un réseau Zigbee avec des produits du marché et des réalisations personnelles (DIY).
 
 Ce plugin est né de besoins personnels : capteur de température radio distant avec un réseau sécurisé, mesh,…
 

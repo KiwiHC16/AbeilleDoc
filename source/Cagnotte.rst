@@ -5,11 +5,9 @@ Cagnotte
 Participez
 ==========
 
-`Participez à la cagnotte pour acheter des équipements pour supporter le développement. <https://paypal.me/KiwiHC16>`_
+`Participez à la cagnotte pour aider l'intégration de nouveaux équipements: <https://paypal.me/KiwiHC16>`_
 
 .. image:: images/Cagnote.png
-
-`Participer à la Cagnotte <https://paypal.me/KiwiHC16>`_
 
 Contexte
 ========

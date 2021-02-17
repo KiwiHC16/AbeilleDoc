@@ -65,6 +65,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#hierarchie-repertoires-du-plugin-abeille">Hiérarchie (répertoires) du plugin Abeille</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#test-d-integrite-du-plugin">Test d’intégrité du plugin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#langues-utilisateurs-et-developpeurs">Langues utilisateurs et developpeurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#procedures-de-mise-a-jour">Procédures de mise-à-jour</a></li>
 </ul>
 </li>
 </ul>
@@ -252,6 +253,7 @@ Les démons n’étant rien d’autre que des codes ou classes, je suggère de c
 <p>Proposition pour l’aspect utilisateur final</p>
 <ul class="simple">
 <li><p>Tout ce qui est affichable à l’utilisateur final doit pouvoir être traduit via les fichiers JSON (ex: core/i18n/en_US.json)</p></li>
+<li><p>Côté logs, seuls les modes info &amp; erreur doivent apparaitrent dans la langue choisie. On ne peut en aucun cas perdre de temps sur des traductions du mode « debug ».</p></li>
 </ul>
 <p>Proposition pour les developpements</p>
 <ul class="simple">
@@ -261,6 +263,7 @@ Les démons n’étant rien d’autre que des codes ou classes, je suggère de c
 <li><p>les commentaires internes</p></li>
 <li><p>les noms de répertoire</p></li>
 <li><p>les noms de variables</p></li>
+<li><p>les logs en mode « debug »</p></li>
 </ul>
 </li>
 </ul>
@@ -269,6 +272,30 @@ Les démons n’étant rien d’autre que des codes ou classes, je suggère de c
 <li><p>Aucune pour l’instant. Elle n’existe qu’en Français et comme de gros changements sont en cours, ca semble prématuré.</p></li>
 <li><p>Contrairement au plugin, la doc n’a pas de « traduction ». Un traducteur automatique donnerait surement des résultats inappropriés.</p></li>
 </ul>
+</div>
+<div class="section" id="procedures-de-mise-a-jour">
+<h2>Procédures de mise-à-jour<a class="headerlink" href="#procedures-de-mise-a-jour" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ce chapitre n’est pas tiré d’une quelconque doc officielle Jeedom mais issu de recherches via le code Jeedom. Le but est de clarifier la procédure de mise-à-jour utilisée par Jeedom.</p>
+<div class="section" id="a-partir-dur-market">
+<h3>A partir dur market<a class="headerlink" href="#a-partir-dur-market" title="Lien permanent vers ce titre">¶</a></h3>
+<p>A creuser</p>
+</div>
+<div class="section" id="a-partir-de-github">
+<h3>A partir de GitHub<a class="headerlink" href="#a-partir-de-github" title="Lien permanent vers ce titre">¶</a></h3>
+<img alt="_images/UpdateFromGitHub.png" src="_images/UpdateFromGitHub.png" />
+<p>A priori Jeedom fait la chose suivante (trouvé dans “core/class/update.class.php”)</p>
+<ul class="simple">
+<li><p>Telechargement du zip correspondant au repo donné</p></li>
+<li><p>Le téléchargement se fait dans /tmp/jeedom/&lt;nom-special&gt; (ex: /tmp/jeedom/tcharp38-Abeille-af97a57)</p></li>
+<li><p>Décompression du zip au même endroit</p></li>
+<li><p>Déplacement de tous les répertoires vers la destination finale (…plugins/abeille)</p></li>
+</ul>
+<p>Cette procédure semble avoir plusieurs failles qui doivent être prises en compte côté Abeille</p>
+<ul class="simple">
+<li><p>Pas ou tres peu de controle à chaque étape. Un pb de manque de place peut passer inapercu jusqu’au mauvais fonctionnement du plugin.</p></li>
+<li><p>Les droits des fichiers (en particulier des scripts ou autre binaire) semblent ignorés et pas restaurés.</p></li>
+</ul>
+</div>
 </div>
 </div>
 

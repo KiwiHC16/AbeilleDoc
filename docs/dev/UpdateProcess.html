@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Langues utilisateurs et developpeurs &#8212; Documentation Abeille 11.02.2021</title>
+    <title>Procédures de mise-à-jour &#8212; Documentation Abeille 11.02.2021</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -67,31 +67,29 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="langues-utilisateurs-et-developpeurs">
-<h1>Langues utilisateurs et developpeurs<a class="headerlink" href="#langues-utilisateurs-et-developpeurs" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Le plugin est initialement conçu pour la langue Française uniquement mais pour être aussi ouvert que Jeedom et permettre à la communauté internationale de l’utiliser, des règles de developpement sont nécessaires.</p>
-<p>Proposition pour l’aspect utilisateur final</p>
+  <div class="section" id="procedures-de-mise-a-jour">
+<h1>Procédures de mise-à-jour<a class="headerlink" href="#procedures-de-mise-a-jour" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Ce chapitre n’est pas tiré d’une quelconque doc officielle Jeedom mais issu de recherches via le code Jeedom. Le but est de clarifier la procédure de mise-à-jour utilisée par Jeedom.</p>
+<div class="section" id="a-partir-dur-market">
+<h2>A partir dur market<a class="headerlink" href="#a-partir-dur-market" title="Lien permanent vers ce titre">¶</a></h2>
+<p>A creuser</p>
+</div>
+<div class="section" id="a-partir-de-github">
+<h2>A partir de GitHub<a class="headerlink" href="#a-partir-de-github" title="Lien permanent vers ce titre">¶</a></h2>
+<img alt="dev\images/UpdateFromGitHub.png" src="dev\images/UpdateFromGitHub.png" />
+<p>A priori Jeedom fait la chose suivante (trouvé dans “core/class/update.class.php”)</p>
 <ul class="simple">
-<li><p>Tout ce qui est affichable à l’utilisateur final doit pouvoir être traduit via les fichiers JSON (ex: core/i18n/en_US.json)</p></li>
-<li><p>Côté logs, seuls les modes info &amp; erreur doivent apparaitrent dans la langue choisie. On ne peut en aucun cas perdre de temps sur des traductions du mode « debug ».</p></li>
+<li><p>Telechargement du zip correspondant au repo donné</p></li>
+<li><p>Le téléchargement se fait dans /tmp/jeedom/&lt;nom-special&gt; (ex: /tmp/jeedom/tcharp38-Abeille-af97a57)</p></li>
+<li><p>Décompression du zip au même endroit</p></li>
+<li><p>Déplacement de tous les répertoires vers la destination finale (…plugins/abeille)</p></li>
 </ul>
-<p>Proposition pour les developpements</p>
+<p>Cette procédure semble avoir plusieurs failles qui doivent être prises en compte côté Abeille</p>
 <ul class="simple">
-<li><p>Tout ce qui est developpement doit être en Anglais (plus compact, plus « ouvert »). Ca inclut donc</p>
-<ul>
-<li><p>les noms de fonctions</p></li>
-<li><p>les commentaires internes</p></li>
-<li><p>les noms de répertoire</p></li>
-<li><p>les noms de variables</p></li>
-<li><p>les logs en mode « debug »</p></li>
+<li><p>Pas ou tres peu de controle à chaque étape. Un pb de manque de place peut passer inapercu jusqu’au mauvais fonctionnement du plugin.</p></li>
+<li><p>Les droits des fichiers (en particulier des scripts ou autre binaire) semblent ignorés et pas restaurés.</p></li>
 </ul>
-</li>
-</ul>
-<p>Propostion pour la doc</p>
-<ul class="simple">
-<li><p>Aucune pour l’instant. Elle n’existe qu’en Français et comme de gros changements sont en cours, ca semble prématuré.</p></li>
-<li><p>Contrairement au plugin, la doc n’a pas de « traduction ». Un traducteur automatique donnerait surement des résultats inappropriés.</p></li>
-</ul>
+</div>
 </div>
 
 

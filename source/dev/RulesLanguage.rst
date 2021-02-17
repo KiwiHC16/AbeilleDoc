@@ -6,6 +6,7 @@ Le plugin est initialement conçu pour la langue Française uniquement mais pour
 Proposition pour l'aspect utilisateur final
 
 - Tout ce qui est affichable à l'utilisateur final doit pouvoir être traduit via les fichiers JSON (ex: core/i18n/en_US.json)
+- Côté logs, seuls les modes info & erreur doivent apparaitrent dans la langue choisie. On ne peut en aucun cas perdre de temps sur des traductions du mode "debug".
 
 Proposition pour les developpements
 
@@ -15,6 +16,7 @@ Proposition pour les developpements
   - les commentaires internes
   - les noms de répertoire
   - les noms de variables
+  - les logs en mode "debug"
 
 Propostion pour la doc
 

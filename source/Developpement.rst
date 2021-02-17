@@ -104,3 +104,5 @@ Propositions à discuter
 .. include:: dev/IntegrityCheck.rst
 
 .. include:: dev/RulesLanguage.rst
+
+.. include:: dev/UpdateProcess.rst

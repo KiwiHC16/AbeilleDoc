@@ -26,6 +26,7 @@ Table des matieres complete
    Installation
    Danfoss
    DIY
+   Innr
    Legrand
    Konke
    listeCompatibilite

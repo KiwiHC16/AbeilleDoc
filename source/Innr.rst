@@ -47,3 +47,5 @@ Reconfigurer les groupes:
 * Surtout ne pas effacer l objet dans Abeille
 * Definir les groupes dans les parametres dans Abeille
 * Inclure la telecommande
+* Appliquer la configuration en activant la telecommande (en cours de dev #1794 (https://github.com/KiwiHC16/Abeille/issues/1794).
+

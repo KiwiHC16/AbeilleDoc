@@ -1,16 +1,4 @@
-DIY
-===
+Do It Yourself
+==============
 
-Niveau de cuve
---------------
-
-Inclusion
-^^^^^^^^^
-
-
-Fonctionnement
-^^^^^^^^^^^^^^
-
-
-Reset
-^^^^^
+.. include:: diy/wifi_module/WifiModule.rst

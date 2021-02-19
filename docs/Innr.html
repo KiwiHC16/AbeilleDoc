@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; Documentation Abeille 11.02.2021</title>
+    <title>Innr &#8212; Documentation Abeille 11.02.2021</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -14,7 +14,7 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/language_data.js"></script>
     <script src="_static/translations.js"></script>
-    <link rel="index" title="Index" href="#" />
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -54,7 +54,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Debug.html">Debug</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DIY.html">Projets personnels (Do It Yourself)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
 </ul>
@@ -68,11 +68,51 @@
 
           <div class="body" role="main">
             
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="innr">
+<h1>Innr<a class="headerlink" href="#innr" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="telecommande">
+<h2>Telecommande<a class="headerlink" href="#telecommande" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Exclusion:</p>
+<ul class="simple">
+<li><p>Assurez vous que les zigates ne sont pas en mode inclusion.</p></li>
+<li><p>long appui sur Gros Bouton et Program pendant disons 10s ou plus. Va générer un Leave et reset des parametres.</p></li>
+</ul>
+<p>Inclusion</p>
+<ul class="simple">
+<li><p>Mettre la zigate en mode Inclusion</p></li>
+<li><p>Appui sur le - et program pendant 10s ou plus. La telecommande va rejoindre le reseau et Abeille va la configurer.</p></li>
+</ul>
+<p>Configuration standard:</p>
+<ul class="simple">
+<li><p>Mode Scene</p></li>
+</ul>
+<p>Bouton - Gros + pilote tous les equipments
+Bouton 1 à 6 envoie le niveau declarage à tous les equipements sur le reseau</p>
+<ul class="simple">
+<li><p>Mode Light</p></li>
+</ul>
+<p>Bouton - Gros + pilote tous les equipments
+Bouton 1 à 6 ne font rien</p>
+<p>Configuration Standard Abeille:</p>
+<ul class="simple">
+<li><p>Mode Scene</p></li>
+</ul>
+<p>Bouton - Gros + pilote tous les equipments du groupe 1001
+Bouton 1 à 6 envoie le niveau declarage à tous les equipements du groupe 1001</p>
+<ul class="simple">
+<li><p>Mode Light</p></li>
+</ul>
+<p>Bouton - Gros + pilote tous les equipments du groupe 1001
+Bouton 1 à 6 pilote les groupe 3003, 4004 à 8008</p>
+<p>Reconfigurer les groupes:</p>
+<ul class="simple">
+<li><p>Exclure la telecommande du reseau zigbee</p></li>
+<li><p>Surtout ne pas effacer l objet dans Abeille</p></li>
+<li><p>Definir les groupes dans les parametres dans Abeille</p></li>
+<li><p>Inclure la telecommande</p></li>
+<li><p>Appliquer la configuration en activant la telecommande (en cours de dev #1794 (<a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues/1794">https://github.com/KiwiHC16/Abeille/issues/1794</a>).</p></li>
+</ul>
+</div>
 </div>
 
 

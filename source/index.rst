@@ -12,6 +12,7 @@
    Utilisation
    UtilisationAvancee
    Debug
+   DIY
    Divers
    Developpement
 

@@ -1,8 +1,7 @@
-WIFI
-====
+Module Wifi
+-----------
 
-Adafruit
---------
+J'ai développé mon propre module WIFI du fait de petits soucis sur le premier module disponible. Finalement il fonctionne tellement bien et fourni une protection coupure électrique avec une batterie que je l'utilise dans toutes configuration et même avec mon sniffer ZigBee ...
 
 Comme je voulais avoir l'option Zigate Wifi dans Abeille et un petit soucis avec le module proposé par Akila, j'ai fait quelques investigations.
 
@@ -35,4 +34,5 @@ Batterie est égale à:
 * Je peux mettre la Zigate ou je veux
 * si le cable USB est branché sur un charger, je suis autonome en cas de coupure de courant
 
-Vous trouverez le source et le bin à la page: https://github.com/KiwiHC16/Abeille/tree/master/WIfi_Module
+Vous trouverez le source et le bin à la page: https://github.com/KiwiHC16/AbeilleDoc/tree/master/diy/wifi_module
+

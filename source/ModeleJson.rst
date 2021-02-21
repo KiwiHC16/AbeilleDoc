@@ -145,16 +145,34 @@ Actuellement les set de parametres sont: paramBatterie[true], paramType[telecomm
 uniqId
 ======
 
-Vous trouverez un champ uniqId dans les modeles. Celui ci n'est pas utilisé actuellement. L'idée est d'avoir une identifiant unique pour chaque fichier JSON. C'est une chaine de caracteres aleatoires.
+Vous trouverez un champ uniqId dans les modeles. L'idée est d'avoir une identifiant unique pour chaque fichier JSON. C'est une chaine de caracteres aleatoires.
+
+
+Include
+=======
+
+Dans le JSON de l equipement vous trouverez des champs include pour inclure les commandes. Les commandes sont elles memes definies dans des fichier JSON. Le champ doit commencer par Include suivi du nom de la commande (nom du fichier json décrivant la commande). Comme le traitement du fichier JSON ne peut avoir deux fois le meme champ, il faut ajouter une extension au mod clef include pour les differencier. Mettez un text aleatoire comme: 1 2 3 ou 1.2.2 ou YYYYMMJJ_HHMMSS pour la date du jour). 
+
+
+Value
+=====
+
+Permet de lier une commande Info à une commande Action. Cmd(Action)->value contient cmd->logicalId de la commande Info.
+
 
 Definition commandes
 ====================
 
-  "execAtCreation": "Yes",    (Not implemented yet)
-  "execAtCreationDelay": "60",(Not implemented yet)
+  "execAtCreation": "Yes",
+  
+  "execAtCreationDelay": "60",
+  
   "Polling": "No", cron -> toutes les minutes, cron15 -> toutes les 15 minutes, cronHourly -> 1 h, cronDaily Daily
+  
   "PollingOnCmdChange": "No", / "PollingOnCmdChange": "0006-01-0000",
+  
   "PollingOnCmdChangeDelay": 1, en secondes
+  
   "RefreshData" : 1 / 0 - Executer cette commande pour rafraichir la valeur associée.
 
 Explications:

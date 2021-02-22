@@ -166,7 +166,7 @@ Permet de recuperer en parametre la la valeur d une commande info.
 
 (Voir modele BSO qui est le premier a utiliser cette possibilité).
 
-Dans #cmdInfo_xxxx#, xxxx est le logicalId de la commande info en question (dans 99% des cas identique au nom de la commande).
+Dans #cmdInfo_xxxx_#, xxxx est le logicalId de la commande info en question (dans 99% des cas identique au nom de la commande).
 
 
 Definition commandes

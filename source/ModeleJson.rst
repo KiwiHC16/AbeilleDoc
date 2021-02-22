@@ -159,8 +159,8 @@ Value
 
 Permet de lier une commande Info à une commande Action. Cmd(Action)->value contient cmd->logicalId de la commande Info.
 
-#cmdInfo_xxxx#
-==============
+#cmdInfo_xxxx_#
+===============
 
 Permet de recuperer en parametre la la valeur d une commande info.
 

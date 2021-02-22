@@ -159,6 +159,12 @@ Value
 
 Permet de lier une commande Info à une commande Action. Cmd(Action)->value contient cmd->logicalId de la commande Info.
 
+#cmdInfo_xxxx#
+==============
+
+Permet de recuperer en parametre la la valeur d une commande info.
+5Voir modele BSO qui est le premier a utiliser cette possibilité).
+
 
 Definition commandes
 ====================

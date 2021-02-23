@@ -46,12 +46,14 @@
 </ul>
 </div><h3>Navigation</h3>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements supportés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Debug.html">Debug</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
 </ul>
@@ -147,17 +149,31 @@
 </div>
 <div class="section" id="uniqid">
 <h3>uniqId<a class="headerlink" href="#uniqid" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Vous trouverez un champ uniqId dans les modeles. Celui ci n’est pas utilisé actuellement. L’idée est d’avoir une identifiant unique pour chaque fichier JSON. C’est une chaine de caracteres aleatoires.</p>
+<p>Vous trouverez un champ uniqId dans les modeles. L’idée est d’avoir une identifiant unique pour chaque fichier JSON. C’est une chaine de caracteres aleatoires.</p>
+</div>
+<div class="section" id="include">
+<h3>Include<a class="headerlink" href="#include" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Dans le JSON de l equipement vous trouverez des champs include pour inclure les commandes. Les commandes sont elles memes definies dans des fichier JSON. Le champ doit commencer par Include suivi du nom de la commande (nom du fichier json décrivant la commande). Comme le traitement du fichier JSON ne peut avoir deux fois le meme champ, il faut ajouter une extension au mod clef include pour les differencier. Mettez un text aleatoire comme: 1 2 3 ou 1.2.2 ou YYYYMMJJ_HHMMSS pour la date du jour).</p>
+</div>
+<div class="section" id="value">
+<h3>Value<a class="headerlink" href="#value" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Permet de lier une commande Info à une commande Action. Cmd(Action)-&gt;value contient cmd-&gt;logicalId de la commande Info.</p>
+</div>
+<div class="section" id="cmdinfo-xxxx">
+<h3>#cmdInfo_xxxx_#<a class="headerlink" href="#cmdinfo-xxxx" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Permet de recuperer en parametre la la valeur d une commande info.</p>
+<p>(Voir modele BSO qui est le premier a utiliser cette possibilité).</p>
+<p>Dans #cmdInfo_xxxx_#, xxxx est le logicalId de la commande info en question (dans 99% des cas identique au nom de la commande).</p>
 </div>
 <div class="section" id="definition-commandes">
 <h3>Definition commandes<a class="headerlink" href="#definition-commandes" title="Lien permanent vers ce titre">¶</a></h3>
 <blockquote>
-<div><p>« execAtCreation »: « Yes »,    (Not implemented yet)
-« execAtCreationDelay »: « 60 »,(Not implemented yet)
-« Polling »: « No », cron -&gt; toutes les minutes, cron15 -&gt; toutes les 15 minutes, cronHourly -&gt; 1 h, cronDaily Daily
-« PollingOnCmdChange »: « No », / « PollingOnCmdChange »: « 0006-01-0000 »,
-« PollingOnCmdChangeDelay »: 1, en secondes
-« RefreshData » : 1 / 0 - Executer cette commande pour rafraichir la valeur associée.</p>
+<div><p>« execAtCreation »: « Yes »,</p>
+<p>« execAtCreationDelay »: « 60 »,</p>
+<p>« Polling »: « No », cron -&gt; toutes les minutes, cron15 -&gt; toutes les 15 minutes, cronHourly -&gt; 1 h, cronDaily Daily</p>
+<p>« PollingOnCmdChange »: « No », / « PollingOnCmdChange »: « 0006-01-0000 »,</p>
+<p>« PollingOnCmdChangeDelay »: 1, en secondes</p>
+<p>« RefreshData » : 1 / 0 - Executer cette commande pour rafraichir la valeur associée.</p>
 </div></blockquote>
 <p>Explications:</p>
 <ul class="simple">

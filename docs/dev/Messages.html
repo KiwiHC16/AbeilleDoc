@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Format des messages inter démons &#8212; Documentation Abeille 11.02.2021</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/Abeille_icon.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div><h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Bienvenu.html">Bienvenu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Presentation.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Equipements.html">Equipements supportés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Utilisation.html">Utilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../UtilisationAvancee.html">Utilisation avancée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Debug.html">Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developpement.html">Developpement</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="format-des-messages-inter-demons">
+<h1>Format des messages inter démons<a class="headerlink" href="#format-des-messages-inter-demons" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Ce chapitre décrit le format des messages échangés entre démons.</p>
+<div class="section" id="parser-vers-lqi-collector">
+<h2>Parser vers “LQI collector”<a class="headerlink" href="#parser-vers-lqi-collector" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pendant la collecte LQI, des requetes du type 004E sont envoyées aux équipements « routeur » et leur réponse 804E est décodée puis envoyée au « LQI collector ».</p>
+<p>Le format des messages est adapté aux infos à transférer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$msg = array(
+    &#39;Type&#39; =&gt; string, &#39;804E&#39;,
+    &#39;SrcAddr&#39; =&gt; hex string, $SrcAddr,
+    &#39;TableEntries&#39; =&gt; hex string, $NTableEntries,
+    &#39;TableListCount&#39; =&gt; hex string, $NTableListCount,
+    &#39;StartIndex&#39; =&gt; hex string, $StartIndex,
+    &#39;List&#39; =&gt; list, $NList
+        $N = array(
+            &quot;Addr&quot;     =&gt; substr($payload, $j + 0, 4),
+            &quot;ExtPANId&quot; =&gt; substr($payload, $j + 4, 16),
+            &quot;ExtAddr&quot;  =&gt; substr($payload, $j + 20, 16),
+            &quot;Depth&quot;    =&gt; substr($payload, $j + 36, 2),
+            &quot;LQI&quot;      =&gt; substr($payload, $j + 38, 2),
+            &quot;BitMap&quot;   =&gt; substr($payload, $j + 40, 2)
+    )
+);
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+
+    <div class="footer">
+      &copy;2019-21, KiwiHC16.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

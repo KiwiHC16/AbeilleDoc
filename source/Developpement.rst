@@ -106,3 +106,5 @@ Propositions à discuter
 .. include:: dev/RulesLanguage.rst
 
 .. include:: dev/UpdateProcess.rst
+
+.. include:: dev/Messages.rst

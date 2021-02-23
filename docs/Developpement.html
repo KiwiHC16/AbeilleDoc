@@ -66,6 +66,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#test-d-integrite-du-plugin">Test d’intégrité du plugin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#langues-utilisateurs-et-developpeurs">Langues utilisateurs et developpeurs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#procedures-de-mise-a-jour">Procédures de mise-à-jour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#format-des-messages-inter-demons">Format des messages inter démons</a></li>
 </ul>
 </li>
 </ul>
@@ -295,6 +296,33 @@ Les démons n’étant rien d’autre que des codes ou classes, je suggère de c
 <li><p>Pas ou tres peu de controle à chaque étape. Un pb de manque de place peut passer inapercu jusqu’au mauvais fonctionnement du plugin.</p></li>
 <li><p>Les droits des fichiers (en particulier des scripts ou autre binaire) semblent ignorés et pas restaurés.</p></li>
 </ul>
+</div>
+</div>
+<div class="section" id="format-des-messages-inter-demons">
+<h2>Format des messages inter démons<a class="headerlink" href="#format-des-messages-inter-demons" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ce chapitre décrit le format des messages échangés entre démons.</p>
+<div class="section" id="parser-vers-lqi-collector">
+<h3>Parser vers “LQI collector”<a class="headerlink" href="#parser-vers-lqi-collector" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pendant la collecte LQI, des requetes du type 004E sont envoyées aux équipements « routeur » et leur réponse 804E est décodée puis envoyée au « LQI collector ».</p>
+<p>Le format des messages est adapté aux infos à transférer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$msg = array(
+    &#39;Type&#39; =&gt; string, &#39;804E&#39;,
+    &#39;SrcAddr&#39; =&gt; hex string, $SrcAddr,
+    &#39;TableEntries&#39; =&gt; hex string, $NTableEntries,
+    &#39;TableListCount&#39; =&gt; hex string, $NTableListCount,
+    &#39;StartIndex&#39; =&gt; hex string, $StartIndex,
+    &#39;List&#39; =&gt; list, $NList
+        $N = array(
+            &quot;Addr&quot;     =&gt; substr($payload, $j + 0, 4),
+            &quot;ExtPANId&quot; =&gt; substr($payload, $j + 4, 16),
+            &quot;ExtAddr&quot;  =&gt; substr($payload, $j + 20, 16),
+            &quot;Depth&quot;    =&gt; substr($payload, $j + 36, 2),
+            &quot;LQI&quot;      =&gt; substr($payload, $j + 38, 2),
+            &quot;BitMap&quot;   =&gt; substr($payload, $j + 40, 2)
+    )
+);
+</pre></div>
+</div>
 </div>
 </div>
 </div>

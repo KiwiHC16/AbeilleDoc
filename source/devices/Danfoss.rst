@@ -1,6 +1,5 @@
-#######
 Danfoss
-#######
+-------
 
 ********************
 Ally: Tete Radiateur
@@ -10,7 +9,7 @@ Ally: Tete Radiateur
 
 
 Premiere mise sous tension
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Mettre la zigate en mode inclusion
 * Enlever le couvercle d'Ally en tirant et en appuyant sur le clips situé en dessous
@@ -19,21 +18,20 @@ Premiere mise sous tension
 * L'inclusion doit se faire et vous devez voir Ally dans la liste des équipements
 
 Observations
-------------
+~~~~~~~~~~~~
 
 * Test fait sur canal 15.
 * Répond dans les 7s à  un getName ou getEP.
 * Affichage éteint par défaut.
 
 inclusion
----------
+~~~~~~~~~
 
 https://github.com/KiwiHC16/AbeilleDoc/blob/master/docs/products/eTRV0100/AN235786405824en-010101.pdf
 
 
-
 Fonctions
----------
+~~~~~~~~~
 
 Fonctionne:
  * Définition de la consigne de temperature de chauffage (Consigne)
@@ -51,6 +49,5 @@ Pas supporté:
  *
 
 En cours d investigation:
-
 
 .. a noter:: Cependa

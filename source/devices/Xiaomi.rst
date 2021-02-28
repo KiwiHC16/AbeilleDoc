@@ -1,38 +1,30 @@
-******
 Xiaomi
-******
+------
 
 Tous
-****
+~~~~
 
 Tous les périphériques classiques
 
-
-Nouvelle inclusion
-==================
+**Nouvelle inclusion**
 
 * Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter...
 * Appui long de 7s sur le bouton du flanc de l'équipement, l'équipement doit se connecter et un objet doit apparaître dans Jeedom.
 
-Déjà inclue
-===========
+**Déjà inclue**
 
 * Zigate en fonctionnement normale
 * Appui court sur le bouton du flanc de l'équipement et l'objet Abeille doit être créé.
 
-
-
-
 Bouton Rond
-***********
+~~~~~~~~~~~
 
 Bouton Rond (lumi.sensor_switch)
 
 Ce bouton envoie un message lors de l'appui mais aussi lors du relâchement. L'état dans Abeille/Jeedom reflète l'état du bouton.
 
-
 Bouton Carre
-************
+~~~~~~~~~~~~
 
 Bouton Carre (lumi.sensor_switch.aq2)
 
@@ -40,9 +32,7 @@ Contrairement au bouton rond ci dessus, le bouton carré n'envoie pas d'informat
 
 Afin d'avoir le visuel sur le dashboard, l'état passe à 1 sur la réception du message et Jeedom attend 1 minute avant de le remettre à 0.
 
-
-Informations
-============
+**Informations**
 
 Informations complémentaires
 
@@ -60,7 +50,6 @@ Par exemple pour commander une ampoule Ikea:
 
 
 Multi
-=====
 
 Pour l'information multi, celle ci remonte quand on fait plus d'un appui sur le bouton. Multi prend alors la valeur remontée. Le bouton n'envoie pas d'autre information et donc la valeur reste indéfiniment. Par défaut l'objet créé demande à Jeedom de faire un retour d'état à 0 après une minute. Cela peut être enlevé dans les paramètres de la commande.
 
@@ -68,7 +57,7 @@ Le fonctionnement de base va provoquer 2 événements, un lors de l'appui multip
 Par défaut, en gros, le scénario se déclenche et si vous testez la valeur multi > 1, c'est un événement appui multiple et si valeur à 0 alors événement Jeedom de retour d'état.
 
 Inondation
-**********
+~~~~~~~~~~
 
 Capteur Inondation (lumi.sensor_wleak.aq1)
 
@@ -78,7 +67,7 @@ Remonte son nom et attribut ff01 (longueur 34)
 
 
 Porte V1
-********
+~~~~~~~~
 
 Capteur de Porte Ovale (lumi.sensor_magnet)
 
@@ -89,7 +78,7 @@ Puis son nom lumi.sensor_magnet
 
 
 Porte V2
-********
+~~~~~~~~
 
 Capteur Porte Rectangle (lumi.sensor_magnet.aq2)
 
@@ -119,7 +108,7 @@ Visiblement quand le capteur fait un rejoin après avoir perdu le réseau par ex
 
 
 Présence V2
-***********
+~~~~~~~~~~~
 
 Capteur de Présence V2
 
@@ -139,7 +128,7 @@ Il remonte une info a chaque détection de présence et remonte en même temps l
 
 
 Température V1
-**************
+~~~~~~~~~~~~~~
 
 Capteur Température Rond (lumi.sensor_ht)
 
@@ -156,7 +145,7 @@ Remonte ff01 (len 31)
 
 
 Température V2
-**************
+~~~~~~~~~~~~~~
 
 Capteur Température Carré (lumi.weather)
 
@@ -185,13 +174,13 @@ Remonte ff01 (len 37)
 
 
 Cube Aqara
-**********
+~~~~~~~~~~
 
 .. image:: images/Capture_d_ecran_2018_06_12_a_22_00_03.png
 
 
 Wall Switch 1
-*************
+~~~~~~~~~~~~~
 
 Wall Switch Double Battery (lumi.sensor_86sw2)
 
@@ -210,7 +199,7 @@ Il répond au getName sur EP 01 si on fait un appuie long sur l'interrupteur de 
 Exclusion
 
 Wall Switch 2
-*************
+~~~~~~~~~~~~~
 
 Wall Switch Double 220V Sans Neutre (lumi.ctrl_neutral2)
 
@@ -229,8 +218,7 @@ Il répond au getName sur EP 01 s.
 Exclusion
 
 
-"retour d'expérience" sur l'utilisation des Wall Switch Xiaomi
-==============================================================
+**"retour d'expérience" sur l'utilisation des Wall Switch Xiaomi**
 
 J'ai remplacé un double inter par un Wall Switch Double 220V Sans Neutre (lumi.ctrl_neutral2)
 J'ai ajouté un Wall Switch Double Battery (lumi.remote.b286acn01) pour donc simuler un double va-et-viens avec l'autre Wall switch.
@@ -262,7 +250,7 @@ Ca marche, et c'est assez réactif (la pire latence notée était juste au dessu
 .. note:: Voir le chapitre information du bouton carré ci dessus.
 
 Vibration
-*********
+~~~~~~~~~
 
 Capteur Vibration
 
@@ -338,7 +326,7 @@ Le risque aurait été qu'il envoi "1" ou "3" durant l'extension du store, entra
 
 
 Fumée
-*****
+~~~~~
 
 Capteur de fumée
 
@@ -359,7 +347,7 @@ Avec le bouton tester, vous envoyez un message au capteur qui doit réagir avec 
 Le capteur se réveille toutes les 15s pour savoir si la Zigate à des infos pour lui.
 
 Gaz
-***
+~~~
 
 Capteur Gaz
 
@@ -375,7 +363,7 @@ Avec le bouton tester, vous envoyez un message au capteur qui doit réagir avec 
 
 
 Prise
-*****
+~~~~~
 
 On/Off retour etat en temps réel. Que ce soit sur commande depuis Jeedom ou sur utilisateur inter sur la prise.
 

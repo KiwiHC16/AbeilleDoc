@@ -246,21 +246,3 @@ Les different module d'Abeille discutent entre eux par message passing. Ils est 
 
 Ici on voit dans la derniere colonne qu'il n'y a pas de message en attente, ils ont tous été traités.
 
-Menus cachées pour developpeurs
-------------
-
-https://github.com/KiwiHC16/Abeille/issues/1292
-
-Créer le fichier debug.php si celui ci n'existe pas:
-
-touch /var/www/html/plugins/Abeille/tmp/debug.php
-
-Résumé des fonctionalités accessibles en mode "developpeur"
-
-mode developpeur = fichier debug.php present (meme vide) dans le repertoire racine du plugin Abeille
-
-- Log des erreurs PHP => Dans master. Actif si "debug.php" contient "$dbgAbeillePHP = TRUE;"
-- Fonctionalite "switch branch" => pas poussé mais restera developpeur only
-- Fonctionalite "monitoring" => pas poussé. Pourrait etre utile à tous à terme
-- FW 3.1d => Dans le master. En mode dev jusqu'a ce qu'on confirme aucun souci
-- Fonctionalite "supprime de Jeedom" => Dans le master. A discuter si l'utilisateur peut en avoir besoin

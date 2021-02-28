@@ -1,82 +1,53 @@
 Equipements supportés
 =====================
 
-La liste complète :doc:`listeCompatibilite`
+La liste la plus complète est la suivante :doc:`listeCompatibilite` mais notez qu'elle peut ne pas être à jour.
 
-:doc:`Eurotronics`
------------
+Vous trouverez ci-dessous quelque informations ou procédures par marque pour certains équipements.
 
-Danfoss
--------
+.. toctree::
+   :maxdepth: 2
+   :hidden:
 
-Ce chapitre regroupe les informations sur les équipements :doc:`Danfoss`
+   devices/Eurotronics
+   devices/Danfoss
+   DIY
+   devices/Heiman
+   devices/Ikea
+   devices/Innr
+   devices/Konke
+   devices/Legrand
+   devices/Livolo
+   devices/OSRAM
+   devices/PhilipsHue
+   devices/Profalux
+   devices/SonOff
+   devices/Tuya
+   devices/Xiaomi
+
+.. include:: devices/Eurotronics.rst
+.. include:: devices/Danfoss.rst
 
 DIY
 ---
 
 Ce chapitre regroupe les informations sur les équipements :doc:`DIY`
 
-Heiman
-------
-
-Ce chapitre regroupe les informations sur les équipements :doc:`Heiman`
-
-Ikea
-----
-
-Ce chapitre regroupe les informations sur les équipements :doc:`Ikea`
-
-Innr
-----
-
-Ce chapitre regroupe les informations sur les équipements :doc:`Innr`
-
-Konke
------
-
-Ce chapitre regroupe les informations sur les équipements :doc:`Konke`
-
-Legrand
--------
-
-Ce chapitre regroupe les informations sur les équipements :doc:`Legrand`
-
-Livolo
-------
-
-Ce chapitre regroupe les informations sur les équipements :doc:`Livolo`
+.. include:: devices/Heiman.rst
+.. include:: devices/Ikea.rst
+.. include:: devices/Innr.rst
+.. include:: devices/Konke.rst
+.. include:: devices/Legrand.rst
+.. include:: devices/Livolo.rst
 
 OnOffController
 ---------------
 
 Ce chapitre regroupe les informations sur les équipements :doc:`OnOffController`
 
-Osram
------
-
-Ce chapitre regroupe les informations sur les équipements :doc:`OSRAM`
-
-Philips Hue
------------
-
-Ce chapitre regroupe les informations sur les équipements :doc:`PhilipsHue`
-
-Profalux
---------
-
-Ce chapitre regroupe les informations sur les équipements :doc:`Profalux`
-
-SonOff
-------
-
-Ce chapitre regroupe les informations sur les équipements :doc:`SonOff`
-
-Tuya
-----
-
-Ce chapitre regroupe les informations sur les équipements :doc:`Tuya`
-
-Xiaomi
-------
-
-Ce chapitre regroupe les informations sur les équipements :doc:`Xiaomi`
+.. include:: devices/OSRAM.rst
+.. include:: devices/PhilipsHue.rst
+.. include:: devices/Profalux.rst
+.. include:: devices/SonOff.rst
+.. include:: devices/Tuya.rst
+.. include:: devices/Xiaomi.rst

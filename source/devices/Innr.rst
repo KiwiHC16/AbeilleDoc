@@ -1,22 +1,20 @@
-####
 Innr
-####
+----
 
-************
 Telecommande
-************
+~~~~~~~~~~~~
 
-Exclusion:
+**Exclusion**
 
 * Assurez vous que les zigates ne sont pas en mode inclusion.
 * long appui sur Gros Bouton et Program pendant disons 10s ou plus. Va générer un Leave et reset des parametres.
 
-Inclusion
+**Inclusion**
 
 * Mettre la zigate en mode Inclusion
 * Appui sur le - et program pendant 10s ou plus. La telecommande va rejoindre le reseau et Abeille va la configurer.
 
-Configuration standard:
+**Configuration standard**
 
 * Mode Scene
 
@@ -28,7 +26,7 @@ Bouton 1 à 6 envoie le niveau declarage à tous les equipements sur le reseau
 Bouton - Gros + pilote tous les equipments
 Bouton 1 à 6 ne font rien
 
-Configuration Standard Abeille:
+**Configuration Standard Abeille**
 
 * Mode Scene
 
@@ -40,8 +38,7 @@ Bouton 1 à 6 envoie le niveau declarage à tous les equipements du groupe 1001
 Bouton - Gros + pilote tous les equipments du groupe 1001
 Bouton 1 à 6 pilote les groupe 3003, 4004 à 8008
 
-
-Reconfigurer les groupes:
+**Reconfigurer les groupes**
 
 * Exclure la telecommande du reseau zigbee
 * Surtout ne pas effacer l objet dans Abeille

@@ -63,10 +63,25 @@
 <li class="toctree-l2"><a class="reference internal" href="#regles-a-suivre">Règles à suivre</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#regles-a-suivre-additionnelles-pour-abeille">Règles à suivre additionnelles pour Abeille</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hierarchie-repertoires-du-plugin-abeille">Hiérarchie (répertoires) du plugin Abeille</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#test-d-integrite-du-plugin">Test d’intégrité du plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test-d-integrite-du-plugin">Test d’intégrité du plugin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#besoin">Besoin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#problemes">Problèmes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#solution-actuelle">Solution actuelle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#autres-problemes">Autres problèmes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#format-abeille-version">Format “Abeille.version”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#format-abeille-md5">Format “Abeille.md5”</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#langues-utilisateurs-et-developpeurs">Langues utilisateurs et developpeurs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#procedures-de-mise-a-jour">Procédures de mise-à-jour</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#format-des-messages-inter-demons">Format des messages inter démons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#procedures-de-mise-a-jour">Procédures de mise-à-jour</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a-partir-du-market">A partir du market</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a-partir-de-github">A partir de GitHub</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#format-des-messages-inter-demons">Format des messages inter démons</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#parser-vers-lqi-collector">Parser vers “LQI collector”</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -251,12 +266,12 @@ Les démons n’étant rien d’autre que des codes ou classes, je suggère de c
 <div class="section" id="langues-utilisateurs-et-developpeurs">
 <h2>Langues utilisateurs et developpeurs<a class="headerlink" href="#langues-utilisateurs-et-developpeurs" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le plugin est initialement conçu pour la langue Française uniquement mais pour être aussi ouvert que Jeedom et permettre à la communauté internationale de l’utiliser, des règles de developpement sont nécessaires.</p>
-<p>Proposition pour l’aspect utilisateur final</p>
+<p>Multi-langues et utilisateur final</p>
 <ul class="simple">
-<li><p>Tout ce qui est affichable à l’utilisateur final doit pouvoir être traduit via les fichiers JSON (ex: core/i18n/en_US.json)</p></li>
-<li><p>Côté logs, seuls les modes info &amp; erreur doivent apparaitrent dans la langue choisie. On ne peut en aucun cas perdre de temps sur des traductions du mode « debug ».</p></li>
+<li><p>Tout ce qui est affichable à l’utilisateur final doit pouvoir être traduit via les fichiers de traduction JSON (ex: core/i18n/en_US.json)</p></li>
+<li><p>Néanmoins côté logs, seuls les modes <strong>info</strong> &amp; <strong>erreur</strong> doivent apparaitrent dans la langue choisie. On ne peut en aucun cas perdre de temps sur des traductions du mode « debug ».</p></li>
 </ul>
-<p>Proposition pour les developpements</p>
+<p>Multi-langues et developpeurs</p>
 <ul class="simple">
 <li><p>Tout ce qui est developpement doit être en Anglais (plus compact, plus « ouvert »). Ca inclut donc</p>
 <ul>
@@ -272,13 +287,14 @@ Les démons n’étant rien d’autre que des codes ou classes, je suggère de c
 <ul class="simple">
 <li><p>Aucune pour l’instant. Elle n’existe qu’en Français et comme de gros changements sont en cours, ca semble prématuré.</p></li>
 <li><p>Contrairement au plugin, la doc n’a pas de « traduction ». Un traducteur automatique donnerait surement des résultats inappropriés.</p></li>
+<li><p>Autre solution qui ferait plus de sens pour répondre au plus grand nombre: écrire la doc d’abord en Anglais, et eventuellement creer une version Française quand on trouve du temps.</p></li>
 </ul>
 </div>
 <div class="section" id="procedures-de-mise-a-jour">
 <h2>Procédures de mise-à-jour<a class="headerlink" href="#procedures-de-mise-a-jour" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Ce chapitre n’est pas tiré d’une quelconque doc officielle Jeedom mais issu de recherches via le code Jeedom. Le but est de clarifier la procédure de mise-à-jour utilisée par Jeedom.</p>
-<div class="section" id="a-partir-dur-market">
-<h3>A partir dur market<a class="headerlink" href="#a-partir-dur-market" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="a-partir-du-market">
+<h3>A partir du market<a class="headerlink" href="#a-partir-du-market" title="Lien permanent vers ce titre">¶</a></h3>
 <p>A creuser</p>
 </div>
 <div class="section" id="a-partir-de-github">

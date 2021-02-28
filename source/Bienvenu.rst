@@ -5,13 +5,15 @@ Bienvenu dans la documention du plugin 'Abeille' pour Jeedom.
 
 .. important::
 
-    Cette documentation est la dernière version disponible.
-    Elle est alignée autant que possible sur les dernières évolutions du plugin et est donc en "ré-écriture" quasi permanente.
+   Cette documentation est la dernière version disponible.
+   Elle est alignée autant que possible sur les dernières évolutions du plugin et est donc en "ré-écriture" quasi permanente.
 
-    Les derniers developpements sont focalisés sur
+   Les derniers developpements sont focalisés sur
 
-    - Jeedom v4 & v4.1
-    - Zigate firmware 3.1c & 3.1d
+   - Jeedom v4.1
+   - Zigate firmware 3.1c & 3.1d
+
+   Pour les utilisateurs Jeedom v3 il est fortement recommandé de migrer vers la v4.1 (version officielle du moment). Il nous est difficile de s'assurer que les évolutions restent compatibles avec une version antérieure.
 
 .. important::
 

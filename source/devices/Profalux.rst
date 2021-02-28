@@ -1,13 +1,10 @@
-########
 Profalux
-########
+--------
 
-*****
 Volet
-*****
+~~~~~
 
-Inclusion d'un volet
-====================
+**Inclusion d'un volet**
 
 Comme pour tous modules Zigbee et pour bien comprendre la procédure, il faut savoir que :
 
@@ -18,7 +15,6 @@ N’ayant pas de boutons ou d’interfaces, un volet Profalux Zigbee ne peux pas
 A savoir tout au long de cette procédure : lorsque le volet fait un petit va et vient c'est le signe que la commande a bien été reçue.
 
 Etape 1
--------
 
 Étape 1: Remise à zéro de la télécommande et du volet.
 
@@ -44,7 +40,6 @@ Si jamais les commandes de votre volet sont inversées, il suffit à l'aide d'un
 * Fermer le volet complètement.
 
 Étape 2
--------
 
 Inclusion du volet
 
@@ -71,15 +66,11 @@ A la fin de la 2ème fermeture, le volet fera un petit va et vient.
 
 Faites un rafraichissement de votre dashboard et votre volet devrait apparaitre !!!
 
-
-Résolution
-==========
+**Résolution**
 
 Résolution de problèmes
 
-
 Le volet
---------
 
 Le volet ne répond plus à la télécommande.
 

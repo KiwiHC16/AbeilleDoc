@@ -1,23 +1,19 @@
-#####
 OSRAM
-#####
+-----
 
-*************
 Prise Smart +
-*************
+~~~~~~~~~~~~~
 
 Les prises Inddor et Outdoor semble identique. Dans Abeille par defaut elle seront considérées indoor. Vous pouvez changer l icone si elle est OutDoor.
 
-Nouvelle inclusion
-==================
+**Nouvelle inclusion**
 
 * Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter...
 * Appui long sur le bouton du flanc de la prise, la prise switche rapidement On/Off, lâcher le bouton, l'équipement doit se connecter et un objet doit apparaître dans Jeedom.
 
 .. image:: images/plug01_new.png
 
-Inclue
-======
+**Inclue**
 
 Déjà inclue préalablement
 
@@ -25,8 +21,7 @@ Déjà inclue préalablement
 
 ------------------------------------------------------- A clarifier
 
-Retour d'état
-=============
+**Retour d'état**
 
 Afin de configurer le retour d'état il faut avoir:
 - l'adresse IEEE sur l objet prise OSRAM
@@ -44,44 +39,36 @@ Le retour d'état ne remonte que si l'état change. Donc si l'icone n'est pas sy
 
 ------------------------------------------------------- A clarifier
 
-Remove
-======
+**Remove**
 
 ..image:: images/Capture_d_ecran_2019_07_06_a_10_43_00.png
 
 Un remove exclue la prise OSRAM Outdoor du reseau avec un Leave (Rejoin: False, Request: False, Remove Children: False). Lors de l exclusion on entend la prise faire un aller-retour du relai. Et l'équipement dans Abeille est conservé mais désactivé.
 Vous pouvez garder l'équipement dans Abeille si vous le souhaitez ou le supprimer. Si vous le gardez, lors de la prochaine inclusion de cette même prise il sera ré-utilisé.
 
-********
 Ampoules
-********
+~~~~~~~~
 
 Ampoule E27 CLA 60 RGBW OSRAM (Classic E27 Multicolor)
 
-Nouvelle inclusion
-===================
+**Nouvelle inclusion***
 
 * Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter...
 * Brancher l'ampoule OSRAM. Elle devrait joindre le réseau immédiatement et un objet doit être créé dans Jeedom.
 
-Déjà inclue
-===========
+**Déjà inclue**
 
 * Ampoule allumée. Éteindre/Allumer 5 fois toutes les 3 s et elle doit essayer de joindre le réseau et faire un flash.
 
-
 https://www.youtube.com/watch?v=PaA0DV5BXH0
 
-*******
 Routage
-*******
+~~~~~~~
 
 Le routage avec les prise OSRAM ne semble pas compatible avec les autres produits comme xiaomi, ikea,... voir plus de détail dans le chapitre route et les aspects :ref:`OSRAM <radio-routes>`.
 
-
-***************
 Lightify Switch
-***************
+~~~~~~~~~~~~~~~
 
 Retrait de la languette pile en sortie de la boite avec zigate en mode inclusion. Rien passe sur la radio. Il a fallu plein de manip dont retirer la batterie pour avoir la led du milieu qui s allume en vert de temps a autre.
 
@@ -96,10 +83,8 @@ Proprietés:
 Cette telecommande broadcast et n'utilise pas les groupes. Toutes les ampoules dans le réseau vont utiliser les commandes !
 Elle est visiblement configuratble avec la GW Osram mais je ne l'ai pas pour tester.
 
-
-*************
 Motion Sensor
-*************
+~~~~~~~~~~~~~
 
 Reset:
 Bouton gauche 10 secondes d'apres la documentation mais personne ne touve que cela fonctionne.

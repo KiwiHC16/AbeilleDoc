@@ -1,12 +1,11 @@
-******
 Heiman
-******
+------
 
 Detecteur de fumée
-******************
+~~~~~~~~~~~~~~~~~~
 
 Inclusion
-=========
+= = = = =
 
 ZiGate en mode Inclusion
 Trombone dans petit trou sur le côté pendant 4s, le device fait un Beacon, flash en vert en face avant, s'appaire et est créé dans Abeille.
@@ -14,22 +13,22 @@ Trombone dans petit trou sur le côté pendant 4s, le device fait un Beacon, fla
 .. image:: images/Capture_d_ecran_2019_07_06_a_11_40_01.png
 
 Exclusion
-=========
+= = = = =
 
 Trombone dans petit trou sur le côté pendant 8s, le device fait un Leave. Bouton face avant flash plusieurs fois en vert.
 
 Dans le réseau
---------------
+- - - -
 
 Le bouton en face avant flash une fois de temps en temps en rouge environ toutes les 45 secondes.
 
 Batterie
---------
+- - - -
 
 L'équipement remonte le niveau de sa batterie. Abeille le traite et l'affiche.
 
 Alarme
-------
+- - - -
 
 L'information brute remonte dans Abeille. Par défaut sans alarme la valeur est à 20. Avec alarme l'information est à 21.
 

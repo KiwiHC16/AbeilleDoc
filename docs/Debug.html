@@ -15,7 +15,7 @@
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Do It Yourself" href="DIY.html" />
+    <link rel="next" title="Divers" href="Divers.html" />
     <link rel="prev" title="Utilisation avancée" href="UtilisationAvancee.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -45,7 +45,7 @@
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="UtilisationAvancee.html" title="Chapitre précédent">Utilisation avancée</a></li>
-      <li>Next: <a href="DIY.html" title="Chapitre suivant">Do It Yourself</a></li>
+      <li>Next: <a href="Divers.html" title="Chapitre suivant">Divers</a></li>
   </ul></li>
 </ul>
 </div><h3>Navigation</h3>
@@ -60,7 +60,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#forum">Forum</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#signaler-un-bug">Signaler un bug</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#demander-une-amelioration">Demander une amélioration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#divers">Divers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#divers">Divers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#connection">Connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#premier-test">Premier test</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#deuxieme-test">Deuxième test</a></li>
@@ -69,7 +72,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#equipements-zigbee">Equipements ZigBee</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#script">Script</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#messages">Messages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#menus-cachees-pour-developpeurs">Menus cachées pour developpeurs</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
@@ -299,21 +301,6 @@
 </pre></div>
 </div>
 <p>Ici on voit dans la derniere colonne qu’il n’y a pas de message en attente, ils ont tous été traités.</p>
-</div>
-<div class="section" id="menus-cachees-pour-developpeurs">
-<h2>Menus cachées pour developpeurs<a class="headerlink" href="#menus-cachees-pour-developpeurs" title="Lien permanent vers ce titre">¶</a></h2>
-<p><a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues/1292">https://github.com/KiwiHC16/Abeille/issues/1292</a></p>
-<p>Créer le fichier debug.php si celui ci n’existe pas:</p>
-<p>touch /var/www/html/plugins/Abeille/tmp/debug.php</p>
-<p>Résumé des fonctionalités accessibles en mode « developpeur »</p>
-<p>mode developpeur = fichier debug.php present (meme vide) dans le repertoire racine du plugin Abeille</p>
-<ul class="simple">
-<li><p>Log des erreurs PHP =&gt; Dans master. Actif si « debug.php » contient « $dbgAbeillePHP = TRUE; »</p></li>
-<li><p>Fonctionalite « switch branch » =&gt; pas poussé mais restera developpeur only</p></li>
-<li><p>Fonctionalite « monitoring » =&gt; pas poussé. Pourrait etre utile à tous à terme</p></li>
-<li><p>FW 3.1d =&gt; Dans le master. En mode dev jusqu’a ce qu’on confirme aucun souci</p></li>
-<li><p>Fonctionalite « supprime de Jeedom » =&gt; Dans le master. A discuter si l’utilisateur peut en avoir besoin</p></li>
-</ul>
 </div>
 </div>
 

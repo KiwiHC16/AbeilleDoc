@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Philips Hue &#8212; Documentation Abeille 11.02.2021</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Profalux" href="Profalux.html" />
+    <link rel="prev" title="OSRAM" href="OSRAM.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/Abeille_icon.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../Equipements.html">Equipements supportés</a><ul>
+      <li>Previous: <a href="OSRAM.html" title="Chapitre précédent">OSRAM</a></li>
+      <li>Next: <a href="Profalux.html" title="Chapitre suivant">Profalux</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Bienvenu.html">Bienvenu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Presentation.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Equipements.html">Equipements supportés</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Eurotronics.html">Eurotronics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Danfoss.html">Danfoss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heiman.html">Heiman</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ikea.html">Ikea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Innr.html">Innr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Konke.html">Konke</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Legrand.html">Legrand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Livolo.html">Livolo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OSRAM.html">OSRAM</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Philips Hue</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ampoule-1">Ampoule 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ampoule-2">Ampoule 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dimmer">Dimmer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prise">Prise</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#motion-sensor-indoor">Motion Sensor Indoor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#temperature">Température</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#motion-sensor-outdoor">Motion Sensor Outdoor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Profalux.html">Profalux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SonOff.html">SonOff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tuya.html">Tuya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Xiaomi.html">Xiaomi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#eurotronics">Eurotronics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#danfoss">Danfoss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#diy">DIY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#heiman">Heiman</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#ikea">Ikea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#innr">Innr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#konke">Konke</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#legrand">Legrand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#livolo">Livolo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#onoffcontroller">OnOffController</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#osram">OSRAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#philips-hue">Philips Hue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#profalux">Profalux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#sonoff">SonOff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#tuya">Tuya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#xiaomi">Xiaomi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Utilisation.html">Utilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../UtilisationAvancee.html">Utilisation avancée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Debug.html">Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developpement.html">Developpement</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="philips-hue">
+<h1>Philips Hue<a class="headerlink" href="#philips-hue" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="ampoule-1">
+<h2>Ampoule 1<a class="headerlink" href="#ampoule-1" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ampoule Philips Hue White</p>
+<p><strong>Nouvelle inclusion</strong></p>
+<ul class="simple">
+<li><p>Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter…</p></li>
+<li><dl class="simple">
+<dt>Avec une ampoule neuve Hue White</dt><dd><ul>
+<li><p>Allumer l’ampoule, elle s’associe et envoie des messages « annonce » mais pas son nom.</p></li>
+<li><p>Si vous faites un getName avec son adresse courte dans le champ Titre et 0B (destinationEndPoint) dans le champ Message, alors elle doit répondre avec son nom, ce qui va créer l’objet dans Jeedom.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p><strong>Déjà inclue</strong></p>
+<ul class="simple">
+<li><p>Zigate en fonctionnement normale</p></li>
+<li><p>Éteindre l’ampoule 15s puis la rallumer</p></li>
+</ul>
+<p><strong>Déjà inclue 2</strong></p>
+<p>préalablement sur un autre réseau Zigbee</p>
+<ul class="simple">
+<li><p>Zigate en fonctionnement normale</p></li>
+<li><p>Avec une Télécommande Hue, Bouton « I » et « 0 », pour remettre d’usine l’ampoule.</p></li>
+<li><p>Faire une inclusion standard.</p></li>
+</ul>
+</div>
+<div class="section" id="ampoule-2">
+<h2>Ampoule 2<a class="headerlink" href="#ampoule-2" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Philips Hue Go</p>
+<p><strong>Nouvelle inclusion</strong></p>
+<ul class="simple">
+<li><p>Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter…</p></li>
+<li><p>Appui très long sur le bouton arrière de l’ampoule plus de 40s, un objet doit apparaître dans Jeedom.</p></li>
+</ul>
+<p><strong>Déjà inclue</strong></p>
+<ul class="simple">
+<li><p>Zigate en fonctionnement normale</p></li>
+<li><p>Appui très long sur le bouton arrière de l’ampoule plus de 40s</p></li>
+<li><p>La lampe se met à flasher. Elle s’est déconnectée du réseau.</p></li>
+</ul>
+</div>
+<div class="section" id="dimmer">
+<h2>Dimmer<a class="headerlink" href="#dimmer" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Philips Hue Dimmer Switch (Télécommande)</p>
+<ul class="simple">
+<li><p>Elle permet de faire une reset touchlink d’une ampoule Ikea</p></li>
+<li><p>elle peut fonctionner seule avec une ampoule (TouchLink): On/Off/+/-</p></li>
+<li><p>elle peut s’inclure dans le réseau zigate</p></li>
+<li><p>Abeille peut la configurer pour qu’elle envoie l’information du bouton appuyé. Abeille peut utiliser cette info dans un scénario par exemple.</p></li>
+<li><p>Je ne sais pas comment faire en sorte qu’elle commande une ampoule en direct</p></li>
+</ul>
+<p><strong>Nouvelle inclusion</strong></p>
+<ul class="simple">
+<li><p>Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter…</p></li>
+<li><p>Appui avec un trombone 5x sur le bouton « setup » en face arrière. Un objet télécommande doit être créé dans Abeille.</p></li>
+</ul>
+<p><strong>Groupe</strong></p>
+<p>Récupérer le groupe utilisé</p>
+<ul class="simple">
+<li><p>Approcher la télécommande d’une ampoule de test qui est sur le réseau.</p></li>
+<li><p>Faire un appui long &gt;10s sur le I de la télécommande.</p></li>
+<li><p>Attendre le clignotement de l’ampoule.</p></li>
+<li><p>Si vous appuyez sur I ou O, elle doit s’allumer et s’éteindre.</p></li>
+<li><p>Et les bouton lumière plus et moins doivent changer l’intensité.</p></li>
+<li><p>Ensuite vous pouvez récupérer le groupe en interrogeant l’ampoule depuis la ruche avec un getGroupMembership.</p></li>
+</ul>
+<p><strong>Reset</strong></p>
+<p>Reset d une ampoule</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Appuyer sur I et O en même temps à moins de quelques centimètres d’une ampoule</p></li>
+<li><p>L’ampoule doit faire un reset et essayer de joindre un réseau.</p></li>
+<li><p>Si la Zigate est en mode inclusion alors vous récupérez votre ampoule.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Informations</strong></p>
+<p>Informations supplémentaires</p>
+<p>Dans l’objet Abeille vous allez trouver:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>8 informations. 4 boutons x 2 infos (événement, durée)</dt><dd><ul>
+<li><p>Ce sont les informations qui remontent de la télécommande quand vous l’utilisez.</p></li>
+<li><p>Cela permet à Jeedom de savoir qu’un bouton a été utilisé et vous pouvez créer les scénario que vous voulez.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>4 Boutons: « I », « LumPlus », « LumMoins », « O ».</p></li>
+<li><p>4 types events: « Appui Court = 0 », « Appui Long = 1 », « Relâche appui court = 3 », « Relâche Appui Long = 4 »</p></li>
+<li><p>Durée, indique le temps d’appui d’un bouton (Il n’y pas de temps de nom appui).</p></li>
+</ul>
+<ul class="simple">
+<li><p>00 appui</p></li>
+<li><p>01 appui maintenu</p></li>
+<li><p>02 relâche sur appui court</p></li>
+<li><p>03 relâche sur appui long</p></li>
+</ul>
+<ul class="simple">
+<li><p>5 icônes (On,Off,Toggle,Lumière plus, Lumière moins) pour simuler la télécommande depuis Jeedom.</p></li>
+</ul>
+<p>C’est Jeedom qui envoie les commandes à la place de la télécommande. Pour se faire renseigner le champ « Groupe » dans la configuration.</p>
+</div>
+<div class="section" id="prise">
+<h2>Prise<a class="headerlink" href="#prise" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Prise de contrôle d’une ampoule</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Ampoule Hue White et télécommande déjà associées au réseau :</dt><dd><ul>
+<li><p>Mettre la télécommande proche de l ampoule et appuyer sur « I » assez longtemps.</p></li>
+<li><p>L’ampoule clignote et est configurée.</p></li>
+<li><p>Après l’ampoule est pilotable par la télécommande. On peut récupérer le groupe utilisé sur l’ampoule dans Jeedom.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Ampoule Ikea et télécommande déjà associées au réseau :</dt><dd><ul>
+<li><p>La configuration depuis la télécommande et le bouton “I” ne fonctionne pas comme avec l’ampoule Hue.</p></li>
+<li><p>Mais si on récupère le groupe comme indiqué au paragraphe précédent et qu’on défini ce groupe dans l’ampoule Ikea, alors l’ampoule répond aux commandes de la télécommande.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="motion-sensor-indoor">
+<h2>Motion Sensor Indoor<a class="headerlink" href="#motion-sensor-indoor" title="Lien permanent vers ce titre">¶</a></h2>
+<p><strong>Inclusion</strong></p>
+<p>Mettre la zigate en inclusion, puis un appui sur le bouton « setup » et l’objet doit se créer dans Abeille.</p>
+<p><strong>Présence</strong></p>
+<p>En cas de détection le capteur envoie l information à la zigate qui transmet à Abeille. A vous de faire les scénairii que vous souhaitez. Ce capteur ne permet pas de piloter en direct sans la zigate un autre équipement à ma connaisssance.</p>
+<p><strong>Luminosité</strong></p>
+<p>Le capteur remonte régulièrement la luminosité mesurée. Cela vous permet par exemple de faire de scénario en fonction du jour et de la nuit, vérifier que des lumières sont allumées dans une pièce,…
+Voir aussi <a class="reference external" href="https://en.wikipedia.org/wiki/Lux">https://en.wikipedia.org/wiki/Lux</a> pour avoir une idée de l’intensité lumineuse, une table fournie des indications interessante.</p>
+</div>
+<div class="section" id="temperature">
+<h2>Température<a class="headerlink" href="#temperature" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La température remonte régulièrement.</p>
+<p><strong>Batterie</strong></p>
+<p>(A tester)</p>
+<p><strong>Homebridge</strong></p>
+<img alt="devices\images/Capture_d_ecran_2019_04_14_a_00_44_30.png" src="devices\images/Capture_d_ecran_2019_04_14_a_00_44_30.png" />
+</div>
+<div class="section" id="motion-sensor-outdoor">
+<h2>Motion Sensor Outdoor<a class="headerlink" href="#motion-sensor-outdoor" title="Lien permanent vers ce titre">¶</a></h2>
+<p>voir motion sensor indoor.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+
+    <div class="footer">
+      &copy;2019-21, KiwiHC16.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

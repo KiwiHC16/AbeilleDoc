@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konke &#8212; Documentation Abeille 11.02.2021</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Legrand" href="Legrand.html" />
+    <link rel="prev" title="Innr" href="Innr.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/Abeille_icon.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../Equipements.html">Equipements supportés</a><ul>
+      <li>Previous: <a href="Innr.html" title="Chapitre précédent">Innr</a></li>
+      <li>Next: <a href="Legrand.html" title="Chapitre suivant">Legrand</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Bienvenu.html">Bienvenu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Presentation.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Equipements.html">Equipements supportés</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Eurotronics.html">Eurotronics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Danfoss.html">Danfoss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heiman.html">Heiman</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ikea.html">Ikea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Innr.html">Innr</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Konke</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#temperature-humidite">Temperature / Humidité</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#door">Door</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bouton">Bouton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#infra-rouge">Infra-Rouge</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Legrand.html">Legrand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Livolo.html">Livolo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OSRAM.html">OSRAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PhilipsHue.html">Philips Hue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Profalux.html">Profalux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SonOff.html">SonOff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tuya.html">Tuya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Xiaomi.html">Xiaomi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#eurotronics">Eurotronics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#danfoss">Danfoss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#diy">DIY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#heiman">Heiman</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#ikea">Ikea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#innr">Innr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#konke">Konke</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#legrand">Legrand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#livolo">Livolo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#onoffcontroller">OnOffController</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#osram">OSRAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#philips-hue">Philips Hue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#profalux">Profalux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#sonoff">SonOff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#tuya">Tuya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#xiaomi">Xiaomi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Utilisation.html">Utilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../UtilisationAvancee.html">Utilisation avancée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Debug.html">Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developpement.html">Developpement</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="konke">
+<h1>Konke<a class="headerlink" href="#konke" title="Lien permanent vers ce titre">¶</a></h1>
+<p><a class="reference external" href="https://faire-ca-soi-meme.fr/domotique/2019/07/16/test-du-kit-zigbee-konke-smart-home/">https://faire-ca-soi-meme.fr/domotique/2019/07/16/test-du-kit-zigbee-konke-smart-home/</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Les équipements ne fonctionnent que sur les canaux 15 et 20.</p>
+</div>
+<div class="section" id="temperature-humidite">
+<h2>Temperature / Humidité<a class="headerlink" href="#temperature-humidite" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Inclusion</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Mettre la zigate en Inclusion</p></li>
+<li><p>Appui &gt;8s sur le bouton lateral avec un trombone</p></li>
+<li><p>L’equipement doit apparaitre dans Abeille/Jeedom</p></li>
+</ul>
+</div></blockquote>
+<p>Exclusion</p>
+<ul class="simple">
+<li><p>Appui &gt;8s sur le bouton lateral avec un trombone (zigate pas en inclusion sinon il se re-appaire immédiatement).</p></li>
+</ul>
+<p>Données</p>
+<p>Le capteur remonte la temperature, le taux d’humidité et la tension batterie.</p>
+</div>
+<div class="section" id="door">
+<h2>Door<a class="headerlink" href="#door" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Inclusion</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Mettre la zigate en Inclusion</p></li>
+<li><p>Appui &gt;8s sur le bouton lateral avec un trombone</p></li>
+<li><p>L’equipement doit apparaitre dans Abeille/Jeedom</p></li>
+</ul>
+</div></blockquote>
+<p>Exclusion</p>
+<ul class="simple">
+<li><p>Appui &gt;8s sur le bouton lateral avec un trombone (zigate pas en inclusion sinon il se re-appaire immédiatement).</p></li>
+</ul>
+<p>Données</p>
+<p>Le capteur remonte l’etat d’ouverture de la porte et la tension batterie.</p>
+</div>
+<div class="section" id="bouton">
+<h2>Bouton<a class="headerlink" href="#bouton" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Inclusion</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Mettre la zigate en Inclusion</p></li>
+<li><p>Appui &gt;8s sur le bouton lateral avec un trombone</p></li>
+<li><p>L’equipement doit apparaitre dans Abeille/Jeedom</p></li>
+</ul>
+</div></blockquote>
+<p>Exclusion</p>
+<ul class="simple">
+<li><p>Appui &gt;8s sur le bouton lateral avec un trombone (zigate pas en inclusion sinon il se re-appaire immédiatement).</p></li>
+</ul>
+<p>Données</p>
+<ul class="simple">
+<li><p>Le bouton remonte 128 sur un clic court</p></li>
+<li><p>Le bouton remonte 129 sur un multi clic</p></li>
+<li><p>Le bouton remonte 130 sur un clic long</p></li>
+<li><p>Le capteur remonte l’etat d’ouverture de la porte et la tension batterie.</p></li>
+</ul>
+</div>
+<div class="section" id="infra-rouge">
+<h2>Infra-Rouge<a class="headerlink" href="#infra-rouge" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Inclusion</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Mettre la zigate en Inclusion</p></li>
+<li><p>Appui &gt;8s sur le bouton lateral avec un trombone</p></li>
+<li><p>L’equipement doit apparaitre dans Abeille/Jeedom</p></li>
+</ul>
+</div></blockquote>
+<p>Exclusion</p>
+<ul class="simple">
+<li><p>Appui &gt;8s sur le bouton lateral avec un trombone (zigate pas en inclusion sinon il se re-appaire immédiatement).</p></li>
+</ul>
+<p>Données</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>cd: si alarme</p></li>
+<li><p>1: si pas alarme</p></li>
+</ul>
+<img alt="devices\images/Capture_d_ecran_2019_08_01_a_16_32_55.png" src="devices\images/Capture_d_ecran_2019_08_01_a_16_32_55.png" />
+<img alt="devices\images/Capture_d_ecran_2019_08_01_a_16_32-39.png" src="devices\images/Capture_d_ecran_2019_08_01_a_16_32-39.png" />
+<ul class="simple">
+<li><p>Volt Batterie, ne semble pas remonter à vérifier.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+
+    <div class="footer">
+      &copy;2019-21, KiwiHC16.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

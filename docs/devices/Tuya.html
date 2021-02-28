@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tuya &#8212; Documentation Abeille 11.02.2021</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Xiaomi" href="Xiaomi.html" />
+    <link rel="prev" title="SonOff" href="SonOff.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/Abeille_icon.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../Equipements.html">Equipements supportés</a><ul>
+      <li>Previous: <a href="SonOff.html" title="Chapitre précédent">SonOff</a></li>
+      <li>Next: <a href="Xiaomi.html" title="Chapitre suivant">Xiaomi</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Bienvenu.html">Bienvenu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Presentation.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Equipements.html">Equipements supportés</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Eurotronics.html">Eurotronics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Danfoss.html">Danfoss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heiman.html">Heiman</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ikea.html">Ikea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Innr.html">Innr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Konke.html">Konke</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Legrand.html">Legrand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Livolo.html">Livolo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OSRAM.html">OSRAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PhilipsHue.html">Philips Hue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Profalux.html">Profalux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SonOff.html">SonOff</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tuya</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#interrupteur-sur-pile-ts0043">Interrupteur sur pile TS0043</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Xiaomi.html">Xiaomi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#eurotronics">Eurotronics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#danfoss">Danfoss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#diy">DIY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#heiman">Heiman</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#ikea">Ikea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#innr">Innr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#konke">Konke</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#legrand">Legrand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#livolo">Livolo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#onoffcontroller">OnOffController</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#osram">OSRAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#philips-hue">Philips Hue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#profalux">Profalux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#sonoff">SonOff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#tuya">Tuya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#xiaomi">Xiaomi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Utilisation.html">Utilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../UtilisationAvancee.html">Utilisation avancée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Debug.html">Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developpement.html">Developpement</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="tuya">
+<h1>Tuya<a class="headerlink" href="#tuya" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="interrupteur-sur-pile-ts0043">
+<h2>Interrupteur sur pile TS0043<a class="headerlink" href="#interrupteur-sur-pile-ts0043" title="Lien permanent vers ce titre">¶</a></h2>
+<p><strong>Modeles</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues/1272">https://github.com/KiwiHC16/Abeille/issues/1272</a></p></li>
+<li><p><a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues/1185">https://github.com/KiwiHC16/Abeille/issues/1185</a></p></li>
+<li><p><a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues/1406">https://github.com/KiwiHC16/Abeille/issues/1406</a></p></li>
+</ul>
+<p><strong>Necessaire</strong></p>
+<ul class="simple">
+<li><p>firmware 3.1d de la Zigate</p></li>
+<li><p>Abeille stable après novembre 2020</p></li>
+</ul>
+<p><strong>Inclusion</strong></p>
+<ul class="simple">
+<li><p>Mettre la zigate en Inclusion</p></li>
+<li><p>Touchez sur un bouton pendant 10s, l inclusion se produit et l’inter est créé dans Abeille</p></li>
+</ul>
+<p><strong>Exclusion</strong></p>
+<p><strong>Configuration</strong></p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+
+    <div class="footer">
+      &copy;2019-21, KiwiHC16.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

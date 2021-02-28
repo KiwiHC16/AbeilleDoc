@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SonOff &#8212; Documentation Abeille 11.02.2021</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Tuya" href="Tuya.html" />
+    <link rel="prev" title="Profalux" href="Profalux.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/Abeille_icon.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../Equipements.html">Equipements supportés</a><ul>
+      <li>Previous: <a href="Profalux.html" title="Chapitre précédent">Profalux</a></li>
+      <li>Next: <a href="Tuya.html" title="Chapitre suivant">Tuya</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Bienvenu.html">Bienvenu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Presentation.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Equipements.html">Equipements supportés</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Eurotronics.html">Eurotronics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Danfoss.html">Danfoss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Heiman.html">Heiman</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ikea.html">Ikea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Innr.html">Innr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Konke.html">Konke</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Legrand.html">Legrand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Livolo.html">Livolo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OSRAM.html">OSRAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PhilipsHue.html">Philips Hue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Profalux.html">Profalux</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SonOff</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sonoff-snzb-01-interrupteur">SonOff SNZB-01: Interrupteur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sonoff-snzb-02-temperature-humidite">SonOff SNZB-02: Temperature / Humidité</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sonoff-snzb-03-capteur-ir">SonOff SNZB-03: Capteur IR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sonoff-snzb-04-capteur-de-porte">SonOff SNZB-04: Capteur de porte</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sonoff-basiczbr3-module-10a">SonOff BASICZBR3: Module 10A</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tuya.html">Tuya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Xiaomi.html">Xiaomi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#eurotronics">Eurotronics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#danfoss">Danfoss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#diy">DIY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#heiman">Heiman</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#ikea">Ikea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#innr">Innr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#konke">Konke</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#legrand">Legrand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#livolo">Livolo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#onoffcontroller">OnOffController</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#osram">OSRAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#philips-hue">Philips Hue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#profalux">Profalux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#sonoff">SonOff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#tuya">Tuya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Equipements.html#xiaomi">Xiaomi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Utilisation.html">Utilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../UtilisationAvancee.html">Utilisation avancée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Debug.html">Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developpement.html">Developpement</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="sonoff">
+<h1>SonOff<a class="headerlink" href="#sonoff" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="sonoff-snzb-01-interrupteur">
+<h2>SonOff SNZB-01: Interrupteur<a class="headerlink" href="#sonoff-snzb-01-interrupteur" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues/1322">https://github.com/KiwiHC16/Abeille/issues/1322</a></p>
+<p><strong>Fonctionenment</strong></p>
+<p>Appui court: Toggle (Valeur 2)</p>
+<p>Double clic: On (Valeur 1)</p>
+<p>Clic long (4s): Off (Valeur 0)</p>
+<p>Valeur dans la commande Click-Middle si inter bind sur la zigate.</p>
+<p><strong>Inclusion</strong></p>
+<ul class="simple">
+<li><p>mettre la zigate en Inclusion</p></li>
+<li><p>Avec trombone, 10s sur inter au dos</p></li>
+</ul>
+<p><strong>Exclusion</strong></p>
+<ul class="simple">
+<li><p>La zigate ne doit pas être en mode Inclusion</p></li>
+<li><p>Avec trombone, 10s sur inter au dos</p></li>
+</ul>
+<p><strong>Reveil</strong></p>
+<ul class="simple">
+<li><p>Si le module n’a jamais été configuré, il faut faire une inclusion car il reste reveillé quelques secondes après inclusion.</p></li>
+<li><p>Si le module est déjà configuré alors  un appui sur le bouton le reveille (J ai eu un cas ou il ne faisait pas de Data Request alors on ne peut pas lui parler, j ai du le re-inclure).</p></li>
+</ul>
+<p><strong>Configurer</strong></p>
+<ul class="simple">
+<li><p>Faire un bind vers l’équipement à piloter. Il fait ensuite On/Off/Toggle sur l’adresse de l’équipement.</p></li>
+</ul>
+</div>
+<div class="section" id="sonoff-snzb-02-temperature-humidite">
+<h2>SonOff SNZB-02: Temperature / Humidité<a class="headerlink" href="#sonoff-snzb-02-temperature-humidite" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues/1323">https://github.com/KiwiHC16/Abeille/issues/1323</a></p>
+<p><strong>Fonctionenment</strong></p>
+<p><strong>Inclusion</strong></p>
+<ul class="simple">
+<li><p>Zigate en inclusion</p></li>
+<li><p>Appui long &gt;10s sur bouton lateral</p></li>
+</ul>
+<p><strong>Exclusion</strong></p>
+<ul class="simple">
+<li><p>Zigate pas en mode inclusion</p></li>
+<li><p>Appui long &gt;10s sur bouton lateral</p></li>
+</ul>
+<p><strong>Reveil</strong></p>
+<ul class="simple">
+<li><p>Je ne parviens pas à le réveiller à l’aide du bouton lateral.</p></li>
+<li><p>Si pas configuré, l’inclure et le configurer immédiatement</p></li>
+<li><p>Une fois configuré, faire changer la temperature ou humidité (le mettre dans ses mains, souffler dans l ouverture) et il doit se reveiller.</p></li>
+</ul>
+<p><strong>Recuperation</strong></p>
+<p>Si par erreur il a ete supprimé de jeedom, avec le plugin en mode « Blocage des annonce: non, blocage des recuperations: non », sur un changement de temperature il doit être re-créé dans Abeille.</p>
+<p><strong>Configurer</strong></p>
+<ul class="simple">
+<li><p>bind/setreport sur temperature et humidite</p></li>
+<li><p>bind sur Power</p></li>
+</ul>
+</div>
+<div class="section" id="sonoff-snzb-03-capteur-ir">
+<h2>SonOff SNZB-03: Capteur IR<a class="headerlink" href="#sonoff-snzb-03-capteur-ir" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues/1324">https://github.com/KiwiHC16/Abeille/issues/1324</a></p>
+<p><strong>Fonctionenment</strong></p>
+<p><strong>Inclusion</strong></p>
+<p><strong>Exclusion</strong></p>
+<p><strong>Reveil</strong></p>
+<p><strong>Configurer</strong></p>
+</div>
+<div class="section" id="sonoff-snzb-04-capteur-de-porte">
+<h2>SonOff SNZB-04: Capteur de porte<a class="headerlink" href="#sonoff-snzb-04-capteur-de-porte" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues/1325">https://github.com/KiwiHC16/Abeille/issues/1325</a></p>
+<p><strong>Fonctionenment</strong></p>
+<p><strong>Inclusion</strong></p>
+<p><strong>Exclusion</strong></p>
+<p><strong>Reveil</strong></p>
+<p><strong>Configurer</strong></p>
+</div>
+<div class="section" id="sonoff-basiczbr3-module-10a">
+<h2>SonOff BASICZBR3: Module 10A<a class="headerlink" href="#sonoff-basiczbr3-module-10a" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Comme je ne trouvais pas de relai piloté par zigbee j’ai fait ma propre bidouille. Comme d’habitude comme c’est sur le 220V, je ne suis pas responsable de vos actes. Vous faites ces manipulations que si vous savez ce que vous faites. Je ne pourrai être tenu responsable.</p>
+<p>Vue d’ensemble du boitié:</p>
+<img alt="devices\images/IMG_2369.jpg" src="devices\images/IMG_2369.jpg" />
+<p>Il faut ouvrir la bête, le relai est le boitier noir vers le haut de la photo:</p>
+<img alt="devices\images/IMG_2370.jpg" src="devices\images/IMG_2370.jpg" />
+<p>On peut voir les pistes épaisses sous le dessous, allant sur les pattes du relai:</p>
+<img alt="devices\images/IMG_2371.jpg" src="devices\images/IMG_2371.jpg" />
+<p>Le relai lui même en 10A:</p>
+<img alt="devices\images/IMG_2372.jpg" src="devices\images/IMG_2372.jpg" />
+<p>Les deux grosses pistes qu’il va falloir couper:</p>
+<img alt="devices\images/IMG_2373.jpg" src="devices\images/IMG_2373.jpg" />
+<p>Au cuteur, découpe des deux pistes:</p>
+<img alt="devices\images/IMG_2375.jpg" src="devices\images/IMG_2375.jpg" />
+<p>Mais en faite cela ne suffit pas il faut prendre la perceuse et passer au travers completement:</p>
+<img alt="devices\images/IMG_2376.jpg" src="devices\images/IMG_2376.jpg" />
+<p>Souder un bout de cuivre entre la patte du relai et la piste extérieure:</p>
+<img alt="devices\images/IMG_2377.jpg" src="devices\images/IMG_2377.jpg" />
+<p>Et le tour est joué.</p>
+<p>Note: lors du retablissement du courant, suite à une coupure de secteur par exemple, le module se souvient de son état initial et reposition le relai dans cet état.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+
+    <div class="footer">
+      &copy;2019-21, KiwiHC16.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

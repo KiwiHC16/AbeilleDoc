@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Procédures de mise-à-jour &#8212; Documentation Abeille 11.02.2021</title>
+    <title>Format de la DB Jeedom &#8212; Documentation Abeille 11.02.2021</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -68,27 +68,35 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="procedures-de-mise-a-jour">
-<h1>Procédures de mise-à-jour<a class="headerlink" href="#procedures-de-mise-a-jour" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Ce chapitre n’est pas tiré d’une quelconque doc officielle Jeedom mais issu de recherches via le code Jeedom. Le but est de clarifier la procédure de mise-à-jour utilisée par Jeedom.</p>
-<div class="section" id="a-partir-du-market">
-<h2>A partir du market<a class="headerlink" href="#a-partir-du-market" title="Lien permanent vers ce titre">¶</a></h2>
-<p>A creuser</p>
-</div>
-<div class="section" id="a-partir-de-github">
-<h2>A partir de GitHub<a class="headerlink" href="#a-partir-de-github" title="Lien permanent vers ce titre">¶</a></h2>
-<img alt="dev\images/UpdateFromGitHub.png" src="dev\images/UpdateFromGitHub.png" />
-<p>A priori Jeedom fait la chose suivante (trouvé dans “core/class/update.class.php”)</p>
+  <div class="section" id="format-de-la-db-jeedom">
+<h1>Format de la DB Jeedom<a class="headerlink" href="#format-de-la-db-jeedom" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Ce chapitre décrit le format de la database Jeedom appliqué au plugin « Abeille ».</p>
+<p>EN COURS DE CONSTRUCTION !!!</p>
+<div class="section" id="commandes">
+<h2>Commandes<a class="headerlink" href="#commandes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La table « cmd » de Jeedom est formatée comme suit:</p>
 <ul class="simple">
-<li><p>Telechargement du zip correspondant au repo donné</p></li>
-<li><p>Le téléchargement se fait dans /tmp/jeedom/&lt;nom-special&gt; (ex: /tmp/jeedom/tcharp38-Abeille-af97a57)</p></li>
-<li><p>Décompression du zip au même endroit</p></li>
-<li><p>Déplacement de tous les répertoires vers la destination finale (…plugins/abeille)</p></li>
-</ul>
-<p>Cette procédure semble avoir plusieurs failles qui doivent être prises en compte côté Abeille</p>
-<ul class="simple">
-<li><p>Pas ou tres peu de controle à chaque étape. Un pb de manque de place peut passer inapercu jusqu’au mauvais fonctionnement du plugin.</p></li>
-<li><p>Les droits des fichiers (en particulier des scripts ou autre binaire) semblent ignorés et pas restaurés.</p></li>
+<li><p>id: ID de la commande. Affecté par Jeedom.</p></li>
+<li><p>eqLogic_id: ID de l’équipement auquel la commande est rattachée.</p></li>
+<li><p>eqType: « Abeille »</p></li>
+<li><p>logicalId: Nom « logique » de la commande.
+A REVOIR. Etait redondant avec le champ « topic » de « configuration ».
+Example ? Regle ?</p></li>
+<li><p>order</p></li>
+<li><p>name: Un nom pour la commande.
+Quel choix entre « name » et « logicalId » ? Meme chose ?</p></li>
+<li><p>configuration: A priori libre d’utilisation par Abeille donc ne contient que des champs spécifiques Abeille.
+Correct ?</p></li>
+<li><p>template</p></li>
+<li><p>isHistorized: 0 ou 1</p></li>
+<li><p>type: « info » ou « action »</p></li>
+<li><p>subType: « string », « binary », « numeric », « other »</p></li>
+<li><p>unite</p></li>
+<li><p>display</p></li>
+<li><p>isVisible: 0 ou 1</p></li>
+<li><p>value</p></li>
+<li><p>alert</p></li>
+<li><p>generic_type</p></li>
 </ul>
 </div>
 </div>

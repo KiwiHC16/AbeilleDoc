@@ -6,12 +6,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Developpement &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
@@ -80,6 +81,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#format-des-messages-inter-demons">Format des messages inter démons</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#parser-vers-lqi-collector">Parser vers “LQI collector”</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#format-de-la-db-jeedom">Format de la DB Jeedom</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#commandes">Commandes</a></li>
 </ul>
 </li>
 </ul>
@@ -182,7 +187,7 @@ Les docs sont dans un repo séparé.</p>
 <li><p><strong>resources</strong></p>
 <ul class="simple">
 <li><p><strong>fw_zigate</strong> : FW zigbee commun à toutes les zigates actuelles.</p></li>
-<li><p><strong>fw_wifi</strong> : FW specifique à la zigate WIFI.</p></li>
+<li><p><strong>prog_jennic</strong> : Programmateur JENNIC.</p></li>
 </ul>
 </li>
 <li><p><strong>tmp</strong></p>
@@ -341,6 +346,38 @@ Les démons n’étant rien d’autre que des codes ou classes, je suggère de c
 </div>
 </div>
 </div>
+<div class="section" id="format-de-la-db-jeedom">
+<h2>Format de la DB Jeedom<a class="headerlink" href="#format-de-la-db-jeedom" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ce chapitre décrit le format de la database Jeedom appliqué au plugin « Abeille ».</p>
+<p>EN COURS DE CONSTRUCTION !!!</p>
+<div class="section" id="commandes">
+<h3>Commandes<a class="headerlink" href="#commandes" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La table « cmd » de Jeedom est formatée comme suit:</p>
+<ul class="simple">
+<li><p>id: ID de la commande. Affecté par Jeedom.</p></li>
+<li><p>eqLogic_id: ID de l’équipement auquel la commande est rattachée.</p></li>
+<li><p>eqType: « Abeille »</p></li>
+<li><p>logicalId: Nom « logique » de la commande.
+A REVOIR. Etait redondant avec le champ « topic » de « configuration ».
+Example ? Regle ?</p></li>
+<li><p>order</p></li>
+<li><p>name: Un nom pour la commande.
+Quel choix entre « name » et « logicalId » ? Meme chose ?</p></li>
+<li><p>configuration: A priori libre d’utilisation par Abeille donc ne contient que des champs spécifiques Abeille.
+Correct ?</p></li>
+<li><p>template</p></li>
+<li><p>isHistorized: 0 ou 1</p></li>
+<li><p>type: « info » ou « action »</p></li>
+<li><p>subType: « string », « binary », « numeric », « other »</p></li>
+<li><p>unite</p></li>
+<li><p>display</p></li>
+<li><p>isVisible: 0 ou 1</p></li>
+<li><p>value</p></li>
+<li><p>alert</p></li>
+<li><p>generic_type</p></li>
+</ul>
+</div>
+</div>
 </div>
 
 
@@ -355,7 +392,7 @@ Les démons n’étant rien d’autre que des codes ou classes, je suggère de c
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

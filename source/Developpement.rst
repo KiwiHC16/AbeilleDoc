@@ -82,7 +82,7 @@ Note: Tous les noms de répertoire en **ANGLAIS** et en **MINUSCULES**
 * **resources**
 
   * **fw_zigate** : FW zigbee commun à toutes les zigates actuelles.
-  * **fw_wifi** : FW specifique à la zigate WIFI.
+  * **prog_jennic** : Programmateur JENNIC.
 
 * **tmp**
 
@@ -102,9 +102,7 @@ Propositions à discuter
   * tests : Vu dans Jeedom, ca fait du sens d'isoler les codes de test. Sous structure dans la lignée de core. Ex tests/php, tests/class ...
 
 .. include:: dev/IntegrityCheck.rst
-
 .. include:: dev/RulesLanguage.rst
-
 .. include:: dev/UpdateProcess.rst
-
 .. include:: dev/Messages.rst
+.. include:: dev/JeedomDB.rst

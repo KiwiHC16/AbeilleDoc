@@ -47,6 +47,13 @@ Reset
 
 Quand on fait ca, l'écran fait un countdown et le reset se produit. Puis l'écran affiche Rst.
 
+Abeille
+^^^^^^^
+
+Abeille configure la tête pour 
+- remonter le niveau de batterie toutes le 43200s, soit 12h.
+- remonter la temperature toutes les 3500s (1h) au minimum ou pas plus souvent que toutes les 300s (5 mins).
+
 Homebridge
 ^^^^^^^^^^
 

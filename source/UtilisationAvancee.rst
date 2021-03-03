@@ -23,6 +23,11 @@ Polling
 
 Certains équipements communiquent naturellement et échangent des messages avec la Zigate, ce qui nous permet de s'assurer qu'ils sont en vie. D'autres restent silencieux et nous devons les interroger pour savoir s'ils sont toujours dans le réseau ou simplement connaitre leur état. Abeille contient une fonction de :doc:`Polling` interrogeant régulièrement les équipements.
 
+Configuration Bind/setReport
+----------------------------
+
+Lors de l inclusion Abeille cherche à configurer l'équipement pour que celui ci envoit ses informations à Abeille par exemple. C'est une étape délicate surtout en envirronement multi-fournisseur. Il est possible que cela ne se passe correctement. Il est possible de le refaire manuellement grace au bouton :doc:`ApplySettingToNE`. 
+
 Radio
 -----
 

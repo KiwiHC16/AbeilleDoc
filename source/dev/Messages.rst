@@ -3,6 +3,8 @@ Format des messages inter démons
 
 Ce chapitre décrit le format des messages échangés entre démons.
 
+RECOMMENDATIONS pour la suite: identifiant en minuscule puis majuscules (ex: srcAddr, type, startIndex...).
+
 Parser vers 'LQI collector'
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -25,4 +27,15 @@ Le format des messages est adapté aux infos à transférer::
                 "LQI"      => substr($payload, $j + 38, 2),
                 "BitMap"   => substr($payload, $j + 40, 2)
         )
+    );
+
+'Parser' vers 'Monitor' & 'Cmd' vers 'Monitor'
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Le moniteur collecte les messages envoyés vers et reçus de la zigate pour un équipement particulier et les affiches dans l'ordre.
+
+    $msg = array(
+        'type' => string, 'x2mon' or 'newaddr',
+        'msg' => string, decoded msg if 'x2mon' type
+        'addr' => hex string, new short addr if 'newaddr' type
     );

@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Configuration équipement &#8212; Documentation Abeille 11.02.2021</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div><h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements supportés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Debug.html">Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="configuration-equipement">
+<h1>Configuration équipement<a class="headerlink" href="#configuration-equipement" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Afin qu’un équipement remonte à Abeille des informations il est souvent nécessaire de le configurer.</p>
+<p>Certains comme chez Xiaomi sont configurés par défaut et de ce fait rien n’est nécessaire.</p>
+<p>Pour d’autres, Abeille doit les configurer. Cela est fait au moment de l’inclusion si tout se passe bien.</p>
+<p>Dans le cas contraire vous pouvez le faire manuellement.</p>
+<p>Pour les équipements sur piles, n’oubliez pas qu’il faut qu’ils soient réveillés soit par vous, soit parce qu’ils le font par eux même.</p>
+<p>Pour la suite de ce document je vais prendre l’exemple de la tête de radiateur spirit de chez Eurotronique.</p>
+<p>Pour cette tête, nous allons lui demander de remonter son niveau de batterie ainsi que la température.</p>
+<p>Pour ce faire il est nécessaire de faire deux actions la première est à “Bind” et la seconde est un “setReport”.</p>
+<p>Pour l’utilisateur c’est transparent, il suffit de sélectionner l’équipement dans abeilles et d’appuyer sur le bouton “Configuration Equipement” (Apply Settings To NE).</p>
+<p>Comme cette tête se réveille toutes les 7 secondes, il ne sera pas nécessaire à l’utilisateur d’aller la réveiller.</p>
+<p>Elle va recevoir les informations directement depuis abeilles.</p>
+<p>Il est possible de vérifier que les commandes ont bien été générées en regardant le Log Abeille (ce qui suppose que le plug-in est en mode debug).</p>
+<p>Vous devriez y trouver quelque chose de similaire à la capture suivante:</p>
+<p>[2021-03-03 11:42:10][DEBUG] : deviceId: 1808
+[2021-03-03 11:42:10][DEBUG] : NE: Rad - dest: Abeille5 - address: 1EA8
+[2021-03-03 11:42:10][DEBUG] : Cmd: BindShortToZigateBatterie
+[2021-03-03 11:42:10][DEBUG] :      execute Cmd: BindShortToZigateBatterie
+[2021-03-03 11:42:10][DEBUG] : Cmd: setReportBatterie
+[2021-03-03 11:42:10][DEBUG] :      execute Cmd: setReportBatterie
+[2021-03-03 11:42:10][DEBUG] : Cmd: setReportTemperature
+[2021-03-03 11:42:10][DEBUG] :      execute Cmd: setReportTemperature
+[2021-03-03 11:42:10][DEBUG] : Cmd: Temperature Bind
+[2021-03-03 11:42:10][DEBUG] :      execute Cmd: Temperature Bind</p>
+<p>Il peut être nécessaire de faire l action à plusieurs reprisent pour être sure que la configuration est en place.</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+
+    <div class="footer">
+      &copy;2019-21, KiwiHC16.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

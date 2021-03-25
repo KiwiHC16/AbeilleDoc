@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Format des messages inter démons &#8212; Documentation Abeille 11.02.2021</title>
+    <title>Format d’équipement (JSON) &#8212; Documentation Abeille 11.02.2021</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -68,46 +68,87 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="format-des-messages-inter-demons">
-<h1>Format des messages inter démons<a class="headerlink" href="#format-des-messages-inter-demons" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Ce chapitre décrit le format des messages échangés entre démons.</p>
-<p>RECOMMENDATIONS pour la suite: identifiant en minuscule puis majuscules (ex: srcAddr, type, startIndex…).</p>
-<div class="section" id="parser-vers-lqi-collector">
-<h2>Parser vers “LQI collector”<a class="headerlink" href="#parser-vers-lqi-collector" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pendant la collecte LQI, des requetes du type 004E sont envoyées aux équipements « routeur » et leur réponse 804E est décodée puis envoyée au « LQI collector ».</p>
-<p>Le format des messages est adapté aux infos à transférer:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$msg = array(
-    &#39;Type&#39; =&gt; string, &#39;804E&#39;,
-    &#39;SrcAddr&#39; =&gt; hex string, $SrcAddr,
-    &#39;TableEntries&#39; =&gt; hex string, $NTableEntries,
-    &#39;TableListCount&#39; =&gt; hex string, $NTableListCount,
-    &#39;StartIndex&#39; =&gt; hex string, $StartIndex,
-    &#39;List&#39; =&gt; list, $NList
-        $N = array(
-            &quot;Addr&quot;     =&gt; substr($payload, $j + 0, 4),
-            &quot;ExtPANId&quot; =&gt; substr($payload, $j + 4, 16),
-            &quot;ExtAddr&quot;  =&gt; substr($payload, $j + 20, 16),
-            &quot;Depth&quot;    =&gt; substr($payload, $j + 36, 2),
-            &quot;LQI&quot;      =&gt; substr($payload, $j + 38, 2),
-            &quot;BitMap&quot;   =&gt; substr($payload, $j + 40, 2)
-    )
-);
-</pre></div>
-</div>
-</div>
-<div class="section" id="parser-vers-monitor-cmd-vers-monitor">
-<h2>“Parser” vers “Monitor” &amp; “Cmd” vers “Monitor”<a class="headerlink" href="#parser-vers-monitor-cmd-vers-monitor" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le moniteur collecte les messages envoyés vers et reçus de la zigate pour un équipement particulier et les affiches dans l’ordre.</p>
+  <div class="section" id="format-d-equipement-json">
+<h1>Format d’équipement (JSON)<a class="headerlink" href="#format-d-equipement-json" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Les équipements supportés sont décrits dans des fichiers au format JSON, décrit ci-après.</p>
+<p>Exemple:</p>
 <blockquote>
-<div><dl class="simple">
-<dt>$msg = array(</dt><dd><p>“type” =&gt; string, “x2mon” or “newaddr”,
-“msg” =&gt; string, decoded msg if “x2mon” type
-“addr” =&gt; hex string, new short addr if “newaddr” type</p>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>« BASICZBR3 »: {</dt><dd><p>« nameJeedom »: « SONOFF Module »,
+« timeout »: « 60 »,
+« Categorie »: {</p>
+<blockquote>
+<div><p>« automatism »: « 1 »</p>
+</div></blockquote>
+<p>},
+« configuration »: {</p>
+<blockquote>
+<div><p>« uniqId »: « 5c07c7dsdssdd6625d94 »,
+« icone »: « BASICZBR3 »,
+« mainEP »: « #EP# »</p>
+</div></blockquote>
+<p>},
+« Commandes »: {</p>
+<blockquote>
+<div><p>« include1 »: « SW »,
+« include2 »: « societe »,
+« include3 »: « nom »,
+« include4 »: « etat »,
+« include5 »: « On »,
+« include6 »: « Off »,
+« include7 »: « Toggle »,
+« include8 »: « getEtat »,
+« include9 »: « getManufacturerName »,
+« include10 »: « getModelIdentifier »,
+« include13 2 »: « Group-Membership »</p>
+</div></blockquote>
+<p>}</p>
 </dd>
 </dl>
-<p>);</p>
+<p>}</p>
+</dd>
+</dl>
+<p>}</p>
 </div></blockquote>
-</div>
+<ul>
+<li><p>« nameJeedom »</p></li>
+<li><p>« timeout »</p>
+<p>Note: Ce paramètre permet d’nitialiser le champ « timeout » de la table Jeedom « eqLogic ».</p>
+</li>
+<li><p>« Comment »</p></li>
+<li><p>« Categorie »:{« automatism »: »1 »}</p>
+<p>Liste les categories (plusieurs possibles) correspondant à l’équipement.
+Note: Ce paramètre permet d’initialiser le champ « category » de la table Jeedom « eqLogic ».</p>
+<ul class="simple">
+<li><p>light</p></li>
+<li><p>heating</p></li>
+<li><p>security</p></li>
+<li><p>energy</p></li>
+<li><p>automatism</p></li>
+<li><p>multimedia</p></li>
+<li><p>default</p></li>
+</ul>
+</li>
+<li><p>« configuration »</p>
+<p>Note: Ce paramètre permet d’initialiser le champ « configuration » de la table Jeedom « eqLogic ».</p>
+<ul>
+<li><p>« uniqId »</p></li>
+<li><p>« icone »</p>
+<p>Nom de l’icone associé.</p>
+</li>
+<li><p>« mainEP »</p></li>
+<li><p>« paramBatterie »</p></li>
+<li><p>« paramType »</p></li>
+</ul>
+</li>
+<li><p>« Commandes »:{« include1 »: »cmde1 », « include2 »: »cmd2 », … « includeX »: »cmdX »}</p>
+<p>Liste des commandes supportées. Chaque include correspond à une commande de base existante dans “config/devices/templates”
+- « include1 »: »cmd1 »
+- …
+- « includeX »: »cmdX »</p>
+</li>
+</ul>
 </div>
 
 

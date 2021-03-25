@@ -71,6 +71,7 @@
   <div class="section" id="format-des-messages-inter-demons">
 <h1>Format des messages inter démons<a class="headerlink" href="#format-des-messages-inter-demons" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Ce chapitre décrit le format des messages échangés entre démons.</p>
+<p>RECOMMENDATIONS pour la suite: identifiant en minuscule puis majuscules (ex: srcAddr, type, startIndex…).</p>
 <div class="section" id="parser-vers-lqi-collector">
 <h2>Parser vers “LQI collector”<a class="headerlink" href="#parser-vers-lqi-collector" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pendant la collecte LQI, des requetes du type 004E sont envoyées aux équipements « routeur » et leur réponse 804E est décodée puis envoyée au « LQI collector ».</p>
@@ -93,6 +94,19 @@
 );
 </pre></div>
 </div>
+</div>
+<div class="section" id="parser-vers-monitor-cmd-vers-monitor">
+<h2>“Parser” vers “Monitor” &amp; “Cmd” vers “Monitor”<a class="headerlink" href="#parser-vers-monitor-cmd-vers-monitor" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le moniteur collecte les messages envoyés vers et reçus de la zigate pour un équipement particulier et les affiches dans l’ordre.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>$msg = array(</dt><dd><p>“type” =&gt; string, “x2mon” or “newaddr”,
+“msg” =&gt; string, decoded msg if “x2mon” type
+“addr” =&gt; hex string, new short addr if “newaddr” type</p>
+</dd>
+</dl>
+<p>);</p>
+</div></blockquote>
 </div>
 </div>
 

@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le moniteur &#8212; Documentation Abeille 11.02.2021</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/Abeille_icon.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div><h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Bienvenu.html">Bienvenu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Presentation.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Equipements.html">Equipements supportés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Utilisation.html">Utilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../UtilisationAvancee.html">Utilisation avancée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Debug.html">Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developpement.html">Developpement</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="le-moniteur">
+<h1>Le moniteur<a class="headerlink" href="#le-moniteur" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Ce “moniteur” est un démon optionnel qui permet de capturer les messages envoyés vers et reçus d’un équipement particulier dans le but de suivre les échanges dans l’ordre chronologique.
+Il a été conçu dans un but informatif et de debug et donc ne gère qu’un seul équipement à la fois.</p>
+<p>Exemple sur un équipement actif:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">25</span> <span class="mi">11</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">27</span><span class="p">]</span> <span class="o">&gt;&gt;&gt;</span> <span class="n">Démarrage</span> <span class="n">du</span> <span class="n">démon</span> <span class="n">de</span> <span class="n">monitoring</span>
+<span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">25</span> <span class="mi">11</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">27</span><span class="p">]</span> <span class="n">Adresse</span> <span class="n">à</span> <span class="n">surveiller</span><span class="p">:</span> <span class="n">E4CA</span><span class="o">-</span><span class="mi">00158</span><span class="n">D000478E64E</span>
+<span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">25</span> <span class="mi">11</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">49</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">8002</span><span class="o">/</span><span class="n">Data</span> <span class="n">indication</span><span class="p">,</span> <span class="n">Status</span><span class="o">=</span><span class="mi">00</span><span class="p">,</span> <span class="n">ProfId</span><span class="o">=</span><span class="mi">0104</span><span class="p">,</span> <span class="n">ClustId</span><span class="o">=</span><span class="mi">0006</span><span class="p">,</span> <span class="n">SrcEP</span><span class="o">=</span><span class="mi">01</span><span class="p">,</span> <span class="n">DestEP</span><span class="o">=</span><span class="mi">01</span><span class="p">,</span> <span class="n">SrcAddrMode</span><span class="o">=</span><span class="mi">02</span><span class="p">,</span> <span class="n">SrcAddr</span><span class="o">=</span><span class="n">E4CA</span><span class="p">,</span> <span class="n">DestAddrMode</span><span class="o">=</span><span class="mi">02</span><span class="p">,</span> <span class="n">DestAddr</span><span class="o">=</span><span class="n">Ruche</span>
+<span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">25</span> <span class="mi">11</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">49</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">8102</span><span class="o">/</span><span class="n">Attribut</span> <span class="n">report</span><span class="p">,</span> <span class="n">SQN</span><span class="o">=</span><span class="n">AE</span><span class="p">,</span> <span class="n">Addr</span><span class="o">=</span><span class="n">E4CA</span><span class="p">,</span> <span class="n">EP</span><span class="o">=</span><span class="mi">01</span><span class="p">,</span> <span class="n">ClustId</span><span class="o">=</span><span class="mi">0006</span><span class="p">,</span> <span class="n">AttrId</span><span class="o">=</span><span class="mi">0000</span><span class="p">,</span> <span class="n">AttrStatus</span><span class="o">=</span><span class="mi">00</span><span class="p">,</span> <span class="n">AttrDataType</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">AttrSize</span><span class="o">=</span><span class="mi">0001</span>
+<span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">25</span> <span class="mi">11</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">50</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">8002</span><span class="o">/</span><span class="n">Data</span> <span class="n">indication</span><span class="p">,</span> <span class="n">Status</span><span class="o">=</span><span class="mi">00</span><span class="p">,</span> <span class="n">ProfId</span><span class="o">=</span><span class="mi">0104</span><span class="p">,</span> <span class="n">ClustId</span><span class="o">=</span><span class="mi">0006</span><span class="p">,</span> <span class="n">SrcEP</span><span class="o">=</span><span class="mi">01</span><span class="p">,</span> <span class="n">DestEP</span><span class="o">=</span><span class="mi">01</span><span class="p">,</span> <span class="n">SrcAddrMode</span><span class="o">=</span><span class="mi">02</span><span class="p">,</span> <span class="n">SrcAddr</span><span class="o">=</span><span class="n">E4CA</span><span class="p">,</span> <span class="n">DestAddrMode</span><span class="o">=</span><span class="mi">02</span><span class="p">,</span> <span class="n">DestAddr</span><span class="o">=</span><span class="n">Ruche</span>
+<span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">25</span> <span class="mi">11</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">50</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">8102</span><span class="o">/</span><span class="n">Attribut</span> <span class="n">report</span><span class="p">,</span> <span class="n">SQN</span><span class="o">=</span><span class="n">AF</span><span class="p">,</span> <span class="n">Addr</span><span class="o">=</span><span class="n">E4CA</span><span class="p">,</span> <span class="n">EP</span><span class="o">=</span><span class="mi">01</span><span class="p">,</span> <span class="n">ClustId</span><span class="o">=</span><span class="mi">0006</span><span class="p">,</span> <span class="n">AttrId</span><span class="o">=</span><span class="mi">0000</span><span class="p">,</span> <span class="n">AttrStatus</span><span class="o">=</span><span class="mi">00</span><span class="p">,</span> <span class="n">AttrDataType</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">AttrSize</span><span class="o">=</span><span class="mi">0001</span>
+<span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">25</span> <span class="mi">11</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">50</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">8002</span><span class="o">/</span><span class="n">Data</span> <span class="n">indication</span><span class="p">,</span> <span class="n">Status</span><span class="o">=</span><span class="mi">00</span><span class="p">,</span> <span class="n">ProfId</span><span class="o">=</span><span class="mi">0104</span><span class="p">,</span> <span class="n">ClustId</span><span class="o">=</span><span class="mi">0006</span><span class="p">,</span> <span class="n">SrcEP</span><span class="o">=</span><span class="mi">01</span><span class="p">,</span> <span class="n">DestEP</span><span class="o">=</span><span class="mi">01</span><span class="p">,</span> <span class="n">SrcAddrMode</span><span class="o">=</span><span class="mi">02</span><span class="p">,</span> <span class="n">SrcAddr</span><span class="o">=</span><span class="n">E4CA</span><span class="p">,</span> <span class="n">DestAddrMode</span><span class="o">=</span><span class="mi">02</span><span class="p">,</span> <span class="n">DestAddr</span><span class="o">=</span><span class="n">Ruche</span>
+<span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">25</span> <span class="mi">11</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">50</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">8102</span><span class="o">/</span><span class="n">Attribut</span> <span class="n">report</span><span class="p">,</span> <span class="n">SQN</span><span class="o">=</span><span class="n">B0</span><span class="p">,</span> <span class="n">Addr</span><span class="o">=</span><span class="n">E4CA</span><span class="p">,</span> <span class="n">EP</span><span class="o">=</span><span class="mi">01</span><span class="p">,</span> <span class="n">ClustId</span><span class="o">=</span><span class="mi">0006</span><span class="p">,</span> <span class="n">AttrId</span><span class="o">=</span><span class="mi">0000</span><span class="p">,</span> <span class="n">AttrStatus</span><span class="o">=</span><span class="mi">00</span><span class="p">,</span> <span class="n">AttrDataType</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">AttrSize</span><span class="o">=</span><span class="mi">0001</span>
+</pre></div>
+</div>
+<p>Exemple sur un équipement qui ne répond pas:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">24</span> <span class="mi">18</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">52</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">0100</span><span class="o">-</span><span class="mf">000e-028</span><span class="n">AB70101000000000000010005</span>
+<span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">24</span> <span class="mi">18</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">58</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">8011</span><span class="o">/</span><span class="n">APS</span> <span class="n">data</span> <span class="n">ACK</span><span class="p">,</span> <span class="n">Status</span><span class="o">=</span><span class="n">A7</span><span class="p">,</span> <span class="n">Addr</span><span class="o">=</span><span class="mi">8</span><span class="n">AB7</span><span class="p">,</span> <span class="n">EP</span><span class="o">=</span><span class="mi">01</span><span class="p">,</span> <span class="n">ClustId</span><span class="o">=</span><span class="mi">0000</span>
+<span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">24</span> <span class="mi">18</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">59</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">8702</span><span class="o">/</span><span class="n">APS</span> <span class="n">data</span> <span class="n">confirm</span> <span class="n">fail</span><span class="p">,</span> <span class="n">Status</span><span class="o">=</span><span class="n">F0</span><span class="o">/</span><span class="n">MAC_ENUM_TRANSACTION_EXPIRED</span><span class="p">,</span> <span class="n">SrcEP</span><span class="o">=</span><span class="mi">01</span><span class="p">,</span> <span class="n">DestEP</span><span class="o">=</span><span class="mi">01</span><span class="p">,</span> <span class="n">AddrMode</span><span class="o">=</span><span class="mi">02</span><span class="p">,</span> <span class="n">Addr</span><span class="o">=</span><span class="mi">8</span><span class="n">AB7</span><span class="p">,</span> <span class="n">SQN</span><span class="o">=</span><span class="mi">4</span><span class="n">A</span>
+<span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">24</span> <span class="mi">18</span><span class="p">:</span><span class="mi">21</span><span class="p">:</span><span class="mi">12</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">8011</span><span class="o">/</span><span class="n">APS</span> <span class="n">data</span> <span class="n">ACK</span><span class="p">,</span> <span class="n">Status</span><span class="o">=</span><span class="n">A7</span><span class="p">,</span> <span class="n">Addr</span><span class="o">=</span><span class="mi">8</span><span class="n">AB7</span><span class="p">,</span> <span class="n">EP</span><span class="o">=</span><span class="mi">00</span><span class="p">,</span> <span class="n">ClustId</span><span class="o">=</span><span class="mi">8006</span>
+<span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">24</span> <span class="mi">18</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">30</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">0100</span><span class="o">-</span><span class="mf">000e-028</span><span class="n">AB70101000000000000010005</span>
+<span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">24</span> <span class="mi">18</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">36</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">8011</span><span class="o">/</span><span class="n">APS</span> <span class="n">data</span> <span class="n">ACK</span><span class="p">,</span> <span class="n">Status</span><span class="o">=</span><span class="n">A7</span><span class="p">,</span> <span class="n">Addr</span><span class="o">=</span><span class="mi">8</span><span class="n">AB7</span><span class="p">,</span> <span class="n">EP</span><span class="o">=</span><span class="mi">01</span><span class="p">,</span> <span class="n">ClustId</span><span class="o">=</span><span class="mi">0000</span>
+<span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">24</span> <span class="mi">18</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">37</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">8702</span><span class="o">/</span><span class="n">APS</span> <span class="n">data</span> <span class="n">confirm</span> <span class="n">fail</span><span class="p">,</span> <span class="n">Status</span><span class="o">=</span><span class="n">F0</span><span class="o">/</span><span class="n">MAC_ENUM_TRANSACTION_EXPIRED</span><span class="p">,</span> <span class="n">SrcEP</span><span class="o">=</span><span class="mi">01</span><span class="p">,</span> <span class="n">DestEP</span><span class="o">=</span><span class="mi">01</span><span class="p">,</span> <span class="n">Addr</span>
+</pre></div>
+</div>
+<p>Ce moniteur n’est actuellement accessible qu’aux developpeurs (mode dev activé) !!</p>
+<div class="section" id="vue-d-ensemble">
+<h2>Vue d’ensemble<a class="headerlink" href="#vue-d-ensemble" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le moniteur utilise 3 queues de messages pour dialoguer avec AbeilleCmd &amp; AbeilleParser:</p>
+<ul class="simple">
+<li><p>reçoit les messages envoyés vers l’equipement (AbeilleCmd -&gt; AbeilleMonitor)</p></li>
+<li><p>reçoit les messages reçus de l’équipement (AbeilleParser -&gt; AbeilleMonitor)</p></li>
+<li><p>informe AbeilleCmd que l’adresse à surveiller à changé suite à un « device announce » (AbeilleMonitor -&gt; AbeilleCmd)</p></li>
+</ul>
+<img alt="dev\images/MonitorTopView.png" src="dev\images/MonitorTopView.png" />
+</div>
+<div class="section" id="utilisation">
+<h2>Utilisation<a class="headerlink" href="#utilisation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Rappel: Le moniteur n’est accessible qu’en mode « developpeur ».</p>
+<p>Le bouton « surveiller » est visible sur la page de gestion d’Abeille.</p>
+<img alt="dev\images/MonitorHowToStart.png" src="dev\images/MonitorHowToStart.png" />
+<p>Il suffit de selectionner l’équipement à surveiller et cliquer sur « surveiller » pour activer le moniteur sur cet EQ.
+« AbeilleMonitor.log » devrait alors apparaitre dans l’ensemble des logs de la page de config.</p>
+<img alt="dev\images/MonitorLog.png" src="dev\images/MonitorLog.png" />
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+
+    <div class="footer">
+      &copy;2019-21, KiwiHC16.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

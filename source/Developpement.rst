@@ -106,3 +106,4 @@ Propositions à discuter
 .. include:: dev/UpdateProcess.rst
 .. include:: dev/Messages.rst
 .. include:: dev/JeedomDB.rst
+.. include:: dev/Monitor.rst

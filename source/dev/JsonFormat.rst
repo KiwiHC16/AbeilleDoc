@@ -48,7 +48,6 @@ Exemple:
   - heating
   - security
   - energy
-  - light
   - automatism
   - multimedia
   - default

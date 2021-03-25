@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Format d’équipement (JSON) &#8212; Documentation Abeille 11.02.2021</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/Abeille_icon.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div><h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Bienvenu.html">Bienvenu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Presentation.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Equipements.html">Equipements supportés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Utilisation.html">Utilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../UtilisationAvancee.html">Utilisation avancée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Debug.html">Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Developpement.html">Developpement</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="format-d-equipement-json">
+<h1>Format d’équipement (JSON)<a class="headerlink" href="#format-d-equipement-json" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Les équipements supportés sont décrits dans des fichiers au format JSON, décrit ci-après.</p>
+<p>Exemple:</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>« BASICZBR3 »: {</dt><dd><p>« nameJeedom »: « SONOFF Module »,
+« timeout »: « 60 »,
+« Categorie »: {</p>
+<blockquote>
+<div><p>« automatism »: « 1 »</p>
+</div></blockquote>
+<p>},
+« configuration »: {</p>
+<blockquote>
+<div><p>« uniqId »: « 5c07c7dsdssdd6625d94 »,
+« icone »: « BASICZBR3 »,
+« mainEP »: « #EP# »</p>
+</div></blockquote>
+<p>},
+« Commandes »: {</p>
+<blockquote>
+<div><p>« include1 »: « SW »,
+« include2 »: « societe »,
+« include3 »: « nom »,
+« include4 »: « etat »,
+« include5 »: « On »,
+« include6 »: « Off »,
+« include7 »: « Toggle »,
+« include8 »: « getEtat »,
+« include9 »: « getManufacturerName »,
+« include10 »: « getModelIdentifier »,
+« include13 2 »: « Group-Membership »</p>
+</div></blockquote>
+<p>}</p>
+</dd>
+</dl>
+<p>}</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<ul>
+<li><p>« nameJeedom »</p></li>
+<li><p>« timeout »</p>
+<p>Note: Ce paramètre permet d’nitialiser le champ « timeout » de la table Jeedom « eqLogic ».</p>
+</li>
+<li><p>« Comment »</p></li>
+<li><p>« Categorie »:{« automatism »: »1 »}</p>
+<p>Liste les categories (plusieurs possibles) correspondant à l’équipement.
+Note: Ce paramètre permet d’initialiser le champ « category » de la table Jeedom « eqLogic ».</p>
+<ul class="simple">
+<li><p>light</p></li>
+<li><p>heating</p></li>
+<li><p>security</p></li>
+<li><p>energy</p></li>
+<li><p>automatism</p></li>
+<li><p>multimedia</p></li>
+<li><p>default</p></li>
+</ul>
+</li>
+<li><p>« configuration »</p>
+<p>Note: Ce paramètre permet d’initialiser le champ « configuration » de la table Jeedom « eqLogic ».</p>
+<ul>
+<li><p>« uniqId »</p></li>
+<li><p>« icone »</p>
+<p>Nom de l’icone associé.</p>
+</li>
+<li><p>« mainEP »</p></li>
+<li><p>« paramBatterie »</p></li>
+<li><p>« paramType »</p></li>
+</ul>
+</li>
+<li><p>« Commandes »:{« include1 »: »cmde1 », « include2 »: »cmd2 », … « includeX »: »cmdX »}</p>
+<p>Liste des commandes supportées. Chaque include correspond à une commande de base existante dans “config/devices/templates”
+- « include1 »: »cmd1 »
+- …
+- « includeX »: »cmdX »</p>
+</li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+
+    <div class="footer">
+      &copy;2019-21, KiwiHC16.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

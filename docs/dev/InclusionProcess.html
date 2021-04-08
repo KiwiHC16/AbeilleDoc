@@ -70,32 +70,47 @@
             
   <div class="section" id="le-processus-d-inclusion">
 <h1>Le processus d’inclusion<a class="headerlink" href="#le-processus-d-inclusion" title="Lien permanent vers ce titre">¶</a></h1>
-<p>CHAPITRE EN COURS DE CONSTRUCTION !!</p>
 <p>La phase d’inclusion d’un nouvel équipement est la plus importante car c’est pendant cette phase qu’Abeille va</p>
 <ul class="simple">
 <li><p>tenter d’identifier le periph</p></li>
 <li><p>et déclarer l’équipement dans Jeedom avec les commandes qu’il supporte</p></li>
 </ul>
-<p>La procédure est la suivante</p>
+<p>La procédure actuelle est la suivante</p>
 <ul>
 <li><p>La Zigate est mise en mode inclusion, prête à accepter tout équipement qui se signalera</p></li>
-<li><p>Un EQ se signale (device announce)</p>
+<li><p>EQ-&gt;Abeille: Un EQ se signale (device announce)</p>
 <blockquote>
 <div><p>C’est ici que l’adresse IEEE et l’adresse courte correspondante sont extraites.</p>
 </div></blockquote>
 </li>
-<li><p>Abeille demande le nom du modèle (attribut « ModelIdentifier »)</p></li>
-<li><p>Si l’attribut n’est pas supporté..
-??? Comment procède t’on ???</p></li>
-<li><p>Si le modèle est connu (fichier JSON trouvé dans core/config/devices) pas d’autre interrogation nécessaire.
-Tout est supposé être décrit dans le fichier de config JSON.
-Passage à la configuration du device (si besoin).</p></li>
-<li><p>Si le modèle est inconnu:
-- Demande la liste des « End Point »
-- Pour chaque EP, demande la liste des clusters supportés
-- ??? On fait quoi de ces infos ??? Aujourd’hui utilisation d’une « config par defaut ».</p></li>
-<li><p>Configuration du device.
-??? En quoi ca consiste ???</p></li>
+<li><p>Abeille-&gt;EQ: Abeille demande la liste des « End Points »</p></li>
+<li><p>Abeille-&gt;EQ: Abeille demande le nom du modèle (attribut « ModelIdentifier ») sur EP1</p></li>
+<li><p>Si attribut « ModelIdentifier » supporté</p>
+<p>Nom JSON issu de « ModelIdentifier » (suppression des caractéres spéciaux et espaces).
+Les modules « DIY » doivent normalement rentrer dans cette categorie. Bonc bien penser à renseigner leur « ModelIdentifier » dans leur firmware.</p>
+</li>
+<li><p>Si l’attribut « ModelIdentifier » n’est pas supporté</p>
+<p>A ce jour peu de cas rencontrés;</p>
+<ul class="simple">
+<li><p>Un module DIY de Texas Instrument =&gt; Bug firmware (ModelIdentifier non renseigné).</p></li>
+<li><p>Les volets Profalux =&gt; identifiés par leur attribut « Location ».</p></li>
+</ul>
+</li>
+<li><p>Si le modèle JSON est connu (fichier JSON trouvé dans core/config/devices) pas d’autre interrogation nécessaire.</p>
+<p>Tout est supposé être décrit dans le fichier de config JSON.
+Passage à la configuration du device (si besoin).</p>
+</li>
+<li><p>Si le modèle JSON est inconnu:</p>
+<ul>
+<li><p>Demande la liste des « End Point »</p></li>
+<li><p>Pour chaque EP, demande la liste des clusters supportés</p>
+<p>Ces infos ne sont actuellement pas utilisées par Abeille. Par contre leur trace dans les logs permet de faire le modèle JSON.</p>
+</li>
+</ul>
+</li>
+<li><p>Configuration du device.</p>
+<p>Essentiellement faire un « bind » ou « set report » pour avoir les retours d’état.</p>
+</li>
 <li><p>Le nouvel EQ est prêt à être utilisé.</p></li>
 </ul>
 </div>

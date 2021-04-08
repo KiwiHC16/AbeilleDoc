@@ -19,11 +19,12 @@ La procédure actuelle est la suivante
 - Si attribut "ModelIdentifier" supporté
 
   Nom JSON issu de "ModelIdentifier".
+  Les modules "DIY" doivent normalement rentrer dans cette categorie. Bonc bien penser à renseigner leur "ModelIdentifier" dans leur firmware.
 - Si l'attribut "ModelIdentifier" n'est pas supporté
 
   A ce jour peu de cas rencontrés;
 
-  - Un module DIY de Texas Instrument => identifié comment ?
+  - Un module DIY de Texas Instrument => Bug firmware (ModelIdentifier non renseigné).
   - Les volets Profalux => identifiés par leur attribut "Location".
 - Si le modèle est connu (fichier JSON trouvé dans core/config/devices) pas d'autre interrogation nécessaire.
   Tout est supposé être décrit dans le fichier de config JSON.

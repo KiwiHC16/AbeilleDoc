@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Format d’équipement (JSON) &#8212; Documentation Abeille 11.02.2021</title>
+    <title>Jeedom en profondeur &#8212; Documentation Abeille 11.02.2021</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -67,106 +67,25 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="format-d-equipement-json">
-<h1>Format d’équipement (JSON)<a class="headerlink" href="#format-d-equipement-json" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Les équipements supportés sont décrits dans des fichiers au format JSON, décrit ci-après.</p>
-<p>Exemple:</p>
-<blockquote>
-<div><dl>
-<dt>{</dt><dd><dl>
-<dt>« BASICZBR3 »: {</dt><dd><p>« nameJeedom »: « Sonoff BASICZBR3 smart switch »,
-« manufacturer »: « Sonoff »,
-« model »: « BASICZBR3 »,
-« timeout »: « 60 »,
-« Categorie »: {</p>
-<blockquote>
-<div><p>« automatism »: « 1 »</p>
-</div></blockquote>
-<p>},
-« configuration »: {</p>
-<blockquote>
-<div><p>« uniqId »: « 5c07c7dsdssdd6625d94 »,
-« icone »: « BASICZBR3 »,
-« mainEP »: « #EP# »</p>
-</div></blockquote>
-<p>},
-« Commandes »: {</p>
-<blockquote>
-<div><p>« include1 »: « SW »,
-« include2 »: « societe »,
-« include3 »: « nom »,
-« include4 »: « etat »,
-« include5 »: « On »,
-« include6 »: « Off »,
-« include7 »: « Toggle »,
-« include8 »: « getEtat »,
-« include9 »: « getManufacturerName »,
-« include10 »: « getModelIdentifier »,
-« include13 2 »: « Group-Membership »</p>
-</div></blockquote>
-<p>}</p>
-</dd>
-</dl>
-<p>}</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
+  <div class="section" id="jeedom-en-profondeur">
+<h1>Jeedom en profondeur<a class="headerlink" href="#jeedom-en-profondeur" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Ce chapitre donne qq explications sur le fonctionnement interne de Jeedom, suite aux recherches nécessaires au developpement d’Abeille.</p>
+<div class="section" id="checkandupdatecmd">
+<h2>checkAndUpdateCmd()<a class="headerlink" href="#checkandupdatecmd" title="Lien permanent vers ce titre">¶</a></h2>
+<p>public function checkAndUpdateCmd($_logicalId, $_value, $_updateTime = null) {}</p>
 <ul>
-<li><p>« nameJeedom »</p></li>
-<li><p>« manufacturer »</p>
-<blockquote>
-<div><p>Nom du fabricant.
-Exemple: « Sonoff »</p>
-</div></blockquote>
+<li><p>Verifie que l eq(uipement) est actif</p></li>
+<li><p>Verifie que la cmd existe</p></li>
+<li><p>Recupere la valeur de la commande actuelle</p></li>
+<li><p>Si nouvelle valeur differente de l ancienne genere un event() avec la nouvelle valeur.</p>
+<p>Ca va trigger les actions en relations avec cette commande.</p>
 </li>
-<li><p>« model »</p>
-<blockquote>
-<div><p>Modèle ou référence exacte du fabricant.
-Exemple: « BASICZBR3 »</p>
-</div></blockquote>
-</li>
-<li><p>« timeout »</p>
-<p>Note: Ce paramètre permet d’initialiser le champ « timeout » de la table Jeedom « eqLogic ».</p>
-</li>
-<li><p>« Comment »</p></li>
-<li><p>« comment »</p>
-<blockquote>
-<div><p>Permet d’ajouter un commentaire pour cet équipement.</p>
-</div></blockquote>
-</li>
-<li><p>« Categorie »:{« automatism »: »1 »}</p>
-<p>Liste les categories (plusieurs possibles) correspondant à l’équipement.
-Note: Ce paramètre permet d’initialiser le champ « category » de la table Jeedom « eqLogic ».</p>
-<ul class="simple">
-<li><p>light</p></li>
-<li><p>heating</p></li>
-<li><p>security</p></li>
-<li><p>energy</p></li>
-<li><p>automatism</p></li>
-<li><p>multimedia</p></li>
-<li><p>default</p></li>
+<li><p>Met a jour la date de collecte</p></li>
+<li><p>Gere les aspects repeatEventManagement de la commande (par exemple si deja meme valeur on ne fait rien. Ou on fait sur chaque nouvel valeur quoi qu il arrive</p></li>
+<li><p>Et mets a jour “lastCommunication” =&gt; date(“Y-m-d H:i:s”), “timeout” =&gt; 0</p></li>
 </ul>
-</li>
-<li><p>« configuration »</p>
-<p>Note: Ce paramètre permet d’initialiser le champ « configuration » de la table Jeedom « eqLogic ».</p>
-<ul>
-<li><p>« uniqId »</p></li>
-<li><p>« icone »</p>
-<p>Nom de l’icone associé.</p>
-</li>
-<li><p>« mainEP »</p></li>
-<li><p>« paramBatterie »</p></li>
-<li><p>« paramType »</p></li>
-</ul>
-</li>
-<li><p>« Commandes »:{« include1 »: »cmde1 », « include2 »: »cmd2 », … « includeX »: »cmdX »}</p>
-<p>Liste des commandes supportées. Chaque include correspond à une commande de base existante dans “config/devices/templates”
-- « include1 »: »cmd1 »
-- …
-- « includeX »: »cmdX »</p>
-</li>
-</ul>
+<p>En gros affecte une valeur a une commande info et gere les actions associées.</p>
+</div>
 </div>
 
 

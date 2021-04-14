@@ -7,7 +7,9 @@ Exemple:
 
   {
     "BASICZBR3": {
-      "nameJeedom": "SONOFF Module",
+      "nameJeedom": "Sonoff BASICZBR3 smart switch",
+      "manufacturer": "Sonoff",
+      "model": "BASICZBR3",
       "timeout": "60",
       "Categorie": {
         "automatism": "1"
@@ -34,11 +36,22 @@ Exemple:
   }
 
 * "nameJeedom"
+* "manufacturer"
+
+    Nom du fabricant.
+    Exemple: "Sonoff"
+* "model"
+
+    Modèle ou référence exacte du fabricant.
+    Exemple: "BASICZBR3"
 * "timeout"
 
-  Note: Ce paramètre permet d'nitialiser le champ "timeout" de la table Jeedom "eqLogic".
+  Note: Ce paramètre permet d'initialiser le champ "timeout" de la table Jeedom "eqLogic".
 
 * "Comment"
+* "comment"
+
+    Permet d'ajouter un commentaire pour cet équipement.
 * "Categorie":{"automatism":"1"}
 
   Liste les categories (plusieurs possibles) correspondant à l'équipement.

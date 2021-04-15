@@ -1,7 +1,7 @@
 Equipements supportés
 =====================
 
-La liste la plus complète est la suivante :doc:`listeCompatibilite` mais notez qu'elle peut ne pas être à jour.
+La liste la plus complète est la suivante :doc:`devices/CompatibilityList` mais notez qu'elle peut ne pas être à jour.
 
 Vous trouverez ci-dessous quelque informations ou procédures par marque pour certains équipements.
 
@@ -9,6 +9,7 @@ Vous trouverez ci-dessous quelque informations ou procédures par marque pour ce
    :maxdepth: 2
    :hidden:
 
+   devices/CompatibilityList
    devices/Eurotronics
    devices/Danfoss
    DIY

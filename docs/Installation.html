@@ -17,7 +17,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Utilisation" href="Utilisation.html" />
-    <link rel="prev" title="Equipements supportés" href="Equipements.html" />
+    <link rel="prev" title="Xiaomi" href="devices/Xiaomi.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -45,7 +45,7 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="Equipements.html" title="Chapitre précédent">Equipements supportés</a></li>
+      <li>Previous: <a href="devices/Xiaomi.html" title="Chapitre précédent">Xiaomi</a></li>
       <li>Next: <a href="Utilisation.html" title="Chapitre suivant">Utilisation</a></li>
   </ul></li>
 </ul>
@@ -59,14 +59,30 @@
 <li class="toctree-l2"><a class="reference internal" href="#installation-standard">Installation standard</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#activation-du-plugin">Activation du plugin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#configuration-d-une-ou-plusieurs-zigates">Configuration d’une ou plusieurs zigates</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mise-a-jour-du-plugin">Mise a jour du plugin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#installations-avancees">Installations avancées</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ancienne-doc">Ancienne doc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mise-a-jour-du-plugin">Mise a jour du plugin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#market">Market</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#github">Github</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-avancee">Installation avancée</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#via-jeedom-a-partir-de-github">Via Jeedom à partir de GitHub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#via-ssh-et-un-fichier-zip">Via SSH et un fichier Zip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#via-git">Via Git</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ancienne-doc">Ancienne doc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#etape-1-zigate">Etape 1: Zigate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etape-2-widget">Etape 2: Widget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etape-3-reference">Etape 3: Référence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bidouilles">Bidouilles</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Debug.html">Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
 </ul>
@@ -142,24 +158,46 @@ Rien de particulier, suivre la méthode de base de Jeedom</p>
 </td></tr></table></div>
 </div>
 </div>
-<div class="section" id="installations-avancees">
-<h2>Installations avancées<a class="headerlink" href="#installations-avancees" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="alternative-depuis-github-via-jeedom">
-<h3>Alternative: Depuis GitHub via Jeedom<a class="headerlink" href="#alternative-depuis-github-via-jeedom" title="Lien permanent vers ce titre">¶</a></h3>
-<ul class="simple">
-<li><p>Aller sur Configuration (Roues crantées) puis Configuration</p></li>
-<li><p>Dans l’onglet « Mise à jour », sélectionner en dessous l’onglet Github et cocher la case « Activer Github ». Cliquer sur « Sauvegarder ».</p></li>
-<li><p>Aller sur « Plugins » et cliquer sur « Gestion des plugins ». Cliquer sur « Sources »</p></li>
-<li><p>Dans « Type de source », sélectionner Github</p></li>
+<div class="section" id="installation-avancee">
+<h2>Installation avancée<a class="headerlink" href="#installation-avancee" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’installation par défaut passe par le « market » Jeedom. C’est le mode le plus simple. Néanmoins pour des besoins d’accès à une version de developpement par exemple il peut être nécessaire d’installer le plugin par un autre biais.</p>
+<div class="section" id="via-jeedom-a-partir-de-github">
+<h3>Via Jeedom à partir de GitHub<a class="headerlink" href="#via-jeedom-a-partir-de-github" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Commencer par autoriser l’accès à GitHub via la config Jeedom.</p>
+<ul>
+<li><p>Réglages-&gt; Système -&gt; Configuration</p></li>
+<li><p>Selectionner l’onglet « Mise à jour/market », puis « GitHub » dans la partie « Configuration des dépots »</p></li>
+<li><p>Activez GitHub</p></li>
+<li><dl>
+<dt>et « Sauvegarder ».</dt><dd><img alt="_images/InstallationAvancee-3.png" src="_images/InstallationAvancee-3.png" />
+</dd>
+</dl>
+</li>
+</ul>
+<p>A partir de la il est possible d’installer n’importe quel plugin à partir de « GitHub ».</p>
+<ul>
+<li><p>Aller sur « Plugins » puis « Gestion des plugins ».</p></li>
+<li><dl>
+<dt>Pour ajouter un plugin depuis GitHub et non pas du market, cliquer sur « Plugins (+) »</dt><dd><img alt="_images/InstallationAvancee-1.png" src="_images/InstallationAvancee-1.png" />
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Dans « Type de source », sélectionner Github puis entrez les informations suivantes</dt><dd><ul class="simple">
 <li><p>ID logique du plugin: Abeille</p></li>
 <li><p>Utilisateur ou organisateur: KiwiHC16</p></li>
 <li><p>Nom du dépôt: Abeille</p></li>
-<li><p>Branche: master</p></li>
+<li><p>Branche: master (ou le nom de la branche depuis laquelle vous devez recupérer le plugin, ex: beta)</p></li>
 <li><p>Cliquer sur Enregistrer.</p></li>
 </ul>
+<img alt="_images/InstallationAvancee-2.png" src="_images/InstallationAvancee-2.png" />
+</dd>
+</dl>
+</li>
+</ul>
 </div>
-<div class="section" id="via-un-fichier-zip">
-<h3>Via un fichier Zip<a class="headerlink" href="#via-un-fichier-zip" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="via-ssh-et-un-fichier-zip">
+<h3>Via SSH et un fichier Zip<a class="headerlink" href="#via-ssh-et-un-fichier-zip" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3

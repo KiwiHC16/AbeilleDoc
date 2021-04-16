@@ -85,23 +85,39 @@ Mise à jour à partir de github
    cd /var/www/html/plugins/Abeille
    sudo git pull https://github.com/KiwiHC16/Abeille
 
-Installations avancées
-----------
+Installation avancée
+--------------------
 
-Alternative: Depuis GitHub via Jeedom
-~~~~~~
-* Aller sur Configuration (Roues crantées) puis Configuration
-* Dans l'onglet "Mise à jour", sélectionner en dessous l'onglet Github et cocher la case "Activer Github". Cliquer sur "Sauvegarder".
-* Aller sur "Plugins" et cliquer sur "Gestion des plugins". Cliquer sur "Sources"
-* Dans "Type de source", sélectionner Github
-* ID logique du plugin: Abeille
-* Utilisateur ou organisateur: KiwiHC16
-* Nom du dépôt: Abeille
-* Branche: master
-* Cliquer sur Enregistrer.
+L'installation par défaut passe par le "market" Jeedom. C'est le mode le plus simple. Néanmoins pour des besoins d'accès à une version de developpement par exemple il peut être nécessaire d'installer le plugin par un autre biais.
 
-Via un fichier Zip
-~~~~~~
+Via Jeedom à partir de GitHub
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Commencer par autoriser l'accès à GitHub via la config Jeedom.
+
+* Réglages-> Système -> Configuration
+* Selectionner l'onglet "Mise à jour/market", puis "GitHub" dans la partie "Configuration des dépots"
+* Activez GitHub
+* et "Sauvegarder".
+   .. image:: images/InstallationAvancee-3.png
+
+A partir de la il est possible d'installer n'importe quel plugin à partir de "GitHub".
+
+* Aller sur "Plugins" puis "Gestion des plugins".
+* Pour ajouter un plugin depuis GitHub et non pas du market, cliquer sur "Plugins (+)"
+   .. image:: images/InstallationAvancee-1.png
+
+* Dans "Type de source", sélectionner Github puis entrez les informations suivantes
+   * ID logique du plugin: Abeille
+   * Utilisateur ou organisateur: KiwiHC16
+   * Nom du dépôt: Abeille
+   * Branche: master (ou le nom de la branche depuis laquelle vous devez recupérer le plugin, ex: beta)
+   * Cliquer sur Enregistrer.
+   .. image:: images/InstallationAvancee-2.png
+
+
+Via SSH et un fichier Zip
+~~~~~~~~~~~~~~~~~~~~~~~~~
 .. code-block:: php
    :linenos:
 

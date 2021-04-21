@@ -6,13 +6,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Format de la DB Jeedom &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -71,9 +70,38 @@
   <div class="section" id="format-de-la-db-jeedom">
 <h1>Format de la DB Jeedom<a class="headerlink" href="#format-de-la-db-jeedom" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Ce chapitre décrit le format de la database Jeedom appliqué au plugin « Abeille ».</p>
-<p>EN COURS DE CONSTRUCTION !!!</p>
-<div class="section" id="commandes">
-<h2>Commandes<a class="headerlink" href="#commandes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>EN COURS DE CONSTRUCTION !!!
+Derniere update: 21/avr/21</p>
+<div class="section" id="equipement-table-eqlogic">
+<h2>Equipement (table eqLogic)<a class="headerlink" href="#equipement-table-eqlogic" title="Lien permanent vers ce titre">¶</a></h2>
+<ul>
+<li><p>id: ID de l’équipement. Affecté par Jeedom.</p></li>
+<li><p>name</p></li>
+<li><p>generic_type</p></li>
+<li><p>logicalId</p></li>
+<li><p>object_id</p></li>
+<li><p>eqType_name</p></li>
+<li><p>configuration</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>createtime: mis-à-jour par Jeedom à la création de l’équipement.</p></li>
+<li><p>updatetime: mis-à-jour par Jeedom à chaque changement de la configuration.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>isVisible</p></li>
+<li><p>isEnable</p></li>
+<li><p>status</p></li>
+<li><p>timeout</p></li>
+<li><p>category</p></li>
+<li><p>display</p></li>
+<li><p>order</p></li>
+<li><p>comment</p></li>
+<li><p>tags</p></li>
+</ul>
+</div>
+<div class="section" id="commandes-table-cmd">
+<h2>Commandes (table cmd)<a class="headerlink" href="#commandes-table-cmd" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La table « cmd » de Jeedom est formatée comme suit:</p>
 <ul class="simple">
 <li><p>id: ID de la commande. Affecté par Jeedom.</p></li>
@@ -113,7 +141,7 @@ Correct ?</p></li>
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

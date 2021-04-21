@@ -4,9 +4,33 @@ Format de la DB Jeedom
 Ce chapitre décrit le format de la database Jeedom appliqué au plugin "Abeille".
 
 EN COURS DE CONSTRUCTION !!!
+Derniere update: 21/avr/21
 
-Commandes
-~~~~~~~~~
+Equipement (table eqLogic)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- id: ID de l'équipement. Affecté par Jeedom.
+- name
+- generic_type
+- logicalId
+- object_id
+- eqType_name
+- configuration
+
+    - createtime: mis-à-jour par Jeedom à la création de l'équipement.
+    - updatetime: mis-à-jour par Jeedom à chaque changement de la configuration.
+- isVisible
+- isEnable
+- status
+- timeout
+- category
+- display
+- order
+- comment
+- tags
+
+Commandes (table cmd)
+~~~~~~~~~~~~~~~~~~~~~
 
 La table "cmd" de Jeedom est formatée comme suit:
 

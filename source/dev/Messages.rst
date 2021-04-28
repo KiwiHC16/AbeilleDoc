@@ -39,3 +39,16 @@ Le moniteur collecte les messages envoyés vers et reçus de la zigate pour un �
         'msg' => string, decoded msg if 'x2mon' type
         'addr' => hex string, new short addr if 'newaddr' type
     );
+
+'SerialRead' vers 'Parser'
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    $msg = array(
+        'src' = string, 'serialread',
+        'net' => string, corresponding network (ex: 'Abeille1')
+        'type' => string, 'zigatemessage' or 'ready',
+            'zigatemessage': There is a zigate message attached in 'msg'
+            'status': There is 'status' attached
+        'msg' => string, message from zigate (extracted from frame & transcoded)
+        'status' => 'ready', 'notready'
+    );

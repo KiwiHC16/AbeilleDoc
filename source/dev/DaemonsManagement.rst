@@ -15,12 +15,15 @@ Ordre de lancement
 
 Ce point est clef.
 
-En effet si AbeilleCmd est lancé en premier et qu'il envoie deja des ordre à la zigate avant meme que le chemin de retour soit fonctionnel (AbeilleSerialRead) on risque de manquer des informations.
+En effet si AbeilleCmd est lancé en premier et qu'il envoie deja des ordres à la zigate avant meme que le chemin de retour ne soit fonctionnel (AbeilleSocat>AbeilleSerialRead) on risque de manquer des informations.
 Ce pb à été vu par exemple dans le cas suivant
 - AbeilleParser ignore les messages si l'adresse IEEE de la zigate ne correspondant pas à ce qui est attendu (possible dans le cas ou les ports different d'un boot à l'autre)
 - Manque de pot AbeilleCmd avait demandé l'adresse IEEE avant que SerialRead puisse recuperer l'information.
 - Du coup plus aucun message de retour n'etait accepté
-WARNING: Probleme encore d'actualite. En cours de resolution
+
+Pour résoudre ce problème les démons sont lancés, puis les premiers messages sont envoyés vers AbeilleCmd.
+Cela inclut le message 0009 (Get Network State) qui récupère l'adresse IEEE de la zigate.
+Les premiers messages ne sont donc plus lancés par "deamon_start()" mais fait au départ du démon principal (deamon()).
 
 Problèmes rencontrés
 ~~~~~~~~~~~~~~~~~~~~

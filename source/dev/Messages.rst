@@ -45,10 +45,33 @@ Le moniteur collecte les messages envoyés vers et reçus de la zigate pour un �
 
     $msg = array(
         'src' = string, 'serialread',
-        'net' => string, corresponding network (ex: 'Abeille1')
-        'type' => string, 'zigatemessage' or 'ready',
+        'type' => string, 'zigatemessage' or 'status',
             'zigatemessage': There is a zigate message attached in 'msg'
             'status': There is 'status' attached
+        'net' => string, corresponding network (ex: 'Abeille1')
         'msg' => string, message from zigate (extracted from frame & transcoded)
         'status' => 'ready', 'notready'
+    );
+
+'parser' vers 'cmd'
+~~~~~~~~~~~~~~~~~~~
+
+PAS ENCORE IMPLEMENTE !!
+Juste à l'état de reflexion.
+
+examples d'application:
+    $this->msgToCmd("TempoCmd".$dest."/Ruche/ActiveEndPoint&time=".(time()+($i*2)), "address=".$Addr );
+    $this->msgToCmd("Cmd".$dest."/Ruche/PDM", "req=E_SL_MSG_PDM_HOST_AVAILABLE_RESPONSE");
+    $this->msgToCmd("Cmd".$dest."/Ruche/getManufacturerName", "address=".$SrcAddr.'&destinationEndPoint='.$EP );
+    $this->msgToCmd('CmdAbeille1/'.$SrcAddr.'/IEEE_Address_request', 'shortAddress='.$SrcAddr);
+
+    $msg = array(
+        'src' = string, 'parser',
+        'type' => string, 'cmd'/'delayed_cmd'
+        'net' => string, corresponding network (ex: 'Abeille1')
+        'addr' => hex string, equipement short address
+        'ep' => ?, End Point
+        'cmd' => string, command name (logical Id, part of those supported by target EQ itself)
+        'payload' => string, payload/data
+        'time' => ?, time for 'delayed_cmd'
     );

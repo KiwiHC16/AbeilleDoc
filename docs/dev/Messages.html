@@ -6,12 +6,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Format des messages inter démons &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -107,6 +108,48 @@
 <p>);</p>
 </div></blockquote>
 </div>
+<div class="section" id="serialread-vers-parser">
+<h2>“SerialRead” vers “Parser”<a class="headerlink" href="#serialread-vers-parser" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><dl>
+<dt>$msg = array(</dt><dd><p>“src” = string, “serialread”,
+“type” =&gt; string, “zigatemessage” or “status”,</p>
+<blockquote>
+<div><p>“zigatemessage”: There is a zigate message attached in “msg”
+“status”: There is “status” attached</p>
+</div></blockquote>
+<p>“net” =&gt; string, corresponding network (ex: “Abeille1”)
+“msg” =&gt; string, message from zigate (extracted from frame &amp; transcoded)
+“status” =&gt; “ready”, “notready”</p>
+</dd>
+</dl>
+<p>);</p>
+</div></blockquote>
+</div>
+<div class="section" id="parser-vers-cmd">
+<h2>“parser” vers “cmd”<a class="headerlink" href="#parser-vers-cmd" title="Lien permanent vers ce titre">¶</a></h2>
+<p>PAS ENCORE IMPLEMENTE !!
+Juste à l’état de reflexion.</p>
+<dl>
+<dt>examples d’application:</dt><dd><p>$this-&gt;msgToCmd(« TempoCmd ».$dest. »/Ruche/ActiveEndPoint&amp;time= ».(time()+($i*2)), « address= ».$Addr );
+$this-&gt;msgToCmd(« Cmd ».$dest. »/Ruche/PDM », « req=E_SL_MSG_PDM_HOST_AVAILABLE_RESPONSE »);
+$this-&gt;msgToCmd(« Cmd ».$dest. »/Ruche/getManufacturerName », « address= ».$SrcAddr.”&amp;destinationEndPoint=”.$EP );
+$this-&gt;msgToCmd(“CmdAbeille1/”.$SrcAddr.”/IEEE_Address_request”, “shortAddress=”.$SrcAddr);</p>
+<dl class="simple">
+<dt>$msg = array(</dt><dd><p>“src” = string, “parser”,
+“type” =&gt; string, “cmd”/”delayed_cmd”
+“net” =&gt; string, corresponding network (ex: “Abeille1”)
+“addr” =&gt; hex string, equipement short address
+“ep” =&gt; ?, End Point
+“cmd” =&gt; string, command name (logical Id, part of those supported by target EQ itself)
+“payload” =&gt; string, payload/data
+“time” =&gt; ?, time for “delayed_cmd”</p>
+</dd>
+</dl>
+<p>);</p>
+</dd>
+</dl>
+</div>
 </div>
 
 
@@ -121,7 +164,7 @@
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

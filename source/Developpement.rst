@@ -58,7 +58,9 @@ Note: Tous les noms de répertoire en **ANGLAIS** et en **MINUSCULES**
     Les fichiers de class php doivent obligatoirement se finir par ".class.php".
   * **config** : Fichiers de configuration du plugin.
 
-    * A DETAILLER
+    * Abeille.config.php: Constantes principales du plugin.
+    * **devices**: Fichiers JSON des équipements supportés
+    * **commands**: Fichiers JSON des commandes
   * **php** : dossier pouvant contenir des fonctions ne devant pas forcément appartenir à une classe (souvent utilisé pour permettre l’inclusion de multiples classes ou fichiers de configuration en une fois)
     Toutes les librairies Abeille PHP.
   * **scripts** : Dossier contenant les scripts internes d'Abeille.
@@ -108,3 +110,5 @@ Propositions à discuter
 .. include:: dev/JeedomDB.rst
 .. include:: dev/Monitor.rst
 .. include:: dev/InclusionProcess.rst
+.. include:: dev/DaemonsManagement.rst
+.. include:: dev/JsonFormat.rst

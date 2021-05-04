@@ -6,7 +6,7 @@ Vue d'ensemble
 
 Abeille est basé sur le fonctionnement de plusieurs démons s'executant en parallèle:
 - AbeilleCmd en emission, pour envoyer les ordres vers la zigate
-- AbeilleSoct en reception, pour faire le lien entre une zigate wifi et AbeilleSerialRead
+- AbeilleSocat en reception, pour faire le lien entre une zigate wifi et AbeilleSerialRead
 - AbeilleSerialRead en reception, pour lire les message de la zigate
 - AbeilleParser pour decoder les messages recus via AbeilleSerialRead
 
@@ -25,8 +25,8 @@ Pour résoudre ce problème les démons sont lancés, puis les premiers messages
 Cela inclut le message 0009 (Get Network State) qui récupère l'adresse IEEE de la zigate.
 Les premiers messages ne sont donc plus lancés par "deamon_start()" mais fait au départ du démon principal (deamon()).
 
-Problèmes rencontrés
-~~~~~~~~~~~~~~~~~~~~
+Lancements concurrents
+~~~~~~~~~~~~~~~~~~~~~~
 
 Au départ le redémarrage des démons (nécessaire si crash) était déclenché par deamon_info().
 Manque de pot cette fonction appelée par Jeedom est complètement asynchrone et peut même être appelée plusieurs fois par seconde.

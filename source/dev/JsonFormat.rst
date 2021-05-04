@@ -81,3 +81,41 @@ Exemple:
   - "include1":"cmd1"
   - ...
   - "includeX":"cmdX"
+
+Format de commande (JSON)
+-------------------------
+
+Exemple
+
+  {
+    "BindShortToZigateBatterie": {
+      "isVisible": 0,
+      "name": "BindShortToZigateBatterie",
+      "order": 13,
+      "isHistorized": "0",
+      "Type": "action",
+      "subType": "other",
+      "invertBinary": "0",
+      "template": "",
+      "configuration": {
+        "uniqId": "5c07c76621802",
+        "topic": "bindShort",
+        "request": "targetExtendedAddress=#addrIEEE#&targetEndpoint=#EP#&ClusterId=0001&reportToAddress=#ZiGateIEEE#",
+        "visibilityCategory": "Network",
+        "execAtCreation": "Yes",
+        "execAtCreationDelay": "9"
+      },
+      "display": {
+        "forceReturnLineAfter": "1"
+      }
+    }
+  }
+
+Variables de personalisation
+----------------------------
+
+De manière à pouvoir utiliser des commandes génériques, un certain nombre de variables permettent de personaliser la commande lors de son utilisation par l'équipement.
+
+ - #addrIEEE#: Adresse IEEE de l'équipement
+ - #ZiGateIEEE#: Adresse IEEE de la zigate
+ - #EP#: End Point

@@ -6,12 +6,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Format d’équipement (JSON) &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -168,6 +169,54 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
 </li>
 </ul>
 </div>
+<div class="section" id="format-de-commande-json">
+<h1>Format de commande (JSON)<a class="headerlink" href="#format-de-commande-json" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Exemple</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>« BindShortToZigateBatterie »: {</dt><dd><p>« isVisible »: 0,
+« name »: « BindShortToZigateBatterie »,
+« order »: 13,
+« isHistorized »: « 0 »,
+« Type »: « action »,
+« subType »: « other »,
+« invertBinary »: « 0 »,
+« template »: «  »,
+« configuration »: {</p>
+<blockquote>
+<div><p>« uniqId »: « 5c07c76621802 »,
+« topic »: « bindShort »,
+« request »: « targetExtendedAddress=#addrIEEE#&amp;targetEndpoint=#EP#&amp;ClusterId=0001&amp;reportToAddress=#ZiGateIEEE# »,
+« visibilityCategory »: « Network »,
+« execAtCreation »: « Yes »,
+« execAtCreationDelay »: « 9 »</p>
+</div></blockquote>
+<p>},
+« display »: {</p>
+<blockquote>
+<div><p>« forceReturnLineAfter »: « 1 »</p>
+</div></blockquote>
+<p>}</p>
+</dd>
+</dl>
+<p>}</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+</div>
+<div class="section" id="variables-de-personalisation">
+<h1>Variables de personalisation<a class="headerlink" href="#variables-de-personalisation" title="Lien permanent vers ce titre">¶</a></h1>
+<p>De manière à pouvoir utiliser des commandes génériques, un certain nombre de variables permettent de personaliser la commande lors de son utilisation par l’équipement.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>#addrIEEE#: Adresse IEEE de l’équipement</p></li>
+<li><p>#ZiGateIEEE#: Adresse IEEE de la zigate</p></li>
+<li><p>#EP#: End Point</p></li>
+</ul>
+</div></blockquote>
+</div>
 
 
           </div>
@@ -181,7 +230,7 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

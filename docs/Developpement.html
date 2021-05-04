@@ -6,12 +6,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Developpement &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
@@ -81,6 +82,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#format-des-messages-inter-demons">Format des messages inter démons</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#parser-vers-lqi-collector">Parser vers “LQI collector”</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#parser-vers-monitor-cmd-vers-monitor">“Parser” vers “Monitor” &amp; “Cmd” vers “Monitor”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#serialread-vers-parser">“SerialRead” vers “Parser”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parser-vers-cmd">“parser” vers “cmd”</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#format-de-la-db-jeedom">Format de la DB Jeedom</a><ul>
@@ -95,6 +98,15 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#le-processus-d-inclusion">Le processus d’inclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#la-gestion-des-demons">La gestion des démons</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Vue d’ensemble</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ordre-de-lancement">Ordre de lancement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lancements-concurrents">Lancements concurrents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#format-d-equipement-json">Format d’équipement (JSON)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#format-de-commande-json">Format de commande (JSON)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#variables-de-personalisation">Variables de personalisation</a></li>
 </ul>
 </li>
 </ul>
@@ -164,7 +176,9 @@ Les fichiers de type AJAX doivent se finir par « .ajax.php ».</p></li>
 Les fichiers de class php doivent obligatoirement se finir par « .class.php ».</p></li>
 <li><p><strong>config</strong> : Fichiers de configuration du plugin.</p>
 <ul>
-<li><p>A DETAILLER</p></li>
+<li><p>Abeille.config.php: Constantes principales du plugin.</p></li>
+<li><p><strong>devices</strong>: Fichiers JSON des équipements supportés</p></li>
+<li><p><strong>commands</strong>: Fichiers JSON des commandes</p></li>
 </ul>
 </li>
 <li><p><strong>php</strong> : dossier pouvant contenir des fonctions ne devant pas forcément appartenir à une classe (souvent utilisé pour permettre l’inclusion de multiples classes ou fichiers de configuration en une fois)
@@ -367,6 +381,48 @@ Les démons n’étant rien d’autre que des codes ou classes, je suggère de c
 <p>);</p>
 </div></blockquote>
 </div>
+<div class="section" id="serialread-vers-parser">
+<h3>“SerialRead” vers “Parser”<a class="headerlink" href="#serialread-vers-parser" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><dl>
+<dt>$msg = array(</dt><dd><p>“src” = string, “serialread”,
+“type” =&gt; string, “zigatemessage” or “status”,</p>
+<blockquote>
+<div><p>“zigatemessage”: There is a zigate message attached in “msg”
+“status”: There is “status” attached</p>
+</div></blockquote>
+<p>“net” =&gt; string, corresponding network (ex: “Abeille1”)
+“msg” =&gt; string, message from zigate (extracted from frame &amp; transcoded)
+“status” =&gt; “ready”, “notready”</p>
+</dd>
+</dl>
+<p>);</p>
+</div></blockquote>
+</div>
+<div class="section" id="parser-vers-cmd">
+<h3>“parser” vers “cmd”<a class="headerlink" href="#parser-vers-cmd" title="Lien permanent vers ce titre">¶</a></h3>
+<p>PAS ENCORE IMPLEMENTE !!
+Juste à l’état de reflexion.</p>
+<dl>
+<dt>examples d’application:</dt><dd><p>$this-&gt;msgToCmd(« TempoCmd ».$dest. »/Ruche/ActiveEndPoint&amp;time= ».(time()+($i*2)), « address= ».$Addr );
+$this-&gt;msgToCmd(« Cmd ».$dest. »/Ruche/PDM », « req=E_SL_MSG_PDM_HOST_AVAILABLE_RESPONSE »);
+$this-&gt;msgToCmd(« Cmd ».$dest. »/Ruche/getManufacturerName », « address= ».$SrcAddr.”&amp;destinationEndPoint=”.$EP );
+$this-&gt;msgToCmd(“CmdAbeille1/”.$SrcAddr.”/IEEE_Address_request”, “shortAddress=”.$SrcAddr);</p>
+<dl class="simple">
+<dt>$msg = array(</dt><dd><p>“src” = string, “parser”,
+“type” =&gt; string, “cmd”/”delayed_cmd”
+“net” =&gt; string, corresponding network (ex: “Abeille1”)
+“addr” =&gt; hex string, equipement short address
+“ep” =&gt; ?, End Point
+“cmd” =&gt; string, command name (logical Id, part of those supported by target EQ itself)
+“payload” =&gt; string, payload/data
+“time” =&gt; ?, time for “delayed_cmd”</p>
+</dd>
+</dl>
+<p>);</p>
+</dd>
+</dl>
+</div>
 </div>
 <div class="section" id="format-de-la-db-jeedom">
 <h2>Format de la DB Jeedom<a class="headerlink" href="#format-de-la-db-jeedom" title="Lien permanent vers ce titre">¶</a></h2>
@@ -527,6 +583,187 @@ Passage à la configuration du device (si besoin).</p>
 <li><p>Le nouvel EQ est prêt à être utilisé.</p></li>
 </ul>
 </div>
+<div class="section" id="la-gestion-des-demons">
+<h2>La gestion des démons<a class="headerlink" href="#la-gestion-des-demons" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="id1">
+<h3>Vue d’ensemble<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Abeille est basé sur le fonctionnement de plusieurs démons s’executant en parallèle:
+- AbeilleCmd en emission, pour envoyer les ordres vers la zigate
+- AbeilleSocat en reception, pour faire le lien entre une zigate wifi et AbeilleSerialRead
+- AbeilleSerialRead en reception, pour lire les message de la zigate
+- AbeilleParser pour decoder les messages recus via AbeilleSerialRead</p>
+</div>
+<div class="section" id="ordre-de-lancement">
+<h3>Ordre de lancement<a class="headerlink" href="#ordre-de-lancement" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Ce point est clef.</p>
+<p>En effet si AbeilleCmd est lancé en premier et qu’il envoie deja des ordres à la zigate avant meme que le chemin de retour ne soit fonctionnel (AbeilleSocat&gt;AbeilleSerialRead) on risque de manquer des informations.
+Ce pb à été vu par exemple dans le cas suivant
+- AbeilleParser ignore les messages si l’adresse IEEE de la zigate ne correspondant pas à ce qui est attendu (possible dans le cas ou les ports different d’un boot à l’autre)
+- Manque de pot AbeilleCmd avait demandé l’adresse IEEE avant que SerialRead puisse recuperer l’information.
+- Du coup plus aucun message de retour n’etait accepté</p>
+<p>Pour résoudre ce problème les démons sont lancés, puis les premiers messages sont envoyés vers AbeilleCmd.
+Cela inclut le message 0009 (Get Network State) qui récupère l’adresse IEEE de la zigate.
+Les premiers messages ne sont donc plus lancés par « deamon_start() » mais fait au départ du démon principal (deamon()).</p>
+</div>
+<div class="section" id="lancements-concurrents">
+<h3>Lancements concurrents<a class="headerlink" href="#lancements-concurrents" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Au départ le redémarrage des démons (nécessaire si crash) était déclenché par deamon_info().
+Manque de pot cette fonction appelée par Jeedom est complètement asynchrone et peut même être appelée plusieurs fois par seconde.
+Ca entrainait (si crash d’un démon), de multiples redémarrages concurrents du même démon.
+Même si ce dernier vérifie qu’il est le seul, il s’ensuit qu’il s’arretait car voyait un autre démon identique, puis le process le relancait à nouveau. Ca finisait par « tomber en marche » mais inefficace, perte de temps, et surtout perte de données au passage.</p>
+<p>Suite à ça, les démons sont vérifiés une fois par min via le « cron 1 min ».
+Si démon manquand il est relancé. Du coup 1 seule source de (re)lancement et pas de lancement concurrent.</p>
+</div>
+</div>
+<div class="section" id="format-d-equipement-json">
+<h2>Format d’équipement (JSON)<a class="headerlink" href="#format-d-equipement-json" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les équipements supportés sont décrits dans des fichiers au format JSON, décrit ci-après.</p>
+<p>Exemple:</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>« BASICZBR3 »: {</dt><dd><p>« nameJeedom »: « Sonoff BASICZBR3 smart switch »,
+« manufacturer »: « Sonoff »,
+« model »: « BASICZBR3 »,
+« timeout »: « 60 »,
+« Categorie »: {</p>
+<blockquote>
+<div><p>« automatism »: « 1 »</p>
+</div></blockquote>
+<p>},
+« configuration »: {</p>
+<blockquote>
+<div><p>« uniqId »: « 5c07c7dsdssdd6625d94 »,
+« icone »: « BASICZBR3 »,
+« mainEP »: « #EP# »</p>
+</div></blockquote>
+<p>},
+« Commandes »: {</p>
+<blockquote>
+<div><p>« include1 »: « SW »,
+« include2 »: « societe »,
+« include3 »: « nom »,
+« include4 »: « etat »,
+« include5 »: « On »,
+« include6 »: « Off »,
+« include7 »: « Toggle »,
+« include8 »: « getEtat »,
+« include9 »: « getManufacturerName »,
+« include10 »: « getModelIdentifier »,
+« include13 2 »: « Group-Membership »</p>
+</div></blockquote>
+<p>}</p>
+</dd>
+</dl>
+<p>}</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<ul>
+<li><p>« nameJeedom »</p></li>
+<li><p>« manufacturer »</p>
+<blockquote>
+<div><p>Nom du fabricant.
+Exemple: « Sonoff »</p>
+</div></blockquote>
+</li>
+<li><p>« model »</p>
+<blockquote>
+<div><p>Modèle ou référence exacte du fabricant.
+Exemple: « BASICZBR3 »</p>
+</div></blockquote>
+</li>
+<li><p>« timeout »</p>
+<p>Note: Ce paramètre permet d’initialiser le champ « timeout » de la table Jeedom « eqLogic ».</p>
+</li>
+<li><p>« Comment »</p></li>
+<li><p>« comment »</p>
+<blockquote>
+<div><p>Permet d’ajouter un commentaire pour cet équipement.</p>
+</div></blockquote>
+</li>
+<li><p>« Categorie »:{« automatism »: »1 »}</p>
+<p>Liste les categories (plusieurs possibles) correspondant à l’équipement.
+Note: Ce paramètre permet d’initialiser le champ « category » de la table Jeedom « eqLogic ».</p>
+<ul class="simple">
+<li><p>light</p></li>
+<li><p>heating</p></li>
+<li><p>security</p></li>
+<li><p>energy</p></li>
+<li><p>automatism</p></li>
+<li><p>multimedia</p></li>
+<li><p>default</p></li>
+</ul>
+</li>
+<li><p>« configuration »</p>
+<p>Note: Ce paramètre permet d’initialiser le champ « configuration » de la table Jeedom « eqLogic ».</p>
+<ul>
+<li><p>« uniqId »</p></li>
+<li><p>« icone »</p>
+<p>Nom de l’icone associé.</p>
+</li>
+<li><p>« mainEP »</p></li>
+<li><p>« paramBatterie »</p></li>
+<li><p>« paramType »</p></li>
+</ul>
+</li>
+<li><p>« Commandes »:{« include1 »: »cmde1 », « include2 »: »cmd2 », … « includeX »: »cmdX »}</p>
+<p>Liste des commandes supportées. Chaque include correspond à une commande de base existante dans “config/devices/templates”
+- « include1 »: »cmd1 »
+- …
+- « includeX »: »cmdX »</p>
+</li>
+</ul>
+</div>
+<div class="section" id="format-de-commande-json">
+<h2>Format de commande (JSON)<a class="headerlink" href="#format-de-commande-json" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Exemple</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>« BindShortToZigateBatterie »: {</dt><dd><p>« isVisible »: 0,
+« name »: « BindShortToZigateBatterie »,
+« order »: 13,
+« isHistorized »: « 0 »,
+« Type »: « action »,
+« subType »: « other »,
+« invertBinary »: « 0 »,
+« template »: «  »,
+« configuration »: {</p>
+<blockquote>
+<div><p>« uniqId »: « 5c07c76621802 »,
+« topic »: « bindShort »,
+« request »: « targetExtendedAddress=#addrIEEE#&amp;targetEndpoint=#EP#&amp;ClusterId=0001&amp;reportToAddress=#ZiGateIEEE# »,
+« visibilityCategory »: « Network »,
+« execAtCreation »: « Yes »,
+« execAtCreationDelay »: « 9 »</p>
+</div></blockquote>
+<p>},
+« display »: {</p>
+<blockquote>
+<div><p>« forceReturnLineAfter »: « 1 »</p>
+</div></blockquote>
+<p>}</p>
+</dd>
+</dl>
+<p>}</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+</div>
+<div class="section" id="variables-de-personalisation">
+<h2>Variables de personalisation<a class="headerlink" href="#variables-de-personalisation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>De manière à pouvoir utiliser des commandes génériques, un certain nombre de variables permettent de personaliser la commande lors de son utilisation par l’équipement.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>#addrIEEE#: Adresse IEEE de l’équipement</p></li>
+<li><p>#ZiGateIEEE#: Adresse IEEE de la zigate</p></li>
+<li><p>#EP#: End Point</p></li>
+</ul>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -541,7 +778,7 @@ Passage à la configuration du device (si besoin).</p>
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

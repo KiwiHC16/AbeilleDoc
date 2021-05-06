@@ -119,3 +119,39 @@ De manière à pouvoir utiliser des commandes génériques, un certain nombre de
  - #addrIEEE#: Adresse IEEE de l'équipement
  - #ZiGateIEEE#: Adresse IEEE de la zigate
  - #EP#: End Point
+
+Nouveau format d'équipement (JSON)
+----------------------------------
+
+EN COURS DE FINALISATION !!
+
+Exemple:
+
+  {
+    "BASICZBR3": {
+      "name": "Sonoff BASICZBR3 smart switch",
+      "manufacturer": "Sonoff",
+      "model": "BASICZBR3",
+      "timeout": "60",
+      "category": {
+        "automatism": "1"
+      },
+      "icon": "BASICZBR3",
+      "batteryType": "1x3V CR2032",  # Battery powered EQ
+      "batteryVolt": "3", # Battery powered EQ
+      "commands": {
+        "include1": "SW",
+        "manufacturer": { "use": "societe" },
+        "modelIdentifier": { "use": "nom" },
+        "getEtatEp05": { "use": "etat", "ep": 5 },
+        "include5": "On",
+        "include6": "Off",
+        "include7": "Toggle",
+        "include8": "getEtat",
+        "include9": "getManufacturerName",
+        "include10": "getModelIdentifier",
+        "bindHumidity": { "use": "BindToZigateHumidity", "ep": 2, "execAtCreation": "yes" },
+        "setReportHumidity": { "use": "setReportHumidity", "ep": 2, "execAtCreation": "yes" }
+      }
+    }
+  }

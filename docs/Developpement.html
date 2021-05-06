@@ -6,13 +6,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Developpement &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
@@ -107,6 +106,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#format-d-equipement-json">Format d’équipement (JSON)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#format-de-commande-json">Format de commande (JSON)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#variables-de-personalisation">Variables de personalisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nouveau-format-d-equipement-json">Nouveau format d’équipement (JSON)</a></li>
 </ul>
 </li>
 </ul>
@@ -764,6 +764,49 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
 </ul>
 </div></blockquote>
 </div>
+<div class="section" id="nouveau-format-d-equipement-json">
+<h2>Nouveau format d’équipement (JSON)<a class="headerlink" href="#nouveau-format-d-equipement-json" title="Lien permanent vers ce titre">¶</a></h2>
+<p>EN COURS DE FINALISATION !!</p>
+<p>Exemple:</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>« BASICZBR3 »: {</dt><dd><p>« name »: « Sonoff BASICZBR3 smart switch »,
+« manufacturer »: « Sonoff »,
+« model »: « BASICZBR3 »,
+« timeout »: « 60 »,
+« category »: {</p>
+<blockquote>
+<div><p>« automatism »: « 1 »</p>
+</div></blockquote>
+<p>},
+« icon »: « BASICZBR3 »,
+« batteryType »: « 1x3V CR2032 »,  # Battery powered EQ
+« batteryVolt »: « 3 », # Battery powered EQ
+« commands »: {</p>
+<blockquote>
+<div><p>« include1 »: « SW »,
+« manufacturer »: { « use »: « societe » },
+« modelIdentifier »: { « use »: « nom » },
+« getEtatEp05 »: { « use »: « etat », « ep »: 5 },
+« include5 »: « On »,
+« include6 »: « Off »,
+« include7 »: « Toggle »,
+« include8 »: « getEtat »,
+« include9 »: « getManufacturerName »,
+« include10 »: « getModelIdentifier »,
+« bindHumidity »: { « use »: « BindToZigateHumidity », « ep »: 2, « execAtCreation »: « yes » },
+« setReportHumidity »: { « use »: « setReportHumidity », « ep »: 2, « execAtCreation »: « yes » }</p>
+</div></blockquote>
+<p>}</p>
+</dd>
+</dl>
+<p>}</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -778,7 +821,7 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

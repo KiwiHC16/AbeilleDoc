@@ -6,12 +6,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Developpement &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
@@ -169,7 +170,7 @@
 <ul>
 <li><p><strong>core</strong> : Dossier contenant tous les fichiers de fonctionnement interne.
 Ne contient pas de fichiers gérant la partie « User Interface » donc pas d’html.</p>
-<ul class="simple">
+<ul>
 <li><p><strong>ajax</strong> : dossier contenant les fichiers cibles d’appels AJAX.
 Les fichiers de type AJAX doivent se finir par « .ajax.php ».</p></li>
 <li><p><strong>class</strong> : dossier contenant la classe du plugin.
@@ -178,6 +179,9 @@ Les fichiers de class php doivent obligatoirement se finir par « .class.php �
 <ul>
 <li><p>Abeille.config.php: Constantes principales du plugin.</p></li>
 <li><p><strong>devices</strong>: Fichiers JSON des équipements supportés</p></li>
+<li><p><strong>devices_local</strong>: Fichiers JSON des équipements NON supportés</p>
+<p>Il s’agit des équipements « custom » ou en cours de developpement. Ces fichiers sont locaux et ne sont pas effacés par Abeille.</p>
+</li>
 <li><p><strong>commands</strong>: Fichiers JSON des commandes</p></li>
 </ul>
 </li>
@@ -767,6 +771,39 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
 <div class="section" id="nouveau-format-d-equipement-json">
 <h2>Nouveau format d’équipement (JSON)<a class="headerlink" href="#nouveau-format-d-equipement-json" title="Lien permanent vers ce titre">¶</a></h2>
 <p>EN COURS DE FINALISATION !!</p>
+<p>Par rapport au format original, en dehors de la normalisation des clefs (anglais, minuscule puis majuscule), les changements sont les suivants:
+- Ajout des champs « manufacturer » et « model » pour définir le fabricant et la ref commerciale
+- Suppression de la section « configuration ». Tout passe au premier niveau
+- Suppression de « uniqid »
+- « Categorie » =&gt; « category »
+- « Commandes » =&gt; « commands » + nouvelle structure
+- « battery_type » =&gt; « batteryType »
+- Ajout de « batteryVolt »
+- « icone » =&gt; « icon »</p>
+<p>Le format de la section « commands » est le suivant</p>
+<ul>
+<li><p>« batteryType » permet de décrire le type de batterie et de preciser qu’il s’agit d’un equipement sur batterie</p></li>
+<li><p>« batteryVolt » permet de definir la tension max de la batterie (pour calcul pourcentage quand la remontée % n’est pas dispo)</p></li>
+<li><p>« commands » permet de lister toutes les commandes associées à l’equipement</p>
+<blockquote>
+<div><dl class="simple">
+<dt>« commands »: {</dt><dd><p>« &lt;premiere cmde Jeedom&gt; »: { « use »: « &lt;cmde de base&gt; », « ep »: &lt;ep&gt; },
+« &lt;deuxieme cmde Jeedom&gt; »: { « use »: « &lt;cmde de base&gt; », « ep »: &lt;ep&gt; },
+…
+« &lt;derniere cmde Jeedom&gt; »: { « use »: « &lt;cmde de base&gt; », « ep »: &lt;ep&gt;, « execAtCreation »: « yes » },</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+</li>
+</ul>
+<p>Notes pour les commandes
+- Les commande de base sont celles définies dans « core/config/commands »
+- « ep » permet de préciser le EP (End Point). Il n’est obligatoire que si different de 1.
+- « execAtCreation » permet de préciser que cette commande doit etre executée pendant l’inclusion pour configurer l’equipement.</p>
+<blockquote>
+<div><p>Par défaut la commande n’est pas exécutée.</p>
+</div></blockquote>
 <p>Exemple:</p>
 <blockquote>
 <div><dl>
@@ -781,20 +818,13 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
 </div></blockquote>
 <p>},
 « icon »: « BASICZBR3 »,
-« batteryType »: « 1x3V CR2032 »,  # Battery powered EQ
-« batteryVolt »: « 3 », # Battery powered EQ
+« batteryType »: « 1x3V CR2032 »,
+« batteryVolt »: « 3 »,
 « commands »: {</p>
 <blockquote>
-<div><p>« include1 »: « SW »,
-« manufacturer »: { « use »: « societe » },
+<div><p>« manufacturer »: { « use »: « societe » },
 « modelIdentifier »: { « use »: « nom » },
 « getEtatEp05 »: { « use »: « etat », « ep »: 5 },
-« include5 »: « On »,
-« include6 »: « Off »,
-« include7 »: « Toggle »,
-« include8 »: « getEtat »,
-« include9 »: « getManufacturerName »,
-« include10 »: « getModelIdentifier »,
 « bindHumidity »: { « use »: « BindToZigateHumidity », « ep »: 2, « execAtCreation »: « yes » },
 « setReportHumidity »: { « use »: « setReportHumidity », « ep »: 2, « execAtCreation »: « yes » }</p>
 </div></blockquote>
@@ -821,7 +851,7 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

@@ -125,6 +125,35 @@ Nouveau format d'équipement (JSON)
 
 EN COURS DE FINALISATION !!
 
+Par rapport au format original, en dehors de la normalisation des clefs (anglais, minuscule puis majuscule), les changements sont les suivants:
+- Ajout des champs "manufacturer" et "model" pour définir le fabricant et la ref commerciale
+- Suppression de la section "configuration". Tout passe au premier niveau
+- Suppression de "uniqid"
+- "Categorie" => "category"
+- "Commandes" => "commands" + nouvelle structure
+- "battery_type" => "batteryType"
+- Ajout de "batteryVolt"
+- "icone" => "icon"
+
+Le format de la section "commands" est le suivant
+
+- "batteryType" permet de décrire le type de batterie et de preciser qu'il s'agit d'un equipement sur batterie
+- "batteryVolt" permet de definir la tension max de la batterie (pour calcul pourcentage quand la remontée % n'est pas dispo)
+- "commands" permet de lister toutes les commandes associées à l'equipement
+
+    "commands": {
+        "<premiere cmde Jeedom>": { "use": "<cmde de base>", "ep": <ep> },
+        "<deuxieme cmde Jeedom>": { "use": "<cmde de base>", "ep": <ep> },
+        ...
+        "<derniere cmde Jeedom>": { "use": "<cmde de base>", "ep": <ep>, "execAtCreation": "yes" },
+    }
+
+Notes pour les commandes
+- Les commande de base sont celles définies dans "core/config/commands"
+- "ep" permet de préciser le EP (End Point). Il n'est obligatoire que si different de 1.
+- "execAtCreation" permet de préciser que cette commande doit etre executée pendant l'inclusion pour configurer l'equipement.
+  Par défaut la commande n'est pas exécutée.
+
 Exemple:
 
   {
@@ -137,19 +166,12 @@ Exemple:
         "automatism": "1"
       },
       "icon": "BASICZBR3",
-      "batteryType": "1x3V CR2032",  # Battery powered EQ
-      "batteryVolt": "3", # Battery powered EQ
+      "batteryType": "1x3V CR2032",
+      "batteryVolt": "3",
       "commands": {
-        "include1": "SW",
         "manufacturer": { "use": "societe" },
         "modelIdentifier": { "use": "nom" },
         "getEtatEp05": { "use": "etat", "ep": 5 },
-        "include5": "On",
-        "include6": "Off",
-        "include7": "Toggle",
-        "include8": "getEtat",
-        "include9": "getManufacturerName",
-        "include10": "getModelIdentifier",
         "bindHumidity": { "use": "BindToZigateHumidity", "ep": 2, "execAtCreation": "yes" },
         "setReportHumidity": { "use": "setReportHumidity", "ep": 2, "execAtCreation": "yes" }
       }

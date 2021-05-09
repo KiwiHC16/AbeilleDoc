@@ -125,14 +125,18 @@ Nouveau format d'équipement (JSON)
 
 EN COURS DE FINALISATION !!
 
-Par rapport au format original, en dehors de la normalisation des clefs (anglais, minuscule puis majuscule), les changements sont les suivants:
-- Ajout des champs "manufacturer" et "model" pour définir le fabricant et la ref commerciale
-- Suppression de la section "configuration". Tout passe au premier niveau
-- Suppression de "uniqid"
+Note: Ce format reste compatible avec le format d'origine (legacy) des commandes.
+
+Par rapport au format original, et en dehors de la normalisation des clefs (anglais, minuscule puis majuscule), les changements sont les suivants:
+
+- "manufacturer": Nouveau champ pour le nom du fabricant/vendeur
+- "model": Nouveau champ pour la ref commerciale
+- "configuration": Section supprimée. Tout passe au premier niveau
+- "uniqid": Supprimé.
 - "Categorie" => "category"
 - "Commandes" => "commands" + nouvelle structure
 - "battery_type" => "batteryType"
-- Ajout de "batteryVolt"
+- "batteryVolt": Nouvelle clef
 - "icone" => "icon"
 
 Le format de la section "commands" est le suivant
@@ -140,10 +144,16 @@ Le format de la section "commands" est le suivant
 - "batteryType" permet de décrire le type de batterie et de preciser qu'il s'agit d'un equipement sur batterie
 - "batteryVolt" permet de definir la tension max de la batterie (pour calcul pourcentage quand la remontée % n'est pas dispo)
 - "commands" permet de lister toutes les commandes associées à l'equipement
+- "isVisible": "yes"/"no"
+
+  Permet de rendre la commande visible (cachée par défaut)
+- "isHistorized": "yes"/"no"
+
+  Permet d'historiser les valeurs de cette commande. Ne fait du sens que pour une commande "info".
 
     "commands": {
         "<premiere cmde Jeedom>": { "use": "<cmde de base>", "ep": <ep> },
-        "<deuxieme cmde Jeedom>": { "use": "<cmde de base>", "ep": <ep> },
+        "<deuxieme cmde Jeedom>": { "use": "<cmde de base>", "ep": <ep>, "isVisible": "yes", "isHistorized": "yes" },
         ...
         "<derniere cmde Jeedom>": { "use": "<cmde de base>", "ep": <ep>, "execAtCreation": "yes" },
     }
@@ -170,10 +180,62 @@ Exemple:
       "batteryVolt": "3",
       "commands": {
         "manufacturer": { "use": "societe" },
-        "modelIdentifier": { "use": "nom" },
+        "modelIdentifier": { "use": "nom", "isVisible": "yes" },
         "getEtatEp05": { "use": "etat", "ep": 5 },
         "bindHumidity": { "use": "BindToZigateHumidity", "ep": 2, "execAtCreation": "yes" },
         "setReportHumidity": { "use": "setReportHumidity", "ep": 2, "execAtCreation": "yes" }
       }
     }
   }
+
+Normalisation des commandes de base zigbee
+------------------------------------------
+
+EN COURS DE REFLEXION/DEVELOPPEMENT !!
+POINT OUVERT: parmis les cluster il se peut qu'un nom d'attribut soit utilisé plusieurs fois.
+    Comment differencier l'attribut du cluster X de celui du cluster Y avec le meme nom ?
+
+Les commandes de base sont les commandes internes à Abeille.
+Parmi elles, il y a les commandes zigbee directement issues du standard et normalisées ci-apres:
+
+- attribut R => zbGet-<AttribName> (ex: zgGet-ModelIdentifier)
+- attribut value => zb-<AttribName> (ex: zb-ModelIdentifier)
+- attribut W => zbSet-<AttribName>
+- command => zbCmd-<CmdName> (ex: zbCmd-Identify)
+
+Nouveau format de commande (JSON)
+---------------------------------
+
+EN COURS DE REFLEXION/DEVELOPPEMENT !!
+
+Note: l'evolution des équipements permet toujours d'utiliser les commandes "legacy" (ancien format)
+
+Par rapport au format original, les modifications sont les suivantes:
+
+- "isVisible": Inutilisé. Toute commande est cachée et est rendue visible par l'equipement appelant.
+  ex: "cmdX": { "use": "zbGet-ModelIdentifier", "isVisible": "yes" }
+- "order": inutilisé
+- "isHistorized": inutilisé. Les commandes de base sont par défaut NON historisées. Dans la pratique tres peu le sont au final.
+  A la charge de l'equipement appelant de l'activer si besoin, sinon libre à l'utilisateur une fois dans Jeedom.
+  ex: "cmdX": { "use": "zbGet-Manufacturer", "isHistorized": "yes" }
+- "Type" => "type"
+- "generic_type" => "genericType"
+- "uniqId" => inutilisé
+- "configuration" => supprimé. Elements remontés au top.
+
+Exemple:
+
+    {
+      "0006-0000": {
+        "name": "etat",
+        "type": "info",
+        "subType": "binary",
+        "genericType": "LIGHT_STATE_BOOL",
+        "invertBinary": "0",
+        "template": "light",
+        "configuration": {
+          "repeatEventManagement": "always",
+          "visibilityCategory": "All"
+        }
+      }
+    }

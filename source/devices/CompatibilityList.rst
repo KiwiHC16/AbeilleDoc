@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2021-04-15
+Dernière mise-à-jour le 2021-05-14
 
 Sonoff, SBMINI, Sonoff ZBMINI smart switch
 
@@ -83,7 +83,7 @@ Sonoff, BASICZBR3, Sonoff BASICZBR3 DIY smart switch
 .. image:: images/node_BASICZBR3.png
    :width: 200px
 
-, , BSO ProFalux (brise-soleil orientables)
+Profalux, BSO, Profalux BSO (brise-soleil orientable)
 
 .. image:: images/node_bsoProFalux.png
    :width: 200px
@@ -358,6 +358,11 @@ Sonoff, SNZB-04, Sonoff SNZB-04 Wireless Door/Window Sensor
 .. image:: images/node_LWO001.png
    :width: 200px
 
+Zemismart, ZW-EC-01, Zemismart ZW-EC-01 curtain switch
+
+.. image:: images/node_LXX60-CS27LX1.0.png
+   :width: 200px
+
 , , ZigBee On Off Controller
 
 .. image:: images/node_Lamp_01.png
@@ -413,14 +418,24 @@ Sonoff, SNZB-03, Sonoff SNZB-03 motion sensor
 .. image:: images/node_OsramLightify.png
    :width: 200px
 
-, , Plug Z3 Ledvance
+Ledvance, Plug Z3, Ledvance Plug Z3 on/off plug unit
 
 .. image:: images/node_PlugZ3.png
+   :width: 200px
+
+Innr, RB165, Innr RB165 dimmable white bulb E27
+
+.. image:: images/node_defaultUnknown.png
    :width: 200px
 
 , , Ampoule Innr spectre blanc 2200K-2700K E27
 
 .. image:: images/node_RB175W.png
+   :width: 200px
+
+Innr, RB285C, Innr RB285C RGBW bulb colour E27
+
+.. image:: images/node_RB285C.png
    :width: 200px
 
 , , Télécommande RC110 INNR
@@ -468,7 +483,7 @@ Sonoff, SNZB-03, Sonoff SNZB-03 motion sensor
 .. image:: images/node_SML001.png
    :width: 200px
 
-, , Philips Presence Outdoor
+Philips, 9290019758, Philips Hue motion sensor
 
 .. image:: images/node_SML002.png
    :width: 200px
@@ -498,7 +513,7 @@ Sonoff, SNZB-03, Sonoff SNZB-03 motion sensor
 .. image:: images/node_SmokeSensor-EM.png
    :width: 200px
 
-, , Humein Smoke Sensor
+Heiman, HS1SA, Heiman HS1SA smoke sensor
 
 .. image:: images/node_SmokeSensor-EM.png
    :width: 200px
@@ -533,47 +548,47 @@ Sonoff, SNZB-02, Sonoff SNZB-02 temp & humidity
 .. image:: images/node_TRADFRISHORTCUTButton.png
    :width: 200px
 
-, , IKEA Ampoule TRADFRI bulb E14 Color White Spectre Opal 600lm
+Ikea, , IKEA Ampoule TRADFRI bulb E14 Color White Spectre Opal 600lm
 
 .. image:: images/node_TRADFRIbulbE14CWSopal600lm.png
    :width: 200px
 
-, , TRADFRI bulb E14 White Spectre 470lm
+Ikea, , TRADFRI bulb E14 White Spectre 470lm
 
 .. image:: images/node_TRADFRIbulbE14WS470lm.png
    :width: 200px
 
-, , TRADFRI bulb E14 White Spectre opal 400lm
+Ikea, , TRADFRI bulb E14 White Spectre opal 400lm
 
 .. image:: images/node_IkeaTradfriBulbE14WSOpal400lm.png
    :width: 200px
 
-, , TRADFRI bulb E14 White Spectre opal 600lm
+Ikea, , TRADFRI bulb E14 White Spectre opal 600lm
 
 .. image:: images/node_TRADFRIbulbE14WSopal600lm.png
    :width: 200px
 
-, , TRADFRI bulb E14 W op ch 400lm
+Ikea, , TRADFRI bulb E14 W op ch 400lm
 
 .. image:: images/node_TRADFRIbulbE14Wopch400lm.png
    :width: 200px
 
-, , TRADFRI bulb E26 WS clear 950lm
+Ikea, , TRADFRI bulb E26 WS clear 950lm
 
 .. image:: images/node_TRADFRIbulbE26WSclear950lm.png
    :width: 200px
 
-, , IKEA Ampoule TRADFRI bulb E27 Color White Spectre Opal 600lm
+Ikea, , IKEA Ampoule TRADFRI bulb E27 Color White Spectre Opal 600lm
 
 .. image:: images/node_TRADFRIbulbE27CWSopal600lm.png
    :width: 200px
 
-, , TRADFRI bulb E27 WS clear 806lm
+Ikea, , TRADFRI bulb E27 WS clear 806lm
 
 .. image:: images/node_TRADFRIbulbE27WSclear806lm.png
    :width: 200px
 
-, , TRADFRI bulb E27 WS clear 950lm
+Ikea, , TRADFRI bulb E27 WS clear 950lm
 
 .. image:: images/node_TRADFRIbulbE27WSclear950lm.png
    :width: 200px
@@ -583,7 +598,7 @@ Sonoff, SNZB-02, Sonoff SNZB-02 temp & humidity
 .. image:: images/node_TRADFRIbulbE27WSopal1000lm.png
    :width: 200px
 
-, , IKEA Ampoule TRADFRI bulb E27 White Spectre opal 980 lm
+Ikea, , IKEA Ampoule TRADFRI bulb E27 White Spectre opal 980 lm
 
 .. image:: images/node_IkeaTRADFRIbulbE27WSopal980lm.png
    :width: 200px
@@ -598,17 +613,17 @@ Sonoff, SNZB-02, Sonoff SNZB-02 temp & humidity
 .. image:: images/node_TRADFRIbulbE27WWclear250lm.png
    :width: 200px
 
-, , IKEA Ampoule TRADFRI bulb E27 opal 1000lm
+Ikea, , IKEA Ampoule TRADFRI bulb E27 opal 1000lm
 
 .. image:: images/node_IkeaTradfriBulbE27Opal1000lm.png
    :width: 200px
 
-, , IKEA Ampoule TRADFRI bulb E27 opal 1000lm2
+Ikea, , IKEA Ampoule TRADFRI bulb E27 opal 1000lm2
 
 .. image:: images/node_IkeaTradfriBulbE27WOpal1000lm2.png
    :width: 200px
 
-, , IKEA Ampoule TRADFRI bulb E27 opal 1000lm
+Ikea, , IKEA Ampoule TRADFRI bulb E27 opal 1000lm
 
 .. image:: images/node_IkeaTradfriBulbE27Opal1000lm.png
    :width: 200px
@@ -678,6 +693,11 @@ Sonoff, SNZB-02, Sonoff SNZB-02 temp & humidity
 .. image:: images/node_TS0001.png
    :width: 200px
 
+Girier, JR-ZDS01, Girier DIY Smart Switch
+
+.. image:: images/node_JR-ZDS01.png
+   :width: 200px
+
 , , Zemismart 2 boutons
 
 .. image:: images/node_TS0002.png
@@ -743,7 +763,7 @@ Sonoff, SNZB-02, Sonoff SNZB-02 temp & humidity
 .. image:: images/node_TS0121.png
    :width: 200px
 
-, , SILVERCREST Bloc multiprise USB SPSZ 3 A1
+Silvercrest, TS011F, SILVERCREST Bloc multiprise USB SPSZ 3 A1
 
 .. image:: images/node_TS011F__TZ3000_vzopcetz.png
    :width: 200px
@@ -756,6 +776,11 @@ Sonoff, SNZB-02, Sonoff SNZB-02 temp & humidity
 , , Prise Tuya
 
 .. image:: images/node_PriseTuya.png
+   :width: 200px
+
+Girier, JR-ZPM01, Girier ZigBee smart plug EU
+
+.. image:: images/node_JR-ZPM01.png
    :width: 200px
 
 , , Blitzwolf-BW-SHP13
@@ -811,6 +836,11 @@ Sonoff, SNZB-01, Sonoff SNZB-01 wireless button
 , , Alarm Smart Siren M420-2Evert1.2 HS2WD-E
 
 .. image:: images/node_HS2WD.png
+   :width: 200px
+
+eWeLight, smart bulb, Tuya smart light GU10
+
+.. image:: images/node_ZB-CL01.png
    :width: 200px
 
 , , ZB-RGBCW
@@ -968,7 +998,7 @@ Sonoff, SNZB-01, Sonoff SNZB-01 wireless button
 .. image:: images/node_router.png
    :width: 200px
 
-, , Xiaomi Smart Ligth Sensor
+Xiaomi, GZCGQ01LM, Xiaomi GZCGQ01LM smart light sensor
 
 .. image:: images/node_sen_ill_mgl01.png
    :width: 200px
@@ -998,7 +1028,7 @@ Sonoff, SNZB-01, Sonoff SNZB-01 wireless button
 .. image:: images/node_XiaomiTemperatureRond.png
    :width: 200px
 
-, , Xiaomi Door Sensor Aqara 2
+Xiaomi, MCCGQ11LM, Xiaomi Aquara door sensor
 
 .. image:: images/node_XiaomiPorte.png
    :width: 200px
@@ -1038,7 +1068,7 @@ Sonoff, SNZB-01, Sonoff SNZB-01 wireless button
 .. image:: images/node_XiaomiBouton3.png
    :width: 200px
 
-, , Xiaomi Interrupteur simple
+Xiaomi, , Xiaomi Interrupteur simple
 
 .. image:: images/node_XiaomiBouton1.png
    :width: 200px
@@ -1053,7 +1083,7 @@ Sonoff, SNZB-01, Sonoff SNZB-01 wireless button
 .. image:: images/node_siren-pni-s002.png
    :width: 200px
 
-, , Xiaomi Wall Switch D1 w Neutral 2 Button
+Xiaomi, , Xiaomi Wall Switch D1 w Neutral 2 Button
 
 .. image:: images/node_switch_b2nacn02.png
    :width: 200px
@@ -1073,7 +1103,7 @@ Sonoff, SNZB-01, Sonoff SNZB-01 wireless button
 .. image:: images/node_voletProFalux.png
    :width: 200px
 
-, , Xiaomi Temperature Carre
+Xiaomi, WSDCGQ11LM, Xiaomi temp/humdity/pressure square sensor
 
 .. image:: images/node_XiaomiTemperatureCarre.png
    :width: 200px

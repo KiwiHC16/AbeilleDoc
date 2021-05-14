@@ -1,5 +1,5 @@
 Procédures de mise-à-jour
---------------------------
+-------------------------
 
 Ce chapitre n'est pas tiré d'une quelconque doc officielle Jeedom mais issu de recherches via le code Jeedom. Le but est de clarifier la procédure de mise-à-jour utilisée par Jeedom.
 

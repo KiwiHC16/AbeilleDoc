@@ -6,12 +6,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Le processus d’inclusion &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -69,12 +70,14 @@
             
   <div class="section" id="le-processus-d-inclusion">
 <h1>Le processus d’inclusion<a class="headerlink" href="#le-processus-d-inclusion" title="Lien permanent vers ce titre">¶</a></h1>
-<p>La phase d’inclusion d’un nouvel équipement est la plus importante car c’est pendant cette phase qu’Abeille va</p>
+<p>La phase d’inclusion d’un nouvel équipement est très importante. Pendant cette phase Abeille va</p>
 <ul class="simple">
-<li><p>tenter d’identifier le periph</p></li>
-<li><p>et déclarer l’équipement dans Jeedom avec les commandes qu’il supporte</p></li>
+<li><p>tenter d’identifier le periphérique</p></li>
+<li><p>le configurer si nécessaire (bind + config report)</p></li>
+<li><p>puis le déclarer dans Jeedom avec un ensemble de commandes qu’il supporte</p></li>
 </ul>
-<p>La procédure actuelle est la suivante</p>
+<div class="section" id="phase-d-identification">
+<h2>Phase d’identification<a class="headerlink" href="#phase-d-identification" title="Lien permanent vers ce titre">¶</a></h2>
 <ul>
 <li><p>La Zigate est mise en mode inclusion, prête à accepter tout équipement qui se signalera</p></li>
 <li><p>EQ-&gt;Abeille: Un EQ se signale (device announce)</p>
@@ -83,35 +86,64 @@
 </div></blockquote>
 </li>
 <li><p>Abeille-&gt;EQ: Abeille demande la liste des « End Points »</p></li>
-<li><p>Abeille-&gt;EQ: Abeille demande le nom du modèle (attribut « ModelIdentifier ») sur EP1</p></li>
+<li><p>Abeille-&gt;EQ: Abeille demande le nom du modèle &amp; fabricant (attributs « ModelIdentifier » &amp; « Manufacturer ») sur le premier EP</p>
+<blockquote>
+<div><p>Accessoirement l’attribut « location » est aussi demandé. Il peut être utile si « ModelIdentifier » n’est pas supporté.</p>
+</div></blockquote>
+</li>
 <li><p>Si attribut « ModelIdentifier » supporté</p>
-<p>Nom JSON issu de « ModelIdentifier » (suppression des caractéres spéciaux et espaces).
+<blockquote>
+<div><p>Nom JSON issu de « ModelIdentifier » (suppression des caractéres spéciaux et espaces).
 Les modules « DIY » doivent normalement rentrer dans cette categorie. Bonc bien penser à renseigner leur « ModelIdentifier » dans leur firmware.</p>
+</div></blockquote>
 </li>
 <li><p>Si l’attribut « ModelIdentifier » n’est pas supporté</p>
-<p>A ce jour peu de cas rencontrés;</p>
+<blockquote>
+<div><p>A ce jour peu de cas rencontrés;</p>
 <ul class="simple">
 <li><p>Un module DIY de Texas Instrument =&gt; Bug firmware (ModelIdentifier non renseigné).</p></li>
 <li><p>Les volets Profalux =&gt; identifiés par leur attribut « Location ».</p></li>
 </ul>
+</div></blockquote>
 </li>
 <li><p>Si le modèle JSON est connu (fichier JSON trouvé dans core/config/devices) pas d’autre interrogation nécessaire.</p>
-<p>Tout est supposé être décrit dans le fichier de config JSON.
+<blockquote>
+<div><p>Tout est supposé être décrit dans le fichier de config JSON.
 Passage à la configuration du device (si besoin).</p>
+</div></blockquote>
 </li>
 <li><p>Si le modèle JSON est inconnu:</p>
-<ul>
+<blockquote>
+<div><ul>
 <li><p>Demande la liste des « End Point »</p></li>
 <li><p>Pour chaque EP, demande la liste des clusters supportés</p>
 <p>Ces infos ne sont actuellement pas utilisées par Abeille. Par contre leur trace dans les logs permet de faire le modèle JSON.</p>
 </li>
 </ul>
+</div></blockquote>
 </li>
-<li><p>Configuration du device.</p>
-<p>Essentiellement faire un « bind » ou « set report » pour avoir les retours d’état.</p>
-</li>
-<li><p>Le nouvel EQ est prêt à être utilisé.</p></li>
 </ul>
+</div>
+<div class="section" id="phase-de-configuration">
+<h2>Phase de configuration<a class="headerlink" href="#phase-de-configuration" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Si l’équipement est reconnu (modèle JSON trouvé) alors il reste à exécuter les commandes marquées “execAtCreation”.</p>
+<ul class="simple">
+<li><p>Il s’agit en general de “bind” (mise-en-place d’un chemin virtuel)</p></li>
+<li><p>et de configuration “reporting” (demande à l’EQ de faire un rapport tous les X sec au max)</p></li>
+</ul>
+</div>
+<div class="section" id="phase-de-decouverte">
+<h2>Phase de découverte<a class="headerlink" href="#phase-de-decouverte" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Si l’équipement n’a pas été reconnu, on entre alors dans cette phase de découverte.
+Il s’agit la de lister ce qu’il sait faire (liste des “End Points”, liste des clusters, et liste des attributs)</p>
+<p>Actuellement cette étape consiste juste à récuperer</p>
+<ul class="simple">
+<li><p>Les infos de base (IEEE, manufacturer, modelId, location)</p></li>
+<li><p>La liste des « End Points »</p></li>
+<li><p>La liste des clusters supportés pour chaque EP</p></li>
+</ul>
+<p>Le résultat de cette interrogation est disponible dans “AbeilleDiscover.log” (accessible via la page support)</p>
+</div>
 </div>
 
 
@@ -126,7 +158,7 @@ Passage à la configuration du device (si besoin).</p>
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

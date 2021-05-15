@@ -101,3 +101,32 @@ Attention c'est une manipulation dangereuse !
 Le volet devrait faire des mouvement de va-et-vient puis s'arrêter
 * La télécommande devrait à nouveau fonctionner
 * Recommencer à nouveau la procédure d'inclusion
+
+Télécommande
+~~~~~~~~~~~~
+
+Qq notes concernant la telecommande Zigbee.
+
+R + STOP => déclenche l'ouverture du réseau.
+
+    Si la télécommande était dans le réseau Zigate alors cette derniere se met à clignoter.
+
+R + montée => déclenche un "device announce" de la telecommande.
+
+    modelIdentifier => pas supporté
+    manufacturer => pas supporté
+    location => 'TS'
+    8043/Simple descriptor response, SQN=12, Status=00, Addr=D70A, Length=1E, EP=01, ProfId=0104/ZigBee Home Automation (ZHA), DevId=0201/Shade Controller, BitField=00
+    - InClusterCount=03
+    - InCluster=0000 - General: Basic
+    - InCluster=0003 - General: Identify
+    - InCluster=0015 - General: Commissioning
+    - OutClusterCount=08
+    - OutCluster=0003 - General: Identify
+    - OutCluster=0004 - General: Groups
+    - OutCluster=0005 - General: Scenes
+    - OutCluster=0006 - General: On/Off
+    - OutCluster=0008 - General: Level Control
+    - OutCluster=0100 - Closures: Shade Configuration
+    - OutCluster=FC20 - Cluster FC20 inconnu
+    - OutCluster=FC21 - Cluster FC21 inconnu

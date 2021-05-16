@@ -69,7 +69,7 @@
 <li class="toctree-l2"><a class="reference internal" href="PhilipsHue.html">Philips Hue</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Profalux</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#volet">Volet</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#telecommande">Télécommande</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#avance">Avancé</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="SonOff.html">SonOff</a></li>
@@ -162,7 +162,6 @@ Attendre que la télécommande ne clignote plus !</p>
 <p>Faites un rafraichissement de votre dashboard et votre volet devrait apparaitre !!!</p>
 <p><strong>Résolution</strong></p>
 <p>Résolution de problèmes</p>
-<p>Le volet</p>
 <p>Le volet ne répond plus à la télécommande.</p>
 <p>Si par une mauvaise manipulation votre volet ne répond plus à la télécommande, il est nécessaire de faire un reset de la télécommande et du volet.</p>
 <ul class="simple">
@@ -183,21 +182,26 @@ Attendre que la télécommande ne clignote plus !</p>
 </ul>
 <img alt="devices\images/profalux_inclusion_reset_volet3.png" src="devices\images/profalux_inclusion_reset_volet3.png" />
 <ul class="simple">
-<li><p>Remettre l’alimentation électrique et dans la minute appuyer sur le bouton stop</p></li>
+<li><p>Remettre l’alimentation électrique et dans la minute appuyer sur le bouton STOP</p></li>
 </ul>
 <img alt="devices\images/profalux_inclusion_reset_volet4.png" src="devices\images/profalux_inclusion_reset_volet4.png" />
 <p>Le volet devrait faire des mouvement de va-et-vient puis s’arrêter
 * La télécommande devrait à nouveau fonctionner
 * Recommencer à nouveau la procédure d’inclusion</p>
 </div>
-<div class="section" id="telecommande">
-<h2>Télécommande<a class="headerlink" href="#telecommande" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Qq notes concernant la telecommande Zigbee.</p>
+<div class="section" id="avance">
+<h2>Avancé<a class="headerlink" href="#avance" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Concernant le volet</p>
+<blockquote>
+<div><p>Profalux recommande de ne pas utiliser le cluster 0006 mais uniquement 0008 pour controler les volets.
+D’autre part il est possible de faire un « bind » puis « configure report » sur le cluster 0008 attrib 0000 pour avoir un retour de position.</p>
+</div></blockquote>
+<p>Concernant la telecommande Zigbee.</p>
 <p>R + STOP =&gt; déclenche l’ouverture du réseau.</p>
 <blockquote>
 <div><p>Si la télécommande était dans le réseau Zigate alors cette derniere se met à clignoter.</p>
 </div></blockquote>
-<p>R + montée =&gt; déclenche un « device announce » de la telecommande.</p>
+<p>R + MONTEE =&gt; déclenche un « device announce » du volet associé et de la télécommande.</p>
 <blockquote>
 <div><p>modelIdentifier =&gt; pas supporté
 manufacturer =&gt; pas supporté
@@ -216,6 +220,10 @@ location =&gt; “TS”
 - OutCluster=0100 - Closures: Shade Configuration
 - OutCluster=FC20 - Cluster FC20 inconnu
 - OutCluster=FC21 - Cluster FC21 inconnu</p>
+</div></blockquote>
+<p>La télécommande s’annonce sur le réseau mais à priori on ne peut rien en faire du tout.</p>
+<blockquote>
+<div><p>A laisser entrer puis ignoer/masquer.</p>
 </div></blockquote>
 </div>
 </div>

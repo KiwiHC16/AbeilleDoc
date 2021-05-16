@@ -70,8 +70,6 @@ Faites un rafraichissement de votre dashboard et votre volet devrait apparaitre 
 
 Résolution de problèmes
 
-Le volet
-
 Le volet ne répond plus à la télécommande.
 
 Si par une mauvaise manipulation votre volet ne répond plus à la télécommande, il est nécessaire de faire un reset de la télécommande et du volet.
@@ -94,7 +92,7 @@ Attention c'est une manipulation dangereuse !
 
 .. image:: images/profalux_inclusion_reset_volet3.png
 
-* Remettre l'alimentation électrique et dans la minute appuyer sur le bouton stop
+* Remettre l'alimentation électrique et dans la minute appuyer sur le bouton STOP
 
 .. image:: images/profalux_inclusion_reset_volet4.png
 
@@ -102,16 +100,21 @@ Le volet devrait faire des mouvement de va-et-vient puis s'arrêter
 * La télécommande devrait à nouveau fonctionner
 * Recommencer à nouveau la procédure d'inclusion
 
-Télécommande
-~~~~~~~~~~~~
+Avancé
+~~~~~~
 
-Qq notes concernant la telecommande Zigbee.
+Concernant le volet
+
+    Profalux recommande de ne pas utiliser le cluster 0006 mais uniquement 0008 pour controler les volets.
+    D'autre part il est possible de faire un "bind" puis "configure report" sur le cluster 0008 attrib 0000 pour avoir un retour de position.
+
+Concernant la telecommande Zigbee.
 
 R + STOP => déclenche l'ouverture du réseau.
 
     Si la télécommande était dans le réseau Zigate alors cette derniere se met à clignoter.
 
-R + montée => déclenche un "device announce" de la telecommande.
+R + MONTEE => déclenche un "device announce" du volet associé et de la télécommande.
 
     modelIdentifier => pas supporté
     manufacturer => pas supporté
@@ -130,3 +133,8 @@ R + montée => déclenche un "device announce" de la telecommande.
     - OutCluster=0100 - Closures: Shade Configuration
     - OutCluster=FC20 - Cluster FC20 inconnu
     - OutCluster=FC21 - Cluster FC21 inconnu
+
+La télécommande s'annonce sur le réseau mais à priori on ne peut rien en faire du tout.
+
+    A laisser entrer puis ignoer/masquer.
+

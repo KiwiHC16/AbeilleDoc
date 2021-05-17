@@ -38,12 +38,15 @@ La table "cmd" de Jeedom est formatée comme suit:
 - eqLogic_id: ID de l'équipement auquel la commande est rattachée.
 - eqType: "Abeille"
 - logicalId: Nom "logique" de la commande.
-  A REVOIR. Etait redondant avec le champ "topic" de "configuration".
-  Example ? Regle ?
+
+  Prend actuellement la clef d'entrée de la commande mais semble inutilisé & redondant avec "topic".
+  A REVOIR !!
 - order
 - name: Un nom pour la commande.
-  Quel choix entre "name" et "logicalId" ? Meme chose ?
+
+  Nom Jeedom de la commande.
 - configuration: A priori libre d'utilisation par Abeille donc ne contient que des champs spécifiques Abeille.
+
   Correct ?
 - template
 - isHistorized: 0 ou 1

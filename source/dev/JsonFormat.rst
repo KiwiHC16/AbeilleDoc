@@ -111,6 +111,20 @@ Exemple
     }
   }
 
+* Clef d'entrée (BindShortToZigateBatterie)
+
+    Devient "logicalId" de la commande. N'est pas utilisé aujourd'hui.
+
+* "name"
+
+    Nom Jeedom de la commande
+
+* "configuration": "topic"
+
+    Nom Abeille de la commande
+
+A COMPLETER !!
+
 Variables de personalisation
 ----------------------------
 
@@ -192,16 +206,14 @@ Normalisation des commandes de base zigbee
 ------------------------------------------
 
 EN COURS DE REFLEXION/DEVELOPPEMENT !!
-POINT OUVERT: parmis les cluster il se peut qu'un nom d'attribut soit utilisé plusieurs fois.
-    Comment differencier l'attribut du cluster X de celui du cluster Y avec le meme nom ?
 
 Les commandes de base sont les commandes internes à Abeille.
 Parmi elles, il y a les commandes zigbee directement issues du standard et normalisées ci-apres:
 
-- attribut R => zbGet-<AttribName> (ex: zgGet-ModelIdentifier)
-- attribut value => zb-<AttribName> (ex: zb-ModelIdentifier)
-- attribut W => zbSet-<AttribName>
-- command => zbCmd-<CmdName> (ex: zbCmd-Identify)
+- attribut R => zbGet-<ClustId>-<AttribName> (ex: zgGet-0000-ModelIdentifier)
+- attribut value => zb-<ClustId>-<AttribName> (ex: zb-0000-ModelIdentifier)
+- attribut W => zbSet-<ClustId>-<AttribName>
+- command => zbCmd-<ClustId>-<CmdName> (ex: zbCmd-0003-Identify)
 
 Nouveau format de commande (JSON)
 ---------------------------------
@@ -217,11 +229,16 @@ Par rapport au format original, les modifications sont les suivantes:
 - "order": inutilisé
 - "isHistorized": inutilisé. Les commandes de base sont par défaut NON historisées. Dans la pratique tres peu le sont au final.
   A la charge de l'equipement appelant de l'activer si besoin, sinon libre à l'utilisateur une fois dans Jeedom.
-  ex: "cmdX": { "use": "zbGet-Manufacturer", "isHistorized": "yes" }
+  ex: "cmdX": { "use": "zbGet-0000-Manufacturer", "isHistorized": "yes" }
 - "Type" => "type"
 - "generic_type" => "genericType"
 - "uniqId" => inutilisé
 - "configuration" => supprimé. Elements remontés au top.
+- Clef d'entrée = logicalId de la commande = nom de la commande Abeille. Dans ce cadre, "configuration":"topic" disparait.
+- "configuration":"topic" => Plus nécessaire. Redondant avec 'logicalId'.
+- template => ?? 
+- "configuration":"repeatEventManagement" => ??
+- "configuration":"visibilityCategory" => ??
 
 Exemple:
 

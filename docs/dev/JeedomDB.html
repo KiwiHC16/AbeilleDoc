@@ -6,12 +6,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Format de la DB Jeedom &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -103,18 +104,21 @@ Derniere update: 21/avr/21</p>
 <div class="section" id="commandes-table-cmd">
 <h2>Commandes (table cmd)<a class="headerlink" href="#commandes-table-cmd" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La table « cmd » de Jeedom est formatée comme suit:</p>
-<ul class="simple">
+<ul>
 <li><p>id: ID de la commande. Affecté par Jeedom.</p></li>
 <li><p>eqLogic_id: ID de l’équipement auquel la commande est rattachée.</p></li>
 <li><p>eqType: « Abeille »</p></li>
-<li><p>logicalId: Nom « logique » de la commande.
-A REVOIR. Etait redondant avec le champ « topic » de « configuration ».
-Example ? Regle ?</p></li>
+<li><p>logicalId: Nom « logique » de la commande.</p>
+<p>Prend actuellement la clef d’entrée de la commande mais semble inutilisé &amp; redondant avec « topic ».
+A REVOIR !!</p>
+</li>
 <li><p>order</p></li>
-<li><p>name: Un nom pour la commande.
-Quel choix entre « name » et « logicalId » ? Meme chose ?</p></li>
-<li><p>configuration: A priori libre d’utilisation par Abeille donc ne contient que des champs spécifiques Abeille.
-Correct ?</p></li>
+<li><p>name: Un nom pour la commande.</p>
+<p>Nom Jeedom de la commande.</p>
+</li>
+<li><p>configuration: A priori libre d’utilisation par Abeille donc ne contient que des champs spécifiques Abeille.</p>
+<p>Correct ?</p>
+</li>
 <li><p>template</p></li>
 <li><p>isHistorized: 0 ou 1</p></li>
 <li><p>type: « info » ou « action »</p></li>
@@ -141,7 +145,7 @@ Correct ?</p></li>
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

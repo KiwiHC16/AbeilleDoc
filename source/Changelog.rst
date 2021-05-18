@@ -1,32 +1,39 @@
 ChangeLog
 =========
 
-Mise à jour
------------
+210510-STABLE-1
+---------------
 
-11/12/2020: 
- - Prise Xiaomi: fonctions de base dans le master (On/Off/Retour etat). En cours retour de W, Conso, V, A et T°. 
- - LQI collect revisited & enhanced #1526
+- Page compatibilité: revisitée + ajout du tri par colonne
+- Page santé: ajout de l'état des zigate au top
+- Sonoff SNZB-02: support corrigé + support 66666 (ModelIdentifier) (#1911)
+- Xiaomi GZCGQ01LM: ajout support tension batterie + online (#1166)
+- Page EQ/params: ajout de l'identifiant zigbee
+- Correction "#1908: AbeilleCmd: Unknown command"
+- Correction "#1951: pb affichage heure "Derniere comm."
+- Correction blocage du parser dans certains cas de démarrage.
+- Diverses modifications pour améliorer la robustesse et les messages d'erreurs.
+- Monitor (pour developpeur seulement pour l'instant)
+- Gestion des démons: revisitée pour éviter redémarrages concurrents.
+- Correction "#1948: BSO, lift & tilt"
+- JSON: Emplacement des commandes changé de "core/config/devices/Template" vers "core/config/commands"
+- Innr RB285C support preliminaire
 
-10/12/2020: Ajout du modale Template pour afficher des differences entre les Abeilles dans Jeedom et leur Modele.
+11/12/2020
+----------
 
-09/12/2020: Ajout d un chapitre Update dans la page de configuration pour verifier que certaines contraintes sont satisfaites avant de faire la mise a jour.
-
-08/12/20202: Ajout Télécommande 3 boutons Loratap #1406
-
-05/12/2020: Contactor 20AX Legrand : Pilotage sur ses fonctions ON/OFF et autre
-
-04/12/2020: Prise Blitzwolf
-
-03/12/2020: Detecteur de fumée HEIMAN HS1SA-E
-
-02/12/2020: TRADFRIDriver30W IKEA
-
-...
-
+- Prise Xiaomi: fonctions de base dans le master (On/Off/Retour etat). En cours retour de W, Conso, V, A et T°. 
+- LQI collect revisited & enhanced #1526
+- Ajout du modale Template pour afficher des differences entre les Abeilles dans Jeedom et leur Modele.
+- Ajout d un chapitre Update dans la page de configuration pour verifier que certaines contraintes sont satisfaites avant de faire la mise a jour.
+- Ajout Télécommande 3 boutons Loratap #1406
+- Contactor 20AX Legrand : Pilotage sur ses fonctions ON/OFF et autre
+- Prise Blitzwolf
+- Detecteur de fumée HEIMAN HS1SA-E
+- TRADFRIDriver30W IKEA
 
 Beta 24/11/2010
-^^^^^^^^^^^^^^^
+---------------
 
 Surtout faites un backup pour pouvoir revenir en arrière.
 
@@ -40,7 +47,7 @@ Surtout faites un backup pour pouvoir revenir en arrière.
 https://github.com/KiwiHC16/Abeille/commits/beta?after=61b027c84f673f484073d6f0a73ad0bad08fef0d+34&branch=beta
 
 12/2019 => 03/2020
-^^^^^^^^^^^^^^^^^^
+------------------
 
 ::
 
@@ -70,22 +77,22 @@ A noter:
 
 
 06/2019 => 11/2019
-^^^^^^^^^^^^^^^^^^
+------------------
 
 Rien de spécifique à faire. Juste a faire la mise à jour depuis jeedom.
 
 03/2019 => 06/2019
-^^^^^^^^^^^^^^^^^^
+------------------
 
 Rien de spécifique à faire.
 
 02/2019 => 03/2019
-^^^^^^^^^^^^^^^^^^
+------------------
 
 Rien de spécifique à faire. Pour les évolution voir le changelog ci dessous.
 
 01/2019 => 02/2019
-^^^^^^^^^^^^^^^^^^
+------------------
 
 Cette version est en ligne avec le firmware 3.0f de la Zigate
 Vous pouvez utiliser un firmware plus vieux mais tout ne fonctionnera pas. (98% fonctionnera)
@@ -106,7 +113,7 @@ Comment procéder:
     !!!! Ne pas faire ces manipulations sans avoir fait de backup !!!!
 
 11/2018 => 01/2019
-^^^^^^^^^^^^^^^^^^
+------------------
 
 Cette mise à jour est importante et délicate. Pour facilité l'intégration de nouveaux équipements par la suite une standardisation des modèles doit être faite.
 Cela veut dire que tous les modèles changent et que le objets dans Abeille/Jeedom doivent être mis à jour.
@@ -156,7 +163,6 @@ vous allez trouver des messages:
   * Xiaomi Température Carré
   * ...
 
-
 Cas rencontrés:
 
 * plug xiaomi, une commande porte le nom "Manufacturer", doit être remplacé par "societe" et appliquer de nouveau "Apply Template"
@@ -193,7 +199,7 @@ Voir directement dans `GitHub <https://github.com/KiwiHC16/Abeille/commits/maste
 
 
 2019-11-25
-^^^^^^^^^^^^^^^^^^
+----------
 
 Ce dernières semaines le focus a été sur:
 - Compatibilité avec Jeedom V4 et Buster (Debian 10)
@@ -210,86 +216,81 @@ Ce dernières semaines le focus a été sur:
 - Corrections de bugs
 - .....
 
-2019-03-20
-^^^^^^^^^^^^^^^^^^
-
-...
-
 2019-03-19
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Motion Hue Outdoor integration
 * Doc Hue Motion
 * Hue Motion Luminosite
 
 2019-03-18
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Plus de doc sur la radio
 * Modification modele sur EP
 
 2019-03-17
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Resolution sur un systeme en espagnole
 
-
 2019-03-16
-^^^^^^^^^^^^^^^^^^
+----------
+
 * start to track APS failures
 * dependancy_info debut des modifications
 
 2019-03-15
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Moved all doc to asciidoc format
 * Few correction around modele folder
 
 2019-03-11
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Ajout capteur IR Motion Hue Indoor
 
 2019-03-01
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Inclusion de la PiZiGate
 * Possibilité de programmer le PiZiGate
 
 2019-02-27
-^^^^^^^^^^^^^^^^^^
+----------
 
 * OSRAM SMART+ Outdoor Flex Multicolor
 * Eurotronic Spirit
 
 2019-02-15
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Correction probleme volet profalux
 
 
 2019-02-14
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Amelioration de la doc
 * Inclusion dans appli web mobile
 
 2019-02-11
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Amelioration de la doc.
 * Reduction log sur annonce
 * Prise Xiaomi Encastrée
 
 2019-02-07
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Mise en place de la cagnotte
 * Correction de l affichage des icones sur filtre
 * Amélioration retour Tele Ikea
 
 2019-02-06
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Récupération des groupes dans la Zigate
 * Configuration du groupe de la remote ikea On/off depuis abeille
@@ -303,7 +304,7 @@ Ce dernières semaines le focus a été sur:
 * Led On/Off
 
 2019-02-04
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Get Group Membership response modification avec source address for 3.0.f
 * Fix Sur mise a jour des templates il manque la mise a jour des icônes
@@ -321,9 +322,8 @@ Ce dernières semaines le focus a été sur:
 * ClassiA60WClear second modèle added
 * setTimeServer / getTimeServer
 
-
 2019-01-25
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Ajout commande scene
 * Deux petites vidéos pour les docs
@@ -334,9 +334,8 @@ Ce dernières semaines le focus a été sur:
 * GLEDOPTO Controller RGB+CCT
 * Ajout de gestion du time server (cluster)
 
-
 2019-01-15
-^^^^^^^^^^^^^^^^^^
+----------
 
 * retrait de pause pour avoir un plugin plus réactif
 * LCT001 modèle ajouté
@@ -348,31 +347,27 @@ Ce dernières semaines le focus a été sur:
 * LCT015 Bulb Added
 * Add Address IEEE in health table
 
-
 2018-12-15
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Graph LQI par distance
 * télécommande carré Ikea On/Off
 * fix température carré xiaomi
 * Télécommande Hue retour Boutons vers Abeille (scénario)
 
-
 2018-12-11
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Toute la doc sous le format Jeedom
 
-
 2018-12-10
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Ampoule Couleur Standard ZigBee
 * Ampoule Dimmable Standard ZigBee
 
-
 2018-12-09
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Ampoule Spectre Blanc Standard ZigBee
 * Blanche Ampoule GLEDOPTO GU10 Couleur/White GLEDOPTO avec hombridge
@@ -381,116 +376,98 @@ Ce dernières semaines le focus a été sur:
 * Poll Automatique
 * Ajout/Suppression/Get des groupes depuis l interface Abeille
 
-
 2018-12-08
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Couleur Ampoule GLEDOPTO GU10 Couleur/White GL-S-003Z avec hombridge
 
-
 2018-12-07
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Couleur Ampoule Ikea avec Homebridge
 * Couleur Ampoule OSRAM avec Homebridge
 * Couleur Ampoule Hue Go avec Homebridge
 
-
 2018-12-05
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Ajout d un paramètre Groupe dans la configuration des devices pour avoir la groupe a commander. Il n'est plus besoin de changer les commandes une à une.
 
-
 2018-12-04
-^^^^^^^^^^^^^^^^^^
+----------
 
 * passage aux modèles standardisés (avec include)
 * les modèles standardisés permettent de modifier les équipements dans Jeedom sans les effacer et donc sans perdre historique, scénarios associés,...
 * ajout des boutons pour appliquer de nouveau les modèles de device
 * introduction d'Id unique dans les template pour ne pas confondre les devices par la suite.
 
-
 2018-01-12
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Ampoule GLEDOPTO White intégrée
 
-
 2018-11-30
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Prise Ikea intégrée
 * Ajout des groupes aux devices sélectionnés
 
-
 2018-11-26
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Ikea Transformer 30W intégré
 
-
 2018-11-24
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Correction TimeOut (en min)
 
-
 2018-11-16
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Activation/Désactivation d'un équipement suivant qu'il joint le réseau ou le quitte.
 * Rafraichi les informations de la page Health à l'ouverture.
 
-
 2018-11-05
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Ajout OSRAM GU10
 
-
 2018-06-14
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Ajout de la connectivité en Wifi.
 * Ajout des LQI remontant des trames Zigate
 
-
 2018-06-12
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Ajout du double interrupteur mural sur pile xiaomi.
 * Network modal (graph automatique du reseau)
 * Ajout aqara Cube
 
-
-
 2018-06-11
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Stop for Volet Profalux =253
 
-
 2018-06-01
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Profalux Volets Calibration
 
-
 2018-05-30
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Inclusion status dans le widget mis à jour en fonction de l’etat de la Zigate
 
-
 2018-05-28
-^^^^^^^^^^^^^^^^^^
+----------
 
 * Ajout des equipements DIY
 
-
 2018-01-19
-^^^^^^^^^^^^^^^^^^
+----------
 
 * first version posted on github
 * inclus la création des objets IKEA Bulb et Xiaomi Plug, Température Carre/rond, bouton et InfraRouge

@@ -11,15 +11,14 @@
    Installation
    Utilisation
    UtilisationAvancee
-   Debug
+   Debug & support
    DIY
    Divers
    Developpement
+   Changelog
 
 Bienvenu
 ========
-
-Bienvenu dans la documention du plugin 'Abeille' pour Jeedom.
 
 .. important::
 
@@ -28,10 +27,13 @@ Bienvenu dans la documention du plugin 'Abeille' pour Jeedom.
 
    Les derniers developpements sont focalisés sur
 
-   - Jeedom v4 & v4.1
-   - Zigate firmware 3.1c & 3.1d
+   - Jeedom v4.1
+   - Zigate firmware 3.1d
 
-   Concernant Jeedom v3, il est fortement conseillé de migrer vers la v4.1 (version officielle du moment). Il nous est difficile de maintenir cette ancienne version et suivre l'évolution de Jeedom en même temps.
+   Pour les utilisateurs Jeedom v3 il est fortement recommandé de migrer vers la v4.1 (version officielle du moment). Il nous est difficile de s'assurer que les évolutions restent compatibles avec une version antérieure.
+
+   Côté firmware, il est aussi fortement recommandé d'utiliser le FW 3.1d.
+   Le 3.1e n'est pas encore testé. Ne pas tenter pour l'instant.
 
 .. important::
 
@@ -42,4 +44,3 @@ Bienvenu dans la documention du plugin 'Abeille' pour Jeedom.
    `Participer à la Cagnotte <https://paypal.me/KiwiHC16>`_
 
    Tout le détail de la cagnotte est ici :doc:`Cagnotte`
-

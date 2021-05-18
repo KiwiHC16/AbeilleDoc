@@ -11,9 +11,12 @@ Bienvenu dans la documention du plugin 'Abeille' pour Jeedom.
    Les derniers developpements sont focalisés sur
 
    - Jeedom v4.1
-   - Zigate firmware 3.1c & 3.1d
+   - Zigate firmware 3.1d
 
    Pour les utilisateurs Jeedom v3 il est fortement recommandé de migrer vers la v4.1 (version officielle du moment). Il nous est difficile de s'assurer que les évolutions restent compatibles avec une version antérieure.
+
+   Côté firmware, il est aussi fortement recommandé d'utiliser le FW 3.1d.
+   Le 3.1e n'est pas encore testé. Ne pas tenter pour l'instant.
 
 .. important::
 

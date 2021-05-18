@@ -6,12 +6,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Developpement &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
@@ -470,18 +471,21 @@ Derniere update: 21/avr/21</p>
 <div class="section" id="commandes-table-cmd">
 <h3>Commandes (table cmd)<a class="headerlink" href="#commandes-table-cmd" title="Lien permanent vers ce titre">¶</a></h3>
 <p>La table « cmd » de Jeedom est formatée comme suit:</p>
-<ul class="simple">
+<ul>
 <li><p>id: ID de la commande. Affecté par Jeedom.</p></li>
 <li><p>eqLogic_id: ID de l’équipement auquel la commande est rattachée.</p></li>
 <li><p>eqType: « Abeille »</p></li>
-<li><p>logicalId: Nom « logique » de la commande.
-A REVOIR. Etait redondant avec le champ « topic » de « configuration ».
-Example ? Regle ?</p></li>
+<li><p>logicalId: Nom « logique » de la commande.</p>
+<p>Prend actuellement la clef d’entrée de la commande mais semble inutilisé &amp; redondant avec « topic ».
+A REVOIR !!</p>
+</li>
 <li><p>order</p></li>
-<li><p>name: Un nom pour la commande.
-Quel choix entre « name » et « logicalId » ? Meme chose ?</p></li>
-<li><p>configuration: A priori libre d’utilisation par Abeille donc ne contient que des champs spécifiques Abeille.
-Correct ?</p></li>
+<li><p>name: Un nom pour la commande.</p>
+<p>Nom Jeedom de la commande.</p>
+</li>
+<li><p>configuration: A priori libre d’utilisation par Abeille donc ne contient que des champs spécifiques Abeille.</p>
+<p>Correct ?</p>
+</li>
 <li><p>template</p></li>
 <li><p>isHistorized: 0 ou 1</p></li>
 <li><p>type: « info » ou « action »</p></li>
@@ -793,6 +797,24 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
 </dl>
 <p>}</p>
 </div></blockquote>
+<ul>
+<li><p>Clef d’entrée (BindShortToZigateBatterie)</p>
+<blockquote>
+<div><p>Devient « logicalId » de la commande. N’est pas utilisé aujourd’hui.</p>
+</div></blockquote>
+</li>
+<li><p>« name »</p>
+<blockquote>
+<div><p>Nom Jeedom de la commande</p>
+</div></blockquote>
+</li>
+<li><p>« configuration »: « topic »</p>
+<blockquote>
+<div><p>Nom Abeille de la commande</p>
+</div></blockquote>
+</li>
+</ul>
+<p>A COMPLETER !!</p>
 </div>
 <div class="section" id="variables-de-personalisation">
 <h2>Variables de personalisation<a class="headerlink" href="#variables-de-personalisation" title="Lien permanent vers ce titre">¶</a></h2>
@@ -885,18 +907,14 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
 </div>
 <div class="section" id="normalisation-des-commandes-de-base-zigbee">
 <h2>Normalisation des commandes de base zigbee<a class="headerlink" href="#normalisation-des-commandes-de-base-zigbee" title="Lien permanent vers ce titre">¶</a></h2>
-<p>EN COURS DE REFLEXION/DEVELOPPEMENT !!
-POINT OUVERT: parmis les cluster il se peut qu’un nom d’attribut soit utilisé plusieurs fois.</p>
-<blockquote>
-<div><p>Comment differencier l’attribut du cluster X de celui du cluster Y avec le meme nom ?</p>
-</div></blockquote>
+<p>EN COURS DE REFLEXION/DEVELOPPEMENT !!</p>
 <p>Les commandes de base sont les commandes internes à Abeille.
 Parmi elles, il y a les commandes zigbee directement issues du standard et normalisées ci-apres:</p>
 <ul class="simple">
-<li><p>attribut R =&gt; zbGet-&lt;AttribName&gt; (ex: zgGet-ModelIdentifier)</p></li>
-<li><p>attribut value =&gt; zb-&lt;AttribName&gt; (ex: zb-ModelIdentifier)</p></li>
-<li><p>attribut W =&gt; zbSet-&lt;AttribName&gt;</p></li>
-<li><p>command =&gt; zbCmd-&lt;CmdName&gt; (ex: zbCmd-Identify)</p></li>
+<li><p>attribut R =&gt; zbGet-&lt;ClustId&gt;-&lt;AttribName&gt; (ex: zgGet-0000-ModelIdentifier)</p></li>
+<li><p>attribut value =&gt; zb-&lt;ClustId&gt;-&lt;AttribName&gt; (ex: zb-0000-ModelIdentifier)</p></li>
+<li><p>attribut W =&gt; zbSet-&lt;ClustId&gt;-&lt;AttribName&gt;</p></li>
+<li><p>command =&gt; zbCmd-&lt;ClustId&gt;-&lt;CmdName&gt; (ex: zbCmd-0003-Identify)</p></li>
 </ul>
 </div>
 <div class="section" id="nouveau-format-de-commande-json">
@@ -910,11 +928,16 @@ ex: « cmdX »: { « use »: « zbGet-ModelIdentifier », « isVisible �
 <li><p>« order »: inutilisé</p></li>
 <li><p>« isHistorized »: inutilisé. Les commandes de base sont par défaut NON historisées. Dans la pratique tres peu le sont au final.
 A la charge de l’equipement appelant de l’activer si besoin, sinon libre à l’utilisateur une fois dans Jeedom.
-ex: « cmdX »: { « use »: « zbGet-Manufacturer », « isHistorized »: « yes » }</p></li>
+ex: « cmdX »: { « use »: « zbGet-0000-Manufacturer », « isHistorized »: « yes » }</p></li>
 <li><p>« Type » =&gt; « type »</p></li>
 <li><p>« generic_type » =&gt; « genericType »</p></li>
 <li><p>« uniqId » =&gt; inutilisé</p></li>
 <li><p>« configuration » =&gt; supprimé. Elements remontés au top.</p></li>
+<li><p>Clef d’entrée = logicalId de la commande = nom de la commande Abeille. Dans ce cadre, « configuration »: »topic » disparait.</p></li>
+<li><p>« configuration »: »topic » =&gt; Plus nécessaire. Redondant avec “logicalId”.</p></li>
+<li><p>template =&gt; ??</p></li>
+<li><p>« configuration »: »repeatEventManagement » =&gt; ??</p></li>
+<li><p>« configuration »: »visibilityCategory » =&gt; ??</p></li>
 </ul>
 <p>Exemple:</p>
 <blockquote>
@@ -954,7 +977,7 @@ ex: « cmdX »: { « use »: « zbGet-Manufacturer », « isHistorized �
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

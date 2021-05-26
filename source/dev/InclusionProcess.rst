@@ -7,6 +7,11 @@ La phase d'inclusion d'un nouvel équipement est très importante. Pendant cette
 - le configurer si nécessaire (bind + config report)
 - puis le déclarer dans Jeedom avec un ensemble de commandes qu'il supporte
 
+Cette phase est résumée dans le diagramme suivant:
+
+.. image:: ../images/inclusion_process.png
+
+
 Phase d'identification
 ~~~~~~~~~~~~~~~~~~~~~~
 

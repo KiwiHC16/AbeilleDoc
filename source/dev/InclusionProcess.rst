@@ -9,7 +9,7 @@ La phase d'inclusion d'un nouvel équipement est très importante. Pendant cette
 
 Cette phase est résumée dans le diagramme suivant:
 
-.. image:: ../images/inclusion_process.png
+.. image:: images/inclusion_process.png
 
 
 Phase d'identification

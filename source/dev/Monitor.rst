@@ -36,7 +36,7 @@ Le moniteur utilise 3 queues de messages pour dialoguer avec AbeilleCmd & Abeill
 - reçoit les messages reçus de l'équipement (AbeilleParser -> AbeilleMonitor)
 - informe AbeilleCmd que l'adresse à surveiller à changé suite à un "device announce" (AbeilleMonitor -> AbeilleCmd)
 
-.. image:: ../images/MonitorTopView.png
+.. image:: images/MonitorTopView.png
 
 Utilisation
 ~~~~~~~~~~~
@@ -45,12 +45,12 @@ Rappel: Le moniteur n'est accessible qu'en mode "developpeur".
 
 Le bouton "surveiller" est visible sur la page de gestion d'Abeille.
 
-.. image:: ../images/MonitorHowToStart.png
+.. image:: images/MonitorHowToStart.png
 
 Il suffit de selectionner l'équipement à surveiller et cliquer sur "surveiller" pour activer le moniteur sur cet EQ.
 "AbeilleMonitor.log" devrait alors apparaitre dans l'ensemble des logs de la page de config.
 
-.. image:: ../images/MonitorLog.png
+.. image:: images/MonitorLog.png
 
 Points manquants
 ~~~~~~~~~~~~~~~~

@@ -53,6 +53,43 @@ Le moniteur collecte les messages envoyés vers et reçus de la zigate pour un �
         'status' => 'ready', 'notready'
     );
 
+'parser' vers 'Abeille'
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Le format décrit ci apres est appliqué progressivement.
+Il concerne les fichiers "AbeilleParser.class.php" & "Abeille.class.php"
+
+Ce format est completement flexible et permet de faire passer les infos variables reçues à chaque msg Zigbee.
+
+La partie "commune" est
+
+    $msg = array(
+        'src' => 'parser',
+        'type' => <msg_type>,
+        'net' => $net,
+    );
+
+Exemples:
+    $msg = array(
+        'src' => 'parser',
+        'type' => 'eqAnnounce',
+        'net' => $net,
+        'addr' => $addr,
+        'ieee' => $eq['ieee'],
+        'ep' => $eq['epFirst'],
+        'jsonId' => $eq['jsonId'],
+        'capa' => $eq['capa'],
+        'time' => time()
+    );
+
+    $msg = array(
+        'src' => 'parser',
+        'type' => 'leaveIndication',
+        'net' => $dest,
+        'ieee' => $IEEE,
+        'time' => time()
+    );
+
 'parser' vers 'cmd'
 ~~~~~~~~~~~~~~~~~~~
 

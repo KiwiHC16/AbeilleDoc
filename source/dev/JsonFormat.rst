@@ -1,7 +1,8 @@
-Format d'équipement (JSON)
---------------------------
+Format fichier de configuration d'un équipement (JSON)
+------------------------------------------------------
 
 Les équipements supportés sont décrits dans des fichiers au format JSON, décrit ci-après.
+Ces fichiers se trouvent dans "core/config/devices" ou "core/config/devices_local" pour les équipements perso/custom ou en cours de développement et non encore inclus dans Abeille.
 
 Exemple:
 
@@ -35,21 +36,21 @@ Exemple:
     }
   }
 
-* "nameJeedom"
-* "manufacturer"
+* nameJeedom
+* manufacturer
 
     Nom du fabricant.
     Exemple: "Sonoff"
-* "model"
+* model
 
     Modèle ou référence exacte du fabricant.
     Exemple: "BASICZBR3"
-* "timeout"
+* timeout
 
   Note: Ce paramètre permet d'initialiser le champ "timeout" de la table Jeedom "eqLogic".
 
-* "Comment"
-* "comment"
+* Comment
+* comment
 
     Permet d'ajouter un commentaire pour cet équipement.
 * "Categorie":{"automatism":"1"}
@@ -64,7 +65,7 @@ Exemple:
   - automatism
   - multimedia
   - default
-* "configuration"
+* configuration
 
   Note: Ce paramètre permet d'initialiser le champ "configuration" de la table Jeedom "eqLogic".
 
@@ -75,15 +76,22 @@ Exemple:
   - "mainEP"
   - "paramBatterie"
   - "paramType"
-* "Commandes":{"include1":"cmde1", "include2":"cmd2", ... "includeX":"cmdX"}
+  - battery_type
+  
+    Description type de batterie (ex: 1x CR2430 3V)
+* Commandes
 
-  Liste des commandes supportées. Chaque include correspond à une commande de base existante dans 'config/devices/templates'
-  - "include1":"cmd1"
+  "Commandes":{"include1":"cmde1", "include2":"cmd2", ... "includeX":"cmdX"}
+    
+  Liste des commandes supportées. Chaque include correspond à une commande de base existante dans 'config/commands'
+  - "include1":"cmd1",
   - ...
-  - "includeX":"cmdX"
+  - "includeX":"cmdX",
 
-Format de commande (JSON)
--------------------------
+Format fichier de commande (JSON)
+---------------------------------
+
+Ces fichiers se trouvent dans "core/config/commands".
 
 Exemple
 

@@ -22,6 +22,11 @@ Equipement (table eqLogic)
 - isVisible
 - isEnable
 - status
+
+    - lastCommunication: date('Y-m-d H:i:s'), mis-à-jour par
+        - cmd.class.php, event()
+        - eqLogic.class.php, checkAlive()
+        - eqLogic.class.php, checkAndUpdateCmd()
 - timeout
 - category
 - display

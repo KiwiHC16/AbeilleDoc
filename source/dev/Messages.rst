@@ -90,6 +90,18 @@ Exemples:
         'time' => time()
     );
 
+    $msg = array(
+        'src' => 'parser',
+        'type' => 'attributReport',
+        'net' => $dest,
+        'addr' => $SrcAddr,
+        'ep' => $EPoint,
+        'name' => $ClusterId.'-'.$AttributId,
+        'value' => false, // False = unsupported
+        'time' => time(),
+        'lqi' => $lqi
+    );
+
 'parser' vers 'cmd'
 ~~~~~~~~~~~~~~~~~~~
 

@@ -19,6 +19,8 @@ Equipement (table eqLogic)
 
     - createtime: mis-à-jour par Jeedom à la création de l'équipement.
     - updatetime: mis-à-jour par Jeedom à chaque changement de la configuration.
+    - calculValueOffset: utilisé par Jeedom (cmd.class.php). Ex: "calculValueOffset":"#value#*10"
+    - batterytime: mis-à-jour par Jeedom
 - isVisible
 - isEnable
 - status

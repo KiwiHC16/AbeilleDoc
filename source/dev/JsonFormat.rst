@@ -36,7 +36,9 @@ Exemple:
     }
   }
 
-* nameJeedom
+* nameJeedom: OBLIGATOIRE
+
+    Type d'équipement. Ex: "Tuya smart socket"
 * manufacturer
 
     Nom du fabricant.
@@ -47,9 +49,8 @@ Exemple:
     Exemple: "BASICZBR3"
 * timeout
 
-  Note: Ce paramètre permet d'initialiser le champ "timeout" de la table Jeedom "eqLogic".
+    Durée (en min) au dela de laquelle l'équipement est considéré comme HS si aucune nouvelle de lui.
 
-* Comment
 * comment
 
     Permet d'ajouter un commentaire pour cet équipement.
@@ -77,12 +78,12 @@ Exemple:
   - "paramBatterie"
   - "paramType"
   - battery_type
-  
+
     Description type de batterie (ex: 1x CR2430 3V)
 * Commandes
 
   "Commandes":{"include1":"cmde1", "include2":"cmd2", ... "includeX":"cmdX"}
-    
+
   Liste des commandes supportées. Chaque include correspond à une commande de base existante dans 'config/commands'
   - "include1":"cmd1",
   - ...
@@ -99,19 +100,24 @@ Exemple
     "BindShortToZigateBatterie": {
       "isVisible": 0,
       "name": "BindShortToZigateBatterie",
-      "order": 13,
-      "isHistorized": "0",
+      "isHistorized": 0,
       "Type": "action",
       "subType": "other",
       "invertBinary": "0",
       "template": "",
       "configuration": {
-        "uniqId": "5c07c76621802",
         "topic": "bindShort",
         "request": "targetExtendedAddress=#addrIEEE#&targetEndpoint=#EP#&ClusterId=0001&reportToAddress=#ZiGateIEEE#",
         "visibilityCategory": "Network",
+        "minValue": "0",
+        "maxValue": "90",
+        "historizeRound": "0",
+        "calculValueOffset": "",
         "execAtCreation": "Yes",
-        "execAtCreationDelay": "9"
+        "execAtCreationDelay": "9",
+        "repeatEventManagement": "always",
+        "visibiltyTemplate": "1",
+        "RefreshData": "1",
       },
       "display": {
         "forceReturnLineAfter": "1"
@@ -121,17 +127,40 @@ Exemple
 
 * Clef d'entrée (BindShortToZigateBatterie)
 
-    Devient "logicalId" de la commande. N'est pas utilisé aujourd'hui.
+    Devient "logicalId" de la commande. Il n'est pas forcement en ligne avec le nom du fichier.
 
-* "name"
+* name: OBLIGATOIRE
 
     Nom Jeedom de la commande
 
-* "configuration": "topic"
+* Type & subType: OBLIGATOIRE
 
-    Nom Abeille de la commande
+    Type = 'info' ou 'action'
+    subType = 'numeric', 'string', 'binary', 'other'
+* invertBinary: Optionnel. Utilisé par Jeedom pour inverser le résultat d'une commande info du type "binary".
 
-A COMPLETER !!
+    TODO: Devrait etre dans la section "display".
+* order: OBSOLETE
+
+    L'ordre d'affichage des commandes est par défaut celui de leur déclaration dans le fichier de config "équipement".
+* configuration
+
+    - topic: Nom Abeille de la commande
+    - request: parametres associés à 'topic'
+    - minValue:
+    - maxValue:
+    - historizeRound: ?
+    - calculValueOffset: Indique à Jeedom d'appliquer une formule sur la valeur reçue.
+
+        Ex: "calculValueOffset": "#value#/10",
+        Ex: "calculValueOffset": "#value#/255*100"
+    - repeatEventManagement: ?
+    - visibiltyTemplate: ? Semble ne pas etre utilisé du tout, ni par Jeedom ni par Abeille.
+    - RefreshData: ?
+    - uniqId: OBSOLETE
+* display: Options d'affichage optionnelles.
+
+    * forceReturnLineAfter: Force le passage à la ligne après l'affichage du widget.
 
 Variables de personalisation
 ----------------------------
@@ -244,7 +273,7 @@ Par rapport au format original, les modifications sont les suivantes:
 - "configuration" => supprimé. Elements remontés au top.
 - Clef d'entrée = logicalId de la commande = nom de la commande Abeille. Dans ce cadre, "configuration":"topic" disparait.
 - "configuration":"topic" => Plus nécessaire. Redondant avec 'logicalId'.
-- template => ?? 
+- template => ??
 - "configuration":"repeatEventManagement" => ??
 - "configuration":"visibilityCategory" => ??
 

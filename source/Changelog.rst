@@ -5,14 +5,11 @@ ChangeLog
 ----------
 
 - ATTENTION: Regression sur les telecommandes virtuelles. Une seule possible avec cette version.
-- ATTENTION: Faire un backup pour pouvoir revenir à la precedente "stable".
-
-  Structure DB eqLogic modifiée: "Ruche" remplacé par "0000"
+- ATTENTION: Faire un backup pour pouvoir revenir à la precedente "stable". Structure DB eqLogic modifiée: "Ruche" remplacé par "0000"
 - Interne: Parser: revue params decodeX() + cleanup
 - Zemismart ZW-EC-01 curtain switch: mise-à-jour modèle.
 - Interne: Correction timeout.
 - Reinclusion: L'equipement et ses commandes sont mis à jour. Seules les commandes obsolètes sont détruites.
-
   Ca permet de ne plus casser le chemin des scénaris et autres utilisateurs des commandes.
 - Firmware: Suppression des FW 3.0f, 3.1a & 3.1b. 3.1d = FW suggéré.
 - JennicModuleProgrammer: Mise-à-jour v0.7 + améliorations. Compilé avant utilisation.
@@ -60,7 +57,7 @@ ChangeLog
 11/12/2020
 ----------
 
-- Prise Xiaomi: fonctions de base dans le master (On/Off/Retour etat). En cours retour de W, Conso, V, A et T°. 
+- Prise Xiaomi: fonctions de base dans le master (On/Off/Retour etat). En cours retour de W, Conso, V, A et T°.
 - LQI collect revisited & enhanced #1526
 - Ajout du modale Template pour afficher des differences entre les Abeilles dans Jeedom et leur Modele.
 - Ajout d un chapitre Update dans la page de configuration pour verifier que certaines contraintes sont satisfaites avant de faire la mise a jour.

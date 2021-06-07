@@ -6,13 +6,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jeedom en profondeur &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -53,10 +52,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Utilisation.html">Utilisation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../UtilisationAvancee.html">Utilisation avancée</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Debug.html">Debug</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Developpement.html">Developpement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Changelog.html">ChangeLog</a></li>
 </ul>
 
 
@@ -75,7 +74,7 @@
 <h2>checkAndUpdateCmd()<a class="headerlink" href="#checkandupdatecmd" title="Lien permanent vers ce titre">¶</a></h2>
 <p>public function checkAndUpdateCmd($_logicalId, $_value, $_updateTime = null) {}</p>
 <ul>
-<li><p>Verifie que l eq(uipement) est actif</p></li>
+<li><p>Verifie que l’equipement est actif</p></li>
 <li><p>Verifie que la cmd existe</p></li>
 <li><p>Recupere la valeur de la commande actuelle</p></li>
 <li><p>Si nouvelle valeur differente de l ancienne genere un event() avec la nouvelle valeur.</p>
@@ -83,7 +82,11 @@
 </li>
 <li><p>Met a jour la date de collecte</p></li>
 <li><p>Gere les aspects repeatEventManagement de la commande (par exemple si deja meme valeur on ne fait rien. Ou on fait sur chaque nouvel valeur quoi qu il arrive</p></li>
-<li><p>Et mets a jour “lastCommunication” =&gt; date(“Y-m-d H:i:s”), “timeout” =&gt; 0</p></li>
+<li><p>Si “$_updateTime” true</p>
+<blockquote>
+<div><p>Et mets a jour “lastCommunication” =&gt; date(“Y-m-d H:i:s”), “timeout” =&gt; 0</p>
+</div></blockquote>
+</li>
 </ul>
 <p>En gros affecte une valeur a une commande info et gere les actions associées.</p>
 </div>
@@ -101,7 +104,7 @@
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

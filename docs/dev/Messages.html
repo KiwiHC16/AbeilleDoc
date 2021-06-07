@@ -6,13 +6,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Format des messages inter démons &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -53,10 +52,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Utilisation.html">Utilisation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../UtilisationAvancee.html">Utilisation avancée</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Debug.html">Debug</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Developpement.html">Developpement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Changelog.html">ChangeLog</a></li>
 </ul>
 
 
@@ -126,6 +125,60 @@
 <p>);</p>
 </div></blockquote>
 </div>
+<div class="section" id="parser-vers-abeille">
+<h2>“parser” vers “Abeille”<a class="headerlink" href="#parser-vers-abeille" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le format décrit ci apres est appliqué progressivement.
+Il concerne les fichiers « AbeilleParser.class.php » &amp; « Abeille.class.php »</p>
+<p>Ce format est completement flexible et permet de faire passer les infos variables reçues à chaque msg Zigbee.</p>
+<p>La partie « commune » est</p>
+<blockquote>
+<div><dl class="simple">
+<dt>$msg = array(</dt><dd><p>“src” =&gt; “parser”,
+“type” =&gt; &lt;msg_type&gt;,
+“net” =&gt; $net,</p>
+</dd>
+</dl>
+<p>);</p>
+</div></blockquote>
+<dl>
+<dt>Exemples:</dt><dd><dl class="simple">
+<dt>$msg = array(</dt><dd><p>“src” =&gt; “parser”,
+“type” =&gt; “eqAnnounce”,
+“net” =&gt; $net,
+“addr” =&gt; $addr,
+“ieee” =&gt; $eq[“ieee”],
+“ep” =&gt; $eq[“epFirst”],
+“jsonId” =&gt; $eq[“jsonId”],
+“capa” =&gt; $eq[“capa”],
+“time” =&gt; time()</p>
+</dd>
+</dl>
+<p>);</p>
+<dl class="simple">
+<dt>$msg = array(</dt><dd><p>“src” =&gt; “parser”,
+“type” =&gt; “leaveIndication”,
+“net” =&gt; $dest,
+“ieee” =&gt; $IEEE,
+“time” =&gt; time()</p>
+</dd>
+</dl>
+<p>);</p>
+<dl class="simple">
+<dt>$msg = array(</dt><dd><p>“src” =&gt; “parser”,
+“type” =&gt; “attributReport”,
+“net” =&gt; $dest,
+“addr” =&gt; $SrcAddr,
+“ep” =&gt; $EPoint,
+“name” =&gt; $ClusterId.”-“.$AttributId,
+“value” =&gt; false, // False = unsupported
+“time” =&gt; time(),
+“lqi” =&gt; $lqi</p>
+</dd>
+</dl>
+<p>);</p>
+</dd>
+</dl>
+</div>
 <div class="section" id="parser-vers-cmd">
 <h2>“parser” vers “cmd”<a class="headerlink" href="#parser-vers-cmd" title="Lien permanent vers ce titre">¶</a></h2>
 <p>PAS ENCORE IMPLEMENTE !!
@@ -164,7 +217,7 @@ $this-&gt;msgToCmd(“CmdAbeille1/”.$SrcAddr.”/IEEE_Address_request”, “s
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

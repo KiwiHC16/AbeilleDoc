@@ -6,13 +6,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Developpement &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
@@ -84,6 +83,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#parser-vers-lqi-collector">Parser vers “LQI collector”</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#parser-vers-monitor-cmd-vers-monitor">“Parser” vers “Monitor” &amp; “Cmd” vers “Monitor”</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#serialread-vers-parser">“SerialRead” vers “Parser”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parser-vers-abeille">“parser” vers “Abeille”</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#parser-vers-cmd">“parser” vers “cmd”</a></li>
 </ul>
 </li>
@@ -110,8 +110,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#lancements-concurrents">Lancements concurrents</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#format-d-equipement-json">Format d’équipement (JSON)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#format-de-commande-json">Format de commande (JSON)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#format-fichier-de-configuration-d-un-equipement-json">Format fichier de configuration d’un équipement (JSON)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#format-fichier-de-commande-json">Format fichier de commande (JSON)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#variables-de-personalisation">Variables de personalisation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#nouveau-format-d-equipement-json">Nouveau format d’équipement (JSON)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#normalisation-des-commandes-de-base-zigbee">Normalisation des commandes de base zigbee</a></li>
@@ -412,6 +412,60 @@ Les démons n’étant rien d’autre que des codes ou classes, je suggère de c
 <p>);</p>
 </div></blockquote>
 </div>
+<div class="section" id="parser-vers-abeille">
+<h3>“parser” vers “Abeille”<a class="headerlink" href="#parser-vers-abeille" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le format décrit ci apres est appliqué progressivement.
+Il concerne les fichiers « AbeilleParser.class.php » &amp; « Abeille.class.php »</p>
+<p>Ce format est completement flexible et permet de faire passer les infos variables reçues à chaque msg Zigbee.</p>
+<p>La partie « commune » est</p>
+<blockquote>
+<div><dl class="simple">
+<dt>$msg = array(</dt><dd><p>“src” =&gt; “parser”,
+“type” =&gt; &lt;msg_type&gt;,
+“net” =&gt; $net,</p>
+</dd>
+</dl>
+<p>);</p>
+</div></blockquote>
+<dl>
+<dt>Exemples:</dt><dd><dl class="simple">
+<dt>$msg = array(</dt><dd><p>“src” =&gt; “parser”,
+“type” =&gt; “eqAnnounce”,
+“net” =&gt; $net,
+“addr” =&gt; $addr,
+“ieee” =&gt; $eq[“ieee”],
+“ep” =&gt; $eq[“epFirst”],
+“jsonId” =&gt; $eq[“jsonId”],
+“capa” =&gt; $eq[“capa”],
+“time” =&gt; time()</p>
+</dd>
+</dl>
+<p>);</p>
+<dl class="simple">
+<dt>$msg = array(</dt><dd><p>“src” =&gt; “parser”,
+“type” =&gt; “leaveIndication”,
+“net” =&gt; $dest,
+“ieee” =&gt; $IEEE,
+“time” =&gt; time()</p>
+</dd>
+</dl>
+<p>);</p>
+<dl class="simple">
+<dt>$msg = array(</dt><dd><p>“src” =&gt; “parser”,
+“type” =&gt; “attributReport”,
+“net” =&gt; $dest,
+“addr” =&gt; $SrcAddr,
+“ep” =&gt; $EPoint,
+“name” =&gt; $ClusterId.”-“.$AttributId,
+“value” =&gt; false, // False = unsupported
+“time” =&gt; time(),
+“lqi” =&gt; $lqi</p>
+</dd>
+</dl>
+<p>);</p>
+</dd>
+</dl>
+</div>
 <div class="section" id="parser-vers-cmd">
 <h3>“parser” vers “cmd”<a class="headerlink" href="#parser-vers-cmd" title="Lien permanent vers ce titre">¶</a></h3>
 <p>PAS ENCORE IMPLEMENTE !!
@@ -456,12 +510,28 @@ Derniere update: 21/avr/21</p>
 <div><ul class="simple">
 <li><p>createtime: mis-à-jour par Jeedom à la création de l’équipement.</p></li>
 <li><p>updatetime: mis-à-jour par Jeedom à chaque changement de la configuration.</p></li>
+<li><p>calculValueOffset: utilisé par Jeedom (cmd.class.php). Ex: « calculValueOffset »: »#value#*10 »</p></li>
+<li><p>batterytime: mis-à-jour par Jeedom</p></li>
 </ul>
 </div></blockquote>
 </li>
 <li><p>isVisible</p></li>
 <li><p>isEnable</p></li>
-<li><p>status</p></li>
+<li><p>status</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>lastCommunication: date(“Y-m-d H:i:s”), mis-à-jour par</dt><dd><ul>
+<li><p>cmd.class.php, event()</p></li>
+<li><p>eqLogic.class.php, checkAlive()</p></li>
+<li><p>eqLogic.class.php, checkAndUpdateCmd()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
 <li><p>timeout</p></li>
 <li><p>category</p></li>
 <li><p>display</p></li>
@@ -541,10 +611,10 @@ Il a été conçu dans un but informatif et de debug et donc ne gère qu’un se
 <h3>Utilisation<a class="headerlink" href="#utilisation" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Rappel: Le moniteur n’est accessible qu’en mode « developpeur ».</p>
 <p>Le bouton « surveiller » est visible sur la page de gestion d’Abeille.</p>
-<img alt="_images/MonitorHowToStart1.png" src="_images/MonitorHowToStart1.png" />
+<img alt="_images/MonitorHowToStart.png" src="_images/MonitorHowToStart.png" />
 <p>Il suffit de selectionner l’équipement à surveiller et cliquer sur « surveiller » pour activer le moniteur sur cet EQ.
 « AbeilleMonitor.log » devrait alors apparaitre dans l’ensemble des logs de la page de config.</p>
-<img alt="_images/MonitorLog1.png" src="_images/MonitorLog1.png" />
+<img alt="_images/MonitorLog.png" src="_images/MonitorLog.png" />
 </div>
 <div class="section" id="points-manquants">
 <h3>Points manquants<a class="headerlink" href="#points-manquants" title="Lien permanent vers ce titre">¶</a></h3>
@@ -664,9 +734,10 @@ Même si ce dernier vérifie qu’il est le seul, il s’ensuit qu’il s’arre
 Si démon manquand il est relancé. Du coup 1 seule source de (re)lancement et pas de lancement concurrent.</p>
 </div>
 </div>
-<div class="section" id="format-d-equipement-json">
-<h2>Format d’équipement (JSON)<a class="headerlink" href="#format-d-equipement-json" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les équipements supportés sont décrits dans des fichiers au format JSON, décrit ci-après.</p>
+<div class="section" id="format-fichier-de-configuration-d-un-equipement-json">
+<h2>Format fichier de configuration d’un équipement (JSON)<a class="headerlink" href="#format-fichier-de-configuration-d-un-equipement-json" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les équipements supportés sont décrits dans des fichiers au format JSON, décrit ci-après.
+Ces fichiers se trouvent dans « core/config/devices » ou « core/config/devices_local » pour les équipements perso/custom ou en cours de développement et non encore inclus dans Abeille.</p>
 <p>Exemple:</p>
 <blockquote>
 <div><dl>
@@ -710,24 +781,29 @@ Si démon manquand il est relancé. Du coup 1 seule source de (re)lancement et p
 <p>}</p>
 </div></blockquote>
 <ul>
-<li><p>« nameJeedom »</p></li>
-<li><p>« manufacturer »</p>
+<li><p>nameJeedom: OBLIGATOIRE</p>
+<blockquote>
+<div><p>Type d’équipement. Ex: « Tuya smart socket »</p>
+</div></blockquote>
+</li>
+<li><p>manufacturer</p>
 <blockquote>
 <div><p>Nom du fabricant.
 Exemple: « Sonoff »</p>
 </div></blockquote>
 </li>
-<li><p>« model »</p>
+<li><p>model</p>
 <blockquote>
 <div><p>Modèle ou référence exacte du fabricant.
 Exemple: « BASICZBR3 »</p>
 </div></blockquote>
 </li>
-<li><p>« timeout »</p>
-<p>Note: Ce paramètre permet d’initialiser le champ « timeout » de la table Jeedom « eqLogic ».</p>
+<li><p>timeout</p>
+<blockquote>
+<div><p>Durée (en min) au dela de laquelle l’équipement est considéré comme HS si aucune nouvelle de lui.</p>
+</div></blockquote>
 </li>
-<li><p>« Comment »</p></li>
-<li><p>« comment »</p>
+<li><p>comment</p>
 <blockquote>
 <div><p>Permet d’ajouter un commentaire pour cet équipement.</p>
 </div></blockquote>
@@ -745,7 +821,7 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
 <li><p>default</p></li>
 </ul>
 </li>
-<li><p>« configuration »</p>
+<li><p>configuration</p>
 <p>Note: Ce paramètre permet d’initialiser le champ « configuration » de la table Jeedom « eqLogic ».</p>
 <ul>
 <li><p>« uniqId »</p></li>
@@ -755,38 +831,48 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
 <li><p>« mainEP »</p></li>
 <li><p>« paramBatterie »</p></li>
 <li><p>« paramType »</p></li>
+<li><p>battery_type</p>
+<p>Description type de batterie (ex: 1x CR2430 3V)</p>
+</li>
 </ul>
 </li>
-<li><p>« Commandes »:{« include1 »: »cmde1 », « include2 »: »cmd2 », … « includeX »: »cmdX »}</p>
-<p>Liste des commandes supportées. Chaque include correspond à une commande de base existante dans “config/devices/templates”
-- « include1 »: »cmd1 »
+<li><p>Commandes</p>
+<p>« Commandes »:{« include1 »: »cmde1 », « include2 »: »cmd2 », … « includeX »: »cmdX »}</p>
+<p>Liste des commandes supportées. Chaque include correspond à une commande de base existante dans “config/commands”
+- « include1 »: »cmd1 »,
 - …
-- « includeX »: »cmdX »</p>
+- « includeX »: »cmdX »,</p>
 </li>
 </ul>
 </div>
-<div class="section" id="format-de-commande-json">
-<h2>Format de commande (JSON)<a class="headerlink" href="#format-de-commande-json" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="format-fichier-de-commande-json">
+<h2>Format fichier de commande (JSON)<a class="headerlink" href="#format-fichier-de-commande-json" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ces fichiers se trouvent dans « core/config/commands ».</p>
 <p>Exemple</p>
 <blockquote>
 <div><dl>
 <dt>{</dt><dd><dl>
 <dt>« BindShortToZigateBatterie »: {</dt><dd><p>« isVisible »: 0,
 « name »: « BindShortToZigateBatterie »,
-« order »: 13,
-« isHistorized »: « 0 »,
+« isHistorized »: 0,
 « Type »: « action »,
 « subType »: « other »,
 « invertBinary »: « 0 »,
 « template »: «  »,
 « configuration »: {</p>
 <blockquote>
-<div><p>« uniqId »: « 5c07c76621802 »,
-« topic »: « bindShort »,
+<div><p>« topic »: « bindShort »,
 « request »: « targetExtendedAddress=#addrIEEE#&amp;targetEndpoint=#EP#&amp;ClusterId=0001&amp;reportToAddress=#ZiGateIEEE# »,
 « visibilityCategory »: « Network »,
+« minValue »: « 0 »,
+« maxValue »: « 90 »,
+« historizeRound »: « 0 »,
+« calculValueOffset »: «  »,
 « execAtCreation »: « Yes »,
-« execAtCreationDelay »: « 9 »</p>
+« execAtCreationDelay »: « 9 »,
+« repeatEventManagement »: « always »,
+« visibiltyTemplate »: « 1 »,
+« RefreshData »: « 1 »,</p>
 </div></blockquote>
 <p>},
 « display »: {</p>
@@ -804,21 +890,59 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
 <ul>
 <li><p>Clef d’entrée (BindShortToZigateBatterie)</p>
 <blockquote>
-<div><p>Devient « logicalId » de la commande. N’est pas utilisé aujourd’hui.</p>
+<div><p>Devient « logicalId » de la commande. Il n’est pas forcement en ligne avec le nom du fichier.</p>
 </div></blockquote>
 </li>
-<li><p>« name »</p>
+<li><p>name: OBLIGATOIRE</p>
 <blockquote>
 <div><p>Nom Jeedom de la commande</p>
 </div></blockquote>
 </li>
-<li><p>« configuration »: « topic »</p>
+<li><p>Type &amp; subType: OBLIGATOIRE</p>
 <blockquote>
-<div><p>Nom Abeille de la commande</p>
+<div><p>Type = “info” ou “action”
+subType = “numeric”, “string”, “binary”, “other”</p>
+</div></blockquote>
+</li>
+<li><p>invertBinary: Optionnel. Utilisé par Jeedom pour inverser le résultat d’une commande info du type « binary ».</p>
+<blockquote>
+<div><p>TODO: Devrait etre dans la section « display ».</p>
+</div></blockquote>
+</li>
+<li><p>order: OBSOLETE</p>
+<blockquote>
+<div><p>L’ordre d’affichage des commandes est par défaut celui de leur déclaration dans le fichier de config « équipement ».</p>
+</div></blockquote>
+</li>
+<li><p>configuration</p>
+<blockquote>
+<div><ul>
+<li><p>topic: Nom Abeille de la commande</p></li>
+<li><p>request: parametres associés à “topic”</p></li>
+<li><p>minValue:</p></li>
+<li><p>maxValue:</p></li>
+<li><p>historizeRound: ?</p></li>
+<li><p>calculValueOffset: Indique à Jeedom d’appliquer une formule sur la valeur reçue.</p>
+<blockquote>
+<div><p>Ex: « calculValueOffset »: « #value#/10 »,
+Ex: « calculValueOffset »: « #value#/255*100 »</p>
+</div></blockquote>
+</li>
+<li><p>repeatEventManagement: ?</p></li>
+<li><p>visibiltyTemplate: ? Semble ne pas etre utilisé du tout, ni par Jeedom ni par Abeille.</p></li>
+<li><p>RefreshData: ?</p></li>
+<li><p>uniqId: OBSOLETE</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>display: Options d’affichage optionnelles.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>forceReturnLineAfter: Force le passage à la ligne après l’affichage du widget.</p></li>
+</ul>
 </div></blockquote>
 </li>
 </ul>
-<p>A COMPLETER !!</p>
 </div>
 <div class="section" id="variables-de-personalisation">
 <h2>Variables de personalisation<a class="headerlink" href="#variables-de-personalisation" title="Lien permanent vers ce titre">¶</a></h2>
@@ -981,7 +1105,7 @@ ex: « cmdX »: { « use »: « zbGet-0000-Manufacturer », « isHistoriz
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

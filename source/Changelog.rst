@@ -1,6 +1,44 @@
 ChangeLog
 =========
 
+210607-STABLE-1
+----------
+
+- ATTENTION: Regression sur les telecommandes virtuelles. Une seule possible avec cette version.
+- ATTENTION: Faire un backup pour pouvoir revenir à la precedente "stable".
+
+  Structure DB eqLogic modifiée: "Ruche" remplacé par "0000"
+- Interne: Parser: revue params decodeX() + cleanup
+- Zemismart ZW-EC-01 curtain switch: mise-à-jour modèle.
+- Interne: Correction timeout.
+- Reinclusion: L'equipement et ses commandes sont mis à jour. Seules les commandes obsolètes sont détruites.
+
+  Ca permet de ne plus casser le chemin des scénaris et autres utilisateurs des commandes.
+- Firmware: Suppression des FW 3.0f, 3.1a & 3.1b. 3.1d = FW suggéré.
+- JennicModuleProgrammer: Mise-à-jour v0.7 + améliorations. Compilé avant utilisation.
+- Zigate DIN: Ajout support pour mise-à-jour FW.
+- Page equipement: section "avancé", mise à jour des champs en temps réel (#1839).
+- Gestion des groupes: correction regression (#2011).
+- Telecommande virtuelle: correction regression (#2011).
+- Interne: Revue decode 8062 (Group membership).
+- JSON: Correction setReportTemp (#1918).
+- Innr RB285C: correction modele corrompu.
+- Innr RB165: modele préliminaire.
+- Tuya GU10 ZB-CL01: ajout support.
+- Hue motion sensor: mise-à-jour JSON.
+- Interne: correction message 8120.
+- Page config: correction installation WiringPi (#1979).
+- Introduction de "core/config/devices_local" pour les EQ non supportés par Abeille mais locaux/en cours de dev.
+- Zemismart ZW-EC-01 curtain switch: ajout du modèle JSON
+- Nouvelle procédure d'inclusion.
+- Support des EQ avec identifiants 'communs'.
+- Création du log 'AbeilleDiscover.log' si inclusion d'un équipement inconnu.
+- Profalux volet: Revue modele JSON. Utilisation cluster 0008 au lieu de 0006 + report.
+- Page EQ/commandes: pour mode developpeur, possibilité charger JSON.
+- Ordre apparition des cmdes: Suit maintenant l'ordre d'utilisation dans JSON equipement.
+- Un équipement peut maintenant être invisible par defaut ('"isVisible":0' dans le JSON).
+- Profalux telecommande: S'annonce mais inutilisable côté Jeedom. Cachée à la création.
+
 210510-STABLE-1
 ---------------
 

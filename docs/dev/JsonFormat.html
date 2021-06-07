@@ -5,14 +5,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Format d’équipement (JSON) &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <title>Format fichier de configuration d’un équipement (JSON) &#8212; Documentation Abeille 11.02.2021</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -53,10 +52,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Utilisation.html">Utilisation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../UtilisationAvancee.html">Utilisation avancée</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Debug.html">Debug</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Developpement.html">Developpement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Changelog.html">ChangeLog</a></li>
 </ul>
 
 
@@ -68,9 +67,10 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="format-d-equipement-json">
-<h1>Format d’équipement (JSON)<a class="headerlink" href="#format-d-equipement-json" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Les équipements supportés sont décrits dans des fichiers au format JSON, décrit ci-après.</p>
+  <div class="section" id="format-fichier-de-configuration-d-un-equipement-json">
+<h1>Format fichier de configuration d’un équipement (JSON)<a class="headerlink" href="#format-fichier-de-configuration-d-un-equipement-json" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Les équipements supportés sont décrits dans des fichiers au format JSON, décrit ci-après.
+Ces fichiers se trouvent dans « core/config/devices » ou « core/config/devices_local » pour les équipements perso/custom ou en cours de développement et non encore inclus dans Abeille.</p>
 <p>Exemple:</p>
 <blockquote>
 <div><dl>
@@ -114,24 +114,29 @@
 <p>}</p>
 </div></blockquote>
 <ul>
-<li><p>« nameJeedom »</p></li>
-<li><p>« manufacturer »</p>
+<li><p>nameJeedom: OBLIGATOIRE</p>
+<blockquote>
+<div><p>Type d’équipement. Ex: « Tuya smart socket »</p>
+</div></blockquote>
+</li>
+<li><p>manufacturer</p>
 <blockquote>
 <div><p>Nom du fabricant.
 Exemple: « Sonoff »</p>
 </div></blockquote>
 </li>
-<li><p>« model »</p>
+<li><p>model</p>
 <blockquote>
 <div><p>Modèle ou référence exacte du fabricant.
 Exemple: « BASICZBR3 »</p>
 </div></blockquote>
 </li>
-<li><p>« timeout »</p>
-<p>Note: Ce paramètre permet d’initialiser le champ « timeout » de la table Jeedom « eqLogic ».</p>
+<li><p>timeout</p>
+<blockquote>
+<div><p>Durée (en min) au dela de laquelle l’équipement est considéré comme HS si aucune nouvelle de lui.</p>
+</div></blockquote>
 </li>
-<li><p>« Comment »</p></li>
-<li><p>« comment »</p>
+<li><p>comment</p>
 <blockquote>
 <div><p>Permet d’ajouter un commentaire pour cet équipement.</p>
 </div></blockquote>
@@ -149,7 +154,7 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
 <li><p>default</p></li>
 </ul>
 </li>
-<li><p>« configuration »</p>
+<li><p>configuration</p>
 <p>Note: Ce paramètre permet d’initialiser le champ « configuration » de la table Jeedom « eqLogic ».</p>
 <ul>
 <li><p>« uniqId »</p></li>
@@ -159,38 +164,48 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
 <li><p>« mainEP »</p></li>
 <li><p>« paramBatterie »</p></li>
 <li><p>« paramType »</p></li>
+<li><p>battery_type</p>
+<p>Description type de batterie (ex: 1x CR2430 3V)</p>
+</li>
 </ul>
 </li>
-<li><p>« Commandes »:{« include1 »: »cmde1 », « include2 »: »cmd2 », … « includeX »: »cmdX »}</p>
-<p>Liste des commandes supportées. Chaque include correspond à une commande de base existante dans “config/devices/templates”
-- « include1 »: »cmd1 »
+<li><p>Commandes</p>
+<p>« Commandes »:{« include1 »: »cmde1 », « include2 »: »cmd2 », … « includeX »: »cmdX »}</p>
+<p>Liste des commandes supportées. Chaque include correspond à une commande de base existante dans “config/commands”
+- « include1 »: »cmd1 »,
 - …
-- « includeX »: »cmdX »</p>
+- « includeX »: »cmdX »,</p>
 </li>
 </ul>
 </div>
-<div class="section" id="format-de-commande-json">
-<h1>Format de commande (JSON)<a class="headerlink" href="#format-de-commande-json" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="format-fichier-de-commande-json">
+<h1>Format fichier de commande (JSON)<a class="headerlink" href="#format-fichier-de-commande-json" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Ces fichiers se trouvent dans « core/config/commands ».</p>
 <p>Exemple</p>
 <blockquote>
 <div><dl>
 <dt>{</dt><dd><dl>
 <dt>« BindShortToZigateBatterie »: {</dt><dd><p>« isVisible »: 0,
 « name »: « BindShortToZigateBatterie »,
-« order »: 13,
-« isHistorized »: « 0 »,
+« isHistorized »: 0,
 « Type »: « action »,
 « subType »: « other »,
 « invertBinary »: « 0 »,
 « template »: «  »,
 « configuration »: {</p>
 <blockquote>
-<div><p>« uniqId »: « 5c07c76621802 »,
-« topic »: « bindShort »,
+<div><p>« topic »: « bindShort »,
 « request »: « targetExtendedAddress=#addrIEEE#&amp;targetEndpoint=#EP#&amp;ClusterId=0001&amp;reportToAddress=#ZiGateIEEE# »,
 « visibilityCategory »: « Network »,
+« minValue »: « 0 »,
+« maxValue »: « 90 »,
+« historizeRound »: « 0 »,
+« calculValueOffset »: «  »,
 « execAtCreation »: « Yes »,
-« execAtCreationDelay »: « 9 »</p>
+« execAtCreationDelay »: « 9 »,
+« repeatEventManagement »: « always »,
+« visibiltyTemplate »: « 1 »,
+« RefreshData »: « 1 »,</p>
 </div></blockquote>
 <p>},
 « display »: {</p>
@@ -208,21 +223,59 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
 <ul>
 <li><p>Clef d’entrée (BindShortToZigateBatterie)</p>
 <blockquote>
-<div><p>Devient « logicalId » de la commande. N’est pas utilisé aujourd’hui.</p>
+<div><p>Devient « logicalId » de la commande. Il n’est pas forcement en ligne avec le nom du fichier.</p>
 </div></blockquote>
 </li>
-<li><p>« name »</p>
+<li><p>name: OBLIGATOIRE</p>
 <blockquote>
 <div><p>Nom Jeedom de la commande</p>
 </div></blockquote>
 </li>
-<li><p>« configuration »: « topic »</p>
+<li><p>Type &amp; subType: OBLIGATOIRE</p>
 <blockquote>
-<div><p>Nom Abeille de la commande</p>
+<div><p>Type = “info” ou “action”
+subType = “numeric”, “string”, “binary”, “other”</p>
+</div></blockquote>
+</li>
+<li><p>invertBinary: Optionnel. Utilisé par Jeedom pour inverser le résultat d’une commande info du type « binary ».</p>
+<blockquote>
+<div><p>TODO: Devrait etre dans la section « display ».</p>
+</div></blockquote>
+</li>
+<li><p>order: OBSOLETE</p>
+<blockquote>
+<div><p>L’ordre d’affichage des commandes est par défaut celui de leur déclaration dans le fichier de config « équipement ».</p>
+</div></blockquote>
+</li>
+<li><p>configuration</p>
+<blockquote>
+<div><ul>
+<li><p>topic: Nom Abeille de la commande</p></li>
+<li><p>request: parametres associés à “topic”</p></li>
+<li><p>minValue:</p></li>
+<li><p>maxValue:</p></li>
+<li><p>historizeRound: ?</p></li>
+<li><p>calculValueOffset: Indique à Jeedom d’appliquer une formule sur la valeur reçue.</p>
+<blockquote>
+<div><p>Ex: « calculValueOffset »: « #value#/10 »,
+Ex: « calculValueOffset »: « #value#/255*100 »</p>
+</div></blockquote>
+</li>
+<li><p>repeatEventManagement: ?</p></li>
+<li><p>visibiltyTemplate: ? Semble ne pas etre utilisé du tout, ni par Jeedom ni par Abeille.</p></li>
+<li><p>RefreshData: ?</p></li>
+<li><p>uniqId: OBSOLETE</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>display: Options d’affichage optionnelles.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>forceReturnLineAfter: Force le passage à la ligne après l’affichage du widget.</p></li>
+</ul>
 </div></blockquote>
 </li>
 </ul>
-<p>A COMPLETER !!</p>
 </div>
 <div class="section" id="variables-de-personalisation">
 <h1>Variables de personalisation<a class="headerlink" href="#variables-de-personalisation" title="Lien permanent vers ce titre">¶</a></h1>
@@ -384,7 +437,7 @@ ex: « cmdX »: { « use »: « zbGet-0000-Manufacturer », « isHistoriz
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

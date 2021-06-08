@@ -16,9 +16,13 @@ Exemple:
         "automatism": "1"
       },
       "configuration": {
-        "uniqId": "5c07c7dsdssdd6625d94",
         "icone": "BASICZBR3",
         "mainEP": "#EP#"
+        "battery_type": "1x3V CR2032",
+        "lastCommunicationTimeOut": "-1",
+        "mainEP": "#EP#",
+        "paramType": "telecommande",
+        "paramBatterie": "true"
       },
       "Commandes": {
         "include1": "SW",
@@ -70,16 +74,24 @@ Exemple:
 
   Note: Ce paramètre permet d'initialiser le champ "configuration" de la table Jeedom "eqLogic".
 
-  - "uniqId"
-  - "icone"
+  - uniqId
+  - icone
 
     Nom de l'icone associé.
-  - "mainEP"
-  - "paramBatterie"
-  - "paramType"
+  - mainEP
+  - paramType
+
+    - telecommande
+    - telecommande7groups
   - battery_type
 
     Description type de batterie (ex: 1x CR2430 3V)
+  - paramBatterie: ??
+  - lastCommunicationTimeOut: ??
+  - GroupeEPx
+
+    Ex: "GroupeEP1": "1001",
+
 * Commandes
 
   "Commandes":{"include1":"cmde1", "include2":"cmd2", ... "includeX":"cmdX"}

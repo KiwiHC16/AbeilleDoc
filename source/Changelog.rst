@@ -1,6 +1,21 @@
 ChangeLog
 =========
 
+210610-STABLE-3
+----------
+
+- Philips E27 single filament bulb: Ajout modele LWA004
+- Interne: Correction ReadAttributRequest multi attributs
+- Interne: Correction 'zgGetZCLStatus()'
+- Frient SPLZB-132 Smart Plug Mini: Ajout support préliminaire.
+- Interne: Correction eqLogic/configuration. Suppression des champs obsolètes lors de la mise-à-jour de l'équipement.
+- Tuya 4 buttons light switch (ESW-0ZAA-EU): support préliminaire (#1991).
+- Tuya smart socket: Ajout support modele générique 'TS0121__TZ3000_rdtixbnu'.
+- Telecommande virtuelle: Correction regression. Plusieurs télécommandes par zigate à nouveau possible (#2025).
+- Lancement de dépendances: correction erreur (#2026).
+- Exclusion d'un équipement du réseau: En mode dev uniquement. Nouvelle version.
+- Zigate wifi: correction regression.
+
 210607-STABLE-1
 ----------
 

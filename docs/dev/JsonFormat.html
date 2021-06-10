@@ -86,9 +86,13 @@ Ces fichiers se trouvent dans « core/config/devices » ou « core/config/dev
 <p>},
 « configuration »: {</p>
 <blockquote>
-<div><p>« uniqId »: « 5c07c7dsdssdd6625d94 »,
-« icone »: « BASICZBR3 »,
-« mainEP »: « #EP# »</p>
+<div><p>« icone »: « BASICZBR3 »,
+« mainEP »: « #EP# »
+« battery_type »: « 1x3V CR2032 »,
+« lastCommunicationTimeOut »: « -1 »,
+« mainEP »: « #EP# »,
+« paramType »: « telecommande »,
+« paramBatterie »: « true »</p>
 </div></blockquote>
 <p>},
 « Commandes »: {</p>
@@ -157,15 +161,24 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
 <li><p>configuration</p>
 <p>Note: Ce paramètre permet d’initialiser le champ « configuration » de la table Jeedom « eqLogic ».</p>
 <ul>
-<li><p>« uniqId »</p></li>
-<li><p>« icone »</p>
+<li><p>uniqId</p></li>
+<li><p>icone</p>
 <p>Nom de l’icone associé.</p>
 </li>
-<li><p>« mainEP »</p></li>
-<li><p>« paramBatterie »</p></li>
-<li><p>« paramType »</p></li>
+<li><p>mainEP</p></li>
+<li><p>paramType</p>
+<ul class="simple">
+<li><p>telecommande</p></li>
+<li><p>telecommande7groups</p></li>
+</ul>
+</li>
 <li><p>battery_type</p>
 <p>Description type de batterie (ex: 1x CR2430 3V)</p>
+</li>
+<li><p>paramBatterie: ??</p></li>
+<li><p>lastCommunicationTimeOut: ??</p></li>
+<li><p>GroupeEPx</p>
+<p>Ex: « GroupeEP1 »: « 1001 »,</p>
 </li>
 </ul>
 </li>

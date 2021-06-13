@@ -23,6 +23,7 @@ if [ $? -ne 0 ]; then
 fi
 
 # Updating "docs" directory
+# WARNING: This directory must NOT be removed. It contains "products" sub-dir which is NOT auto-generated.
 # Tcharp38 TODO: Better copying new/updated files only & check those to be deleted
 rm -rf docs/_images
 rm -rf docs/_static

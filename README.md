@@ -30,11 +30,3 @@ Structure des repertoires
   Documents pour developpeurs
 - source
   Source des pages du user manual au format 'rst' (ReStrucTurded) à convertir avec Sphinx
-
-  
-  
-A faire
-
-- "docs/products" ne semble pas accessible de l'exterieur. Possible via "blob". Pourquoi ?
-- Virer les docs produits de source/docProduits une fois tous les liens à jour.
-  Les docs produits sont maintenant dans "docs/products" et donc accessible directement.

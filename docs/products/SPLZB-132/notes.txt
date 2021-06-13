@@ -1,0 +1,24 @@
+[2021-06-03 22:42:08] Abeille1, Type=8045/Active endpoints response, SQN=EB, Status=00, Addr=CAD0, EPCount=02, EPList=02/01, [Modelisation]
+
+[2021-06-03 22:42:26] Abeille1, Type=8100/Read individual attribute response, SQN=63, Addr=CAD0, EP=02, ClustId=0000, AttrId=0004, AttrStatus=00, AttrDataType=42, AttrSize=0014
+[2021-06-03 22:42:26]   ManufacturerName='Develco Products A/S', trimmed='DevelcoProductsA/S', {"Abeille1\/CAD0":{"time":1622752946,"ManufacturerName":"DevelcoProductsA\/S"}}, [Modelisation]
+
+[2021-06-03 22:42:12]   ModelIdentifier='SPLZB-132', trimmed='SPLZB-132', [Modelisation]
+
+[2021-06-03 22:42:17] Abeille1, Type=8043/Simple descriptor response, SQN=EF, Status=00, Addr=CAD0, Length=24, EP=02, ProfId=0104/ZigBee Home Automation (ZHA), DevId=0051/Smart Plug, BitField=10, [Modelisation]
+[2021-06-03 22:42:17]   [Modelisation] InClusterCount=09
+[2021-06-03 22:42:17]   [Modelisation] InCluster=0000 - General: Basic
+[2021-06-03 22:42:17]   [Modelisation] InCluster=0702 - Smart Energy: Metering
+[2021-06-03 22:42:17]   [Modelisation] InCluster=0003 - General: Identify
+[2021-06-03 22:42:17]   [Modelisation] InCluster=0009 - General: Alarms
+[2021-06-03 22:42:17]   [Modelisation] InCluster=0B04 - Legrand private
+[2021-06-03 22:42:17]   [Modelisation] InCluster=0006 - General: On/Off
+[2021-06-03 22:42:17]   [Modelisation] InCluster=0004 - General: Groups
+[2021-06-03 22:42:17]   [Modelisation] InCluster=0005 - General: Scenes
+[2021-06-03 22:42:17]   [Modelisation] InCluster=0002 - General: Temperature Config
+[2021-06-03 22:42:17]   [Modelisation] OutClusterCount=05
+[2021-06-03 22:42:17]   [Modelisation] OutCluster=0000 - General: Basic
+[2021-06-03 22:42:17]   [Modelisation] OutCluster=0019 - General: OTA
+[2021-06-03 22:42:17]   [Modelisation] OutCluster=000A - General: Time
+[2021-06-03 22:42:17]   [Modelisation] OutCluster=0003 - General: Identify
+[2021-06-03 22:42:17]   [Modelisation] OutCluster=0406 - Measurement: Occupancy Sensing

@@ -100,6 +100,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#le-processus-d-inclusion">Le processus d’inclusion</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#phase-d-identification">Phase d’identification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#identification-speciale-xiaomi">Identification spéciale Xiaomi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#phase-de-configuration">Phase de configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#phase-de-decouverte">Phase de découverte</a></li>
 </ul>
@@ -635,50 +636,60 @@ Il a été conçu dans un but informatif et de debug et donc ne gère qu’un se
 <img alt="_images/inclusion_process.png" src="_images/inclusion_process.png" />
 <div class="section" id="phase-d-identification">
 <h3>Phase d’identification<a class="headerlink" href="#phase-d-identification" title="Lien permanent vers ce titre">¶</a></h3>
-<ul>
-<li><p>La Zigate est mise en mode inclusion, prête à accepter tout équipement qui se signalera</p></li>
-<li><p>EQ-&gt;Abeille: Un EQ se signale (device announce)</p>
-<blockquote>
-<div><p>C’est ici que l’adresse IEEE et l’adresse courte correspondante sont extraites.</p>
-</div></blockquote>
+<p>La Zigate est mise en mode inclusion, prête à accepter tout équipement qui se signalera.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>EQ-&gt;Abeille: Un EQ se signale (device announce)</dt><dd><p>C’est ici que l’adresse IEEE et l’adresse courte correspondante sont extraites.</p>
+</dd>
+</dl>
 </li>
 <li><p>Abeille-&gt;EQ: Abeille demande la liste des « End Points »</p></li>
-<li><p>Abeille-&gt;EQ: Abeille demande le nom du modèle &amp; fabricant (attributs « ModelIdentifier » &amp; « Manufacturer ») sur le premier EP</p>
-<blockquote>
-<div><p>Accessoirement l’attribut « location » est aussi demandé. Il peut être utile si « ModelIdentifier » n’est pas supporté.</p>
-</div></blockquote>
+<li><dl class="simple">
+<dt>Abeille-&gt;EQ: Abeille demande le nom du modèle &amp; fabricant (attributs « ModelIdentifier » &amp; « Manufacturer ») sur le premier EP</dt><dd><p>Accessoirement l’attribut « location » est aussi demandé. Il peut être utile si « ModelIdentifier » n’est pas supporté.</p>
+</dd>
+</dl>
 </li>
-<li><p>Si attribut « ModelIdentifier » supporté</p>
-<blockquote>
-<div><p>Nom JSON issu de « ModelIdentifier » (suppression des caractéres spéciaux et espaces).
+<li><dl class="simple">
+<dt>Si attribut « ModelIdentifier » supporté</dt><dd><p>Nom JSON extrait de « ModelIdentifier » (suppression des caractéres spéciaux et espaces).
 Les modules « DIY » doivent normalement rentrer dans cette categorie. Bonc bien penser à renseigner leur « ModelIdentifier » dans leur firmware.</p>
-</div></blockquote>
+</dd>
+</dl>
 </li>
-<li><p>Si l’attribut « ModelIdentifier » n’est pas supporté</p>
-<blockquote>
-<div><p>A ce jour peu de cas rencontrés;</p>
-<ul class="simple">
+<li><dl class="simple">
+<dt>Si l’attribut « ModelIdentifier » n’est pas supporté</dt><dd><dl class="simple">
+<dt>A ce jour peu de cas rencontrés;</dt><dd><ul>
 <li><p>Un module DIY de Texas Instrument =&gt; Bug firmware (ModelIdentifier non renseigné).</p></li>
 <li><p>Les volets Profalux =&gt; identifiés par leur attribut « Location ».</p></li>
 </ul>
-</div></blockquote>
+</dd>
+</dl>
+</dd>
+</dl>
 </li>
-<li><p>Si le modèle JSON est connu (fichier JSON trouvé dans core/config/devices) pas d’autre interrogation nécessaire.</p>
-<blockquote>
-<div><p>Tout est supposé être décrit dans le fichier de config JSON.
+<li><dl class="simple">
+<dt>Si le modèle JSON est connu (fichier JSON trouvé dans core/config/devices) pas d’autre interrogation nécessaire.</dt><dd><p>Tout est supposé être décrit dans le fichier de config JSON.
 Passage à la configuration du device (si besoin).</p>
-</div></blockquote>
+</dd>
+</dl>
 </li>
-<li><p>Si le modèle JSON est inconnu:</p>
-<blockquote>
-<div><ul>
-<li><p>Demande la liste des « End Point »</p></li>
-<li><p>Pour chaque EP, demande la liste des clusters supportés</p>
-<p>Ces infos ne sont actuellement pas utilisées par Abeille. Par contre leur trace dans les logs permet de faire le modèle JSON.</p>
+<li><dl class="simple">
+<dt>Si le modèle JSON est inconnu:</dt><dd><ul>
+<li><p>Pour chaque EP, demande la liste des clusters supportés
+Ces infos ne sont actuellement pas utilisées par Abeille mais stockées dans “AbeilleDiscover.log” pour pouvoir créer manuellement le modèle JSON.</p></li>
+</ul>
+</dd>
+</dl>
 </li>
 </ul>
-</div></blockquote>
-</li>
+</div>
+<div class="section" id="identification-speciale-xiaomi">
+<h3>Identification spéciale Xiaomi<a class="headerlink" href="#identification-speciale-xiaomi" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les capteurs Xiaomi V1 ne répondent pas à la requète « Active End points ». La phase d’identification standard ne peut fonctionner dans ces conditions.</p>
+<p>Pour Xiaomi, la phase est modifiée comme suit:</p>
+<ul class="simple">
+<li><p>Pas d’interrogation de la liste des « end points »</p></li>
+<li><p>Demande « modelId » sur EP01</p></li>
+<li><p>Identification en fonction des modèles supportés.</p></li>
 </ul>
 </div>
 <div class="section" id="phase-de-configuration">

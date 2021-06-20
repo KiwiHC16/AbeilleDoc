@@ -1,6 +1,26 @@
 ChangeLog
 =========
 
+210620-STABLE-1
+----------
+
+- SPLZB-132: Correction icone + ajout somme conso.
+- Correction remontée cluster 0B04 (mauvais EP).
+- Orvibo CM10ZW multi functional relay: mise-à-jour icone.
+- Nettoyage de vieux fichiers log au démarrage.
+- Socat: Amélioration pour avoir les messages d'erreur.
+- Interne: Restauration option avancées de récupération des équipements inconnus.
+- Xiaomi v1: Correction regression inclusion. Trick ajouté pour Xiaomi.
+- Orvibo CM10ZW multi functional relay: support préliminaire.
+- Page santé: Correction mauvais affichage du status des zigates.
+- Page equipement/avancé: Possibilité de recharger dernier JSON (et mettre à jour les commandes) sans refaire d'inclusion.
+- Interne: Suppression AbeilleDev.js (mergé dans Abeille.js).
+- Page équipement: Correction rapport d'aspect image (icone).
+- Interne: Parser: Support msg 9999/extended error.
+- Interne: Parser: Qq améliorations découverte nouvel équipement.
+- Interne: SerialRead: Boucle et attend si port disparait au lieu de quitter (#2040).
+- Page gestion: Correction regression groupes.
+
 210610-STABLE-3
 ----------
 

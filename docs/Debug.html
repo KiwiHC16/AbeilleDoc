@@ -6,12 +6,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Debug &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
@@ -77,9 +78,32 @@
 <li><p>Liste des sujets en cours d’investigations: <a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues?utf8=✓&amp;q=is%3Aissue">GitHub Abeille</a></p></li>
 </ul>
 </div>
+<div class="section" id="configuration-jeedom-pour-les-logs">
+<h2>Configuration jeedom pour les logs<a class="headerlink" href="#configuration-jeedom-pour-les-logs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour toute livraison de logs pour besoins de support, il est recommandé de</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Passer le nombre de lignes à 5000 par log (500 par défaut, trop court).</dt><dd><ul>
+<li><p>Reglages &gt; Systeme &gt; Configuration</p></li>
+<li><p>puis Logs et Logs</p></li>
+<li><p>« Nombre de lignes maximum dans un fichier de log » = 5000</p></li>
+<li><p>Sauvegarder</p></li>
+<li><p>Relancer Abeille</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Faire un drag &amp; drop du package fourni par la page support/télécharger tout.</p></li>
+</ul>
+</div>
 <div class="section" id="signaler-un-bug">
 <h2>Signaler un bug<a class="headerlink" href="#signaler-un-bug" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Si vous trouvez un problème qui demande une correction dans le plugin, merci d ouvrir ùne issue &lt;<a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues">https://github.com/KiwiHC16/Abeille/issues</a>&gt;`_  dans GitHub.</p>
+<p>En cas de soucis ou questions n’ayant pas trouvé réponse dans le forum, vous pouvez ici &lt;<a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues">https://github.com/KiwiHC16/Abeille/issues</a>&gt;</p>
+<ul class="simple">
+<li><p>soit compléter un sujet existant correspondant à votre souci</p></li>
+<li><p>soit réouvrir un sujet déja clos si le problème existe toujours</p></li>
+<li><p>ou enfin créer un nouveau sujet.</p></li>
+</ul>
 <p>Si vous ouvrez une « issue » merci de fournir le plus d’information possible et en particulier:</p>
 <dl class="simple">
 <dt>Votre configuration Jeedom:</dt><dd><ul class="simple">
@@ -295,7 +319,7 @@
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

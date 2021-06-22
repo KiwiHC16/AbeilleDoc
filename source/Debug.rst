@@ -10,10 +10,27 @@ Forum
 
 * Liste des sujets en cours d'investigations: `GitHub Abeille <https://github.com/KiwiHC16/Abeille/issues?utf8=✓&q=is%3Aissue>`_
 
+Configuration jeedom pour les logs
+----------------------------------
+
+Pour toute livraison de logs pour besoins de support, il est recommandé de
+
+- Passer le nombre de lignes à 5000 par log (500 par défaut, trop court).
+   - Reglages > Systeme > Configuration
+   - puis Logs et Logs
+   - "Nombre de lignes maximum dans un fichier de log" = 5000
+   - Sauvegarder
+   - Relancer Abeille
+- Faire un drag & drop du package fourni par la page support/télécharger tout.
+
 Signaler un bug
 ---------------
 
-Si vous trouvez un problème qui demande une correction dans le plugin, merci d ouvrir ùne issue <https://github.com/KiwiHC16/Abeille/issues>`_  dans GitHub.
+En cas de soucis ou questions n'ayant pas trouvé réponse dans le forum, vous pouvez ici <https://github.com/KiwiHC16/Abeille/issues>
+
+- soit compléter un sujet existant correspondant à votre souci
+- soit réouvrir un sujet déja clos si le problème existe toujours
+- ou enfin créer un nouveau sujet.
 
 Si vous ouvrez une "issue" merci de fournir le plus d'information possible et en particulier:
 

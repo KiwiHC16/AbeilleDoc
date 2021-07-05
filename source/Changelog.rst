@@ -1,6 +1,30 @@
 ChangeLog
 =========
 
+210704-STABLE-1
+----------
+
+- Modifications syntaxe JSON équipement (avec support rétroactif temporaire):
+  - 'commands' au lieu de 'Commandes'.
+  - 'category' au lieu de 'Categorie'
+  - 'icon' au lieu de 'icone'
+  - 'batteryType' au lieu de 'battery_type'
+- Support JSON equipement: correction pour support multiple categories.
+- Page EQ/avancé: recharger JSON accessible à tous.
+- Page EQ: type de batterie déplacé vers principale.
+- Interne: plusieurs améliorations de robustesse.
+- Interne: Parser: Support des messages longs.
+- Zigate WIFI: Correction & amélioration arret/démarrage démon.
+- Equipement/categories: correction. Effacement categorie résiduelle.
+- Trafri motion sensor: Mise-à-jour JSON pour controle de groupe.
+- Gestion des démons: correctif sur arret forcé (kill).
+- Interne: Parser: affichage erreurs msg_receive().
+- Interne: SerialRead: affichage erreur msg_send().
+- Interne: Serial to parser: Messages trop grands ignores pour ne plus bloquer la pile + message d'erreur.
+- Batterie %: Parser renvoi valeur correcte pour 0001-EPX-0021 + Abeille.class + update JSON (#2056).
+  Peut nécessiter de recharger JSON.
+- Batterie %: Report dans Jeedom de tous les "end points" et pas seulement 01.
+
 210620-STABLE-1
 ----------
 

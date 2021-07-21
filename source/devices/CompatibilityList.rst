@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2021-05-14
+Dernière mise-à-jour le 2021-07-21
 
 Sonoff, SBMINI, Sonoff ZBMINI smart switch
 
@@ -73,6 +73,11 @@ Sonoff, SNZB-02, Sonoff SNZB-02 temp & humidity
 .. image:: images/node_8-digital-output.png
    :width: 200px
 
+Orvibo, CM10ZW, Orvibo multi-functional relay
+
+.. image:: images/node_Orvibo-CM10ZW.png
+   :width: 200px
+
 , , Ampoule Ledvance Classic E27 Tunable White
 
 .. image:: images/node_A60TWZ3.png
@@ -116,6 +121,11 @@ Profalux, BSO, Profalux BSO (brise-soleil orientable)
 , , OSRAM Classic A60 W clear - LIGHTIFY
 
 .. image:: images/node_OSRAMClassicA60Wclear-LIGHTIFY.png
+   :width: 200px
+
+Osram, B40TW, ClassicB40TW-LIGHTIFY
+
+.. image:: images/node_OSRAMClassicE27Dimmable.png
    :width: 200px
 
 , , Legrand Prise Connected Outlet Mural 220V avec Neutre
@@ -333,6 +343,11 @@ Sonoff, SNZB-04, Sonoff SNZB-04 Wireless Door/Window Sensor
 .. image:: images/node_LTA001.png
    :width: 200px
 
+Philips, LWA004, Hue E27 single filament A60 bulb
+
+.. image:: images/node_HueWhite.png
+   :width: 200px
+
 , , Philips Hue Ampoule White 1600lm E27
 
 .. image:: images/node_LWA009.png
@@ -458,7 +473,7 @@ Innr, RB285C, Innr RB285C RGBW bulb colour E27
 .. image:: images/node_RH3001.png
    :width: 200px
 
-, , Hue Telecommande RWL021
+Philips, RWL021, Hue Dimmer Switch RWL021
 
 .. image:: images/node_RWL021.png
    :width: 200px
@@ -491,6 +506,11 @@ Philips, 9290019758, Philips Hue motion sensor
 , , SP220 Innr
 
 .. image:: images/node_SP220.png
+   :width: 200px
+
+Frient, SPLZB-132, Frient Smart Plug Mini Type E (French)
+
+.. image:: images/node_Delveco-SPLZB-132.png
    :width: 200px
 
 , , Eurotronic Spirit
@@ -643,17 +663,17 @@ Ikea, , IKEA Ampoule TRADFRI bulb E27 opal 1000lm
 .. image:: images/node_IkeaTradfriBulbGU10W400lm.png
    :width: 200px
 
-, , IKEA Prise
+Ikea, Several, IKEA control outlet
 
 .. image:: images/node_TRADFRIcontroloutlet.png
    :width: 200px
 
-, , TRADFRI Detecteur de mouvement
+IKEA, E1745, TRADFRI Detecteur de mouvement
 
 .. image:: images/node_TRADFRImotionsensorE1745.png
    :width: 200px
 
-, , TRADFRI Variateur d'intensité
+IKEA, E1743, TRADFRI on/off switch
 
 .. image:: images/node_TRADFRIonoffswitch.png
    :width: 200px
@@ -686,6 +706,11 @@ Ikea, , IKEA Ampoule TRADFRI bulb E27 opal 1000lm
 , , IKEA TRADFRI Dimmer Jaune
 
 .. image:: images/node_IkeaTradfriDimmer.png
+   :width: 200px
+
+Profalux, Télecommande, Profalux télécommande
+
+.. image:: images/node_ProfaluxTelecommande.png
    :width: 200px
 
 , , Zemismart 1 boutons
@@ -743,6 +768,11 @@ Girier, JR-ZDS01, Girier DIY Smart Switch
 .. image:: images/node_LoraTap3GangRemote.png
    :width: 200px
 
+Tuya, ESW-0ZAA-EU, 4 buttons light switch
+
+.. image:: images/node_Tuya4ButtonsSwitch.png
+   :width: 200px
+
 , , Vanne Zigbee 
 
 .. image:: images/node_TS0111.png
@@ -788,6 +818,11 @@ Girier, JR-ZPM01, Girier ZigBee smart plug EU
 .. image:: images/node_Blitzwolf-BW-SHP13.png
    :width: 200px
 
+Tuya, Generic smart socket, Tuya smart socket
+
+.. image:: images/node_TuyaSmartSocket.png
+   :width: 200px
+
 , , Wireless Temperature and Humidity
 
 .. image:: images/node_TS0201.png
@@ -801,6 +836,11 @@ Girier, JR-ZPM01, Girier ZigBee smart plug EU
 , , SM-SW101-CZ
 
 .. image:: images/node_TS0302.png
+   :width: 200px
+
+Tuya, , Tuya DC5V-24V LED controller
+
+.. image:: images/node_FlexRGBW.png
    :width: 200px
 
 , , Silvercrest Ruban a LED
@@ -933,7 +973,7 @@ eWeLight, smart bulb, Tuya smart light GU10
 .. image:: images/node_light.aqcn02.png
    :width: 200px
 
-, , Aqara SmartPlug
+Xiaomi, SP-EUC01 ?, Aqara SmartPlug
 
 .. image:: images/node_plug.maeu01.png
    :width: 200px
@@ -988,7 +1028,12 @@ eWeLight, smart bulb, Tuya smart light GU10
 .. image:: images/node_XiaomiButtonb286acn02.png
    :width: 200px
 
-, , Remote Control Virtuel pour piloter des groupes
+Xiaomi, WXCJKG13LM, Aqara Opple wireless switch 6 buttons
+
+.. image:: images/node_Aqara-Opple-6buttons.png
+   :width: 200px
+
+, , Virtual remote for groups control
 
 .. image:: images/node_remotecontrol.png
    :width: 200px
@@ -1028,12 +1073,12 @@ Xiaomi, GZCGQ01LM, Xiaomi GZCGQ01LM smart light sensor
 .. image:: images/node_XiaomiTemperatureRond.png
    :width: 200px
 
-Xiaomi, MCCGQ11LM, Xiaomi Aquara door sensor
+Xiaomi, MCCGQ11LM, Xiaomi Aqara door sensor
 
 .. image:: images/node_XiaomiPorte.png
    :width: 200px
 
-, , Xiaomi Door Sensor
+Xiaomi, , Xiaomi Door Sensor
 
 .. image:: images/node_XiaomiPorte1.png
    :width: 200px
@@ -1098,12 +1143,12 @@ Xiaomi, , Xiaomi Wall Switch D1 w Neutral 2 Button
 .. image:: images/node_XiaomiVibration.png
    :width: 200px
 
-, , Volet ProFalux
+Profalux, volets, Profalux volet
 
 .. image:: images/node_voletProFalux.png
    :width: 200px
 
-Xiaomi, WSDCGQ11LM, Xiaomi temp/humdity/pressure square sensor
+Xiaomi, WSDCGQ11LM, Xiaomi temp/humidity/pressure square sensor
 
 .. image:: images/node_XiaomiTemperatureCarre.png
    :width: 200px

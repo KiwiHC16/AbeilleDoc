@@ -1,6 +1,40 @@
 ChangeLog
 =========
 
+210719-STABLE-1
+----------
+
+- ATTENTION: Format JSON des fichiers de commande modifié !
+- Osram classic B40TW: support préliminaire.
+- Xiaomi Luminosite: Ajout pourcentage batterie basé sur retour tension (#1166).
+- Interne: cron15 amélioré. Pas d'interrogation si eq appartient à zigate inactive.
+- Inclusion: support revu pour périph qui quitte puis revient sur le réseau.
+- Moniteur: Disponible pour tous et plus seulement en mode dev.
+- Firmware 3.1e disponible pour tous.
+- JSON commandes: Mise-à-jour syntaxe fichier de commande
+  - 'order' supprimé (obsolète)
+  - 'uniqId' supprimé (obsolète)
+  - 'Type' renommé en 'type'
+  - Ajout 'topic' si manquant pour commandes 'info'.
+  - Correction clef top commandes 'info' (clef = nom de fichier).
+- JSON équipements: Support préliminaire pour directive "use"
+  - Ex: "cmd_jeedom_name": { "use": "cmd_file_name", "params": "EP=01" }
+- Page EQ/avancé: ajout du bouton "reconfigurer".
+- Page gestion: suppression du bouton "Apply Settings to NE".
+- Page EQ/avancé: version préliminaire de l'assistant de découverte.
+- Correction ecrasement widget commande (#2075).
+- Interne: plusieurs améliorations pour robustesse et support d'erreurs.
+- Page EQ/avancé: Ajout bouton "interroger table routage"
+- Page EQ/avancé: Ajout bouton "interroger table binding"
+- Page EQ/avancé: Ajout bouton "interroger config reporting"
+- JSON: Syntaxe commandes modifiée. Type 'execAtCreationDelay' changé en 'nombre' et non plus 'string'.
+  Devrait corriger le pb de config de certains equipements à l'inclusion.
+- Correction perte categorie & icone si equipement se réannonce.
+- Correction perte état historisation & affichage des commandes si equipement se réannonce.
+- Correction mise-à-jour commandes IEEE-Addr, Short-Addr & Power-Source sur réannonce.
+- Page santé: Ajout "dernier LQI" à la place de "Date de création".
+- Interne: Meilleur support des JSON avec mainEP=#EP#.
+
 210704-STABLE-1
 ----------
 

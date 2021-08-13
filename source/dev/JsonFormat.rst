@@ -1,30 +1,30 @@
-Format fichier de configuration d'un équipement (JSON)
-------------------------------------------------------
+Format de fichier de configuration d'un équipement (JSON)
+---------------------------------------------------------
 
-Les équipements supportés sont décrits dans des fichiers au format JSON, décrit ci-après.
-Ces fichiers se trouvent dans "core/config/devices" ou "core/config/devices_local" pour les équipements perso/custom ou en cours de développement et non encore inclus dans Abeille.
+Les équipements supportés sont décrits dans des fichiers au format JSON, discuté ci-après.
+Ces fichiers se trouvent dans "core/config/devices" pour les équipement supportés nativement par Abeille ou "core/config/devices_local" pour les équipements perso/custom ou en cours de développement et non encore inclus dans Abeille.
 
-Exemple:
+Exemple::
 
   {
     "BASICZBR3": {
-      "nameJeedom": "Sonoff BASICZBR3 smart switch",
+      "type": "Sonoff BASICZBR3 smart switch",
       "manufacturer": "Sonoff",
       "model": "BASICZBR3",
       "timeout": "60",
-      "Categorie": {
+      "category": {
         "automatism": "1"
       },
       "configuration": {
-        "icone": "BASICZBR3",
+        "icon": "BASICZBR3",
         "mainEP": "#EP#"
-        "battery_type": "1x3V CR2032",
+        "batteryType": "1x3V CR2032",
         "lastCommunicationTimeOut": "-1",
         "mainEP": "#EP#",
         "paramType": "telecommande",
         "paramBatterie": "true"
       },
-      "Commandes": {
+      "commands": {
         "include1": "SW",
         "include2": "societe",
         "include3": "nom",
@@ -40,25 +40,28 @@ Exemple:
     }
   }
 
-* nameJeedom: OBLIGATOIRE
+* type: OBLIGATOIRE (anciennement 'nameJeedom')
 
-    Type d'équipement. Ex: "Tuya smart socket"
-* manufacturer
+  Type d'équipement. Ex: "Tuya smart socket"
+* manufacturer: OBLIGATOIRE
 
-    Nom du fabricant.
-    Exemple: "Sonoff"
-* model
+  Nom du fabricant.
+  Exemple: "Sonoff"
+* model: OBLIGATOIRE
 
-    Modèle ou référence exacte du fabricant.
-    Exemple: "BASICZBR3"
+  Modèle ou référence exacte du fabricant. Exemple: "BASICZBR3"
 * timeout
 
-    Durée (en min) au dela de laquelle l'équipement est considéré comme HS si aucune nouvelle de lui.
+  Durée (en min) au dela de laquelle l'équipement est considéré comme HS si aucune nouvelle de lui.
 
 * comment
 
-    Permet d'ajouter un commentaire pour cet équipement.
-* "Categorie":{"automatism":"1"}
+  Permet d'ajouter un commentaire pour cet équipement.
+* category
+
+  Exemple::
+
+  "category":{"automatism":"1"}
 
   Liste les categories (plusieurs possibles) correspondant à l'équipement.
   Note: Ce paramètre permet d'initialiser le champ "category" de la table Jeedom "eqLogic".
@@ -74,8 +77,7 @@ Exemple:
 
   Note: Ce paramètre permet d'initialiser le champ "configuration" de la table Jeedom "eqLogic".
 
-  - uniqId
-  - icone
+  - icon
 
     Nom de l'icone associé.
   - mainEP
@@ -83,7 +85,7 @@ Exemple:
 
     - telecommande
     - telecommande7groups
-  - battery_type
+  - batteryType: OBLIGATOIRE si équipement sur batterie
 
     Description type de batterie (ex: 1x CR2430 3V)
   - paramBatterie: ??
@@ -92,14 +94,33 @@ Exemple:
 
     Ex: "GroupeEP1": "1001",
 
-* Commandes
+* commands
 
-  "Commandes":{"include1":"cmde1", "include2":"cmd2", ... "includeX":"cmdX"}
+  Exemple::
+
+    "commands": {
+      "include1":"cmde1",
+      "include2":"cmd2",
+      ...
+      "includeX":"cmdX"
+    }
 
   Liste des commandes supportées. Chaque include correspond à une commande de base existante dans 'config/commands'
   - "include1":"cmd1",
   - ...
   - "includeX":"cmdX",
+
+Derniers changements du format de fichier de configuration d'un équipement (JSON)
+---------------------------------------------------------------------------------
+- "manufacturer": Nouveau champ pour le nom du fabricant/vendeur
+- "model": Nouveau champ pour la ref commerciale
+- "configuration": Section supprimée. Tout passe au premier niveau
+- "uniqid": Supprimé.
+- "Categorie" => "category"
+- "Commandes" => "commands" + nouvelle structure
+- "battery_type" => "batteryType"
+- "batteryVolt": Nouvelle clef
+- "icone" => "icon"
 
 Format fichier de commande (JSON)
 ---------------------------------

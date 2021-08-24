@@ -1,6 +1,41 @@
 ChangeLog
 =========
 
+210824-STABLE-1
+----------
+
+- Xiaomi plug EU: JSON revisité (#1578).
+- Interne: SerialRead: Ouverture de port améliorée.
+- Silvercrest HG06337-FR: Ajout prise Lidl (#2053).
+- JSON équipements: amélioration nouvelle syntaxe (ajout 'isVisible' & 'nextLine').
+- Page EQ/avancé: mise-à-jour de l'assistant de découverte.
+- Page config/options avancées: Support defines.
+- Commande JSON 'temperatureLight': correction EP.
+- Aqara Opple 6 boutons (#2048).
+- JSON équipements: tous mis à jour.
+  - 'Categorie' remplacé par 'category'.
+  - 'nameJeedom' remplacé par 'type'.
+  - 'configuration:icone' remplacé par 'configuration:icon'.
+  - mainEP #EP# remplacé par '01'.
+  - 'uniqId' supprimé.
+  - 'Commandes' => 'commands'
+- Profalux: Ajout support nouvelle génération volet (id=MOT-C1Z06C/10C, #2091).
+- Aqara WS-EUK01 H1 wall switch: ajout support préliminaire (#2054).
+- Interne: optimisations AbeilleCmdQueue.
+- Page santé: ajout dernier niveau batterie.
+- Gledopto GL-B-008Z: Correction main EP dans modèle JSON (#2096).
+- Gledopto GL-C-006: Modèle préliminaire (#2092).
+- Interne: Taille queue parser->LQI augmentée à 2048.
+- Interne: Nettoyage: suppression queue obsolete 'queueKeyLQIToAbeille'.
+- Interne: cron15: Lecture ZCLVersion au lieu d'un attribut pas toujours supporté.
+- Page EQ/avancé: ajout bouton lecture attribut.
+- Interne: tools: Amélioration check_json + update_json
+- Modèle JSON telecommande profalux: correction syntaxe type batterie.
+- Collecte LQI: Correctif parser pour routeur avec plus de 10 childs.
+- Interne: Nettoyage: suppression fichier obsolète 'function.php'.
+- JSON: Correction nom 'Konke multi-function button' pour id 3AFE170100510001.
+- Ajout support 'Konke multi-function button' avec id 3AFE280100510001.
+
 210719-STABLE-1
 ----------
 

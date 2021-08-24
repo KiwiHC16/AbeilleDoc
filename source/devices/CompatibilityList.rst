@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2021-07-21
+Dernière mise-à-jour le 2021-08-24
 
 Sonoff, SBMINI, Sonoff ZBMINI smart switch
 
@@ -28,7 +28,12 @@ Sonoff, SBMINI, Sonoff ZBMINI smart switch
 .. image:: images/node_3AFE14010402000D.png
    :width: 200px
 
-, , Xiaomi Interrupteur simple
+Konke, , Konke Multi-function Button
+
+.. image:: images/node_3AFE170100510001.png
+   :width: 200px
+
+Konke, , Konke Multi-function Button
 
 .. image:: images/node_3AFE170100510001.png
    :width: 200px
@@ -178,42 +183,52 @@ Sonoff, SNZB-04, Sonoff SNZB-04 Wireless Door/Window Sensor
 .. image:: images/node_FlexRGBW.png
    :width: 200px
 
-, , GL-B-001Z
+Gledopto, GL-B-001Z, GL-B-001Z 4W Dual White And Color Candle Bulb
 
 .. image:: images/node_GL-B-001Z.png
    :width: 200px
 
-, , GL-B-008Z
+Gledopto, GL-B-008Z, Gledopto GL-B-008Z 12W RGB+Dual White LED Bulb
 
 .. image:: images/node_GL-B-008Z.png
    :width: 200px
 
-, , GLEDOPTO RGT+CCT LED Controller
+Gledopto, GL-C-006, Gledopto WW/CW LED Controller
 
 .. image:: images/node_GL-C-008.png
    :width: 200px
 
-, , GLEDOPTO RGT+CCT LED Controller
+Gledopto, GL-C-007, GLEDOPTO RGT+CCT LED Controller
 
 .. image:: images/node_GL-C-008.png
    :width: 200px
 
-, , GL-G-001ZS
+Gledopto, GL-C-008, GLEDOPTO RGT+CCT LED Controller
+
+.. image:: images/node_GL-C-008.png
+   :width: 200px
+
+Gledopto, GL-G-001ZS, GL-G-001ZS 4W E12/E14 Bulb RGB+CCT
 
 .. image:: images/node_GL-G-001ZS.png
    :width: 200px
 
-, , GLEDOPTO RGT+CCT LED Controller
+Gledopto, GL-C-001, GLEDOPTO RGT+CCT LED Controller
 
 .. image:: images/node_GL-MC-001.png
    :width: 200px
 
-, , GLEDOPTO Couleur
+Gledopto, GL-S-003Z, Gledopto RGBW GU10 5W 300lm
 
 .. image:: images/node_GL-S-003Z.png
    :width: 200px
 
-, , GLEDOPTO Spectre Blanc ref: GL-S-004Z
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+Gledopto, GL-C-004Z, GLEDOPTO Spectre Blanc ref: GL-S-004Z
 
 .. image:: images/node_GL-S-004Z.png
    :width: 200px
@@ -381,6 +396,16 @@ Zemismart, ZW-EC-01, Zemismart ZW-EC-01 curtain switch
 , , ZigBee On Off Controller
 
 .. image:: images/node_Lamp_01.png
+   :width: 200px
+
+Profalux, Volets 2nd gen, Profalux volet gen 2
+
+.. image:: images/node_voletProFalux.png
+   :width: 200px
+
+Profalux, Volets 2nd gen, Profalux volet gen 2
+
+.. image:: images/node_voletProFalux.png
    :width: 200px
 
 , , MR16 TW OSRAM OSRAM Spot LED dimmable connecté Smart
@@ -678,6 +703,11 @@ IKEA, E1743, TRADFRI on/off switch
 .. image:: images/node_TRADFRIonoffswitch.png
    :width: 200px
 
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
 , , IKEA TRADFRI Carre 2 Boutons Remote Control livré avec Fyrtur Store
 
 .. image:: images/node_TRADFRIopencloseremote.png
@@ -793,9 +823,14 @@ Tuya, ESW-0ZAA-EU, 4 buttons light switch
 .. image:: images/node_TS0121.png
    :width: 200px
 
-Silvercrest, TS011F, SILVERCREST Bloc multiprise USB SPSZ 3 A1
+Silvercrest, HG06338-FR, Silvercrest power strip USB SPSZ 3 A1
 
 .. image:: images/node_TS011F__TZ3000_vzopcetz.png
+   :width: 200px
+
+Silvercrest, HG06337-FR, SAPZ-1-A1 connected plug
+
+.. image:: images/node_Silvercrest-HG06337-FR.png
    :width: 200px
 
 , , TS0121
@@ -823,6 +858,11 @@ Tuya, Generic smart socket, Tuya smart socket
 .. image:: images/node_TuyaSmartSocket.png
    :width: 200px
 
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
 , , Wireless Temperature and Humidity
 
 .. image:: images/node_TS0201.png
@@ -846,6 +886,16 @@ Tuya, , Tuya DC5V-24V LED controller
 , , Silvercrest Ruban a LED
 
 .. image:: images/node_FlexRGBW.png
+   :width: 200px
+
+Tuya, , Yandhi E27 Bulb
+
+.. image:: images/node_TRADFRIbulbE27CWSopal600lm.png
+   :width: 200px
+
+Tuya, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 , , Wima Lock
@@ -1134,6 +1184,11 @@ Xiaomi, , Xiaomi Wall Switch D1 w Neutral 2 Button
    :width: 200px
 
 , , Xiaomi MICROMODULE ON/OFF ZIGBEE 3.0 1250W SANS NEUTRE (SSM-U02)
+
+.. image:: images/node_XiaomiPrise.png
+   :width: 200px
+
+Xiaomi, WS-EUK01, Aqara H1 smart wall switch
 
 .. image:: images/node_XiaomiPrise.png
    :width: 200px

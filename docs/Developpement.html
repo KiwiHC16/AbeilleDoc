@@ -111,7 +111,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#lancements-concurrents">Lancements concurrents</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#format-fichier-de-configuration-d-un-equipement-json">Format fichier de configuration d’un équipement (JSON)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#format-de-fichier-de-configuration-d-un-equipement-json">Format de fichier de configuration d’un équipement (JSON)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#derniers-changements-du-format-de-fichier-de-configuration-d-un-equipement-json">Derniers changements du format de fichier de configuration d’un équipement (JSON)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#format-fichier-de-commande-json">Format fichier de commande (JSON)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#variables-de-personalisation">Variables de personalisation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#nouveau-format-d-equipement-json">Nouveau format d’équipement (JSON)</a></li>
@@ -809,85 +810,68 @@ Même si ce dernier vérifie qu’il est le seul, il s’ensuit qu’il s’arre
 Si démon manquand il est relancé. Du coup 1 seule source de (re)lancement et pas de lancement concurrent.</p>
 </div>
 </div>
-<div class="section" id="format-fichier-de-configuration-d-un-equipement-json">
-<h2>Format fichier de configuration d’un équipement (JSON)<a class="headerlink" href="#format-fichier-de-configuration-d-un-equipement-json" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les équipements supportés sont décrits dans des fichiers au format JSON, décrit ci-après.
-Ces fichiers se trouvent dans « core/config/devices » ou « core/config/devices_local » pour les équipements perso/custom ou en cours de développement et non encore inclus dans Abeille.</p>
+<div class="section" id="format-de-fichier-de-configuration-d-un-equipement-json">
+<h2>Format de fichier de configuration d’un équipement (JSON)<a class="headerlink" href="#format-de-fichier-de-configuration-d-un-equipement-json" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les équipements supportés sont décrits dans des fichiers au format JSON, discuté ci-après.
+Ces fichiers se trouvent dans « core/config/devices » pour les équipement supportés nativement par Abeille ou « core/config/devices_local » pour les équipements perso/custom ou en cours de développement et non encore inclus dans Abeille.</p>
 <p>Exemple:</p>
-<blockquote>
-<div><dl>
-<dt>{</dt><dd><dl>
-<dt>« BASICZBR3 »: {</dt><dd><p>« nameJeedom »: « Sonoff BASICZBR3 smart switch »,
-« manufacturer »: « Sonoff »,
-« model »: « BASICZBR3 »,
-« timeout »: « 60 »,
-« Categorie »: {</p>
-<blockquote>
-<div><p>« automatism »: « 1 »</p>
-</div></blockquote>
-<p>},
-« configuration »: {</p>
-<blockquote>
-<div><p>« icone »: « BASICZBR3 »,
-« mainEP »: « #EP# »
-« battery_type »: « 1x3V CR2032 »,
-« lastCommunicationTimeOut »: « -1 »,
-« mainEP »: « #EP# »,
-« paramType »: « telecommande »,
-« paramBatterie »: « true »</p>
-</div></blockquote>
-<p>},
-« Commandes »: {</p>
-<blockquote>
-<div><p>« include1 »: « SW »,
-« include2 »: « societe »,
-« include3 »: « nom »,
-« include4 »: « etat »,
-« include5 »: « On »,
-« include6 »: « Off »,
-« include7 »: « Toggle »,
-« include8 »: « getEtat »,
-« include9 »: « getManufacturerName »,
-« include10 »: « getModelIdentifier »,
-« include13 2 »: « Group-Membership »</p>
-</div></blockquote>
-<p>}</p>
-</dd>
-</dl>
-<p>}</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;BASICZBR3&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Sonoff BASICZBR3 smart switch&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;manufacturer&quot;</span><span class="p">:</span> <span class="s2">&quot;Sonoff&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;BASICZBR3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="s2">&quot;60&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;automatism&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;configuration&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;BASICZBR3&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;mainEP&quot;</span><span class="p">:</span> <span class="s2">&quot;#EP#&quot;</span>
+      <span class="s2">&quot;batteryType&quot;</span><span class="p">:</span> <span class="s2">&quot;1x3V CR2032&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;lastCommunicationTimeOut&quot;</span><span class="p">:</span> <span class="s2">&quot;-1&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;mainEP&quot;</span><span class="p">:</span> <span class="s2">&quot;#EP#&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;paramType&quot;</span><span class="p">:</span> <span class="s2">&quot;telecommande&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;paramBatterie&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;commands&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;include1&quot;</span><span class="p">:</span> <span class="s2">&quot;SW&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;include2&quot;</span><span class="p">:</span> <span class="s2">&quot;societe&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;include3&quot;</span><span class="p">:</span> <span class="s2">&quot;nom&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;include4&quot;</span><span class="p">:</span> <span class="s2">&quot;etat&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;include5&quot;</span><span class="p">:</span> <span class="s2">&quot;On&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;include6&quot;</span><span class="p">:</span> <span class="s2">&quot;Off&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;include7&quot;</span><span class="p">:</span> <span class="s2">&quot;Toggle&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;include8&quot;</span><span class="p">:</span> <span class="s2">&quot;getEtat&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;include9&quot;</span><span class="p">:</span> <span class="s2">&quot;getManufacturerName&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;include10&quot;</span><span class="p">:</span> <span class="s2">&quot;getModelIdentifier&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;include13 2&quot;</span><span class="p">:</span> <span class="s2">&quot;Group-Membership&quot;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <ul>
-<li><p>nameJeedom: OBLIGATOIRE</p>
-<blockquote>
-<div><p>Type d’équipement. Ex: « Tuya smart socket »</p>
-</div></blockquote>
+<li><p>type: OBLIGATOIRE (anciennement “nameJeedom”)</p>
+<p>Type d’équipement. Ex: « Tuya smart socket »</p>
 </li>
-<li><p>manufacturer</p>
-<blockquote>
-<div><p>Nom du fabricant.
+<li><p>manufacturer: OBLIGATOIRE</p>
+<p>Nom du fabricant.
 Exemple: « Sonoff »</p>
-</div></blockquote>
 </li>
-<li><p>model</p>
-<blockquote>
-<div><p>Modèle ou référence exacte du fabricant.
-Exemple: « BASICZBR3 »</p>
-</div></blockquote>
+<li><p>model: OBLIGATOIRE</p>
+<p>Modèle ou référence exacte du fabricant. Exemple: « BASICZBR3 »</p>
 </li>
 <li><p>timeout</p>
-<blockquote>
-<div><p>Durée (en min) au dela de laquelle l’équipement est considéré comme HS si aucune nouvelle de lui.</p>
-</div></blockquote>
+<p>Durée (en min) au dela de laquelle l’équipement est considéré comme HS si aucune nouvelle de lui.</p>
 </li>
 <li><p>comment</p>
-<blockquote>
-<div><p>Permet d’ajouter un commentaire pour cet équipement.</p>
-</div></blockquote>
+<p>Permet d’ajouter un commentaire pour cet équipement.</p>
 </li>
-<li><p>« Categorie »:{« automatism »: »1 »}</p>
+<li><p>category</p>
+<p>Exemple:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;category&quot;</span><span class="p">:{</span><span class="s2">&quot;automatism&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
 <p>Liste les categories (plusieurs possibles) correspondant à l’équipement.
 Note: Ce paramètre permet d’initialiser le champ « category » de la table Jeedom « eqLogic ».</p>
 <ul class="simple">
@@ -903,8 +887,7 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
 <li><p>configuration</p>
 <p>Note: Ce paramètre permet d’initialiser le champ « configuration » de la table Jeedom « eqLogic ».</p>
 <ul>
-<li><p>uniqId</p></li>
-<li><p>icone</p>
+<li><p>icon</p>
 <p>Nom de l’icone associé.</p>
 </li>
 <li><p>mainEP</p></li>
@@ -914,7 +897,7 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
 <li><p>telecommande7groups</p></li>
 </ul>
 </li>
-<li><p>battery_type</p>
+<li><p>batteryType: OBLIGATOIRE si équipement sur batterie</p>
 <p>Description type de batterie (ex: 1x CR2430 3V)</p>
 </li>
 <li><p>paramBatterie: ??</p></li>
@@ -924,13 +907,35 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
 </li>
 </ul>
 </li>
-<li><p>Commandes</p>
-<p>« Commandes »:{« include1 »: »cmde1 », « include2 »: »cmd2 », … « includeX »: »cmdX »}</p>
+<li><p>commands</p>
+<p>Exemple:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;commands&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">&quot;include1&quot;</span><span class="p">:</span><span class="s2">&quot;cmde1&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;include2&quot;</span><span class="p">:</span><span class="s2">&quot;cmd2&quot;</span><span class="p">,</span>
+  <span class="o">...</span>
+  <span class="s2">&quot;includeX&quot;</span><span class="p">:</span><span class="s2">&quot;cmdX&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p>Liste des commandes supportées. Chaque include correspond à une commande de base existante dans “config/commands”
 - « include1 »: »cmd1 »,
 - …
 - « includeX »: »cmdX »,</p>
 </li>
+</ul>
+</div>
+<div class="section" id="derniers-changements-du-format-de-fichier-de-configuration-d-un-equipement-json">
+<h2>Derniers changements du format de fichier de configuration d’un équipement (JSON)<a class="headerlink" href="#derniers-changements-du-format-de-fichier-de-configuration-d-un-equipement-json" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p>« manufacturer »: Nouveau champ pour le nom du fabricant/vendeur</p></li>
+<li><p>« model »: Nouveau champ pour la ref commerciale</p></li>
+<li><p>« configuration »: Section supprimée. Tout passe au premier niveau</p></li>
+<li><p>« uniqid »: Supprimé.</p></li>
+<li><p>« Categorie » =&gt; « category »</p></li>
+<li><p>« Commandes » =&gt; « commands » + nouvelle structure</p></li>
+<li><p>« battery_type » =&gt; « batteryType »</p></li>
+<li><p>« batteryVolt »: Nouvelle clef</p></li>
+<li><p>« icone » =&gt; « icon »</p></li>
 </ul>
 </div>
 <div class="section" id="format-fichier-de-commande-json">

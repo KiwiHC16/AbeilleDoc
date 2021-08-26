@@ -6,9 +6,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Debug &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -33,7 +33,7 @@
   <h3 id="searchlabel">Recherche rapide</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -49,6 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements supportés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AjoutNouvelEquipement.html">Nouvel équipement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
@@ -146,9 +147,9 @@
 <li><p>Verifier la configuration réseau et en particulier /hostname, /etc/hosts</p></li>
 <li><p>Vérifier la configuration du plugin. Par exemple le message suivant indique très probablement que l’objet de rattachement de l’équipement Ruche n’est pas défini.</p></li>
 </ul>
-<div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">[MySQL] Error code : 23000 (1452). Cannot add or update a child row: a foreign key constraint fails (`Jeedom`.`eqLogic`, CONSTRAINT `fk_eqLogic_object1` FOREIGN KEY (`object_id`) REFERENCES `object` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">[MySQL] Error code : 23000 (1452). Cannot add or update a child row: a foreign key constraint fails (`Jeedom`.`eqLogic`, CONSTRAINT `fk_eqLogic_object1` FOREIGN KEY (`object_id`) REFERENCES `object` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 </div>
 <div class="section" id="connection">
@@ -173,43 +174,36 @@
 <li><p>Tester la Zigate en ligne de commande (ssh)</p></li>
 </ul>
 <p>On envoie</p>
-<div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">stty -F/dev/ttyUSB0 115200 &lt;1&gt;</span>
-<span class="x">echo -ne &#39;\x01\x02\x10\x49\x02\x10\x02\x14\xb0\xff\xfc\xfe\x02\x10\x03&#39; &gt; /dev/ttyUSB0 &lt;2&gt;</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">stty -F/dev/ttyUSB0 115200 &lt;1&gt;</span>
+<span class="linenos">2</span><span class="x">echo -ne &#39;\x01\x02\x10\x49\x02\x10\x02\x14\xb0\xff\xfc\xfe\x02\x10\x03&#39; &gt; /dev/ttyUSB0 &lt;2&gt;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>&lt;1&gt; On configure le port série</p>
 <p>&lt;2&gt; On demande à la zigate de se mettre en inclusion.</p>
 <p>(Cela peut être fait alors que le plugin est Zigate fonctionnent).</p>
 <p>Cette commande demande à la Zigate de se mettre en Inclusion, vous devriez voir la LED bleu se mettre à clignoter et dans le log AbeilleParser vous devriez voir passer un message comme:</p>
-<div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">AbeilleParser 2018-02-28 04:21:32[DEBUG]-------------- 2018-02-28 04:21:32: protocolData size(20) message &gt; 12 char</span>
-<span class="x">AbeilleParser 2018-02-28 04:21:32[DEBUG]Type: 8000 quality: 00</span>
-<span class="x">AbeilleParser 2018-02-28 04:21:32[DEBUG]type: 8000 (Status)(Not Processed)</span>
-<span class="x">AbeilleParser 2018-02-28 04:21:32[DEBUG]Length: 5</span>
-<span class="x">AbeilleParser 2018-02-28 04:21:32[DEBUG]Status: 00-(Success)</span>
-<span class="x">AbeilleParser 2018-02-28 04:21:32[DEBUG]SQN: b8</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">AbeilleParser 2018-02-28 04:21:32[DEBUG]-------------- 2018-02-28 04:21:32: protocolData size(20) message &gt; 12 char</span>
+<span class="linenos">2</span><span class="x">AbeilleParser 2018-02-28 04:21:32[DEBUG]Type: 8000 quality: 00</span>
+<span class="linenos">3</span><span class="x">AbeilleParser 2018-02-28 04:21:32[DEBUG]type: 8000 (Status)(Not Processed)</span>
+<span class="linenos">4</span><span class="x">AbeilleParser 2018-02-28 04:21:32[DEBUG]Length: 5</span>
+<span class="linenos">5</span><span class="x">AbeilleParser 2018-02-28 04:21:32[DEBUG]Status: 00-(Success)</span>
+<span class="linenos">6</span><span class="x">AbeilleParser 2018-02-28 04:21:32[DEBUG]SQN: b8</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>Si la LED bleue clignote cela confirme que le dialogue Abeille vers Zigate fonctionne.</p>
 <p>PS: la configuration du port peu varier d’un système à l’autre donc il peut être nécesaire de jouer avec stty en rajoutant les arguments raw, cs8, -parenb et autres.</p>
 </div>
 <div class="section" id="quatrieme-test">
 <h2>Quatrième test<a class="headerlink" href="#quatrieme-test" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Arretez le plugin Abeille. Lancer la commande dans un terminal (Ecoute):</p>
-<div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">cat /dev/ttyUSB0 | hexdump -vC</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">cat /dev/ttyUSB0 | hexdump -vC</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>Dans un second terminal envoyez la commande</p>
-<div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">stty -F/dev/ttyUSB0 115200</span>
-<span class="x">echo -ne &#39;\x01\x02\x10\x49\x02\x10\x02\x14\xb0\xff\xfc\xfe\x02\x10\x03&#39; &gt; /dev/ttyUSB0</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">stty -F/dev/ttyUSB0 115200</span>
+<span class="linenos">2</span><span class="x">echo -ne &#39;\x01\x02\x10\x49\x02\x10\x02\x14\xb0\xff\xfc\xfe\x02\x10\x03&#39; &gt; /dev/ttyUSB0</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>Dans le premier terminal (Ecoute) vous devriez voir passer du traffic comme:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">www-data@Abeille:~/html/log$ cat /dev/ttyUSB0 | hexdump -vC</span>
 <span class="x">00000000  01 80 02 10 02 10 02 15  77 02 10 bb 02 10 49 02  |........w.....I.|</span>
@@ -318,7 +312,7 @@
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

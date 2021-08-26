@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suppression &#8212; Documentation Abeille 11.02.2021</title>
+    <title>Nouvel équipement &#8212; Documentation Abeille 11.02.2021</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -15,6 +15,8 @@
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Installation" href="Installation.html" />
+    <link rel="prev" title="Xiaomi" href="devices/Xiaomi.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -42,14 +44,19 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="devices/Xiaomi.html" title="Chapitre précédent">Xiaomi</a></li>
+      <li>Next: <a href="Installation.html" title="Chapitre suivant">Installation</a></li>
   </ul></li>
 </ul>
 </div><h3>Navigation</h3>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements supportés</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AjoutNouvelEquipement.html">Nouvel équipement</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Nouvel équipement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#assistant-de-decouverte">Assistant de découverte</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
@@ -68,42 +75,20 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="suppression">
-<h1>Suppression<a class="headerlink" href="#suppression" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Pour la suppression d’un équipement il faut comprendre qu’il y a deux niveaux:
-- ZigBee
-- Abeille/Jeedom</p>
-<p>Lors de l’inclusion l’équipement a été inclu dans le réseau zigbee par la zigate puis une répresentation a été ajouté dans Abeille/Jeedom.
-Les deux sont indépendants.</p>
-<div class="section" id="suppression-du-reseau-zigbee">
-<h2>Suppression du réseau ZigBee<a class="headerlink" href="#suppression-du-reseau-zigbee" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Si vous ne voulez plus utiliser un équipement vous pouvez le sortir du réseau ZigBee en utilisant une commande spécifique de la ruche.</p>
+  <div class="section" id="nouvel-equipement">
+<h1>Nouvel équipement<a class="headerlink" href="#nouvel-equipement" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="assistant-de-decouverte">
+<h2>Assistant de découverte<a class="headerlink" href="#assistant-de-decouverte" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Cet assistant est en version beta mais permet néanmoins d’interroger l’équipement pour collecter un maximum d’informations sur les services qu’il propose.</p>
+<img alt="_images/Assistant-zigbee-1.png" src="_images/Assistant-zigbee-1.png" />
+<p>Le but du jeu est d’essayer de remplir chacune des lignes. Si cela n’est pas fait automatiquement alors forcer l’interrogation via le bouton de raffraichissement associé, en commencant par « End points ».</p>
+<p>ATTENTION: Pour les équipements sur batterie ces interrogations sont plus compliquées car il faut reveiller d’une manière ou d’une autre l’équipement à chaque requète. Les équipements sur batterie ne sont en effet pas en mode « écoute » en permanence justement pour augmenter leur autonomie.</p>
+<p>NOTE: Il se peut que malgré tout un équipement ne renvoi pas d’info, par exemple la liste des attributs pour un cluster XXXX. Ca arrive. Tous les équipements ne respectent pas forcement toutes les regles Zigbee. Dans ce cas il faudra proceder autrement … A COMPLETER.</p>
+<p>Une fois cette interrogation terminée,</p>
 <ul class="simple">
-<li><p>Ouvrez la ruche</p></li>
-<li><p>rendez la visible</p></li>
-<li><p>allez sur le dashboard pour voir la ruche</p></li>
-<li><p>trouvez la commande Remove</p></li>
+<li><p>créer un sujet spécifique (si il n’existe pas déja) du type « Ajout support MARQUE MODEL »: <a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues">https://github.com/KiwiHC16/Abeille/issues</a></p></li>
+<li><p>et fournir le fichier « discovery.json » zippé (drag &amp; drop)</p></li>
 </ul>
-<img alt="_images/Capture_d_ecran_2019_08_19_a_13_59_59.png" src="_images/Capture_d_ecran_2019_08_19_a_13_59_59.png" />
-<p>Renseignez l’adresse IEEE est faite « Remove ».</p>
-<p>L’équipement doit répondre en indiquant qu’il a quitté le réseau zigbee. En consequence, l’equipement  sera desactivé dans Abeille.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Pour obtenir l’adresse IEEE d’un équipement, ouvrez la page commande de celui ci et faites « tester » sur la commande IEEE.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Pour les équipements sur pile, il est necessaire de le réveiller avant de lui envoyer le « remove ».</p>
-</div>
-</div>
-<div class="section" id="suppression-d-abeille-jeedom">
-<h2>Suppression d’Abeille/Jeedom<a class="headerlink" href="#suppression-d-abeille-jeedom" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Suite à la suppression du réseau zigbee, l’équipement doit apparaitre desactivé. Vous pouvez le supprimer avec le bouton rouge « Supprimer » dans Jeedom.</p>
-<img alt="_images/Capture_d_ecran_2019_08_19_a_14_06_49.png" src="_images/Capture_d_ecran_2019_08_19_a_14_06_49.png" />
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Vous pouvez garder l’équipement dans Abeille/Jeedom si vous le souhaitez. Si vous le re-incluez dans le reseau zigbee, il sera de nouveau pilotable sans n’avoir rien perdu.</p>
-</div>
 </div>
 </div>
 

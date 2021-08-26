@@ -8,6 +8,7 @@
    Bienvenu
    Presentation
    Equipements
+   AjoutNouvelEquipement
    Installation
    Utilisation
    UtilisationAvancee

@@ -6,9 +6,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Santé &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -33,7 +33,7 @@
   <h3 id="searchlabel">Recherche rapide</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -49,6 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements supportés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AjoutNouvelEquipement.html">Nouvel équipement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
@@ -119,21 +120,15 @@ Si un équipement est en timeout il peut y avoir plein de raison. Voici quelques
 <p>Alerte sur communications</p>
 <p>Si un équipement possède un timeout défini alors des alertes peuvent être définies.</p>
 <p>Pour les developpeurs, Il faut par exemple dans le fichier modele json avoir:</p>
-<div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">{</span>
-<span class="x">&quot;Classic A60 RGBW&quot;: {</span>
-<span class="x">&quot;nameJeedom&quot;: &quot;Classic A60 RGB W&quot;,</span>
-<span class="x">&quot;timeout&quot;: &quot;60&quot;,</span>
-<span class="x">&quot;Categorie&quot;: {</span>
-<span class="x">&quot;automatism&quot;: &quot;1&quot;</span>
-<span class="x">},</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">{</span>
+<span class="linenos">2</span><span class="x">&quot;Classic A60 RGBW&quot;: {</span>
+<span class="linenos">3</span><span class="x">&quot;nameJeedom&quot;: &quot;Classic A60 RGB W&quot;,</span>
+<span class="linenos">4</span><span class="x">&quot;timeout&quot;: &quot;60&quot;,</span>
+<span class="linenos">5</span><span class="x">&quot;Categorie&quot;: {</span>
+<span class="linenos">6</span><span class="x">&quot;automatism&quot;: &quot;1&quot;</span>
+<span class="linenos">7</span><span class="x">},</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>Pour les utilisateurs, le TimeOut est visible dans l’équipement dans le tab « Equipement » sous le nom « Time Out (min) ».</p>
 <p>Le TimeOt peut être vérifié dans l’équipement:</p>
 <img alt="_images/Capture_d_ecran_2019_03_15_a_11_46_00.png" src="_images/Capture_d_ecran_2019_03_15_a_11_46_00.png" />
@@ -184,24 +179,19 @@ Si un équipement est en timeout il peut y avoir plein de raison. Voici quelques
 <h4>Parametres<a class="headerlink" href="#parametres" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Parametres internes au script</p>
 <p>Lorsque vous allez éditer le script dans les étapes suivantes, vous trouverez les lignes suivanted en début de script:</p>
-<div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">$minBattery = 30; // Taux d&#39;usage de la batterie pour générer une alarme.</span>
-<span class="x">$maxTime    = 24 * 60 * 60; // temps en seconde, temps max depuis la derniere remontée d&#39;info de cet équipement</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">$minBattery = 30; // Taux d&#39;usage de la batterie pour générer une alarme.</span>
+<span class="linenos">2</span><span class="x">$maxTime    = 24 * 60 * 60; // temps en seconde, temps max depuis la derniere remontée d&#39;info de cet équipement</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>A vous de mettre, les valeurs qui conviennent à votre systeme.</p>
 <p>Juste après vous trouverez:</p>
-<div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">// Liste des équipements à ignorer</span>
-<span class="x">$excludeEq = array(</span>
-<span class="x">&quot;[Abeille][Ruche]&quot; =&gt; 1,</span>
-<span class="x">&quot;[Abeille][CheckEquipementsWithBatteries]&quot; =&gt; 1,  // L objet du script lui-meme</span>
-<span class="x">);</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">// Liste des équipements à ignorer</span>
+<span class="linenos">2</span><span class="x">$excludeEq = array(</span>
+<span class="linenos">3</span><span class="x">&quot;[Abeille][Ruche]&quot; =&gt; 1,</span>
+<span class="linenos">4</span><span class="x">&quot;[Abeille][CheckEquipementsWithBatteries]&quot; =&gt; 1,  // L objet du script lui-meme</span>
+<span class="linenos">5</span><span class="x">);</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>C’est le tableau qui contient la liste des Equipements qu’il ne faut pas prendre en compte. Par exemple ici l’objet ruche et l’objet script (c’est à dire lui-même).</p>
 </div>
 </div>
@@ -245,7 +235,7 @@ Si un équipement est en timeout il peut y avoir plein de raison. Voici quelques
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

@@ -6,9 +6,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Le moniteur &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -33,7 +33,7 @@
   <h3 id="searchlabel">Recherche rapide</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -49,6 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Bienvenu.html">Bienvenu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Equipements.html">Equipements supportés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AjoutNouvelEquipement.html">Nouvel équipement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Utilisation.html">Utilisation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../UtilisationAvancee.html">Utilisation avancée</a></li>
@@ -101,16 +102,16 @@ Il a été conçu dans un but informatif et de debug et donc ne gère qu’un se
 <li><p>reçoit les messages reçus de l’équipement (AbeilleParser -&gt; AbeilleMonitor)</p></li>
 <li><p>informe AbeilleCmd que l’adresse à surveiller à changé suite à un « device announce » (AbeilleMonitor -&gt; AbeilleCmd)</p></li>
 </ul>
-<img alt="dev\images/MonitorTopView.png" src="dev\images/MonitorTopView.png" />
+<img alt="dev/images/MonitorTopView.png" src="dev/images/MonitorTopView.png" />
 </div>
 <div class="section" id="utilisation">
 <h2>Utilisation<a class="headerlink" href="#utilisation" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Rappel: Le moniteur n’est accessible qu’en mode « developpeur ».</p>
 <p>Le bouton « surveiller » est visible sur la page de gestion d’Abeille.</p>
-<img alt="dev\images/MonitorHowToStart.png" src="dev\images/MonitorHowToStart.png" />
+<img alt="dev/images/MonitorHowToStart.png" src="dev/images/MonitorHowToStart.png" />
 <p>Il suffit de selectionner l’équipement à surveiller et cliquer sur « surveiller » pour activer le moniteur sur cet EQ.
 « AbeilleMonitor.log » devrait alors apparaitre dans l’ensemble des logs de la page de config.</p>
-<img alt="dev\images/MonitorLog.png" src="dev\images/MonitorLog.png" />
+<img alt="dev/images/MonitorLog.png" src="dev/images/MonitorLog.png" />
 </div>
 <div class="section" id="points-manquants">
 <h2>Points manquants<a class="headerlink" href="#points-manquants" title="Lien permanent vers ce titre">¶</a></h2>
@@ -132,7 +133,7 @@ Il a été conçu dans un but informatif et de debug et donc ne gère qu’un se
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

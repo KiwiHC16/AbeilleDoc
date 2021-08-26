@@ -6,9 +6,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Radio &#8212; Documentation Abeille 11.02.2021</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -33,7 +33,7 @@
   <h3 id="searchlabel">Recherche rapide</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -49,6 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements supportés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AjoutNouvelEquipement.html">Nouvel équipement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
@@ -216,41 +217,27 @@ Le deuxième graphe est le LQI en fonction de la distance à vol d’oiseau.</p>
 <p>Dans le menu déroulent le premier champ permet de filtrer les enregistrement qui ont pour adresse de source la valeur sélectionnée. Idem pour le deuxième champ mais pour l’adresse destination. Et enfin le dernier champ permet d’afficher la valeur du champ In ou du champ Out. La valeur In ou Out est la dernière valeur trouvée dans le fichier json lors de son analyse.</p>
 <p>Evidement la configuration est celle de mon réseau de prod et de mon réseau de test donc il vous faut déclarer votre propre réseau dans le fichier NetworkDefinition.php.</p>
 <p>Dans le tableau knowNE mettre l’adresse courte suivie du nom de l’équipement:</p>
-<div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">$knownNE = array(</span>
-<span class="x">&quot;0000&quot; =&gt; &quot;Ruche&quot;,         // 00:15:8d:00:01:b2:2e:24 00158d0001b22e24 -&gt; Production</span>
-<span class="x">// 00:01:58:d0:00:19:1b:22 000158d000191b22 -&gt; Test</span>
-<span class="x">// Abeille Prod JeedomZwave</span>
-<span class="x">&quot;dc15&quot; =&gt; &quot;T1&quot;,            // 00:0B:57:ff:fe:49:0D:bf 000B57fffe490Dbf</span>
-<span class="x">&quot;1e8c&quot; =&gt; &quot;T2&quot;,</span>
-<span class="x">&quot;174f&quot; =&gt; &quot;T3&quot;,            // 00:0b:57:ff:fe:49:10:ea</span>
-<span class="x">&quot;6766&quot; =&gt; &quot;T4&quot;,</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">$knownNE = array(</span>
+<span class="linenos">2</span><span class="x">&quot;0000&quot; =&gt; &quot;Ruche&quot;,         // 00:15:8d:00:01:b2:2e:24 00158d0001b22e24 -&gt; Production</span>
+<span class="linenos">3</span><span class="x">// 00:01:58:d0:00:19:1b:22 000158d000191b22 -&gt; Test</span>
+<span class="linenos">4</span><span class="x">// Abeille Prod JeedomZwave</span>
+<span class="linenos">5</span><span class="x">&quot;dc15&quot; =&gt; &quot;T1&quot;,            // 00:0B:57:ff:fe:49:0D:bf 000B57fffe490Dbf</span>
+<span class="linenos">6</span><span class="x">&quot;1e8c&quot; =&gt; &quot;T2&quot;,</span>
+<span class="linenos">7</span><span class="x">&quot;174f&quot; =&gt; &quot;T3&quot;,            // 00:0b:57:ff:fe:49:10:ea</span>
+<span class="linenos">8</span><span class="x">&quot;6766&quot; =&gt; &quot;T4&quot;,</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>Puis dans le tableau Abeilles, définissez les coordonnées de chaque équipements:</p>
-<div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">$Abeilles = array(</span>
-<span class="x">&#39;Ruche&#39;    =&gt; array(&#39;position&#39; =&gt; array( &#39;x&#39;=&gt;700, &#39;y&#39;=&gt;520), &#39;color&#39;=&gt;&#39;red&#39;,),</span>
-<span class="x">// Abeille Prod JeedomZwave</span>
-<span class="x">// Terrasse</span>
-<span class="x">&#39;T1&#39;       =&gt; array(&#39;position&#39; =&gt; array( &#39;x&#39;=&gt;300, &#39;y&#39;=&gt;450), &#39;color&#39;=&gt;&#39;orange&#39;,),</span>
-<span class="x">&#39;T2&#39;       =&gt; array(&#39;position&#39; =&gt; array( &#39;x&#39;=&gt;400, &#39;y&#39;=&gt;450), &#39;color&#39;=&gt;&#39;orange&#39;,),</span>
-<span class="x">&#39;T3&#39;       =&gt; array(&#39;position&#39; =&gt; array( &#39;x&#39;=&gt;450, &#39;y&#39;=&gt;350), &#39;color&#39;=&gt;&#39;orange&#39;,),</span>
-<span class="x">&#39;T4&#39;       =&gt; array(&#39;position&#39; =&gt; array( &#39;x&#39;=&gt;450, &#39;y&#39;=&gt;250), &#39;color&#39;=&gt;&#39;orange&#39;,),</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">$Abeilles = array(</span>
+<span class="linenos">2</span><span class="x">&#39;Ruche&#39;    =&gt; array(&#39;position&#39; =&gt; array( &#39;x&#39;=&gt;700, &#39;y&#39;=&gt;520), &#39;color&#39;=&gt;&#39;red&#39;,),</span>
+<span class="linenos">3</span><span class="x">// Abeille Prod JeedomZwave</span>
+<span class="linenos">4</span><span class="x">// Terrasse</span>
+<span class="linenos">5</span><span class="x">&#39;T1&#39;       =&gt; array(&#39;position&#39; =&gt; array( &#39;x&#39;=&gt;300, &#39;y&#39;=&gt;450), &#39;color&#39;=&gt;&#39;orange&#39;,),</span>
+<span class="linenos">6</span><span class="x">&#39;T2&#39;       =&gt; array(&#39;position&#39; =&gt; array( &#39;x&#39;=&gt;400, &#39;y&#39;=&gt;450), &#39;color&#39;=&gt;&#39;orange&#39;,),</span>
+<span class="linenos">7</span><span class="x">&#39;T3&#39;       =&gt; array(&#39;position&#39; =&gt; array( &#39;x&#39;=&gt;450, &#39;y&#39;=&gt;350), &#39;color&#39;=&gt;&#39;orange&#39;,),</span>
+<span class="linenos">8</span><span class="x">&#39;T4&#39;       =&gt; array(&#39;position&#39; =&gt; array( &#39;x&#39;=&gt;450, &#39;y&#39;=&gt;250), &#39;color&#39;=&gt;&#39;orange&#39;,),</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <div class="section" id="routes">
 <span id="radio-routes"></span><h3>Routes<a class="headerlink" href="#routes" title="Lien permanent vers ce titre">¶</a></h3>
@@ -258,27 +245,18 @@ Le deuxième graphe est le LQI en fonction de la distance à vol d’oiseau.</p>
 <p>L’organisation du routage suit des règles définies dans la norme ZigBee. Chaque équipement contient dans la stack ZigBee les taches relatives au routage. Tout est automatique et rien n’est accessible à l’utilisateur final. Une liaison radio en milieu ouvert va faire disons 20m maximum. Et sauf erreur un message est capable d’être routé 30 fois (il faudrait vérifier cette valeur). Ca permet de faire un réseau de 600m de rayon autour du coordinateur.</p>
 <p>Sauf que…</p>
 <p>Je me suis retrouvé avec des prises outdoor Osram qui refusaient de fonctionner correctement. Apres investigation il s’avère que le routage entre équipement de marque différentes ne se passe pas forcement très bien. Voici un recap des scenarii testés et les résultats:</p>
-<div class="highlight-php notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">ZiGate - Ampoule Ikea  - Ampoule Ikea: Ok</span>
-<span class="x">ZiGate - Ampoule Ikea - Prise Osram: NOK</span>
-<span class="x">ZiGate - Prise Xiaomi - Ampoule Ikea: Ok</span>
-<span class="x">ZiGate - Prise Xiaomi - Prise Osram: NOK</span>
-<span class="x">ZiGate - Prise Osram - Ampoule Ikea: Ok</span>
-<span class="x">ZiGate - Prise Osram - Prise Osram: Ok</span>
-<span class="x">ZiGate - Module GledOpto Ruban - Ampoule Ikea: Ok</span>
-<span class="x">ZiGate - Module GledOpto Ruban - Prise Osram: NOK</span>
-<span class="x">ZiGate - Ampoule Osram Couleur - Ampoule Ikea: Ok</span>
-<span class="x">ZiGate - Ampoule Osram Couleur - Prise Osram: Ok</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="x">ZiGate - Ampoule Ikea  - Ampoule Ikea: Ok</span>
+<span class="linenos"> 2</span><span class="x">ZiGate - Ampoule Ikea - Prise Osram: NOK</span>
+<span class="linenos"> 3</span><span class="x">ZiGate - Prise Xiaomi - Ampoule Ikea: Ok</span>
+<span class="linenos"> 4</span><span class="x">ZiGate - Prise Xiaomi - Prise Osram: NOK</span>
+<span class="linenos"> 5</span><span class="x">ZiGate - Prise Osram - Ampoule Ikea: Ok</span>
+<span class="linenos"> 6</span><span class="x">ZiGate - Prise Osram - Prise Osram: Ok</span>
+<span class="linenos"> 7</span><span class="x">ZiGate - Module GledOpto Ruban - Ampoule Ikea: Ok</span>
+<span class="linenos"> 8</span><span class="x">ZiGate - Module GledOpto Ruban - Prise Osram: NOK</span>
+<span class="linenos"> 9</span><span class="x">ZiGate - Ampoule Osram Couleur - Ampoule Ikea: Ok</span>
+<span class="linenos">10</span><span class="x">ZiGate - Ampoule Osram Couleur - Prise Osram: Ok</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>Dans le cas présent les prises OSRAM utilisent des messages différents des autres équipements pour mettre en place le routage. Visiblement ces messages (qui semble ok pour Wireshark) ne sont pas compris par les autres types d’équipements donc le routage ne peut pas se mettre en place, et donc les équipements finaux ne peuvent être joins.</p>
 <p>Alors pour monter le mesh il faut vérifier que les équipements sont compatibles même si en théorie les routeurs routent, en pratique…</p>
 </div>
@@ -297,7 +275,7 @@ Le deuxième graphe est le LQI en fonction de la distance à vol d’oiseau.</p>
       &copy;2019-21, KiwiHC16.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

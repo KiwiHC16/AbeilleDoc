@@ -12,9 +12,10 @@
    Utilisation
    UtilisationAvancee
    AjoutNouvelEquipement
-   Debug
-   DIY
+   FAQ
    Divers
+   DIY
+   Debug
    Developpement
    Changelog
 

@@ -1,8 +1,19 @@
-Nouvel équipement
-=================
+Ajout d'un nouvel équipement
+============================
 
-Assistant de découverte
------------------------
+Cette étape consiste à créer le fichier de configuration au format JSON pour l'ajouter à ceux déja supportés et disponibles dans "core/config/devices".
+
+Rapidement, un tel fichier va contenir
+
+- des infos d'identification
+- sa description
+- le nom de l'icone à associer
+- et une liste de commandes Jeedom à créer lors de l'inclusion
+
+Pour plus de détails sur le contenu d'un tel fichier voir "LISZEMOI.txt" dans "core/config/devices".
+
+Assistant de découverte zigbee
+------------------------------
 
 Cet assistant est en version beta mais permet néanmoins d'interroger l'équipement pour collecter un maximum d'informations sur les services qu'il propose.
 

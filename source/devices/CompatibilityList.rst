@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2021-08-24
+Dernière mise-à-jour le 2021-09-17
 
 Sonoff, SBMINI, Sonoff ZBMINI smart switch
 
@@ -103,7 +103,7 @@ Profalux, BSO, Profalux BSO (brise-soleil orientable)
 .. image:: images/node_CLA60RGBWOSRAM.png
    :width: 200px
 
-, , CLA60 TW OSRAM
+Osram, , Osram CLA60 TW
 
 .. image:: images/node_OSRAMClassicE27Dimmable.png
    :width: 200px
@@ -111,6 +111,11 @@ Profalux, BSO, Profalux BSO (brise-soleil orientable)
 , , Heiman HS1CA (détecteur de monoxyde de carbone)
 
 .. image:: images/node_COSensor-EM.png
+   :width: 200px
+
+, , Legrand Cable Outlet 3000W
+
+.. image:: images/node_Legrand-Cableoutlet.png
    :width: 200px
 
 , , Classic A60 RGB W
@@ -138,6 +143,16 @@ Osram, B40TW, ClassicB40TW-LIGHTIFY
 .. image:: images/node_Connectedoutlet.png
    :width: 200px
 
+Niko, , Niko connected outlet socket
+
+.. image:: images/node_Connectedoutlet.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
 , , Legrand Contactor 20AX
 
 .. image:: images/node_Contactor.png
@@ -145,7 +160,7 @@ Osram, B40TW, ClassicB40TW-LIGHTIFY
 
 , , DIYRuZ_RT
 
-.. image:: images/node_DIYRuZ_RT.png
+.. image:: images/node_defaultUnknown.png
    :width: 200px
 
 Sonoff, SNZB-04, Sonoff SNZB-04 Wireless Door/Window Sensor
@@ -260,7 +275,7 @@ Gledopto, GL-C-004Z, GLEDOPTO Spectre Blanc ref: GL-S-004Z
 
 , , KiwiHC16_Test_01
 
-.. image:: images/node_KiwiHC16_Test_01.png
+.. image:: images/node_defaultUnknown.png
    :width: 200px
 
 , , ampoule philips hue couleur
@@ -398,6 +413,16 @@ Zemismart, ZW-EC-01, Zemismart ZW-EC-01 curtain switch
 .. image:: images/node_Lamp_01.png
    :width: 200px
 
+Osram, Smart+ switch mini, Osram Smart+ Switch Mini
+
+.. image:: images/node_Osram-SwitchMini.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
 Profalux, Volets 2nd gen, Profalux volet gen 2
 
 .. image:: images/node_voletProFalux.png
@@ -533,6 +558,11 @@ Philips, 9290019758, Philips Hue motion sensor
 .. image:: images/node_SP220.png
    :width: 200px
 
+Frient, SPLZB-131, Frient Smart Plug Mini Type F
+
+.. image:: images/node_Delveco-SPLZB-132.png
+   :width: 200px
+
 Frient, SPLZB-132, Frient Smart Plug Mini Type E (French)
 
 .. image:: images/node_Delveco-SPLZB-132.png
@@ -630,7 +660,7 @@ Ikea, , IKEA Ampoule TRADFRI bulb E27 Color White Spectre Opal 600lm
 
 Ikea, , TRADFRI bulb E27 WS clear 806lm
 
-.. image:: images/node_TRADFRIbulbE27WSclear806lm.png
+.. image:: images/node_defaultUnknown.png
    :width: 200px
 
 Ikea, , TRADFRI bulb E27 WS clear 950lm
@@ -775,7 +805,7 @@ Girier, JR-ZDS01, Girier DIY Smart Switch
 
 , , Yagusmart Tuya ZigBee Smart Switch 3 Bang
 
-.. image:: images/node_TS0013.png
+.. image:: images/node_defaultUnknown.png
    :width: 200px
 
 , , Zemismart Remote 1 bouton sur pile
@@ -783,9 +813,9 @@ Girier, JR-ZDS01, Girier DIY Smart Switch
 .. image:: images/node_TS0041.png
    :width: 200px
 
-, , Zemismart Remote 2 boutons sur pile
+Zemismart, YC-ZS-LO3C-A, Zemismart 2 buttons wireless switch
 
-.. image:: images/node_TS0042.png
+.. image:: images/node_Zemismart-2ButtonsSwitch.png
    :width: 200px
 
 , , Switch Zemismart TS0043 3 boutons sur piles
@@ -796,6 +826,11 @@ Girier, JR-ZDS01, Girier DIY Smart Switch
 , , LoraTap Remote 3 boutons sur piles
 
 .. image:: images/node_LoraTap3GangRemote.png
+   :width: 200px
+
+Tuya, , Tuya 4 buttons Zigbee scene switch
+
+.. image:: images/node_Tuya4ButtonsSceneSwitch.png
    :width: 200px
 
 Tuya, ESW-0ZAA-EU, 4 buttons light switch
@@ -840,7 +875,7 @@ Silvercrest, HG06337-FR, SAPZ-1-A1 connected plug
 
 , , Prise Tuya
 
-.. image:: images/node_PriseTuya.png
+.. image:: images/node_defaultUnknown.png
    :width: 200px
 
 Girier, JR-ZPM01, Girier ZigBee smart plug EU
@@ -868,9 +903,14 @@ Tuya, Generic smart socket, Tuya smart socket
 .. image:: images/node_TS0201.png
    :width: 200px
 
-, , Capteur d'ouverture de porte Tuya zemismart TS0203
+Zemismart, ZXZDS, Zemismart door & window sensor
 
-.. image:: images/node_TS0203.png
+.. image:: images/node_Zemismart-DoorSensor.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 , , SM-SW101-CZ
@@ -893,11 +933,6 @@ Tuya, , Yandhi E27 Bulb
 .. image:: images/node_TRADFRIbulbE27CWSopal600lm.png
    :width: 200px
 
-Tuya, , 
-
-.. image:: images/node_.png
-   :width: 200px
-
 , , Wima Lock
 
 .. image:: images/node_TY0A01.png
@@ -905,7 +940,7 @@ Tuya, ,
 
 , , Legrand Teleruptor
 
-.. image:: images/node_Teleruptor.png
+.. image:: images/node_defaultUnknown.png
    :width: 200px
 
 Sonoff, SNZB-01, Sonoff SNZB-01 wireless button
@@ -935,7 +970,7 @@ eWeLight, smart bulb, Tuya smart light GU10
 
 , , ZB-RGBCW
 
-.. image:: images/node_ZB-RGBCW.png
+.. image:: images/node_defaultUnknown.png
    :width: 200px
 
 , , ZLL-DimmableLigh
@@ -1060,7 +1095,7 @@ Xiaomi, SP-EUC01 ?, Aqara SmartPlug
 
 , , Xiaomi Interrupteur Mural Carré Simple
 
-.. image:: images/node_XiaomiButtonb186acn02.png
+.. image:: images/node_defaultUnknown.png
    :width: 200px
 
 , , Xiaomi Bouton Aqara 2 Copy
@@ -1230,7 +1265,7 @@ Xiaomi, WSDCGQ11LM, Xiaomi temp/humidity/pressure square sensor
 
 , , zigbeeIASZone
 
-.. image:: images/node_.png
+.. image:: images/node_defaultUnknown.png
    :width: 200px
 
 , , Template for ZigBee - Non Color Scene Controller
@@ -1245,7 +1280,7 @@ Xiaomi, WSDCGQ11LM, Xiaomi temp/humidity/pressure square sensor
 
 , , zigbeeOccupencySensor
 
-.. image:: images/node_.png
+.. image:: images/node_defaultUnknown.png
    :width: 200px
 
 , , zigbeeOnOffLight

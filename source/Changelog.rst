@@ -1,6 +1,54 @@
 ChangeLog
 =========
 
+210916-STABLE-1
+----------
+
+- JSON commandes: 'trig' revu + 'trigOffset' ajouté.
+- Niko connected socket: ajout support (#2003).
+- JSON commandes: suppression de qq cmds obsoletes.
+- Interne: Optimisation parser: transfert groupé d'attributs.
+- Interne: Link-Quality mis à jour sur attribut report.
+- JSON équipements: Mise-à-jour commandes pourcentage batterie.
+- Tuya inter 4 buttons: mise-à-jour support 'click' (#2122).
+- Interne: Améliorations parser + robustesse.
+- Correction regression: crash pendant l'inclusion (#2125).
+- Zemismart TS0042 2 buttons (#1272).
+- Interne: Parser: Modificaiton support custom single/double/long click pour Tuya.
+- Tuya 4 buttons scene switch: Mise-à-jour modèle (#2122).
+- Ajout FW 3.1e Optimized PDM + 3.20 legacy + 3.20 Optimized PDM
+- Osram CLA60 TW: Correction end point par défaut (#2117).
+- Tuya contact sensor TS0203: Ajout reporting batterie (#1270).
+- Tuya 4 buttons scene switch: Ajout support (#2122).
+- Correction mauvais message: "ATTENTION: config locale utilisée ...".
+- Interne: Améliorations parser.
+
+210905-STABLE-1
+----------
+
+- Améliorations assistant EQ.
+- Interne: Séquence de démarrage revisitée pour #2093.
+- Améliorations assistant EQ.
+- Interne: SerialRead, mise-à-jour pour "permission denied".
+- Frient SPLZB-131: Support préliminaire.
+- Legrand Cable outlet: Ajout support préliminaire (#850). Manque controle fil pilote.
+- All JSON: 'configuration:battery_type' => 'configuration:batteryType'.
+- Assistant: Ajout doc préliminaire pour découverte Zigbee.
+- Interne: Séquence de démarrage revisitée pour #2093.
+- Page config/options avancées: possibilité de bloquer requetes LQI journalieres.
+- Assistant de découverte: améliorations.
+- Interne: Collecte LQI: Mise-à-jour mineure.
+- Interne: Parser: Amélioration robustesse.
+- Ajout support Controleur Tuya LED DC5-24V (#2082).
+- Ajout Ampoule YANDHI E27 (#2087)
+- JSON équipements: tous modifiés
+  - SW & getSWBuild => SWBuildID & Get-SWBuildID
+- Interne: Ajout commande générique 'configureReporting'.
+- Page gestion: Bouton 'exclure' pour tous.
+- JSON commandes: suppression de commandes obsolètes.
+- GL-S-003Z: Fichier JSON. Correction end point + divers (#2104).
+- Page EQ/avancé: ajout possibilité interroger LQI (Mgmt_Lqi_req).
+
 210824-STABLE-1
 ----------
 

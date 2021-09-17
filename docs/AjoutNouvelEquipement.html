@@ -15,7 +15,7 @@
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Debug" href="Debug.html" />
+    <link rel="next" title="Questions fréquentes" href="FAQ.html" />
     <link rel="prev" title="Utilisation avancée" href="UtilisationAvancee.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -45,7 +45,7 @@
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="UtilisationAvancee.html" title="Chapitre précédent">Utilisation avancée</a></li>
-      <li>Next: <a href="Debug.html" title="Chapitre suivant">Debug</a></li>
+      <li>Next: <a href="FAQ.html" title="Chapitre suivant">Questions fréquentes</a></li>
   </ul></li>
 </ul>
 </div><h3>Navigation</h3>
@@ -60,9 +60,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#assistant-de-decouverte-zigbee">Assistant de découverte zigbee</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Debug.html">Debug</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions fréquentes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Debug.html">Debug</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Changelog.html">ChangeLog</a></li>
 </ul>
@@ -84,20 +85,21 @@
 <li><p>des infos d’identification</p></li>
 <li><p>sa description</p></li>
 <li><p>le nom de l’icone à associer</p></li>
-<li><p>et une liste de commandes Jeedom à créer lors de l’inclusion</p></li>
+<li><p>et une liste de commandes Jeedom à créer lors de l’inclusion dont celles à exécuter lors de l’inclusion pour la configuration de l’équipement</p></li>
 </ul>
-<p>Pour plus de détails sur le contenu d’un tel fichier voir « LISZEMOI.txt » dans « core/config/devices ».</p>
+<p>Pour plus de détails sur le contenu d’un tel fichier voir « LISEZMOI.txt » dans « core/config/devices ».</p>
 <div class="section" id="assistant-de-decouverte-zigbee">
 <h2>Assistant de découverte zigbee<a class="headerlink" href="#assistant-de-decouverte-zigbee" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Cet assistant est en version beta mais permet néanmoins d’interroger l’équipement pour collecter un maximum d’informations sur les services qu’il propose.</p>
+<p>Le but du jeu est d’essayer d’avoir une réponse pour chacune des lignes. Celui ci passera en VERT si une réponse a été reçue, sinon restera en ORANGE.
+Si cela n’est pas fait automatiquement alors forcer l’interrogation via le bouton de raffraichissement associé, en commencant par « End points ».</p>
 <img alt="_images/Assistant-zigbee-1.png" src="_images/Assistant-zigbee-1.png" />
-<p>Le but du jeu est d’essayer de remplir chacune des lignes. Si cela n’est pas fait automatiquement alors forcer l’interrogation via le bouton de raffraichissement associé, en commencant par « End points ».</p>
-<p>ATTENTION: Pour les équipements sur batterie ces interrogations sont plus compliquées car il faut reveiller d’une manière ou d’une autre l’équipement à chaque requète. Les équipements sur batterie ne sont en effet pas en mode « écoute » en permanence justement pour augmenter leur autonomie.</p>
+<p>ATTENTION: Pour les équipements sur batterie ces interrogations sont plus compliquées car il faut reveiller d’une manière ou d’une autre l’équipement. Les équipements sur batterie ne sont en effet pas en mode « écoute » en permanence justement pour augmenter leur autonomie.</p>
 <p>NOTE: Il se peut que malgré tout un équipement ne renvoi pas d’info, par exemple la liste des attributs pour un cluster XXXX. Ca arrive. Tous les équipements ne respectent pas forcement toutes les regles Zigbee. Dans ce cas il faudra proceder autrement … A COMPLETER.</p>
 <p>Une fois cette interrogation terminée,</p>
 <ul class="simple">
 <li><p>créer un sujet spécifique (si il n’existe pas déja) du type « Ajout support MARQUE MODEL »: <a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues">https://github.com/KiwiHC16/Abeille/issues</a></p></li>
-<li><p>et fournir le fichier « discovery.json » zippé (drag &amp; drop)</p></li>
+<li><p>et fournir le fichier « discovery.json » zippé en “.zip” puis drag &amp; drop</p></li>
 </ul>
 </div>
 </div>

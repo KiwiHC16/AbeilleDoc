@@ -16,7 +16,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="ChangeLog" href="Changelog.html" />
-    <link rel="prev" title="Divers" href="Divers.html" />
+    <link rel="prev" title="Debug" href="Debug.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -44,7 +44,7 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="Divers.html" title="Chapitre précédent">Divers</a></li>
+      <li>Previous: <a href="Debug.html" title="Chapitre précédent">Debug</a></li>
       <li>Next: <a href="Changelog.html" title="Chapitre suivant">ChangeLog</a></li>
   </ul></li>
 </ul>
@@ -53,12 +53,14 @@
 <li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements supportés</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AjoutNouvelEquipement.html">Nouvel équipement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AjoutNouvelEquipement.html">Ajout d’un nouvel équipement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions fréquentes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Debug.html">Debug</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Developpement</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#grandes-lignes">Grandes lignes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#vue-generale">Vue générale</a></li>
@@ -89,6 +91,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#format-de-la-db-jeedom">Format de la DB Jeedom</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-table-config">Configuration (table config)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#equipement-table-eqlogic">Equipement (table eqLogic)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#commandes-table-cmd">Commandes (table cmd)</a></li>
 </ul>
@@ -497,8 +500,41 @@ $this-&gt;msgToCmd(“CmdAbeille1/”.$SrcAddr.”/IEEE_Address_request”, “s
 <div class="section" id="format-de-la-db-jeedom">
 <h2>Format de la DB Jeedom<a class="headerlink" href="#format-de-la-db-jeedom" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Ce chapitre décrit le format de la database Jeedom appliqué au plugin « Abeille ».</p>
-<p>EN COURS DE CONSTRUCTION !!!
-Derniere update: 07/jul/21</p>
+<p>CE DOCUMENT EST INCOMPLET !!!
+Derniere update: 19/sep/21</p>
+<div class="section" id="configuration-table-config">
+<h3>Configuration (table config)<a class="headerlink" href="#configuration-table-config" title="Lien permanent vers ce titre">¶</a></h3>
+<ul>
+<li><p>plugin: « Abeille »</p></li>
+<li><p>key</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>AbeilleActiver1 .. 10: Indique si la Zigate X est activée.</p></li>
+<li><p>AbeilleIEEE_Ok1 .. 10: Indique si la vérification de l’adresse IEEE est correcte pour éviter les switchs de port.</p></li>
+<li><p>AbeilleIEEE1 .. 10: Adresse IEEE de la Zigate X.</p></li>
+<li><p>AbeilleParentId: Objet parent par défaut utilisé lors de l’inclusion d’un nouvel équipement.</p></li>
+<li><p>AbeilleSerialPort1 .. 10: port (ex: /dev/ttyS1)</p></li>
+<li><p>AbeilleType1 .. 10: Type de Zigate X.</p></li>
+<li><p>active</p></li>
+<li><p>agressifTraitementAnnonce</p></li>
+<li><p>blocageRecuperationEquipement</p></li>
+<li><p>blocageTraitementAnnonce</p></li>
+<li><p>DbVersion</p></li>
+<li><p>deamonAutoMode</p></li>
+<li><p>deamonRestartNumber</p></li>
+<li><p>IpWifiZigate1 .. 10</p></li>
+<li><p>lastDeamonLaunchTime</p></li>
+<li><p>lastDependancyInstallTime</p></li>
+<li><p>monitor: ID de l’équipement à surveiller par AbeilleMonitor.</p></li>
+<li><p>preventLQIRequest: Option avancée pour empecher (si “yes”) les requètes LQI à minuit. Certains équipements rebootent suite à ça.</p></li>
+<li><p>state</p></li>
+<li><p>zigateNb: Nombre de zigates installé.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>value</p></li>
+</ul>
+</div>
 <div class="section" id="equipement-table-eqlogic">
 <h3>Equipement (table eqLogic)<a class="headerlink" href="#equipement-table-eqlogic" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
@@ -518,6 +554,7 @@ Derniere update: 07/jul/21</p>
 <li><p>updatetime: mis-à-jour par Jeedom à chaque changement de la configuration.</p></li>
 <li><p>calculValueOffset: utilisé par Jeedom (cmd.class.php). Ex: « calculValueOffset »: »#value#*10 »</p></li>
 <li><p>batterytime: mis-à-jour par Jeedom</p></li>
+<li><p>ab::jsonLocation: Localisation du JSON (officiel=Abeille, custom/user=local)</p></li>
 </ul>
 </li>
 <li><p>isVisible</p></li>

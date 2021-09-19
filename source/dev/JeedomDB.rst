@@ -3,8 +3,36 @@ Format de la DB Jeedom
 
 Ce chapitre décrit le format de la database Jeedom appliqué au plugin "Abeille".
 
-EN COURS DE CONSTRUCTION !!!
-Derniere update: 07/jul/21
+CE DOCUMENT EST INCOMPLET !!!
+Derniere update: 19/sep/21
+
+Configuration (table config)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- plugin: "Abeille"
+- key
+
+    - AbeilleActiver1 .. 10: Indique si la Zigate X est activée.
+    - AbeilleIEEE_Ok1 .. 10: Indique si la vérification de l'adresse IEEE est correcte pour éviter les switchs de port.
+    - AbeilleIEEE1 .. 10: Adresse IEEE de la Zigate X.
+    - AbeilleParentId: Objet parent par défaut utilisé lors de l'inclusion d'un nouvel équipement.
+    - AbeilleSerialPort1 .. 10: port (ex: /dev/ttyS1)
+    - AbeilleType1 .. 10: Type de Zigate X.
+    - active
+    - agressifTraitementAnnonce
+    - blocageRecuperationEquipement
+    - blocageTraitementAnnonce
+    - DbVersion
+    - deamonAutoMode
+    - deamonRestartNumber
+    - IpWifiZigate1 .. 10
+    - lastDeamonLaunchTime
+    - lastDependancyInstallTime
+    - monitor: ID de l'équipement à surveiller par AbeilleMonitor.
+    - preventLQIRequest: Option avancée pour empecher (si 'yes') les requètes LQI à minuit. Certains équipements rebootent suite à ça.
+    - state
+    - zigateNb: Nombre de zigates installé.
+- value
 
 Equipement (table eqLogic)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -22,6 +50,7 @@ Equipement (table eqLogic)
   - updatetime: mis-à-jour par Jeedom à chaque changement de la configuration.
   - calculValueOffset: utilisé par Jeedom (cmd.class.php). Ex: "calculValueOffset":"#value#*10"
   - batterytime: mis-à-jour par Jeedom
+  - ab::jsonLocation: Localisation du JSON (officiel=Abeille, custom/user=local)
 - isVisible
 - isEnable
 - status

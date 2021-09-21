@@ -15,6 +15,11 @@ Pour plus de détails sur le contenu d'un tel fichier voir "LISEZMOI.txt" dans "
 Assistant de découverte zigbee
 ------------------------------
 
+L'assistant de découverte est accessible en
+- cliquant sur l'équipement
+- onglet "avancé"
+- puis "Assistant de découverte: Ouvrir"
+
 Cet assistant est en version beta mais permet néanmoins d'interroger l'équipement pour collecter un maximum d'informations sur les services qu'il propose.
 
 Le but du jeu est d'essayer d'avoir une réponse pour chacune des lignes. Celui ci passera en VERT si une réponse a été reçue, sinon restera en ORANGE.

@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2021-09-17
+Dernière mise-à-jour le 2021-09-22
 
 Sonoff, SBMINI, Sonoff ZBMINI smart switch
 
@@ -563,9 +563,19 @@ Frient, SPLZB-131, Frient Smart Plug Mini Type F
 .. image:: images/node_Delveco-SPLZB-132.png
    :width: 200px
 
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
 Frient, SPLZB-132, Frient Smart Plug Mini Type E (French)
 
 .. image:: images/node_Delveco-SPLZB-132.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 , , Eurotronic Spirit
@@ -621,6 +631,16 @@ Sonoff, SNZB-02, Sonoff SNZB-02 temp & humidity
 , , TRADFRI Shortcut Button
 
 .. image:: images/node_TRADFRISHORTCUTButton.png
+   :width: 200px
+
+Ikea, LED 470 lm 5.2W E14, IKEA TRADFRI LED 470 lm 5.2W E14
+
+.. image:: images/node_TRADFRIbulbE14CWSopal600lm.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 Ikea, , IKEA Ampoule TRADFRI bulb E14 Color White Spectre Opal 600lm
@@ -701,6 +721,11 @@ Ikea, , IKEA Ampoule TRADFRI bulb E27 opal 1000lm2
 Ikea, , IKEA Ampoule TRADFRI bulb E27 opal 1000lm
 
 .. image:: images/node_IkeaTradfriBulbE27Opal1000lm.png
+   :width: 200px
+
+Ikea, TRADFRI bulb GU10 CWS 345lm, TRADFRI bulb GU10 CWS 345lm
+
+.. image:: images/node_TRADFRIbulbE14CWSopal600lm.png
    :width: 200px
 
 , , IKEA Ampoule TRADFRI bulb GU10 W 400lm
@@ -823,9 +848,14 @@ Zemismart, YC-ZS-LO3C-A, Zemismart 2 buttons wireless switch
 .. image:: images/node_TS0043.png
    :width: 200px
 
-, , LoraTap Remote 3 boutons sur piles
+LoraTap, SS600ZB, LoraTap Zigbee 3 gang remote
 
 .. image:: images/node_LoraTap3GangRemote.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 Tuya, , Tuya 4 buttons Zigbee scene switch
@@ -996,6 +1026,11 @@ eWeLight, smart bulb, Tuya smart light GU10
 , , ZLO-OccupancySensor for Dev
 
 .. image:: images/node_ZLO-OccupancySensor.png
+   :width: 200px
+
+Xiaomi Aqara, AAQS-S01, Aqara AAQS-S01 TVOC air quality monitor
+
+.. image:: images/node_Connectedoutlet.png
    :width: 200px
 
 , , Xiaomi Prise Murale Encastrée
@@ -1218,7 +1253,12 @@ Xiaomi, , Xiaomi Wall Switch D1 w Neutral 2 Button
 .. image:: images/node_switch_b2nacn02.png
    :width: 200px
 
-, , Xiaomi MICROMODULE ON/OFF ZIGBEE 3.0 1250W SANS NEUTRE (SSM-U02)
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+Xiaomi, SSM-U02, Xiaomi Single Switch Module T1 (No Neutral)
 
 .. image:: images/node_XiaomiPrise.png
    :width: 200px

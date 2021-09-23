@@ -50,6 +50,7 @@ Equipement (table eqLogic)
   - updatetime: mis-à-jour par Jeedom à chaque changement de la configuration.
   - calculValueOffset: utilisé par Jeedom (cmd.class.php). Ex: "calculValueOffset":"#value#*10"
   - batterytime: mis-à-jour par Jeedom
+  - battery_type: Utilisé par Jeedom. Mis à jour par Abeille à partir de "batteryType" du JSON.
   - ab::jsonLocation: Localisation du JSON (officiel=Abeille, custom/user=local)
 - isVisible
 - isEnable

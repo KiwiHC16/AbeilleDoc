@@ -23,6 +23,24 @@ Pour toute livraison de logs pour besoins de support, il est recommandé de
    - Relancer Abeille
 - Faire un drag & drop du package fourni par la page support/télécharger tout.
 
+Accès à la base de données Jeedom
+---------------------------------
+
+Acceder à la database Jeedom qui stocke les équipement ou commandes peut être utile pour le debug.
+
+L'accès se fait via le menu "Réglages", puis "Système" et "Configuration".
+
+.. image:: images/MenuReglagesSystemeConfig.png
+
+puis "_OS/DB" et enfin "Administration Base de données"
+
+.. image:: images/BoutonAdminBD.png
+
+Affichage des commandes
+
+.. image:: images/Db-SelectCmd.png
+
+
 Signaler un bug
 ---------------
 

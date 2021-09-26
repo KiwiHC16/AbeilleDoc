@@ -61,7 +61,7 @@ Note: Tous les noms de répertoire en **ANGLAIS** et en **MINUSCULES**
     * Abeille.config.php: Constantes principales du plugin.
     * **devices**: Fichiers JSON des équipements supportés
     * **devices_local**: Fichiers JSON des équipements NON supportés
-    
+
       Il s'agit des équipements "custom" ou en cours de developpement. Ces fichiers sont locaux et ne sont pas effacés par Abeille.
     * **commands**: Fichiers JSON des commandes
   * **php** : dossier pouvant contenir des fonctions ne devant pas forcément appartenir à une classe (souvent utilisé pour permettre l’inclusion de multiples classes ou fichiers de configuration en une fois)
@@ -111,7 +111,6 @@ Propositions à discuter
 .. include:: dev/UpdateProcess.rst
 .. include:: dev/Messages.rst
 .. include:: dev/JeedomDB.rst
-.. include:: dev/Monitor.rst
 .. include:: dev/InclusionProcess.rst
 .. include:: dev/DaemonsManagement.rst
 .. include:: dev/JsonFormat.rst

@@ -25,23 +25,8 @@ Exemple sur un équipement qui ne répond pas::
 [2021-03-24 18:30:36] <= 8011/APS data ACK, Status=A7, Addr=8AB7, EP=01, ClustId=0000
 [2021-03-24 18:30:37] <= 8702/APS data confirm fail, Status=F0/MAC_ENUM_TRANSACTION_EXPIRED, SrcEP=01, DestEP=01, Addr
 
-Ce moniteur n'est actuellement accessible qu'aux developpeurs (mode dev activé) !!
-
-Vue d'ensemble
-~~~~~~~~~~~~~~
-
-Le moniteur utilise 3 queues de messages pour dialoguer avec AbeilleCmd & AbeilleParser:
-
-- reçoit les messages envoyés vers l'equipement (AbeilleCmd -> AbeilleMonitor)
-- reçoit les messages reçus de l'équipement (AbeilleParser -> AbeilleMonitor)
-- informe AbeilleCmd que l'adresse à surveiller à changé suite à un "device announce" (AbeilleMonitor -> AbeilleCmd)
-
-.. image:: images/MonitorTopView.png
-
 Utilisation
 ~~~~~~~~~~~
-
-Rappel: Le moniteur n'est accessible qu'en mode "developpeur".
 
 Le bouton "surveiller" est visible sur la page de gestion d'Abeille.
 
@@ -51,6 +36,17 @@ Il suffit de selectionner l'équipement à surveiller et cliquer sur "surveiller
 "AbeilleMonitor.log" devrait alors apparaitre dans l'ensemble des logs de la page de config.
 
 .. image:: images/MonitorLog.png
+
+Dans le détail
+~~~~~~~~~~~~~~
+
+Le moniteur utilise 3 queues de messages pour dialoguer avec AbeilleCmd & AbeilleParser:
+
+- reçoit les messages envoyés vers l'equipement (AbeilleCmd -> AbeilleMonitor)
+- reçoit les messages reçus de l'équipement (AbeilleParser -> AbeilleMonitor)
+- informe AbeilleCmd que l'adresse à surveiller à changé suite à un "device announce" (AbeilleMonitor -> AbeilleCmd)
+
+.. image:: images/MonitorTopView.png
 
 Points manquants
 ~~~~~~~~~~~~~~~~

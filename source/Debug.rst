@@ -40,6 +40,7 @@ Affichage des commandes
 
 .. image:: images/Db-SelectCmd.png
 
+.. include:: debug/Monitor.rst
 
 Signaler un bug
 ---------------

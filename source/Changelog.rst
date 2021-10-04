@@ -1,8 +1,73 @@
 ChangeLog
 =========
 
+211004-BETA-1
+-------------
+
+- Page EQ/avancé: correction bouton 'reconfiguer' + amélioration message.
+- Interne: Zigbee const: corrections pour éviter warning PHP.
+- Page équipements: Suppression zone developpeur (bas de page).
+- Page EQ/avancé: Ajout interrogation des 'Active end points'.
+- Interne: Parser: decodeDataType() revu pour types 41 & 42.
+- Interne: Procedure d'inclusion avec support "cas speciaux".
+- Suppression log obsolete AbeilleParser (sans '.log') lors de la mise-à-jour/installation.
+- Page équipement: Message si équipement à disparu depuis l'ouverture de la page.
+- Interne: Parser: Support remontée commandes du cluster 0300 en provenance d'un équipement.
+- Osram smart switch mini: Mise-à-jour. Ne supporte que le controle vers Jeedom.
+
+211004-STABLE-1
+---------------
+
+- Correction mauvaise config lors de l'inclusion si #IEEE# ou #ZigateIEEE# utilisé.
+- Page santé: correction IEEE manquante pour Ruche.
+- Inclusion: Correction pour vieux équipements type Xiaomi (ne repond pas à lecture attribut manufacturer).
+- Interne: Identification périph revisitée.
+- Assistant Zigbee: Correction & amélioration.
+- Interne: Modification astuce identification vieux modeles Xiaomi basé sur IEEE. Non compatible ZLinky.
+- Correction regression 'setModeHybride' + mise-à-jour commande interne.
+- Assistant Zigbee: Ajout forcage EP01.
+- Commandes JSON: nettoyage.
+- Assistant Zigbee: Améliorations: ajout découverte etendue des attributs.
+- ZLinky TIC: Support préliminaire.
+- Interne: Parser: Nettoyage.
+- Aqara SSM-U02: Correction icone.
+- Xiaomi Mijia Honeywell Détecteur de Fumée: Tentative correction bouton test (#2143).
+- Ruban LED Lidl: Mise à jour JSON (#1737).
+- TRADFRIbulbGU10CWS345lm: Mise a jour (#2137).
+- Interne: Correction erreur PHP: Undefined index: battery_type in AbeilleLQI_Map.php
+- Interne: Correction crash inclusion dans cas ou "value" pointe sur commande inexistante.
+- Xiaomi smoke detector: bouton test genere crash d'AbeilleCmd (#2143).
+- Aqara TVOC moniteur d'air AAQS-S01: Support préliminaire (#2135).
+
+210922-STABLE-1
+---------------
+
+- Interne: Correction requete "discover attributes extended".
+- Loratap 3 boutons: Correction regression (#2138).
+- Interne: Restoration support historique cmd 0006-FD special Tuya.
+- TRADFRIbulbGU10CWS345lm support preliminaire.
+- TRADFRIbulbE14CWS470lm support preliminaire.
+- SPLZB-132: Correction EP.
+- SPLZB-131: Correction RMSVoltage (#2109).
+- Interne: Tools: check_json amélioré.
+- Interne: Parser: Support prélim data type 41, 42, E0, E1, E2.
+- Suppression des messages de "réannonce" si équipement connu et activé.
+   Attention. Si l'équipement quitte (leave) puis revient, le message est toujours présent.
+- Legrand dimmer: Mise à jour JSON (#983).
+- Monitor: Correction bug (Device announce loupé).
+- JSON équipements: Mise-à-jour setReport-EPxx => zbConfigureReporting.
+- JSON équipements: Nettoyage setReport-EPxx => zbConfigureReporting.
+- Assistant de découverte: améliorations et mise à jour doc.
+- Interne: Parser: Amélioration pour découverte cluster 0005/Scenes.
+- Interne: Correction warning pour "bind to group".
+- Page EQ/avancé: ajout bouton "reset to factory".
+- Interne: AbeilleCmdPrepare + Process updates.
+- JSON équipements: Mise à jour des commandes du type 'toggle'.
+- Page EQ/avancé: ajout possibilité de faire un "bind" vers équipement ou groupe.
+- Parser: Correction table de binding.
+
 210916-STABLE-1
-----------
+---------------
 
 - JSON commandes: 'trig' revu + 'trigOffset' ajouté.
 - Niko connected socket: ajout support (#2003).
@@ -24,7 +89,7 @@ ChangeLog
 - Interne: Améliorations parser.
 
 210905-STABLE-1
-----------
+---------------
 
 - Améliorations assistant EQ.
 - Interne: Séquence de démarrage revisitée pour #2093.
@@ -50,7 +115,7 @@ ChangeLog
 - Page EQ/avancé: ajout possibilité interroger LQI (Mgmt_Lqi_req).
 
 210824-STABLE-1
-----------
+---------------
 
 - Xiaomi plug EU: JSON revisité (#1578).
 - Interne: SerialRead: Ouverture de port améliorée.
@@ -85,7 +150,7 @@ ChangeLog
 - Ajout support 'Konke multi-function button' avec id 3AFE280100510001.
 
 210719-STABLE-1
-----------
+---------------
 
 - ATTENTION: Format JSON des fichiers de commande modifié !
 - Osram classic B40TW: support préliminaire.
@@ -119,7 +184,7 @@ ChangeLog
 - Interne: Meilleur support des JSON avec mainEP=#EP#.
 
 210704-STABLE-1
-----------
+---------------
 
 - Modifications syntaxe JSON équipement (avec support rétroactif temporaire):
   - 'commands' au lieu de 'Commandes'.
@@ -143,7 +208,7 @@ ChangeLog
 - Batterie %: Report dans Jeedom de tous les "end points" et pas seulement 01.
 
 210620-STABLE-1
-----------
+---------------
 
 - SPLZB-132: Correction icone + ajout somme conso.
 - Correction remontée cluster 0B04 (mauvais EP).
@@ -163,7 +228,7 @@ ChangeLog
 - Page gestion: Correction regression groupes.
 
 210610-STABLE-3
-----------
+---------------
 
 - Philips E27 single filament bulb: Ajout modele LWA004
 - Interne: Correction ReadAttributRequest multi attributs
@@ -178,7 +243,7 @@ ChangeLog
 - Zigate wifi: correction regression.
 
 210607-STABLE-1
-----------
+---------------
 
 - ATTENTION: Regression sur les telecommandes virtuelles. Une seule possible avec cette version.
 - ATTENTION: Faire un backup pour pouvoir revenir à la precedente "stable". Structure DB eqLogic modifiée: "Ruche" remplacé par "0000"

@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2021-09-22
+Dernière mise-à-jour le 2021-10-04
 
 Sonoff, SBMINI, Sonoff ZBMINI smart switch
 
@@ -413,7 +413,7 @@ Zemismart, ZW-EC-01, Zemismart ZW-EC-01 curtain switch
 .. image:: images/node_Lamp_01.png
    :width: 200px
 
-Osram, Smart+ switch mini, Osram Smart+ Switch Mini
+Osram, AC0251100NJ, Osram Smart+ Switch Mini
 
 .. image:: images/node_Osram-SwitchMini.png
    :width: 200px
@@ -728,6 +728,11 @@ Ikea, TRADFRI bulb GU10 CWS 345lm, TRADFRI bulb GU10 CWS 345lm
 .. image:: images/node_TRADFRIbulbE14CWSopal600lm.png
    :width: 200px
 
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
 , , IKEA Ampoule TRADFRI bulb GU10 W 400lm
 
 .. image:: images/node_IkeaTradfriBulbGU10W400lm.png
@@ -743,9 +748,14 @@ Ikea, TRADFRI bulb GU10 CWS 345lm, TRADFRI bulb GU10 CWS 345lm
 .. image:: images/node_IkeaTradfriBulbGU10W400lm.png
    :width: 200px
 
-Ikea, Several, IKEA control outlet
+Ikea, Several, Ikea control outlet
 
 .. image:: images/node_TRADFRIcontroloutlet.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 IKEA, E1745, TRADFRI Detecteur de mouvement
@@ -953,9 +963,19 @@ Tuya, , Tuya DC5V-24V LED controller
 .. image:: images/node_FlexRGBW.png
    :width: 200px
 
-, , Silvercrest Ruban a LED
+Tuya, , Silvercrest Ruban a LED
 
 .. image:: images/node_FlexRGBW.png
+   :width: 200px
+
+Silvercrest, , Silvercrest Ruban a LED
+
+.. image:: images/node_FlexRGBW.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 Tuya, , Yandhi E27 Bulb
@@ -1028,9 +1048,19 @@ eWeLight, smart bulb, Tuya smart light GU10
 .. image:: images/node_ZLO-OccupancySensor.png
    :width: 200px
 
+LiXee, ZLinky_TIC, LiXee Zlinky TIC module
+
+.. image:: images/node_01MINIZB.png
+   :width: 200px
+
 Xiaomi Aqara, AAQS-S01, Aqara AAQS-S01 TVOC air quality monitor
 
 .. image:: images/node_Connectedoutlet.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 , , Xiaomi Prise Murale Encastrée
@@ -1218,7 +1248,7 @@ Xiaomi, , Xiaomi Door Sensor
 .. image:: images/node_XiaomiSensorGaz.png
    :width: 200px
 
-, , Xiaomi Smoke Sensor
+Xiaomi, ?, Xiaomi Smoke Sensor
 
 .. image:: images/node_XiaomiSensorSmoke.png
    :width: 200px
@@ -1260,7 +1290,7 @@ Xiaomi, , Xiaomi Wall Switch D1 w Neutral 2 Button
 
 Xiaomi, SSM-U02, Xiaomi Single Switch Module T1 (No Neutral)
 
-.. image:: images/node_XiaomiPrise.png
+.. image:: images/node_XiaomiAqara-SSM-U02.png
    :width: 200px
 
 Xiaomi, WS-EUK01, Aqara H1 smart wall switch

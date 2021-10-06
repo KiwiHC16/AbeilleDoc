@@ -110,12 +110,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#format-de-fichier-de-configuration-d-un-equipement-json">Format de fichier de configuration d’un équipement (JSON)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#derniers-changements-du-format-de-fichier-de-configuration-d-un-equipement-json">Derniers changements du format de fichier de configuration d’un équipement (JSON)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#format-fichier-de-commande-json">Format fichier de commande (JSON)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#variables-de-personalisation">Variables de personalisation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#nouveau-format-d-equipement-json">Nouveau format d’équipement (JSON)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#normalisation-des-commandes-de-base-zigbee">Normalisation des commandes de base zigbee</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#nouveau-format-de-commande-json">Nouveau format de commande (JSON)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Changelog.html">ChangeLog</a></li>
@@ -807,25 +804,21 @@ Ces fichiers se trouvent dans « core/config/devices » pour les équipement s
     <span class="p">},</span>
     <span class="s2">&quot;configuration&quot;</span><span class="p">:</span> <span class="p">{</span>
       <span class="s2">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;BASICZBR3&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;mainEP&quot;</span><span class="p">:</span> <span class="s2">&quot;#EP#&quot;</span>
+      <span class="s2">&quot;mainEP&quot;</span><span class="p">:</span> <span class="s2">&quot;02&quot;</span>
       <span class="s2">&quot;batteryType&quot;</span><span class="p">:</span> <span class="s2">&quot;1x3V CR2032&quot;</span><span class="p">,</span>
       <span class="s2">&quot;lastCommunicationTimeOut&quot;</span><span class="p">:</span> <span class="s2">&quot;-1&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;mainEP&quot;</span><span class="p">:</span> <span class="s2">&quot;#EP#&quot;</span><span class="p">,</span>
       <span class="s2">&quot;paramType&quot;</span><span class="p">:</span> <span class="s2">&quot;telecommande&quot;</span><span class="p">,</span>
       <span class="s2">&quot;paramBatterie&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;commands&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">&quot;include1&quot;</span><span class="p">:</span> <span class="s2">&quot;SW&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;include2&quot;</span><span class="p">:</span> <span class="s2">&quot;societe&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;include3&quot;</span><span class="p">:</span> <span class="s2">&quot;nom&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;include4&quot;</span><span class="p">:</span> <span class="s2">&quot;etat&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;include5&quot;</span><span class="p">:</span> <span class="s2">&quot;On&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;include6&quot;</span><span class="p">:</span> <span class="s2">&quot;Off&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;include7&quot;</span><span class="p">:</span> <span class="s2">&quot;Toggle&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;include8&quot;</span><span class="p">:</span> <span class="s2">&quot;getEtat&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;include9&quot;</span><span class="p">:</span> <span class="s2">&quot;getManufacturerName&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;include10&quot;</span><span class="p">:</span> <span class="s2">&quot;getModelIdentifier&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;include13 2&quot;</span><span class="p">:</span> <span class="s2">&quot;Group-Membership&quot;</span>
+      <span class="s2">&quot;Groups&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;use&quot;</span><span class="p">:</span> <span class="s2">&quot;Group-Membership&quot;</span> <span class="p">},</span>
+
+      <span class="s2">&quot;Status&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;use&quot;</span><span class="p">:</span> <span class="s2">&quot;zb-0006-OnOff&quot;</span><span class="p">,</span> <span class="s2">&quot;isVisible&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;nextLine&quot;</span><span class="p">:</span> <span class="s2">&quot;after&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;On&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;use&quot;</span><span class="p">:</span> <span class="s2">&quot;zbCmd-0006-On&quot;</span><span class="p">,</span> <span class="s2">&quot;isVisible&quot;</span><span class="p">:</span> <span class="mi">1</span> <span class="p">},</span>
+      <span class="s2">&quot;Off&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;use&quot;</span><span class="p">:</span> <span class="s2">&quot;zbCmd-0006-Off&quot;</span><span class="p">,</span> <span class="s2">&quot;isVisible&quot;</span><span class="p">:</span> <span class="mi">1</span> <span class="p">},</span>
+      <span class="s2">&quot;Toggle&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;use&quot;</span><span class="p">:</span> <span class="s2">&quot;zbCmd-0006-Toggle&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;Up&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;use&quot;</span><span class="p">:</span> <span class="s2">&quot;zbCmdR-Custom&quot;</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="s2">&quot;ep=01&amp;clustId=0006&amp;cmdId=01&quot;</span><span class="p">,</span> <span class="s2">&quot;isVisible&quot;</span><span class="p">:</span> <span class="mi">1</span> <span class="p">},</span>
+      <span class="s2">&quot;Down&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;use&quot;</span><span class="p">:</span> <span class="s2">&quot;zbCmdR-Custom&quot;</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="s2">&quot;ep=02&amp;clustId=0006&amp;cmdId=00&quot;</span><span class="p">,</span> <span class="s2">&quot;isVisible&quot;</span><span class="p">:</span> <span class="mi">1</span> <span class="p">}</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
@@ -845,7 +838,7 @@ Exemple: « Sonoff »</p>
 <li><p>timeout</p>
 <p>Durée (en min) au dela de laquelle l’équipement est considéré comme HS si aucune nouvelle de lui.</p>
 </li>
-<li><p>comment</p>
+<li><p>comment: Optionnel</p>
 <p>Permet d’ajouter un commentaire pour cet équipement.</p>
 </li>
 <li><p>category</p>
@@ -871,7 +864,9 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
 <li><p>icon</p>
 <p>Nom de l’icone associé.</p>
 </li>
-<li><p>mainEP</p></li>
+<li><p>mainEP: OBLIGATOIRE</p>
+<p>Defini le « End point » à utiliser par défaut si celui-ci n’est pas explicite dans la commande.</p>
+</li>
 <li><p>paramType</p>
 <ul class="simple">
 <li><p>telecommande</p></li>
@@ -879,7 +874,7 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
 </ul>
 </li>
 <li><p>batteryType: OBLIGATOIRE si équipement sur batterie</p>
-<p>Description type de batterie (ex: 1x CR2430 3V)</p>
+<p>Description du type de batterie (ex: 1x3V CR2430)</p>
 </li>
 <li><p>paramBatterie: ??</p></li>
 <li><p>lastCommunicationTimeOut: ??</p></li>
@@ -891,32 +886,21 @@ Note: Ce paramètre permet d’initialiser le champ « category » de la table
 <li><p>commands</p>
 <p>Exemple:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;commands&quot;</span><span class="p">:</span> <span class="p">{</span>
-  <span class="s2">&quot;include1&quot;</span><span class="p">:</span><span class="s2">&quot;cmde1&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;include2&quot;</span><span class="p">:</span><span class="s2">&quot;cmd2&quot;</span><span class="p">,</span>
-  <span class="o">...</span>
-  <span class="s2">&quot;includeX&quot;</span><span class="p">:</span><span class="s2">&quot;cmdX&quot;</span>
+    <span class="s2">&quot;&lt;premiere cmde Jeedom&gt;&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;use&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;cmde de base&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="s2">&quot;ep=XX&quot;</span> <span class="p">},</span>
+    <span class="s2">&quot;&lt;deuxieme cmde Jeedom&gt;&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;use&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;cmde de base&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="s2">&quot;ep=XX&quot;</span><span class="p">,</span> <span class="s2">&quot;isVisible&quot;</span><span class="p">:</span> <span class="s2">&quot;yes&quot;</span><span class="p">,</span> <span class="s2">&quot;isHistorized&quot;</span><span class="p">:</span> <span class="s2">&quot;yes&quot;</span> <span class="p">},</span>
+    <span class="o">...</span>
+    <span class="s2">&quot;&lt;derniere cmde Jeedom&gt;&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;use&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;cmde de base&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="s2">&quot;ep=XX&quot;</span><span class="p">,</span> <span class="s2">&quot;execAtCreation&quot;</span><span class="p">:</span> <span class="s2">&quot;yes&quot;</span> <span class="p">},</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Liste des commandes supportées. Chaque include correspond à une commande de base existante dans “config/commands”
-- « include1 »: »cmd1 »,
-- …
-- « includeX »: »cmdX »,</p>
-</li>
-</ul>
-</div>
-<div class="section" id="derniers-changements-du-format-de-fichier-de-configuration-d-un-equipement-json">
-<h2>Derniers changements du format de fichier de configuration d’un équipement (JSON)<a class="headerlink" href="#derniers-changements-du-format-de-fichier-de-configuration-d-un-equipement-json" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Notes pour les commandes</p>
 <ul class="simple">
-<li><p>« manufacturer »: Nouveau champ pour le nom du fabricant/vendeur</p></li>
-<li><p>« model »: Nouveau champ pour la ref commerciale</p></li>
-<li><p>« configuration »: Section supprimée. Tout passe au premier niveau</p></li>
-<li><p>« uniqid »: Supprimé.</p></li>
-<li><p>« Categorie » =&gt; « category »</p></li>
-<li><p>« Commandes » =&gt; « commands » + nouvelle structure</p></li>
-<li><p>« battery_type » =&gt; « batteryType »</p></li>
-<li><p>« batteryVolt »: Nouvelle clef</p></li>
-<li><p>« icone » =&gt; « icon »</p></li>
+<li><p>Les commande de base sont celles définies dans « core/config/commands »</p></li>
+<li><p>« ep » permet de préciser le EP (End Point). Si il n’est pas défini, « mainEP » sera utilisé.</p></li>
+<li><p>« execAtCreation » permet de préciser que cette commande doit etre executée pendant l’inclusion pour configurer l’equipement.
+Par défaut la commande n’est pas exécutée.</p></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="format-fichier-de-commande-json">
@@ -1023,88 +1007,10 @@ Ex: « calculValueOffset »: « #value#/255*100 »</p>
 <p>De manière à pouvoir utiliser des commandes génériques, un certain nombre de variables permettent de personaliser la commande lors de son utilisation par l’équipement.</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>#addrIEEE#: Adresse IEEE de l’équipement</p></li>
+<li><p>#addrIEEE# ou #ADDR#: Adresse IEEE de l’équipement</p></li>
 <li><p>#ZiGateIEEE#: Adresse IEEE de la zigate</p></li>
 <li><p>#EP#: End Point</p></li>
 </ul>
-</div></blockquote>
-</div>
-<div class="section" id="nouveau-format-d-equipement-json">
-<h2>Nouveau format d’équipement (JSON)<a class="headerlink" href="#nouveau-format-d-equipement-json" title="Lien permanent vers ce titre">¶</a></h2>
-<p>EN COURS DE FINALISATION !!</p>
-<p>Note: Ce format reste compatible avec le format d’origine (legacy) des commandes.</p>
-<p>Par rapport au format original, et en dehors de la normalisation des clefs (anglais, minuscule puis majuscule), les changements sont les suivants:</p>
-<ul class="simple">
-<li><p>« manufacturer »: Nouveau champ pour le nom du fabricant/vendeur</p></li>
-<li><p>« model »: Nouveau champ pour la ref commerciale</p></li>
-<li><p>« configuration »: Section supprimée. Tout passe au premier niveau</p></li>
-<li><p>« uniqid »: Supprimé.</p></li>
-<li><p>« Categorie » =&gt; « category »</p></li>
-<li><p>« Commandes » =&gt; « commands » + nouvelle structure</p></li>
-<li><p>« battery_type » =&gt; « batteryType »</p></li>
-<li><p>« batteryVolt »: Nouvelle clef</p></li>
-<li><p>« icone » =&gt; « icon »</p></li>
-</ul>
-<p>Le format de la section « commands » est le suivant</p>
-<ul>
-<li><p>« batteryType » permet de décrire le type de batterie et de preciser qu’il s’agit d’un equipement sur batterie</p></li>
-<li><p>« batteryVolt » permet de definir la tension max de la batterie (pour calcul pourcentage quand la remontée % n’est pas dispo)</p></li>
-<li><p>« commands » permet de lister toutes les commandes associées à l’equipement</p></li>
-<li><p>« isVisible »: « yes »/ »no »</p>
-<p>Permet de rendre la commande visible (cachée par défaut)</p>
-</li>
-<li><p>« isHistorized »: « yes »/ »no »</p>
-<p>Permet d’historiser les valeurs de cette commande. Ne fait du sens que pour une commande « info ».</p>
-<blockquote>
-<div><dl class="simple">
-<dt>« commands »: {</dt><dd><p>« &lt;premiere cmde Jeedom&gt; »: { « use »: « &lt;cmde de base&gt; », « ep »: &lt;ep&gt; },
-« &lt;deuxieme cmde Jeedom&gt; »: { « use »: « &lt;cmde de base&gt; », « ep »: &lt;ep&gt;, « isVisible »: « yes », « isHistorized »: « yes » },
-…
-« &lt;derniere cmde Jeedom&gt; »: { « use »: « &lt;cmde de base&gt; », « ep »: &lt;ep&gt;, « execAtCreation »: « yes » },</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
-</li>
-</ul>
-<p>Notes pour les commandes
-- Les commande de base sont celles définies dans « core/config/commands »
-- « ep » permet de préciser le EP (End Point). Il n’est obligatoire que si different de 1.
-- « execAtCreation » permet de préciser que cette commande doit etre executée pendant l’inclusion pour configurer l’equipement.</p>
-<blockquote>
-<div><p>Par défaut la commande n’est pas exécutée.</p>
-</div></blockquote>
-<p>Exemple:</p>
-<blockquote>
-<div><dl>
-<dt>{</dt><dd><dl>
-<dt>« BASICZBR3 »: {</dt><dd><p>« name »: « Sonoff BASICZBR3 smart switch »,
-« manufacturer »: « Sonoff »,
-« model »: « BASICZBR3 »,
-« timeout »: « 60 »,
-« category »: {</p>
-<blockquote>
-<div><p>« automatism »: « 1 »</p>
-</div></blockquote>
-<p>},
-« icon »: « BASICZBR3 »,
-« batteryType »: « 1x3V CR2032 »,
-« batteryVolt »: « 3 »,
-« commands »: {</p>
-<blockquote>
-<div><p>« manufacturer »: { « use »: « societe » },
-« modelIdentifier »: { « use »: « nom », « isVisible »: « yes » },
-« getEtatEp05 »: { « use »: « etat », « ep »: 5 },
-« bindHumidity »: { « use »: « BindToZigateHumidity », « ep »: 2, « execAtCreation »: « yes » },
-« setReportHumidity »: { « use »: « setReportHumidity », « ep »: 2, « execAtCreation »: « yes » }</p>
-</div></blockquote>
-<p>}</p>
-</dd>
-</dl>
-<p>}</p>
-</dd>
-</dl>
-<p>}</p>
 </div></blockquote>
 </div>
 <div class="section" id="normalisation-des-commandes-de-base-zigbee">
@@ -1117,53 +1023,8 @@ Parmi elles, il y a les commandes zigbee directement issues du standard et norma
 <li><p>attribut value =&gt; zb-&lt;ClustId&gt;-&lt;AttribName&gt; (ex: zb-0000-ModelIdentifier)</p></li>
 <li><p>attribut W =&gt; zbSet-&lt;ClustId&gt;-&lt;AttribName&gt;</p></li>
 <li><p>command =&gt; zbCmd-&lt;ClustId&gt;-&lt;CmdName&gt; (ex: zbCmd-0003-Identify)</p></li>
+<li><p>command reçue =&gt; zbCmdR-&lt;ClustId&gt;-&lt;CmdName&gt; (ex: zbCmd-0003-Identify)</p></li>
 </ul>
-</div>
-<div class="section" id="nouveau-format-de-commande-json">
-<h2>Nouveau format de commande (JSON)<a class="headerlink" href="#nouveau-format-de-commande-json" title="Lien permanent vers ce titre">¶</a></h2>
-<p>EN COURS DE REFLEXION/DEVELOPPEMENT !!</p>
-<p>Note: l’evolution des équipements permet toujours d’utiliser les commandes « legacy » (ancien format)</p>
-<p>Par rapport au format original, les modifications sont les suivantes:</p>
-<ul class="simple">
-<li><p>« isVisible »: Inutilisé. Toute commande est cachée et est rendue visible par l’equipement appelant.
-ex: « cmdX »: { « use »: « zbGet-ModelIdentifier », « isVisible »: « yes » }</p></li>
-<li><p>« order »: inutilisé</p></li>
-<li><p>« isHistorized »: inutilisé. Les commandes de base sont par défaut NON historisées. Dans la pratique tres peu le sont au final.
-A la charge de l’equipement appelant de l’activer si besoin, sinon libre à l’utilisateur une fois dans Jeedom.
-ex: « cmdX »: { « use »: « zbGet-0000-Manufacturer », « isHistorized »: « yes » }</p></li>
-<li><p>« Type » =&gt; « type »</p></li>
-<li><p>« generic_type » =&gt; « genericType »</p></li>
-<li><p>« uniqId » =&gt; inutilisé</p></li>
-<li><p>« configuration » =&gt; supprimé. Elements remontés au top.</p></li>
-<li><p>Clef d’entrée = logicalId de la commande = nom de la commande Abeille. Dans ce cadre, « configuration »: »topic » disparait.</p></li>
-<li><p>« configuration »: »topic » =&gt; Plus nécessaire. Redondant avec “logicalId”.</p></li>
-<li><p>template =&gt; ??</p></li>
-<li><p>« configuration »: »repeatEventManagement » =&gt; ??</p></li>
-<li><p>« configuration »: »visibilityCategory » =&gt; ??</p></li>
-</ul>
-<p>Exemple:</p>
-<blockquote>
-<div><dl>
-<dt>{</dt><dd><dl>
-<dt>« 0006-0000 »: {</dt><dd><p>« name »: « etat »,
-« type »: « info »,
-« subType »: « binary »,
-« genericType »: « LIGHT_STATE_BOOL »,
-« invertBinary »: « 0 »,
-« template »: « light »,
-« configuration »: {</p>
-<blockquote>
-<div><p>« repeatEventManagement »: « always »,
-« visibilityCategory »: « All »</p>
-</div></blockquote>
-<p>}</p>
-</dd>
-</dl>
-<p>}</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
 </div>
 </div>
 

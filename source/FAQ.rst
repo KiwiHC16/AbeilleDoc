@@ -1,6 +1,8 @@
 Questions fréquentes
 ====================
 
+.. include:: Telecommandes.rst
+
 Pont Hue et ZiGate/Abeille
 --------------------------
 

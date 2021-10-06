@@ -58,7 +58,11 @@
 <li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AjoutNouvelEquipement.html">Ajout d’un nouvel équipement</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Questions fréquentes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#support-des-telecommandes">Support des télécommandes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#support-des-telecommandes">Support des télécommandes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#liens-de-communication">Liens de communication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ca-se-complique">Ca se complique…</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#pont-hue-et-zigate-abeille">Pont Hue et ZiGate/Abeille</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#matos-hue-et-zigate-abeille">Matos Hue et ZiGate/Abeille</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#le-probleme-que-je-rencontre-est-la-portee">Le problème que je rencontre est la portée</a></li>
@@ -86,11 +90,13 @@
 <h1>Questions fréquentes<a class="headerlink" href="#questions-frequentes" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="support-des-telecommandes">
 <h2>Support des télécommandes<a class="headerlink" href="#support-des-telecommandes" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les télécommandes nécessitent un chapitre à elles seules tant elles peuvent avoir un comportement différent. Cela inclut tout type d’équipement pouvant envoyer un ordre.</p>
+<p>Les télécommandes nécessitent un chapitre à elles seules tant elles peuvent avoir un comportement différent. Cela inclut tout type d’équipement pouvant envoyer un ordre (une commande Zigbee).</p>
 <ul class="simple">
 <li><p>Télécommandes diverses zigbee</p></li>
 <li><p>Interrupteurs zigbee</p></li>
 </ul>
+<div class="section" id="liens-de-communication">
+<h3>Liens de communication<a class="headerlink" href="#liens-de-communication" title="Lien permanent vers ce titre">¶</a></h3>
 <p>3 cas de figures suivants sont possibles mais sont exclusifs. Certaines télécommandes supportent plusieurs de ces modes et d’autres sont conçues pour un seul et unique mode de fonctionnement.</p>
 <ul>
 <li><p>La télécommande envoi l’ordre vers Jeedom.</p>
@@ -111,6 +117,19 @@ Ex: La télécommande controle une prise et cette derniere renvoi son état vers
 </div></blockquote>
 </li>
 </ul>
+</div>
+<div class="section" id="ca-se-complique">
+<h3>Ca se complique…<a class="headerlink" href="#ca-se-complique" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Ca n’est pas tout de pouvoir choisir le « tuyau » de communication (telec vers zigate, telec vers groupe, ou telec vers périph), il faudrait aussi pouvoir choisir quel ordre envoyer. Et la cette partie n’étant pas configurable, c’est mort.</p>
+<p>En d’autres termes, suivant les ordres envoyés par la télécommande (figés par leur firmware), on ne peut pas forcement la coupler directement avec un groupe ou un périph autre que celui pour lequel elle a été conçue.</p>
+<p>Exemples:</p>
+<ul class="simple">
+<li><p>La commande la plus commune et utile est « On » ou « Off » (cluster 0006). Une télécommande qui envoie ces ordres peut aisement controler une prise, lumière, ou volet.</p></li>
+<li><p>Une commande du type « niveau » (cluster 0008) pourrait certes commander des volets ou un dimmer mais pas une prise standard.</p></li>
+<li><p>Une commande du type « couleur » (cluster 0300) n’est dédié qu’au controle de lumère.</p></li>
+</ul>
+<p>Tout ça pour dire que même si la liaison (tuyau) voulue est possible, la commande générée n’est pas forcement compatible avec l’équipement.</p>
+</div>
 </div>
 <div class="section" id="pont-hue-et-zigate-abeille">
 <h2>Pont Hue et ZiGate/Abeille<a class="headerlink" href="#pont-hue-et-zigate-abeille" title="Lien permanent vers ce titre">¶</a></h2>

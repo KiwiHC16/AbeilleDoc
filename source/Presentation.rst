@@ -50,10 +50,7 @@ Pour toute difficulté, deux possibilités :
 Périphériques compatibles
 -------------------------
 
-* les ampoules Zigbee
-* toute la famille Xiaomi Zigbee (Sensor presence, prise, temperature, humidité, pression, interrupteur, porte)
-* les volets Profalux
-* de nombreux autres périphériques Zigbee (https://github.com/KiwiHC16/Abeille/blob/master/Documentation/040_Compatibilite.adoc)
+Généralement tout matériel répondant au standard Zigbee mais la liste des équipements déja supportés est donnée dans le chapitre :doc:`devices/CompatibilityList`
 
 Les possibilités
 ----------------

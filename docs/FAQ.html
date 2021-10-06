@@ -58,6 +58,7 @@
 <li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AjoutNouvelEquipement.html">Ajout d’un nouvel équipement</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Questions fréquentes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#support-des-telecommandes">Support des télécommandes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pont-hue-et-zigate-abeille">Pont Hue et ZiGate/Abeille</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#matos-hue-et-zigate-abeille">Matos Hue et ZiGate/Abeille</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#le-probleme-que-je-rencontre-est-la-portee">Le problème que je rencontre est la portée</a></li>
@@ -83,6 +84,29 @@
             
   <div class="section" id="questions-frequentes">
 <h1>Questions fréquentes<a class="headerlink" href="#questions-frequentes" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="support-des-telecommandes">
+<h2>Support des télécommandes<a class="headerlink" href="#support-des-telecommandes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les télécommandes nécessitent un chapitre à elles seules tant elles peuvent avoir un comportement différent.</p>
+<p>3 cas de figures suivants sont possibles mais sont exclusifs.</p>
+<ul>
+<li><p>La télécommande envoi l’ordre vers Jeedom.</p>
+<blockquote>
+<div><p>Dans ce cas, charge à Jeedom via par exemple un scénario de faire qqch avec l’information remontée. Aucun périphérique ne reçoit l’info directement.</p>
+</div></blockquote>
+</li>
+<li><p>La télécommande envoi l’ordre vers un groupe zigbee.</p>
+<blockquote>
+<div><p>Le groupe reçoit directement la commande SANS passer par Jeedom. Ce dernier n’est d’ailleurs pas au courant de ce qui est envoyé de la télécommande vers le groupe.</p>
+</div></blockquote>
+</li>
+<li><p>La télécommande envoi l’ordre vers un périphérique zigbee.</p>
+<blockquote>
+<div><p>Enfin la commande est envoyée vers un périphérique précis (et non pas un groupe) et la encore SANS passer par Jeedom. Auquel cas seul cet équipement reçoit la commande. Jeedom n’est au courant de rien sauf si cet équipement reporte lui meme une info vers Jeedom.
+Ex: La télécommande controle une prise et cette derniere renvoi son état vers Jeedom.</p>
+</div></blockquote>
+</li>
+</ul>
+</div>
 <div class="section" id="pont-hue-et-zigate-abeille">
 <h2>Pont Hue et ZiGate/Abeille<a class="headerlink" href="#pont-hue-et-zigate-abeille" title="Lien permanent vers ce titre">¶</a></h2>
 <p> » Savez vous si je peux mettre mon matos Hue dans le maillage du plugin Abeille, même si tout passe par le Pont Hue ? »</p>

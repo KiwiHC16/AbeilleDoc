@@ -72,8 +72,12 @@
             
   <div class="section" id="support-des-telecommandes">
 <h1>Support des télécommandes<a class="headerlink" href="#support-des-telecommandes" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Les télécommandes nécessitent un chapitre à elles seules tant elles peuvent avoir un comportement différent.</p>
-<p>3 cas de figures suivants sont possibles mais sont exclusifs.</p>
+<p>Les télécommandes nécessitent un chapitre à elles seules tant elles peuvent avoir un comportement différent. Cela inclut tout type d’équipement pouvant envoyer un ordre.</p>
+<ul class="simple">
+<li><p>Télécommandes diverses zigbee</p></li>
+<li><p>Interrupteurs zigbee</p></li>
+</ul>
+<p>3 cas de figures suivants sont possibles mais sont exclusifs. Certaines télécommandes supportent plusieurs de ces modes et d’autres sont conçues pour un seul et unique mode de fonctionnement.</p>
 <ul>
 <li><p>La télécommande envoi l’ordre vers Jeedom.</p>
 <blockquote>
@@ -82,7 +86,8 @@
 </li>
 <li><p>La télécommande envoi l’ordre vers un groupe zigbee.</p>
 <blockquote>
-<div><p>Le groupe reçoit directement la commande SANS passer par Jeedom. Ce dernier n’est d’ailleurs pas au courant de ce qui est envoyé de la télécommande vers le groupe.</p>
+<div><p>Le groupe reçoit directement la commande SANS passer par Jeedom. Ce dernier n’est d’ailleurs pas au courant de ce qui est envoyé de la télécommande vers le groupe.
+Ce mode de fonctionnement est celui dans la télécommande Ikea « on/off switch ».</p>
 </div></blockquote>
 </li>
 <li><p>La télécommande envoi l’ordre vers un périphérique zigbee.</p>

@@ -24,19 +24,14 @@ Bienvenu
 
 .. important::
 
-   Cette documentation est la dernière version disponible.
-   Elle est alignée autant que possible sur les dernières évolutions du plugin et est donc en "ré-écriture" quasi permanente.
+   Abeille nécessite
 
-   Les derniers developpements sont focalisés sur
+   - Jeedom >= v4.1
+   - Zigate v1 avec firmware >= 3.1d.
 
-   - Jeedom v4.1
-
-     Pour les utilisateurs Jeedom v3 il est fortement recommandé de migrer vers la v4.1 (version officielle du moment). Il nous est difficile de s'assurer que les évolutions restent compatibles avec une version antérieure.
-
-   - Zigate v1 avec firmware 3.1d ou 3.1e
-
-     Il est aussi fortement recommandé d'utiliser au moins le FW 3.1d.
-     La Zigate v2 (modeles +) n'est testée que par certains utilisateurs.
+      - 3.1e/3.20 OptiPDM (Optimizied PDM) FORTEMENT RECOMMANDEE
+      - Toute nouvelle installation DOIT se faire avec FW OptiPDM.
+      - Pour les anciennes installations il est fortement recommandé de migrer vers une version OptiPDM (meilleure version à ce jour et supportant + de périphériques que la version "legacy").
 
 .. important::
 

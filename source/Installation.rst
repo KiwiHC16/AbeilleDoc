@@ -10,8 +10,8 @@ Une fois l'installation faite, il est nécessaire de vérifier la configuration 
 
 Quand tout est en place, vous allez ajouter des équipements. Afin d'avoir une interface graphique jolie dans Jeedom vous pouvez adapter les :doc:`Widget` qui seront utilisés. C'est optionel. C'est juste pour faire beau.
 
-Installation standard
-----------
+Installation de la version "stable"
+-----------------------------------
 
 L'installation standard du plugin se fait directement depuis le market (Plugins > Gestion des plugins > Market)
 
@@ -26,6 +26,20 @@ Et enfin lancez l'installation via le bouton "Installer stable"
 .. image:: images/InstallationMarket-3.png
 
 Une fois installé passez à l'activation du plugin.
+
+Installation de la version "beta"
+---------------------------------
+
+L'installation de cette version "non stable" n'est pas recommandée. Elle ne devrait être faite qu'en accord avec les developpeurs pour par exemple vérifier un correctif en avance de phase.
+
+La procédure est la même que ci dessus en cliquant sur "installer beta" mais si ce dernier bouton n'est pas disponible, il vous faut vous connecter sur le market Jeedom, puis activer cette possibilité via votre "profil".
+
+.. image:: images/InstallationMarketBeta-1.png
+
+et
+
+.. image:: images/InstallationMarketBeta-2.png
+
 
 Activation du plugin
 ----------

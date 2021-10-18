@@ -16,7 +16,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Utilisation" href="Utilisation.html" />
-    <link rel="prev" title="Nouvel équipement" href="AjoutNouvelEquipement.html" />
+    <link rel="prev" title="Xiaomi" href="devices/Xiaomi.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -44,7 +44,7 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="AjoutNouvelEquipement.html" title="Chapitre précédent">Nouvel équipement</a></li>
+      <li>Previous: <a href="devices/Xiaomi.html" title="Chapitre précédent">Xiaomi</a></li>
       <li>Next: <a href="Utilisation.html" title="Chapitre suivant">Utilisation</a></li>
   </ul></li>
 </ul>
@@ -53,10 +53,10 @@
 <li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements supportés</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AjoutNouvelEquipement.html">Nouvel équipement</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#pre-requis">Pre-requis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#installation-standard">Installation standard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-de-la-version-stable">Installation de la version « stable »</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-de-la-version-beta">Installation de la version « beta »</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#activation-du-plugin">Activation du plugin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#configuration-d-une-ou-plusieurs-zigates">Configuration d’une ou plusieurs zigates</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mise-a-jour-du-plugin">Mise a jour du plugin</a><ul>
@@ -81,8 +81,11 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AjoutNouvelEquipement.html">Ajout d’un nouvel équipement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions fréquentes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Debug.html">Debug</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Changelog.html">ChangeLog</a></li>
 </ul>
@@ -104,8 +107,8 @@
 <p>Une fois l’installation faite, il est nécessaire de vérifier la configuration du plugin et de l’adapter à votre situation, pour se faire il est nécessaire de faire le <a class="reference internal" href="Parametrage.html"><span class="doc">Parametrage des équipements</span></a> du plugin.</p>
 <p>Quand tout est en place, vous allez ajouter des équipements. Afin d’avoir une interface graphique jolie dans Jeedom vous pouvez adapter les <a class="reference internal" href="Widget.html"><span class="doc">Widget</span></a> qui seront utilisés. C’est optionel. C’est juste pour faire beau.</p>
 </div>
-<div class="section" id="installation-standard">
-<h2>Installation standard<a class="headerlink" href="#installation-standard" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="installation-de-la-version-stable">
+<h2>Installation de la version « stable »<a class="headerlink" href="#installation-de-la-version-stable" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’installation standard du plugin se fait directement depuis le market (Plugins &gt; Gestion des plugins &gt; Market)</p>
 <img alt="_images/InstallationMarket-1.png" src="_images/InstallationMarket-1.png" />
 <p>Dans la partie « Rechercher » entrez « Abeille »</p>
@@ -113,6 +116,14 @@
 <p>Et enfin lancez l’installation via le bouton « Installer stable »</p>
 <img alt="_images/InstallationMarket-3.png" src="_images/InstallationMarket-3.png" />
 <p>Une fois installé passez à l’activation du plugin.</p>
+</div>
+<div class="section" id="installation-de-la-version-beta">
+<h2>Installation de la version « beta »<a class="headerlink" href="#installation-de-la-version-beta" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’installation de cette version « non stable » n’est pas recommandée. Elle ne devrait être faite qu’en accord avec les developpeurs pour par exemple vérifier un correctif en avance de phase.</p>
+<p>La procédure est la même que ci dessus en cliquant sur « installer beta » mais si ce dernier bouton n’est pas disponible, il vous faut vous connecter sur le market Jeedom, puis activer cette possibilité via votre « profil ».</p>
+<img alt="_images/InstallationMarketBeta-1.png" src="_images/InstallationMarketBeta-1.png" />
+<p>et</p>
+<img alt="_images/InstallationMarketBeta-2.png" src="_images/InstallationMarketBeta-2.png" />
 </div>
 <div class="section" id="activation-du-plugin">
 <h2>Activation du plugin<a class="headerlink" href="#activation-du-plugin" title="Lien permanent vers ce titre">¶</a></h2>

@@ -51,7 +51,8 @@ Equipement (table eqLogic)
   - calculValueOffset: utilisé par Jeedom (cmd.class.php). Ex: "calculValueOffset":"#value#*10"
   - batterytime: mis-à-jour par Jeedom
   - battery_type: Utilisé par Jeedom. Mis à jour par Abeille à partir de "batteryType" du JSON.
-  - ab::jsonLocation: Localisation du JSON (officiel=Abeille, custom/user=local)
+  - 'ab::jsonId': Signature zigbee utilisée pour identifier le JSON correspondant (anciennement 'modeleJson').
+  - 'ab::jsonLocation': Localisation du JSON (officiel=Abeille, custom/user=local)
 - isVisible
 - isEnable
 - status

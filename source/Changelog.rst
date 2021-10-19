@@ -1,9 +1,47 @@
 ChangeLog
 =========
 
-211004-BETA-1
+211019-BETA-1
 -------------
 
+- Firmware: L'équipe Zigate recommande FORTEMENT d'utiliser le **FW Optimized PDM** (donc 3.20/3.1e).
+   - Cette version corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
+   - Mais **ATTENTION** si vous migrez d'une version "legacy" il vous faut **effacer la PDM et réapparairer tous vos équipements**.
+
+- JSON commandes: Nettoyage. Suppression commandes obsolètes.
+- Interne: decodeDataType(): ajout support enum8/enum16 + ieee.
+- Interne: Parser: Support read attributes clusters 0015 & 0100.
+- Tuya ZM-CG205 door sensor: Ajout support (#2165).
+- Test d'intégrité et nettoyage automatique à la mise-à-jour.
+
+211019-STABLE-1
+---------------
+
+- Firmware: L'équipe Zigate recommande FORTEMENT d'utiliser le **FW Optimized PDM** (donc 3.20/3.1e).
+   - Cette version corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
+   - Mais **ATTENTION** si vous migrez d'une version "legacy" il vous faut **effacer la PDM et réapparairer tous vos équipements**.
+
+- Interne: Correction 'writeAttribute' + mise-à-jour reponse 8110.
+- Tuya 4 buttons (TS004F__TZ3000_xabckq1v): Mise-à-jour support (#2155).
+- Commandes JSON: Suppression 'binToZigate-EPXX-0006' => obsolètes.
+- JSON équipements: Ajout support multiple identifiants (ex: 'signalrepeater' & 'SignalRepeater').
+- UseeLink prise SM-SO306: Mise-à-jour (#2160).
+- Zigate: plusieurs commandes supprimées => supportées dans page équipement/avancé.
+- Interne: Parser: Améliorations decodeDataType().
+- UseeLink prise SM-SO306: Ajout support (#2160).
+- Syntaxe JSON équipement: Ajout possibilité surcharge 'template'.
+- Zlinky TIC: Mise-à-jour JSON + icone.
+- Niko connected socket outlet: Mise-à-jour image.
+- Page EQ/avancé: Ajout possibilité de configurer le reporting.
+- Interne: Parser: Support 'configure reporting response' pour 0B04.
+- TRADFRI bulb GU10 CWS 345lm: Correction icone E14 => GU10 (#2137).
+- Ikea Tradfri LED 470lm E14: Mise-à-jour config JSON (#2111).
+- Tuya 4 boutons: Mise-à-jour (#2155).
+- Interne: AbeilleCmd: Correction bin0030 vers groupe.
+- SPLZB-131: Mise-à-jour JSON. Reporting activé. (#2109).
+- Page EQ/avancé: Ajout possibilité d'écrire un attribut.
+- Interne: AbeilleCmd: Message d'erreur si pb lecture queues.
+- Interne: Commandes JSON 'getEtatEpXX' deviennent obsoletes.
 - Page EQ/avancé: correction bouton 'reconfiguer' + amélioration message.
 - Interne: Zigbee const: corrections pour éviter warning PHP.
 - Page équipements: Suppression zone developpeur (bas de page).

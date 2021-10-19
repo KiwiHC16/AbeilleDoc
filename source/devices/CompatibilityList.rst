@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2021-10-04
+Dernière mise-à-jour le 2021-10-19
 
 Sonoff, SBMINI, Sonoff ZBMINI smart switch
 
@@ -145,7 +145,7 @@ Osram, B40TW, ClassicB40TW-LIGHTIFY
 
 Niko, , Niko connected outlet socket
 
-.. image:: images/node_Connectedoutlet.png
+.. image:: images/node_Niko-ConnectedSocketOutlet.png
    :width: 200px
 
 , , 
@@ -628,12 +628,12 @@ Sonoff, SNZB-02, Sonoff SNZB-02 temp & humidity
 .. image:: images/node_TRADFRIDriver10W.png
    :width: 200px
 
-, , TRADFRI Shortcut Button
+Ikea, Shortcut button E1812, Ikea Tradfri shortcut button
 
 .. image:: images/node_TRADFRISHORTCUTButton.png
    :width: 200px
 
-Ikea, LED 470 lm 5.2W E14, IKEA TRADFRI LED 470 lm 5.2W E14
+Ikea, LED 470lm 5.2W E14, IKEA TRADFRI LED 470 lm 5.2W E14
 
 .. image:: images/node_TRADFRIbulbE14CWSopal600lm.png
    :width: 200px
@@ -725,7 +725,7 @@ Ikea, , IKEA Ampoule TRADFRI bulb E27 opal 1000lm
 
 Ikea, TRADFRI bulb GU10 CWS 345lm, TRADFRI bulb GU10 CWS 345lm
 
-.. image:: images/node_TRADFRIbulbE14CWSopal600lm.png
+.. image:: images/node_IkeaTradfriBulbGU10W400lm.png
    :width: 200px
 
 , , 
@@ -786,6 +786,11 @@ IKEA, E1743, TRADFRI on/off switch
 , , TRADFRI signal repeater
 
 .. image:: images/node_TRADFRIsignalrepeater.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 , , IKEA Ampoule TRADFRI transformer 10W
@@ -873,9 +878,14 @@ Tuya, , Tuya 4 buttons Zigbee scene switch
 .. image:: images/node_Tuya4ButtonsSceneSwitch.png
    :width: 200px
 
-Tuya, ESW-0ZAA-EU, 4 buttons light switch
+Tuya, ESW-0ZAA-EU, Tuya 4 buttons scene switch
 
 .. image:: images/node_Tuya4ButtonsSwitch.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 , , Vanne Zigbee 
@@ -896,6 +906,16 @@ Tuya, ESW-0ZAA-EU, 4 buttons light switch
 , , Yagusmart Tuya ZigBee Smart Switch
 
 .. image:: images/node_TS0121.png
+   :width: 200px
+
+UseeLink, SM-SO306, 4 gang switch, with USB
+
+.. image:: images/node_UseeLink-SM-SO306.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 Silvercrest, HG06338-FR, Silvercrest power strip USB SPSZ 3 A1
@@ -941,6 +961,11 @@ Tuya, Generic smart socket, Tuya smart socket
 , , Wireless Temperature and Humidity
 
 .. image:: images/node_TS0201.png
+   :width: 200px
+
+Tuya, ZM-CG205, Tuya ZM-CG205 door sensor
+
+.. image:: images/node_Tuya-DoorSensor-ZM-CG205.png
    :width: 200px
 
 Zemismart, ZXZDS, Zemismart door & window sensor
@@ -1050,7 +1075,7 @@ eWeLight, smart bulb, Tuya smart light GU10
 
 LiXee, ZLinky_TIC, LiXee Zlinky TIC module
 
-.. image:: images/node_01MINIZB.png
+.. image:: images/node_Linky.png
    :width: 200px
 
 Xiaomi Aqara, AAQS-S01, Aqara AAQS-S01 TVOC air quality monitor
@@ -1193,6 +1218,11 @@ Xiaomi, WXCJKG13LM, Aqara Opple wireless switch 6 buttons
 .. image:: images/node_router.png
    :width: 200px
 
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
 Xiaomi, GZCGQ01LM, Xiaomi GZCGQ01LM smart light sensor
 
 .. image:: images/node_sen_ill_mgl01.png
@@ -1301,6 +1331,11 @@ Xiaomi, WS-EUK01, Aqara H1 smart wall switch
 , , Xiaomi Vibration
 
 .. image:: images/node_XiaomiVibration.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 Profalux, volets, Profalux volet

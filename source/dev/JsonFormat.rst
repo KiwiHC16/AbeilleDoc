@@ -139,9 +139,6 @@ Exemple
         "repeatEventManagement": "always",
         "visibiltyTemplate": "1",
         "RefreshData": "1",
-      },
-      "display": {
-        "forceReturnLineAfter": "1"
       }
     }
   }

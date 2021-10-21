@@ -1,14 +1,14 @@
-Debug
-=====
+Support
+=======
 
-Si vous rencontrez des soucis, ce chapitre vous donne quelque pistes à suivre pour vérifier les points de bon fonctionnement.
+Si vous rencontrez des problèmes, c'est le chapitre qu'il vous faut.
 
-Forum
------
+.. important::
+    Pour toute demande de support, merci avant tout
 
-* Liste des sujets en cours de discussions: `Forum Jeedom <https://community.jeedom.com/tag/plugin-abeille>`_
-
-* Liste des sujets en cours d'investigations: `GitHub Abeille <https://github.com/KiwiHC16/Abeille/issues?utf8=✓&q=is%3Aissue>`_
+    - d'être sur d'être en '**mode debug**'
+    - d'avoir modifié le nombre de lignes de log de 500 à 5000 via la configuration Jeedom
+    Pensez à **redémarrer** Abeille après ce genre de changement.
 
 Configuration jeedom pour les logs
 ----------------------------------
@@ -22,6 +22,13 @@ Pour toute livraison de logs pour besoins de support, il est recommandé de
    - Sauvegarder
    - Relancer Abeille
 - Faire un drag & drop du package fourni par la page support/télécharger tout.
+
+Forum
+-----
+
+* Liste des sujets en cours de discussions: `Forum Jeedom <https://community.jeedom.com/tag/plugin-abeille>`_
+
+* Liste des sujets en cours d'investigations: `GitHub Abeille <https://github.com/KiwiHC16/Abeille/issues?utf8=✓&q=is%3Aissue>`_
 
 Accès à la base de données Jeedom
 ---------------------------------

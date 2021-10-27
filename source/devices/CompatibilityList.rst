@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2021-10-19
+Dernière mise-à-jour le 2021-10-27
 
 Sonoff, SBMINI, Sonoff ZBMINI smart switch
 
@@ -938,7 +938,7 @@ Silvercrest, HG06337-FR, SAPZ-1-A1 connected plug
 .. image:: images/node_defaultUnknown.png
    :width: 200px
 
-Girier, JR-ZPM01, Girier ZigBee smart plug EU
+Girier, JR-ZPM01, Girier/Tuya ZigBee smart plug EU
 
 .. image:: images/node_JR-ZPM01.png
    :width: 200px
@@ -978,6 +978,16 @@ Zemismart, ZXZDS, Zemismart door & window sensor
 .. image:: images/node_.png
    :width: 200px
 
+Tuya, RP280, Tuya RP280 zigbee repeater
+
+.. image:: images/node_Tuya-Repeater-RP280.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
 , , SM-SW101-CZ
 
 .. image:: images/node_TS0302.png
@@ -1006,6 +1016,16 @@ Silvercrest, , Silvercrest Ruban a LED
 Tuya, , Yandhi E27 Bulb
 
 .. image:: images/node_TRADFRIbulbE27CWSopal600lm.png
+   :width: 200px
+
+Tuya, QS-Zigbee-C01, Tuya QS-Zigbee-C01 Curtain Switch Module
+
+.. image:: images/node_TuyaSmartSocket.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 , , Wima Lock
@@ -1046,6 +1066,16 @@ eWeLight, smart bulb, Tuya smart light GU10
 , , ZB-RGBCW
 
 .. image:: images/node_defaultUnknown.png
+   :width: 200px
+
+eWeLink, ZB-SW01, eWeLink ZB-SW01 smart light switch
+
+.. image:: images/node_eWeLink-ZB-SW01.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 , , ZLL-DimmableLigh

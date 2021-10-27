@@ -31,7 +31,6 @@ Configuration (table config)
     - monitor: ID de l'équipement à surveiller par AbeilleMonitor.
     - preventLQIRequest: Option avancée pour empecher (si 'yes') les requètes LQI à minuit. Certains équipements rebootent suite à ça.
     - state
-    - zigateNb: Nombre de zigates installé.
 - value
 
 Equipement (table eqLogic)

@@ -1,17 +1,31 @@
 ChangeLog
 =========
 
-211022-BETA-1
+211027-BETA-1
 -------------
 
   .. important:: L'équipe Zigate recommande FORTEMENT d'utiliser un firmware **Optimized PDM** (OPDM), donc dispo depuis la version '3.1e'.
 
     - Cette version corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
     - Les firmwares avant 3.1e sont forcement 'legacy'.
-    - Mais **ATTENTION** si vous migrez d'une version 'legacy' ver 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
+    - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
+
+- JSON équipement: Amélioration syntaxe permettant de surcharger 'subType' ou 'unite'.
+- Zlinky TIC: Diverses corrections dont lecture option tarifaire.
+- Tuya repeteur zigbee RP280: Ajout support.
+- Page de config
+
+  - Options avancées: Nettoyage autorisé si test d'intégrité ok.
+  - Partie mise-à-jour (vérification) caché. Pas assez fiable. A revoir.
+  - Partie 'zigates' revue.
+- Tuya ZM-CG205 door sensor: Mise-à-jour JSON (#2165).
+- Interne: Suppression entrée 'zigateNb' de la DB config.
+- eWeLink ZB-SW01: Support préliminaire (#2172).
+
+211022-BETA-1
+-------------
 
 - **ATTENTION**: Format DB interne modifié. Restaurer sauvegarde si besoin de revenir à une version antérieure.
-
 - Interne: DB équipement: 'modeleJson' => 'ab::jsonId'.
 - Interne: Suppression 'archives'.
 - Page config: Affichage version firmware complète (ex: 0004-0320).

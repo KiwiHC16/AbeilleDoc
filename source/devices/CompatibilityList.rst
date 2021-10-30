@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2021-10-27
+Dernière mise-à-jour le 2021-10-30
 
 Sonoff, SBMINI, Sonoff ZBMINI smart switch
 

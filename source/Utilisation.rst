@@ -1,6 +1,9 @@
 Utilisation
 ===========
 
+.. include:: Groups.rst
+.. include:: OTA.rst
+
 Inclusion
 ---------
 
@@ -10,17 +13,6 @@ Suppression
 -----------
 
 Vous avez la possibilité de faire une :doc:`Suppression` d'un équipement du réseau zigbee géré par la zigate.
-
-Groups
-------
-
-Un fois l'équipement dans le réseau, la zigate lui attribue une adresse pour qu'il puisse dialoguer. La zigate peut lui envoyer des messages directement à cette adresse.
-Maintenant si la ZiGate souhaite envoyer un même message à plusieurs équipements en même temps, elle peut utiliser une adresse de :doc:`Groups` . Cela permet d'avoir par exemple des équipements qui réagissent simultanément.
-
-Scenes
-------
-
-Le :doc:`Groups` permet d'adresser des équipements en même temps pour une même action mais ne permet pas d'envoyer des demandes differentes. Ce point est résolu par les :doc:`Scenes`. Vous pouvez preconfigurer une ensemble d'équipments dans des configurations spécifiques est les associer à des :doc:`Scenes`. Ensuite il vous suffit de rappeler une :doc:`Scenes` pour remettre tout le monde dans la configuration désirée.
 
 Santé
 -----

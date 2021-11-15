@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mise-à-jour « Over The Air » &#8212; Documentation Abeille 11.02.2021</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Abeille_icon.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div><h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements supportés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AjoutNouvelEquipement.html">Ajout d’un nouvel équipement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions fréquentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Debug.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html">ChangeLog</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="mise-a-jour-over-the-air">
+<h1>Mise-à-jour « Over The Air »<a class="headerlink" href="#mise-a-jour-over-the-air" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Certains équipements supportent la mise-à-jour de leur firmware à travers le réseau (Over The Air).</p>
+<p>Abeille permet d’effectuer cette mise-à-jour dés lors que vous avez récupéré le bon firmware auprès du fabricant.</p>
+<div class="section" id="acces-a-l-assistant-de-mise-a-jour">
+<h2>Accès à l’assistant de mise-à-jour<a class="headerlink" href="#acces-a-l-assistant-de-mise-a-jour" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Via la page des équipements (Plugins &gt; Protocole domotique &gt; Abeille)</p>
+<img alt="_images/OTA-Acces.png" src="_images/OTA-Acces.png" />
+<p>En cliquant sur le bouton ci-dessus, l’assistant de mise-à-jour apparait comme l’exemple suivant:</p>
+<img alt="_images/OTA-Assistant.png" src="_images/OTA-Assistant.png" />
+<p>Le bouton AJOUTER permet de charger un firmware sur la boxe Zigbee.</p>
+<p>Les formats supportés sont « .ota » ou « .ota.signed ».</p>
+<p>A partir du moment ou un firmware est disponible, vous pouvez notifier l’équipement correspondant pour lui demander de lancer la mise-à-jour. N’oubliez pas que si cet équipement est sur batteries, il faut le reveiller tout de suite apres l’applui sur le bouton « NOTIFIER.</p>
+</div>
+<div class="section" id="un-peu-de-detail">
+<h2>Un peu de détail<a class="headerlink" href="#un-peu-de-detail" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour les curieux, le sequencement des étapes de mise-à-jour est le suivant:</p>
+<ul class="simple">
+<li><p>Optionnel: L’équipement peut être “notifié” qu’un firmware est disponible pour lui</p></li>
+<li><p>L’équipement demande si un FW est disponible</p></li>
+<li><p>La zigate répond oui « il y en a un, telle version », ou « non »</p></li>
+<li><p>L’équipement demande l’envoi du firmware par petits « blocks »</p></li>
+<li><p>Le plugin renvoi les bouts de demandés. Cette étape peut prendre un long moment (autour d’1H pour un firmware Ikea par ex)</p></li>
+<li><p>Une fois le transfert terminé, l’équipement vérifie l’integrité et fait sa mise à jour si tout est monde ou remonte une erreur</p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+
+    <div class="footer">
+      &copy;2019-21, KiwiHC16.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

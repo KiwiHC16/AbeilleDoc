@@ -1,14 +1,66 @@
 ChangeLog
 =========
 
-211030-BETA-1
--------------
+- Illuminance: Correction cmde JSON 'zb-0400-MeasuredValue.json'.
+- Mise-à-jour OTA: Support préliminaire.
+- zb-0400/0402/0405-MeasuredValue.json: Correction calcul valeur.
+- Philips Hue Wall switch: Ajout support préliminaire (#2185).
+- Equipements inconnus: Generation d'un "discovery.json" pendant l'inclusion. Suppression d'AbeilleDiscover.log.
+- Programmateur Zigate: Correction: Compilation echoue si "tmp" n'existe pas.
+- Orvibo ST30: Ajout support préliminaire (#2193).
+- Acova Alcantara: Mise-à-jour JSON pour 'Set-OccupiedHeatingPoint' (#2180).
+- JSON équipements: Nettoyage commandes obsoletes
+
+  - 'temperature' => 'zb-0402-MeasuredValue'
+  - 'bindToZigate' => 'zbBindToZigate'
+  - 'luminositeXiaomi' => 'zb-0400-MeasuredValue'
+  - 'getEtat' => 'zbReadAttribute'
+  - 'humidite' => 'zb-0405-MeasuredValue'
+- JSON équipements: Ajout possibilité de surcharger 'minValue' & 'maxValue' pour widget slider.
+
+211121-STABLE-1
+---------''----
 
   .. important:: L'équipe Zigate recommande FORTEMENT d'utiliser un firmware **Optimized PDM** (OPDM), donc dispo depuis la version '3.1e'.
 
     - Cette version corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
     - Les firmwares avant 3.1e sont forcement 'legacy'.
     - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
+
+- Acova Alcantara: Ajout support préliminaire (#2180).
+- Interne: Nettoyage AbeilleZigateConst.
+- Interne: Correction CmdPrepare/WriteAttributeRequestGeneric. Impacte Danfoss Ally (#1881).
+- Ikea bulb E27 White Spectre opal 1055lm: Ajout support (#2187).
+- Moes ZSS-ZK-THL-C: Ajout support (#2191).
+
+211115-BETA-2
+-------------
+
+- Moniteur: Suppression message sur équipement inexistant (#2186).
+- Moniteur: Correction lancement démon.
+
+211115-BETA-1
+-------------
+
+- Page de config: Correction bug écriture impossible adresse Wifi.
+
+211107-BETA-1
+-------------
+
+- Page Abeilles: Fonctionalité 'scenes' cachée. Scénaris offrent l'équivalent.
+- Identification modèles Tuya: Correction.
+- Interne: AbeilleCmd, bind0030: Supression fonction prepare.
+- Interne: AbeilleCmdPrepare: Correctif pour nmbre de params impair.
+- Interne: getVersion => getZgVersion.
+- JSON équipements: Amélioration syntaxe permettant de surcharger 'execAtCreationDelay'.
+- Sonoff SNZB-02: JSON revu. 'TH01.json' supporte identifiants 'TH01' & '66666'.
+- JSON équipements: Correction valeur minInterval & maxInterval (décimal => hexa).
+- Page EQ/avancé: Support préliminaire cmds 41 & 42, cluster 1000/Commissioning.
+- Silvercrest HG06106C light bulb: Ajout support (#2050).
+- Legrand 16AX: Mise-à-jour icone.
+
+211030-BETA-1
+-------------
 
 - Tuya ZM-CG205 door sensor: Mise-à-jour JSON. Ajout 'ZoneStatus' (#2165).
 - Interne: Parser: Support réponse cluster 000A/Time, attrib 0007 + ...

@@ -16,10 +16,13 @@ ChangeLog
   - 'luminositeXiaomi' => 'zb-0400-MeasuredValue'
   - 'getEtat' => 'zbReadAttribute'
   - 'humidite' => 'zb-0405-MeasuredValue'
+  - 'on' => 'zbCmd-0006-On'
+  - 'off' => 'zbCmd-0006-Off'
 - JSON équipements: Ajout possibilité de surcharger 'minValue' & 'maxValue' pour widget slider.
+- 1 chan switch module (TS0011, _TZ3000_ji4araar): Ajout JSON sur base TS0011 (#2196).
 
 211121-STABLE-1
----------''----
+---------------
 
   .. important:: L'équipe Zigate recommande FORTEMENT d'utiliser un firmware **Optimized PDM** (OPDM), donc dispo depuis la version '3.1e'.
 

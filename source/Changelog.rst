@@ -1,6 +1,30 @@
 ChangeLog
 =========
 
+- Interne: Améliorations assistant JSON.
+
+211125-BETA-1
+-------------
+
+- Assistant de découverte: Texte de rappel si batterie.
+- Tuya RH3001 door sensor: Mise-à-jour JSON (#1226).
+- Lidl HG07878A TS0502A: Ajout support préliminaire (#2198).
+- JSON équipements: Nettoyage commandes obsoletes
+
+  - 'BindToZigateEtat' => 'zbBindToZigate'
+  - 'BindToZigateLevel' => 'zbBindToZigate'
+  - 'BindToZigateButton' => 'zbBindToZigate'
+  - 'BindToZigateIlluminance' => 'zbBindToZigate'
+  - 'levelLight' => 'zb-0008-CurrentLevel'
+  - 'getLevel' => 'zbReadAttribute' + 'clustId=0008&attdId=0000'
+- Démarrage sans Zigate active: Ajout message + démarrage démons annulé.
+- Page de config: Zigate Wifi: Correction message 'Port série de la zigate X INVALIDE ! Zigate désactivée'.
+- Tuya TS0501B Led controller: Ajout support préliminaire (#2199).
+- Dimmer-Switch-ZB3.0_HZC: Support préliminaire (#2200).
+
+211122-BETA-1
+-------------
+
 - Illuminance: Correction cmde JSON 'zb-0400-MeasuredValue.json'.
 - Mise-à-jour OTA: Support préliminaire.
 - zb-0400/0402/0405-MeasuredValue.json: Correction calcul valeur.

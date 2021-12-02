@@ -1,7 +1,15 @@
 ChangeLog
 =========
 
-211130-BETA-1
+211202-BETA-1
+-------------
+
+- Récupération équipements fantomes (toujours sur le réseau mais plus dans Jeedom)... revue en cours.
+- Tuya/Sixwgh TS011F__TZ3000_cphmq0q7: Ajout support (#2211).
+- Page EQ/avancé: Ajout bouton récupération adresse IEEE.
+- Message si mode debug et moins de 5000 lignes de log.
+
+211130-BETA-2
 -------------
 
 - Dimmer-Switch-ZB3.0_HZC: Mise-à-jour reporting CurrentLevel (#2200).

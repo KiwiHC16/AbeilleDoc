@@ -1,10 +1,56 @@
 ChangeLog
 =========
 
+  .. important:: L'équipe Zigate recommande FORTEMENT d'utiliser un firmware **Optimized PDM** (OPDM) dans les cas suivants:
+
+    - Toute nouvelle installation.
+    - Dès lors qu'un réappairage complet est nécéssaire.
+    - La version OPDM corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
+    - Les firmwares avant 3.1e sont forcement 'legacy'.
+    - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
+
+211207-BETA-2
+-------------
+
+- Interne: Amélioration création ruche vs démarrage. Mode forcé en 'hybride' qq soit FW.
+- Philips wall switch module/RDM001: Mise-à-jour modèle & support cluster FC00 (#2185).
+- JSON équipements: Nettoyage commandes obsolètes
+
+  - 'BindToPowerConfig' => 'zbBindToZigate' + 'clustId=0001'
+  - 'BindToZigateTemperature' => 'zbBindToZigate' + 'clustId=0402'
+  - 'BindToZigateRadiateur' => 'zbBindToZigate' + 'clustId=0201'
+  - 'BindToZigateEtatLegrand' => 'zbBindToZigate' + 'clustId=FC41'
+  - 'BindToZigatePuissanceLegrand' => 'zbBindToZigate' + 'clustId=0B04'
+  - 'BindToZigateLightColor' => 'zbBindToZigate' + 'clustId=0300'
+  - 'BindToZigateOccupancy' => 'zbBindToZigate' + 'clustId=0406'
+  - 'BindToZigateCurrent_Position_Lift_Percentage' => 'zbBindToZigate' + 'clustId=0102'
+  - 'BindShortToSmokeHeiman' => 'zbBindToZigate' + 'clustId=0500'
+  - 'BindShortToZigateBatterie' => 'zbBindToZigate' + 'clustId=0001'
+- Interne: AbeilleCmd: Traitement status 8000 groupé + ...
+- Xiaomi Aqara SSM-U01: Ajout support (#2227).
+- Interne: AbeilleCmd: Ajout support cmd 0201/Thermostat.
+- Interne: AbeilleCmd: writeAttribute(): Correction direction.
+- Interne: Parser: Requetes lecture attributs groupées lors d'une annonce.
+- Effacement PDM: Correction regression interne.
+
+211205-BETA-1
+-------------
+
+- Orvibo ST30: Mise-à-jour modèle + icone (#2193).
+- Tuya/Sixwgh TS011F__TZ3000_cphmq0q7: Mise-à-jour modèle + icone (#2211).
+- Récupération équipements fantomes (toujours sur le réseau mais plus dans Jeedom): Mise-à-jour
+- Aqara Smart Wall Switch H1 EU (No Neutral, Double Rocker) (WS-EUK02): Support préliminaire (#2224).
+
+211205-STABLE-1
+---------------
+
+- Page EQ/avancé: Ajout bouton reset SW zigate (#2176).
+- Appairage équipement: correction regression.
+
 211202-BETA-1
 -------------
 
-- Récupération équipements fantomes (toujours sur le réseau mais plus dans Jeedom)... revue en cours.
+- Récupération équipements fantomes (toujours sur le réseau mais plus dans Jeedom): Partiel.
 - Tuya/Sixwgh TS011F__TZ3000_cphmq0q7: Ajout support (#2211).
 - Page EQ/avancé: Ajout bouton récupération adresse IEEE.
 - Message si mode debug et moins de 5000 lignes de log.
@@ -38,12 +84,6 @@ ChangeLog
 
 211126-BETA-2
 -------------
-
-  .. important:: L'équipe Zigate recommande FORTEMENT d'utiliser un firmware **Optimized PDM** (OPDM), donc dispo depuis la version '3.1e'.
-
-    - Cette version corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
-    - Les firmwares avant 3.1e sont forcement 'legacy'.
-    - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
 
 - Interne: Améliorations assistant JSON.
 - JSON équipements: Nettoyage commandes obsoletes

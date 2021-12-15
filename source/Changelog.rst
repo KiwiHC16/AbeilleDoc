@@ -1,6 +1,57 @@
 ChangeLog
 =========
 
+- Interne: Grosse refonte/nettoyage AbeilleCmd pour controle de flux via nPDU/aPDU (FW>=3.1e).
+- Interne: Parser: Support nPDU/aPDU sur messages 8000/8012 & 8702 (FW>=3.1e).
+
+211214-BETA-3
+-------------
+
+- dOOwifi DWF-0205ZB-PN-2: Ajout PNG (#2241).
+- JSON équipements: Nettoyage commandes obsolètes
+
+  - 'spiritSetReportBatterie' => 'zbConfigureReporting' + 'clustId=0001&attrType=20&attrId=0021'
+  - 'setReportIlluminance' => 'zbConfigureReporting' + 'clustId=0400&attrType=21&attrId=0000'
+  - 'setReportTemperature' => 'zbConfigureReporting' + 'clustId=0402&attrType=29&attrId=0000'
+  - 'setReportOccupancy' => 'zbConfigureReporting' + 'clustId=0406&attrType=18&attrId=0000'
+- QS-Zigbee-C01: Correction modele pour cmde 'Position'.
+- Ajout support Module volet Roulant dOOwifi DWF-0205ZB-PN-2 (#2241).
+- Firmware: Ajout version 3.21 OPDM+legacy. Suppression versions antérieures à 3.1d.
+- Xiaomi Aqara QBKG26LM: Mise-à-jour modèle (#2174).
+
+211210-BETA-1
+-------------
+
+- Réseau Abeille/routes: Correction erreur si équipement sans parent.
+- Support: Mise-à-jour infos clefs.
+- JSON équipements
+
+  - Fin de support noms obsoletes: nameJeedom/Categorie/icone/battery_type/Commandes.
+  - Support surcharge de parametres optionnels.
+
+211209-BETA-1
+-------------
+
+- Interne: Création/mise-à-jour ruche revue.
+- Interne: Suppression mode 'hybride' forcé.
+- Message si FW plus vieux que 3.1D (nécessaire pour certains équipements).
+
+211208-BETA-2
+-------------
+
+- Ruche: page équipement/avancé: Correction regression bouton 'setMode'.
+- SPLZB-131: RMSVoltage, reporting si variation >= 2V (#2109).
+- Xiaomi Aqara SSM-U01: Ajout support 'ActivePower' (#2234).
+- JSON équipements: Nettoyage commandes obsolètes
+
+  - 'setReportBatterie' => 'zbConfigureReporting' + 'clustId=0001&attrType=20&attrId=0021'
+  - 'setReportBatterieVolt' => 'zbConfigureReporting' + 'clustId=0001&attrType=20&attrId=0020'
+  - 'setReportEtat' => 'zbConfigureReporting' + 'clustId=0006&attrType=10&attrId=0000'
+  - 'setReportLevel' => 'zbConfigureReporting' + 'clustId=0008&attrType=10&attrId=0000'
+  - 'setReportCurrent_Position_Lift_Percentage' => 'zbConfigureReporting' + 'clustId=0102&attrType=10&attrId=0008'
+  - 'setReportHumidity' => 'zbConfigureReporting' + 'clustId=0405&attrType=20&attrId=0000'
+- Récupération équipements fantomes (toujours sur le réseau mais plus dans Jeedom): Améliorations.
+
 211208-BETA-1
 -------------
 

@@ -1,11 +1,16 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2021-10-30
+Dernière mise-à-jour le 2021-12-30
 
 Sonoff, SBMINI, Sonoff ZBMINI smart switch
 
 .. image:: images/node_01MINIZB.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 , , 1-digital-input
@@ -63,11 +68,6 @@ Konke, , Konke Multi-function Button
 .. image:: images/node_511.202.png
    :width: 200px
 
-Sonoff, SNZB-02, Sonoff SNZB-02 temp & humidity
-
-.. image:: images/node_SNZB-02.png
-   :width: 200px
-
 , , 7-digital-input
 
 .. image:: images/node_7-digital-input.png
@@ -83,9 +83,24 @@ Orvibo, CM10ZW, Orvibo multi-functional relay
 .. image:: images/node_Orvibo-CM10ZW.png
    :width: 200px
 
+Orvibo, ST30, Orvibo ST30 temperature/humidity sensor
+
+.. image:: images/node_Orvibo-ST30.png
+   :width: 200px
+
 , , Ampoule Ledvance Classic E27 Tunable White
 
 .. image:: images/node_A60TWZ3.png
+   :width: 200px
+
+Acova, Alcantara 2, Acova Alcantara 2
+
+.. image:: images/node_Acova-Alcantara2.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 Sonoff, BASICZBR3, Sonoff BASICZBR3 DIY smart switch
@@ -166,6 +181,11 @@ Niko, , Niko connected outlet socket
 Sonoff, SNZB-04, Sonoff SNZB-04 Wireless Door/Window Sensor
 
 .. image:: images/node_SNZB-04.png
+   :width: 200px
+
+Iolloi, ID-EU20FWB4L, Iolloi flush-mounted dimmer switch 5-250 W, trailing edge dimmer
+
+.. image:: images/node_Iolloi-ID-EU20FWB4L.png
    :width: 200px
 
 , , Legrand Dimmer Switch w/o neutral
@@ -423,9 +443,9 @@ Osram, AC0251100NJ, Osram Smart+ Switch Mini
 .. image:: images/node_.png
    :width: 200px
 
-Profalux, Volets 2nd gen, Profalux volet gen 2
+Profalux, MAI-ZTS, Profalux gen 2 remote control
 
-.. image:: images/node_voletProFalux.png
+.. image:: images/node_ProfaluxTelecommande.png
    :width: 200px
 
 Profalux, Volets 2nd gen, Profalux volet gen 2
@@ -508,6 +528,16 @@ Innr, RB285C, Innr RB285C RGBW bulb colour E27
 .. image:: images/node_RC110.png
    :width: 200px
 
+Philips/Signify, 929003017102, Hue wall switch module
+
+.. image:: images/node_PhilipsSignify-RDM001.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
 , , Ampoule Innr Edison RF263 Vintage E27
 
 .. image:: images/node_RF263.png
@@ -518,9 +548,14 @@ Innr, RB285C, Innr RB285C RGBW bulb colour E27
 .. image:: images/node_RF265.png
    :width: 200px
 
-, , Tuya NEO RH3001
+, , Tuya NEO RH3001 door sensor
 
 .. image:: images/node_RH3001.png
+   :width: 200px
+
+Tuya, RH3040, Tuya RH3040 PIR sensor
+
+.. image:: images/node_RH3040.png
    :width: 200px
 
 Philips, RWL021, Hue Dimmer Switch RWL021
@@ -531,6 +566,11 @@ Philips, RWL021, Hue Dimmer Switch RWL021
 , , Legrand Télécommande Depart Arrivée
 
 .. image:: images/node_LegrandRemoteSwitch.png
+   :width: 200px
+
+Sonoff, S26R2ZB, Sonoff S26R2ZB Smart Plug
+
+.. image:: images/node_Sonoff-S26R2ZB.png
    :width: 200px
 
 , , ZigBee On Off Controller
@@ -653,6 +693,16 @@ Ikea, , TRADFRI bulb E14 White Spectre 470lm
 .. image:: images/node_TRADFRIbulbE14WS470lm.png
    :width: 200px
 
+Ikea, LED1949C5, Ikea E14 470lm candle bulb
+
+.. image:: images/node_IkeaTradfriBulbE14WSOpal400lm.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
 Ikea, , TRADFRI bulb E14 White Spectre opal 400lm
 
 .. image:: images/node_IkeaTradfriBulbE14WSOpal400lm.png
@@ -686,6 +736,11 @@ Ikea, , TRADFRI bulb E27 WS clear 806lm
 Ikea, , TRADFRI bulb E27 WS clear 950lm
 
 .. image:: images/node_TRADFRIbulbE27WSclear950lm.png
+   :width: 200px
+
+Ikea, , IKEA Ampoule TRADFRI bulb E27 White Spectre opal 1055 lm
+
+.. image:: images/node_TRADFRIbulbE27WSopal1000lm.png
    :width: 200px
 
 , , IKEA Ampoule TRADFRI bulb E27 White Spectre opal 1000 lm
@@ -838,6 +893,16 @@ Girier, JR-ZDS01, Girier DIY Smart Switch
 .. image:: images/node_TS0011.png
    :width: 200px
 
+Avatto, Z-N-WSM01, Avatto 1 channel switch module
+
+.. image:: images/node_Tuya-1chanSwitchModule.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
 , , Zemismart tactile 2gang sans neutre
 
 .. image:: images/node_TS0002.png
@@ -908,6 +973,16 @@ Tuya, ESW-0ZAA-EU, Tuya 4 buttons scene switch
 .. image:: images/node_TS0121.png
    :width: 200px
 
+Sixwgh, WH025, Sixwgh WH025 plug
+
+.. image:: images/node_Tuya-TS011F.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
 UseeLink, SM-SO306, 4 gang switch, with USB
 
 .. image:: images/node_UseeLink-SM-SO306.png
@@ -928,6 +1003,11 @@ Silvercrest, HG06337-FR, SAPZ-1-A1 connected plug
 .. image:: images/node_Silvercrest-HG06337-FR.png
    :width: 200px
 
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
 , , TS0121
 
 .. image:: images/node_TS0121.png
@@ -941,6 +1021,11 @@ Silvercrest, HG06337-FR, SAPZ-1-A1 connected plug
 Girier, JR-ZPM01, Girier/Tuya ZigBee smart plug EU
 
 .. image:: images/node_JR-ZPM01.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 , , Blitzwolf-BW-SHP13
@@ -988,9 +1073,29 @@ Tuya, RP280, Tuya RP280 zigbee repeater
 .. image:: images/node_.png
    :width: 200px
 
+Moes, ZSS-ZK-THL, Smart Brightness Thermometer
+
+.. image:: images/node_Moes-ZSS-ZK-THL.png
+   :width: 200px
+
 , , SM-SW101-CZ
 
 .. image:: images/node_TS0302.png
+   :width: 200px
+
+Tuya, TS0501B , Tuya Single Color LED Controller
+
+.. image:: images/node_Tuya-TS0501B-LedController.png
+   :width: 200px
+
+LivarnoLux, HG07878A, Livarno HG07878A bulb
+
+.. image:: images/node_FlexRGBW.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 Tuya, , Tuya DC5V-24V LED controller
@@ -1001,6 +1106,16 @@ Tuya, , Tuya DC5V-24V LED controller
 Tuya, , Silvercrest Ruban a LED
 
 .. image:: images/node_FlexRGBW.png
+   :width: 200px
+
+Silvercrest, HG06106C, Silvercrest HG06106C light bulb
+
+.. image:: images/node_Silvercrest-HG06106C.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 Silvercrest, , Silvercrest Ruban a LED
@@ -1018,9 +1133,39 @@ Tuya, , Yandhi E27 Bulb
 .. image:: images/node_TRADFRIbulbE27CWSopal600lm.png
    :width: 200px
 
-Tuya, QS-Zigbee-C01, Tuya QS-Zigbee-C01 Curtain Switch Module
+LivarnoHome, HG07834C, LivarnoHome HG07834C E27 bulb
 
-.. image:: images/node_TuyaSmartSocket.png
+.. image:: images/node_Silvercrest-HG06106C.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+Tuya, TV02, Tuya TV02
+
+.. image:: images/node_Tuya-TV02.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+Tuya, QS-Zigbee-C01, Tuya QS-Zigbee-C01 Curtain Module
+
+.. image:: images/node_Tuya-QS-Zigbee-C01.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+dOOWifi, DWF-0205ZB-PN-2, dOOWifi window module
+
+.. image:: images/node_dOOWifi-DWF-0205ZB-PN.png
    :width: 200px
 
 , , 
@@ -1033,9 +1178,9 @@ Tuya, QS-Zigbee-C01, Tuya QS-Zigbee-C01 Curtain Switch Module
 .. image:: images/node_TY0A01.png
    :width: 200px
 
-, , Legrand Teleruptor
+Legrand, 16AX, Legrand 16AX Teleruptor
 
-.. image:: images/node_defaultUnknown.png
+.. image:: images/node_Legrand-Teleruptor.png
    :width: 200px
 
 Sonoff, SNZB-01, Sonoff SNZB-01 wireless button
@@ -1356,6 +1501,36 @@ Xiaomi, SSM-U02, Xiaomi Single Switch Module T1 (No Neutral)
 Xiaomi, WS-EUK01, Aqara H1 smart wall switch
 
 .. image:: images/node_XiaomiPrise.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+Xiaomi, WS-EUK02, Aqara H1 WS-EUK02 smart wall switch
+
+.. image:: images/node_Aqara-WallSwitchH1-Double.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+Xiaomi, SSM-U01, Xiaomi Single Switch Module T1 (With Neutral)
+
+.. image:: images/node_XiaomiAqara-SSM-U01.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+Xiaomi Aqara, , Xiaomi QBKG26LM 3 gang smart wall switch
+
+.. image:: images/node_XiaomiAqara-QBKG26LM.png
    :width: 200px
 
 , , Xiaomi Vibration

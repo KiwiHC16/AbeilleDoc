@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2021-12-30
+Dernière mise-à-jour le 2022-01-08
 
 Sonoff, SBMINI, Sonoff ZBMINI smart switch
 
@@ -236,6 +236,11 @@ Gledopto, GL-C-006, Gledopto WW/CW LED Controller
 Gledopto, GL-C-007, GLEDOPTO RGT+CCT LED Controller
 
 .. image:: images/node_GL-C-008.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 Gledopto, GL-C-008, GLEDOPTO RGT+CCT LED Controller
@@ -695,7 +700,7 @@ Ikea, , TRADFRI bulb E14 White Spectre 470lm
 
 Ikea, LED1949C5, Ikea E14 470lm candle bulb
 
-.. image:: images/node_IkeaTradfriBulbE14WSOpal400lm.png
+.. image:: images/node_Ikea-BulbE14CandleWhite.png
    :width: 200px
 
 , , 
@@ -1088,7 +1093,7 @@ Tuya, TS0501B , Tuya Single Color LED Controller
 .. image:: images/node_Tuya-TS0501B-LedController.png
    :width: 200px
 
-LivarnoLux, HG07878A, Livarno HG07878A bulb
+LivarnoLux, HG07878A, LivarnoLux HG07878A bulb
 
 .. image:: images/node_FlexRGBW.png
    :width: 200px
@@ -1106,6 +1111,16 @@ Tuya, , Tuya DC5V-24V LED controller
 Tuya, , Silvercrest Ruban a LED
 
 .. image:: images/node_FlexRGBW.png
+   :width: 200px
+
+LivarnoLux, HG06701B, LivarnoLux HG06701B applique murale
+
+.. image:: images/node_LivarnoLux-HG06701B.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 Silvercrest, HG06106C, Silvercrest HG06106C light bulb
@@ -1323,6 +1338,16 @@ Xiaomi Aqara, AAQS-S01, Aqara AAQS-S01 TVOC air quality monitor
 .. image:: images/node_light.aqcn02.png
    :width: 200px
 
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+Xiaomi, MCCGQ14LM, Xiaomi Aqara MCCGQ14LM door sensor
+
+.. image:: images/node_XiaomiPorte.png
+   :width: 200px
+
 Xiaomi, SP-EUC01 ?, Aqara SmartPlug
 
 .. image:: images/node_plug.maeu01.png
@@ -1376,6 +1401,16 @@ Xiaomi, SP-EUC01 ?, Aqara SmartPlug
 , , Xiaomi Interrupteur Mural Carré Double D1 (pile)
 
 .. image:: images/node_XiaomiButtonb286acn02.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+Xiaomi, WRS-R02, Xiaomi Aqara Wireless Remote Switch H1 Double Rocker
+
+.. image:: images/node_TODO.png
    :width: 200px
 
 Xiaomi, WXCJKG13LM, Aqara Opple wireless switch 6 buttons

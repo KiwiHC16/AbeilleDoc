@@ -61,16 +61,16 @@
 <li class="toctree-l1"><a class="reference internal" href="Debug.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ChangeLog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#beta-1">211230-BETA-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stable-1">220108-STABLE-1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#beta-3">211214-BETA-3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">211210-BETA-1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">211209-BETA-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beta-1">211210-BETA-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">211209-BETA-1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#beta-2">211208-BETA-2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">211208-BETA-1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">211207-BETA-3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">211207-BETA-2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id6">211205-BETA-1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#stable-1">211205-STABLE-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">211208-BETA-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">211207-BETA-3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">211207-BETA-2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">211205-BETA-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">211205-STABLE-1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id7">211202-BETA-1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id8">211130-BETA-2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id9">211129-BETA-2</a></li>
@@ -160,12 +160,59 @@
             
   <div class="section" id="changelog">
 <h1>ChangeLog<a class="headerlink" href="#changelog" title="Lien permanent vers ce titre">¶</a></h1>
+<blockquote>
+<div><div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Pour les zigates v1, l’équipe Zigate recommande FORTEMENT d’utiliser un firmware <strong>Optimized PDM</strong> (OPDM) dans les cas suivants:</p>
 <ul class="simple">
-<li><p>Interne: Grosse refonte/nettoyage AbeilleCmd pour controle de flux via nPDU/aPDU (FW&gt;=3.1e).</p></li>
-<li><p>Interne: Parser: Support nPDU/aPDU sur messages 8000/8012 &amp; 8702 (FW&gt;=3.1e).</p></li>
+<li><p>Toute nouvelle installation.</p></li>
+<li><p>Dès lors qu’un réappairage complet est nécéssaire.</p></li>
+<li><p>La version OPDM corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d’équipements.</p></li>
+<li><p>Les firmwares avant 3.1e sont forcement “legacy”.</p></li>
+<li><p>Mais <strong>ATTENTION</strong> si vous migrez d’une version “legacy” vers “OPDM” il vous faudra <strong>effacer la PDM et réapparairer tous vos équipements</strong>.</p></li>
 </ul>
-<div class="section" id="beta-1">
-<h2>211230-BETA-1<a class="headerlink" href="#beta-1" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Les zigates v1 doivent avoir un firmware &gt;= 3.1e pour un fonctionnement optimal.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Les zigates v2 doivent être à jour du dernier firmware disponible.</p>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li><p>Interne: Grosse refonte/nettoyage AbeilleCmd pour amélioration controle de flux.</p></li>
+<li><p>Interne: Parser: Support nPDU/aPDU sur messages 8000/8012 &amp; 8702 (FW&gt;=3.1e).</p></li>
+<li><p>Interne: Cmd: Ajout support optionnel “manufId” pour “writeAttribute”.</p></li>
+<li><p>Page EQ/avancé: Ecriture attribut améliorée. Ajout support “direction” &amp; “manufId”.</p></li>
+<li><p>Xiaomi H1 double rocker: Ajout support (2253).</p></li>
+<li><p>JSON équipements: Nettoyage commandes obsolètes</p>
+<ul>
+<li><p>“etat” =&gt; “zb-0006-OnOff”</p></li>
+<li><p>“etatCharge0” =&gt; “zb-0006-OnOff” + “ep=01”</p></li>
+<li><p>“etatCharge1” =&gt; “zb-0006-OnOff” + “ep=02”</p></li>
+<li><p>“etatCharge2” =&gt; “zb-0006-OnOff” + “ep=03”</p></li>
+<li><p>“etatCharge6” =&gt; “zb-0006-OnOff” + “ep=07”</p></li>
+<li><p>Ajout surcharge de “genericType”</p></li>
+<li><p>“etatInter0” =&gt; “zb-0006-OnOff” + “ep=01”</p></li>
+<li><p>“etatInter1” =&gt; “zb-0006-OnOff” + “ep=02”</p></li>
+<li><p>“etatInter2” =&gt; “zb-0006-OnOff” + “ep=03”</p></li>
+<li><p>“etatDoor” =&gt; “zb-0006-OnOff”</p></li>
+</ul>
+</li>
+<li><p>TRADFRIbulbE14WScandleopal470lm LED1949C5: Mise-à-jour modèle (2250).</p></li>
+<li><p>Interne: AbeilleCmd: Suppression prepare readReportingConfig() + getBindingTable().</p></li>
+<li><p>Package support: ajout du log “update”.</p></li>
+<li><p>LivarnoLux applique murale HG06701, TS0505A, _TZ3000_5bsf8vaj: Ajout support preliminaire (2256).</p></li>
+<li><p>Assistant modèle JSON: Améliorations.</p></li>
+<li><p>Interne: Abeille.class: Nettoyage fonctionalités obsolètes.</p></li>
+<li><p>Xiaomi Aqara MCCGQ14LM (magnet.acn001): Ajout support préliminaire (2257).</p></li>
+<li><p>Lidl HG07878A TS0502A: Correction modèle (2198).</p></li>
+<li><p>Interne: Suppression des cmdes Ruche obsolètes au démarrage des démons.</p></li>
+</ul>
+<div class="section" id="stable-1">
+<h2>220108-STABLE-1<a class="headerlink" href="#stable-1" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Tuya TV02: Ajout image (2175).</p></li>
 <li><p>JSON équipements: Correction support params optionnels.</p></li>
@@ -197,8 +244,8 @@
 <li><p>Xiaomi Aqara QBKG26LM: Mise-à-jour modèle (2174).</p></li>
 </ul>
 </div>
-<div class="section" id="id1">
-<h2>211210-BETA-1<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="beta-1">
+<h2>211210-BETA-1<a class="headerlink" href="#beta-1" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Réseau Abeille/routes: Correction erreur si équipement sans parent.</p></li>
 <li><p>Support: Mise-à-jour infos clefs.</p></li>
@@ -210,8 +257,8 @@
 </li>
 </ul>
 </div>
-<div class="section" id="id2">
-<h2>211209-BETA-1<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="id1">
+<h2>211209-BETA-1<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Interne: Création/mise-à-jour ruche revue.</p></li>
 <li><p>Interne: Suppression mode “hybride” forcé.</p></li>
@@ -237,8 +284,8 @@
 <li><p>Récupération équipements fantomes (toujours sur le réseau mais plus dans Jeedom): Améliorations.</p></li>
 </ul>
 </div>
-<div class="section" id="id3">
-<h2>211208-BETA-1<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="id2">
+<h2>211208-BETA-1<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Interne: AbeilleDebug.log déplacé dans répertoire temporaire Jeedom.</p></li>
 <li><p>Support: Generation infos clefs pour support à la création du package.</p></li>
@@ -246,28 +293,15 @@
 <li><p>Sonoff S26R2ZB: Ajout support (2221).</p></li>
 </ul>
 </div>
-<div class="section" id="id4">
-<h2>211207-BETA-3<a class="headerlink" href="#id4" title="Lien permanent vers ce titre">¶</a></h2>
-<blockquote>
-<div><div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>L’équipe Zigate recommande FORTEMENT d’utiliser un firmware <strong>Optimized PDM</strong> (OPDM) dans les cas suivants:</p>
-<ul class="simple">
-<li><p>Toute nouvelle installation.</p></li>
-<li><p>Dès lors qu’un réappairage complet est nécéssaire.</p></li>
-<li><p>La version OPDM corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d’équipements.</p></li>
-<li><p>Les firmwares avant 3.1e sont forcement “legacy”.</p></li>
-<li><p>Mais <strong>ATTENTION</strong> si vous migrez d’une version “legacy” vers “OPDM” il vous faudra <strong>effacer la PDM et réapparairer tous vos équipements</strong>.</p></li>
-</ul>
-</div>
-</div></blockquote>
+<div class="section" id="id3">
+<h2>211207-BETA-3<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Acova Alcantara: Version temporaire “Set-OccupiedHeatingPoint” (2180).</p></li>
 <li><p>Tuya/Sixwgh TS011F__TZ3000_cphmq0q7: Cluster 0B04 migré en polling (2211).</p></li>
 </ul>
 </div>
-<div class="section" id="id5">
-<h2>211207-BETA-2<a class="headerlink" href="#id5" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="id4">
+<h2>211207-BETA-2<a class="headerlink" href="#id4" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Interne: Amélioration création ruche vs démarrage. Mode forcé en “hybride” qq soit FW.</p></li>
 <li><p>Philips wall switch module/RDM001: Mise-à-jour modèle &amp; support cluster FC00 (2185).</p></li>
@@ -293,8 +327,8 @@
 <li><p>Effacement PDM: Correction regression interne.</p></li>
 </ul>
 </div>
-<div class="section" id="id6">
-<h2>211205-BETA-1<a class="headerlink" href="#id6" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="id5">
+<h2>211205-BETA-1<a class="headerlink" href="#id5" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Orvibo ST30: Mise-à-jour modèle + icone (2193).</p></li>
 <li><p>Tuya/Sixwgh TS011F__TZ3000_cphmq0q7: Mise-à-jour modèle + icone (2211).</p></li>
@@ -302,8 +336,8 @@
 <li><p>Aqara Smart Wall Switch H1 EU (No Neutral, Double Rocker) (WS-EUK02): Support préliminaire (2224).</p></li>
 </ul>
 </div>
-<div class="section" id="stable-1">
-<h2>211205-STABLE-1<a class="headerlink" href="#stable-1" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="id6">
+<h2>211205-STABLE-1<a class="headerlink" href="#id6" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Page EQ/avancé: Ajout bouton reset SW zigate (2176).</p></li>
 <li><p>Appairage équipement: correction regression.</p></li>

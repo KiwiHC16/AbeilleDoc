@@ -1,6 +1,7 @@
 Utilisation
 ===========
 
+.. include:: PageConfig.rst
 .. include:: Groups.rst
 .. include:: OTA.rst
 

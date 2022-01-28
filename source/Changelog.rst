@@ -1,6 +1,46 @@
 ChangeLog
 =========
 
+- LivarnoLux applique murale HG06701: Correction modèle (2256).
+- Blitzwolf SHP15: Support preliminaire (2277).
+- Assistant EQ/JSON: Update.
+- Interne: AbeilleCmd: Correction priorité getActiveEndpoints.
+- Interne: Parser: Interrogation de tous les EP pour support des eq qui s'identifient via un EP different du premier.
+- Interne: Nettoyage config cmdes 'PollingOnCmdChange' & 'PollingOnCmdChangeDelay' lors mise-à-jour équipement.
+- Interne: AbeilleCmd: Suppression 'Management_LQI_request' obsolete.
+- Tuya 4 buttons (TS004F__TZ3000_xabckq1v): Mise-à-jour modèle (2155).
+- Aqara TVOC moniteur d'air AAQS-S01: Mise-à-jour modèle (2279).
+- Modeles commandes (JSON): modifications syntaxe
+
+  - 'unite' obsolete => 'unit'
+  - 'generic_type' obsolete => 'genericType'
+  - 'trig' obsolete => 'trigOut'
+  - 'trigOffset' obsolete => 'trigOutOffset'
+- Modèles équipements (JSON): améliorations
+
+  - Surcharge possible de 'logicalId'
+  - Surcharge possible de 'trigOut'
+  - Surcharge possible de 'trigOutOffset'
+- Interne: DB eqLogic, config, ab::trig ou trigOffset => ab::trigOut ou trigOutOffset.
+- Xiaomi Aqara MCCGQ14LM (magnet.acn001): Correction modèle (2257).
+- Interne: checkGpio() revu pour suppression faux message 'PiZigate inutilisable'.
+
+220123-BETA-1
+-------------
+
+- Gledopto GU10 buld GL-S-007Z: Ajout support préliminaire (2270).
+- Interne: AbeilleCmd: SimpleDescriptorRequest => getSimpleDescriptor.
+- Page EQ/avancé: Ajout support 'Simple descriptor request'.
+- Interne: AbeilleCmd: IEEE_Address_request => getIeeeAddress.
+- Equipement sur secteur en time-out: Correction.
+- Interne: Correction msg debug 'IEEE addr mismatch' au démarrage.
+- Orvibo CM10ZW: Support signature alternative (2275).
+- Interne: AbeilleCmd: Correction pour espace dans valeur slider.
+- Interne: AbeilleCmd: Suppression prepare 'setLevel'.
+
+220122-BETA-1
+-------------
+
   .. important:: Pour les zigates v1, l'équipe Zigate recommande FORTEMENT d'utiliser un firmware **Optimized PDM** (OPDM) dans les cas suivants:
 
       - Toute nouvelle installation.
@@ -12,7 +52,48 @@ ChangeLog
   .. important:: Les zigates v1 doivent avoir un firmware >= 3.1e pour un fonctionnement optimal.
   .. important:: Les zigates v2 doivent être à jour du dernier firmware disponible.
 
-- Interne: Grosse refonte/nettoyage AbeilleCmd pour amélioration controle de flux.
+- Interne: format message queues vers AbeilleCmd modifié.
+- Interne: Fusion de plusieurs queues vers AbeilleCmd.
+- Erreur getLevel/getEtat inattendue: Correction (2239).
+- Xiaomi Aqara MCCGQ14LM (magnet.acn001): Correction modèle (2257).
+- Interne: Parser vers Abeille. Attributs groupés pour optimisation.
+- Interne: Qq améliorations page EQ/avancé/Zigate.
+- Page de config: Amélioration messages mise-à-jour FW.
+- Page support/infos clefs: Affichage revu.
+- Interne: Parser: Optimisations & nettoyage.
+- Interne: Queues revues.
+- Page EQ/avancé: possibilité de télécharger discovery 'automatique'.
+- Interne: Abeille.class: Vérification de l'état des queues amélioré.
+- Xiaomi H1 double rocker: Mise-à-jour modèle + image (2253).
+- Interne: Abeille.class: Suppression interrogateUnknowNE().
+- Page EQ/avancé: Correction regression bouton "Réinitialiser".
+- Page EQ/avancé: Réinit 'defaultUnknown' si modèle officiel existe.
+- Interne: Commande 'setColor' (cluster 0300) revue.
+
+220114-BETA-1
+-------------
+
+- Interne: Ajout support cmd 00/Setpoint, cluster 0201/thermostat.
+- Acova Alcantara: Mise à jour modele pour controle temp (2180).
+- 'Graph' visible seulement en mode dev.
+- Interne: Gestion des queues: log & suppression msg trop gros. A completer.
+- Interne: Gestion des queues en cas de msg trop gros.
+
+220113-BETA-1
+-------------
+
+- Xiaomi Aqara wall switch D1 (switch.b1nacn02): Mise-à-jour modèle (2262).
+- Profalux Zoe: Identifiant 'TG1' = 'TS' (1066).
+- Réseau/bruit: fonctionalité masquée sauf mode dev.
+- Interne: Parser: 8401/IAS zone status change revisité.
+- RH3040 PIR sensor: Mise-à-jour modèle (2252).
+- Gledopto GL-SD-001 AC dimmer: Ajout support (2258).
+- Tuya télécommande 4 boutons (TS0044): Ajout support (2251).
+
+220110-BETA-1
+-------------
+
+- Interne: Début refonte/nettoyage AbeilleCmd pour amélioration controle de flux.
 - Interne: Parser: Support nPDU/aPDU sur messages 8000/8012 & 8702 (FW>=3.1e).
 - Interne: Cmd: Ajout support optionnel 'manufId' pour 'writeAttribute'.
 - Page EQ/avancé: Ecriture attribut améliorée. Ajout support 'direction' & 'manufId'.
@@ -38,6 +119,8 @@ ChangeLog
 - Xiaomi Aqara MCCGQ14LM (magnet.acn001): Ajout support préliminaire (2257).
 - Lidl HG07878A TS0502A: Correction modèle (2198).
 - Interne: Suppression des cmdes Ruche obsolètes au démarrage des démons.
+- QS-zigbee-C01 nouvelle version: ajout support (2260).
+- Xiaomi Aqara wall switch (switch.b1nacn02): Ajout support (2262).
 
 220108-STABLE-1
 ---------------

@@ -54,7 +54,10 @@
 <li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements supportés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Utilisation</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Utilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#la-page-de-configuration-d-abeille">La page de configuration d’Abeille</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dependances">Dépendances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-de-la-zigate">Configuration de la zigate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#groupes">Groupes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#video">Video</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#gestion-des-groupes">Gestion des groupes</a></li>
@@ -93,6 +96,38 @@
             
   <div class="section" id="utilisation">
 <h1>Utilisation<a class="headerlink" href="#utilisation" title="Lien permanent vers ce titre">¶</a></h1>
+</div>
+<div class="section" id="la-page-de-configuration-d-abeille">
+<h1>La page de configuration d’Abeille<a class="headerlink" href="#la-page-de-configuration-d-abeille" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="dependances">
+<h2>Dépendances<a class="headerlink" href="#dependances" title="Lien permanent vers ce titre">¶</a></h2>
+<p>2 éléments sont potentiellement requis en fonction du type de zigate que vous utilisez:</p>
+<ul class="simple">
+<li><p>le package WiringPI est requis si une des zigates est du type « PI »</p></li>
+<li><p>le package “socat” est requis si une des zigates du type « WIFI »</p></li>
+</ul>
+<img alt="_images/ConfigPage-Dependencies.png" src="_images/ConfigPage-Dependencies.png" />
+</div>
+<div class="section" id="configuration-de-la-zigate">
+<h2>Configuration de la zigate<a class="headerlink" href="#configuration-de-la-zigate" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’exemple ci apres montre la configuration d’une zigate du type « PI », connectée sur le port « ttyS1 » et activée.</p>
+<img alt="_images/ConfigPage-Zigate1.png" src="_images/ConfigPage-Zigate1.png" />
+<p>Les éléments a remplir sont les suivants</p>
+<ul class="simple">
+<li><p>Le type de zigate: « PI », « USB », « DIN » ou « WIFI » et la version correspondante</p></li>
+<li><p>Si type USB/PI ou DIN, le port utilisé</p></li>
+<li><p>Si type WIFI, l’adresse IP et le port de la zigate</p></li>
+</ul>
+<p>Une fois ces éléments connus, il est possible de faire un test de communication (sauf version WIFI pour l’instant) via le bouton « Tester ».
+Si le test est bon, « OK » en vert apparaitra. Sinon le log « AbeilleConfig.log » doit donner + de précisions quant au problème rencontré.</p>
+<img alt="_images/ConfigPage-Zigate1-2.png" src="_images/ConfigPage-Zigate1-2.png" />
+<p>Une fois le test OK, il ne vous reste qu’a activer la zigate, sauvegarder, et redémarrer Abeille</p>
+<img alt="_images/ConfigPage-Zigate1-Activate.png" src="_images/ConfigPage-Zigate1-Activate.png" />
+<p>puis</p>
+<img alt="_images/ConfigPage-Zigate1-Save.png" src="_images/ConfigPage-Zigate1-Save.png" />
+<p>et enfin</p>
+<img alt="_images/ConfigPage-Zigate1-Restart.png" src="_images/ConfigPage-Zigate1-Restart.png" />
+</div>
 <div class="section" id="groupes">
 <h2>Groupes<a class="headerlink" href="#groupes" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les équipements peuvent être adressés de deux façons:</p>

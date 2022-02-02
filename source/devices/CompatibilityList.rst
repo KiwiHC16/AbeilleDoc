@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2022-01-08
+Dernière mise-à-jour le 2022-02-02
 
 Sonoff, SBMINI, Sonoff ZBMINI smart switch
 
@@ -81,6 +81,11 @@ Konke, , Konke Multi-function Button
 Orvibo, CM10ZW, Orvibo multi-functional relay
 
 .. image:: images/node_Orvibo-CM10ZW.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 Orvibo, ST30, Orvibo ST30 temperature/humidity sensor
@@ -168,9 +173,14 @@ Niko, , Niko connected outlet socket
 .. image:: images/node_.png
    :width: 200px
 
-, , Legrand Contactor 20AX
+Legrand, 20AX, Legrand Contactor 20AX
 
 .. image:: images/node_Contactor.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 , , DIYRuZ_RT
@@ -271,6 +281,26 @@ Gledopto, GL-S-003Z, Gledopto RGBW GU10 5W 300lm
 Gledopto, GL-C-004Z, GLEDOPTO Spectre Blanc ref: GL-S-004Z
 
 .. image:: images/node_GL-S-004Z.png
+   :width: 200px
+
+Gledopto, GL-S-007Z, Gledopto GL-S-007Z GU10 Bulb RGB+CCT
+
+.. image:: images/node_ZLL-DimmableLigh.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+Gledopto, GL-SD-001, Gledopto GL-SD-001 AC dimmer
+
+.. image:: images/node_Gledopto-GL-SD-001.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 , , GLEDOPTO
@@ -560,7 +590,7 @@ Philips/Signify, 929003017102, Hue wall switch module
 
 Tuya, RH3040, Tuya RH3040 PIR sensor
 
-.. image:: images/node_RH3040.png
+.. image:: images/node_Tuya-RH3040.png
    :width: 200px
 
 Philips, RWL021, Hue Dimmer Switch RWL021
@@ -943,6 +973,11 @@ LoraTap, SS600ZB, LoraTap Zigbee 3 gang remote
 .. image:: images/node_.png
    :width: 200px
 
+Tuya, TS0044, Tuya 4 buttons Zigbee scene switch
+
+.. image:: images/node_Tuya-TS0044.png
+   :width: 200px
+
 Tuya, , Tuya 4 buttons Zigbee scene switch
 
 .. image:: images/node_Tuya4ButtonsSceneSwitch.png
@@ -991,6 +1026,16 @@ Sixwgh, WH025, Sixwgh WH025 plug
 UseeLink, SM-SO306, 4 gang switch, with USB
 
 .. image:: images/node_UseeLink-SM-SO306.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+Blitzwolf, SHP15, Blitzwolf SHP15
+
+.. image:: images/node_Blitzwolf-BW-SHP13.png
    :width: 200px
 
 , , 
@@ -1158,9 +1203,29 @@ LivarnoHome, HG07834C, LivarnoHome HG07834C E27 bulb
 .. image:: images/node_.png
    :width: 200px
 
+Tuya, TS0505B, Tuya TS0505B GU10 color bulb
+
+.. image:: images/node_?.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
 Tuya, TV02, Tuya TV02
 
 .. image:: images/node_Tuya-TV02.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+Tuya, QS-zigbee-C01, Tuya QS-zigbee-C01 curtain module
+
+.. image:: images/node_Tuya-QS-Zigbee-C01.png
    :width: 200px
 
 , , 
@@ -1270,7 +1335,7 @@ LiXee, ZLinky_TIC, LiXee Zlinky TIC module
 
 Xiaomi Aqara, AAQS-S01, Aqara AAQS-S01 TVOC air quality monitor
 
-.. image:: images/node_Connectedoutlet.png
+.. image:: images/node_XiaomiAqara-AAQS-S01.png
    :width: 200px
 
 , , 
@@ -1408,9 +1473,9 @@ Xiaomi, SP-EUC01 ?, Aqara SmartPlug
 .. image:: images/node_.png
    :width: 200px
 
-Xiaomi, WRS-R02, Xiaomi Aqara Wireless Remote Switch H1 Double Rocker
+Xiaomi, WRS-R02, Xiaomi Aqara WRS-R02 Wireless Remote Switch H1 Double Rocker
 
-.. image:: images/node_TODO.png
+.. image:: images/node_XiaomiAqara-WRS-R02.png
    :width: 200px
 
 Xiaomi, WXCJKG13LM, Aqara Opple wireless switch 6 buttons
@@ -1516,6 +1581,16 @@ Xiaomi, , Xiaomi Interrupteur simple
 , , siren-pni-s002
 
 .. image:: images/node_siren-pni-s002.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+Xiaomi, CQC17003181848, Xiaomi Aqara Wall switch D1
+
+.. image:: images/node_XiaomiButtonSW861.png
    :width: 200px
 
 Xiaomi, , Xiaomi Wall Switch D1 w Neutral 2 Button

@@ -2,7 +2,7 @@ Utilisation
 ===========
 
 .. include:: PageConfig.rst
-.. include:: Groups.rst
+.. include:: PageGestion.rst
 .. include:: OTA.rst
 
 Inclusion

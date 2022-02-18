@@ -20,8 +20,8 @@
 # -- Project information -----------------------------------------------------
 
 project = u'Abeille'
-copyright = u'2019-21, KiwiHC16'
-author = u'KiwiHC16'
+copyright = u'2019-22, KiwiHC16'
+author = u'KiwiHC16/Tcharp38'
 
 # The short X.Y version
 version = u''

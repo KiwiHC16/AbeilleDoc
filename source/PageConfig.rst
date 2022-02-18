@@ -1,8 +1,8 @@
 La page de configuration d'Abeille
-==================================
+-----------
 
 Dépendances
------------
+~~~~~~~~~~
 
 2 éléments sont potentiellement requis en fonction du type de zigate que vous utilisez:
 
@@ -13,7 +13,7 @@ Dépendances
 
 
 Configuration de la zigate
---------------------------
+~~~~~~~~~~
 
 L'exemple ci apres montre la configuration d'une zigate du type "PI", connectée sur le port "ttyS1" et activée.
 

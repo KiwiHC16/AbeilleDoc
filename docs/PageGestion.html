@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Utilisation &#8212; Documentation Abeille 11.02.2021</title>
+    <title>La page de gestion des équipements &#8212; Documentation Abeille 11.02.2021</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -15,8 +15,6 @@
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Utilisation avancée" href="UtilisationAvancee.html" />
-    <link rel="prev" title="Installation" href="Installation.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -44,39 +42,15 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="Installation.html" title="Chapitre précédent">Installation</a></li>
-      <li>Next: <a href="UtilisationAvancee.html" title="Chapitre suivant">Utilisation avancée</a></li>
   </ul></li>
 </ul>
 </div><h3>Navigation</h3>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Equipements.html">Equipements supportés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Utilisation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#la-page-de-configuration-d-abeille">La page de configuration d’Abeille</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#dependances">Dépendances</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#configuration-de-la-zigate">Configuration de la zigate</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#la-page-de-gestion-des-equipements">La page de gestion des équipements</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#groupes">Groupes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#migration-d-equipements">Migration d’équipements</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#mise-a-jour-over-the-air">Mise-à-jour « Over The Air »</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#acces-a-l-assistant-de-mise-a-jour">Accès à l’assistant de mise-à-jour</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#un-peu-de-detail">Un peu de détail</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#inclusion">Inclusion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#suppression">Suppression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sante">Santé</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tuto">Tuto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#trucs-et-astuces">Trucs et Astuces</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AjoutNouvelEquipement.html">Ajout d’un nouvel équipement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions fréquentes</a></li>
@@ -96,42 +70,8 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="utilisation">
-<h1>Utilisation<a class="headerlink" href="#utilisation" title="Lien permanent vers ce titre">¶</a></h1>
-<div class="section" id="la-page-de-configuration-d-abeille">
-<h2>La page de configuration d’Abeille<a class="headerlink" href="#la-page-de-configuration-d-abeille" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="dependances">
-<h3>Dépendances<a class="headerlink" href="#dependances" title="Lien permanent vers ce titre">¶</a></h3>
-<p>2 éléments sont potentiellement requis en fonction du type de zigate que vous utilisez:</p>
-<ul class="simple">
-<li><p>le package WiringPI est requis si une des zigates est du type « PI »</p></li>
-<li><p>le package “socat” est requis si une des zigates du type « WIFI »</p></li>
-</ul>
-<img alt="_images/ConfigPage-Dependencies.png" src="_images/ConfigPage-Dependencies.png" />
-</div>
-<div class="section" id="configuration-de-la-zigate">
-<h3>Configuration de la zigate<a class="headerlink" href="#configuration-de-la-zigate" title="Lien permanent vers ce titre">¶</a></h3>
-<p>L’exemple ci apres montre la configuration d’une zigate du type « PI », connectée sur le port « ttyS1 » et activée.</p>
-<img alt="_images/ConfigPage-Zigate1.png" src="_images/ConfigPage-Zigate1.png" />
-<p>Les éléments a remplir sont les suivants</p>
-<ul class="simple">
-<li><p>Le type de zigate: « PI », « USB », « DIN » ou « WIFI » et la version correspondante</p></li>
-<li><p>Si type USB/PI ou DIN, le port utilisé</p></li>
-<li><p>Si type WIFI, l’adresse IP et le port de la zigate</p></li>
-</ul>
-<p>Une fois ces éléments connus, il est possible de faire un test de communication (sauf version WIFI pour l’instant) via le bouton « Tester ».
-Si le test est bon, « OK » en vert apparaitra. Sinon le log « AbeilleConfig.log » doit donner + de précisions quant au problème rencontré.</p>
-<img alt="_images/ConfigPage-Zigate1-2.png" src="_images/ConfigPage-Zigate1-2.png" />
-<p>Une fois le test OK, il ne vous reste qu’a activer la zigate, sauvegarder, et redémarrer Abeille</p>
-<img alt="_images/ConfigPage-Zigate1-Activate.png" src="_images/ConfigPage-Zigate1-Activate.png" />
-<p>puis</p>
-<img alt="_images/ConfigPage-Zigate1-Save.png" src="_images/ConfigPage-Zigate1-Save.png" />
-<p>et enfin</p>
-<img alt="_images/ConfigPage-Zigate1-Restart.png" src="_images/ConfigPage-Zigate1-Restart.png" />
-</div>
-</div>
-<div class="section" id="la-page-de-gestion-des-equipements">
-<h2>La page de gestion des équipements<a class="headerlink" href="#la-page-de-gestion-des-equipements" title="Lien permanent vers ce titre">¶</a></h2>
+  <div class="section" id="la-page-de-gestion-des-equipements">
+<h1>La page de gestion des équipements<a class="headerlink" href="#la-page-de-gestion-des-equipements" title="Lien permanent vers ce titre">¶</a></h1>
 <p>On accède à cette page via différents moyens:</p>
 <ul class="simple">
 <li><p>Le menu Plugins &gt; Protocole domotique &gt; Abeille</p></li>
@@ -139,7 +79,7 @@ Si le test est bon, « OK » en vert apparaitra. Sinon le log « AbeilleConfi
 </ul>
 <p>Cette page liste tous les équipements gérés par Abeille et déja inclus dans Jeedom.</p>
 <div class="section" id="groupes">
-<h3>Groupes<a class="headerlink" href="#groupes" title="Lien permanent vers ce titre">¶</a></h3>
+<h2>Groupes<a class="headerlink" href="#groupes" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les équipements peuvent être adressés de deux façons:</p>
 <ul class="simple">
 <li><p>Directement via leur adresse Zigbee courte qui leur est attribuée lors de l’inclusion</p></li>
@@ -153,11 +93,11 @@ Si le test est bon, « OK » en vert apparaitra. Sinon le log « AbeilleConfi
 </div>
 <p>Vous pouvez aussi utiliser un scénario dans Jeedom pour adresser un groupe d’équipements, en envoyant à chacun d’eux une commande. Cette solution ne permet pas d’avoir l’impression d’instantanéité mais est très flexible si vous avez un mix de produit zwave et Zigbee par exemple.</p>
 <div class="section" id="video">
-<h4>Video<a class="headerlink" href="#video" title="Lien permanent vers ce titre">¶</a></h4>
+<h3>Video<a class="headerlink" href="#video" title="Lien permanent vers ce titre">¶</a></h3>
 <p><a class="reference external" href="https://youtu.be/H7ndFMK0zFY">Groupe Ajout Supprime.</a></p>
 </div>
 <div class="section" id="gestion-des-groupes">
-<h4>Gestion des groupes<a class="headerlink" href="#gestion-des-groupes" title="Lien permanent vers ce titre">¶</a></h4>
+<h3>Gestion des groupes<a class="headerlink" href="#gestion-des-groupes" title="Lien permanent vers ce titre">¶</a></h3>
 <p>La gestion des groupes se fait de deux façons</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -178,7 +118,7 @@ Si le test est bon, « OK » en vert apparaitra. Sinon le log « AbeilleConfi
 <p>Un équipement peut avoir plusieurs adresses de groupes, cela lui permet par de répondre à plusieurs télécommandes. Par exemple, un va et vient à deux, trois, quarts télécommandes,…</p>
 </div>
 <div class="section" id="ajout-d-un-groupe-a-un-equipement">
-<h4>Ajout d un groupe à un équipement<a class="headerlink" href="#ajout-d-un-groupe-a-un-equipement" title="Lien permanent vers ce titre">¶</a></h4>
+<h3>Ajout d un groupe à un équipement<a class="headerlink" href="#ajout-d-un-groupe-a-un-equipement" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Option A:</p>
 <ul class="simple">
 <li><p>Premier champ: adresse de l’équipement</p></li>
@@ -195,7 +135,7 @@ Si le test est bon, « OK » en vert apparaitra. Sinon le log « AbeilleConfi
 <img alt="_images/Capture_d_ecran_2019_03_04_a_20_22_04.png" src="_images/Capture_d_ecran_2019_03_04_a_20_22_04.png" />
 </div>
 <div class="section" id="retrait-d-un-groupe-a-un-equipement">
-<h4>Retrait d un groupe à un équipement<a class="headerlink" href="#retrait-d-un-groupe-a-un-equipement" title="Lien permanent vers ce titre">¶</a></h4>
+<h3>Retrait d un groupe à un équipement<a class="headerlink" href="#retrait-d-un-groupe-a-un-equipement" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Option A:</p>
 <ul class="simple">
 <li><p>Premier champ: adresse de l’équipement</p></li>
@@ -206,7 +146,7 @@ Si le test est bon, « OK » en vert apparaitra. Sinon le log « AbeilleConfi
 <p>Sélectionnez la ou les ampoules qui doivent faire partie du groupe (petite case au dessus à gauche des icônes), saisissez l’Id et utilisez les bouton « Remove Group ».</p>
 </div>
 <div class="section" id="recuperer-les-groupes-d-un-equipement">
-<h4>Récupérer les groupes d’un équipement<a class="headerlink" href="#recuperer-les-groupes-d-un-equipement" title="Lien permanent vers ce titre">¶</a></h4>
+<h3>Récupérer les groupes d’un équipement<a class="headerlink" href="#recuperer-les-groupes-d-un-equipement" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Option A:</p>
 <ul class="simple">
 <li><p>Premier champ: adresse de l’équipement</p></li>
@@ -217,12 +157,12 @@ Si le test est bon, « OK » en vert apparaitra. Sinon le log « AbeilleConfi
 <p>Sélectionnez l’équipement et utilisez le bouton »Get Group ».</p>
 </div>
 <div class="section" id="commande-des-groupes">
-<h4>Commande des Groupes<a class="headerlink" href="#commande-des-groupes" title="Lien permanent vers ce titre">¶</a></h4>
+<h3>Commande des Groupes<a class="headerlink" href="#commande-des-groupes" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Une fois que les groupes sont en place, il faut les commander. Pour cela vous pouvez par exemple utiliser les <a class="reference internal" href="devices/Ikea.html#telecommanderonde5boutons"><span class="std std-ref">Télécommande Ronde 5 boutons</span></a> de chez Ikea ou simuler une télécommande ronde Ikea avec Jeedom: <span class="xref std std-ref">telecommandeRonde5BoutonsSimulation</span>.</p>
 </div>
 </div>
 <div class="section" id="migration-d-equipements">
-<h3>Migration d’équipements<a class="headerlink" href="#migration-d-equipements" title="Lien permanent vers ce titre">¶</a></h3>
+<h2>Migration d’équipements<a class="headerlink" href="#migration-d-equipements" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Si vous avez plusieurs Zigates et souhaitez basculer un équipement de l’une à l’autre, c’est le chapitre qu’il vous faut.</p>
 <p>Globalement dans tout réseau Zigbee, la procédure est</p>
 <ul class="simple">
@@ -245,54 +185,6 @@ Une fois sorti du réseau, il devrait se remettre à la recherche d’un nouvau 
 <li><p>Mettre la Zigate destination en mode inclusion.</p></li>
 <li><p>Puis forcer un reset sur l’équipement pour qu’il fasse une nouvelle association.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="mise-a-jour-over-the-air">
-<h2>Mise-à-jour « Over The Air »<a class="headerlink" href="#mise-a-jour-over-the-air" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Certains équipements supportent la mise-à-jour de leur firmware à travers le réseau (Over The Air).</p>
-<p>Abeille permet d’effectuer cette mise-à-jour dés lors que vous avez récupéré le bon firmware auprès du fabricant.</p>
-<div class="section" id="acces-a-l-assistant-de-mise-a-jour">
-<h3>Accès à l’assistant de mise-à-jour<a class="headerlink" href="#acces-a-l-assistant-de-mise-a-jour" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Via la page des équipements (Plugins &gt; Protocole domotique &gt; Abeille)</p>
-<img alt="_images/OTA-Acces.png" src="_images/OTA-Acces.png" />
-<p>En cliquant sur le bouton ci-dessus, l’assistant de mise-à-jour apparait comme l’exemple suivant:</p>
-<img alt="_images/OTA-Assistant.png" src="_images/OTA-Assistant.png" />
-<p>Le bouton AJOUTER permet de charger un firmware sur la boxe Zigbee.</p>
-<p>Les formats supportés sont « .ota » ou « .ota.signed ».</p>
-<p>A partir du moment ou un firmware est disponible, vous pouvez notifier l’équipement correspondant pour lui demander de lancer la mise-à-jour. N’oubliez pas que si cet équipement est sur batteries, il faut le reveiller tout de suite apres l’applui sur le bouton « NOTIFIER.</p>
-</div>
-<div class="section" id="un-peu-de-detail">
-<h3>Un peu de détail<a class="headerlink" href="#un-peu-de-detail" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Pour les curieux, le sequencement des étapes de mise-à-jour est le suivant:</p>
-<ul class="simple">
-<li><p>Optionnel: L’équipement peut être “notifié” qu’un firmware est disponible pour lui</p></li>
-<li><p>L’équipement demande si un FW est disponible</p></li>
-<li><p>La zigate répond oui « il y en a un, telle version », ou « non »</p></li>
-<li><p>L’équipement demande l’envoi du firmware par petits « blocks »</p></li>
-<li><p>Le plugin renvoi les bouts de demandés. Cette étape peut prendre un long moment (autour d’1H pour un firmware Ikea par ex)</p></li>
-<li><p>Une fois le transfert terminé, l’équipement vérifie l’integrité et fait sa mise à jour si tout est monde ou remonte une erreur</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="inclusion">
-<h2>Inclusion<a class="headerlink" href="#inclusion" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La première étape pour pouvoir utiliser un équipement est de l” <a class="reference internal" href="Inclusion.html"><span class="doc">Inclusion</span></a> dans le réseau zigbee géré par la zigate. Il n’existe pas de méthode universelle car chaque fabriquant est libre de procéder de la façon qu’il souhaite. Le grand principe est de mettre la zigate en mode <a class="reference internal" href="Inclusion.html"><span class="doc">Inclusion</span></a> et de faire des manipulations sur l’équipement pour qu’il s” <a class="reference internal" href="Inclusion.html"><span class="doc">Inclusion</span></a> et rejoigne le réseau.</p>
-</div>
-<div class="section" id="suppression">
-<h2>Suppression<a class="headerlink" href="#suppression" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Vous avez la possibilité de faire une <a class="reference internal" href="Suppression.html"><span class="doc">Suppression</span></a> d’un équipement du réseau zigbee géré par la zigate.</p>
-</div>
-<div class="section" id="sante">
-<h2>Santé<a class="headerlink" href="#sante" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le réseau est constitué de nombreux équipements qui vivent au rythme et aléa du réseau radio, des coupures de courant, etc. Afin de monitorer le réseau Abeille propose plusieurs outils: <a class="reference internal" href="Health.html"><span class="doc">Santé</span></a></p>
-</div>
-<div class="section" id="tuto">
-<h2>Tuto<a class="headerlink" href="#tuto" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Dans la mesure ou Abeille à pour objectif d’exploité le réseau, je vous propose quelques <a class="reference internal" href="Tuto.html"><span class="doc">Tuto</span></a> permettant de mettre en application et répondre à vos besoins.</p>
-</div>
-<div class="section" id="trucs-et-astuces">
-<h2>Trucs et Astuces<a class="headerlink" href="#trucs-et-astuces" title="Lien permanent vers ce titre">¶</a></h2>
-<p>D’autres fonctions de Jeedom sont bien pratiques, par exemple si vous devez <a class="reference internal" href="Remplacement.html"><span class="doc">Fonctions Jeedom</span></a> remplacer des équipements par d’autres, ou <a class="reference internal" href="Remplacement.html"><span class="doc">Fonctions Jeedom</span></a> des commandes par d’autres.</p>
 </div>
 </div>
 

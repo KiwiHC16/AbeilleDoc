@@ -1,5 +1,5 @@
 Groupes
---------
+~~~~
 
 Les équipements peuvent être adressés de deux façons:
 

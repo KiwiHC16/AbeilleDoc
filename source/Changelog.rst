@@ -1,8 +1,22 @@
 ChangeLog
 =========
 
-220202-BETA-1
+220223-BETA-1
 -------------
+
+- Interne: Parser: Correction erreur PHP decode8043().
+- Moes 4 boutons, scene switch, TS004F__TZ3000_xabckq1v: Mise-à-jour modèle (2278).
+- Mini smart socket (TS011F__TZ3000_5f43h46b): Ajout support préliminaire (2334).
+- JSON équipements: Suppression cmdes obsoletes
+
+  - 'etatSW1', 'etatSW2', 'etatSW3'
+  - 'etatSwitch'
+  - 'etatSwitchKonke'
+- JSON équipements: Mise-à-jour 'zb-0702-CurrentSummationDelivered'.
+- Aqara TVOC moniteur d'air AAQS-S01 (airmonitor.acn01): Mise-à-jour modele (2279).
+
+220223-STABLE-1
+---------------
 
   .. important:: Pour les zigates v1, l'équipe Zigate recommande FORTEMENT d'utiliser un firmware **Optimized PDM** (OPDM) dans les cas suivants:
 
@@ -14,6 +28,53 @@ ChangeLog
 
   .. important:: Les zigates v1 doivent avoir un firmware >= 3.1e pour un fonctionnement optimal.
   .. important:: Les zigates v2 doivent être à jour du dernier firmware disponible.
+
+- Page EQ/avancé: Ajout bouton 'leave request'.
+- JSON commandes: Remplacement 'ReadAttributeRequest' => 'readAttribute'.
+- Interne: AbeilleCmd/readAttribute(): Ajout support 'manufId'.
+- Tuya capteur rond temp & humidité (TS0201__TZ3000_dowj6gyi): Ajout support.
+- Ikea E27 bulb (TRADFRIbulbE27CWS806lm): Ajout support (2328).
+- Migration d'équipements: Mise-à-jour séquence + ajout doc.
+- Réseau/routes: Correction regression fonctionnement.
+
+220215-BETA-1
+-------------
+
+- Interne: Amélioration msg debug.
+- Interne: Changement gestion cas nouvelle zigate/échange de port.
+- Interne: Lecture version zigate (bouton tester) améliorée.
+- Mise-à-jour FW zigate: Effacement automatique PDM si passage 'legacy' vers 'OPDM'.
+- Page gestion: Mise-à-jour remplacement de zigate suite Jeedom 2.4.X.
+- Page zigate/avancé: Selection du canal/masque revue (1683).
+- Interne: AbeilleCmd: setChannelMask => setZgChannelMask + améliorations.
+
+220211-BETA-1
+-------------
+
+- Profalux v2: Amélioration support.
+- Auto-découverte équipement inconnu: Correction format json & améliorations.
+- Lexman E27 RGB bulb: Ajout support préliminaire (2295).
+- Heiman COSensor EF-3.0: Ajout support (2312).
+- Suppression des repertoires vides au démarrage dans 'devices_local'.
+- Erreur sur 'exclusion' d'équipement: Nouvelle correction (2305)
+- Interne: SerialRead: Message corrompu (err CRC) n'est plus transmis au parser.
+- Page équipements/migration: Revu & corrigé pour Jeedom 4.2.x (2322).
+
+220206-BETA-1
+-------------
+
+- Erreur sur 'exclusion' d'équipement: Correction (2305)
+- Interne: AbeilleSerialRead: msg erreurs masqués (2306).
+- Regression controle de 'level' (setLevel): Corrrection (1994).
+
+220204-BETA-1
+-------------
+
+- Interne: Correction erreur 'prepareCmd(): Mauvais format de message' (2302).
+- Aucun équipement sélectionné: correction (2305).
+
+220202-BETA-1
+-------------
 
 - Page config: Changement mineur. Type 'WIFI' => 'WIFI/ETH'.
 - Page config: Liste des ports revue + info 'Orange Pi Zero'.

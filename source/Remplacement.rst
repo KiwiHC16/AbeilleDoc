@@ -112,64 +112,6 @@ Normalement avec tout ça, ma migration devrait se refaire facilement et sans lo
 Remplacement
 ************
 
-Equipement
-==========
-
-Si vous voulez remplacer un équipement par un autre (identique) par exemple parce que le premier est en panne sans perdre toutes les informations (Historique, Scénarios,...), voici la méthode à suivre.
-
-.. attention::
-
-   Attention, cette manipulation n'est pas sans risque car je n'ai pas la maitrise de tout.
-
-.. attention::
-
-   Cette fonction était intéressante dans les premières versions d'Abeille car le changement d'adresse des équipements zigbee n'était pas géré. Maintenant c'est automatique et donc le remplacement manuelle non nécessaire. A n'utiliser que pour des besoins très spécifiques.
-
-.. attention::
-
-  La méthode décrite ci dessous est valable pour les versions d'Abeille jusqu'à Decembre 2019. Ensuite la version multi zigate est apparau et demande une adaptation de la procedure ci dessous. Les adresses doivent être complete comme Abeille/xxxx et Abeille3/yyyy t non plus que xxxx et yyyy.
-
-.. attention::
-
-  Si vous souhaitez basculer une abeille d'une zigate à une autre vous pouvez utiliser cette méthode: 1/ Remove Abeille de la zigate A (Commande remove de la ruche A). 2/ Inclusion de l'équipement dans la Zigate C (Une nouvelle Abeille doit être créée). 3/ Remplacer.
-
-Prenons l'exemple du remplacement d'un bouton carre Xiaomi ayant pour adresse 21ce remplacé par un nouveau bouton.
-
-.. image:: images/Capture_d_ecran_2018_03_01_a_16_53_29.png
-
-Première opération, Inclure le nouveau bouton dans Abeille.
-
-.. image:: images/Capture_d_ecran_2018_03_01_a_16_48_35.png
-
-Le nouveau bouton a pour adresse 8818.
-
-Renseigner les champs dans la commande "Replace Equipment" dans l'objet Ruche.
-Pour le champ Titre mettre l'adresse de l'ancien équipement.
-Pour le champ Message mettre l'adresse du nouvel équipement.
-
-.. image:: images/Capture_d_ecran_2018_03_01_a_16_57_02.png
-
-Puis clic sur "Replace Equipement".
-
-Ouvrez l'ancien équipement qui porte toujours le nom "Abeille-21ce".
-
-Vous devez voir le nouveau nom:
-
-.. image:: images/Capture_d_ecran_2018_03_01_a_17_01_04.png
-
-Sauvegardez le nouvel objet.
-
-Vous devez avoir deux équipements:
-
-.. image:: images/Capture_d_ecran_2018_03_01_a_17_04_30.png
-
-Il ne vous reste plus qu'a ouvrir l'objet "Abeille-8818" et à le supprimer.
-
-Vous pouvez maintenant changer le nom de l'objet "Abeille-8818-New" à la valeur que vous voulez.
-
-.. image:: images/Capture_d_ecran_2018_03_01_a_17_09_46.png
-
-
 Commande
 ========
 

@@ -9,6 +9,20 @@ Cette page liste tous les équipements gérés par Abeille et déja inclus dans 
 
 .. include:: Groups.rst
 
+Remplacement d'équipements
+~~~~~~~~~~~~~~~~~~
+
+Ce chapitre peut vous interesser si vous souhaitez conserver l'historique d'un équipement qui ne répond plus ou que vous souhaitez remplacer.
+
+L'idée est la suivante:
+
+- Vous procédez à l'inclusion du nouvel équipement du MEME TYPE que celui à remplacer
+- Puis via la partie 'remplacement', selectionnez le vieil équipement
+- Selectionnez le nouvel équipement
+- Et cliquez sur 'Remplacer'.
+
+.. image:: images/RemplacementEq.png
+
 Migration d'équipements
 ~~~~~~~~~~~~~~~~~~
 

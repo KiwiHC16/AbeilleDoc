@@ -40,11 +40,14 @@ et
 
 .. image:: images/InstallationMarketBeta-2.png
 
+La suite est identique à l'installation d'une version 'stable' mais en selectionnant 'Installer beta'.
+
+.. image:: images/InstallationMarketBeta-3.png
 
 Activation du plugin
-----------
+--------------------
 
-Cette étape est independante de la methode d'installation du plugin (market, GitHub, direct Git repo) .
+Cette étape est indépendante de la méthode d'installation du plugin (market, GitHub, direct Git repo) .
 Via la page de configuration du plugin, la première chose à faire est l'activer comme suit:
 
 .. image:: images/Installation-1.png

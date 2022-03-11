@@ -1,6 +1,73 @@
 ChangeLog
 =========
 
+- Interne: AbeilleCmdPrepare: nettoyage code obsolete.
+- Interne: AbeilleCmdQueue: Timeout étendu à 3sec.
+- Philips RWL021: Mise-à-jour modèle pour report battery (1243).
+
+220310-BETA-3
+-------------
+
+- Interne: SerialRead: Suppression warning fopen().
+- JSON équipements: Suppression cmdes obsoletes
+
+  - 'etatLight' => 'zb-0006-OnOff'
+  - 'WindowsCoveringUp' => 'zbCmd-0102-UpOpen'
+  - 'WindowsCoveringDown' => 'zbCmd-0102-DownClose'
+  - 'WindowsCoveringStop' => 'zbCmd-0102-Stop'
+- Philips RWL021: Mise-à-jour modèle (1243).
+- Evology 4 buttons (3450-Geu_CentraLite): Ajout support (2318).
+- Interne: Parser: Clust 0007 supporté par decode8002().
+- Tradfri GU10 340lm White, LED2005R5: Ajout support (2344).
+- Ampoule Lexman Gu10 460lm (ZBEK-4, Adeo): Ajout support (2348).
+- Interne: AbeilleCmd: Corrections & améliorations.
+- Page EQ/avancé: Configurer le reporting: Ajout type attribut.
+
+220307-BETA-1
+-------------
+
+- Interne: AbeilleCmd: Mises-à-jour, corrections, améliorations (dont vitesse) & nettoyage.
+- Interne: AbeilleCmd: Gestion mode ACK etendu aux commandes internes suivantes:
+
+  - bind0030
+  - configureReporting
+  - getActiveEnpoints
+  - writeAttibute
+  - writeAttribute0530
+  - sendReadAttributesResponse
+  - readReportingConfig
+- Legrand double switch (NLIS-Doublelightswitch_Legrand): Ajout support (2343).
+- Interne: AbeilleCmd: Suppression cmds obsoletes 'ReadAttributeRequestXX'.
+- JSON équipements: Suppression cmdes obsoletes
+
+  - 'getBattery' => 'readAttribute' + 'attrId=0021'
+  - 'getBatteryVolt' => 'readAttribute' + 'attrId=0020'
+  - 'getPlugA' => 'poll-0B04-0508'
+  - 'getPlugPower' => 'poll-0B04-050B'
+  - 'getPlugV' => 'poll-0B04-0505'
+- Interne: AbeilleCmd: Correction génération SQN pour cmds 0530.
+- Liste compatibilité: Correction pour suppression affichage 'discovery'.
+- Mise à jour OTA: Correction queue.
+- Hue outdoor motion sensor SML002: Mise-à-jour modèle (2309).
+- Volets Profalux: Correction types génériques pour appli mobiles.
+- Analyse équipements/niveau batterie: Correction regression (2345).
+- Interne: Parser->Abeille: optimisation msg
+
+  - attributeReport => attributesReportN.
+  - reportAttributes => attributesReportN.
+  - readAttributesResponse => readAttributesResponseN.
+
+220228-BETA-2
+-------------
+
+- Remplacement d'équipements: Nouvelle mise-à-jour + doc (2337).
+- Interne: Parser: Certains messages dupliqués sont ignorés.
+- Récupération des fantômes: Amélioration.
+- Interne: Migration codes obsoletes vers 'archives': LqiStorage.x, RouteRecord.x, Jennic binary.
+- Mini smart socket (TS011F__TZ3000_5f43h46b): Mise-à-jour modèle (2334).
+- Interne: Amélioration analyse réseau (collecte LQI).
+- Remplacement d'équipements: Correction fonctionalité (2337).
+
 220223-BETA-1
 -------------
 

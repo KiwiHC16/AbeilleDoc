@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2022-03-16
+Dernière mise-à-jour le 2022-04-07
 
 Sonoff, SBMINI, Sonoff ZBMINI smart switch
 
@@ -266,6 +266,11 @@ Iolloi, ID-EU20FWB4L, Iolloi flush-mounted dimmer switch 5-250 W, trailing edge 
 , , DIYRuZ_RT
 
 .. image:: images/node_defaultUnknown.png
+   :width: 200px
+
+Legrand, 067774, Legrand double gang remote switch
+
+.. image:: images/node_Legrand-Celiane-Double-Gray.png
    :width: 200px
 
 Sonoff, SNZB-04, Sonoff SNZB-04 Wireless Door/Window Sensor
@@ -583,6 +588,11 @@ Sonoff, SNZB-03, Sonoff SNZB-03 motion sensor
 .. image:: images/node_SNZB-03.png
    :width: 200px
 
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
 Legrand, 067772, Legrand Celiane 067772 double switch
 
 .. image:: images/node_Legrand-Celiane-Double-Gray.png
@@ -718,7 +728,7 @@ Xiaomi, WXCJKG13LM, Aqara Opple wireless switch 6 buttons
 .. image:: images/node_remotecontrol.png
    :width: 200px
 
-, , Legrand Télécommande Depart Arrivée
+Legrand, 067723, Legrand Télécommande Depart Arrivée
 
 .. image:: images/node_LegrandRemoteSwitch.png
    :width: 200px
@@ -1273,6 +1283,21 @@ Sixwgh, WH025, Sixwgh WH025 plug
 .. image:: images/node_Tuya-TS011F.png
    :width: 200px
 
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
 UseeLink, SM-SO306, 4 gang switch, with USB
 
 .. image:: images/node_UseeLink-SM-SO306.png
@@ -1413,6 +1438,11 @@ LivarnoHome, HG07834C, LivarnoHome HG07834C E27 bulb
 .. image:: images/node_Silvercrest-HG06106C.png
    :width: 200px
 
+LavarnoLux, HG08131A, LavarnoLux led gu10 HG08131A
+
+.. image:: images/node_Generic-GU10.png
+   :width: 200px
+
 Tuya, TS0505B, Tuya TS0505B GU10 color bulb
 
 .. image:: images/node_?.png
@@ -1421,6 +1451,11 @@ Tuya, TS0505B, Tuya TS0505B GU10 color bulb
 Tuya, TV02, Tuya TV02
 
 .. image:: images/node_Tuya-TV02.png
+   :width: 200px
+
+Moes, MS-105Z, Moes MS-105Z smart dimmer
+
+.. image:: images/node_Moes-MS-105Z.png
    :width: 200px
 
 Tuya, M515EGZT, ZigBee Smart Curtains Motor M515EGZT
@@ -1473,14 +1508,24 @@ Profalux, volets, Profalux volet
 .. image:: images/node_voletProFalux.png
    :width: 200px
 
-, , Alarm Smart Siren M420-2Evert1.2 HS2WD-E
+Heiman, HS2WD, Heiman HS2WD warning device
 
 .. image:: images/node_HS2WD.png
    :width: 200px
 
-, , Alarm Smart Siren Heiman Siren : WarningDevice-EF-3.0
+, , 
 
-.. image:: images/node_HS2WD.png
+.. image:: images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 Sonoff, SNZB-01, Sonoff SNZB-01 wireless button

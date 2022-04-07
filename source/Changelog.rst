@@ -1,6 +1,77 @@
 ChangeLog
 =========
 
+- Parser: Amélioration decode routing table.
+- WarningDevice-EL-3.0: Mise-à-jour modèle + merge 'WarningDevice'.
+- SML002: Mise-à-jour modèle (2309).
+- Affichage 'Humidity': Suppression du chiffre apres la virgule.
+- Page EQ/avancé: Amélioration (mineure) affichage modèle
+- Commande interne IAS WD ('cmd-0502') revue pour flash seul.
+- Interne: Constantes Zigbee: Ajout support cluster 0402.
+- Nettoyage cmdes JSON obsolètes:
+
+  - 'etatEpXXout' => 'zb-0006-OnOff' + 'ep=XX'
+  - 'etatEpXXin' => 'zb-0006-OnOff' + 'ep=XX'
+  - 'etatEp08' => 'zb-0006-OnOff' + 'ep=08'
+
+220406-STABLE-1
+---------------
+
+  .. important:: Pour les zigates v1, l'équipe Zigate recommande FORTEMENT d'utiliser un firmware **Optimized PDM** (OPDM) dans les cas suivants:
+
+      - Toute nouvelle installation.
+      - Dès lors qu'un réappairage complet est nécéssaire.
+      - La version OPDM corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
+      - Les firmwares avant 3.1e sont forcement 'legacy'.
+      - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
+
+  .. important:: Les zigates v1 doivent avoir un firmware >= 3.1e pour un fonctionnement optimal.
+  .. important:: Les zigates v2 doivent être à jour du dernier firmware disponible.
+
+- Moes MS105Z: Ajout support préliminaire (2363).
+- Legrand switch 067723: Mise-à-jour modèle (2361).
+- Lidl ampoule livarno lux led gu10 HG08131A: Mise-à-jour modèle (2356).
+- Tuya TS011F__TZ3000_cphmq0q7: Mise-à-jour modèle pour support autres signatures.
+- Page des équipements: Changement icone si non définie.
+- Interne: Mise-à-jour des commandes suite reinclusion/reinit revue.
+- Page équipement: Choix icone revu. Affichage du nom du PNG selectionné et non plus une interprétation de ce que c'est.
+- Interne: Grosse mise-à-jour des commandes, et suppression des 'info' en doublon.
+- Tuya IH-K009: Ajout image.
+- Modèles équipement: Correction regression config reporting 0008-0000 (mauvais type).
+
+220329-BETA-2
+-------------
+
+- Legrand switch 067723: Mise-à-jour modèle (2361).
+- Page EQ/avancé: Amélioration mineure affichage ID Zigbee.
+- Interne: Amélioration récupération équipements fantomes.
+- Interne: Timeout n'est plus écrasé si réannonce de l'équipement.
+- Package de logs: Masquage de la clef 'api' de la table 'config'.
+- Package de logs: Masquage des URL.
+
+220324-BETA-1
+-------------
+
+- Network graph: Corrections diverses (1820).
+- Page de gestion: Suppression du 'Changement de zigate' en double.
+- Interne: Cmd 00 cluster 0502/IAS-WD: corrections.
+- Frient smoke alarm (SMSZB-120, frientAS): Mise-à-jour modèle (2242).
+- Interne: Mise-à-jour à partir du modèle revu pour éviter de créer des cmdes orphelines.
+- Interne: Collecte LQI génère nouveau format (AbeilleLQI-AbeilleX.json).
+- Réseau/graph des liens: Revu et utilise nouveau format interne + ajout icone équipement.
+- Interne: Parser: Amélioration filtrage mauvais paquets LQI/804E.
+- Page support: Affiche tout fichier JSON du repertoire temporaire.
+- Interne: network.js => AbeilleNetwork.js
+
+220320-BETA-1
+-------------
+
+- Interne: Mise-à-jour script de generation de la liste des eq supportés.
+- Interne: Mise-à-jour support Tuya EF00 cmd 01.
+- Lidl ampoule livarno lux led gu10 HG08131A: Ajout support (2356).
+- Interne: Ajout support cmde 00 cluster 0502/IAS WD pour controle sirene.
+- Frient smoke alarm (SMSZB-120, frientAS): Mise-à-jour modele (2242).
+
 220316-BETA-1
 -------------
 
@@ -97,17 +168,6 @@ ChangeLog
 
 220223-STABLE-1
 ---------------
-
-  .. important:: Pour les zigates v1, l'équipe Zigate recommande FORTEMENT d'utiliser un firmware **Optimized PDM** (OPDM) dans les cas suivants:
-
-      - Toute nouvelle installation.
-      - Dès lors qu'un réappairage complet est nécéssaire.
-      - La version OPDM corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
-      - Les firmwares avant 3.1e sont forcement 'legacy'.
-      - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
-
-  .. important:: Les zigates v1 doivent avoir un firmware >= 3.1e pour un fonctionnement optimal.
-  .. important:: Les zigates v2 doivent être à jour du dernier firmware disponible.
 
 - Page EQ/avancé: Ajout bouton 'leave request'.
 - JSON commandes: Remplacement 'ReadAttributeRequest' => 'readAttribute'.

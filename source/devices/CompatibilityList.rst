@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2022-04-07
+Dernière mise-à-jour le 2022-04-25
 
 Sonoff, SBMINI, Sonoff ZBMINI smart switch
 
@@ -468,6 +468,11 @@ Osram, AC0251100NJ, Osram Smart+ Switch Mini
 .. image:: images/node_LOM002.png
    :width: 200px
 
+Philips, LOM007, Philips Hue Smart Plug EU
+
+.. image:: images/node_LOM001.png
+   :width: 200px
+
 , , Hue LightStrip 1re génération
 
 .. image:: images/node_LST001.png
@@ -591,6 +596,11 @@ Sonoff, SNZB-03, Sonoff SNZB-03 motion sensor
 , , 
 
 .. image:: images/node_.png
+   :width: 200px
+
+Aeotec, GP-AEOMPSEU, Aeotec Multipurpose Sensor
+
+.. image:: images/node_Aeotec-MultiPurposeSensor.png
    :width: 200px
 
 Legrand, 067772, Legrand Celiane 067772 double switch
@@ -1343,7 +1353,7 @@ Tuya, Generic smart socket, Tuya smart socket
 .. image:: images/node_TuyaSmartSocket.png
    :width: 200px
 
-, , Wireless Temperature and Humidity
+Blitzwolf, BW-IS4, Blitzwolf Temperature and Humidity sensor & display
 
 .. image:: images/node_TS0201.png
    :width: 200px
@@ -1453,6 +1463,21 @@ Tuya, TV02, Tuya TV02
 .. image:: images/node_Tuya-TV02.png
    :width: 200px
 
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
 Moes, MS-105Z, Moes MS-105Z smart dimmer
 
 .. image:: images/node_Moes-MS-105Z.png
@@ -1508,14 +1533,14 @@ Profalux, volets, Profalux volet
 .. image:: images/node_voletProFalux.png
    :width: 200px
 
-Heiman, HS2WD, Heiman HS2WD warning device
-
-.. image:: images/node_HS2WD.png
-   :width: 200px
-
 , , 
 
 .. image:: images/node_.png
+   :width: 200px
+
+Heiman, HS2WD, Heiman HS2WD warning device
+
+.. image:: images/node_HS2WD.png
    :width: 200px
 
 , , 

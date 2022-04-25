@@ -1,6 +1,47 @@
 ChangeLog
 =========
 
+220425-BETA-1
+-------------
+
+- Interne: Mise-à-jour DB eqLogic
+
+  - 'ab::jsonId' + 'ab::jsonLocation' => 'ab::eqModel['id'/'location]'
+  - 'MACCapa' => 'ab::zigbee['macCapa']'
+  - 'RxOnWhenIdle' => 'ab::zigbee['rxOnWhenIdle']'
+  - 'AC_Power' => 'ab::zigbee['mainsPowered']'
+- Interne: Parser: decode8002() monitoring migré en fin de fonction.
+- Interne: Parser: Suppression fonction obsolete msgToAbeille().
+- Page EQ/avancé: Correction regressions.
+- Aeotec Multi purpose sensor: Ajout support préliminaire (2376).
+- Page EQ/avancé: Corrections 'Réinitialiser'.
+- Assistant EQ/modèle: Améliorations pour clusters 0402, 0405 & 0500.
+
+220421-BETA-1
+-------------
+
+- Interne: Version DB, date = 20220407.
+- Analyse/santé: Correction affichage ports utilisés.
+- Interne: Nettoyage fonctions obsolètes.
+- Interne: Suppression de plusieurs commandes obsolètes (dispos sur page avancée) 'Ruche':
+
+  - 'replaceEquipement'
+  - 'Get Time'
+  - 'SystemMessage' (provoque mise à jour erronnée date de communication Zigate)
+- Interne: Page EQ/avancé. Qq optimisations.
+- Interne: Mise-à-jour controle/redémarrage des démons.
+- Zigate v2/apparition équipements inconnus: Ajout verrue (2368).
+- Interne: Plus qu'une seule queue d'entrée au parser.
+- Interne: Tuya: Support préliminaire TV02.
+- Interne: Grosse mise-à-jour pour meilleur support des équipements Tuya.
+- Philips LOM007 smart plug: Ajout support (2374).
+- JSON commandes: 'forceReturnLineAfter/Before' is obsolete. Replaced by 'nextLine' = 'after/before'.
+- Interne: Sauvegarde des infos du modele dans la DB eqLogic => 'ab::eqModel'.
+- Page EQ: Ajout affichage type d'équipement.
+
+220407-BETA-1
+-------------
+
 - Parser: Amélioration decode routing table.
 - WarningDevice-EL-3.0: Mise-à-jour modèle + merge 'WarningDevice'.
 - SML002: Mise-à-jour modèle (2309).

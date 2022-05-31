@@ -1,6 +1,85 @@
 ChangeLog
 =========
 
+220531-BETA-1
+-------------
+
+- Interne: Suppression code obsolete (xmlhttpConfChange).
+- Page santé: Amélioration mineure.
+- Mise-à-jour OTA: Amélioration mineure & correction pour support FW Legrand.
+- Electrovanne Saswell SAS980SWT: Support préliminaire (2388).
+- Ikea Tredanson rideau occultant: Ajout support préliminaire (2392).
+- Nom d'un nouvel équipement = type issu du modèle + Jeedom ID (ex: 'Tuya smoke sensor - 12') (2393).
+- Réseau: Changement visuel mineur table des liens + utilisation 'AbeilleLQI-AbeilleX.json'.
+
+220518-BETA-1
+-------------
+
+- E27 RGB Eglo/Awox (id = TLSR82xx, AwoX): Mise-à-jour du modèle (2384).
+- Images: Nettoyage & standardisation des noms (ex: node_Generic-BulbXXX.png).
+- Page EQ/avancé: Ajout possibilité de changer la couleur (cluster 0300, move to color).
+- Interne: Support Tuya amélioré pour plus de flexibilité.
+- Moes smart dimmer MS105Z: Mise-à-jour modèle (2363).
+- Aeotec Multi purpose sensor: Mise-à-jour du modèle (2376).
+- Page des équipements: Affichage grisé si équipement désactivé.
+- Support OTA: Correction regression.
+- Page EQ/commandes: Amélioration mineure (2178).
+
+220515-BETA-1
+-------------
+
+- Legrand Cable outlet: Mise-à-jour du modèle (850).
+- Interne: Cmd: Revue 'commandLegrand'.
+- Moes smart dimmer MS105Z: Mise-à-jour modèle (2363).
+- Nom d'un nouvel équipement = type issu du modèle (ex: 'Tuya smoke sensor') plutot que 'AbeilleX-Y'.
+- Interne: Corrections utilisation obsolete de 'RxOnWhenIdle'.
+- E27 RGB Eglo/Awox (id = TLSR82xx, AwoX): Ajout support préliminaire (2384).
+- Lidl Dimmable HG07878C: Ajout support préliminaire (2383).
+- Interne: Parser: Support revu pour 8002/'configure reporting response'. 8120 n'est plus utilisé.
+- Interne: Constantes zigbee. Ajout clusters privés EF00, FC01 & FC40.
+- Images: Nettoyage & standardisation des noms (ex: node_Generic-BulbXXX.png).
+- Interne: Abeille.class: Optimisation.
+- Interne: AbeilleCmd: Ajout support 'manufId' pour 'configureReporting'.
+- Page EQ/avancé: 'Configure reporting': Ajout support code fabricant (manufId).
+- Page EQ/avancé: Affichage des groupes Zigbee auxquels l'équipement appartient (1713).
+- Woox controleur d'arrosage: Ajout support préliminaire (2385).
+- Interne: Parser: FC01/FC02 supporté par decode8002.
+- Interne: AbeilleCmd: Correction readAttribute() pour 'manufId' renseigné.
+- Page EQ/avancé: 'Read attribute': Ajout support code fabricant (manufId).
+
+220509-BETA-1
+-------------
+
+- Tuya smoke detector: Support préliminaire (2380).
+- Heiman COSensor EF-3.0: Mise-à-jour modèle (2312).
+- Interne: Parser: Support cmd 01 générée par cluster 0500 (#EP#-0500-cmd01).
+- Aeotec Multi purpose sensor: Mise-à-jour modèle pour vibration (2376).
+- Nettoyage cmdes JSON obsolètes:
+
+  - 'etatSwitchLivolo' => 'zb-0006-OnOff'
+  - 'etatVolet' => 'zb-0006-OnOff'
+- Interne: Nettoyage partiel du répertoire 'Network'.
+- Interne: Nettoyage 'Abeille.class'.
+- Reseau/bruit: Corrections.
+- Interne: Optimisation AbeilleCmd autour de 'managementNetworkUpdateRequest'.
+- Interne: Parser: Support type 'array'.
+- Interne: Parser: Decode 'write attribute response' pour cluster 'private'.
+
+220428-BETA-1
+-------------
+
+- Interne: check_json: Améliorations.
+- Aeotec Multi purpose sensor: Mise-à-jour modèle (2376) & correction cmde 'zb-0500-ZoneStatus'.
+- Modèles de commandes JSON: Mise-à-jour cosmetique.
+- Interne: Ajout date derniere mise-à-jour à partir du modèle (ab::eqModel['lastUpdate']).
+- Interne: Parser: Optimisation lecture DB 'config'.
+- Interne: Parser: Mise-à-jour support cluster 0005/scenes (peut etre cassé).
+- Interne: Parser: Corrections regressions.
+- Owon multi-sensor THS317-ET: Ajout support.
+- Xiaomi sqare sensor: Mise-à-jour modèle pour ne garder qu'une info 'Pressure' = '0403-01-0000' (2370).
+- Moes smart dimmer MS105Z: Mise-à-jour modèle (2363).
+- Interne: Parser: Correction 'read attribute' pour 'Time cluster'.
+
 220425-BETA-1
 -------------
 

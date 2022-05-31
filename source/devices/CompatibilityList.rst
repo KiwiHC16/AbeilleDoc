@@ -1,11 +1,11 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2022-04-25
+Dernière mise-à-jour le 2022-05-31
 
-Sonoff, SBMINI, Sonoff ZBMINI smart switch
+Sonoff, SBMINI, Sonoff smart switch
 
-.. image:: images/node_01MINIZB.png
+.. image:: images/node_Sonoff-01MINIZB.png
    :width: 200px
 
 , , 1-digital-input
@@ -113,14 +113,14 @@ Acova, Alcantara 2, Acova Alcantara 2
 .. image:: images/node_Acova-Alcantara2.png
    :width: 200px
 
-Sonoff, BASICZBR3, Sonoff BASICZBR3 DIY smart switch
+Sonoff, BASICZBR3, Sonoff DIY smart switch
 
-.. image:: images/node_BASICZBR3.png
+.. image:: images/node_Sonoff-BASICZBR3.png
    :width: 200px
 
-Profalux, BSO, Profalux BSO (brise-soleil orientable)
+Profalux, BSO, Profalux BSO
 
-.. image:: images/node_bsoProFalux.png
+.. image:: images/node_Profalux-BSO.png
    :width: 200px
 
 , , Legrand Cable Outlet 3000W
@@ -168,9 +168,9 @@ Niko, , Niko connected outlet socket
 .. image:: images/node_Niko-ConnectedSocketOutlet.png
    :width: 200px
 
-Legrand, 20AX, Legrand Contactor 20AX
+Legrand, 20AX, Legrand Contactor
 
-.. image:: images/node_Contactor.png
+.. image:: images/node_Legrand-Contactor.png
    :width: 200px
 
 Heiman, HS1CA ?, Heiman smart CO sensor
@@ -273,9 +273,9 @@ Legrand, 067774, Legrand double gang remote switch
 .. image:: images/node_Legrand-Celiane-Double-Gray.png
    :width: 200px
 
-Sonoff, SNZB-04, Sonoff SNZB-04 Wireless Door/Window Sensor
+Sonoff, SNZB-04, Sonoff Door/Window Sensor
 
-.. image:: images/node_SNZB-04.png
+.. image:: images/node_Sonoff-SNZB-04.png
    :width: 200px
 
 , , Dansfoss Ally Radiator Thermostat 014G2461
@@ -330,17 +330,17 @@ Gledopto, GL-B-008Z, Gledopto GL-B-008Z 12W RGB+Dual White LED Bulb
 
 Gledopto, GL-C-006, Gledopto WW/CW LED Controller
 
-.. image:: images/node_GL-C-008.png
+.. image:: images/node_Gledopto-RGBCCTLedController.png
    :width: 200px
 
 Gledopto, GL-C-007, GLEDOPTO RGT+CCT LED Controller
 
-.. image:: images/node_GL-C-008.png
+.. image:: images/node_Gledopto-RGBCCTLedController.png
    :width: 200px
 
 Gledopto, GL-C-008, GLEDOPTO RGT+CCT LED Controller
 
-.. image:: images/node_GL-C-008.png
+.. image:: images/node_Gledopto-RGBCCTLedController.png
    :width: 200px
 
 Gledopto, GL-G-001ZS, GL-G-001ZS 4W E12/E14 Bulb RGB+CCT
@@ -353,14 +353,14 @@ Gledopto, GL-C-001, GLEDOPTO RGT+CCT LED Controller
 .. image:: images/node_GL-MC-001.png
    :width: 200px
 
-Gledopto, GL-S-003Z, Gledopto RGBW GU10 5W 300lm
+Gledopto, GL-S-003Z, Gledopto RGBW GU10
 
-.. image:: images/node_GL-S-003Z.png
+.. image:: images/node_Gledopto-BulbGU10-Color.png
    :width: 200px
 
-Gledopto, GL-C-004Z, GLEDOPTO Spectre Blanc ref: GL-S-004Z
+Gledopto, GL-C-004Z, Gledopto Spectre Blanc
 
-.. image:: images/node_GL-S-004Z.png
+.. image:: images/node_Gledopto-BulbGU10.png
    :width: 200px
 
 Gledopto, GL-S-007Z, Gledopto GL-S-007Z GU10 Bulb RGB+CCT
@@ -373,9 +373,9 @@ Gledopto, GL-SD-001, Gledopto GL-SD-001 AC dimmer
 .. image:: images/node_Gledopto-GL-SD-001.png
    :width: 200px
 
-, , GLEDOPTO
+, , Gledopto GU10 bulb
 
-.. image:: images/node_GLEDOPTO.png
+.. image:: images/node_Gledopto-BulbGU10.png
    :width: 200px
 
 , , IKEA GUNNARP
@@ -545,7 +545,7 @@ Philips, LWA004, Hue E27 single filament A60 bulb
 
 Lexman, LXEK-1, Lexman E27 RGB bulb
 
-.. image:: images/node_BulbE27.png
+.. image:: images/node_Generic-BulbE27.png
    :width: 200px
 
 Zemismart, ZW-EC-01, Zemismart ZW-EC-01 curtain switch
@@ -560,7 +560,7 @@ Xiaomi, MCCGQ14LM, Xiaomi Aqara MCCGQ14LM door sensor
 
 Profalux, MAI-ZTS, Profalux gen 2 remote control
 
-.. image:: images/node_ProfaluxTelecommande.png
+.. image:: images/node_Profalux-Remote.png
    :width: 200px
 
 , , Legrand Micro Module Encastrable 220V avec Neutre et un bouton poussoir
@@ -570,7 +570,7 @@ Profalux, MAI-ZTS, Profalux gen 2 remote control
 
 Profalux, Volets 2nd gen, Profalux volet gen 2
 
-.. image:: images/node_voletProFalux.png
+.. image:: images/node_Profalux-Shutter.png
    :width: 200px
 
 , , 
@@ -588,9 +588,9 @@ Profalux, Volets 2nd gen, Profalux volet gen 2
 .. image:: images/node_MR16TWOSRAM.png
    :width: 200px
 
-Sonoff, SNZB-03, Sonoff SNZB-03 motion sensor
+Sonoff, SNZB-03, Sonoff motion sensor
 
-.. image:: images/node_SNZB-03.png
+.. image:: images/node_Sonoff-SNZB-03.png
    :width: 200px
 
 , , 
@@ -630,7 +630,7 @@ Legrand, 067772, Legrand Celiane 067772 double switch
 
 Xiaomi, SP-EUC01 ?, Aqara SmartPlug
 
-.. image:: images/node_plug.maeu01.png
+.. image:: images/node_Xiaomi-SmartPlug.png
    :width: 200px
 
 , , Xiaomi Prise EU
@@ -648,9 +648,9 @@ Xiaomi, SP-EUC01 ?, Aqara SmartPlug
 .. image:: images/node_OsramLightifyplug01OutDoor.png
    :width: 200px
 
-Ledvance, Plug Z3, Ledvance Plug Z3 on/off plug unit
+Ledvance, Plug Z3, Ledvance on/off plug
 
-.. image:: images/node_PlugZ3.png
+.. image:: images/node_Ledvance-PlugZ3.png
    :width: 200px
 
 , , PROFALUX Light
@@ -738,9 +738,9 @@ Xiaomi, WXCJKG13LM, Aqara Opple wireless switch 6 buttons
 .. image:: images/node_remotecontrol.png
    :width: 200px
 
-Legrand, 067723, Legrand Télécommande Depart Arrivée
+Legrand, 067723, Legrand remote switch
 
-.. image:: images/node_LegrandRemoteSwitch.png
+.. image:: images/node_Legrand-RemoteSwitch.png
    :width: 200px
 
 , , Ampoule Innr Edison RF263 Vintage E27
@@ -973,9 +973,9 @@ Legrand, 16AX, Legrand 16AX Teleruptor
 .. image:: images/node_Legrand-Teleruptor.png
    :width: 200px
 
-Sonoff, SNZB-02, Sonoff SNZB-02 temp & humidity
+Sonoff, SNZB-02, Sonoff temp & humidity sensor
 
-.. image:: images/node_SNZB-02.png
+.. image:: images/node_Sonoff-SNZB-02.png
    :width: 200px
 
 , , 
@@ -983,9 +983,19 @@ Sonoff, SNZB-02, Sonoff SNZB-02 temp & humidity
 .. image:: images/node_.png
    :width: 200px
 
+Owon, THS317-ET, Owon multi-sensor
+
+.. image:: images/node_Owon-THS317-ET.png
+   :width: 200px
+
 , , Livolo Switch TI0001
 
 .. image:: images/node_TI0001.png
+   :width: 200px
+
+Eglo, TSLR82x, Eglo E27 RGB
+
+.. image:: images/node_Generic-BulbE27.png
    :width: 200px
 
 Ikea, LED 470lm 5.2W E14, IKEA TRADFRI LED 470 lm 5.2W E14
@@ -1028,9 +1038,9 @@ Ikea, , TRADFRI bulb E26 WS clear 950lm
 .. image:: images/node_TRADFRIbulbE26WSclear950lm.png
    :width: 200px
 
-Ikea, LED1924G9, Ikea E27 806lm bulb
+Ikea, LED1924G9, Ikea E27 bulb
 
-.. image:: images/node_Ikea-E27.png
+.. image:: images/node_Ikea-BulbE27.png
    :width: 200px
 
 Ikea, , IKEA Ampoule TRADFRI bulb E27 Color White Spectre Opal 600lm
@@ -1038,19 +1048,19 @@ Ikea, , IKEA Ampoule TRADFRI bulb E27 Color White Spectre Opal 600lm
 .. image:: images/node_TRADFRIbulbE27CWSopal600lm.png
    :width: 200px
 
-Ikea, , IKEA Ampoule TRADFRI bulb E27 opal 1000lm
+Ikea, , IKEA bulb E27 opal
 
-.. image:: images/node_IkeaTradfriBulbE27Opal1000lm.png
+.. image:: images/node_Ikea-BulbE27.png
    :width: 200px
 
-Ikea, , IKEA Ampoule TRADFRI bulb E27 opal 1000lm
+Ikea, E27 W opal 1000lm, IKEA bulb E27 opal
 
-.. image:: images/node_IkeaTradfriBulbE27Opal1000lm.png
+.. image:: images/node_Ikea-BulbE27.png
    :width: 200px
 
-Ikea, , IKEA Ampoule TRADFRI bulb E27 opal 1000lm2
+Ikea, E27 opal 1000lm, IKEA bulb E27 opal
 
-.. image:: images/node_IkeaTradfriBulbE27WOpal1000lm2.png
+.. image:: images/node_Ikea-BulbE27.png
    :width: 200px
 
 Ikea, , TRADFRI bulb E27 WS clear 806lm
@@ -1073,9 +1083,9 @@ Ikea, , IKEA Ampoule TRADFRI bulb E27 White Spectre opal 1055 lm
 .. image:: images/node_TRADFRIbulbE27WSopal1000lm.png
    :width: 200px
 
-Ikea, , IKEA Ampoule TRADFRI bulb E27 White Spectre opal 980 lm
+Ikea, E27 white spectre opal, IKEA bulb E27 White Spectre opal
 
-.. image:: images/node_IkeaTRADFRIbulbE27WSopal980lm.png
+.. image:: images/node_Ikea-BulbE27.png
    :width: 200px
 
 , , TRADFRI bulb E27 WW 806lm 
@@ -1088,9 +1098,9 @@ Ikea, , IKEA Ampoule TRADFRI bulb E27 White Spectre opal 980 lm
 .. image:: images/node_TRADFRIbulbE27WWclear250lm.png
    :width: 200px
 
-Ikea, TRADFRI bulb GU10 CWS 345lm, TRADFRI bulb GU10 CWS 345lm
+Ikea, TRADFRI bulb GU10 CWS 345lm, bulb GU10 CWS 345lm
 
-.. image:: images/node_IkeaTradfriBulbGU10W400lm.png
+.. image:: images/node_Ikea-BulbGU10.png
    :width: 200px
 
 , , IKEA Ampoule TRADFRI bulb GU10 W 400lm
@@ -1098,9 +1108,9 @@ Ikea, TRADFRI bulb GU10 CWS 345lm, TRADFRI bulb GU10 CWS 345lm
 .. image:: images/node_IkeaTradfriBulbGU10W400lm.png
    :width: 200px
 
-Ikea, LED2005R5, Ikea Trafri GU10 white bulb
+Ikea, LED2005R5, Ikea GU10 white bulb
 
-.. image:: images/node_Ikea-GU10.png
+.. image:: images/node_Ikea-BulbGU10.png
    :width: 200px
 
 , , IKEA Ampoule TRADFRI bulb GU10 White Spectre 400 lm
@@ -1178,9 +1188,14 @@ Ikea, Shortcut button E1812, Ikea Tradfri shortcut button
 .. image:: images/node_IkeaTradfriDimmer.png
    :width: 200px
 
+Ikea, Tredansen, Ikea black-out cellular blind
+
+.. image:: images/node_Ikea-Tredansen-White.png
+   :width: 200px
+
 Profalux, Télecommande, Profalux télécommande
 
-.. image:: images/node_ProfaluxTelecommande.png
+.. image:: images/node_Profalux-Remote.png
    :width: 200px
 
 , , 
@@ -1195,7 +1210,7 @@ Profalux, Télecommande, Profalux télécommande
 
 Girier, JR-ZDS01, Girier DIY Smart Switch
 
-.. image:: images/node_JR-ZDS01.png
+.. image:: images/node_Girier-JR-ZDS01.png
    :width: 200px
 
 , , Zemismart 2 boutons
@@ -1253,14 +1268,19 @@ Tuya, TS0044, Tuya 4 buttons Zigbee scene switch
 .. image:: images/node_Tuya-TS0044.png
    :width: 200px
 
-Tuya, , Tuya 4 buttons Zigbee scene switch
+Tuya, , Tuya 4 buttons scene switch
 
-.. image:: images/node_Tuya4ButtonsSceneSwitch.png
+.. image:: images/node_Tuya-4ButtonsSwitch-Gray.png
    :width: 200px
 
 Tuya, ESW-0ZAA-EU, Tuya 4 buttons scene switch
 
-.. image:: images/node_Tuya4ButtonsSwitch.png
+.. image:: images/node_Tuya-4ButtonsSwitch-White.png
+   :width: 200px
+
+Woox, R7060 , Woox water irrigation
+
+.. image:: images/node_Woox-WaterIrrigation.png
    :width: 200px
 
 , , Vanne Zigbee 
@@ -1315,7 +1335,7 @@ UseeLink, SM-SO306, 4 gang switch, with USB
 
 Blitzwolf, SHP15, Blitzwolf SHP15
 
-.. image:: images/node_Blitzwolf-BW-SHP13.png
+.. image:: images/node_Blitzwolf-SmartPlug.png
    :width: 200px
 
 Silvercrest, HG06338-FR, Silvercrest power strip USB SPSZ 3 A1
@@ -1345,12 +1365,12 @@ Girier, JR-ZPM01, Girier/Tuya ZigBee smart plug EU
 
 , , Blitzwolf-BW-SHP13
 
-.. image:: images/node_Blitzwolf-BW-SHP13.png
+.. image:: images/node_Blitzwolf-SmartPlug.png
    :width: 200px
 
 Tuya, Generic smart socket, Tuya smart socket
 
-.. image:: images/node_TuyaSmartSocket.png
+.. image:: images/node_Tuya-SmartSocket.png
    :width: 200px
 
 Blitzwolf, BW-IS4, Blitzwolf Temperature and Humidity sensor & display
@@ -1408,6 +1428,11 @@ Tuya, TS0501B , Tuya Single Color LED Controller
 .. image:: images/node_.png
    :width: 200px
 
+Lidl, HG07878C, Lidl E27 dimmable
+
+.. image:: images/node_Generic-BulbE27-Color.png
+   :width: 200px
+
 LivarnoLux, HG07878A, LivarnoLux HG07878A bulb
 
 .. image:: images/node_FlexRGBW.png
@@ -1448,14 +1473,19 @@ LivarnoHome, HG07834C, LivarnoHome HG07834C E27 bulb
 .. image:: images/node_Silvercrest-HG06106C.png
    :width: 200px
 
-LavarnoLux, HG08131A, LavarnoLux led gu10 HG08131A
+LavarnoLux, HG08131A, LavarnoLux led gu10
 
-.. image:: images/node_Generic-GU10.png
+.. image:: images/node_Generic-BulbGU10.png
    :width: 200px
 
 Tuya, TS0505B, Tuya TS0505B GU10 color bulb
 
 .. image:: images/node_?.png
+   :width: 200px
+
+Saswell, SAS980SWT-7-Z01(EU), Saswell irrigation Valve
+
+.. image:: images/node_Saswell-SAS980SWT.png
    :width: 200px
 
 Tuya, TV02, Tuya TV02
@@ -1478,9 +1508,14 @@ Tuya, TV02, Tuya TV02
 .. image:: images/node_.png
    :width: 200px
 
-Moes, MS-105Z, Moes MS-105Z smart dimmer
+Moes, MS-105Z, Moes smart dimmer
 
 .. image:: images/node_Moes-MS-105Z.png
+   :width: 200px
+
+Tuya, ?, Tuya smoke detector
+
+.. image:: images/node_Tuya-SmokeDetector.png
    :width: 200px
 
 Tuya, M515EGZT, ZigBee Smart Curtains Motor M515EGZT
@@ -1488,7 +1523,7 @@ Tuya, M515EGZT, ZigBee Smart Curtains Motor M515EGZT
 .. image:: images/node_TS0601__TZE200_nueqqe6k.png
    :width: 200px
 
-Tuya, RSH-AirBox01, Tuya Smart Air Box
+Tuya, RSH-AirBox01, Tuya Smart Air Box 01
 
 .. image:: images/node_Tuya-RSH-AirBox01.png
    :width: 200px
@@ -1528,9 +1563,9 @@ dOOWifi, DWF-0205ZB-PN-2, dOOWifi window module
 .. image:: images/node_XiaomiVibration.png
    :width: 200px
 
-Profalux, volets, Profalux volet
+Profalux, volets, Profalux shutter
 
-.. image:: images/node_voletProFalux.png
+.. image:: images/node_Profalux-Shutter.png
    :width: 200px
 
 , , 
@@ -1553,9 +1588,9 @@ Heiman, HS2WD, Heiman HS2WD warning device
 .. image:: images/node_.png
    :width: 200px
 
-Sonoff, SNZB-01, Sonoff SNZB-01 wireless button
+Sonoff, SNZB-01, Sonoff wireless button
 
-.. image:: images/node_SNZB-01.png
+.. image:: images/node_Sonoff-SNZB-01.png
    :width: 200px
 
 Xiaomi, WSDCGQ11LM, Xiaomi temp/humidity/pressure square sensor
@@ -1585,7 +1620,7 @@ eWeLink, ZB-SW01, eWeLink ZB-SW01 smart light switch
 
 Lexman, CRI80, Lexman GU10 bulb
 
-.. image:: images/node_Generic-GU10.png
+.. image:: images/node_Generic-BulbGU10.png
    :width: 200px
 
 , , Template for ZigBee - Color Dimmable Light

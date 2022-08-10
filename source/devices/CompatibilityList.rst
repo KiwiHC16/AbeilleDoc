@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2022-05-31
+Dernière mise-à-jour le 2022-08-10
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -96,6 +96,11 @@ Orvibo, ST30, Orvibo ST30 temperature/humidity sensor
 , , 
 
 .. image:: images/node_.png
+   :width: 200px
+
+Ledvance, AC33907, Ledvance E27 tunable white bulb
+
+.. image:: images/node_Ledvance-BulbE27-White.png
    :width: 200px
 
 , , Ampoule Ledvance Classic E27 Tunable White
@@ -338,9 +343,19 @@ Gledopto, GL-C-007, GLEDOPTO RGT+CCT LED Controller
 .. image:: images/node_Gledopto-RGBCCTLedController.png
    :width: 200px
 
+Gledopto, ?, Gledopto GL-C-007P
+
+.. image:: images/node_?.png
+   :width: 200px
+
 Gledopto, GL-C-008, GLEDOPTO RGT+CCT LED Controller
 
 .. image:: images/node_Gledopto-RGBCCTLedController.png
+   :width: 200px
+
+Gledopto, GL-C-008P, Gledopto RGBW strip controller
+
+.. image:: images/node_Gledopto-GL-C-008P.png
    :width: 200px
 
 Gledopto, GL-G-001ZS, GL-G-001ZS 4W E12/E14 Bulb RGB+CCT
@@ -578,6 +593,11 @@ Profalux, Volets 2nd gen, Profalux volet gen 2
 .. image:: images/node_.png
    :width: 200px
 
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
 , , Osram Motion Sensor-A
 
 .. image:: images/node_MotionSensor-A.png
@@ -686,6 +706,11 @@ Innr, RB285C, Innr RB285C RGBW bulb colour E27
 , , Télécommande RC110 INNR
 
 .. image:: images/node_RC110.png
+   :width: 200px
+
+Innr, RC250, Innr remote control
+
+.. image:: images/node_Innr-RC250.png
    :width: 200px
 
 Philips/Signify, 929003017102, Hue wall switch module
@@ -1223,6 +1248,11 @@ Girier, JR-ZDS01, Girier DIY Smart Switch
 .. image:: images/node_TS0003.png
    :width: 200px
 
+MHCOZY, ZG-0005-RF, Mhcozy 4 chan relay
+
+.. image:: images/node_Mhcozy-ZG-0005-RF.png
+   :width: 200px
+
 , , Yagusmart Tuya ZigBee Smart Switch 1 Bang
 
 .. image:: images/node_TS0011.png
@@ -1308,6 +1338,11 @@ Tuya, TS011F, Tuya smart socket
 .. image:: images/node_Tuya-TS011F.png
    :width: 200px
 
+BlitzWolf, BW-SHP13, BlitzWolf smart plug
+
+.. image:: images/node_Blitzwolf-SmartPlug.png
+   :width: 200px
+
 Sixwgh, WH025, Sixwgh WH025 plug
 
 .. image:: images/node_Tuya-TS011F.png
@@ -1363,7 +1398,7 @@ Girier, JR-ZPM01, Girier/Tuya ZigBee smart plug EU
 .. image:: images/node_JR-ZPM01.png
    :width: 200px
 
-, , Blitzwolf-BW-SHP13
+, , Blitzwolf smart plug
 
 .. image:: images/node_Blitzwolf-SmartPlug.png
    :width: 200px
@@ -1486,6 +1521,11 @@ Tuya, TS0505B, Tuya TS0505B GU10 color bulb
 Saswell, SAS980SWT-7-Z01(EU), Saswell irrigation Valve
 
 .. image:: images/node_Saswell-SAS980SWT.png
+   :width: 200px
+
+Tuya, PIR+illuminance, Tuya PIR + illuminance sensor
+
+.. image:: images/node_Tuya-PIR-Illuminance.png
    :width: 200px
 
 Tuya, TV02, Tuya TV02

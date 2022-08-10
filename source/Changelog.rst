@@ -1,6 +1,91 @@
 ChangeLog
 =========
 
+220810-BETA-2
+-------------
+
+- Interne: Correction regression DB eqLogic pour 'icone' => 'ab::icon'.
+- Zlinky: Amélioration modèle.
+
+220810-BETA-1
+-------------
+
+- Orvibo ST30: Correction modèle pour humidité (2193).
+- Page de config: Changements mineurs.
+- Page zigate/avancé: Choix du canal Zigbee amélioré.
+- Page équipement/avancé: Améliorations visuelles mineures.
+- Aeotec Multi purpose sensor: Mise-à-jour du modèle pour 'vibration' (2376).
+- Gledopto GL-C-007P: Support préliminaire.
+- Interne: Nettoyage entrées 'Polling' + 'RefreshData' sur mise-à-jour d'une commande.
+- Zlinky: Mise-à-jour modèle (2418).
+- Interne: msg_send()/msg_receive() avec json_encode()/json_decode() partout.
+- Interne: DB eqLogic, 'icone' => 'ab::icon'.
+- INNR RC250: Support préliminaire (2420).
+
+220714-STABLE-1
+---------------
+
+  .. important:: Les zigates v2 doivent être à jour du dernier firmware disponible (3.21 à ce jour).
+  .. important:: Pour les zigates v1, l'équipe Zigate recommande FORTEMENT d'utiliser un firmware **Optimized PDM** (OPDM) dans les cas suivants:
+
+      - Toute nouvelle installation.
+      - Dès lors qu'un réappairage complet est nécéssaire.
+      - La version OPDM corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
+      - Les firmwares avant 3.1e sont forcement 'legacy'.
+      - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
+
+  .. important:: Les zigates v1 doivent avoir un firmware >= 3.1e pour un fonctionnement optimal mais la dernière en date (3.21) est fortement recommandée.
+
+220713-BETA-1
+-------------
+
+- Profalux: Ajout support volet MOT-C1Z06F (2411).
+- Interne: Exclusion de 'resources/archives' des signatures MD5 (2413).
+
+220707-BETA-1
+-------------
+
+- Interne: Parser: Amélioration msg monitor si équipement Tuya.
+- Ampoule E27 Ledvance white: Mise-à-jour modèle (2400).
+
+220628-BETA-1
+-------------
+
+- Mhcozy ZG-0005-RF: Ajout support préliminaire (2408).
+- Gledopto GL-C-008P: Ajout support préliminaire (2402).
+- Tuya PIR+illuminance: Ajout support préliminaire (2409).
+
+220625-BETA-1
+-------------
+
+- Interne: Parser: Fix mineur msg debug.
+- Modèles d'équipements: Possibilité de surcharger 'historizeRound'.
+- Interne: Parser: Ajout support msg '8001/Log message'.
+
+220622-BETA-1
+-------------
+
+- Interne: 'Device Announce' filtré pour Zigate v2 seulement (2404).
+
+220619-STABLE-1
+---------------
+
+- Interne: Support Tuya amélioré (ajout 'rcvValueMult').
+- Tuya TV02: Mise-à-jour du modèle.
+- Page EQ: Suppression des boutons 'Recharger' & 'Reconfigurer' pour ne garder que 'Reinitialiser'.
+- Ampoule E27 Ledvance couleur: Ajout support préliminaire (2400).
+- Smart Air Box: Modèle revu pour utilisation commandes internes génériques (2329).
+
+220606-BETA-1
+-------------
+
+- Interne: Parser: Amélioration mineure.
+- Nom d'un nouvel équipement = type issu du modèle + Jeedom ID (ex: 'Tuya smoke sensor - 12') (2393).
+- Interne: Support Tuya amélioré.
+- Moes smart dimmer MS105Z: Mise-à-jour modèle pour partie dimmer (2363).
+- Interne: Ajout support préliminaire 'usbreset'.
+- Blitzwolf SHP13: Ajout support signature TS011F _TZ3000_amdymr7l (2396).
+
 220531-BETA-1
 -------------
 
@@ -136,17 +221,6 @@ ChangeLog
 
 220406-STABLE-1
 ---------------
-
-  .. important:: Pour les zigates v1, l'équipe Zigate recommande FORTEMENT d'utiliser un firmware **Optimized PDM** (OPDM) dans les cas suivants:
-
-      - Toute nouvelle installation.
-      - Dès lors qu'un réappairage complet est nécéssaire.
-      - La version OPDM corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
-      - Les firmwares avant 3.1e sont forcement 'legacy'.
-      - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
-
-  .. important:: Les zigates v1 doivent avoir un firmware >= 3.1e pour un fonctionnement optimal.
-  .. important:: Les zigates v2 doivent être à jour du dernier firmware disponible.
 
 - Moes MS105Z: Ajout support préliminaire (2363).
 - Legrand switch 067723: Mise-à-jour modèle (2361).

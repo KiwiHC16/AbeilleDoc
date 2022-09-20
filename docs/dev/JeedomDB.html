@@ -74,7 +74,7 @@
 <h1>Format de la DB Jeedom<a class="headerlink" href="#format-de-la-db-jeedom" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Ce chapitre décrit le format de la database Jeedom appliqué au plugin « Abeille ».</p>
 <p>CE DOCUMENT EST INCOMPLET !!!
-Derniere update: 19/sep/21</p>
+Derniere update: 20/sep/22</p>
 <div class="section" id="configuration-table-config">
 <h2>Configuration (table config)<a class="headerlink" href="#configuration-table-config" title="Lien permanent vers ce titre">¶</a></h2>
 <ul>
@@ -82,12 +82,12 @@ Derniere update: 19/sep/21</p>
 <li><p>key</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>AbeilleActiver1 .. 10: Indique si la Zigate X est activée.</p></li>
+<li><p>ab::zgEnabled1 .. 10: Indique si la Zigate X est activée.</p></li>
 <li><p>AbeilleIEEE_Ok1 .. 10: Indique si la vérification de l’adresse IEEE est correcte pour éviter les switchs de port.</p></li>
 <li><p>AbeilleIEEE1 .. 10: Adresse IEEE de la Zigate X.</p></li>
-<li><p>AbeilleParentId: Objet parent par défaut utilisé lors de l’inclusion d’un nouvel équipement.</p></li>
-<li><p>AbeilleSerialPort1 .. 10: port (ex: /dev/ttyS1)</p></li>
-<li><p>AbeilleType1 .. 10: Type de Zigate X.</p></li>
+<li><p>ab:defaultPatent: Objet parent par défaut utilisé lors de l’inclusion d’un nouvel équipement.</p></li>
+<li><p>ab::zgPort1 .. 10: port (ex: /dev/ttyS1)</p></li>
+<li><p>ab::zgType1 .. 10: Type de Zigate X.</p></li>
 <li><p>active</p></li>
 <li><p>agressifTraitementAnnonce</p></li>
 <li><p>blocageRecuperationEquipement</p></li>
@@ -95,7 +95,7 @@ Derniere update: 19/sep/21</p>
 <li><p>DbVersion</p></li>
 <li><p>deamonAutoMode</p></li>
 <li><p>deamonRestartNumber</p></li>
-<li><p>IpWifiZigate1 .. 10</p></li>
+<li><p>ab::zgIdAddr1 .. 10: Adresse IP de la zigate Wifi</p></li>
 <li><p>lastDeamonLaunchTime</p></li>
 <li><p>lastDependancyInstallTime</p></li>
 <li><p>monitor: ID de l’équipement à surveiller par AbeilleMonitor.</p></li>

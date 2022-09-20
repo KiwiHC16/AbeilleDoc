@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2022-08-10
+Dernière mise-à-jour le 2022-09-20
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -148,6 +148,11 @@ Osram, , Osram CLA60 TW
 .. image:: images/node_OSRAMClassicA60RGBW.png
    :width: 200px
 
+Osram, Classic A60 TW, Osram Lightify classic bulb
+
+.. image:: images/node_Osram-Bulb-Lightify-E27Classic.png
+   :width: 200px
+
 , , OSRAM Classic A60 W clear - LIGHTIFY
 
 .. image:: images/node_OSRAMClassicA60Wclear-LIGHTIFY.png
@@ -158,9 +163,9 @@ Osram, , Osram CLA60 TW
 .. image:: images/node_OSRAMClassicA60Wclear-LIGHTIFY-2.png
    :width: 200px
 
-Osram, B40TW, ClassicB40TW-LIGHTIFY
+Osram, B40TW, Osram Lightify classic B40 bulb
 
-.. image:: images/node_OSRAMClassicE27Dimmable.png
+.. image:: images/node_Osram-Bulb-Lightify-B40Classic.png
    :width: 200px
 
 , , Legrand Prise Connected Outlet Mural 220V avec Neutre
@@ -475,17 +480,22 @@ Osram, AC0251100NJ, Osram Smart+ Switch Mini
 
 , , Philips Hue Smart Plug
 
-.. image:: images/node_LOM001.png
+.. image:: images/node_PhilipsSignify-Plug.png
    :width: 200px
 
 , , Philips Hue Smart Plug
 
-.. image:: images/node_LOM002.png
+.. image:: images/node_PhilipsSignify-Plug.png
    :width: 200px
 
 Philips, LOM007, Philips Hue Smart Plug EU
 
-.. image:: images/node_LOM001.png
+.. image:: images/node_PhilipsSignify-Plug.png
+   :width: 200px
+
+Philips, LOM008, Philips Hue Smart Plug
+
+.. image:: images/node_PhilipsSignify-Plug.png
    :width: 200px
 
 , , Hue LightStrip 1re génération
@@ -503,9 +513,19 @@ Philips, LOM007, Philips Hue Smart Plug EU
 .. image:: images/node_LTA001.png
    :width: 200px
 
-, , Philips Hue white ambiance
+Philips, LTW001, Philips Hue white ambiance
 
-.. image:: images/node_LTW001.png
+.. image:: images/node_Philips-Bulb-E27-White.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 , , Philips Hue white ambiance
@@ -568,9 +588,9 @@ Zemismart, ZW-EC-01, Zemismart ZW-EC-01 curtain switch
 .. image:: images/node_LXX60-CS27LX1.0.png
    :width: 200px
 
-Xiaomi, MCCGQ14LM, Xiaomi Aqara MCCGQ14LM door sensor
+Xiaomi, MCCGQ14LM, Xiaomi Aqara door sensor
 
-.. image:: images/node_XiaomiPorte.png
+.. image:: images/node_Xiaomi-DoorSensor.png
    :width: 200px
 
 Profalux, MAI-ZTS, Profalux gen 2 remote control
@@ -653,9 +673,9 @@ Xiaomi, SP-EUC01 ?, Aqara SmartPlug
 .. image:: images/node_Xiaomi-SmartPlug.png
    :width: 200px
 
-, , Xiaomi Prise EU
+Xiaomi, plug EU, Xiaomi plug EU
 
-.. image:: images/node_XiaomiPriseEU.png
+.. image:: images/node_Xiaomi-Plug-EU.png
    :width: 200px
 
 , , OSRAM Prise Lightify
@@ -828,32 +848,32 @@ Sonoff, S26R2ZB, Sonoff S26R2ZB Smart Plug
 .. image:: images/node_sensor_cube.png
    :width: 200px
 
-, , Xiaomi Temperature Rond
+Xiaomi, Temp, Xiaomi temp sensor
 
-.. image:: images/node_XiaomiTemperatureRond.png
+.. image:: images/node_Xiaomi-TempSensor-1.png
    :width: 200px
 
-Xiaomi, , Xiaomi Door Sensor
+Xiaomi, , Xiaomi door sensor
 
-.. image:: images/node_XiaomiPorte1.png
+.. image:: images/node_Xiaomi-DoorSensor-2.png
    :width: 200px
 
 Xiaomi, MCCGQ11LM, Xiaomi Aqara door sensor
 
-.. image:: images/node_XiaomiPorte.png
+.. image:: images/node_Xiaomi-DoorSensor.png
    :width: 200px
 
-, , Xiaomi Presence
+Xiaomi, , Xiaomi Presence
 
 .. image:: images/node_XiaomiInfraRouge.png
    :width: 200px
 
-, , Xiaomi Presence Aqara 2
+Xiaomi, , Xiaomi Presence Aqara 2
 
 .. image:: images/node_XiaomiInfraRouge2.png
    :width: 200px
 
-, , Xiaomi Gaz Sensor
+Xiaomi, , Xiaomi Gaz Sensor
 
 .. image:: images/node_XiaomiSensorGaz.png
    :width: 200px
@@ -868,17 +888,17 @@ Xiaomi, , Xiaomi Interrupteur simple
 .. image:: images/node_XiaomiBouton1.png
    :width: 200px
 
-, , Xiaomi Bouton Aqara 2
+Xiaomi, , Xiaomi Bouton Aqara 2
 
 .. image:: images/node_XiaomiBouton.png
    :width: 200px
 
-, , Xiaomi Bouton Aqara 3
+Xiaomi, , Xiaomi Bouton Aqara 3
 
 .. image:: images/node_XiaomiBouton3.png
    :width: 200px
 
-, , Xiaomi Inondation Aqara
+Xiaomi, , Xiaomi Inondation Aqara
 
 .. image:: images/node_Xiaomiwleak_aq1.png
    :width: 200px
@@ -911,6 +931,16 @@ Legrand, 067726, Céliane Wired Roller Shutter Switch
 Philips, 9290019758, Philips Hue motion sensor
 
 .. image:: images/node_SML002.png
+   :width: 200px
+
+Philips, SML003, Philips motion sensor
+
+.. image:: images/node_Philips-MotionSensor-SML003.png
+   :width: 200px
+
+Philips, SML004, Philips Hue outdoor sensor
+
+.. image:: images/node_Philips-OutdoorSensor.png
    :width: 200px
 
 , , Humein Smoke Sensor HS1SA-E
@@ -1006,6 +1036,11 @@ Sonoff, SNZB-02, Sonoff temp & humidity sensor
 , , 
 
 .. image:: images/node_.png
+   :width: 200px
+
+Schneider, ?, Schneider thermostat
+
+.. image:: images/node_Schneider-Thermostat.png
    :width: 200px
 
 Owon, THS317-ET, Owon multi-sensor
@@ -1153,14 +1188,14 @@ Ikea, Several, Ikea control outlet
 .. image:: images/node_TRADFRIcontroloutlet.png
    :width: 200px
 
-, , IKEA Ampoule TRADFRI Driver 10W
+Ikea, 10W driver, Ikea 10W driver
 
-.. image:: images/node_TRADFRIDriver10W.png
+.. image:: images/node_Ikea-Transformer.png
    :width: 200px
 
-, , IKEA Ampoule TRADFRI Driver 30W
+Ikea, 30W driver, Ikea 30W driver
 
-.. image:: images/node_TRADFRIDriver10W.png
+.. image:: images/node_Ikea-Transformer.png
    :width: 200px
 
 IKEA, E1745, TRADFRI Detecteur de mouvement
@@ -1188,9 +1223,9 @@ Ikea, Shortcut button E1812, Ikea Tradfri shortcut button
 .. image:: images/node_TRADFRISHORTCUTButton.png
    :width: 200px
 
-, , TRADFRI signal repeater
+Ikea, 10400408, Ikea signal repeater
 
-.. image:: images/node_TRADFRIsignalrepeater.png
+.. image:: images/node_Ikea-SignalRepeater.png
    :width: 200px
 
 , , 
@@ -1198,14 +1233,14 @@ Ikea, Shortcut button E1812, Ikea Tradfri shortcut button
 .. image:: images/node_.png
    :width: 200px
 
-, , IKEA Ampoule TRADFRI transformer 10W
+Ikea, 30W transformer, Ikea 10W transformer
 
-.. image:: images/node_TRADFRItransformer10W.png
+.. image:: images/node_Ikea-Transformer.png
    :width: 200px
 
-, , IKEA Ampoule TRADFRI transformer 30W
+Ikea, 30W transformer, Ikea 30W transformer
 
-.. image:: images/node_TRADFRItransformer30W.png
+.. image:: images/node_Ikea-Transformer.png
    :width: 200px
 
 , , IKEA TRADFRI Dimmer Jaune
@@ -1233,9 +1268,19 @@ Profalux, Télecommande, Profalux télécommande
 .. image:: images/node_TS0001.png
    :width: 200px
 
-Girier, JR-ZDS01, Girier DIY Smart Switch
+, , 
 
-.. image:: images/node_Girier-JR-ZDS01.png
+.. image:: images/node_.png
+   :width: 200px
+
+Tuya, iHSW02, Tuya mini smart switch
+
+.. image:: images/node_Tuya-MiniSmartSwitch.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
    :width: 200px
 
 , , Zemismart 2 boutons
@@ -1335,7 +1380,7 @@ Woox, R7060 , Woox water irrigation
 
 Tuya, TS011F, Tuya smart socket
 
-.. image:: images/node_Tuya-TS011F.png
+.. image:: images/node_Tuya-SmartSocket-2.png
    :width: 200px
 
 BlitzWolf, BW-SHP13, BlitzWolf smart plug
@@ -1345,7 +1390,7 @@ BlitzWolf, BW-SHP13, BlitzWolf smart plug
 
 Sixwgh, WH025, Sixwgh WH025 plug
 
-.. image:: images/node_Tuya-TS011F.png
+.. image:: images/node_Tuya-SmartSocket-2.png
    :width: 200px
 
 , , 
@@ -1361,6 +1406,11 @@ Sixwgh, WH025, Sixwgh WH025 plug
 , , 
 
 .. image:: images/node_.png
+   :width: 200px
+
+Tuya, TS011F, Tuya smart plug
+
+.. image:: images/node_Tuya-SmartSocket.png
    :width: 200px
 
 UseeLink, SM-SO306, 4 gang switch, with USB
@@ -1463,7 +1513,7 @@ Tuya, TS0501B , Tuya Single Color LED Controller
 .. image:: images/node_.png
    :width: 200px
 
-Lidl, HG07878C, Lidl E27 dimmable
+Lidl, HG07878C, Lidl E27 dimmable bulb
 
 .. image:: images/node_Generic-BulbE27-Color.png
    :width: 200px
@@ -1513,12 +1563,17 @@ LavarnoLux, HG08131A, LavarnoLux led gu10
 .. image:: images/node_Generic-BulbGU10.png
    :width: 200px
 
+LIvarno home, ?, Livarno home bulb
+
+.. image:: images/node_?.png
+   :width: 200px
+
 Tuya, TS0505B, Tuya TS0505B GU10 color bulb
 
 .. image:: images/node_?.png
    :width: 200px
 
-Saswell, SAS980SWT-7-Z01(EU), Saswell irrigation Valve
+Saswell, SAS980SWT-7-Z01(EU), Saswell irrigation valve
 
 .. image:: images/node_Saswell-SAS980SWT.png
    :width: 200px
@@ -1563,6 +1618,16 @@ Tuya, M515EGZT, ZigBee Smart Curtains Motor M515EGZT
 .. image:: images/node_TS0601__TZE200_nueqqe6k.png
    :width: 200px
 
+Aubess, ?, Aubess smoke sensor
+
+.. image:: images/node_Aubess-SmokeSensor.png
+   :width: 200px
+
+, , 
+
+.. image:: images/node_.png
+   :width: 200px
+
 Tuya, RSH-AirBox01, Tuya Smart Air Box 01
 
 .. image:: images/node_Tuya-RSH-AirBox01.png
@@ -1591,6 +1656,11 @@ Tuya, QS-Zigbee-C01, Tuya QS-Zigbee-C01 Curtain Module
 dOOWifi, DWF-0205ZB-PN-2, dOOWifi window module
 
 .. image:: images/node_dOOWifi-DWF-0205ZB-PN.png
+   :width: 200px
+
+Silvercrest, SMSZ 1 B2, Silvercrest motion sensor
+
+.. image:: images/node_Silvercrest-MotionSensor-1.png
    :width: 200px
 
 , , Wima Lock
@@ -1633,9 +1703,9 @@ Sonoff, SNZB-01, Sonoff wireless button
 .. image:: images/node_Sonoff-SNZB-01.png
    :width: 200px
 
-Xiaomi, WSDCGQ11LM, Xiaomi temp/humidity/pressure square sensor
+Xiaomi, WSDCGQ11LM, Xiaomi temp/humidity/pressure sensor
 
-.. image:: images/node_XiaomiTemperatureCarre.png
+.. image:: images/node_Xiaomi-TempSensor-2.png
    :width: 200px
 
 , , WS2812_light_controller

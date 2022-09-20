@@ -15,10 +15,13 @@ Configuration jeedom pour les logs
 
 Pour toute livraison de logs pour besoins de support, il est recommandé de
 
-- Passer le nombre de lignes à 5000 par log (500 par défaut, trop court).
-   - Reglages > Systeme > Configuration
-   - puis Logs et Logs
-   - "Nombre de lignes maximum dans un fichier de log" = 5000
+- Passer le nombre de lignes à AU MOINS 5000 par log (500 par défaut = trop court).
+   - Reglages > Systeme > Configuration > Logs
+   - puis encore 'Logs'
+
+     .. image:: images/Jeedom-ReglageLogs.png
+
+   - "Nombre de lignes maximum dans un fichier de log" >= 5000
    - Sauvegarder
    - Relancer Abeille
 - Faire un drag & drop du package fourni par la page support/télécharger tout.

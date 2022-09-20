@@ -4,7 +4,7 @@ Format de la DB Jeedom
 Ce chapitre décrit le format de la database Jeedom appliqué au plugin "Abeille".
 
 CE DOCUMENT EST INCOMPLET !!!
-Derniere update: 19/sep/21
+Derniere update: 20/sep/22
 
 Configuration (table config)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -12,12 +12,12 @@ Configuration (table config)
 - plugin: "Abeille"
 - key
 
-    - AbeilleActiver1 .. 10: Indique si la Zigate X est activée.
+    - ab::zgEnabled1 .. 10: Indique si la Zigate X est activée.
     - AbeilleIEEE_Ok1 .. 10: Indique si la vérification de l'adresse IEEE est correcte pour éviter les switchs de port.
     - AbeilleIEEE1 .. 10: Adresse IEEE de la Zigate X.
-    - AbeilleParentId: Objet parent par défaut utilisé lors de l'inclusion d'un nouvel équipement.
-    - AbeilleSerialPort1 .. 10: port (ex: /dev/ttyS1)
-    - AbeilleType1 .. 10: Type de Zigate X.
+    - ab:defaultPatent: Objet parent par défaut utilisé lors de l'inclusion d'un nouvel équipement.
+    - ab::zgPort1 .. 10: port (ex: /dev/ttyS1)
+    - ab::zgType1 .. 10: Type de Zigate X.
     - active
     - agressifTraitementAnnonce
     - blocageRecuperationEquipement
@@ -25,7 +25,7 @@ Configuration (table config)
     - DbVersion
     - deamonAutoMode
     - deamonRestartNumber
-    - IpWifiZigate1 .. 10
+    - ab::zgIdAddr1 .. 10: Adresse IP de la zigate Wifi
     - lastDeamonLaunchTime
     - lastDependancyInstallTime
     - monitor: ID de l'équipement à surveiller par AbeilleMonitor.

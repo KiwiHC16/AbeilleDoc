@@ -1,6 +1,106 @@
 ChangeLog
 =========
 
+- Page EQ/avancé: Affichage code fabricant.
+- Interne: Ajout fabricant dans qq modeles JSON.
+- Livarno Home: Ajout modele préliminaire (2448).
+- Philips SML004: Ajout 'Sensitivity' (2437).
+- Interne: Parser: Support cluster 1000 cmd 41 & 42.
+- Tuya PIR & illuminance: Mise-à-jour du modele (2409).
+
+220916-BETA-1
+-------------
+
+- Interne: Liste des 'end points' enregistrée dans DB eqLogic.
+- Interne: 'manufCode' enregistré dans DB eqLogic.
+- Page EQ/avancé: Ajout possibilité d'envoyer une 'Node descriptor request'.
+
+220916-STABLE-1
+---------------
+
+  .. important:: Les zigates v2 doivent être à jour du dernier firmware disponible (v3.21 à ce jour).
+  .. important:: Pour les zigates v1, l'équipe Zigate recommande FORTEMENT d'utiliser un firmware **Optimized PDM** (OPDM) dans les cas suivants:
+
+      - Toute nouvelle installation.
+      - Dès lors qu'un réappairage complet est nécéssaire.
+      - La version OPDM corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
+      - Les firmwares avant 3.1e sont forcement 'legacy'.
+      - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
+
+  .. important:: Les zigates v1 doivent avoir un firmware >= 3.1e pour un fonctionnement optimal mais la dernière en date (3.21) est fortement recommandée.
+
+220914-BETA-1
+-------------
+
+- Philips SML003 motion sensor: Support préliminaire (2440).
+- Tuya smart plug: Support préliminaire (2443).
+- Interne: Normalisation du nom de qq icones.
+- Tuya iHSW02/WHD02 mini smart plug: Ajout modele (2438).
+- Electrovanne Saswell SAS980SWT: Correction modele (2388).
+- Silvercrest motion sensor: Support préliminaire (2445).
+
+220906-BETA-1
+-------------
+
+- Moes smart dimmer MS105Z: Mise-à-jour modèle pour partie dimmer (2363).
+- Interne: Parser: Ajout info msg 8139.
+- Interne: Abeille.class: Correction mise-à-jour cmde info (duplicate entry).
+- Thermostat Schneider Wiser: Support préliminaire (2436).
+- Philips HUE Smart plug LOM008: Mise-à-jour du modèle (2431).
+- Interne: Suppression ancienne syntaxe 'tuyaEF00' dans modèles JSON.
+- OSRAM Classic A60 TW: Support préliminaire (2435).
+- OSRAM Classic B40 TW: Mise-à-jour modèle (2023).
+- Philips SML004: Support préliminaire (2437).
+- Assistant modèle EQ: Ajout support cluster 0406 (Occupancy) + amélioration 0400.
+- Interne: Parser: Cluster 0406 supporté par decode8002() et non plus 8102().
+
+220901-BETA-1
+-------------
+
+- Interne: Suppression queue obsolete 'parserToAbeille'.
+- Interne: Optimisation queues 'xmlToAbeille'/'cmdToAbeille'/'abeilleToAbeille' => 'xToAbeille'.
+- Page config: Test de port: Amélioration mineure.
+- Interne: Optimisation queues dans deamon(): 'parserToAbeille2' => 'xToAbeille'.
+- Page santé: Affichage du type d'équipement au lieu de son icone.
+- Interne: Ajout type 'Zigate' à l'équipement 'Ruche'.
+- Interne: Format JSON eq: Mise-à-jour 'Identify' & 'Groups'.
+- Interne: Support Tuya: Amélioration 'transId' + 'setPercent1000'.
+
+220829-BETA-1
+-------------
+
+- Page maintenance: Récupération fantomes préliminaire, pour les eq sur secteur (mode dev).
+- Philips HUE Smart plug LOM008: Support préliminaire (2431).
+- Interne: Nettoyage images: 'LOM001'/'LOM002' => 'PhilipsSignify-Plug'
+
+220824-BETA-1
+-------------
+
+- Interne: Mise-à-jour page maintenance.
+- Aeotec Multi purpose sensor: Mise-à-jour du modèle pour 'vibration' (2376).
+- Page support: Remplacée par page 'maintenance' + améliorations.
+- Volet Profalux: Ajout cmde info 'Not Closed' (2429).
+- Ikea on/off switch: Correction modele pour batterie à mi valeur (2056).
+- JSON équipement: Ajout possibilité surcharge 'calculValueOffset'.
+- Interne: 'AbeilleLQI_MapDataAbeilleX.json.lock' => 'AbeilleLQI-AbeilleX.json.lock'.
+- Interne: Arret generation ancien format 'AbeilleLQI_MapDataAbeilleX.json'.
+- Interne: Recup équipements fantomes.
+
+220817-BETA-1
+-------------
+
+- Interne: Boutons 'vider' & 'supprimer' page support.
+- Interne: Modifications clefs DB 'config'
+
+  - 'AbeilleActiverX' => 'ab::zgEnabledX'.
+  - 'AbeilleTypeX' => 'ab::zgTypeX'.
+  - 'AbeilleSerialPortX' => 'ab::zgPortX'.
+  - 'IpWifiZigateX' => 'ab::zgIpAddrX'.
+  - 'AbeilleParentId' => 'ab::defaultParent'
+- Gledopto GL-C-008P: Mise-à-jour icone.
+- Aubess detecteur de fumée: Ajout support préliminaire (2426).
+- Interne: Parser: Read Attributes Response, correction crash cluster ID 0005.
+
 220810-BETA-2
 -------------
 

@@ -114,12 +114,14 @@
 <div class="section" id="configuration-jeedom-pour-les-logs">
 <h2>Configuration jeedom pour les logs<a class="headerlink" href="#configuration-jeedom-pour-les-logs" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour toute livraison de logs pour besoins de support, il est recommandé de</p>
-<ul class="simple">
-<li><dl class="simple">
-<dt>Passer le nombre de lignes à 5000 par log (500 par défaut, trop court).</dt><dd><ul>
-<li><p>Reglages &gt; Systeme &gt; Configuration</p></li>
-<li><p>puis Logs et Logs</p></li>
-<li><p>« Nombre de lignes maximum dans un fichier de log » = 5000</p></li>
+<ul>
+<li><dl>
+<dt>Passer le nombre de lignes à AU MOINS 5000 par log (500 par défaut = trop court).</dt><dd><ul>
+<li><p>Reglages &gt; Systeme &gt; Configuration &gt; Logs</p></li>
+<li><p>puis encore “Logs”</p>
+<img alt="_images/Jeedom-ReglageLogs.png" src="_images/Jeedom-ReglageLogs.png" />
+</li>
+<li><p>« Nombre de lignes maximum dans un fichier de log » &gt;= 5000</p></li>
 <li><p>Sauvegarder</p></li>
 <li><p>Relancer Abeille</p></li>
 </ul>

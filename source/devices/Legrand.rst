@@ -9,7 +9,7 @@ Mode: 00: Off, 02: Auto, 03: On
 Prise 220V
 ~~~~~~~~~~
 
-.. image:: images/Capture_d_ecran_2019_07_06_a_09_17_19.png
+.. image:: ../images/Capture_d_ecran_2019_07_06_a_09_17_19.png
 
 **Fonctions**
 
@@ -55,7 +55,7 @@ Aussi une bonne description ici: https://github.com/pipiche38/Domoticz-Zigate-Wi
 Module Encastré
 ~~~~~~~~~~~~~~~
 
-.. image:: images/Capture_d_ecran_2019_07_06_a_13_29_06.png
+.. image:: ../images/Capture_d_ecran_2019_07_06_a_13_29_06.png
 
 **Spécifications**
 
@@ -112,7 +112,7 @@ Sur appui on entend le relai claquer. Rien sur la relache. Rien ne remonte sur l
 Interrupteur Sans neutre
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: images/Capture_d_ecran_2019_07_07_a_08_56_58.png
+.. image:: ../images/Capture_d_ecran_2019_07_07_a_08_56_58.png
   :width: 200px
 
 .. note:: Bien mettre une charge résistive.

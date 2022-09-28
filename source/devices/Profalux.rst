@@ -23,7 +23,7 @@ Etape 1
 
 La télécommande va clignoter rouge puis vert.
 
-.. image:: images/profalux_inclusion_etape1.png
+.. image:: ../images/profalux_inclusion_etape1.png
 
 Le volet va faire un va et vient (attendre un petit moment).
 
@@ -35,7 +35,7 @@ Le volet va faire un va et vient.
 
 Pour tester le bon fonctionnement, vous devriez pouvoir piloter le volet avec la télécommande.
 
-Si jamais les commandes de votre volet sont inversées, il suffit à l'aide d'un trombone d'appuyer sur fois sur F et ensuite une fois sur STOP.
+Si jamais les commandes de votre volet sont inversées, il suffit à l'aide d'un trombone d'appuyer une fois sur F et ensuite une fois sur STOP.
 
 * Fermer le volet complètement.
 
@@ -47,7 +47,7 @@ Mettre la ruche en mode inclusion
 
 * Pour cela appuyer sur le bouton inclusion depuis le plugin Abeille (La Zigate doit clignoter bleue)
 
-.. image:: images/inclusion.png
+.. image:: ../images/inclusion.png
 
 Une fois le réseau de la Zigate ouvert, il ne vous reste plus qu’à:
 
@@ -77,24 +77,24 @@ Si par une mauvaise manipulation votre volet ne répond plus à la télécommand
 * Retourner l’appareil
 * A l’aide d’un trombone, appuyer 5 fois sur le bouton R
 
-.. image:: images/profalux_inclusion_etape1.png
+.. image:: ../images/profalux_inclusion_etape1.png
 
 Attention c'est une manipulation dangereuse !
 
 * Couper l'alimentation électrique
 * Réunir les fils noir et marron puis les brancher sur la borne de phase
 
-.. image:: images/profalux_inclusion_reset_volet2.png
+.. image:: ../images/profalux_inclusion_reset_volet2.png
 
 * Remettre l'alimentation électrique pendant 5 secondes. Le volet devrait faire un petit mouvement.
 * Couper l'alimentation électrique
 * Séparer les fils noir et marron. Brancher le fils marron sur la phase. Si votre fils noir était brancher avec le bleu aupparavant, rebrancher le avec le bleu sinon laisser le fils noir seul en pensant à l'isoler(capuchon noir)
 
-.. image:: images/profalux_inclusion_reset_volet3.png
+.. image:: ../images/profalux_inclusion_reset_volet3.png
 
 * Remettre l'alimentation électrique et dans la minute appuyer sur le bouton STOP
 
-.. image:: images/profalux_inclusion_reset_volet4.png
+.. image:: ../images/profalux_inclusion_reset_volet4.png
 
 Le volet devrait faire des mouvement de va-et-vient puis s'arrêter
 * La télécommande devrait à nouveau fonctionner
@@ -136,5 +136,5 @@ R + MONTEE => déclenche un "device announce" du volet associé et de la téléc
 
 La télécommande s'annonce sur le réseau mais à priori on ne peut rien en faire du tout.
 
-    A laisser entrer puis ignoer/masquer.
+    A laisser entrer puis ignorer/masquer.
 

@@ -53,7 +53,7 @@ Abeille
 Configuration
 ^^^^^^^^^^^^^
 
-Abeille configure la tête pour 
+Abeille configure la tête pour
 
 * remonter le niveau de batterie toutes le 43200s, soit 12h.
 
@@ -69,4 +69,4 @@ Homebridge
 
 Voici la configuration qui fonctionne sur mon système:
 
-.. image:: images/Capture_d_ecran_2019_04_13_a_22_22-22.png
+.. image:: ../images/Capture_d_ecran_2019_04_13_a_22_22-22.png

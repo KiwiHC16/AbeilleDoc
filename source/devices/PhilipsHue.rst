@@ -141,7 +141,7 @@ La température remonte régulièrement.
 
 **Homebridge**
 
-.. image:: images/Capture_d_ecran_2019_04_14_a_00_44_30.png
+.. image:: ../images/Capture_d_ecran_2019_04_14_a_00_44_30.png
 
 Motion Sensor Outdoor
 ~~~~~~~~~~~~~~~~~~~~~

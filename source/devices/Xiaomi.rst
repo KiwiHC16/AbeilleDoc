@@ -44,9 +44,9 @@ Lors de l'exécution du scénario, si vous testé l'état du bouton est qu'il es
 
 Par exemple pour commander une ampoule Ikea:
 
-.. image:: images/Capture_d_ecran_2018_09_04_a_13_05_49.png
+.. image:: ../images/Capture_d_ecran_2018_09_04_a_13_05_49.png
 
-.. image:: images/Capture_d_ecran_2018_09_04_a_13_05_.36.png
+.. image:: ../images/Capture_d_ecran_2018_09_04_a_13_05_.36.png
 
 
 Multi
@@ -176,7 +176,7 @@ Remonte ff01 (len 37)
 Cube Aqara
 ~~~~~~~~~~
 
-.. image:: images/Capture_d_ecran_2018_06_12_a_22_00_03.png
+.. image:: ../images/Capture_d_ecran_2018_06_12_a_22_00_03.png
 
 
 Wall Switch 1

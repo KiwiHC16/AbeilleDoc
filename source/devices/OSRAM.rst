@@ -11,7 +11,7 @@ Les prises Inddor et Outdoor semble identique. Dans Abeille par defaut elle sero
 * Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter...
 * Appui long sur le bouton du flanc de la prise, la prise switche rapidement On/Off, lâcher le bouton, l'équipement doit se connecter et un objet doit apparaître dans Jeedom.
 
-.. image:: images/plug01_new.png
+.. image:: ../images/plug01_new.png
 
 **Inclue**
 
@@ -31,7 +31,7 @@ Si ce n'est pas le cas vous pouvez faire un "liste Equipements" sur la ruche. Si
 
 Ensuite utilisez de préférence "BindShortToZigateEtat" puis "setReportEtat". Maintenant un changement d'état doit remonter tout seul et mettre à jour l'icone.
 
-.. image:: images/Capture_d_ecran_2018_06_27_a_11_24_09.png
+.. image:: ../images/Capture_d_ecran_2018_06_27_a_11_24_09.png
 
 
 Le retour d'état ne remonte que si l'état change. Donc si l'icone n'est pas synchro avec la prise vous pouvez avoir l'impression que cela ne fonctionne pas. Ex: la prise est Off et l'icone est on. Vous faites Off et rien ne se passe. Pour éviter cela un double Toggle doit réaligner tout le monde.
@@ -41,7 +41,7 @@ Le retour d'état ne remonte que si l'état change. Donc si l'icone n'est pas sy
 
 **Remove**
 
-..image:: images/Capture_d_ecran_2019_07_06_a_10_43_00.png
+.. image:: ../images/Capture_d_ecran_2019_07_06_a_10_43_00.png
 
 Un remove exclue la prise OSRAM Outdoor du reseau avec un Leave (Rejoin: False, Request: False, Remove Children: False). Lors de l exclusion on entend la prise faire un aller-retour du relai. Et l'équipement dans Abeille est conservé mais désactivé.
 Vous pouvez garder l'équipement dans Abeille si vous le souhaitez ou le supprimer. Si vous le gardez, lors de la prochaine inclusion de cette même prise il sera ré-utilisé.

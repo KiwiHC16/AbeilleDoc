@@ -7,7 +7,7 @@
 
    Bienvenu
    Presentation
-   Equipements
+   devices/Equipements
    Installation
    Utilisation
    UtilisationAvancee

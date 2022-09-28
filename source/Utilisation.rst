@@ -3,6 +3,7 @@ Utilisation
 
 .. include:: PageConfig.rst
 .. include:: PageGestion.rst
+.. include:: PageEq.rst
 .. include:: OTA.rst
 
 Inclusion

@@ -1,12 +1,64 @@
 ChangeLog
 =========
 
+- Interne: Suppression queue 'ctrlToCmd' au profil de 'xToCmd' + améliorations 'CliToQueue'.
+
+220928-BETA-1
+-------------
+
+- Interne: Suppression queue 'assistToCmd' + nettoyage 'assistToParser'.
+- Interne: AbeilleCmd: Amélioration 'sliderToHex()'.
+- Tuya vibration sensor TS0210: Mise-à-jour modèle (2452).
+
+220927-BETA-1
+-------------
+
+- Orvibo CM10ZW: Ajout affichage 'Status X' (2024).
+- Livarno Home HG07834B: Mise-à-jour modele (2448).
+- Firmware zigate: Recommandation d'utiliser la v3.21.
+- Firmwares v1: Suppression des versions < '3.21'.
+- Page maintenance/infos clefs: Ajout canal.
+- Interne: DB config: Suppression clef obsolete 'agressifTraitementAnnonce'.
+- Interne: DB config: 'monitor' => 'ab::monitorId'.
+- Interne: Abeille.class: Le manque de déclaration de 'batteryType' ne permet plus de dire que le device est en écoute.
+- Interne: Nettoyage code obsolete 'SetPermit' + 'xmlhttpMQTTSend.php'.
+- Interne: ZigbeeConst: Mise à jour cluster 0500.
+
+220924-BETA-1
+-------------
+
+- Page équipement: Amélioration affichage.
+- Tuya vibration sensor TS0210: Mise-à-jour modèle (2452).
+- Syntaxe modele EQ: Ajout possibilité surcharge 'repeatEventManagement'.
+- Syntaxe modele EQ: Ajout possibilité surcharge 'returnStateTime' & 'returnStateValue'.
+
+220923-BETA-1
+-------------
+
+- Interne: Suppression cmde obsolete 'luminositeHue.json'.
+- Interne: Normalisation de qq icones Philips.
+- Interne: Normalisation de qq icones Iluminize.
+- Tuya vibration sensor TS0210: Ajout support préliminaire (2452).
+- Interne: DB config: Nettoyage clefs obsoletes.
+- Interne: Suppression erreurs PHP sur 'AbeilleEQ-xxx.php'
+- Commandes JSON: Suppression cmde obsolete 'PuissanceLegrandPrise' => 'zb-0B04-ActivePower'.
+- Assistant modèle: Mise-à-jour pour cluster 0500/IAS zone.
+- Assistant modèle: Correction génération 'category'.
+- Interne: DB config: 'preventLQIRequest' => 'ab::preventLQIAutoUpdate'.
+
+220922-BETA-1
+-------------
+
 - Page EQ/avancé: Affichage code fabricant.
 - Interne: Ajout fabricant dans qq modeles JSON.
 - Livarno Home: Ajout modele préliminaire (2448).
 - Philips SML004: Ajout 'Sensitivity' (2437).
 - Interne: Parser: Support cluster 1000 cmd 41 & 42.
 - Tuya PIR & illuminance: Mise-à-jour du modele (2409).
+- Interne: DB config: 'AbeilleIEEEX' => 'ab::zgIeeeAddrX'
+- Interne: DB config: 'AbeilleIEEE_OkX' => 'ab::zgIeeeAddrOkX'
+- Interne: Parser: isDuplicated() timeout = 2sec au lieu de 10sec.
+- Tuya PIR+illuminance: Mise-à-jour modèle pour 'Illuminance' (2409).
 
 220916-BETA-1
 -------------

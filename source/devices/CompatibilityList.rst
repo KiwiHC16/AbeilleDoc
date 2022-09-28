@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2022-09-20
+Dernière mise-à-jour le 2022-09-28
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -58,14 +58,14 @@ Konke, , Konke Multi-function Button
 .. image:: ../images/node_HueEnsis.png
    :width: 200px
 
-, , 511.201 Iluminize
+Iluminize, 511.201, 511.201 Iluminize
 
-.. image:: ../images/node_511.201.png
+.. image:: ../images/node_Iluminize-511201.png
    :width: 200px
 
-, , Module 511.202 iluminize
+Iluminize, 511.202, Module 511.202 iluminize
 
-.. image:: ../images/node_511.202.png
+.. image:: ../images/node_Iluminize-511202.png
    :width: 200px
 
 , , 7-digital-input
@@ -83,7 +83,7 @@ Orvibo, CM10ZW, Orvibo multi-functional relay
 .. image:: ../images/node_Orvibo-CM10ZW.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
@@ -93,7 +93,7 @@ Orvibo, ST30, Orvibo ST30 temperature/humidity sensor
 .. image:: ../images/node_Orvibo-ST30.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
@@ -128,7 +128,7 @@ Profalux, BSO, Profalux BSO
 .. image:: ../images/node_Profalux-BSO.png
    :width: 200px
 
-, , Legrand Cable Outlet 3000W
+Legrand, Cable outlet, Legrand cable outlet
 
 .. image:: ../images/node_Legrand-Cableoutlet.png
    :width: 200px
@@ -168,9 +168,9 @@ Osram, B40TW, Osram Lightify classic B40 bulb
 .. image:: ../images/node_Osram-Bulb-Lightify-B40Classic.png
    :width: 200px
 
-, , Legrand Prise Connected Outlet Mural 220V avec Neutre
+Legrand, Connected outlet, Legrand outlet
 
-.. image:: ../images/node_Connectedoutlet.png
+.. image:: ../images/node_Legrand-Connectedoutlet.png
    :width: 200px
 
 Niko, , Niko connected outlet socket
@@ -178,7 +178,7 @@ Niko, , Niko connected outlet socket
 .. image:: ../images/node_Niko-ConnectedSocketOutlet.png
    :width: 200px
 
-Legrand, 20AX, Legrand Contactor
+Legrand, 20AX, Legrand contactor
 
 .. image:: ../images/node_Legrand-Contactor.png
    :width: 200px
@@ -188,27 +188,27 @@ Heiman, HS1CA ?, Heiman smart CO sensor
 .. image:: ../images/node_Heiman-COSensor.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
@@ -438,7 +438,7 @@ Gledopto, GL-SD-001, Gledopto GL-SD-001 AC dimmer
 .. image:: ../images/node_LCT001.png
    :width: 200px
 
-, , Phillips Hue LCT010 (Hue White and Color Ambiance A19 E26 (Gen 3))
+, , Phillips Hue LCT010 (Hue White and Color Ambiance A19 E26 (Gen 3)) 
 
 .. image:: ../images/node_LCT010.png
    :width: 200px
@@ -518,12 +518,12 @@ Philips, LTW001, Philips Hue white ambiance
 .. image:: ../images/node_Philips-Bulb-E27-White.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
@@ -533,7 +533,7 @@ Philips, LTW001, Philips Hue white ambiance
 .. image:: ../images/node_LTW010.png
    :width: 200px
 
-, , Ampoule e14 Philips Hue White ambiance 6w 2200-6500k 470lm 55ma
+, , Ampoule e14 Philips Hue White ambiance 6w 2200-6500k 470lm 55ma 
 
 .. image:: ../images/node_LTW012.png
    :width: 200px
@@ -608,12 +608,12 @@ Profalux, Volets 2nd gen, Profalux volet gen 2
 .. image:: ../images/node_Profalux-Shutter.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
@@ -633,7 +633,7 @@ Sonoff, SNZB-03, Sonoff motion sensor
 .. image:: ../images/node_Sonoff-SNZB-03.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
@@ -903,9 +903,9 @@ Xiaomi, , Xiaomi Inondation Aqara
 .. image:: ../images/node_Xiaomiwleak_aq1.png
    :width: 200px
 
-Xiaomi, GZCGQ01LM, Xiaomi GZCGQ01LM smart light sensor
+Xiaomi, GZCGQ01LM, Xiaomi smart light sensor
 
-.. image:: ../images/node_sen_ill_mgl01.png
+.. image:: ../images/node_Xiaomi-LightSensor-1.png
    :width: 200px
 
 Legrand, 067726, Céliane Wired Roller Shutter Switch
@@ -923,9 +923,9 @@ Legrand, 067726, Céliane Wired Roller Shutter Switch
 .. image:: ../images/node_SM309.png
    :width: 200px
 
-, , Philips Presence Indoor
+Philips, SML001, Philips Presence Indoor
 
-.. image:: ../images/node_SML001.png
+.. image:: ../images/node_Philips-MotionSensor-1.png
    :width: 200px
 
 Philips, 9290019758, Philips Hue motion sensor
@@ -935,12 +935,12 @@ Philips, 9290019758, Philips Hue motion sensor
 
 Philips, SML003, Philips motion sensor
 
-.. image:: ../images/node_Philips-MotionSensor-SML003.png
+.. image:: ../images/node_Philips-MotionSensor-1.png
    :width: 200px
 
 Philips, SML004, Philips Hue outdoor sensor
 
-.. image:: ../images/node_Philips-OutdoorSensor.png
+.. image:: ../images/node_Philips-MotionSensor-2.png
    :width: 200px
 
 , , Humein Smoke Sensor HS1SA-E
@@ -1033,7 +1033,7 @@ Sonoff, SNZB-02, Sonoff temp & humidity sensor
 .. image:: ../images/node_Sonoff-SNZB-02.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
@@ -1148,7 +1148,7 @@ Ikea, E27 white spectre opal, IKEA bulb E27 White Spectre opal
 .. image:: ../images/node_Ikea-BulbE27.png
    :width: 200px
 
-, , TRADFRI bulb E27 WW 806lm
+, , TRADFRI bulb E27 WW 806lm 
 
 .. image:: ../images/node_TRADFRIbulbE27WW806lm.png
    :width: 200px
@@ -1228,7 +1228,7 @@ Ikea, 10400408, Ikea signal repeater
 .. image:: ../images/node_Ikea-SignalRepeater.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
@@ -1258,7 +1258,7 @@ Profalux, Télecommande, Profalux télécommande
 .. image:: ../images/node_Profalux-Remote.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
@@ -1268,7 +1268,7 @@ Profalux, Télecommande, Profalux télécommande
 .. image:: ../images/node_TS0001.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
@@ -1278,7 +1278,7 @@ Tuya, iHSW02, Tuya mini smart switch
 .. image:: ../images/node_Tuya-MiniSmartSwitch.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
@@ -1358,7 +1358,7 @@ Woox, R7060 , Woox water irrigation
 .. image:: ../images/node_Woox-WaterIrrigation.png
    :width: 200px
 
-, , Vanne Zigbee
+, , Vanne Zigbee 
 
 .. image:: ../images/node_TS0111.png
    :width: 200px
@@ -1393,17 +1393,17 @@ Sixwgh, WH025, Sixwgh WH025 plug
 .. image:: ../images/node_Tuya-SmartSocket-2.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
@@ -1473,7 +1473,7 @@ Tuya, ZM-CG205, Tuya ZM-CG205 door sensor
 .. image:: ../images/node_Tuya-DoorSensor-ZM-CG205.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
@@ -1486,6 +1486,21 @@ Zemismart, ZXZDS, Zemismart door & window sensor
 Tuya, RP280, Tuya RP280 zigbee repeater
 
 .. image:: ../images/node_Tuya-Repeater-RP280.png
+   :width: 200px
+
+Tuya, TS0210, Tuya vibration sensor
+
+.. image:: ../images/node_Tuya-VibrationSensor.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Moes, ZSS-ZK-THL, Smart Brightness Thermometer
@@ -1503,12 +1518,12 @@ Tuya, TS0501B , Tuya Single Color LED Controller
 .. image:: ../images/node_Tuya-TS0501B-LedController.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
@@ -1563,9 +1578,9 @@ LavarnoLux, HG08131A, LavarnoLux led gu10
 .. image:: ../images/node_Generic-BulbGU10.png
    :width: 200px
 
-LIvarno home, ?, Livarno home bulb
+Livarno home, HG07834B, Livarno home bulb
 
-.. image:: ../images/node_?.png
+.. image:: ../images/node_LivarnoHome-Bulb-E14Color.png
    :width: 200px
 
 Tuya, TS0505B, Tuya TS0505B GU10 color bulb
@@ -1588,17 +1603,17 @@ Tuya, TV02, Tuya TV02
 .. image:: ../images/node_Tuya-TV02.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
@@ -1623,7 +1638,7 @@ Aubess, ?, Aubess smoke sensor
 .. image:: ../images/node_Aubess-SmokeSensor.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
@@ -1633,12 +1648,12 @@ Tuya, RSH-AirBox01, Tuya Smart Air Box 01
 .. image:: ../images/node_Tuya-RSH-AirBox01.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
@@ -1678,7 +1693,7 @@ Profalux, volets, Profalux shutter
 .. image:: ../images/node_Profalux-Shutter.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
@@ -1688,12 +1703,12 @@ Heiman, HS2WD, Heiman HS2WD warning device
 .. image:: ../images/node_HS2WD.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px
 
-, ,
+, , 
 
 .. image:: ../images/node_.png
    :width: 200px

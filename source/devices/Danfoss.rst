@@ -5,7 +5,7 @@ Danfoss
 Ally: Tete Radiateur
 ********************
 
-.. image:: images/Capture_d_ecran_2019_07_06_a_09_17_19.png
+.. image:: ../images/Capture_d_ecran_2019_07_06_a_09_17_19.png
 
 
 Premiere mise sous tension

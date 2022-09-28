@@ -39,7 +39,7 @@ Ce bouton est créé au moment de la création de l'objet. Celui ci permet de de
 
 Identifiez l'ampoule que vous voulez paramétrer:
 
-.. image:: images/Capture_d_ecran_2018-02_21_a_23_26_56.png
+.. image:: ../images/Capture_d_ecran_2018-02_21_a_23_26_56.png
 
 Récupérer son adresse IEEE, son adresse courte (ici 6766).
 
@@ -65,7 +65,7 @@ Exemple avec tous les paramètres:::
 
 Après clic sur Bind, vous devriez voir passer dans le log AbeilleParser (en mode debug) un message comme:
 
-.. image:: images/Capture_d_ecran_2018_02_21_a_23_27_29.png
+.. image:: ../images/Capture_d_ecran_2018_02_21_a_23_27_29.png
 
 qui confirme la prise en compte par l'ampoule. Status 00 si Ok.
 
@@ -76,7 +76,7 @@ Ensuite paramétrer l'envoie de rapport:
 - Titre, l'adresse courte de l'ampoule
 - Message, le cluster et le paramètre dans le cluster
 
-.. image:: images/Capture_d_ecran_2018_02_21_a_23_29_11.png
+.. image:: ../images/Capture_d_ecran_2018_02_21_a_23_29_11.png
 
 Attention a capture d'écran n'est pas à jour pour le deuxième champs.::
 
@@ -92,13 +92,13 @@ qui confirme la prise en compte par l'ampoule. Status 00 si Ok.
 
 Après sur un changement d'état l'ampoule doit remonter l'info vers Abeille, avec des messages comme:
 
-.. image:: images/Capture_d_ecran_2018_02_21_a_23_31_11.png
+.. image:: ../images/Capture_d_ecran_2018_02_21_a_23_31_11.png
 
 pour un retour Off de l'ampoule.
 
 **HomeBridge**
 
-.. image:: images/Capture_d_ecran_2019_04_14_a_00_44_29.png
+.. image:: ../images/Capture_d_ecran_2019_04_14_a_00_44_29.png
 
 .. _telecommandeRonde5Boutons:
 
@@ -136,13 +136,13 @@ Il faut connaitre l'adresse de la télécommande.
 
 Puis dans la ruche demander son nom. Par exemple pour la télécommande à l'adresse ec15
 
-.. image:: images/Capture_d_ecran_2018_02_28_a_13_59_31.png
+.. image:: ../images/Capture_d_ecran_2018_02_28_a_13_59_31.png
 
 et immédiatement après appuyez sur un des boutons de la télécommande pour la réveiller (pas sur le bouton arrière).
 
 Et après un rafraichissement de l'écran vous devez avoir un objet
 
-.. image:: images/Capture_d_ecran_2018_02_28_a_14_00_58.png
+.. image:: ../images/Capture_d_ecran_2018_02_28_a_14_00_58.png
 
 Il faut ensuite éditer les commandes en remplaçant l'adresse de la télécommande par le groupe que l'on veut contrôler
 
@@ -150,11 +150,11 @@ Il faut ensuite éditer les commandes en remplaçant l'adresse de la télécomma
 
 La configuration
 
-.. image:: images/Capture_d_ecran_2018_02_28_a_14_03_26.png
+.. image:: ../images/Capture_d_ecran_2018_02_28_a_14_03_26.png
 
 va devenir
 
-.. image:: images/Capture_d_ecran_2018_02_28_a_14_03_47.png
+.. image:: ../images/Capture_d_ecran_2018_02_28_a_14_03_47.png
 
 pour le groupe 5FBD.
 
@@ -178,7 +178,7 @@ Pour ce faire, il faut utiliser la commande "Set Group Remote" et réveiller la 
 Il faut donc la reveiller, pour cela un appui sur un de ses 5 boutons la reveille pendant quelques secondes. En fait, elle envoie l info d un bouton appuyé puis ecoute pendant quelques secondes et c est la qu on peut lui demander de prendre une configuration de groupe.
 Donc definir le group dans le champ Id, appui sur un bouton de la telecommande et "Set Group Remote".
 
-.. image:: images/Capture_d_ecran_2019_07_02_a_15_12_26.png
+.. image:: ../images/Capture_d_ecran_2019_07_02_a_15_12_26.png
 
 .. Attention:: "Set Group Remote" ne devrait fonctionner que pour les telecommande Ikea.
 
@@ -195,21 +195,21 @@ Pour créer un télécommande, utilisez les commandes cachées dans la ruche:
 
 * Ouvrir la page commande de la ruche et trouver la commande "TRADFRI remote control".
 
-.. image:: images/Capture_d_ecran_2018_03_02_a_10_34_40.png
+.. image:: ../images/Capture_d_ecran_2018_03_02_a_10_34_40.png
 
 Remplacez "/TRADFRI remote control/" l'adresse du groupe que vous voulez contrôler. Par exemple AAAA.
 
-.. image:: images/Capture_d_ecran_2018_03_02_a_10_35_08.png
+.. image:: ../images/Capture_d_ecran_2018_03_02_a_10_35_08.png
 
 Sauvegardez et faites "Tester".
 
 Vous avez maintenant une télécommande pour contrôler le groupe AAAA.
 
-.. image:: images/Capture_d_ecran_2018_03_02_a_10_35_28.png
+.. image:: ../images/Capture_d_ecran_2018_03_02_a_10_35_28.png
 
 Ouvrez l'équipement "Abeille-AAAA" et ouvrez le tab "Parameter".
 
-.. image:: images/Capture_d_ecran_2019_07_05_a_11_42_05.png
+.. image:: ../images/Capture_d_ecran_2019_07_05_a_11_42_05.png
 
 et définissez le groupe à controller dans le champ Groupe.
 
@@ -315,11 +315,11 @@ Télécommande
 
 Pour créer une Telecommande simulée, clic sur l icone Télécommande:
 
-.. image:: images/Capture_d_ecran_2019_07_06_a_09_54_26.png
+.. image:: ../images/Capture_d_ecran_2019_07_06_a_09_54_26.png
 
 apres rafraichissement de l'écran vous aurez une telecommande:
 
-.. image:: images/Capture_d_ecran_2019_07_06_a_09_55_32.png
+.. image:: ../images/Capture_d_ecran_2019_07_06_a_09_55_32.png
 
 Il suffit maintenant de mettre l'Id du groupe dans ses parametres.
 
@@ -329,43 +329,43 @@ Cette opération est un peu délicate mais doit permettre de récupérer l'adres
 
 Aller dans la page de configuration du plugin et clic sur "Network" pour faire apparaitre les paramètres dans l'Ampoule:
 
-.. image:: images/Capture_d_ecran_2018_10_30_a_11_30_24.png
+.. image:: ../images/Capture_d_ecran_2018_10_30_a_11_30_24.png
 
 Sur l'objet Ampoule vous devez vous le champ "Groups" apparaitre sans information:
 
-.. image:: images/Capture_d_ecran_2018_10_30_a_11_36_43.png
+.. image:: ../images/Capture_d_ecran_2018_10_30_a_11_36_43.png
 
 Recuperons l'adresse de l ampoule, en ouvrant la page de configuration de l ampoule:
 
-.. image:: images/Capture_d_ecran_2018_10_30_a_11_42_09.png
+.. image:: ../images/Capture_d_ecran_2018_10_30_a_11_42_09.png
 
 Le champ "Topic Abeille" contient l'adresse, ici "9252".
 
 Interrogeons maintenant l'ampoule, avec un getGroupMemberShip depuis l objet Ruche:
 
-.. image:: images/Capture_d_ecran_2018_10_30_a_11_45_23.png
+.. image:: ../images/Capture_d_ecran_2018_10_30_a_11_45_23.png
 
 Indiquez l'adresse de l ampoule.
 
 Maintenant le champ "Groups" de l'ampoule doit contenir l'adresse de groupe:
 
-.. image:: images/Capture_d_ecran_2018_10_30_a_11_47_24.png
+.. image:: ../images/Capture_d_ecran_2018_10_30_a_11_47_24.png
 
 ici le groupe utilisé par la télécommande est "f65d".
 
 Maintenant nous pouvons mettre à jour la télécommande dans Jeedom. Ouvrez les commandes de la télécommande:
 
-.. image:: images/Capture_d_ecran_2018_10_30_a_11_50_17.png
+.. image:: ../images/Capture_d_ecran_2018_10_30_a_11_50_17.png
 
 Dans le champ "Topic" des commandes vous pouvez voir le texte \=addrGroup= qu'il faut remplacer par la valeur du groupe, ici "f65d" et sauvegarder.
 
 Cela donne:
 
-.. image:: images/Capture_d_ecran_2018_10_30_a_11_54_51.png
+.. image:: ../images/Capture_d_ecran_2018_10_30_a_11_54_51.png
 
 Maintenant vous pouvez commander votre ampoule depuis la Télécommande physique et depuis la Télécommande Jeedom.
 
-.. image:: images/Capture_d_ecran_2018_10_30_a_11_58_42.png
+.. image:: ../images/Capture_d_ecran_2018_10_30_a_11_58_42.png
 
 PS: Les scénarios ne sont pas implémentés pour l'instant (30/10/2018):
 

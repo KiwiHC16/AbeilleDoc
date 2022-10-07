@@ -1,7 +1,32 @@
 ChangeLog
 =========
 
+- Xiaomi D1 wall switch single: Support préliminaire (2466).
+
+221007-BETA-1
+-------------
+
+- Interne: Parser: Amélioration msg debug.
+- Network graph: Correction.
+- Network graph: Nombreux changements internes.. normalisation, nettoyage.
+- Interne: DB eqLogic: 'positionX' => 'ab::settings[physLocationX]'.
+- Interne: DB eqLogic: 'positionY' => 'ab::settings[physLocationY]'.
+- Interne: Nettoyage DB au démarrage revu.
+- Page EQ/avancé d'une Zigate: Ajout boutons 'démarrer/arrêter' pour inclusion.
+- Moes curtain module: Support preliminaire (2464).
+- Interne: DB config: Suppression clefs obsoletes 'blocageRecuperationEquipement' + 'blocageTraitementAnnonce'.
+- Interne: DB config: 'DbVersion' => 'ab::dbVersion'.
+
+220930-BETA-1
+-------------
+
 - Interne: Suppression queue 'ctrlToCmd' au profil de 'xToCmd' + améliorations 'CliToQueue'.
+- Interne: Mise à jour generation doc.
+- Nous A1Z smart plug: Ajout support préliminaire (2460).
+- Livarno Home HG07834B: Mise-à-jour modele (2448).
+- Philips SML004: Mise-à-jour modele (2437).
+- Maintenance/télécharger tout: Ajout alerte si moins de 5000 lignes de logs.
+- Interne: Parser: Clusters supportés par 8100/8102 revus à la baisse (=> 8002).
 
 220928-BETA-1
 -------------

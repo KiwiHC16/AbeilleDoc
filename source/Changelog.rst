@@ -1,7 +1,169 @@
 ChangeLog
 =========
 
+221119-BETA-1
+-------------
+
+- Zigate PI v2: Correction controle GPIO (rc.local n'est plus nécessaire).
+- Repeteur Loratap: Ajout support (2498).
+- Interne: AbeilleCmd: Pas de renvoi si message 8000 status 06.
+- Interne: Abeille.class: 'customization' & 'macCapa'. Encore une update.
+- Interne: Reinitialisation d'un équipement: delai interne avant relecture DB par parser.
+- Moes temp/humidity sensor: Ajout support (2500).
+- Interne: Petite update page santé.
+- Maintenance/infos clefs: Ajout status (timeout) de chaque équipement.
+- Interne: Abeille.class: Amélioration mineure msg debug executePollCmds().
+- Moes BRT-100: Mise-à-jour modèle (2467).
+- Interne: Support Tuya amélioré: Cmd: Ajout 'setValue', 'setValueMult' & 'setValueDiv'.
+- GLEDOPTO GL-FL-004P: Support préliminaire (2501).
+- Page Zigate/avancé: Modification choix canal zigbee.
+
+221114-BETA-2
+-------------
+
+- Interne: Parser: Optimisation.
+- Interne: Cmd: Modification gestion ACK. 8702 ignoré au profit de 8011.
+- Interne: Parser: Amélioration messages dbg Xiaomi.
+- Interne: Parser: Nettoyage 'manufacturer' revu (cleanManufId()).
+- Interne: Parser: Correction 'customization' + 'macCapa'.
+- Interne: Parser: Divers correctifs & améliorations.
+
+221110-BETA-2
+-------------
+
+- Interne: Parser: Surveillance NPDU, timeout 4mins.
+
+221110-BETA-1
+-------------
+
+- Interne: Install: Correction 'Batterie Volt' (0001-01-0020). Suppression 'calculValueOffset'.
+- Interne: Parser: Check NPDU and force SW reset if stuck for more than 3 mins.
+- Modèles: Ajout 'customization' optionnelle pour corriger/forcer infos.
+
+221108-BETA-1
+-------------
+
+- Modèles: Nettoyage. Suppression cmds obsoletes setLevelVoletUp/setLevelVoletDown.
+- Modèles: Correction 'sensor_86sw1' pour 'Battery-Percent'.
+- Modèles: Ajout qq 'manufacturer' manquants.
+- Interne: AbeilleCmd: Ajout support 'cmd-0102' + suppression 'WindowsCovering'.
+- Moes curtain module: Mise-à-jour modèle (2464).
+
+221107-BETA-1
+-------------
+
+- Interne: Parser: 'Batterie-Pourcent' => '0001-01-0021'.
+- Interne: install/DB cmd: 'Batterie-Pourcent' => '0001-01-0021'
+
+221105-BETA-1
+-------------
+
+- Interne: Parser: Xiaomi tags decode update.
+- Modèles: Historisation activée par défaut pour 0400/0402/0403 & 0405 clusters attr 0000.
+- Modèles: Surcharge possible de 'isHistorized'.
+
+221104-BETA-1
+-------------
+
+- Support: Infos clefs: Affichage type de Zigate.
+- Interne: Suppression 'uniqId' DB eqLogic/configuration.
+- Interne: Message zigate 804E plus utilisé. Pas assez robuste => decode8002().
+
+221103-BETA-2
+-------------
+
+- Equipements: Qq modeles revus.
+- Modèle de commandes: 'Batterie-Volt' remplacé par '0001-01-0020'.
+- Interne: Constantes Zigbee: Ajout data types cluster 0000.
+- Page EQ/avancé: Message d'erreur si champ manquant.
+- Interne: AbeilleCmd: Meilleur support type 'string' pour 'writeAttribute()'.
+- Interne: Parser: Cluster 0001 (batterie) traité par 'decode8002()'.
+- Modeles: Commandes obsoletes: 'Batterie-Hue', 'Batterie-Pourcent' & 'Batterie-Volt-Konke'.
+- Interne: Suppression 'bindShort' obsolete.
+- Modèle équipements: Syntaxe 'alternateIds' améliorée.
+- Ruche: Cmde 'Set inclusion mode' est de retour pour cas 2476 non résolu.
+- Page EQ/avancé pour Zigate: Correction 'Reset HW' pour PI-Zigate.
+- Interne: Qq changements autour du séquencement du démarrage des démons.
+- Interne: Remplacement cmd obsolete 'levelVoletStop' + nettoyage code.
+- Modeles: Support 'notStandard' pour les commandes 'illuminance' qui ne respectent pas la spec ZCL.
+
+221029-BETA-1
+-------------
+
+- Interne: Zigbee const: Ajout 0403/pressure.
+- Interne: Parser: Attribut '0403-xx-0000' (pressure) directement décodé par 8002.
+- Interne: Parser+install+modele: Attribut '0402-xx-0000' (temperature) directement décodé par parser/8002.
+- H1 dual wall switch: Mise-à-jour du modèle (2474).
+- Interne: Parser+install+modele: Attribut '0400-xx-0000' (illuminance) directement décodé par parser/8002.
+- Ajout des FW 3.23 pour les Zigates v1.
+- Interne: Optimisation suppression des queues lors de l'arret des démons.
+- Interne: Blocage relance des démons si mise-à-jour FW ou test de port.
+- Démons start & stop: Amélioration. Devrait limiter les cas 'port toujours utilisé'.
+
+221024-BETA-1
+-------------
+
+- Interne: Parser: Correction decodeDataType() impactant types longs (ex: uint48).
+- Interne: Parser: Types 18, 19, 28 & 29 maintenant traités par decodeDataType().
+- Interne: Parser+install+modele: Attribut '0405-xx-0000' (humidity) directement décodé par parser.
+- Interne: Parser: Cluster 0405 traité par decode8002().
+- Philips E27 white bulb: Mise-à-jour du modèle (2421).
+- Page EQ/avancé: amélioration mineure.
+- Page maintenance: Correction regression sur 'Telecharger tout'.
+- Interne: Parser: Améliorations support cluster 'FCC0' Xiaomi.
+
+221023-BETA-1
+-------------
+
+- Interne: Correction regression constantes Zigbee.
+
+221022-BETA-1
+-------------
+
+- Moes curtain module: Mise-à-jour modèle (2464).
+- Moes 2 gang dimmer module: Modele preliminaire (2473).
+- Interne: Premier fichier 'packages.json' pour installation de dependances.
+- H1 dual wall switch: Support preliminaire (2474).
+- Interne: Cmd: sliderToHex(), ajout support enum8 & 16.
+- Nous A1Z smart plug: Mise-à-jour du modèle (2460).
+- Page maintenance/logs: Message si pas en mode 'debug' lors du téléchargement.
+- Interne: Constantes Zigbee: Definitions des types.
+- Philips E14 white bulb: Modele preliminaire (2422).
+- Philips E27 white bulb: Modele preliminaire (2421).
+
+221019-STABLE-1
+---------------
+
+  .. important:: Les zigates v2 doivent être à jour du dernier firmware disponible (v3.21 à ce jour).
+  .. important:: Pour les zigates v1, l'équipe Zigate recommande FORTEMENT d'utiliser un firmware **Optimized PDM** (OPDM) dans les cas suivants:
+
+      - Toute nouvelle installation.
+      - Dès lors qu'un réappairage complet est nécéssaire.
+      - La version OPDM corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
+      - Les firmwares avant 3.1e sont forcement 'legacy'.
+      - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
+
+  .. important:: Les zigates v1 doivent avoir un firmware >= 3.1e pour un fonctionnement optimal mais la dernière en date (3.21) est fortement recommandée.
+
+221014-BETA-1
+-------------
+
+- Aqara Motion Sensor P1 MS-S02: Support preliminaire (2463).
+- Silvercrest smart button: Mise-à-jour modèle (2468).
+- Page maintenance/logs: Correction ascenseur partie gauche.
+- Interne: Arret des démons: Correction mineure & améliorations.
+
+221010-BETA-1
+-------------
+
 - Xiaomi D1 wall switch single: Support préliminaire (2466).
+- Moes BRT-100: Support préliminaire (2467).
+- Silvercrest smart button: Support préliminaire (2468).
+- Interne: Cmd+Parser: Ajout support 'discoverCommandsGenerated'.
+- Assistant découverte: Amélioration: Ajout recherche commandes generées.
+- Network graph: Temporairement masqué. En cours de refonte.
+- Moes - Smart Brightness Thermometer: Support préliminaire (2469).
+- Assistant découverte: Correction pour support multi EP.
 
 221007-BETA-1
 -------------

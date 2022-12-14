@@ -1,7 +1,115 @@
 ChangeLog
 =========
 
-221119-BETA-1
+221214-BETA-8
+-------------
+
+- Interne: Cmd: 'setLevelVolet' utilise 'cmd-0008'.
+- Interne: Cmd: 'setLevel': Suppression 'readAttribute' consecutifs.
+- Modèle EQ: Surcharge possible de 'listValue'.
+- Interne: Support cmde action de type 'liste'.
+- Interne: Parser: Mise à jour 'node descriptor'.
+- Heiman HS1HT: Mise-à-jour modèle (2520).
+- Interne: Cmd: Mise-à-jour 'writeAttribute' pour '#select#'.
+- Moes thermostat BRT-100: Mise-à-jour modèle (2467).
+- Maintenance/infos clefs: Amélioration.
+- Heiman HS1MS-EF: Support préliminaire (2521).
+
+221213-BETA-6
+-------------
+
+- Modele EQ: Support 'trigOut' pour cmde action.
+- Tuya TV02: Mise-à-jour.
+- Philips SML004: Mise-à-jour modele (2437).
+- Moes thermostat BRT-100: Mise-à-jour modèle (2467).
+- Tuya: Amélioration support.
+- Assistant modèle: Améliorations.
+- Aubess 4 buttons switch: Support préliminaire (2512).
+- Aqara Motion Sensor P1 RTCGQ14LM/MS-S02: Mise-à-jour modèle (2463).
+
+221212-BETA-2
+-------------
+
+- Heiman HS1HT: Support préliminaire (2520).
+- Reinitialisation: Remise en cause du modele utilisé chaque fois.
+- Interne: Améliorations support Tuya.
+- Tuya TV02: Mise-à-jour du modèle (2175).
+- Interne: Support cluster FCC0 Xiaomi générique.
+- Moes temp/humidity sensor: Mise-à-jour du modèle (2500).
+- Tuya mini smart switch: Correction image (2438).
+- Aqara Motion Sensor P1 RTCGQ14LM/MS-S02: Mise-à-jour modèle (2463).
+- Paulmann 50044: Ajout support préliminaire (2516).
+
+221209-BETA-4
+-------------
+
+- Moes thermostat BRT-100: Mise-à-jour modèle (2467).
+- Assistant découverte: Améliorations.
+- Assistant découverte: Ajout suffixe identiant (ex: discovery-TS0121__TZ3000_rdtixbnu.json)
+- Modele TS011F: Ajout de plusieurs marques blanches.
+- Icasa ICZB-IW11SW: Ajout support préliminaire (2515).
+- Icasa ICZB-IW11D: Ajout support préliminaire (2514).
+- Icasa ICZB-DC11: Ajout support préliminaire (2513).
+- Interne: Parser: Corrections regressions.
+
+221208-BETA-1
+-------------
+
+- Moes thermostat BRT-100: Mise-à-jour modèle (2467).
+- Interne: Parser: Amélioration mineure.
+- Interne: Abeille.class: Amélioration sur reception msg trop grand.
+- Suppression ancien log 'AbeilleConfig' (sans .log) au démarrage.
+- Interne: Taille queue xToAbeille étendue.
+- Interne: Parser: Affichage nPDU/aPDU avec extended error.
+
+221204-BETA-1
+-------------
+
+- Images: Normalisation de noms.
+- Interne: Abeille.class: Correction findModel (2509).
+
+221202-BETA-2
+-------------
+
+- Suppression chiffres après virgule sur pourcentage batterie.
+- Interne: Parser: Nettoyage fonctions obsoletes.
+- Interne: Cmd: Activation ACK pour 'setLevelRaw' + 'cmd-0008'.
+- Interne: Support préliminaire 'Mgmt Nwk Update Req'.
+- Modeles commandes: Amélioration 'valueOffset' pour support ID logique.
+- Moes curtain module: Mise-à-jour modèle (2464).
+- Aqara Motion Sensor P1 RTCGQ14LM/MS-S02: Mise-à-jour modèle (2463).
+
+221130-BETA-1
+-------------
+
+- Syntaxe cmdes: Ajout support 'valueOffset' pour cmde 'action'/'slider'.
+- Moes curtain module: Mise-à-jour modèle (2464).
+- Renitialiser: Amélioration si équipement etait inconnu mais qu'un modèle existe maintenant.
+- Moes BHT-002-GCLZBW: Ajout support préliminaire (2485).
+- Livolo TI0001: Mise-à-jour modèle (2476).
+- Interne: Améliorations AbeileCmd.
+- Interne: AbeilleCmd: Limitation de débit activé.
+- Interne: Améliorations préliminaires pour support générique Xiaomi.
+- Interne: Parser: Correction pour SW reset sur NDPU bloqué.
+- Interne: Collecte LQI: Améliorations mineures.
+- Xiaomi Door Sensor MCCGQ11LM: Mise-à-jour du modèle.
+- Interne: Parser: decodeDataType(): Ajout support 2B/int32.
+- Xiaomi Temp-humidité-pression WSDCGQ11LM: Mise-à-jour du modèle.
+
+221122-BETA-1
+-------------
+
+- Page Zigate/avancé: Reset HW possible sur Piv2.
+- Page Zigate/avancé: Amélioration selection du canal.
+- Modèles EQ: Support customization 'rxOn'.
+- Livolo TI0001: Mise-à-jour modèle (2476).
+- Moes BRT-100: Mise-à-jour modèle (2467).
+- Images: Qq mises-à-jour & renomages.
+- Interne: Parser/cleanManufId(): '.' ignoré.
+- Philips E27 LWA017: Ajout support (2503).
+- Interne: Cmd: Ajout support 'move to level' (cmd-0008).
+
+221119-BETA-2
 -------------
 
 - Zigate PI v2: Correction controle GPIO (rc.local n'est plus nécessaire).

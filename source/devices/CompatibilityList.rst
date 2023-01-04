@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2022-11-19
+Dernière mise-à-jour le 2023-01-04
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -93,9 +93,9 @@ Ledvance, AC33907, Ledvance E27 tunable white bulb
 .. image:: ../images/node_Ledvance-BulbE27-White.png
    :width: 200px
 
-, , Ampoule Ledvance Classic E27 Tunable White
+Ledvance, , Ledvance E27 bulb
 
-.. image:: ../images/node_A60TWZ3.png
+.. image:: ../images/node_Ledvance-SmartP-E27Bulb.png
    :width: 200px
 
 Xiaomi Aqara, AAQS-S01, Aqara AAQS-S01 TVOC air quality monitor
@@ -140,7 +140,7 @@ Osram, , Osram CLA60 TW
 
 Osram, Classic A60 TW, Osram Lightify classic bulb
 
-.. image:: ../images/node_Osram-Bulb-Lightify-E27Classic.png
+.. image:: ../images/node_Osram-E27Bulb-Lightify-Classic.png
    :width: 200px
 
 , , OSRAM Classic A60 W clear - LIGHTIFY
@@ -155,7 +155,7 @@ Osram, Classic A60 TW, Osram Lightify classic bulb
 
 Osram, B40TW, Osram Lightify classic B40 bulb
 
-.. image:: ../images/node_Osram-Bulb-Lightify-B40Classic.png
+.. image:: ../images/node_Osram-B40Bulb-Lightify-Classic.png
    :width: 200px
 
 Legrand, Connected outlet, Legrand outlet
@@ -211,6 +211,11 @@ Heiman, HS1CA ?, Heiman smart CO sensor
 , , defaultUnknown
 
 .. image:: ../images/node_defaultUnknown.png
+   :width: 200px
+
+Paulmann Licht, 500.44, Paulmann Licht dimmable
+
+.. image:: ../images/node_PaulmannLicht-DimmableLED.png
    :width: 200px
 
 Iolloi, ID-EU20FWB4L, Iolloi flush-mounted dimmer switch 5-250 W, trailing edge dimmer
@@ -315,7 +320,7 @@ Gledopto, GL-C-007, GLEDOPTO RGT+CCT LED Controller
 
 Gledopto, ?, Gledopto GL-C-007P
 
-.. image:: ../images/node_?.png
+.. image:: ../images/node_Gledopto-GL-C-007P.png
    :width: 200px
 
 Gledopto, GL-C-008, GLEDOPTO RGT+CCT LED Controller
@@ -373,9 +378,34 @@ Gledopto, GL-SD-001, Gledopto GL-SD-001 AC dimmer
 .. image:: ../images/node_GUNNARPpanelround.png
    :width: 200px
 
+Heiman, HS1HT, Heiman temp and humidity sensor
+
+.. image:: ../images/node_Heiman-TempHumidity.png
+   :width: 200px
+
+Icasa, ICZB-DC11, Icasa LED dimmer
+
+.. image:: ../images/node_Icasa-ICZB-DC11.png
+   :width: 200px
+
+Icasa, ICZB-IW11D, Icasa AC Dimmer
+
+.. image:: ../images/node_Icasa-ICZB-IW11D.png
+   :width: 200px
+
+Icasa, ICZB-IW11SW, Icasa LED switch
+
+.. image:: ../images/node_Icasa-ICZB-IW11SW.png
+   :width: 200px
+
 , , KADRILJ roller blind
 
 .. image:: ../images/node_FYRTURblock-outrollerblind.png
+   :width: 200px
+
+Frient, KEYZB-110, Frient keypad
+
+.. image:: ../images/node_Frient-Keypad.png
    :width: 200px
 
 , , NEO  Inmax 07046L Keyfob-ZB3.0
@@ -485,7 +515,7 @@ Philips, LOM008, Philips Hue Smart Plug
 
 Philips, LTW001, Philips Hue white ambiance
 
-.. image:: ../images/node_Philips-Bulb-E27-White.png
+.. image:: ../images/node_PhilipsHue-E27Bulb-WhiteAmbiance.png
    :width: 200px
 
 , , Philips Hue white ambiance
@@ -520,7 +550,12 @@ Philips, LWA004, Hue E27 single filament A60 bulb
 
 Philips, 9290018216, Philips E27 white bulb
 
-.. image:: ../images/node_Philips-Bulb-E27-White.png
+.. image:: ../images/node_PhilipsHue-E27Bulb-WhiteAmbiance.png
+   :width: 200px
+
+Philips, LWA017, Philips E27 white bulb
+
+.. image:: ../images/node_PhilipsHue-E27Bulb-White.png
    :width: 200px
 
 , , Hue white beta LWB004
@@ -553,9 +588,9 @@ Lexman, LXEK-1, Lexman E27 RGB bulb
 .. image:: ../images/node_Generic-BulbE27.png
    :width: 200px
 
-Zemismart, ZW-EC-01, Zemismart ZW-EC-01 curtain switch
+Zemismart, ZW-EC-01, Zemismart curtain switch
 
-.. image:: ../images/node_LXX60-CS27LX1.0.png
+.. image:: ../images/node_Zemismart-LXX60-CS27LX1.0.png
    :width: 200px
 
 Xiaomi, MCCGQ14LM, Xiaomi Aqara door sensor
@@ -578,7 +613,7 @@ Profalux, Volets 2nd gen, Profalux volet gen 2
 .. image:: ../images/node_Profalux-Shutter.png
    :width: 200px
 
-Xiaomi, MS-S02, Xiaomi Aqara motion sensor P1
+Xiaomi, RTCGQ14LM/MS-S02, Xiaomi Aqara motion sensor P1
 
 .. image:: ../images/node_Xiaomi-MotionSensorP1.png
    :width: 200px
@@ -588,9 +623,9 @@ Xiaomi, MS-S02, Xiaomi Aqara motion sensor P1
 .. image:: ../images/node_MotionSensor-A.png
    :width: 200px
 
-, , MR16 TW OSRAM OSRAM Spot LED dimmable connecté Smart
+Osram, MR16TW, Osram Smart+ MR16 bulb
 
-.. image:: ../images/node_MR16TWOSRAM.png
+.. image:: ../images/node_Osram-SmartP-MR16Bulb.png
    :width: 200px
 
 Sonoff, SNZB-03, Sonoff motion sensor
@@ -613,14 +648,19 @@ Legrand, 067772, Legrand Celiane 067772 double switch
 .. image:: ../images/node_Switch4xEU-LIGHTIFY.png
    :width: 200px
 
-, , PAR1650TW
+Osram, , Osram Lightify GU10 bulb
 
-.. image:: ../images/node_PAR1650TW.png
+.. image:: ../images/node_Osram-Lightify-GU10Bulb.png
    :width: 200px
 
 , , PAR16RGBWZ3
 
 .. image:: ../images/node_PAR16RGBWZ3.png
+   :width: 200px
+
+Heiman, HS1MS-EF, Heiman motion sensor
+
+.. image:: ../images/node_Heiman-MotionSensor.png
    :width: 200px
 
 , , Xiaomi Prise
@@ -638,9 +678,9 @@ Xiaomi, plug EU, Xiaomi plug EU
 .. image:: ../images/node_Xiaomi-Plug-EU.png
    :width: 200px
 
-, , OSRAM Prise Lightify
+Osram, , Osram Smart+ plug
 
-.. image:: ../images/node_OsramLightify.png
+.. image:: ../images/node_Osram-SmartP-Plug.png
    :width: 200px
 
 , , OSRAM Prise Lightify OutDoor
@@ -680,7 +720,7 @@ Innr, RB165, Innr RB165 dimmable white bulb E27
 
 Innr, RB285C, Innr RB285C RGBW bulb colour E27
 
-.. image:: ../images/node_RB285C.png
+.. image:: ../images/node_Innr-E27Bulb-Colour.png
    :width: 200px
 
 , , Télécommande RC110 INNR
@@ -690,7 +730,7 @@ Innr, RB285C, Innr RB285C RGBW bulb colour E27
 
 Innr, RC250, Innr remote control
 
-.. image:: ../images/node_Innr-RC250.png
+.. image:: ../images/node_Innr-Remote-5keys.png
    :width: 200px
 
 Philips/Signify, 929003017102, Hue wall switch module
@@ -1233,6 +1273,11 @@ Tuya, iHSW02, Tuya mini smart switch
 .. image:: ../images/node_Tuya-MiniSmartSwitch.png
    :width: 200px
 
+Tuya, 1ch switch, Tuya 1ch switch module
+
+.. image:: ../images/node_Tuya-1ChanSwitchModule.png
+   :width: 200px
+
 , , Zemismart 2 boutons
 
 .. image:: ../images/node_TS0002.png
@@ -1288,7 +1333,7 @@ LoraTap, SS600ZB, LoraTap Zigbee 3 gang remote
 .. image:: ../images/node_LoraTap3GangRemote.png
    :width: 200px
 
-Tuya, TS0044, Tuya 4 buttons Zigbee scene switch
+Tuya, TS0044, Tuya 4 buttons scene switch
 
 .. image:: ../images/node_Tuya-TS0044.png
    :width: 200px
@@ -1296,6 +1341,11 @@ Tuya, TS0044, Tuya 4 buttons Zigbee scene switch
 Tuya, , Tuya 4 buttons scene switch
 
 .. image:: ../images/node_Tuya-4ButtonsSwitch-Gray.png
+   :width: 200px
+
+Aubess, ESW-0ZAA-EU, Aubess 4 buttons switch
+
+.. image:: ../images/node_Tuya-4ButtonsSwitch-White.png
    :width: 200px
 
 Silvercrest, HG08164, Silvercrest smart button
@@ -1510,12 +1560,17 @@ Livarno home, HG07834B, Livarno home bulb
 
 Tuya, TS0505B, Tuya TS0505B GU10 color bulb
 
-.. image:: ../images/node_?.png
+.. image:: ../images/node_Generic-BulbGU10-Color.png
    :width: 200px
 
 Saswell, SAS980SWT-7-Z01(EU), Saswell irrigation valve
 
 .. image:: ../images/node_Saswell-SAS980SWT.png
+   :width: 200px
+
+Moes, BHT-002-GCLZBW, Moes thermostat
+
+.. image:: ../images/node_Moes-Thermostat.png
    :width: 200px
 
 Moes, BRT-100, Moes thermostatic head
@@ -1568,6 +1623,16 @@ Moes, TS130F, Moes curtain module
 .. image:: ../images/node_Moes-CurtainModule.png
    :width: 200px
 
+Girier, Curtain, Girier curtain module
+
+.. image:: ../images/node_Tuya-CurtainModule.png
+   :width: 200px
+
+Loratap, SC500ZB, Loratap roller shutter module
+
+.. image:: ../images/node_Loratap-RollerShutterModule.png
+   :width: 200px
+
 Tuya, QS-zigbee-C01, Tuya QS-zigbee-C01 curtain module
 
 .. image:: ../images/node_Tuya-QS-Zigbee-C01.png
@@ -1611,6 +1676,11 @@ Profalux, volets, Profalux shutter
 Heiman, HS2WD, Heiman HS2WD warning device
 
 .. image:: ../images/node_HS2WD.png
+   :width: 200px
+
+Heiman, HS1WL, Heiman water leakage sensor
+
+.. image:: ../images/node_Heiman-WaterSensor.png
    :width: 200px
 
 Sonoff, SNZB-01, Sonoff wireless button

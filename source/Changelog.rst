@@ -1,7 +1,65 @@
 ChangeLog
 =========
 
-221214-BETA-8
+230103-BETA-5
+-------------
+
+- Modèles: Suppression support ancienne syntaxe 'include'.
+- Girier curtain module: Support préliminaire (2526).
+- Assistant modèle: Mise-à-jour.
+- Maintenance/infos clefs: Amélioration.
+- Heiman water sensor: Support préliminaire (2527).
+- Interne: Parser: Support de certains devices Xiaomi via decode8002 pour compatibilité mode 'raw'.
+- Loratap roller shutter module: Support préliminaire (2528).
+- Moes thermostat BRT-100: Mise-à-jour modèle (2467).
+- Modèles commandes: 'Short-Addr' & 'IEEE-Addr' => 'inf_addr-Short'/'inf_addr-Ieee'.
+- Modèles commandes: 'Link-Quality'/'online' => 'inf_linkQuality'/'inf_online'.
+- Modèles commandes: 'Time-Time'/'Time-TimeStamp' => 'inf_time-String'/'inf_time-Timestamp'.
+- Modèles EQ: Surcharge possible de 'Polling'.
+- Tuya TV02: Mise-à-jour du modèle (2175).
+
+230102-BETA-1
+-------------
+
+- Interne: Constantes Zigbee: Améliorations.
+- Interne: Parser: Update mineure msg debug Xiaomi.
+- Interne: Parser: Suppression support 8041, 8043 & 8045 pour compatibilité mode 'raw'.
+- Interne: Parser: Suppression support 804A pour compatibilité mode 'raw'.
+- Interne: Parser: Suppression support 8030 pour compatibilité mode 'raw'.
+- Interne: Parser: Suppression support 8060, 8062 & 8063 pour compatibilité mode 'raw'.
+- Profalux shutter: Correction modele pour retour de 'Level'.
+- Interne: Parser: decodeDataType(), ajout support type 39/single.
+- Frient keypad: Support préliminaire (2525).
+
+230102-STABLE-1
+---------------
+
+  .. important:: Zigates v2
+
+    - Doivent être à jour du dernier firmware disponible (v3.21 à ce jour).
+  .. important:: Zigates v1
+
+    - Doivent avoir un firmware >= 3.1e pour un fonctionnement optimal mais la dernière en date (3.21) est fortement recommandée.
+    - L'équipe Zigate recommande FORTEMENT d'utiliser un firmware **Optimized PDM** (OPDM) dans les cas suivants:
+
+      - Toute nouvelle installation.
+      - Dès lors qu'un réappairage complet est nécéssaire.
+      - La version OPDM corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
+      - Les firmwares avant 3.1e sont forcement 'legacy'.
+      - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
+
+221215-BETA-3
+-------------
+
+- Interne: Amélioration infos en mode surveillance (AbeilleMonitor.log).
+- Zemismart ZW-EC-01 curtain switch: Modèle revu mais équipement déconseillé.
+- Interne: AbeilleCmd: Optimisation & nettoyage.
+- Heiman HS1HT: Mise-à-jour image (2520).
+- Heiman HS1MS-EF: Mise-à-jour image (2521).
+- Tuya 1Ch switch module: Ajout support préliminaire 'TS0001__TZ3000_tqlv4ug4'.
+- Interne: Correction pour équipement inconnu pendant raffraichissement réseau.
+
+221214-BETA-9
 -------------
 
 - Interne: Cmd: 'setLevelVolet' utilise 'cmd-0008'.
@@ -1770,23 +1828,6 @@ Secours
 * Transférer l'historique des commandes avec le bouton "Copier l'historique de cette commande sur une autre commande"
 * Vous testez le nouvel équipement
 * si ok vous pouvez supprimer l'ancien.
-
-Bugs
-----
-
-Il est fort probable que des bugs soient découverts.
-
-Dans ce cas aller voir le forum: `FORUM <https://community.jeedom.com/tag/plugin-abeille>`_
-
-ou issue dans GitHub: `ISSUE <https://github.com/KiwiHC16/Abeille/issues?utf8=✓&q=is%3Aissue+>`_
-
-Changelog
----------
-
-En fait le ChangeLog est dans GitHub alors je perds mon temps a essayer de la mettre a jour dans cette doc. Je ne fais plus de mise à jour ou que des principales choses quand j'ai le temps.
-
-Voir directement dans `GitHub <https://github.com/KiwiHC16/Abeille/commits/master>`_
-
 
 2019-11-25
 ----------

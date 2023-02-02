@@ -1,6 +1,112 @@
 ChangeLog
 =========
 
+230202-BETA-1
+-------------
+
+- Interne: AbeilleCmd: Mise-à-jour 'getRoutingTable'.
+- Interne: Collecte des tables de routage revue.
+- Interne: Parser: Amélioration affichage cmds cluster.
+- Interne: Zigbee const: Amélioration support cluster 0501.
+- Interne: Parser: Amélioration 'getDevice()' si IEEE pas défini.
+- Interne: Parser: Amélioration 'cleanModelId()' pour caracteres speciaux.
+- Interne: Suppression 'routingTable' de la table 'eqLogic'.
+
+230130-BETA-2
+-------------
+
+- Interne: Parser: Ajout infos debug pour support Xiaomi.
+- Modeles: Mise-à-jour 'sensor_cube' + 'sensor_cube.aqgl01'.
+- Reseau: Mise-à-jour graphique des liens.
+- Perte formule au redémarrage: Correction (2540).
+- Interne: Parser: Correction décodage 'routing table response'.
+
+230126-BETA-2
+-------------
+
+- Heiman water leakage sensor: Mise-à-jour modèle (2527).
+- Xiaomi water leak sensor: Mise-à-jour modèle.
+- Interne: Parser: Nettoyage support Xiaomi pour 'magnet.aq2', 'weather'.
+- Interne: Parser: Corrections decode 'Mgmt_NWK_Update_notify'.
+- Interne: DB config: Ajout 'ab::zgChan' pour sauver choix de canal Zigbee.
+- Page de config: Canal Zigbee affiché.
+- Interne: Sauvegarde choix du canal Zigbee (11 par défaut).
+- Interne: Parser: Correction crash Xiaomi.
+- Modele Xiaomi 'sensor_swith' revu.
+- Interne: AbeilleCmd: timeout passé de 3 à 4sec avant de déclarer cmd perdue.
+- Interne: Correction mise-à-jour (au lieu de reset) équipements au démarrage.
+- Interne: AbeilleCmd: Correction setChannel.
+- Interne: Changement de canal Zigbee revu (broadcast mgmtNwkUpdateRequest).
+- Interne: Parser: Correction erreurs PHP.
+
+230124-BETA-1
+-------------
+
+- Page avancé: Ajout version SW du device (clust 0000, attr 4000).
+- Interne: Parser: Supression utilisation msg OTA 8503 pour compatibilité raw.
+- Xiaomi Aqara QBKG26LM: Mise-à-jour modèle (2174).
+- Interne: Parser: Cluster 000C géré par decode8002().
+- Modèles: Suppression cmdes obsoletes 'puissance1', 'puissance', & 'puissanceEP15'.
+
+230121-BETA-2
+-------------
+
+- Interne: Parser: Support cluster 0500 cmd 00/Zone status change notif.
+- Interne: Parser: Correction regression.
+- Interne: Cmd: Changement cosmetique msg debug.
+
+230120-BETA-1
+-------------
+
+- Interne: Mise-à-jour équipement revue pour éviter la perte de commandes.
+- Réseau: Mise-à-jour graph réseau.
+- Aqara Motion Sensor P1 RTCGQ14LM/MS-S02: Mise-à-jour modèle (2463).
+- Owon PIR323: Mise-à-jour modèle (2533).
+- Interne: Reset SW de la Zigate si pas de réponse depuis plus de 2mins.
+- Sonoff ZBMini-L: Ajout support (2539).
+- Interne: Parser: Support préliminaire cluster 0020, cmde 'check-in'.
+- Interne: Cmd: Support préliminaire cluster 0500 zone enroll response.
+- Interne: Reinit à partir du modele revue pour ne pas perdre modifs utilisateur.
+
+230113-BETA-2
+-------------
+
+- Xiaomi RTCGQ11LM: Mise-à-jour modele et image.
+- Interne: Correction support Xiaomi.
+- Owon PIR323: Image (2533).
+- Frient keypad: Mise-à-jour modele (2525).
+
+230112-BETA-3
+-------------
+
+- Legrand micromodule switch: Mise-à-jour modele et image.
+- Interne: Parser: Amélioration mess monitor cas Xiaomi.
+- Modèles: Qq nettoyage + ajout logicalId sur certaines actions.
+- Lexman smart plug: Support préliminaire (2531).
+- Assistant modeles: Mise-à-jour suite renommage des commandes.
+- Tuya 1Ch switch module (TS0001__TZ3000_tqlv4ug4): Mise-à-jour modèle.
+- Modeles pour Xiaomi: Amélioration syntaxe.
+- Page EQ/avancé: Liste pour les types possibles d'attribut.
+- Interne: Parser: rxOn n'est plus mis à jour par 'Mgmt_lqi_rsp' (pas fiable).
+- Owon PIR323: Ajout support (2533).
+- Interne: Parser: 'rxOnWhenIdle' peut etre mis-à-jour par 'node descriptor'.
+- Modeles: 'minValue', 'maxValue', 'calculValueOffset' mis a jour seulement si reset.
+
+230106-BETA-2
+-------------
+
+- Modeles EQ: Ajout prise en charge 'genericType'.
+- Modèles: Ajout du type generique sur qq modeles.
+
+230106-BETA-1
+-------------
+
+- Interne: Parser: Correction 'single precision'.
+- Modeles commandes: Normalisation de certains noms (inf_zbAttr-XXXX-YYYY).
+- Interne: Parser: Correction support Xiaomi.
+- Xiaomi Door Sensor MCCGQ11LM: Mise-à-jour du modèle pour restauration 'Battery-Volt'.
+- Xiaomi Temp-humidité-pression WSDCGQ11LM: Mise-à-jour du modèle pour restauration 'Battery-Volt'.
+
 230103-BETA-5
 -------------
 
@@ -17,6 +123,7 @@ ChangeLog
 - Modèles commandes: 'Time-Time'/'Time-TimeStamp' => 'inf_time-String'/'inf_time-Timestamp'.
 - Modèles EQ: Surcharge possible de 'Polling'.
 - Tuya TV02: Mise-à-jour du modèle (2175).
+- Xiami RTCGQ11LM: Mise-à-jour du modèle.
 
 230102-BETA-1
 -------------

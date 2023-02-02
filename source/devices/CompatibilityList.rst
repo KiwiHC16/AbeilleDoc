@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2023-01-04
+Dernière mise-à-jour le 2023-02-02
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -183,7 +183,7 @@ Heiman, HS1CA ?, Heiman smart CO sensor
 .. image:: ../images/node_COSensor-EM.png
    :width: 200px
 
-, , Xiaomi Prise Murale Encastrée
+Xiaomi, , Xiaomi wall plug
 
 .. image:: ../images/node_ctrl_86plug.aq1.png
    :width: 200px
@@ -448,6 +448,11 @@ Frient, KEYZB-110, Frient keypad
 .. image:: ../images/node_LCT015.png
    :width: 200px
 
+Lexman, LDSENK02F, Lexman smart plug
+
+.. image:: ../images/node_Lexman-SmartPlug.png
+   :width: 200px
+
 , , Ampoule Aqara Spectre Blanc light.aqcn02
 
 .. image:: ../images/node_light.aqcn02.png
@@ -603,9 +608,9 @@ Profalux, MAI-ZTS, Profalux gen 2 remote control
 .. image:: ../images/node_Profalux-Remote.png
    :width: 200px
 
-, , Legrand Micro Module Encastrable 220V avec Neutre et un bouton poussoir
+Legrand, 064888, Legrand micro module switch
 
-.. image:: ../images/node_Micromoduleswitch.png
+.. image:: ../images/node_Legrand-MicromoduleSwitch.png
    :width: 200px
 
 Profalux, Volets 2nd gen, Profalux volet gen 2
@@ -658,12 +663,17 @@ Osram, , Osram Lightify GU10 bulb
 .. image:: ../images/node_PAR16RGBWZ3.png
    :width: 200px
 
+Owon, PIR323-PTH, Owon multi sensor
+
+.. image:: ../images/node_Owon-PIR.png
+   :width: 200px
+
 Heiman, HS1MS-EF, Heiman motion sensor
 
 .. image:: ../images/node_Heiman-MotionSensor.png
    :width: 200px
 
-, , Xiaomi Prise
+Xiaomi, , Xiaomi plug
 
 .. image:: ../images/node_XiaomiPrise.png
    :width: 200px
@@ -838,14 +848,14 @@ Xiaomi, , Xiaomi Interrupteur Mural Carré Double
 .. image:: ../images/node_XiaomiButtonSW861.png
    :width: 200px
 
-, , Xiaomi Cube
+Xiaomi, , Xiaomi Cube
 
-.. image:: ../images/node_sensor_cube.png
+.. image:: ../images/node_Xiaomi-Cube.png
    :width: 200px
 
-, , Xiaomi Cube
+Xiaomi, MFKZQ01LM, Xiaomi Cube
 
-.. image:: ../images/node_sensor_cube.png
+.. image:: ../images/node_Xiaomi-Cube.png
    :width: 200px
 
 Xiaomi, Temp, Xiaomi temp sensor
@@ -865,12 +875,12 @@ Xiaomi, MCCGQ11LM, Xiaomi Aqara door sensor
 
 Xiaomi, , Xiaomi Presence
 
-.. image:: ../images/node_XiaomiInfraRouge.png
+.. image:: ../images/node_Xiaomi-MotionSensor.png
    :width: 200px
 
-Xiaomi, , Xiaomi Presence Aqara 2
+Xiaomi, RTCGQ11LM, Xiaomi Aqara motion and illuminance sensor
 
-.. image:: ../images/node_XiaomiInfraRouge2.png
+.. image:: ../images/node_Xiaomi-MotionSensor.png
    :width: 200px
 
 Xiaomi, , Xiaomi Gaz Sensor
@@ -883,7 +893,7 @@ Xiaomi, ?, Xiaomi Smoke Sensor
 .. image:: ../images/node_XiaomiSensorSmoke.png
    :width: 200px
 
-Xiaomi, , Xiaomi Interrupteur simple
+Xiaomi Mijia, WXKG01LM, Xiaomi single switch
 
 .. image:: ../images/node_XiaomiBouton1.png
    :width: 200px
@@ -898,7 +908,7 @@ Xiaomi, , Xiaomi Bouton Aqara 3
 .. image:: ../images/node_XiaomiBouton3.png
    :width: 200px
 
-Xiaomi, , Xiaomi Inondation Aqara
+Xiaomi, , Xiaomi Aqara water leak sensor
 
 .. image:: ../images/node_Xiaomiwleak_aq1.png
    :width: 200px
@@ -1023,7 +1033,7 @@ Xiaomi, WS-EUK04, Xiaomi H1 dual wall switch
 .. image:: ../images/node_Xiaomi-H1WallSwitch-Dual.png
    :width: 200px
 
-Xiaomi Aqara, , Xiaomi QBKG26LM 3 gang smart wall switch
+Xiaomi Aqara, QBKG26LM, Xiaomi D1 triple wall switch
 
 .. image:: ../images/node_XiaomiAqara-QBKG26LM.png
    :width: 200px
@@ -1038,7 +1048,7 @@ Legrand, 16AX, Legrand 16AX Teleruptor
 .. image:: ../images/node_Legrand-Teleruptor.png
    :width: 200px
 
-Sonoff, SNZB-02, Sonoff temp & humidity sensor
+Sonoff, SNZB-02, Sonoff temp and humidity sensor
 
 .. image:: ../images/node_Sonoff-SNZB-02.png
    :width: 200px
@@ -1716,6 +1726,11 @@ eWeLink, ZB-SW01, eWeLink ZB-SW01 smart light switch
 Lexman, CRI80, Lexman GU10 bulb
 
 .. image:: ../images/node_Generic-BulbGU10.png
+   :width: 200px
+
+Sonoff, ZBMini-L, Sonoff smart switch
+
+.. image:: ../images/node_Sonoff-ZbminiL.png
    :width: 200px
 
 , , Template for ZigBee - Color Dimmable Light

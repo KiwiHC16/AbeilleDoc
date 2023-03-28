@@ -1,7 +1,218 @@
 ChangeLog
 =========
 
-230202-BETA-1
+230328-BETA-1
+-------------
+
+- Interne: Parser: Correction detection support de groupes.
+- Page avancé/réparation: Support préliminaire.
+- Page avancé: Ajout 'localisation' pour identifiant Zigbee (cas Profalux).
+- Interne: Parser: Suppression support 8085/Level update pour compatibilité mode raw.
+- Page avancé: Affichage des differents identifiants Zigbee si plusieurs.
+- Loratap roller shutter touch switch v2: Mise-à-jour du modèle (2561).
+- Mise-à-jour modèle TS130F__TZ3000_1dd0d5yi.
+- Interne: Cmd: Amélioration mesg d'erreurs.
+- Modèles:
+
+  - Ajout 'act_setLevel-Light' pour remplacer 'setLevel'.
+  - Remplacement 'setLevel' => 'act_setLevel-Light'
+  - Suppression des cmdes info 'Groups'
+- Ikea Trafri 470lm E27: Ajout support (2564).
+- Groupes: Amélioration pour suppression d'un groupe.
+
+230326-STABLE-1
+---------------
+
+  .. important:: Zigates v2
+
+    - Doivent être à jour du dernier firmware disponible (v3.A0 à ce jour).
+  .. important:: Zigates v1
+
+    - Doivent avoir un firmware >= 3.1e
+    - FW v3.23 recommandé.
+    - L'équipe Zigate recommande FORTEMENT d'utiliser un firmware **Optimized PDM** (OPDM) dans les cas suivants:
+
+      - Toute nouvelle installation.
+      - Dès lors qu'un réappairage complet est nécéssaire.
+      - La version OPDM corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
+      - Les firmwares avant 3.1e sont forcement 'legacy'.
+      - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
+
+230325-BETA-2
+-------------
+
+- Legefirm repeteur zigbee: Ajout support (2560).
+
+230324-BETA-2
+-------------
+
+- Legrand shutter switch: Correction modèle (2559).
+- Interne: Constantes Zigbee, amélioration support cluster 0102.
+- Interne: Parser: Ajout support 'unbind response'.
+- Interne: createDevice(): Mise-à-jour pour éviter conflit de commandes.
+- TRADFRIonoffswitch: Mise-à-jour du modèle.
+- Modele de commandes: Suppression de cmde obsoletes.
+
+  - current_position_lift_percentage
+  - getcurrent_position_lift_percentage
+- Interne: Cmd: Changement msg debug.
+- Interne: Parser: Correction support 'Node Descriptor Response'.
+- Interne: Parser: Amélioration inclusion (ajout lecture 'manufCode').
+- Loratap roller shutter touch switch v2: Support préliminaire (2561).
+
+230322-BETA-3
+-------------
+
+- Girier curtain module: Mise-à-jour du modèle (2526).
+- Interne: Parser: Correction warning PHP 'Binding table response'.
+- Modele TS201 renommage automatique vers 'TS0201__TYZB01_hjsgdkfl'.
+- Page avancé: Support préliminaire 'unbind'.
+- Interne: Cmd: Support préliminaire 'unbind0031'.
+- Interne: Cmd: Ajout support 'remove all groups'.
+- Gestion des groupes: Amélioration affichage mineure.
+- Groupes de la Zigate: Correction regression.
+- Prise Aubess TS011F, _TZ3000_gvn91tmx: Mise-à-jour du modèle (2558).
+
+230320-BETA-3
+-------------
+
+- Image: 'Shutterswitchwithneutral' => 'Legrand-ShutterSwitch'.
+- Image: 'Xiaomiwleak_aq1' => 'Xiaomi-LeakSensor'.
+- Interne: Amélioration remplacement '#addrIEEE#', '#IEEE#' ou '#ZigateIEEE#'.
+- 'sensor_wleak.aq1': Mise-à-jour du modèle.
+- Page maintenance: Amélioration infos clefs.
+- Package de logs: Ajout log 'event'.
+- Aqara Motion Sensor P1 RTCGQ14LM/MS-S02: Mise-à-jour modèle (2463).
+- Xiaomi 'plug': Mise-à-jour du modèle.
+
+230319-BETA-1
+-------------
+
+- Interne: Parser: Correction regression inclusion.
+- Interne: Plusieurs correctifs 'deviceUpdates'.
+- Page avancé: Ajout 'siren level' pour cmde 'Start Warning' (cluster 0502).
+- Sirène M0L0-HS2WD-TY: Ajout info pourcentage batterie (2550).
+- Support préliminaire 'pigiod' pour Pi-Zigates.
+- Interne: Parser: Amélioration support cmdes specifiques cluster 0008.
+- Modele TS201 renommé => TS0201__TYZB01_hjsgdkfl.
+- Aubess prise TS011F: Ajout support préliminaire (2558).
+
+230314-BETA-1
+-------------
+
+- Loratap shutter: Nouveau modele: TS130F, _TZ3000_femsaaua (2552)
+- MOES ZK-FR16M-WH: Mise-à-jour modèle 'TS011F__TZ3000_cphmq0q7' (2554).
+- Interne: Cmd 0502: Amélioration pour support 'siren level'.
+- Sirène M0L0-HS2WD-TY: Mise-à-jour modèle (2550).
+- Commandes: Suppression 'VoltagePrise'.
+
+230311-BETA-1
+-------------
+
+- Xiaomi Aqara 2 way control module: Mise-à-jour modèle (2551).
+- Page avancé/Mise-à-jour: Amélioration correction icone si invalide.
+- Sirène M0L0-HS2WD-TY: Mise-à-jour modèle (2550).
+- Interne: parser: correction crash decode8002_MgmtRtgRsp().
+- Image: Renommage 'HS2WD' => 'Heinman-IndoorSiren'.
+
+230308-BETA-1
+-------------
+
+- Interne: Parser: Décodage single/double precision revu.
+- WarningDevice: Modèle supprimé. Supporté via 'WarningDevice-EF-3.0'.
+- Interne: AbeilleTools: Suppression des 'commentX'.
+- Page avancé: Cluster 0502/IAS WD, cmd 00/Start warning: Ajout 'duration'.
+
+230306-BETA-1
+-------------
+
+- Ikea telecommande 5 boutons: Mise-à-jour modèle (2547).
+- Affichage groupes: Petite mise-à-jour.
+- Interne: Cmd: Correction 'cmd-0502'.
+- Interne: Parser: Msg 8095 désactivé pour support mode 'raw'.
+- Page avancé: Support 'cluster 0502/IAS WD, cmd 00/Start warning'.
+- Xiaomi Aqara 2 way control module: Mise-à-jour modèle (2551).
+
+230301-BETA-1
+-------------
+
+- Interne: Parser: Erreur 'msgToLQICollector' masquée pour FW 0005-03A0 (2546).
+- Interne: Parser: Erreur 'msgToRoutingCollector' masquée pour FW 0005-03A0 (2546).
+
+230228-BETA-1
+-------------
+
+- Page maintenance/infos clefs: Amélioration mineure.
+- Interne: Parser: Amélioration mineure msg debug.
+- Nodon SIN-4-2-20: Mise-à-jour modele (2541).
+- Innr RC110: Mise-à-jour modèle + renommé 'RC110' => 'RC110_innr'.
+- Interne: Cmd: 'addGroup' revu.
+- Modèles: 'groupEPx' pour définir une constante de groupe par end point.
+- Interne: Configuration équipement faite par AbeilleCmd.
+- Interne: getGroupMembership() revu.
+- Interne: Parser: Ajout support 'addGroupResponse'/'removeGroupResponse' + zigbee['groups'].
+- Interne: Parser: Interrogation des groupes lors de l'inclusion.
+- Interne: Groupes: Utilisation eqLogic/config/zigbee/groups au lieu cmde info.
+
+230219-BETA-1
+-------------
+
+- Interne: Parser: Changement support clust 0000, attr 0004/5/10.
+- Nodon SIN-4-2-20: Correction image (2541).
+- Interne: Cmd: Timeout 8s si ACK.
+- Xiaomi switch (switch.n0agl1): Correction regression modele (2517).
+- Frient keypad: Mise-à-jour modele (2525).
+
+230215-BETA-2
+-------------
+
+- Interne: Parser: Améliorations mineures cluster 0004.
+- Interne: Abeille.class: 'repeatEventManagement' seulement si reset équipement.
+- Frient keypad: Mise-à-jour modele (2525).
+
+230214-BETA-1
+-------------
+
+- Interne: Cmd: Correction 'bind0030'.
+- Eurotronic SPZB0001: Mise-à-jour modèle.
+- Interne: Parser: Optimisation correction valeur suivant spec ZCL.
+- Interne: Parser: Correction regression clean location. Peut impacter Profalux.
+- Interne: Parser: Suppression progressive decode8100_8102().
+- Interne: Parser: Suppression support messages 80A0/80A3/80A4 pour compatibilité 'raw'.
+- Interne: Parser: Optimisations pour compatiblité futur mode 'raw'.
+- Frient keypad: Mise-à-jour modele (2525).
+- Nodon SIN-4-2-20: Support préliminaire (2541).
+- Interne: Parser: Optimisations.
+- Page maintenance/infos clefs: Amélioration mineure.
+- Interne: Abeille.class: Suppression 'volt2pourcent()'.
+- Interne: Parser: Revue decode 8001/logs.
+- Interne: SW reset si erreur 06 sur msg 8000 (2490).
+
+230207-BETA-3
+-------------
+
+- Interne: SerialRead: Filtrage des msgs de mauvaise longueur.
+- Livarno Home floor lamp: Support préliminaire (2544).
+- LoraTap Zigbee 3 gang remote: Ajout support (2542).
+- Interne: Page maintenance/logs. Correction mineure.
+- Interne: Cmd: 004E/LQI attend ACK.
+- Interne: Cmd: Timeout 7s si ACK.
+- Xiaomi relay (relay.c2acn01): Mise-à-jour modèle.
+- Frient keypad: Mise-à-jour modele (2525).
+- Interne: Parser: Améliorations support cluster 0501 pour 'Emergency'/'Fire'/'Panic'.
+- Interne: Parser: Support 0501/Arm code.
+- Page des équipements: Groupes par Zigate (967).
+
+230204-BETA-2
+-------------
+
+- Interne: Parser: Nettoyage 'ModelIdentifier' revue; 0 devient caractère de fin.
+- Interne: Cmd: Améliorations support clusters 0500 & 0501.
+- Interne: Parser: Msg 8401 désactivé.
+- Modèles: Correction nom 'inf_zbAttr-0500-ZoneStatus..' => 'inf_zbCmdS-0500-ZoneStatus...'.
+- Frient keypad: Mise-à-jour modele (2525).
+
+230202-BETA-3
 -------------
 
 - Interne: AbeilleCmd: Mise-à-jour 'getRoutingTable'.
@@ -11,6 +222,7 @@ ChangeLog
 - Interne: Parser: Amélioration 'getDevice()' si IEEE pas défini.
 - Interne: Parser: Amélioration 'cleanModelId()' pour caracteres speciaux.
 - Interne: Suppression 'routingTable' de la table 'eqLogic'.
+- Réseau/graph des liens: Mise-à-jour.
 
 230130-BETA-2
 -------------

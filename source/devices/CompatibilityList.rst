@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2023-02-02
+Dernière mise-à-jour le 2023-03-28
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -673,9 +673,9 @@ Heiman, HS1MS-EF, Heiman motion sensor
 .. image:: ../images/node_Heiman-MotionSensor.png
    :width: 200px
 
-Xiaomi, , Xiaomi plug
+Xiaomi, , Plug
 
-.. image:: ../images/node_XiaomiPrise.png
+.. image:: ../images/node_Xiaomi-Plug.png
    :width: 200px
 
 Xiaomi, SP-EUC01 ?, Aqara SmartPlug
@@ -733,9 +733,9 @@ Innr, RB285C, Innr RB285C RGBW bulb colour E27
 .. image:: ../images/node_Innr-E27Bulb-Colour.png
    :width: 200px
 
-, , Télécommande RC110 INNR
+Innr, RC110, INNR RC110 remote
 
-.. image:: ../images/node_RC110.png
+.. image:: ../images/node_Innr-RC110.png
    :width: 200px
 
 Innr, RC250, Innr remote control
@@ -748,7 +748,7 @@ Philips/Signify, 929003017102, Hue wall switch module
 .. image:: ../images/node_PhilipsSignify-RDM001.png
    :width: 200px
 
-Xiaomi/Aqara, , Xiaomi Module Double Switch Aqara
+Xiaomi, LLKZMK11LM, Xiaomi Aqara 2 way control module
 
 .. image:: ../images/node_relay.c2acn01.png
    :width: 200px
@@ -910,7 +910,7 @@ Xiaomi, , Xiaomi Bouton Aqara 3
 
 Xiaomi, , Xiaomi Aqara water leak sensor
 
-.. image:: ../images/node_Xiaomiwleak_aq1.png
+.. image:: ../images/node_Xiaomi-LeakSensor.png
    :width: 200px
 
 Xiaomi, GZCGQ01LM, Xiaomi smart light sensor
@@ -920,7 +920,12 @@ Xiaomi, GZCGQ01LM, Xiaomi smart light sensor
 
 Legrand, 067726, Céliane Wired Roller Shutter Switch
 
-.. image:: ../images/node_Shutterswitchwithneutral.png
+.. image:: ../images/node_Legrand-ShutterSwitch.png
+   :width: 200px
+
+NodOn, SIN-4-2-20, NodOn lighting relay switch
+
+.. image:: ../images/node_Nodon-SIN-4-2-20.png
    :width: 200px
 
 , , siren-pni-s002
@@ -988,7 +993,7 @@ Frient, SPLZB-132, Frient Smart Plug Mini Type E (French)
 .. image:: ../images/node_Delveco-SPLZB-132.png
    :width: 200px
 
-Eurotronic, SPZB0001, Spirit Radiator Thermostat
+Eurotronic, SPZB0001, Eurotronic Spirit Radiator Thermostat
 
 .. image:: ../images/node_SPZB0001.png
    :width: 200px
@@ -1015,7 +1020,7 @@ Xiaomi, SSM-U02, Xiaomi Single Switch Module T1 (No Neutral)
 
 Xiaomi, WS-EUK01, Aqara H1 smart wall switch
 
-.. image:: ../images/node_XiaomiPrise.png
+.. image:: ../images/node_Xiaomi-Plug.png
    :width: 200px
 
 Xiaomi, WS-EUK02, Aqara H1 WS-EUK02 smart wall switch
@@ -1173,6 +1178,11 @@ Ikea, E27 white spectre opal, IKEA bulb E27 White Spectre opal
 .. image:: ../images/node_TRADFRIbulbE27WWclear250lm.png
    :width: 200px
 
+Ikea, LED2102G3, Ikea E27 bulb
+
+.. image:: ../images/node_Ikea-BulbE27.png
+   :width: 200px
+
 Ikea, TRADFRI bulb GU10 CWS 345lm, bulb GU10 CWS 345lm
 
 .. image:: ../images/node_Ikea-BulbGU10.png
@@ -1228,9 +1238,9 @@ IKEA, E1743, TRADFRI on/off switch
 .. image:: ../images/node_TRADFRIopencloseremote.png
    :width: 200px
 
-, , IKEA TRADFRI Rond 5 Boutons Remote Control
+Ikea, 5 buttons remote, IKEA 5 buttons remote control
 
-.. image:: ../images/node_IkeaTradfri5BtnRond.png
+.. image:: ../images/node_Ikea-Remote-5buttons.png
    :width: 200px
 
 Ikea, Shortcut button E1812, Ikea Tradfri shortcut button
@@ -1338,7 +1348,7 @@ Zemismart, YC-ZS-LO3C-A, Zemismart 2 buttons wireless switch
 .. image:: ../images/node_TS0043.png
    :width: 200px
 
-LoraTap, SS600ZB, LoraTap Zigbee 3 gang remote
+LoraTap, SS600ZB, LoraTap 3 gang remote
 
 .. image:: ../images/node_LoraTap3GangRemote.png
    :width: 200px
@@ -1413,6 +1423,11 @@ Tuya, TS011F, Tuya smart plug
 .. image:: ../images/node_Tuya-SmartSocket.png
    :width: 200px
 
+Aubess, Plug, Aubess smart plug
+
+.. image:: ../images/node_Tuya-SmartSocket-2.png
+   :width: 200px
+
 Nous, A1Z, Nous smart socket
 
 .. image:: ../images/node_Nous-SmartSocket.png
@@ -1433,7 +1448,7 @@ Silvercrest, HG06338-FR, Silvercrest power strip USB SPSZ 3 A1
 .. image:: ../images/node_TS011F__TZ3000_vzopcetz.png
    :width: 200px
 
-Silvercrest, HG06337-FR, SAPZ-1-A1 connected plug
+Silvercrest, HG06337-FR, Silvercrest connected plug
 
 .. image:: ../images/node_Silvercrest-HG06337-FR.png
    :width: 200px
@@ -1463,7 +1478,7 @@ Tuya, Generic smart socket, Tuya smart socket
 .. image:: ../images/node_Tuya-SmartSocket.png
    :width: 200px
 
-Blitzwolf, BW-IS4, Blitzwolf Temperature and Humidity sensor & display
+Blitzwolf, BW-IS4, Blitzwolf temperature/humidity sensor/display
 
 .. image:: ../images/node_TS0201.png
    :width: 200px
@@ -1483,7 +1498,7 @@ Zemismart, ZXZDS, Zemismart door & window sensor
 .. image:: ../images/node_Zemismart-DoorSensor.png
    :width: 200px
 
-Tuya, RP280, Tuya RP280 zigbee repeater
+Tuya, RP280, Tuya zigbee 3.0 repeater
 
 .. image:: ../images/node_Tuya-Repeater-RP280.png
    :width: 200px
@@ -1516,6 +1531,11 @@ Tuya, TS0501B , Tuya Single Color LED Controller
 Lidl, HG07878C, Lidl E27 dimmable bulb
 
 .. image:: ../images/node_Generic-BulbE27-Color.png
+   :width: 200px
+
+Livarno, 14153905L , Livarno Home LED floor lamp
+
+.. image:: ../images/node_Livarno-FloorLamp.png
    :width: 200px
 
 LivarnoLux, HG07878A, LivarnoLux HG07878A bulb
@@ -1638,6 +1658,11 @@ Girier, Curtain, Girier curtain module
 .. image:: ../images/node_Tuya-CurtainModule.png
    :width: 200px
 
+Loratap, SC400ZB-EU v2, Loratap roller shutter touch switch v2
+
+.. image:: ../images/node_Loratap-RollerShutterTouchSwitch-v2.png
+   :width: 200px
+
 Loratap, SC500ZB, Loratap roller shutter module
 
 .. image:: ../images/node_Loratap-RollerShutterModule.png
@@ -1678,14 +1703,9 @@ Profalux, volets, Profalux shutter
 .. image:: ../images/node_Profalux-Shutter.png
    :width: 200px
 
-, , Alarm Smart Siren M420-2Evert1.2 HS2WD-E
+Heiman, HS2WD, Heiman warning device
 
-.. image:: ../images/node_HS2WD.png
-   :width: 200px
-
-Heiman, HS2WD, Heiman HS2WD warning device
-
-.. image:: ../images/node_HS2WD.png
+.. image:: ../images/node_Heiman-IndoorSiren.png
    :width: 200px
 
 Heiman, HS1WL, Heiman water leakage sensor

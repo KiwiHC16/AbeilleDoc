@@ -10,15 +10,15 @@ La structure du wiki est la suivante
     images => Toutes les images communes, independantes de la langue.
         fr-fr/
             Readme.md => Le point d'entrée en Français
-            images => Images génériques mais spécifiques au Français
+            images/ => Images génériques mais spécifiques au Français
             equipements/
-                Profalux => Page principale pour les équipements
+                Profalux/ => Page principale pour les équipements
                     volet.md => Page spécifique pour la signature 'volet'
                     TS.md => Page spécifique pour la signature 'TS'
                     ... Toutes les docs utiles Profalux doivent etre la ...
-                Tuya => Page principale pour les équipements (d'origine) 'Tuya'
+                Tuya/ => Page principale pour les équipements (d'origine) 'Tuya'
                     ... Toutes les docs utiles Tuya doivent etre la ...
-                Innr => Page principale des équipements INNR
+                Innr/ => Page principale des équipements INNR
                     RC110_innr.md => Page spécifique pour la signature 'RC110_innr'
                 ... etc etc ...
         en-eng/

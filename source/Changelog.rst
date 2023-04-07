@@ -1,7 +1,30 @@
 ChangeLog
 =========
 
-230328-BETA-1
+- Bouton IP55 Moes: Mise-à-jour du modèle (2562).
+- Xiaomi sensor_switch.aq2/remote.b1acn01: Mise-à-jour des modèles.
+- Interne: Parser: Suppression decodeFF01().
+- Assistant découverte: Améliorations.
+- Xiomi plug: Mise-à-jour du modèle.
+
+230405-BETA-2
+-------------
+
+- Groupes: Ajout 'suppression de tous les groupes'.
+- Image: 'node_TRADFRIonoffswitch.png' => 'node_Ikea-OnOffSwitch.png'
+- Loratap roller shutter touch switch v2: Mise-à-jour image (2561).
+- Interne: Amélioration process de réparation.
+- RDM001: Mise-à-jour du modèle (2185).
+- Xiaomi vibration: Mise-à-jour du modèle.
+- Xiaomi smoke (sensor_smoke): Modele géré par section 'xiaomi'.
+- Interne: Parser: decodeDataType() ne s'arrete plus si erreur de taille.
+- Prise Aubess TS011F, _TZ3000_gvn91tmx: Mise-à-jour du modèle (2558).
+- TS201: Ajout signature TS0201__TZ3000_ywagc4rj (2567).
+- Assistant modele: Mise-à-jour.
+- Bouton IP55 Moes: Ajout support préliminaire (2562).
+- Fonction 'réparation' préliminaire accessible à tous.
+
+230328-BETA-2
 -------------
 
 - Interne: Parser: Correction detection support de groupes.
@@ -19,6 +42,7 @@ ChangeLog
   - Suppression des cmdes info 'Groups'
 - Ikea Trafri 470lm E27: Ajout support (2564).
 - Groupes: Amélioration pour suppression d'un groupe.
+- Page de config: Mise-à-jour des traductions anglaise.
 
 230326-STABLE-1
 ---------------

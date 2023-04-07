@@ -1,7 +1,7 @@
 # Prise
 
-Signature: 'plug'
-Modele: ZNCZ02LM
+    Signature: 'plug'
+    Modele: ZNCZ02LM
 
 On/Off retour etat en temps réel. Que ce soit sur commande depuis Jeedom ou sur utilisateur inter sur la prise.
 

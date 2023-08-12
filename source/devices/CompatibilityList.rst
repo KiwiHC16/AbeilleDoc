@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2023-03-28
+Dernière mise-à-jour le 2023-08-12
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -140,7 +140,7 @@ Osram, , Osram CLA60 TW
 
 Osram, Classic A60 TW, Osram Lightify classic bulb
 
-.. image:: ../images/node_Osram-E27Bulb-Lightify-Classic.png
+.. image:: ../images/node_Osram-Lightify-E27Bulb-Classic.png
    :width: 200px
 
 , , OSRAM Classic A60 W clear - LIGHTIFY
@@ -215,7 +215,7 @@ Xiaomi, , Xiaomi wall plug
 
 Paulmann Licht, 500.44, Paulmann Licht dimmable
 
-.. image:: ../images/node_PaulmannLicht-DimmableLED.png
+.. image:: ../images/node_PaulmannLicht-DimmingController.png
    :width: 200px
 
 Iolloi, ID-EU20FWB4L, Iolloi flush-mounted dimmer switch 5-250 W, trailing edge dimmer
@@ -278,9 +278,9 @@ Sonoff, SNZB-04, Sonoff Door/Window Sensor
 .. image:: ../images/node_FLOALTpanelWS60x60.png
    :width: 200px
 
-, , thermomètre zigbee ewelink
+, , Temperature/humidity sensor
 
-.. image:: ../images/node_FNB54-THM17ML1.1.png
+.. image:: ../images/node_Blitzwolf-Display.png
    :width: 200px
 
 , , fuel-tank-level
@@ -673,7 +673,7 @@ Heiman, HS1MS-EF, Heiman motion sensor
 .. image:: ../images/node_Heiman-MotionSensor.png
    :width: 200px
 
-Xiaomi, , Plug
+Xiaomi, ZNCZ02LM, Xiaomi plug
 
 .. image:: ../images/node_Xiaomi-Plug.png
    :width: 200px
@@ -753,7 +753,7 @@ Xiaomi, LLKZMK11LM, Xiaomi Aqara 2 way control module
 .. image:: ../images/node_relay.c2acn01.png
    :width: 200px
 
-, , Xiaomi Interrupteur Mural Carré Simple
+Xiaomi, , Xiaomi Interrupteur Mural Carré Simple
 
 .. image:: ../images/node_XiaomiButtonb186acn01.png
    :width: 200px
@@ -763,17 +763,17 @@ Xiaomi, LLKZMK11LM, Xiaomi Aqara 2 way control module
 .. image:: ../images/node_defaultUnknown.png
    :width: 200px
 
-Xiaomi Aqara, WXKG11LM, Xiaomi Bouton Aqara 2 Copy
+Xiaomi Aqara, WXKG11LM, Xiaomi Aqara button 2
 
-.. image:: ../images/node_XiaomiBouton.png
+.. image:: ../images/node_Xiaomi-Button-1.png
    :width: 200px
 
-, , Xiaomi Interrupteur Mural Carré Double
+Xiaomi, , Xiaomi Interrupteur Mural Carré Double
 
 .. image:: ../images/node_XiaomiButtonb286acn01.png
    :width: 200px
 
-, , Xiaomi Interrupteur Mural Carré Double D1 (pile)
+Xiaomi, , Xiaomi Interrupteur Mural Carré Double D1 (pile)
 
 .. image:: ../images/node_XiaomiButtonb286acn02.png
    :width: 200px
@@ -890,7 +890,7 @@ Xiaomi, , Xiaomi Gaz Sensor
 
 Xiaomi, ?, Xiaomi Smoke Sensor
 
-.. image:: ../images/node_XiaomiSensorSmoke.png
+.. image:: ../images/node_Xiaomi-SmokeSensor.png
    :width: 200px
 
 Xiaomi Mijia, WXKG01LM, Xiaomi single switch
@@ -898,12 +898,12 @@ Xiaomi Mijia, WXKG01LM, Xiaomi single switch
 .. image:: ../images/node_XiaomiBouton1.png
    :width: 200px
 
-Xiaomi, , Xiaomi Bouton Aqara 2
+Xiaomi, , Xiaomi Aqara button 2
 
-.. image:: ../images/node_XiaomiBouton.png
+.. image:: ../images/node_Xiaomi-Button-1.png
    :width: 200px
 
-Xiaomi, , Xiaomi Bouton Aqara 3
+Xiaomi, WXKG12LM, Xiaomi Aqara mini switch
 
 .. image:: ../images/node_XiaomiBouton3.png
    :width: 200px
@@ -976,6 +976,16 @@ Heiman, HS1SA, Heiman HS1SA smoke sensor
 Frient, SMSZB-120, Frient smoke alarm
 
 .. image:: ../images/node_Frient-SMSZB-120.png
+   :width: 200px
+
+Sonoff, SNZB-02D, Sonoff temp and humidity display
+
+.. image:: ../images/node_Sonoff-TempHumidityDisplay.png
+   :width: 200px
+
+Schneider, WISER Unica, Schneider wiser unica plug
+
+.. image:: ../images/node_Schneider-Wiser-Plug.png
    :width: 200px
 
 , , SP220 Innr
@@ -1101,6 +1111,11 @@ Ikea, , TRADFRI bulb E14 White Spectre 470lm
 Ikea, LED1949C5, Ikea E14 470lm candle bulb
 
 .. image:: ../images/node_Ikea-BulbE14CandleWhite.png
+   :width: 200px
+
+Ikea, LED2101G4, Ikea E14 WS bulb
+
+.. image:: ../images/node_Ikea-BulbE14-Globe.png
    :width: 200px
 
 Ikea, , TRADFRI bulb E14 White Spectre opal 400lm
@@ -1230,7 +1245,7 @@ IKEA, E1745, TRADFRI Detecteur de mouvement
 
 IKEA, E1743, TRADFRI on/off switch
 
-.. image:: ../images/node_TRADFRIonoffswitch.png
+.. image:: ../images/node_Ikea-OnOffSwitch.png
    :width: 200px
 
 , , IKEA TRADFRI Carre 2 Boutons Remote Control livré avec Fyrtur Store
@@ -1350,7 +1365,7 @@ Zemismart, YC-ZS-LO3C-A, Zemismart 2 buttons wireless switch
 
 LoraTap, SS600ZB, LoraTap 3 gang remote
 
-.. image:: ../images/node_LoraTap3GangRemote.png
+.. image:: ../images/node_LoraTap-3GangRemote.png
    :width: 200px
 
 Tuya, TS0044, Tuya 4 buttons scene switch
@@ -1366,6 +1381,11 @@ Tuya, , Tuya 4 buttons scene switch
 Aubess, ESW-0ZAA-EU, Aubess 4 buttons switch
 
 .. image:: ../images/node_Tuya-4ButtonsSwitch-White.png
+   :width: 200px
+
+Moes, ZN358218, Moes IP55 smart button
+
+.. image:: ../images/node_Tuya-SmartButton.png
    :width: 200px
 
 Silvercrest, HG08164, Silvercrest smart button
@@ -1438,7 +1458,12 @@ UseeLink, SM-SO306, 4 gang switch, with USB
 .. image:: ../images/node_UseeLink-SM-SO306.png
    :width: 200px
 
-Blitzwolf, SHP15, Blitzwolf SHP15
+Tongou, TO-Q-SY1-ZT, DIN Rail Circuit Breaker
+
+.. image:: ../images/node_Tongou-DinCircuitBreaker.png
+   :width: 200px
+
+Blitzwolf, BW-SHP15, Blitzwolf SHP15
 
 .. image:: ../images/node_Blitzwolf-SmartPlug.png
    :width: 200px
@@ -1451,6 +1476,11 @@ Silvercrest, HG06338-FR, Silvercrest power strip USB SPSZ 3 A1
 Silvercrest, HG06337-FR, Silvercrest connected plug
 
 .. image:: ../images/node_Silvercrest-HG06337-FR.png
+   :width: 200px
+
+Tuya, Wall plug, Tuya wall plug
+
+.. image:: ../images/node_Tuya-WallPlug.png
    :width: 200px
 
 , , TS0121
@@ -1478,14 +1508,24 @@ Tuya, Generic smart socket, Tuya smart socket
 .. image:: ../images/node_Tuya-SmartSocket.png
    :width: 200px
 
-Blitzwolf, BW-IS4, Blitzwolf temperature/humidity sensor/display
+Blitzwolf, BW-IS4, Blitzwolf temp/humidity display
 
-.. image:: ../images/node_TS0201.png
+.. image:: ../images/node_Blitzwolf-Display.png
    :width: 200px
 
 Tuya, IH-K009, Tuya temperature & humidity sensor
 
 .. image:: ../images/node_Tuya-IH-K009.png
+   :width: 200px
+
+Tuya, Temp, Tuya temp and humidity
+
+.. image:: ../images/node_Tuya-TempHumidity.png
+   :width: 200px
+
+NIKJEBDF, ?, NIKJEBDF temperature/humidity sensor/display
+
+.. image:: ../images/node_Blitzwolf-Display.png
    :width: 200px
 
 Tuya, ZM-CG205, Tuya ZM-CG205 door sensor
@@ -1628,6 +1668,11 @@ Moes, MS-105Z, Moes smart dimmer
 .. image:: ../images/node_Moes-MS-105Z.png
    :width: 200px
 
+Dongguan, PJ-ZGD01, Tuya Garage Door Controller with Sensor
+
+.. image:: ../images/node_Tuya-GarageDoorController.png
+   :width: 200px
+
 Tuya, ?, Tuya smoke detector
 
 .. image:: ../images/node_Tuya-SmokeDetector.png
@@ -1648,6 +1693,16 @@ Tuya, RSH-AirBox01, Tuya Smart Air Box 01
 .. image:: ../images/node_Tuya-RSH-AirBox01.png
    :width: 200px
 
+MatSee Plus, Digital meter, MatSee Plus single phase power meter
+
+.. image:: ../images/node_Tuya-DigitalMeter.png
+   :width: 200px
+
+Moes, UFO-R11, Moes universal smart IR remote control
+
+.. image:: ../images/node_Moes-UniversalRemote.png
+   :width: 200px
+
 Moes, TS130F, Moes curtain module
 
 .. image:: ../images/node_Moes-CurtainModule.png
@@ -1663,7 +1718,7 @@ Loratap, SC400ZB-EU v2, Loratap roller shutter touch switch v2
 .. image:: ../images/node_Loratap-RollerShutterTouchSwitch-v2.png
    :width: 200px
 
-Loratap, SC500ZB, Loratap roller shutter module
+Loratap, SC500ZBv2, Loratap roller shutter module
 
 .. image:: ../images/node_Loratap-RollerShutterModule.png
    :width: 200px
@@ -1693,9 +1748,9 @@ Silvercrest, SMSZ 1 B2, Silvercrest motion sensor
 .. image:: ../images/node_TY0A01.png
    :width: 200px
 
-, , Xiaomi Vibration
+Xiaomi, ?, Xiaomi Vibration
 
-.. image:: ../images/node_XiaomiVibration.png
+.. image:: ../images/node_Xiaomi-Vibration.png
    :width: 200px
 
 Profalux, volets, Profalux shutter
@@ -1753,6 +1808,11 @@ Sonoff, ZBMini-L, Sonoff smart switch
 .. image:: ../images/node_Sonoff-ZbminiL.png
    :width: 200px
 
+Sonoff, ZBMINIL2/Extreme, Sonoff Smart Switch
+
+.. image:: ../images/node_Sonoff-ZBMiniL2.png
+   :width: 200px
+
 , , Template for ZigBee - Color Dimmable Light
 
 .. image:: ../images/node_zigbeeColorDimmableLight.png
@@ -1768,7 +1828,7 @@ Sonoff, ZBMini-L, Sonoff smart switch
 .. image:: ../images/node_zigbeeDimmablelight.png
    :width: 200px
 
-, , zigbee Extended color light
+, , Zigbee Extended color light
 
 .. image:: ../images/node_zigbeeExtendedcolorlight.png
    :width: 200px

@@ -1,7 +1,65 @@
 ChangeLog
 =========
 
+230811-BETA-1
+-------------
+
+- Assistant modèle: Mise-à-jour.
+- Page santé: Revue pour raffraichissement automatique toutes les 2sec.
+- Interne: Suppression 'health.js'.
+- Interne: Suppression lecture attrib 0006-0000 & 0008-0000 suite à 'setLevelRaw'/'onoff'/'OnOffTimed'.
+
+230810-BETA-1
+-------------
+
+- Interne: Parser: Nettoyage.
+- Page de l'équipement: Mise-à-jour traductions 'en_US'.
+- Smart Switch ZG-005-RF: Ajout support (2608).
+- Interne: Suppression 'Abeille-Js.php'
+- Page EQ: Correction mauvais raffraichissement des infos sur recharge de page.
+- Interne: Cmd 'identifySend' revisité.
+- Page EQ: Ajout support 'identifySend'.
+- Modèle de commande:
+
+  - ' Identify.json' => 'act_zbCmdC-Identify'
+  - 'act_zbCmdG-XXXX-YYYY' => 'act_zbCmdC-XXXX-YYYY'
+
+230804-BETA-1
+-------------
+
+- Interne: AbeilleCmd: Ajout support 'cmd-Generic'.
+- Page EQ/avancé: Ajout support 'Commande générique'.
+
+230803-BETA-2
+-------------
+
+- Page de l'équipement: Corrections translation 'en_US'.
+- Interne: jeedom.eqLogic.builSelectCmd() => buildSelectCmd(). Core v4.0 min.
+- Interne: Mise-à-jour AbeilleNoise.
+- Interne: Ajout cmd 'configureReporting2' (minInterval/maxInterval/changeVal = nombres).
+- Page EQ/avancé: Ajout support 'configureReporting2'.
+- Nous smart socket A1Z: Mise-à-jour du modèle pour réduire reporting (2460).
+- Livarno Home floor lamp: Mise-à-jour du modèle (2544).
+- Assistant modèle: Amélioration pour cluster 0300/Color control.
+
+230730-BETA-1
+-------------
+
 - Interne: Correction redémarrage Zigate Wifi.
+- Maintenance/infos clefs: Ajout nb lignes de log.
+- Profalux volet: Template par défaut = shutter pour 'Current Level'.
+- Page de config: Corrections translation 'en_US'.
+- Page de gestion: Corrections translation 'en_US'.
+- Modèles de commandes:
+
+  - Suppression 'zb-CustomInfo.json' obsolète.
+  - Suppression cmde obsolète 'temperatureLight.json' => 'inf_zbAttr-0300-ColorTemperatureMireds'.
+  - Suppression cmde obsolète 'temperatureLight1.json' => 'inf_zbAttr-0300-ColorTemperatureMireds'.
+  - Suppression cmde obsolète 'temperatureLight2.json' => 'inf_zbAttr-0300-ColorTemperatureMireds'.
+  - Suppression cmde obsolète 'temperatureLightV2.json' => 'inf_zbAttr-0300-ColorTemperatureMireds'.
+  - attr-XXXX => inf_XXXX
+- Moes télécommande universelle IR: Support préliminaire (2607).
+- Interne: Suppression fichier 'inconnu.php' obsolète.
 
 230721-BETA-2
 -------------

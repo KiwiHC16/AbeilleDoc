@@ -1,6 +1,142 @@
 ChangeLog
 =========
 
+231023-BETA-1
+-------------
+
+- Loratap télécommande 6 boutons: Support préliminaire (2631).
+- Moes 3 boutons (TS0043__TZ3000_gbm10jnj): Ajout support (2630).
+
+231020-BETA-2
+-------------
+
+- Heiman HS1SA: Mise-à-jour modèle. Ajout de signatures alternatives.
+- Interne: Mises-à-jour support Tuya-Zosung.
+- Sirene iAlarm: Mises-à-jour du modèle (2629).
+- Moniteur: Amélioration interne pour support gros messages.
+- Moes télécommande universelle IR: Mise-à-jour du code pour ce support particulier (2607).
+- Page de config: Vérification adresse IP remplie si type WIFI.
+
+231012-BETA-1
+-------------
+
+- Interne: Nettoyage DB 'config' pour clefs zigates 7 à 10.
+- Cmd info 'Online': Correction (passage par 0 inattendu).
+- Profalux BSO: Modèle revisité.
+
+231010-BETA-2
+-------------
+
+- Interne: Msg 8012 n'est plus transmis à 'AbeilleCmd'.
+- Interne: Cmd: Correction changement adresse lors d'une nouvelle annonce.
+- Interne: Correction status 'NO-ACK' + 'ab::noack' => 'ab::txAck'.
+- Interne: Cmd: Mise-à-jour 'ieeeOk' à revisiter.
+
+231009-BETA-1
+-------------
+
+- Interne: AbeilleCmd: Nouvelles modifs pour support Tuya Zosung (universal remote).
+- Interne: Tuya parser: Support cmd EF00-06 (TY_DATA_SEARCH ?) revue.
+- Interne: Cmd & parser: Amélioration fonction de 'monitoring.
+- Assistant modèle: Corrections suite changement noms modèles de commandes.
+- Sirene iAlarm: Support préliminaire (2629).
+- Tuya temp/humidité/afficheur: Mise-à-jour du modèle (2619).
+
+231004-BETA-1
+-------------
+
+- Aeotec range extender: Ajout support (2627).
+
+231002-BETA-1
+-------------
+
+- Moes télécommande universelle IR: Mise-à-jour du code pour ce support particulier (2607).
+- Interne: Parser: Message 'deviceUpdates' seulement si IEEE connue.
+- Logs: 'AbeilleSerialReadX.log' déplacé dans '/tmp'.
+- Page maintenance: Correction erreur à l'affichage.
+- Page maintenance: Amélioration infos clefs.
+- Interne: AbeilleSerialRead: Changements mineurs.
+- Modeles: Ajout support 'disableTitle' pour cmd action de type 'message'.
+- Interne: AbeilleCmd revisité. Variables 'zigates' sorties de la classe.
+- Interne: Cmd: 'getNetworkStatus' => 'zgGetNetworkStatus'.
+- Interne: Cmd: Suppression message erreur 'Unknown device'.
+
+230919-BETA-1
+-------------
+
+- Interne: Parser: Cluster FC00 traité par message 8002 pour future migration mode 'raw'.
+- Interne: Ajout surveillance 'NOACK' en plus de 'Timeout'.
+- Page santé: Status amélioré => 'Time-out', ''no-ack' ou 'time-out&no-ack'
+
+230918-BETA-1
+-------------
+
+- Philips Hue Candle WA: Support preliminaire (2622).
+
+230915-BETA-1
+-------------
+
+- Modèles commandes:
+
+  - Suppresssion 'act_zbCmdC-XXXX-Custom.json'
+  - Ajout 'act_zbCmdC-Generic.json'
+- Interne: Cmd: Correction 'cmd-Generic'/'manufCode'.
+- Interne: Parser: Generation d'une info 'inf_EP-CLUST-cmdXX' pour toute commande inconnue spécifique cluster.
+- Moes télécommande universelle IR: Mise-à-jour du modèle & code (2607).
+- Interne: Cmd: Mise-à-jour 'setTemperature'.
+- Interne: Parser: Correction mauvaise interprétation 'ColorTempMired' (2544).
+- Livarno Home floor lamp: Mise-à-jour du modèle (2544).
+- Page updates OTA: Améliorations aspect & traductions US.
+- Interne: Cmd+Parser: Améliorations pour support 'restore PDM'.
+- Interne: Install: Correction constante nbre de Zigates.
+- Nbre de Zigates: 6 supportées au max au lieu de 10.
+- Traductions US: Qq corrections concernant la programmation du FW Zigate.
+- Interne: Modeles & Parser: Support nouveau format cluster privés.
+- Interne: Amélioration support err 14 Zigate.
+
+230907-BETA-2
+-------------
+
+- Page maintenance: Amélioration affichage JSON.
+- Page maintenance: Affichage JSON du répertoire local 'tmp'.
+- Interne: Parser: Support dump/backup tables PDM (msg 'AB00' + 'AB01', FW 'AB01-0000').
+- Page Zigate/avancé: Correction 'Reset HW'.
+- Interne: Parser: Support restoration tables PDM (msg 'AB02' + 'AB03', FW 'AB01-0000').
+- Interne: Changement nommage firmwares (zigatevX-YY.ZZ-legacy/opdm.bin).
+- Tuya afficheur température & humidité: Support préliminaire (2619).
+
+230830-BETA-2
+-------------
+
+- Page EQ/avancé: Correction traductions US.
+- Page EQ/avancé: Ajout bouton lecture version FW.
+- FW Zigates v1: Suppression FW officiels autres que 3.23.
+- Page santé: Correction tri du tableau après raffraichissement.
+- Page santé: Corrections traduction US.
+
+230822-BETA-1
+-------------
+
+- Ledvance 'PlugValue': Ajout support (2610).
+- Modèle de commande:
+
+  - 'inf_zbCmdR-XXXX-Yyyyy' => 'inf_zbCmdC-XXXX-Yyyyy'
+- Smart Switch ZG-005-RF: Mise-à-jour du modèle (2608).
+- Page EQ/avancé: Possibilité de forcer le modèle d'équipement.
+- Page de config: Correction mineure pour mode dev.
+- Page de config: Support préliminaire FW custom (mode dev uniquement).
+- Lexman LDSENK01F: Ajout support (2613).
+- Ajout support préliminaire pour FW Zigate v1 'Abeille'.
+- Interne: Pas de polling si équipement désactivé.
+- Interne: Amélioration collecte LQI.
+- Cmde manquante: Amélioration messages d'erreurs.
+- Page EQ/avancé: Correction regression bouton suppression modèle local.
+- Interne: Commandes Zigates prefixées par 'zg'.
+- Interne: Correction adresse commande 'identifySend'.
+- Interne: 'check_json' amélioré.
+- Interne: Parser: Correction mineure.
+- Page de gestion: Correction pb de selection pour les groupes.
+
 230811-BETA-1
 -------------
 

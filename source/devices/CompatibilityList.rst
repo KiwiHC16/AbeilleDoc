@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2023-08-12
+Dernière mise-à-jour le 2023-10-23
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -448,6 +448,11 @@ Frient, KEYZB-110, Frient keypad
 .. image:: ../images/node_LCT015.png
    :width: 200px
 
+Lexman, LDSENK01F, Lexman plug
+
+.. image:: ../images/node_Lexman-SmartPlug.png
+   :width: 200px
+
 Lexman, LDSENK02F, Lexman smart plug
 
 .. image:: ../images/node_Lexman-SmartPlug.png
@@ -516,6 +521,11 @@ Philips, LOM008, Philips Hue Smart Plug
 , , Philips Hue Ampoules LED Connectées White Ambiance E27
 
 .. image:: ../images/node_LTA001.png
+   :width: 200px
+
+Philips, LTE002, Philips Hue Candle E14 White Ambiance
+
+.. image:: ../images/node_PhilipsHue-E14Bulb-CandleWA.png
    :width: 200px
 
 Philips, LTW001, Philips Hue white ambiance
@@ -688,7 +698,7 @@ Xiaomi, plug EU, Xiaomi plug EU
 .. image:: ../images/node_Xiaomi-Plug-EU.png
    :width: 200px
 
-Osram, , Osram Smart+ plug
+Osram, Plug, Osram Smart+ plug
 
 .. image:: ../images/node_Osram-SmartP-Plug.png
    :width: 200px
@@ -958,7 +968,7 @@ Philips, SML004, Philips Hue outdoor sensor
 .. image:: ../images/node_Philips-MotionSensor-2.png
    :width: 200px
 
-, , Humein Smoke Sensor HS1SA-E
+Heiman, HS1SA, Heiman Smoke Sensor
 
 .. image:: ../images/node_SmokeSensor-EM.png
    :width: 200px
@@ -1383,6 +1393,11 @@ Aubess, ESW-0ZAA-EU, Aubess 4 buttons switch
 .. image:: ../images/node_Tuya-4ButtonsSwitch-White.png
    :width: 200px
 
+Loratap, SS9600ZB-YA, Loratap 6 buttons remote
+
+.. image:: ../images/node_Loratap-6ButtonsRemote.png
+   :width: 200px
+
 Moes, ZN358218, Moes IP55 smart button
 
 .. image:: ../images/node_Tuya-SmartButton.png
@@ -1398,7 +1413,7 @@ Tuya, ESW-0ZAA-EU, Tuya 4 buttons scene switch
 .. image:: ../images/node_Tuya-4ButtonsSwitch-White.png
    :width: 200px
 
-Woox, R7060 , Woox water irrigation
+Woox, R7060, Woox water irrigation
 
 .. image:: ../images/node_Woox-WaterIrrigation.png
    :width: 200px
@@ -1528,6 +1543,11 @@ NIKJEBDF, ?, NIKJEBDF temperature/humidity sensor/display
 .. image:: ../images/node_Blitzwolf-Display.png
    :width: 200px
 
+Tuya, Display, Tuya temperature and humdity display sensor
+
+.. image:: ../images/node_Tuya-TempHumidityDisplay.png
+   :width: 200px
+
 Tuya, ZM-CG205, Tuya ZM-CG205 door sensor
 
 .. image:: ../images/node_Tuya-DoorSensor-ZM-CG205.png
@@ -1556,6 +1576,11 @@ Moes,  ZSS-ZK-THL, Moes smart brightness thermometer
 Moes, ZSS-ZK-THL, Smart Brightness Thermometer
 
 .. image:: ../images/node_Moes-Thermometer.png
+   :width: 200px
+
+iAlarm, Siren, iAlarm siren
+
+.. image:: ../images/node_iAlarm-Siren.png
    :width: 200px
 
 , , SM-SW101-CZ
@@ -1776,6 +1801,11 @@ Sonoff, SNZB-01, Sonoff wireless button
 Xiaomi, WSDCGQ11LM, Xiaomi temp/humidity/pressure sensor
 
 .. image:: ../images/node_Xiaomi-TempSensor-2.png
+   :width: 200px
+
+Aeotec, ZI, Aeotec range extender
+
+.. image:: ../images/node_Aeotec-RangeExtender.png
    :width: 200px
 
 , , WS2812_light_controller

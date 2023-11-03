@@ -1,11 +1,31 @@
 ChangeLog
 =========
 
-231023-BETA-1
+231103-BETA-1
+-------------
+
+- Interne: Zigbee const: Correction support cluster 0012, 13 & 14.
+- Modèles de cmdes: Ajout 'act_zbCmdC-0006-OffGroup' & 'act_zbCmdC-0006-OnGroup'
+- Télécommande virtuelle: revue pour utilisation 'OnOffGroup'.
+- Modèles: Cmde 'OnOffGroup' remplacée (cmd-0006 + addrMode=01).
+
+231027-BETA-2
+-------------
+
+- Interne: Tools/check_json: Améliorations.
+- Modèles d'équipement: Correction d'erreurs sur qq modèles.
+- Assistant modèles: Améliorations.
+- SilverCrest-HG08673-FR: Support préliminaire (2635).
+- Page EQ: Corrections pour forçage de modele.
+- Xiaomi Aqara Opple 4 boutons: Support préliminaire (2636).
+
+231023-BETA-2
 -------------
 
 - Loratap télécommande 6 boutons: Support préliminaire (2631).
 - Moes 3 boutons (TS0043__TZ3000_gbm10jnj): Ajout support (2630).
+- Interne: Cmd: Ajout 'cmd-0006' pour suppression vieilles commandes 'OnOffX'.
+- Interne: Cmd: Suppression support cmds 'OnOff'/'OnOffRaw'/'OnOff2'/'OnOffOSRAM'/'OnOff3'/'OnOff4'/'OnOffHue'
 
 231020-BETA-2
 -------------

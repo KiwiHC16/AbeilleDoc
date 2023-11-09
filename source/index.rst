@@ -46,5 +46,6 @@ Bienvenu
    .. image:: images/Cagnote.png
 
    `Tcharp38 <https://paypal.me/Tcharp38>`_
+
    `KiwiHC16: Cagnotte originale <https://paypal.me/KiwiHC16>`_
 

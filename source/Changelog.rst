@@ -1,8 +1,313 @@
 ChangeLog
 =========
 
+- Modèle forcé: Correction.
+- Réparation d'équipement: Améliorations.
+
+240213-BETA-1
+-------------
+
+- Interne: Cmd: Suppression 'Network_Address_request' => 'getNwkAddress'.
+- Page équipment/avancé: Ajout support 'Network_Address_request'.
+- Interne: Cmd: 'cmd-Private' revisité.
+- Modèle forcé: Corrections.
+- Profalux: Cmd: Corrections.
+- Réparation d'équipement: Améliorations.
+- Interne: Corrections pour meilleur support des modèles avec variante.
+- Interne: eqLogic: 'ab::signature' supprimé => 'ab::zigbee'.
+
+240209-BETA-1
+-------------
+
+- Modèles: Ajout fabricant & type generic sur certains modèles Philips.
+- Ikea RODRET dimmer: Ajout modèle variante 'direct' (2684).
+- Interne: Parser+Cmd: Messages en attente supprimés si équipement change de réseau.
+- Page config: Bouton 'libérer' visible en mode dev seulement. Pas robuste pour utilisateur final.
+- Outils: Script de test en ligne de cmd préliminaire (resources/scripts/checkZigate.sh)
+- Profalux BSO tilt: Correction regression (2687).
+- Interne: Cmd: Meilleur support '#cmdInfo_xxx'.
+- Interne: Cmd: Ajout 'AbeilleCmd-Profalux.php' pour nettoyage modeles.
+
+240201-BETA-1
+-------------
+
+- Interne: Amélioration latence. Si equipement sans réponse (NO-ACK), passe en basse priorité.
+- Interne: Qq corrections + ajout support 'readAttribute2()' pour test.
+- Ikea RODRET dimmer: Mise-à-jour du modèle (2684).
+- Ikea capteur qualité de l'air VINDSTYRKA: Mise-à-jour du modèle (2681).
+- Interne: Cmd ignorée si déja 'pending' qq soit la priorité.
+- Interne: Amélioration 'check_json'.
+
+240124-BETA-1
+-------------
+
+- Ikea capteur qualité de l'air VINDSTYRKA: Mise-à-jour du modèle (2681).
+- Interne: Cmd: Amélioration formatAttribute() pour type x39/single precision + int8/int24/int32.
+- Placement réseau: En cours de revue.
+- Interne: Zigbee: Ajout support clusters 040C/CO, 040D/CO2, 042A/PM2.5
+- Page config: Firmwares renommés.
+- Page config: Corrections test de port + mise-à-jour FW.
+- Page config: Correction canal Zigbee (? = auto) + correction erreur changement.
+- Assitant modèle: Ajout support clusters 040C/CO, 040D/CO2 & 042A/PM2.5
+- Ikea RODRET dimmer: Suppport préliminaire (2684).
+- Interne: Cmd: getSimpleDescriptor = commande avec ACK.
+- Interne: Parser: Correction mauvais EP enregistré lors d'une réponse 'simple descriptor'.
+- Remplacement d'équipement: Corrections (2683).
+
+240116-BETA-1
+-------------
+
+- Interne: Cmd: clearPending().
+- Zlinky: Mise-à-jour du modèle (2678).
+- Placement réseau: Corrections.
+- Interne: Suppression fichiers obsoletes => archives.
+- Capteur lumière AQARA GZCGQ11LM: Ajout support (2679).
+- Ikea Capteur qualité de l'air: Support préliminaire (2681).
+- Assistant modèles: Correction cluster 0008.
+- Ikea Trafri E27: Support préliminaire (2680).
+- Lidl detecteur de mouvement: Correction modèle (2674).
+- Page réseau: Revisitée.
+
+240107-BETA-1
+-------------
+
+- Réseau: Rework en cours 'graph des liens'.
+- Interne: Corrections suite debug 2675 (Modèle 'rucheCommand' inconnu).
+- Interne: Parser: Correction 2678 ('getSimpleDescriptor': Paramètre 'ep' vide !).
+- ZG-003-RF: Support préliminaire (2408).
+- Zlinky: Mise-à-jour du modèle (2678).
+- Interne: Cmd: Suppression des messages pending suite changement adresse.
+
+240104-BETA-1
+-------------
+
+- Interne: Cmd: Regulation revue.
+- Profalux BSO: Modèle revu. Suppression 'lift' (idem 'Set Level').
+- Interne: Cmd: Plus que 3 niveaux de priorités.
+- Owon-THS317-ET: Ajout d'un modèle pour les vieux équipements (EP=03 au lieu de 01, voir 2319).
+- Interne: Nouvelle lib 'AbeilleModels.php'.
+- Page compatibilité: Mise-à-jour.
+- Interne: Abeille.class: Utilisation lib 'AbeilleModels.php'.
+- Interne: AbeilleTools/getDevicesList() remplacé par AbeilleModels/getModelsList()
+
+231231-STABLE-1
+---------------
+
+Abeille continue son petit chemin, même si exclusivement dédié aux Zigates aujourd'hui. Toujours dans l'idée de rendre son utilisation plus robuste et simple.
+
+  .. warning:: **Mise-à-jour de modèles**
+
+    - Malgré la volonté de faire des évolutions les plus transparentes possibles, il se peut que certains équipements nécessitent d'être mis-à-jour à partir de leur dernier modèle pour à nouveau fonctionner correctement. Si ils sont sur batterie, réinclusion nécessaire. Si sur secteur, aller à la page 'avancé' et bouton 'mise-à-jour'.
+  .. warning:: **Zigates v2/+**
+
+    - FW **v3.22** recommandé.
+    - La maturité de la v2 n'est pas au niveau de la v1. Le FW qui semble le plus stable n'est PAS le dernier dispo (3.A0) mais le précédent (**3.22**). Nous vous conseillons de faire la mise-à-jour vers celui ci.
+  .. warning:: **Zigates v1**
+
+    - FW **v3.23 OPDM** recommandé. La version minimale est la '3.1E' mais ne sera bientot plus supportée.
+    - Le dernier FW officiel est le v3.23. Il est recommandé de basculer dessus pour ne pas faire façe à des soucis déja corrigés.
+    - D'autre part si vous n'êtes pas en version OPDM (Optimized PDM), il est fortement recommandé de basculer dessus dans les cas suivants:
+
+      - Toute nouvelle installation.
+      - Dès lors qu'un réappairage complet est nécéssaire.
+      - La version OPDM corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
+      - Les firmwares avant 3.1e sont forcement 'legacy'.
+      - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
+
+231209-BETA-2
+-------------
+
+- Interne: Correction NPDU regulation.
+
+231208-BETA-1
+-------------
+
+- Interne: Mise-à-jour powerCycleUsb pour récuperer sortie 'dmesg' si erreur.
+- Interne: AbeilleCmd: Pas de ACK sur requete LQI vers Zigate.
+- Placement réseau: Utilisation image par défaut si plan n'existe plus.
+- Interne: AbeilleCmd: Correction perte de commandes si trop dans la queue à la fois.
+- Interne: AbeilleCmd: Amélioration 'throughput regulation'.
+
+231207-BETA-2
+-------------
+
+- Modèles:
+
+  - Tous les modèles utilisent 'act_zbConfigureReporting2'.
+  - Correction de certains mauvais type d'attribut pour configureReporting2.
+  - Améliorations outil de check.
+- Page santé: Réactivation raffraichissement toutes les 2 sec.
+- Interne: Configuration des Zigates au démarrage revue. Déplacée dans AbeilleCmd.
+- Rappel: Le mode 'normal' de la Zigate n'est plus supporté donc FW >= 3.1E requis.
+- Timeout: Correction pouvant expliquer le passage en timeout de certains équipements.
+- Interne: Autre corrections du parser.
+- Support Xiaomi: Améliorations internes.
+
+231205-BETA-6
+-------------
+
+- Interne: Cmd: Réactivation régulation NPDU pour éviter erreurs x85.
+- Assistant modèle: Correction.
+- Tuya detecteur de présence ZG-205Z: Support préliminaire.
+- Page EQ/avancé: correction suppression modèle local.
+- Modèles de commandes: Normalisation noms.
+- Correction regression Tuya: 'Call to undefined function tuyaGenSqn()'
+- Tuya IH-K009: Mise-à-jour modèle 'TS0201__TZ3000_dowj6gyi'.
+- Page santé: Amélioration: Equipements désactivités barrés.
+- Support de clusters privés:
+
+  - Syntaxe des modèles revue (mot clef 'private').
+  - Support limité à Xiaomi seulement.
+  - Tous les modèles Xiaomi mis-à-jour.
+- Xiaomi Aqara smart plug EU: Mise-à-jour du modèle (2665).
+- Tuya/Moes universal remote: Séparation des modèles pour versions batterie et USB.
+- Page maintenance/infos clefs: Amélioration affichage.
+- Modèles
+
+  - Plusieurs mis-à-jour pour utiliser 'configureReporting2' au lieu de 'configureReporting'.
+  - Plusieurs corrigés pour reporting cluster 0008. Mauvais type d'attribut.
+  - Plusieurs corrigés pour reporting cluster 0102. Mauvais type d'attribut ou mauvais attribut.
+- Multiprise Lidl HG6338-FR: Mise-à-jour du modèle.
+
+231202-BETA-3
+-------------
+
+- Page EQ/avancé: Traductions US.
+- Modèles: Nettoyage 'poll=0'
+- Modèles: Amélioration 'trigOut' pour support multiples actions.
+- Attribut 0000/LocalTemp du cluster 0201 divisé par 100 par défaut.
+- Interne: Cmd: Correction 'writeAttribute0530()'
+- Interne: Cmd: Corrections 'writeAttribute()'
+- Attribut 0012/OccupiedHeatingSetpoint du cluster 0201 divisé par 100 par défaut.
+- Danfoss eTRV010x: Modèle en cours de changements (2662).
+- Page EQ/avancé: Améliorations écriture attribut.
+- Danfoss eTRV010x: Qq commandes cachées par défaut car sans interet (2662).
+- Interne: Améliorations constantes Zigbee cluster 0201.
+
+231130-BETA-2
+-------------
+
+- Interne: Parser: decode8002, monitoring revu => parserLog2().
+- Danfoss eTRV010x: Modèle en cours de changements (2662).
+- Suppression de modèles de commandes obsoletes:
+
+  - spiritBatterie-Pourcent
+  - spiritTemperature
+  - spiritUnknown1
+  - spiritUnknown2
+- Interne: Cmd: execute() revue préliminaire.
+- Modele 'TS0601__TZE200_e3oitdyu' (Moes MS105B): Ajout de signatures alternatives (2473).
+- Modele 'TS0601__TZE200_e3oitdyu' (Moes MS105B): Mise-à-jour du modèle pour canal 2 (2473).
+- Support Tuya, commandes action:
+
+  - Ajout 'setEnum'
+  - Ajout support optionnel 'mult' & 'div' pour 'setValue'.
+  - 'setValueMult' & 'setValueDiv' sont obsoletes => 'setValue' + mult/div
+  - Modeles obsoletes: act_tuyaEF00-Set-Setpoint, act_tuyaEF00-Set-Setpoint-Mult, act_tuyaEF00-SetThermostatMode
+- Page EQ/avancé: Ajout support 'manufCode' sur commande générique.
+
+231128-BETA-1
+-------------
+
+- Interne: Cmd: 'configureReporting2' completement revu.
+- Ikea Tradfri E27 LED2102G3: Correction image (2626).
+- Icones: Qq images renommées
+
+  - 'eTRV0100' => 'Danfoss-Ally-Thermostat'
+  - 'IkeaTradfriBulbE14WSOpal400lm' => 'Ikea-BulbE14-Globe'
+  - 'ProfaluxLigthModule' => 'Profalux-LigthModule'
+  - 'Ikea-BulbE14CandleWhite' => 'Ikea-BulbE14-Candle'
+  - 'TRADFRIbulbE14Wopch400lm' => 'Ikea-BulbE14-Candle',
+  - 'TRADFRIbulbE14WS470lm' => 'Ikea-BulbE14-Candle',
+  - 'TRADFRIbulbE27WSopal1000lm' => 'Ikea-BulbE27',
+  - 'TRADFRIbulbE27WW806lm' => 'Ikea-BulbE27',
+- Interne: Cmd: Mise-à-jour formatAttribute().
+- Interne: Cmd: Correction formatAtrtibute() pour type 0x30/enum8.
+- Page 'compatibilité' revue.
+
+231127-BETA-3
+-------------
+
+- Page EQ/avancé:
+
+  - Réparation équipement: Améliorations.
+  - Fonctionalité maintenant accessible à tous.
+- Interne: Normalisation infos modèle: 'modelSig'/'modelName'/'modelSource'
+- Interne: Normalisation infos modèle: forcedByUser => modelForced
+- eTRV0103: Mise-à-jour du modèle.
+- Legrand micromodule switch: Mise-à-jour du modèle (2663).
+- Tuya double dimmer module QS-Zigbee-D02-TRIAC-2C-LN: Ajout support préliminaire (2664).
+- Assistant modèle: Améliorations.
+- Xiaomi wall switch sensor_86sw1 & sensor_86sw2: Support+modeles revus.
+- Tuya detecteur fumée TS0205__TZ3210_up3pngle: Mise-à-jour du modèle (2658).
+- Blitzwolf BW-SHP13: Mise-à-jour du modèle.
+- Modèles: Suppression commandes obsolètes:
+
+  - PuissanceVoltagePrise => inf_zbAttr-0B04-RMSVoltage
+  - PuissanceCurrentPrise => inf_zbAttr-0B04-RMSCurrent
+  - poll-0B04-0505-0508-050B => act_poll-0B04-0505-0508-050B
+  - poll-0702-0000 => act_poll-0702-0000
+- Mise-à-jour de qq modèles TS0121.
+- SilverCrest-HG08673-FR: Mises-à-jour du modèle (2635).
+- Interne: AbeilleCmd: Mises-à-jour 'cmd-0201'.
+- Interne: Constante Zigbee cluster 0201: Améliorations.
+- Interne: Cmd: configureReporting2, changeVal mis à 0 par défaut.
+
+231124-BETA-2
+-------------
+
+- Support commande utilisateur: Amélioration.
+- Moes télécommande universelle IR: Mise-à-jour du code (2607).
+- Page equipement: Traductions US.
+- Réparation équipement: Améliorations.
+
+231123-BETA-1
+-------------
+
+- Page équipement
+
+  - Ajout affichage fabricant & modèle.
+  - Correction affichage dernier LQI.
+  - Correction traductions US.
+  - Onglet commandes legèrement revu.
+  - Onglet commandes: ajout saut de ligne avant/apres.
+- Danfoss thermostat eTRV0103: Ajout support (2662).
+- Ajout support cmdes utilisateur (ID logique = xxxidxxx::parametres). Utile pour telecommande universelle.
+- Moes télécommande universelle IR: Mise-à-jour du code & modèle (2607).
+
+231119-BETA-1
+-------------
+
+- SilverCrest-HG08673-FR: Mises-à-jour du modèle (2635).
+- ORVIBO CM10ZW: Mises-à-jour du modèle (2024 & 2648).
+- Page EQ: Affichage signature du modèle pour support modèles multi-signatures.
+- Page EQ: Affichage 'DateCode' (cluster 0000, attrib 0006).
+- Ikea wireless dimmer (ICTC-G-1): Modèle revisité.
+- Interne: Cmd: 'getRoutingTable' + 'getBindingTable' attendent ACK.
+- Interne: Status 'NO-ACK' ne fait du sens que pour équipements en écoute permanente.
+- Page EQ/avancé: Traductions US.
+- Page EQ/avancé: Réparation de l'état de l'équipement... en cours de revue.
+- Interne: AbeilleCmd: Corrections autour de la mise-à-jour d'un équipement.
+- Tuya detecteur fumée TS0205__TZ3210_up3pngle: Ajout support préliminaire (2658).
+- Page maintenance/infos clefs: Amélioration.
+- Interne: Abeille.class: Corrections 'deviceUpdates'.
+- Suppression équipement: Correction incompatibilité core '4.3.19' vs '4.4.0'
+- Ikea 'TRADFRIcontroloutlet': Mise-à-jour du modèle.
+
+231110-BETA-1
+-------------
+
 - Owon-THS317-ET: Mise-à-jour du modèle (2319).
 - Page réseau: Amélioration message durant collecte LQI.
+- Gledopto GL-SD-001: Mise-à-jour du modèle.
+- Tuya ZS08 télécommande universelle alimentée par USB: Ajout support.
+- Meilleur support des modèles avec signature alternative.
+- Abeille remote control: Commandes 'on all' & 'off all' cachées par défaut. Trop dangereux.
+- Interne: Mise-à-jour 'getDevicesList()' + 'getDeviceModel()'.
+- Reset de modele: Correction pour signatures alternatives.
+- Suppression d'un équipement: Correction permettant d'afficher comment il est utilisé avant suppression (2652).
+- Page EQ/avancé: Correction interrogations quand adresse IEEE nécessaire (2653).
+- Interne: Correction: AbeilleCmd informé si changement d'adresse via 'device announce' ou migration de réseau.
 
 231107-BETA-2
 -------------
@@ -40,6 +345,7 @@ ChangeLog
 - Modèles de cmdes: Ajout 'act_zbCmdC-0006-OffGroup' & 'act_zbCmdC-0006-OnGroup'
 - Télécommande virtuelle: revue pour utilisation 'OnOffGroup'.
 - Modèles: Cmde 'OnOffGroup' remplacée (cmd-0006 + addrMode=01).
+- Modèles d'équipements: Correction retour d'état (bind) sur de nombreux modeles.
 
 231027-BETA-2
 -------------

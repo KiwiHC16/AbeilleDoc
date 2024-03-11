@@ -1,8 +1,62 @@
 ChangeLog
 =========
 
+- SonOff ZbminiL2: Modèle revu.
+
+240308-BETA-1
+-------------
+
+- Script: Améliorations 'checkZigate'
+- Placement réseau: Améliorations support multi-niveaux.
+- Profalux BSO: Mise-à-jour du modèle pour retour level (2689).
+- SonOff SNZB-01: Modèle revu: 'Click-Middle' remplacé par 'Click' (valeur 'single', 'double' ou 'long').
+
+240223-BETA-2
+-------------
+
+  .. warning:: **Mise-à-jour de modèles**
+
+    - Malgré la volonté de faire des évolutions les plus transparentes possibles, il se peut que certains équipements nécessitent d'être mis-à-jour à partir de leur dernier modèle pour à nouveau fonctionner correctement. Si ils sont sur batterie, réinclusion nécessaire. Si sur secteur, aller à la page 'avancé' et bouton 'mise-à-jour'.
+  .. warning:: **Zigates v2/+**
+
+    - FW **v3.22 OBLIGATOIRE**.
+    - La maturité de la v2 n'est pas au niveau de la v1. Le FW qui semble le plus stable n'est PAS le dernier dispo (3.A0) mais le précédent (**3.22**). Nous vous conseillons de faire la mise-à-jour vers celui ci.
+  .. warning:: **Zigates v1**
+
+    - FW **v3.23 OPDM** recommandé. La version minimale est la '3.1E' mais ne sera bientot plus supportée.
+    - Le dernier FW officiel est le v3.23. Il est recommandé de basculer dessus pour ne pas faire façe à des soucis déja corrigés.
+    - D'autre part si vous n'êtes pas en version OPDM (Optimized PDM), il est fortement recommandé de basculer dessus dans les cas suivants:
+
+      - Toute nouvelle installation.
+      - Dès lors qu'un réappairage complet est nécéssaire.
+      - La version OPDM corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
+      - Les firmwares avant 3.1e sont forcement 'legacy'.
+      - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
+
+- Ikea RODRET dimmer: Mise-à-jour du modèle par défaut pour ON/OFF (2684).
+- Mise-à-jour FW PiZiGate: Amélioration scripts & support préliminaire PIv2 (2638).
+- Dump Zigate: Support préliminaire.
+- Scripts: Utilisation de 'python3' et non pas 'python'.
+- Scripts/checkTTY: Arret forcé du processus si port utilisé.
+- Scripts: updateFirmware => updateZigate.
+- Scripts: Nettoyage. Suppression 'installWiringPi' + 'installPiGpio' => 'installPackage'
+- Page de config: Correction visuelle mineure.
+- Placement réseau: changements en cours.
+- Scripts: Correction droits 'installPackage.sh'
+- Interne: Abeille: setPIGpio().
+- Support PiGpio: Corrections.
+
+240216-BETA-1
+-------------
+
 - Modèle forcé: Correction.
 - Réparation d'équipement: Améliorations.
+- Interne: Zigbee const: Ajout FC20 + FC21 (Profalux).
+- Interne: Cmd: Amélioration 'configureReporting2'.
+- Profalux BSO: Mise-à-jour du modèle (2687).
+- Interne: Parser: Corrections pour support modèle avec variante (<modelName>[-variantX]).
+- Interne: AbeilleModels: Amélioration pour robustesse.
+- Affichage commandes: min/max affiché si slider. 'Inverser' affiché si info binaire.
 
 240213-BETA-1
 -------------

@@ -6,17 +6,22 @@ Bienvenu
    Abeille nécessite
 
    - Jeedom >= v4.1
-   - Zigate v1 avec firmware >= 3.1e (version 3.23 OPDM recommandée).
+   - Zigate v1 avec *v3.23 OPDM** recommandé.
 
-      - Version OptiPDM (Optimized PDM) FORTEMENT RECOMMANDEE dans les cas suivants
-      - Toute nouvelle installation DOIT se faire avec FW OptiPDM.
-      - Dès lors qu'un réappairage complet est nécessaire (corruption zigate).
-      - Attention: Passage d'une version 'legacy' vers 'OPDM' implique d'effacer la PDM et donc tout réappairer.
+    - FW **v3.23 OPDM** recommandé. La version minimale est la '3.1E' mais ne sera bientot plus supportée.
+    - Le dernier FW officiel est le v3.23. Il est recommandé de basculer dessus pour ne pas faire façe à des soucis déja corrigés.
+    - D'autre part si vous n'êtes pas en version OPDM (Optimized PDM), il est fortement recommandé de basculer dessus dans les cas suivants:
 
-   - Zigate v2/+ avec un firmware >= 3.21 (version 3.22 recommandée).
+      - Toute nouvelle installation.
+      - Dès lors qu'un réappairage complet est nécéssaire.
+      - La version OPDM corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
+      - Les firmwares avant 3.1e sont forcement 'legacy'.
+      - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
 
-      - Veuillez notez que les Zigate v2 sont moins stables que les v1.
-      - Veuillez aussi noter que le dernier FW du moment '3.A0' semble poser + de problèmes. Veuillez preferez le '3.22'.
+   - Zigate v2/+ avec un firmware **v3.22 OBLIGATOIRE**.
+
+    - FW **v3.22 OBLIGATOIRE**.
+    - La maturité de la v2 n'est pas au niveau de la v1. Le FW qui semble le plus stable n'est PAS le dernier dispo (3.A0) mais le précédent (**3.22**). Nous vous conseillons de faire la mise-à-jour vers celui ci.
 
 .. important::
 

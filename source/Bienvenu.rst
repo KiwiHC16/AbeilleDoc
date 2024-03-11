@@ -6,16 +6,16 @@ Bienvenu
    Abeille nécessite
 
    - Jeedom >= v4.1
-   - Zigate v1 avec *v3.23 OPDM** recommandé.
+   - Zigate v1 avec **v3.23 OPDM** recommandé.
 
     - FW **v3.23 OPDM** recommandé. La version minimale est la '3.1E' mais ne sera bientot plus supportée.
-    - Le dernier FW officiel est le v3.23. Il est recommandé de basculer dessus pour ne pas faire façe à des soucis déja corrigés.
+    - Le dernier FW officiel pour Zigate v1 est le v3.23. Il est recommandé de basculer dessus pour ne pas faire façe à des soucis déja corrigés.
     - D'autre part si vous n'êtes pas en version OPDM (Optimized PDM), il est fortement recommandé de basculer dessus dans les cas suivants:
 
       - Toute nouvelle installation.
       - Dès lors qu'un réappairage complet est nécéssaire.
       - La version OPDM corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
-      - Les firmwares avant 3.1e sont forcement 'legacy'.
+      - Note: Les firmwares avant 3.1e sont forcement 'legacy'.
       - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
 
    - Zigate v2/+ avec un firmware **v3.22 OBLIGATOIRE**.

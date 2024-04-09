@@ -15,7 +15,7 @@
    FAQ
    Divers
    DIY
-   Debug
+   Support
    Developpement
    Changelog
 
@@ -43,7 +43,7 @@ Bienvenu
 
    Le support de nouveaux équipements demande du temps de developpement mais surtout un budget conséquent. 2 cagnottes sont ouvertes pour aider l'achat de nouveaux matériels ou simplement donner un coup de pouce.
 
-   .. image:: images/Cagnote.png
+   .. image:: images/donate_paypal.png
 
    `Tcharp38 <https://paypal.me/Tcharp38>`_
 

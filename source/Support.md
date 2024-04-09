@@ -1,40 +1,37 @@
-Support
-=======
+# Support
 
-Si vous rencontrez des problèmes, c'est le chapitre qu'il vous faut.
+Si vous avez des questions, rencontrez des problèmes, ou demandez le support d'un nouvel équipement, c'est le chapitre qu'il vous faut.
 
-.. important::
-    Pour toute demande de support, merci avant tout
+**Pour toute demande de support, merci avant tout**
 
-    - d'être sur d'être en '**mode debug**'
-    - d'avoir modifié le nombre de lignes de log de 500 à 5000 via la configuration Jeedom
-    Pensez à **redémarrer** Abeille après ce genre de changement.
+- d'être sur d'être en **'mode debug'** (page de configuration > mode debug > sauvegarder > redémarrer Abeille)
+- d'avoir modifié le nombre de lignes de log de 500 à 5000 via la configuration Jeedom (voir ci-dessous)
+  Pensez à **redémarrer** Abeille après ce genre de changement.
 
-Configuration jeedom pour les logs
-----------------------------------
+## Configuration jeedom pour les logs
 
 Pour toute livraison de logs pour besoins de support, il est recommandé de
 
 - Passer le nombre de lignes à AU MOINS 5000 par log (500 par défaut = trop court).
-   - Reglages > Systeme > Configuration > Logs
-   - puis encore 'Logs'
 
-     .. image:: images/Jeedom-ReglageLogs.png
+  - Reglages > Systeme > Configuration > Logs
+  - puis encore 'Logs'
 
-   - "Nombre de lignes maximum dans un fichier de log" >= 5000
-   - Sauvegarder
-   - Relancer Abeille
+    .. image:: images/Jeedom-ReglageLogs.png
+
+  - "Nombre de lignes maximum dans un fichier de log" >= 5000
+  - Sauvegarders
+  - Relancer Abeille
+
 - Faire un drag & drop du package fourni par la page support/télécharger tout.
 
-Forum
------
+## Forum
 
-* Liste des sujets en cours de discussions: `Forum Jeedom <https://community.jeedom.com/tag/plugin-abeille>`_
+- Liste des sujets en cours de discussions: `Forum Jeedom <https://community.jeedom.com/tag/plugin-abeille>`\_
 
-* Liste des sujets en cours d'investigations: `GitHub Abeille <https://github.com/KiwiHC16/Abeille/issues?utf8=✓&q=is%3Aissue>`_
+- Liste des sujets en cours d'investigations: `GitHub Abeille <https://github.com/KiwiHC16/Abeille/issues?utf8=✓&q=is%3Aissue>`\_
 
-Accès à la base de données Jeedom
----------------------------------
+## Accès à la base de données Jeedom
 
 Acceder à la database Jeedom qui stocke les équipement ou commandes peut être utile pour le debug.
 
@@ -42,7 +39,7 @@ L'accès se fait via le menu "Réglages", puis "Système" et "Configuration".
 
 .. image:: images/MenuReglagesSystemeConfig.png
 
-puis "_OS/DB" et enfin "Administration Base de données"
+puis "\_OS/DB" et enfin "Administration Base de données"
 
 .. image:: images/BoutonAdminBD.png
 
@@ -52,8 +49,7 @@ Affichage des commandes
 
 .. include:: debug/Monitor.rst
 
-Signaler un bug
----------------
+## Signaler un bug
 
 En cas de soucis ou questions n'ayant pas trouvé réponse dans le forum, vous pouvez ici <https://github.com/KiwiHC16/Abeille/issues>
 
@@ -64,38 +60,41 @@ En cas de soucis ou questions n'ayant pas trouvé réponse dans le forum, vous p
 Si vous ouvrez une "issue" merci de fournir le plus d'information possible et en particulier:
 
 Votre configuration Jeedom:
- * Le HW sur lequel vous faite tourner le plugin,
- * la Version de l'OS,
- * la version de Jeedom
- * ...
+
+- Le HW sur lequel vous faite tourner le plugin,
+- la Version de l'OS,
+- la version de Jeedom
+- ...
 
 Votre configuration Gateway
- * Type de Zigate
- * quel firmware
- * ...
+
+- Type de Zigate
+- quel firmware
+- ...
 
 Les logs, aussi nombreux que possibles surtout
- * AbeilleParser
- * AbeilleMQTT
- * Abeille
- * ...
+
+- AbeilleParser
+- AbeilleMQTT
+- Abeille
+- ...
 
 Description
- * ce que vous cherchez à faire
- * les résultats
- * captures d'ecrans
- * ...
 
-Demander une amélioration
-------------------------
+- ce que vous cherchez à faire
+- les résultats
+- captures d'ecrans
+- ...
+
+## Demander une amélioration
 
 Si vous souhaitez une évolution dans le plugin, merci d ouvrir une "issue" dans GitHub à l'adresse avec un "Labels" "enhancement": https://github.com/KiwiHC16/Abeille/issues
 
-Divers
----------
+## Divers
 
 Configuration
-~~~~~~~~~~~~~~~~
+
+```
 
 * Verifier la configuration réseau et en particulier /hostname, /etc/hosts
 * Vérifier la configuration du plugin. Par exemple le message suivant indique très probablement que l'objet de rattachement de l'équipement Ruche n'est pas défini.
@@ -292,3 +291,4 @@ Les different module d'Abeille discutent entre eux par message passing. Ils est 
 
 Ici on voit dans la derniere colonne qu'il n'y a pas de message en attente, ils ont tous été traités.
 
+```

@@ -31,7 +31,7 @@ Il n'est pas possible de supporter les anciennes versions de Jeedom par manque d
       - Les firmwares avant 3.1e sont forcement 'legacy'.
       - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
 
-**Un coup de pouce ?**
+## Un coup de pouce ?
 
 Le support de nouveaux équipements demande du temps de developpement mais surtout un budget conséquent. 2 cagnottes sont ouvertes pour aider l'achat de nouveaux matériels ou simplement donner un coup de pouce.
 

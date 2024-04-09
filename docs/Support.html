@@ -65,14 +65,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#points-manquants">Points manquants</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#connection">Connection</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#premier-test">Premier test</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#deuxieme-test">Deuxième test</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#troisieme-test">Troisième test</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#quatrieme-test">Quatrième test</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#equipements-zigbee">Equipements ZigBee</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#script">Script</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#messages">Messages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Changelog.html">ChangeLog</a></li>
 </ul>
@@ -90,9 +82,16 @@
 <p>Si vous avez des questions, rencontrez des problèmes, ou demandez le support d’un nouvel équipement, c’est le chapitre qu’il vous faut.</p>
 <p><strong>Pour toute demande de support, merci avant tout</strong></p>
 <ul class="simple">
-<li><p>d’être sur d’être en <strong>“mode debug”</strong> (page de configuration &gt; mode debug &gt; sauvegarder &gt; redémarrer Abeille)</p></li>
+<li><p>d’être sur d’être en <strong>“mode debug”</strong> (voir ci-dessous)</p></li>
 <li><p>d’avoir modifié le nombre de lignes de log de 500 à 5000 via la configuration Jeedom (voir ci-dessous)
 Pensez à <strong>redémarrer</strong> Abeille après ce genre de changement.</p></li>
+</ul>
+<p>## Activer le mode “debug”</p>
+<p>Cette action se fait via la page de configuration du plugin “Abeille”.</p>
+<p>Après changement, penser à (dans l’ordre)</p>
+<ul class="simple">
+<li><p>à sauver (bouton “Sauvegarder”)</p></li>
+<li><p><strong>ET</strong> redémarrer les démons Abeille</p></li>
 </ul>
 <p>## Configuration jeedom pour les logs</p>
 <p>Pour toute livraison de logs pour besoins de support, il est recommandé de</p>
@@ -101,10 +100,10 @@ Pensez à <strong>redémarrer</strong> Abeille après ce genre de changement.</p
 <ul>
 <li><p>Reglages &gt; Systeme &gt; Configuration &gt; Logs</p></li>
 <li><p>puis encore “Logs”</p>
-<img alt="_images/Jeedom-ReglageLogs.png" src="_images/Jeedom-ReglageLogs.png" />
+<p>![Réglages des logs](images/Jeedom-ReglageLogs.png « Réglages des logs »)</p>
 </li>
 <li><p>« Nombre de lignes maximum dans un fichier de log » &gt;= 5000</p></li>
-<li><p>Sauvegarders</p></li>
+<li><p>Sauvegarder</p></li>
 <li><p>Relancer Abeille</p></li>
 </ul>
 </li>
@@ -208,164 +207,7 @@ Il a été conçu dans un but informatif et de debug et donc ne gère qu’un se
 </ul>
 <p>## Demander une amélioration</p>
 <p>Si vous souhaitez une évolution dans le plugin, merci d ouvrir une « issue » dans GitHub à l’adresse avec un « Labels » « enhancement »: <a class="reference external" href="https://github.com/KiwiHC16/Abeille/issues">https://github.com/KiwiHC16/Abeille/issues</a></p>
-<p>## Divers</p>
-<p>Configuration</p>
-<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a></p>
-<ul class="simple">
-<li><p>Verifier la configuration réseau et en particulier /hostname, /etc/hosts</p></li>
-<li><p>Vérifier la configuration du plugin. Par exemple le message suivant indique très probablement que l’objet de rattachement de l’équipement Ruche n’est pas défini.</p></li>
-</ul>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">[MySQL] Error code : 23000 (1452). Cannot add or update a child row: a foreign key constraint fails (`Jeedom`.`eqLogic`, CONSTRAINT `fk_eqLogic_object1` FOREIGN KEY (`object_id`) REFERENCES `object` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)</span>
-</pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="connection">
-<h1>Connection<a class="headerlink" href="#connection" title="Lien permanent vers ce titre">¶</a></h1>
-</div>
-<div class="section" id="premier-test">
-<h1>Premier test<a class="headerlink" href="#premier-test" title="Lien permanent vers ce titre">¶</a></h1>
-<ul class="simple">
-<li><p>Rendez l équipement Ruche Visible (Il est maintenant caché par défaut).</p></li>
-<li><p>Dans l équipement ruche, appuyez sur le bouton « Version », vous devez récupérer la version logicielle dans le champ SW, la version de dev dans le champ SDK et les dates Last et Lasts Stamps doivent se mettre à jour à chaque fois. Si les dates se mettent à jour c’est que le dialogue Abeille-Zigate fonctionne dans les deux sens.</p></li>
-</ul>
-</div>
-<div class="section" id="deuxieme-test">
-<h1>Deuxième test<a class="headerlink" href="#deuxieme-test" title="Lien permanent vers ce titre">¶</a></h1>
-<ul class="simple">
-<li><p>Vérifiez bien que vous n’avez pas plusieurs Plugins essayant d’utiliser le même port série (/dev/ttyUSBx).</p></li>
-</ul>
-</div>
-<div class="section" id="troisieme-test">
-<h1>Troisième test<a class="headerlink" href="#troisieme-test" title="Lien permanent vers ce titre">¶</a></h1>
-<ul class="simple">
-<li><p>Tester la Zigate en ligne de commande (ssh)</p></li>
-</ul>
-<p>On envoie</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">stty -F/dev/ttyUSB0 115200 &lt;1&gt;</span>
-<span class="linenos">2</span><span class="x">echo -ne &#39;\x01\x02\x10\x49\x02\x10\x02\x14\xb0\xff\xfc\xfe\x02\x10\x03&#39; &gt; /dev/ttyUSB0 &lt;2&gt;</span>
-</pre></div>
-</div>
-<p>&lt;1&gt; On configure le port série</p>
-<p>&lt;2&gt; On demande à la zigate de se mettre en inclusion.</p>
-<p>(Cela peut être fait alors que le plugin est Zigate fonctionnent).</p>
-<p>Cette commande demande à la Zigate de se mettre en Inclusion, vous devriez voir la LED bleu se mettre à clignoter et dans le log AbeilleParser vous devriez voir passer un message comme:</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">AbeilleParser 2018-02-28 04:21:32[DEBUG]-------------- 2018-02-28 04:21:32: protocolData size(20) message &gt; 12 char</span>
-<span class="linenos">2</span><span class="x">AbeilleParser 2018-02-28 04:21:32[DEBUG]Type: 8000 quality: 00</span>
-<span class="linenos">3</span><span class="x">AbeilleParser 2018-02-28 04:21:32[DEBUG]type: 8000 (Status)(Not Processed)</span>
-<span class="linenos">4</span><span class="x">AbeilleParser 2018-02-28 04:21:32[DEBUG]Length: 5</span>
-<span class="linenos">5</span><span class="x">AbeilleParser 2018-02-28 04:21:32[DEBUG]Status: 00-(Success)</span>
-<span class="linenos">6</span><span class="x">AbeilleParser 2018-02-28 04:21:32[DEBUG]SQN: b8</span>
-</pre></div>
-</div>
-<p>Si la LED bleue clignote cela confirme que le dialogue Abeille vers Zigate fonctionne.</p>
-<p>PS: la configuration du port peu varier d’un système à l’autre donc il peut être nécesaire de jouer avec stty en rajoutant les arguments raw, cs8, -parenb et autres.</p>
-</div>
-<div class="section" id="quatrieme-test">
-<h1>Quatrième test<a class="headerlink" href="#quatrieme-test" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Arretez le plugin Abeille. Lancer la commande dans un terminal (Ecoute):</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">cat /dev/ttyUSB0 | hexdump -vC</span>
-</pre></div>
-</div>
-<p>Dans un second terminal envoyez la commande</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">stty -F/dev/ttyUSB0 115200</span>
-<span class="linenos">2</span><span class="x">echo -ne &#39;\x01\x02\x10\x49\x02\x10\x02\x14\xb0\xff\xfc\xfe\x02\x10\x03&#39; &gt; /dev/ttyUSB0</span>
-</pre></div>
-</div>
-<p>Dans le premier terminal (Ecoute) vous devriez voir passer du traffic comme:</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">www-data@Abeille:~/html/log$ cat /dev/ttyUSB0 | hexdump -vC</span>
-<span class="x">00000000  01 80 02 10 02 10 02 15  77 02 10 bb 02 10 49 02  |........w.....I.|</span>
-<span class="x">00000010  10 03 01 80 02 10 02 10  02 15 70 02 10 bc 02 10  |..........p.....|</span>
-</pre></div>
-</div>
-<p>Cela confirme Zigate vers Jeedom</p>
-</div>
-<div class="section" id="equipements-zigbee">
-<h1>Equipements ZigBee<a class="headerlink" href="#equipements-zigbee" title="Lien permanent vers ce titre">¶</a></h1>
-<p>La ruche possede des commandes pour interroger les objets. Les deux principales sont ActiveEndPoint et SingleDescriptorRequest.</p>
-<img alt="_images/Capture_d_ecran_2018_02_06_a_17_33_19.png" src="_images/Capture_d_ecran_2018_02_06_a_17_33_19.png" />
-<p>Dans ActiveEndPoint mettre l’adresse de l’équipement dans le titre puis clic sur le bouton ActiveEndPoint.</p>
-<p>Regardez dans la log AbeilleParser, vous devez voir passer la réponse. Par exemple pour une ampoule IKEA:</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">AbeilleParser: 2018-02-06 17:40:16[DEBUG]-------------- 2018-02-06 17:40:16: protocolData</span>
-<span class="x">AbeilleParser: 2018-02-06 17:40:16[DEBUG]message &gt; 12 char</span>
-<span class="x">AbeilleParser: 2018-02-06 17:40:16[DEBUG]Type: 8045 quality: 93</span>
-<span class="x">AbeilleParser: 2018-02-06 17:40:16[DEBUG]type: 8045 (Active Endpoints Response)(Not Processed)</span>
-<span class="x">AbeilleParser: 2018-02-06 17:40:16[DEBUG]SQN : da</span>
-<span class="x">AbeilleParser: 2018-02-06 17:40:16[DEBUG]Status : 00</span>
-<span class="x">AbeilleParser: 2018-02-06 17:40:16[DEBUG]Short Address : 6e1b</span>
-<span class="x">AbeilleParser: 2018-02-06 17:40:16[DEBUG]Endpoint Count : 01</span>
-<span class="x">AbeilleParser: 2018-02-06 17:40:16[DEBUG]Endpoint List :</span>
-<span class="x">AbeilleParser: 2018-02-06 17:40:16[DEBUG]Endpoint : 01</span>
-</pre></div>
-</div>
-<p>Il y a, dans ce cas, une seul EndPoint à l’adresse « 01 » (Donné par les lignes suivant « Endpoint List »).</p>
-<p>Faire de même pour SingleDescriptorRequest en ajoutant le EndPoint voulu dans le champ Message.</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]-------------- 2018-02-06 17:42:25: protocolData</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]message &gt; 12 char</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]Type: 8000 quality: 00</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]type: 8000 (Status)(Not Processed)</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]Length: 5</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]Status: 00-(Success)</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]SQN: db</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]-------------- 2018-02-06 17:42:25: protocolData</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]message &gt; 12 char</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]Type: 8043 quality: 93</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]Type: 8043 (Simple Descriptor Response)(Not Processed)</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]SQN : db</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]Status : 00</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]Short Address : 6e1b</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]Length : 20</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]endpoint : 01</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]profile : c05e</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]deviceId : 0100</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]bitField : 02</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]InClusterCount : 08</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]In cluster: 0000 - General: Basic</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]In cluster: 0003 - General: Identify</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]In cluster: 0004 - General: Groups</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]In cluster: 0005 - General: Scenes</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]In cluster: 0006 - General: On/Off</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]In cluster: 0008 - General: Level Control</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]In cluster: 0B05 - Misc: Diagnostics</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]In cluster: 1000 - ZLL: Commissioning</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]OutClusterCount : 04</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]Out cluster: 0000 - General: Basic</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]Out cluster: 0003 - General: Identify</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]Out cluster: 0004 - General: Groups</span>
-<span class="x">AbeilleParser: 2018-02-06 17:42:25[DEBUG]Out cluster: 0005 - General: Scenes</span>
-</pre></div>
-</div>
-<p>Nous avons maintenant les clusters supportés par cet objet sur son endpoint 01.</p>
-</div>
-<div class="section" id="script">
-<h1>Script<a class="headerlink" href="#script" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Dans Abeille/resources/AbeilleDeamon/Debug, vous trouverez le script verification.sh.</p>
-<p>L’execution permet de tester, vérifier et donner des infos qui sont souvent interessantes pour des problème de base. Ce script n’est pas forcement bien maintenu alors les résultats ne sont pas forcement fiables.</p>
-<p>Je ne suis pas sûre que ce script soit toujours à jour…</p>
-</div>
-<div class="section" id="messages">
-<h1>Messages<a class="headerlink" href="#messages" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Les different module d’Abeille discutent entre eux par message passing. Ils est possible de voir l’etat avec la commande ipcs (en ssh).</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">------ Files de messages --------</span>
-<span class="x">clef       msqid      propriétaire perms      octets utilisés messages</span>
-<span class="x">0x0000007b 0          www-data   666        0            0</span>
-<span class="x">0x000000df 32769      www-data   666        0            0</span>
-<span class="x">0x00000143 65538      www-data   666        0            0</span>
-<span class="x">0x00000141 98307      www-data   666        0            0</span>
-<span class="x">0x0000020b 131076     www-data   666        0            0</span>
-<span class="x">0x0000026f 163845     www-data   666        0            0</span>
-<span class="x">0x000002d3 196614     www-data   666        0            0</span>
-<span class="x">0x00000336 229383     www-data   666        0            0</span>
-<span class="x">0x00000079 262152     www-data   666        0            0</span>
-<span class="x">0x000000dd 294921     www-data   666        0            0</span>
-<span class="x">0x000001a5 327690     www-data   666        0            0</span>
-<span class="x">0x0000026d 360459     www-data   666        0            0</span>
-<span class="x">0x0000007c 393228     www-data   666        0            0</span>
-<span class="x">0x000000e1 425997     www-data   666        0            0</span>
-</pre></div>
-</div>
-<p>Ici on voit dans la derniere colonne qu’il n’y a pas de message en attente, ils ont tous été traités.</p>
-<p><a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
 </div>
 
 

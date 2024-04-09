@@ -30,7 +30,7 @@ Cagnotte
 
 `Participez à la cagnotte pour acheter des équipements pour supporter le développement. <https://paypal.me/KiwiHC16>`_
 
-.. image:: images/Cagnote.png
+.. image:: images/donate_paypal.png
 
 `Participer à la Cagnotte <https://paypal.me/KiwiHC16>`_
 

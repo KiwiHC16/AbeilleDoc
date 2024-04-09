@@ -20,13 +20,13 @@
 # -- Project information -----------------------------------------------------
 
 project = u'Abeille'
-copyright = u'2019-22, KiwiHC16'
+copyright = u'2019-24, KiwiHC16/Tcharp38'
 author = u'KiwiHC16/Tcharp38'
 
 # The short X.Y version
 version = u''
 # The full version, including alpha/beta/rc tags
-release = u'11.02.2021'
+release = u'09.04.2024'
 
 
 # -- General configuration ---------------------------------------------------
@@ -48,8 +48,8 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-# source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst', '.md']
+# source_suffix = '.rst'
 
 # The master toctree document.
 master_doc = 'index'

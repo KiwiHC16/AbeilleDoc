@@ -1,4 +1,4 @@
-# Bienvenu
+# Bienvenue dans le plugin 'Abeille'
 
 **Version Jeedom**
 

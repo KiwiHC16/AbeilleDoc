@@ -26,7 +26,7 @@ author = u'KiwiHC16/Tcharp38'
 # The short X.Y version
 version = u''
 # The full version, including alpha/beta/rc tags
-release = u'09.04.2024'
+release = u'11.04.2024'
 
 
 # -- General configuration ---------------------------------------------------
@@ -40,6 +40,7 @@ release = u'09.04.2024'
 # ones.
 extensions = [
     'sphinx.ext.githubpages',
+    'myst_parser'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

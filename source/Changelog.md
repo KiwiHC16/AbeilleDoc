@@ -25,6 +25,13 @@
       - Les firmwares avant 3.1e sont forcement 'legacy'.
       - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
 
+-   Moes ZM-105-M: Support préliminaire (2697).
+-   Interne: Amélioration msg dbg OTA.
+-   Interne: powerCycleUsb: Améliorations mineures.
+-   Changelog: Migré au format markdown.
+-   sensor_switch.aq3: Mise-à-jour du modèle avec ajout section 'private'.
+-   Interne: Parser: Désactivation du support messages 8100 & 8102 (géré par 8002) pour migration mode 'raw'.
+
 ## 240409-BETA-1
 
 -   Groupes: Améliorations ajout/suppression de groupe.
@@ -2847,7 +2854,6 @@ Ce dernières semaines le focus a été sur:
 -   Télécommande OSRAM
 -   Ajout ampoules INNR RF263 et RF265
 -   Corrections de bugs
--   .....
 
 ## 2019-03-19
 

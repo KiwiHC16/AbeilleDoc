@@ -5,13 +5,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Philips Hue &#8212; Documentation Abeille 09.04.2024</title>
+    <title>Philips Hue &#8212; Documentation Abeille 11.04.2024</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -40,7 +42,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script><div class="relations">
+<script>document.getElementById('searchbox').style.display = "block"</script><div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
@@ -52,6 +54,7 @@
 </ul>
 </div><h3>Navigation</h3>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Bienvenu.html">Bienvenue dans le plugin “Abeille”</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Presentation.html">Introduction</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="Equipements.html">Equipements supportés</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="CompatibilityList.html">Liste des équipements compatibles</a></li>
@@ -103,9 +106,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../FAQ.html">Questions fréquentes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Debug.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Support.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Developpement.html">Developpement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Changelog.html">ChangeLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Changelog.html">Plugin “Abeille”: changeLog</a></li>
 </ul>
 
 
@@ -118,9 +121,9 @@
           <div class="body" role="main">
             
   <div class="section" id="philips-hue">
-<h1>Philips Hue<a class="headerlink" href="#philips-hue" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>Philips Hue<a class="headerlink" href="#philips-hue" title="Lien permanent vers cette rubrique">¶</a></h1>
 <div class="section" id="ampoule-1">
-<h2>Ampoule 1<a class="headerlink" href="#ampoule-1" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Ampoule 1<a class="headerlink" href="#ampoule-1" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Ampoule Philips Hue White</p>
 <p><strong>Nouvelle inclusion</strong></p>
 <ul class="simple">
@@ -148,7 +151,7 @@
 </ul>
 </div>
 <div class="section" id="ampoule-2">
-<h2>Ampoule 2<a class="headerlink" href="#ampoule-2" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Ampoule 2<a class="headerlink" href="#ampoule-2" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Philips Hue Go</p>
 <p><strong>Nouvelle inclusion</strong></p>
 <ul class="simple">
@@ -163,7 +166,7 @@
 </ul>
 </div>
 <div class="section" id="dimmer">
-<h2>Dimmer<a class="headerlink" href="#dimmer" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Dimmer<a class="headerlink" href="#dimmer" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Philips Hue Dimmer Switch (Télécommande)</p>
 <ul class="simple">
 <li><p>Elle permet de faire une reset touchlink d’une ampoule Ikea</p></li>
@@ -224,7 +227,7 @@
 <p>C’est Jeedom qui envoie les commandes à la place de la télécommande. Pour se faire renseigner le champ « Groupe » dans la configuration.</p>
 </div>
 <div class="section" id="prise">
-<h2>Prise<a class="headerlink" href="#prise" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Prise<a class="headerlink" href="#prise" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Prise de contrôle d’une ampoule</p>
 <ul class="simple">
 <li><dl class="simple">
@@ -247,7 +250,7 @@
 </ul>
 </div>
 <div class="section" id="motion-sensor-indoor">
-<h2>Motion Sensor Indoor<a class="headerlink" href="#motion-sensor-indoor" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Motion Sensor Indoor<a class="headerlink" href="#motion-sensor-indoor" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p><strong>Inclusion</strong></p>
 <p>Mettre la zigate en inclusion, puis un appui sur le bouton « setup » et l’objet doit se créer dans Abeille.</p>
 <p><strong>Présence</strong></p>
@@ -257,7 +260,7 @@
 Voir aussi <a class="reference external" href="https://en.wikipedia.org/wiki/Lux">https://en.wikipedia.org/wiki/Lux</a> pour avoir une idée de l’intensité lumineuse, une table fournie des indications interessante.</p>
 </div>
 <div class="section" id="temperature">
-<h2>Température<a class="headerlink" href="#temperature" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Température<a class="headerlink" href="#temperature" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>La température remonte régulièrement.</p>
 <p><strong>Batterie</strong></p>
 <p>(A tester)</p>
@@ -265,7 +268,7 @@ Voir aussi <a class="reference external" href="https://en.wikipedia.org/wiki/Lux
 <img alt="../_images/Capture_d_ecran_2019_04_14_a_00_44_30.png" src="../_images/Capture_d_ecran_2019_04_14_a_00_44_30.png" />
 </div>
 <div class="section" id="motion-sensor-outdoor">
-<h2>Motion Sensor Outdoor<a class="headerlink" href="#motion-sensor-outdoor" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Motion Sensor Outdoor<a class="headerlink" href="#motion-sensor-outdoor" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>voir motion sensor indoor.</p>
 </div>
 </div>
@@ -282,7 +285,7 @@ Voir aussi <a class="reference external" href="https://en.wikipedia.org/wiki/Lux
       &copy;2019-24, KiwiHC16/Tcharp38.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

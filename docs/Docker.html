@@ -5,13 +5,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Docker &#8212; Documentation Abeille 09.04.2024</title>
+    <title>Docker &#8212; Documentation Abeille 11.04.2024</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
@@ -38,7 +40,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script><div class="relations">
+<script>document.getElementById('searchbox').style.display = "block"</script><div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
@@ -46,6 +48,7 @@
 </ul>
 </div><h3>Navigation</h3>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenue dans le plugin “Abeille”</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devices/Equipements.html">Equipements supportés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
@@ -55,9 +58,9 @@
 <li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions fréquentes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Debug.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Support.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html">ChangeLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Plugin “Abeille”: changeLog</a></li>
 </ul>
 
 
@@ -70,16 +73,16 @@
           <div class="body" role="main">
             
   <div class="section" id="docker">
-<h1>Docker<a class="headerlink" href="#docker" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>Docker<a class="headerlink" href="#docker" title="Lien permanent vers cette rubrique">¶</a></h1>
 <div class="section" id="vm-osx">
-<h2>VM OSX<a class="headerlink" href="#vm-osx" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>VM OSX<a class="headerlink" href="#vm-osx" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Une VM sous parallel OSX: debian 9.3.0 / Jeedom 3.1.7 / Abeille 2018-06-19 01:01:07</p>
 <div class="section" id="vm">
-<h3>VM<a class="headerlink" href="#vm" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>VM<a class="headerlink" href="#vm" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Configuration: choisissez un réseau ponté pour avoir un IP à vous.</p>
 </div>
 <div class="section" id="debian">
-<h3>Debian<a class="headerlink" href="#debian" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Debian<a class="headerlink" href="#debian" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Installation de Debian des plus classique (Un gros 1/4 d’heure depuis un ISO sur disque).</p>
 <p>Pas d’environnement de bureau, juste un serveur ssh et les utilitaires usuels système.</p>
 <p>Une mise a jour en fin d’installation:</p>
@@ -92,7 +95,7 @@
 </div>
 </div>
 <div class="section" id="jeedom">
-<h3>Jeedom<a class="headerlink" href="#jeedom" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Jeedom<a class="headerlink" href="#jeedom" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>La documentation Jeedom est à la page <a class="reference external" href="https://Jeedom.github.io/documentation/installation/fr_FR/index">https://Jeedom.github.io/documentation/installation/fr_FR/index</a></p>
 <p>Perso j’utilise le dernier chapitre (Chapitre 10 - Autres) (Un gros 1/4 d’heure)</p>
 <p>Connectez-vous en SSH à votre système et faites :</p>
@@ -106,7 +109,7 @@
 </div>
 </div>
 <div class="section" id="web-browser">
-<h3>Web Browser<a class="headerlink" href="#web-browser" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Web Browser<a class="headerlink" href="#web-browser" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Ouvrir la page de votre Jeedom: <a class="reference external" href="http://Mon_IP_Jeedom">http://Mon_IP_Jeedom</a></p>
 <p>admin/admin</p>
 <p>Ne plus afficher et cloture fenetre du dessus.</p>
@@ -114,7 +117,7 @@
 <p>Menu-&gt;Outils-&gt;Objets-&gt;”+”, Sauvegarder et retour sur la page principale(Dashboard)</p>
 </div>
 <div class="section" id="ajout-plugin-abeille">
-<h3>Ajout Plugin Abeille<a class="headerlink" href="#ajout-plugin-abeille" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Ajout Plugin Abeille<a class="headerlink" href="#ajout-plugin-abeille" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Menu-&gt;Plugins-&gt;Gestion des plugins</p>
 <p>Market</p>
 <p>Recherche Abeille</p>
@@ -123,7 +126,7 @@
 <p>Voulez vous aller sur la …. -&gt; Ok</p>
 </div>
 <div class="section" id="configuration-du-plugin">
-<h3>Configuration du plugin<a class="headerlink" href="#configuration-du-plugin" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Configuration du plugin<a class="headerlink" href="#configuration-du-plugin" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Activer</p>
 <p>Dependances -&gt; Relancer (ou vous attendez et elles devraient s’installer automatiquement).</p>
 <p>Deux messages doivent s’afficher pour confirmer le lancement et le lien vers la doc.</p>
@@ -140,7 +143,7 @@
 <p>Et maintenant tout est pret. Retour sur Dashboard. Vous devriez y touver l’équipement Ruche.</p>
 </div>
 <div class="section" id="demarrage-du-reseau-zigbee">
-<h3>Demarrage du reseau zigbee<a class="headerlink" href="#demarrage-du-reseau-zigbee" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Demarrage du reseau zigbee<a class="headerlink" href="#demarrage-du-reseau-zigbee" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Si vous selectionnez « Version » alors les champs “Last”, “Last Stamps”, “SW”, “SDK” doivent se mettre à jour. Cela confirme que cela fonctionne.</p>
 <p>Vous pouvez démarrer le réseau « Start Network ».</p>
 <p>Et faire un « get Network Status », d’autres champs vont se mettre à jour.</p>
@@ -148,28 +151,28 @@
 <p>En tout 1h pour faire une installation from scratch (et écrire cette doc).</p>
 </div>
 <div class="section" id="installation-dans-un-conteneur-depuis-ubuntu">
-<h3>Installation dans un conteneur depuis Ubuntu<a class="headerlink" href="#installation-dans-un-conteneur-depuis-ubuntu" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Installation dans un conteneur depuis Ubuntu<a class="headerlink" href="#installation-dans-un-conteneur-depuis-ubuntu" title="Lien permanent vers cette rubrique">¶</a></h3>
 <div class="section" id="introduction">
-<h4>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Debian supporte nativement Jeedom et le support est assuré par l’équipe de développement. Toute autre demande à propos d’une distribution est ignorée.   <a class="reference external" href="https://Jeedom.github.io/documentation/installation/fr_FR/index">https://Jeedom.github.io/documentation/installation/fr_FR/index</a></p>
 <p>Docker permet d’installer un système invité minimal dans une partie virtualisée du système hôte, tout ajout/suppression/modification du conteneur laisse tel quel le système hôte. L’interet de docker est que n’est installé que le minimum nécéssaire au fonctionnement dans l’image. ( une image éxecutée est un conteneur.) Le but ici est de faire tourner un conteneur Jeedom sur un système Ubuntu, cependant ce n’est pas limité à ce système.</p>
 </div>
 <div class="section" id="prerequis">
-<h4>Prérequis<a class="headerlink" href="#prerequis" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Prérequis<a class="headerlink" href="#prerequis" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Avoir docker disponible dans les dépôts de la distribution.</p>
 </div>
 <div class="section" id="installation-de-docker">
-<h4>Installation de docker<a class="headerlink" href="#installation-de-docker" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Installation de docker<a class="headerlink" href="#installation-de-docker" title="Lien permanent vers cette rubrique">¶</a></h4>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">apt-get install docker docker.io</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="fonctionnement">
-<h4>Fonctionnement<a class="headerlink" href="#fonctionnement" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Fonctionnement<a class="headerlink" href="#fonctionnement" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Un des créateurs de Jeedom maintient image Jeedom. Cette image appelé Jeedom-server utilise une image Jeedom-mysql pour stocker les données dans une base de données mysql. Il faudra donc a chaque fois lancer le conteneur Jeedom-mysql puis le Jeedom-server. Les réglages restent d’une fois sur l’autre.</p>
 </div>
 <div class="section" id="recuperation-des-images-et-creation-des-conteneurs">
-<h4>Récupération des images et Création des conteneurs<a class="headerlink" href="#recuperation-des-images-et-creation-des-conteneurs" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Récupération des images et Création des conteneurs<a class="headerlink" href="#recuperation-des-images-et-creation-des-conteneurs" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Ces deux lignes vont récupérer les images, créer les conteneurs et les configurer. Le port USB est a adapter selon le besoin ( <cite>ls /dev/ttyUSB*</cite> pour avoir la liste )</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">docker run --name Jeedom-mysql -e MYSQL_ROOT_PASSWORD=MJeedom96 -d mysql:latest</span>
 <span class="x">docker run --name Jeedom-server -e ROOT_PASSWORD=MJeedom96 --link Jeedom-mysql:mysql -p 9180:80 -p 9443:443 -p 9022:22 --device=/dev/ttyUSB0 Jeedom/Jeedom</span>
@@ -183,7 +186,7 @@
 </div>
 </div>
 <div class="section" id="configuration-de-jeedom">
-<h4>Configuration de Jeedom<a class="headerlink" href="#configuration-de-jeedom" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Configuration de Jeedom<a class="headerlink" href="#configuration-de-jeedom" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Dans les champs indiqués entrer la valeur surlignée.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">[width=&quot;40%&quot;,frame=&quot;topbot&quot;,options=&quot;header,footer&quot;]</span>
 <span class="x">|==================================</span>
@@ -199,13 +202,13 @@
 <p>Une fois, le texte <cite>[END INSTALL SUCCESS]</cite> affiché en bas. Aller à l “adresse <a class="reference external" href="http://0.0.0.0:9180">http://0.0.0.0:9180</a> la page de login de Jeedom devrait apparaître. Les login et mot de passe sont admin admin.</p>
 </div>
 <div class="section" id="start-stop-des-conteneurs">
-<h4>Start/stop des conteneurs<a class="headerlink" href="#start-stop-des-conteneurs" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Start/stop des conteneurs<a class="headerlink" href="#start-stop-des-conteneurs" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>les conteneurs peuvent être arrêtés et relancés à la demande en gardant l’ordre mysql Jeedom au lancement, Jeedom mysql à  l’arrêt.</p>
 <p>Arrêt <cite>docker stop Jeedom-server &amp;&amp; docker stop Jeedom-mysql</cite></p>
 <p>Démarrage <cite>docker start Jeedom-mysql &amp;&amp; docker start Jeedom-server</cite></p>
 </div>
 <div class="section" id="repartir-de-zero">
-<h4>Repartir de zéro<a class="headerlink" href="#repartir-de-zero" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Repartir de zéro<a class="headerlink" href="#repartir-de-zero" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>il est possible de supprimer les conteneurs et de repartir d’un Jeedom tout neuf.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">docker rm Jeedom-server &amp;&amp; docker rm Jeedom-mysql</span>
 </pre></div>
@@ -213,7 +216,7 @@
 <p>puis aller vers link:[Récupération des images et Création des conteneurs]</p>
 </div>
 <div class="section" id="portainer">
-<h4>Portainer<a class="headerlink" href="#portainer" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Portainer<a class="headerlink" href="#portainer" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Pour ceux que ne sont pas à l’aise avec la ligne de commande, portainer propose une interface graphique pour gérer les conteneurs et les images.
 C’est un conteneur à démarrage automatique qui pourra relancer les conteneurs crées.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</span>
@@ -224,13 +227,13 @@ C’est un conteneur à démarrage automatique qui pourra relancer les conteneur
 </div>
 </div>
 <div class="section" id="id1">
-<h2>Docker<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Docker<a class="headerlink" href="#id1" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Installation d’Abeille dans docker
 (Il y a certainement plus simple mais je ne suis pas expert en Docker et cette méthode semble bien fonctionner).</p>
 <div class="section" id="preparation-du-docker">
-<h3>Preparation du docker<a class="headerlink" href="#preparation-du-docker" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Preparation du docker<a class="headerlink" href="#preparation-du-docker" title="Lien permanent vers cette rubrique">¶</a></h3>
 <div class="section" id="preparation-sous-raspbian">
-<h4>Preparation sous Raspbian<a class="headerlink" href="#preparation-sous-raspbian" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Preparation sous Raspbian<a class="headerlink" href="#preparation-sous-raspbian" title="Lien permanent vers cette rubrique">¶</a></h4>
 <ul class="simple">
 <li><p>installer 2018-06-27-raspbian-stretch-lite.zip sur une SD</p></li>
 <li><p>demarrer le RPI3</p></li>
@@ -283,13 +286,13 @@ C’est un conteneur à démarrage automatique qui pourra relancer les conteneur
 </div>
 </div>
 <div class="section" id="preparation-sous-hypriot">
-<h3>Preparation sous hypriot<a class="headerlink" href="#preparation-sous-hypriot" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Preparation sous hypriot<a class="headerlink" href="#preparation-sous-hypriot" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>La version officielle raspbian est un peu vieille et nous n’avons pas toutes les nouveautés. Hypriot a une version bien plus recente et nous facilite la vie (pas de config manuelle tout est prêt). Elle permet aussi de faire tourner le plugin Homebridge (macvlan).
 <a class="reference external" href="http://blog.hypriot.com">http://blog.hypriot.com</a></p>
 <p>Telecharger leur image à l adresse: <a class="reference external" href="http://blog.hypriot.com/downloads/">http://blog.hypriot.com/downloads/</a></p>
 <p>On voit ici qu’il n’y a pas d’image, il faut en créer une.</p>
 <div class="section" id="creons-un-system-pour-le-docker">
-<h4>Créons un system pour le docker.<a class="headerlink" href="#creons-un-system-pour-le-docker" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Créons un system pour le docker.<a class="headerlink" href="#creons-un-system-pour-le-docker" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p><a class="reference external" href="http://www.guoyiang.com/2016/11/04/Build-My-Own-Raspbian-Docker-Image/">http://www.guoyiang.com/2016/11/04/Build-My-Own-Raspbian-Docker-Image/</a></p>
 <p>Ici je ne cherche pas à faire une image la plus petite possible mais la plus proche possible d’une install classique sur un HW RPI3. De ce fait l’image fait presque 1G.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">mkdir DockerAbeille</span>
@@ -373,7 +376,7 @@ C’est un conteneur à démarrage automatique qui pourra relancer les conteneur
 </div>
 </div>
 <div class="section" id="service-dans-le-docker">
-<h3>Service dans le docker<a class="headerlink" href="#service-dans-le-docker" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Service dans le docker<a class="headerlink" href="#service-dans-le-docker" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Les services ne demarrent pas tout seuls dans le docker, il aurait probablement du le faire dans Dockfile.</p>
 <p>Donc j’ajoute quelques lignes à /etc/rc.local pour Raspbian:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">docker start JeedomAbeille</span>
@@ -445,7 +448,7 @@ et un bon vieux:  chmod u+x startJeedomAbeileDocker.sh</p>
 <p>dans le cron root.</p>
 <p>Thanks to <a class="reference external" href="https://www.stuffaboutcode.com/2012/06/raspberry-pi-run-program-at-start-up.html">https://www.stuffaboutcode.com/2012/06/raspberry-pi-run-program-at-start-up.html</a></p>
 <div class="section" id="installation-jeedom">
-<h4>Installation Jeedom<a class="headerlink" href="#installation-jeedom" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Installation Jeedom<a class="headerlink" href="#installation-jeedom" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Dans le container precedent nous n’avons pas pris en compte les besoins réseaux et port série.
 Effaçons l’ancien container.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">docker rm 52b658b7d8f8</span>
@@ -550,7 +553,7 @@ mettre en debut de fichier /etc/apache2/apache2.conf la line :</p>
 <p>Maintenant on peut se connecter en admin/admin donc on peut effacer l utilisateur adminTmp.</p>
 </div>
 <div class="section" id="installation-du-plugin-abeille">
-<h4>Installation du plugin Abeille<a class="headerlink" href="#installation-du-plugin-abeille" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Installation du plugin Abeille<a class="headerlink" href="#installation-du-plugin-abeille" title="Lien permanent vers cette rubrique">¶</a></h4>
 <ul class="simple">
 <li><p>Créer un objet Abeille.</p></li>
 <li><p>Installer le plugin Abeille depuis le market.</p></li>
@@ -571,16 +574,16 @@ mettre en debut de fichier /etc/apache2/apache2.conf la line :</p>
 </div>
 </div>
 <div class="section" id="backup-du-docker">
-<h3>Backup du Docker<a class="headerlink" href="#backup-du-docker" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Backup du Docker<a class="headerlink" href="#backup-du-docker" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Plusieures solutions s’offrent à nous. Il est interessant de comprende ce qui se passe. Un bon article à lire: <a class="reference external" href="https://tuhrig.de/difference-between-save-and-export-in-docker/">https://tuhrig.de/difference-between-save-and-export-in-docker/</a></p>
 <p>Save ou Export ? <a class="reference external" href="https://tuhrig.de/difference-between-save-and-export-in-docker/">https://tuhrig.de/difference-between-save-and-export-in-docker/</a></p>
 <p>Toutes les operations suivantes se font depuis le host.</p>
 <div class="section" id="commit-save-load">
-<h4>Commit / Save / Load<a class="headerlink" href="#commit-save-load" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Commit / Save / Load<a class="headerlink" href="#commit-save-load" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Permet de garder tout l’historique.</p>
 </div>
 <div class="section" id="commit">
-<h4>Commit<a class="headerlink" href="#commit" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Commit<a class="headerlink" href="#commit" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Pour avoir les docker en fonctionnement :</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">docker ps</span>
 </pre></div>
@@ -603,7 +606,7 @@ mettre en debut de fichier /etc/apache2/apache2.conf la line :</p>
 </div>
 </div>
 <div class="section" id="save">
-<h3>Save<a class="headerlink" href="#save" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Save<a class="headerlink" href="#save" title="Lien permanent vers cette rubrique">¶</a></h3>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">docker save -o ~/JeedomAbeille_backup.tar JeedomAbeille_backup</span>
 <span class="x">ls -l ~/JeedomAbeille_backup.tar</span>
 </pre></div>
@@ -611,7 +614,7 @@ mettre en debut de fichier /etc/apache2/apache2.conf la line :</p>
 <p>soyez patient le tar fait 3G.</p>
 </div>
 <div class="section" id="load">
-<h3>Load<a class="headerlink" href="#load" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Load<a class="headerlink" href="#load" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>If we have transferred our « container1.tar » backup file to another docker host system we first need to load backed up tar file into a docker’s local image repository:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">docker load -i /root/JeedomAbeille_backup.tar</span>
 <span class="x">docker images</span>
@@ -619,24 +622,24 @@ mettre en debut de fichier /etc/apache2/apache2.conf la line :</p>
 </div>
 </div>
 <div class="section" id="export-import">
-<h3>Export / Import<a class="headerlink" href="#export-import" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Export / Import<a class="headerlink" href="#export-import" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Garde que la derniere version.</p>
 </div>
 <div class="section" id="export">
-<h3>Export<a class="headerlink" href="#export" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Export<a class="headerlink" href="#export" title="Lien permanent vers cette rubrique">¶</a></h3>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">docker ps -a</span>
 <span class="x">docker export &lt;CONTAINER ID&gt; &gt; /home/export.tar</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="import">
-<h3>Import<a class="headerlink" href="#import" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Import<a class="headerlink" href="#import" title="Lien permanent vers cette rubrique">¶</a></h3>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">cat /home/export.tar | sudo docker import - NameYouWant:latest</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="conclusion">
-<h3>Conclusion<a class="headerlink" href="#conclusion" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Conclusion<a class="headerlink" href="#conclusion" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Plus besoin d’aller chercher les cartes SD dans les differents RPI3 pour en faire de images. Tout va se faire à distance maintenant !!! YaaahhhOOOOUUU !!!!!</p>
 <p>Vous pouvez effacer de vieilles images par:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">docker rmi JeedomAbeille_backup</span>
@@ -644,9 +647,9 @@ mettre en debut de fichier /etc/apache2/apache2.conf la line :</p>
 </div>
 </div>
 <div class="section" id="docker-gui">
-<h3>Docker GUI<a class="headerlink" href="#docker-gui" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Docker GUI<a class="headerlink" href="#docker-gui" title="Lien permanent vers cette rubrique">¶</a></h3>
 <div class="section" id="sur-la-raspbian">
-<h4>Sur la raspbian<a class="headerlink" href="#sur-la-raspbian" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Sur la raspbian<a class="headerlink" href="#sur-la-raspbian" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Thanks to:
 * <a class="reference external" href="http://blog.hypriot.com/post/new-docker-ui-portainer/">http://blog.hypriot.com/post/new-docker-ui-portainer/</a>
 * <a class="reference external" href="https://portainer.readthedocs.io/en/latest/deployment.html">https://portainer.readthedocs.io/en/latest/deployment.html</a></p>
@@ -659,7 +662,7 @@ Tout ne fonctionne pas mais c’est plus sympas que la ligne de commande.</p>
 <p>Il semble que la version rpi par defaut est un peu ancienne et certaine feature comme volume ne sont pas dispo.</p>
 </div>
 <div class="section" id="sur-la-hypriot">
-<h4>Sur la hypriot<a class="headerlink" href="#sur-la-hypriot" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Sur la hypriot<a class="headerlink" href="#sur-la-hypriot" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p><a class="reference external" href="https://hub.docker.com/r/hypriot/rpi-portainer/">https://hub.docker.com/r/hypriot/rpi-portainer/</a></p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock hypriot/rpi-portainer</span>
 </pre></div>
@@ -669,25 +672,25 @@ Tout fonctionne bien mieux que sur la version raspbian.</p>
 </div>
 </div>
 <div class="section" id="plugins">
-<h3>Plugins<a class="headerlink" href="#plugins" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Plugins<a class="headerlink" href="#plugins" title="Lien permanent vers cette rubrique">¶</a></h3>
 <div class="section" id="zwave">
-<h4>Zwave<a class="headerlink" href="#zwave" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Zwave<a class="headerlink" href="#zwave" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Sur ma machine Jeedomprorpi, le repertoire /tmp/Jeedom/openzwave n’a pas les bons droits et le demon est toujours en erreur. Je viens de faire un chmod 777 /tmp/Jeedom/openzwave et tout est ok maintenant.</p>
 </div>
 <div class="section" id="homebridge">
-<h4>homebridge<a class="headerlink" href="#homebridge" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>homebridge<a class="headerlink" href="#homebridge" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Comme il faut que le docker soit exposé au sous réseau, il faut utiliser macvlan et affecter une adresse spécifique.</p>
 </div>
 </div>
 <div class="section" id="installation-sur-une-vm-ubuntu">
-<h3>Installation sur une VM Ubuntu<a class="headerlink" href="#installation-sur-une-vm-ubuntu" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Installation sur une VM Ubuntu<a class="headerlink" href="#installation-sur-une-vm-ubuntu" title="Lien permanent vers cette rubrique">¶</a></h3>
 <div class="section" id="installation-de-l-os">
-<h4>Installation de l’OS<a class="headerlink" href="#installation-de-l-os" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Installation de l’OS<a class="headerlink" href="#installation-de-l-os" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Fichier ISO: ubuntu-16.04.1-server-amd64.iso</p>
 <p>Installation classique de l’OS (Je ne détaille pas car cela dépend de votre envirroement de virtualisation).</p>
 </div>
 <div class="section" id="preparation-de-l-os">
-<h4>Preparation de l’OS<a class="headerlink" href="#preparation-de-l-os" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Preparation de l’OS<a class="headerlink" href="#preparation-de-l-os" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>login: (user créé pendant l install avec son password associé).</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">sudo su -</span>
 <span class="x">apt-get update</span>
@@ -697,7 +700,7 @@ Tout fonctionne bien mieux que sur la version raspbian.</p>
 </div>
 </div>
 <div class="section" id="installation-de-la-base-mysql">
-<h4>Installation de la base mysql<a class="headerlink" href="#installation-de-la-base-mysql" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Installation de la base mysql<a class="headerlink" href="#installation-de-la-base-mysql" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>installation à la main de mysql (car l instanllation par Jeedom ne fonctionne pas)</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">apt-get install mysql-server</span>
 <span class="x">apt-get install mysql-client</span>
@@ -705,7 +708,7 @@ Tout fonctionne bien mieux que sur la version raspbian.</p>
 </div>
 </div>
 <div class="section" id="installation-de-jeedom">
-<h4>Installation de Jeedom<a class="headerlink" href="#installation-de-jeedom" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Installation de Jeedom<a class="headerlink" href="#installation-de-jeedom" title="Lien permanent vers cette rubrique">¶</a></h4>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">wget https://raw.githubusercontent.com/Jeedom/core/stable/install/install.sh</span>
 <span class="x">chmod +x install.sh</span>
 </pre></div>
@@ -717,7 +720,7 @@ Tout fonctionne bien mieux que sur la version raspbian.</p>
 <p>A cette étape vous devoir pourvoir ouvrir un browser et utiliser Jeedom.</p>
 </div>
 <div class="section" id="id2">
-<h4>Installation du Plugin Abeille<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Installation du Plugin Abeille<a class="headerlink" href="#id2" title="Lien permanent vers cette rubrique">¶</a></h4>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">./install.sh -m motDePasse</span>
 
 <span class="x">cd /var/www/html/plugins/</span>
@@ -730,20 +733,20 @@ Tout fonctionne bien mieux que sur la version raspbian.</p>
 </div>
 </div>
 <div class="section" id="utilisation-de-jeedom">
-<h4>Utilisation de Jeedom<a class="headerlink" href="#utilisation-de-jeedom" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Utilisation de Jeedom<a class="headerlink" href="#utilisation-de-jeedom" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Il ne vous reste plus qu’à vous connecter à Jeedom…</p>
 </div>
 <div class="section" id="installation-sur-une-machine-odroid-xu4-avec-ubuntu">
-<h4>Installation sur une machine Odroid XU4 avec Ubuntu<a class="headerlink" href="#installation-sur-une-machine-odroid-xu4-avec-ubuntu" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Installation sur une machine Odroid XU4 avec Ubuntu<a class="headerlink" href="#installation-sur-une-machine-odroid-xu4-avec-ubuntu" title="Lien permanent vers cette rubrique">¶</a></h4>
 </div>
 <div class="section" id="id3">
-<h4>Installation de l’OS<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Installation de l’OS<a class="headerlink" href="#id3" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Fichier img: ubuntu-14.04lts-server-odroid-xu3-20150725.img
 que l on trouve sur le server odroid: <a class="reference external" href="https://odroid.in/ubuntu_14.04lts/">https://odroid.in/ubuntu_14.04lts/</a></p>
 <p>Installation classique odroid de l’OS : <a class="reference external" href="https://wiki.odroid.com/odroid-xu4/odroid-xu4">https://wiki.odroid.com/odroid-xu4/odroid-xu4</a></p>
 </div>
 <div class="section" id="id4">
-<h4>Preparation de l’OS<a class="headerlink" href="#id4" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Preparation de l’OS<a class="headerlink" href="#id4" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>login: (root/odroid).</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">apt-get update</span>
 <span class="x">apt-get upgrade</span>
@@ -752,7 +755,7 @@ que l on trouve sur le server odroid: <a class="reference external" href="https:
 </div>
 </div>
 <div class="section" id="id5">
-<h4>Installation de la base mysql<a class="headerlink" href="#id5" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Installation de la base mysql<a class="headerlink" href="#id5" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>installation à la main de mysql (car l instanllation par Jeedom ne fonctionne pas)</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">apt-get install mysql-server</span>
 <span class="x">apt-get install mysql-client</span>
@@ -760,7 +763,7 @@ que l on trouve sur le server odroid: <a class="reference external" href="https:
 </div>
 </div>
 <div class="section" id="id6">
-<h4>Installation de Jeedom<a class="headerlink" href="#id6" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Installation de Jeedom<a class="headerlink" href="#id6" title="Lien permanent vers cette rubrique">¶</a></h4>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">wget https://raw.githubusercontent.com/Jeedom/core/stable/install/install.sh</span>
 <span class="x">chmod +x install.sh</span>
 </pre></div>
@@ -772,7 +775,7 @@ que l on trouve sur le server odroid: <a class="reference external" href="https:
 <p>A cette étape vous devoir pourvoir ouvrir un browser et utiliser Jeedom.</p>
 </div>
 <div class="section" id="id7">
-<h4>Installation du Plugin Abeille<a class="headerlink" href="#id7" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Installation du Plugin Abeille<a class="headerlink" href="#id7" title="Lien permanent vers cette rubrique">¶</a></h4>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">./install.sh -m motDePasse</span>
 
 <span class="x">cd /var/www/html/plugins/</span>
@@ -785,12 +788,12 @@ que l on trouve sur le server odroid: <a class="reference external" href="https:
 </div>
 </div>
 <div class="section" id="id8">
-<h4>Utilisation de Jeedom<a class="headerlink" href="#id8" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Utilisation de Jeedom<a class="headerlink" href="#id8" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Il ne vous reste plus qu’à vous connecter à Jeedom…</p>
 </div>
 </div>
 <div class="section" id="de-installation">
-<h3>De-installation<a class="headerlink" href="#de-installation" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>De-installation<a class="headerlink" href="#de-installation" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Le plugin Abeille utilise:
 - le code du plugin lui-même et
 - un broker MQTT mosquitto.</p>
@@ -815,7 +818,7 @@ que l on trouve sur le server odroid: <a class="reference external" href="https:
       &copy;2019-24, KiwiHC16/Tcharp38.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

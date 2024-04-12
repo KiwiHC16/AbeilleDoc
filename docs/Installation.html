@@ -5,13 +5,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Installation &#8212; Documentation Abeille 09.04.2024</title>
+    <title>Installation &#8212; Documentation Abeille 11.04.2024</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
@@ -40,7 +42,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script><div class="relations">
+<script>document.getElementById('searchbox').style.display = "block"</script><div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
@@ -50,6 +52,7 @@
 </ul>
 </div><h3>Navigation</h3>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenue dans le plugin “Abeille”</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devices/Equipements.html">Equipements supportés</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
@@ -84,9 +87,9 @@
 <li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions fréquentes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Debug.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Support.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html">ChangeLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Plugin “Abeille”: changeLog</a></li>
 </ul>
 
 
@@ -99,15 +102,15 @@
           <div class="body" role="main">
             
   <div class="section" id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>Installation<a class="headerlink" href="#installation" title="Lien permanent vers cette rubrique">¶</a></h1>
 <div class="section" id="pre-requis">
-<h2>Pre-requis<a class="headerlink" href="#pre-requis" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Pre-requis<a class="headerlink" href="#pre-requis" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Avant de vous lancer dans l’installation d’Abeille, vérifiez que vous avez un <a class="reference internal" href="Systeme.html"><span class="doc">Système</span></a> qui est dans le cadre de ce developpement.</p>
 <p>Une fois l’installation faite, il est nécessaire de vérifier la configuration du plugin et de l’adapter à votre situation, pour se faire il est nécessaire de faire le <a class="reference internal" href="Parametrage.html"><span class="doc">Parametrage des équipements</span></a> du plugin.</p>
 <p>Quand tout est en place, vous allez ajouter des équipements. Afin d’avoir une interface graphique jolie dans Jeedom vous pouvez adapter les <a class="reference internal" href="Widget.html"><span class="doc">Widget</span></a> qui seront utilisés. C’est optionel. C’est juste pour faire beau.</p>
 </div>
 <div class="section" id="installation-de-la-version-stable">
-<h2>Installation de la version « stable »<a class="headerlink" href="#installation-de-la-version-stable" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Installation de la version « stable »<a class="headerlink" href="#installation-de-la-version-stable" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>L’installation standard du plugin se fait directement depuis le market (Plugins &gt; Gestion des plugins &gt; Market)</p>
 <img alt="_images/InstallationMarket-1.png" src="_images/InstallationMarket-1.png" />
 <p>Dans la partie « Rechercher » entrez « Abeille »</p>
@@ -117,7 +120,7 @@
 <p>Une fois installé passez à l’activation du plugin.</p>
 </div>
 <div class="section" id="installation-de-la-version-beta">
-<h2>Installation de la version « beta »<a class="headerlink" href="#installation-de-la-version-beta" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Installation de la version « beta »<a class="headerlink" href="#installation-de-la-version-beta" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>L’installation de cette version « non stable » n’est pas recommandée. Elle ne devrait être faite qu’en accord avec les developpeurs pour par exemple vérifier un correctif en avance de phase.</p>
 <p>La procédure est la même que ci dessus en cliquant sur « installer beta » mais si ce dernier bouton n’est pas disponible, il vous faut vous connecter sur le market Jeedom, puis activer cette possibilité via votre « profil ».</p>
 <img alt="_images/InstallationMarketBeta-1.png" src="_images/InstallationMarketBeta-1.png" />
@@ -127,7 +130,7 @@
 <img alt="_images/InstallationMarketBeta-3.png" src="_images/InstallationMarketBeta-3.png" />
 </div>
 <div class="section" id="activation-du-plugin">
-<h2>Activation du plugin<a class="headerlink" href="#activation-du-plugin" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Activation du plugin<a class="headerlink" href="#activation-du-plugin" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Cette étape est indépendante de la méthode d’installation du plugin (market, GitHub, direct Git repo) .
 Via la page de configuration du plugin, la première chose à faire est l’activer comme suit:</p>
 <img alt="_images/Installation-1.png" src="_images/Installation-1.png" />
@@ -137,7 +140,7 @@ Via la page de configuration du plugin, la première chose à faire est l’acti
 <img alt="_images/Installation-3.png" src="_images/Installation-3.png" />
 </div>
 <div class="section" id="configuration-d-une-ou-plusieurs-zigates">
-<h2>Configuration d’une ou plusieurs zigates<a class="headerlink" href="#configuration-d-une-ou-plusieurs-zigates" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Configuration d’une ou plusieurs zigates<a class="headerlink" href="#configuration-d-une-ou-plusieurs-zigates" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>“Abeille” supporte est dédié à la passerelle « Zigate » sous toutes ses formes (USB, Wifi, PIN ou DIN).
 Via la page de configuration il faut indiquer à Abeille comment acceder à la zigate.</p>
 <p>Etendre la zone « Zigates »</p>
@@ -154,14 +157,14 @@ Via la page de configuration il faut indiquer à Abeille comment acceder à la z
 <p>Information complémentaires PiZigate: <a class="reference internal" href="InstallationPiZiGate.html"><span class="doc">Installation PiZiGate</span></a>.</p>
 </div>
 <div class="section" id="mise-a-jour-du-plugin">
-<h2>Mise a jour du plugin<a class="headerlink" href="#mise-a-jour-du-plugin" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Mise a jour du plugin<a class="headerlink" href="#mise-a-jour-du-plugin" title="Lien permanent vers cette rubrique">¶</a></h2>
 <div class="section" id="market">
-<h3>Market<a class="headerlink" href="#market" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Market<a class="headerlink" href="#market" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Mise à jour à partir du market
 Rien de particulier, suivre la méthode de base de Jeedom</p>
 </div>
 <div class="section" id="github">
-<h3>Github<a class="headerlink" href="#github" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Github<a class="headerlink" href="#github" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Mise à jour à partir de github</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">cd /var/www/html/plugins/Abeille</span>
 <span class="linenos">2</span><span class="x">sudo git pull https://github.com/KiwiHC16/Abeille</span>
@@ -170,10 +173,10 @@ Rien de particulier, suivre la méthode de base de Jeedom</p>
 </div>
 </div>
 <div class="section" id="installation-avancee">
-<h2>Installation avancée<a class="headerlink" href="#installation-avancee" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Installation avancée<a class="headerlink" href="#installation-avancee" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>L’installation par défaut passe par le « market » Jeedom. C’est le mode le plus simple. Néanmoins pour des besoins d’accès à une version de developpement par exemple il peut être nécessaire d’installer le plugin par un autre biais.</p>
 <div class="section" id="via-jeedom-a-partir-de-github">
-<h3>Via Jeedom à partir de GitHub<a class="headerlink" href="#via-jeedom-a-partir-de-github" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Via Jeedom à partir de GitHub<a class="headerlink" href="#via-jeedom-a-partir-de-github" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Commencer par autoriser l’accès à GitHub via la config Jeedom.</p>
 <ul>
 <li><p>Réglages-&gt; Système -&gt; Configuration</p></li>
@@ -208,7 +211,7 @@ Rien de particulier, suivre la méthode de base de Jeedom</p>
 </ul>
 </div>
 <div class="section" id="via-ssh-et-un-fichier-zip">
-<h3>Via SSH et un fichier Zip<a class="headerlink" href="#via-ssh-et-un-fichier-zip" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Via SSH et un fichier Zip<a class="headerlink" href="#via-ssh-et-un-fichier-zip" title="Lien permanent vers cette rubrique">¶</a></h3>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">cd /var/www/html/plugins/</span>
 <span class="linenos">2</span><span class="x">mkdir Abeille</span>
 <span class="linenos">3</span><span class="x">cd Abeille</span>
@@ -223,7 +226,7 @@ Rien de particulier, suivre la méthode de base de Jeedom</p>
 </div>
 </div>
 <div class="section" id="via-git">
-<h3>Via Git<a class="headerlink" href="#via-git" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Via Git<a class="headerlink" href="#via-git" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Directement avec git (Le plus simple et le plus rapide)</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">cd /var/www/html/plugins/</span>
 <span class="linenos">2</span><span class="x">git clone https://github.com/KiwiHC16/Abeille.git Abeille</span>
@@ -237,16 +240,16 @@ Rien de particulier, suivre la méthode de base de Jeedom</p>
 </div>
 </div>
 <div class="section" id="ancienne-doc">
-<h2>Ancienne doc<a class="headerlink" href="#ancienne-doc" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Ancienne doc<a class="headerlink" href="#ancienne-doc" title="Lien permanent vers cette rubrique">¶</a></h2>
 <div class="section" id="etape-1-zigate">
-<h3>Etape 1: Zigate<a class="headerlink" href="#etape-1-zigate" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Etape 1: Zigate<a class="headerlink" href="#etape-1-zigate" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>La Zigate peut être connectée au port USB, par module Wifi ou sur le port GPIO d’un Raspberry Pi.</p>
 <p>Pour les utilisateurs très avertis, il existe des <a class="reference internal" href="Solutions.html"><span class="doc">Solutions Multiples et Distantes</span></a> plus complexes qui amène de la flexibilité que j’utilise personaellement.</p>
 <p>Pour la PiZiGate, des étapes spécifiques sont nécessaires, <a class="reference internal" href="InstallationPiZiGate.html"><span class="doc">Installation PiZiGate</span></a>.</p>
 <p>Le firmware supporté est le dernier publié avec un petit décalage le temps d’adapter Abeille dans cet entretemps c’est l’avant derniere version qui est supportée. Pour mettre a jour le <a class="reference internal" href="InstallationFirmware.html"><span class="doc">Installation Firmware</span></a>.</p>
 </div>
 <div class="section" id="etape-2-widget">
-<h3>Etape 2: Widget<a class="headerlink" href="#etape-2-widget" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Etape 2: Widget<a class="headerlink" href="#etape-2-widget" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>L’installation de Widget est une option permettant d’avoir un visuel plus joli.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -261,14 +264,14 @@ Rien de particulier, suivre la méthode de base de Jeedom</p>
 <img alt="_images/Capture_d_ecran_2018_01_21_a_11_30_20.png" src="_images/Capture_d_ecran_2018_01_21_a_11_30_20.png" />
 </div>
 <div class="section" id="etape-3-reference">
-<h3>Etape 3: Référence<a class="headerlink" href="#etape-3-reference" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Etape 3: Référence<a class="headerlink" href="#etape-3-reference" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Créer un objet Jeedom pour retrouver rapidement et facilement les nouveaux équipements.</p>
 <img alt="_images/Capture_d_ecran_2018_01_21_a_10_53_59.png" src="_images/Capture_d_ecran_2018_01_21_a_10_53_59.png" />
 <img alt="_images/Capture_d_ecran_2018_01_21_a_10_54_13.png" src="_images/Capture_d_ecran_2018_01_21_a_10_54_13.png" />
 <p>Tous les nouveaux équipements seront attachés à cet objet.</p>
 </div>
 <div class="section" id="bidouilles">
-<h3>Bidouilles<a class="headerlink" href="#bidouilles" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Bidouilles<a class="headerlink" href="#bidouilles" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Pour écraser des « bidouilles » locales :</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">cd /var/www/html/plugins/Abeille</span>
 <span class="linenos">2</span><span class="x">sudo git reset --hard HEAD</span>
@@ -291,7 +294,7 @@ Rien de particulier, suivre la méthode de base de Jeedom</p>
       &copy;2019-24, KiwiHC16/Tcharp38.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

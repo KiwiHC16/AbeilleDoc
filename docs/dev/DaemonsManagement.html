@@ -5,13 +5,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>La gestion des démons &#8212; Documentation Abeille 09.04.2024</title>
+    <title>La gestion des démons &#8212; Documentation Abeille 11.04.2024</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -38,7 +40,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script><div class="relations">
+<script>document.getElementById('searchbox').style.display = "block"</script><div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
@@ -46,6 +48,7 @@
 </ul>
 </div><h3>Navigation</h3>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Bienvenu.html">Bienvenue dans le plugin “Abeille”</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../devices/Equipements.html">Equipements supportés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
@@ -55,9 +58,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../FAQ.html">Questions fréquentes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Debug.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Support.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Developpement.html">Developpement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Changelog.html">ChangeLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Changelog.html">Plugin “Abeille”: changeLog</a></li>
 </ul>
 
 
@@ -70,9 +73,9 @@
           <div class="body" role="main">
             
   <div class="section" id="la-gestion-des-demons">
-<h1>La gestion des démons<a class="headerlink" href="#la-gestion-des-demons" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>La gestion des démons<a class="headerlink" href="#la-gestion-des-demons" title="Lien permanent vers cette rubrique">¶</a></h1>
 <div class="section" id="vue-d-ensemble">
-<h2>Vue d’ensemble<a class="headerlink" href="#vue-d-ensemble" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Vue d’ensemble<a class="headerlink" href="#vue-d-ensemble" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Abeille est basé sur le fonctionnement de plusieurs démons s’executant en parallèle:
 - AbeilleCmd en emission, pour envoyer les ordres vers la zigate
 - AbeilleSocat en reception, pour faire le lien entre une zigate wifi et AbeilleSerialRead
@@ -80,7 +83,7 @@
 - AbeilleParser pour decoder les messages recus via AbeilleSerialRead</p>
 </div>
 <div class="section" id="ordre-de-lancement">
-<h2>Ordre de lancement<a class="headerlink" href="#ordre-de-lancement" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Ordre de lancement<a class="headerlink" href="#ordre-de-lancement" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Ce point est clef.</p>
 <p>En effet si AbeilleCmd est lancé en premier et qu’il envoie deja des ordres à la zigate avant meme que le chemin de retour ne soit fonctionnel (AbeilleSocat&gt;AbeilleSerialRead) on risque de manquer des informations.
 Ce pb à été vu par exemple dans le cas suivant
@@ -92,7 +95,7 @@ Cela inclut le message 0009 (Get Network State) qui récupère l’adresse IEEE 
 Les premiers messages ne sont donc plus lancés par « deamon_start() » mais fait au départ du démon principal (deamon()).</p>
 </div>
 <div class="section" id="lancements-concurrents">
-<h2>Lancements concurrents<a class="headerlink" href="#lancements-concurrents" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Lancements concurrents<a class="headerlink" href="#lancements-concurrents" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Au départ le redémarrage des démons (nécessaire si crash) était déclenché par deamon_info().
 Manque de pot cette fonction appelée par Jeedom est complètement asynchrone et peut même être appelée plusieurs fois par seconde.
 Ca entrainait (si crash d’un démon), de multiples redémarrages concurrents du même démon.
@@ -114,7 +117,7 @@ Si démon manquand il est relancé. Du coup 1 seule source de (re)lancement et p
       &copy;2019-24, KiwiHC16/Tcharp38.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

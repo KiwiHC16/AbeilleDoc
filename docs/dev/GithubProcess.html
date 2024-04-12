@@ -5,13 +5,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travailler avec GitHub &#8212; Documentation Abeille 09.04.2024</title>
+    <title>Travailler avec GitHub &#8212; Documentation Abeille 11.04.2024</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -38,7 +40,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script><div class="relations">
+<script>document.getElementById('searchbox').style.display = "block"</script><div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
@@ -46,6 +48,7 @@
 </ul>
 </div><h3>Navigation</h3>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Bienvenu.html">Bienvenue dans le plugin “Abeille”</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../devices/Equipements.html">Equipements supportés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
@@ -55,9 +58,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../FAQ.html">Questions fréquentes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Debug.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Support.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Developpement.html">Developpement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Changelog.html">ChangeLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Changelog.html">Plugin “Abeille”: changeLog</a></li>
 </ul>
 
 
@@ -70,16 +73,16 @@
           <div class="body" role="main">
             
   <div class="section" id="travailler-avec-github">
-<h1>Travailler avec GitHub<a class="headerlink" href="#travailler-avec-github" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>Travailler avec GitHub<a class="headerlink" href="#travailler-avec-github" title="Lien permanent vers cette rubrique">¶</a></h1>
 <p>Ce chapitre décrit rapidement comment mettre en place et configurer son environnement pour pouvoir livrer des mises à jour du plugin Abeille. La même procédure peut etre appliquée pour livrer une mise à jour de la doc vers AbeilleDoc.</p>
 <p>Il est supposé que vous ayiez quelque connaissances de l’utilisation de Git même si plusieurs rappels en sont faits.</p>
 <div class="section" id="vue-d-ensemble">
-<h2>Vue d’ensemble<a class="headerlink" href="#vue-d-ensemble" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Vue d’ensemble<a class="headerlink" href="#vue-d-ensemble" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Le croquis suivant résume la procédure suggerée par ce chapitre.</p>
 <p>TODO</p>
 </div>
 <div class="section" id="mise-en-place-de-l-environnement">
-<h2>Mise en place de l’environnement<a class="headerlink" href="#mise-en-place-de-l-environnement" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Mise en place de l’environnement<a class="headerlink" href="#mise-en-place-de-l-environnement" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>La mise en place décrite ci après n’est nécessaire qu’une seule fois.
 Chaque nom d’utilisateur marqué en gras (<strong>tcharp38</strong>) doit être remplacé par votre nom d’utilisateur.</p>
 <p>Faire un « fork » du repo d’origine via GitHub</p>
@@ -106,7 +109,7 @@ git config –local core.email <strong>xxxx.yyyy&#64;zzzz</strong></p>
 </dl>
 </div>
 <div class="section" id="se-realigner-et-livrer-ses-mises-a-jour">
-<h2>Se réaligner et livrer ses mises-à-jour<a class="headerlink" href="#se-realigner-et-livrer-ses-mises-a-jour" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Se réaligner et livrer ses mises-à-jour<a class="headerlink" href="#se-realigner-et-livrer-ses-mises-a-jour" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Se réaligner sur le master en réappliquant ses commits locaux</p>
 <blockquote>
 <div><p>git pull –rebase</p>
@@ -126,7 +129,7 @@ Ca permet de mieux sécuriser la livraison pour ne pas casser le master.</p>
 </div></blockquote>
 </div>
 <div class="section" id="astuces">
-<h2>Astuces<a class="headerlink" href="#astuces" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Astuces<a class="headerlink" href="#astuces" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Si vous souhaitez vous réaligner sur la branche d’origine en supprimant toute modification locale même « commitée », la commande suivante est très utile:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="n">origin</span>  <span class="c1"># Récupère toutes les infos du repo &quot;origin&quot;</span>
 <span class="n">git</span> <span class="n">reset</span> <span class="o">--</span><span class="n">hard</span> <span class="n">origin</span><span class="o">/</span><span class="n">master</span> <span class="c1"># Reset la branche courante</span>
@@ -151,7 +154,7 @@ Ca permet de mieux sécuriser la livraison pour ne pas casser le master.</p>
       &copy;2019-24, KiwiHC16/Tcharp38.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

@@ -5,13 +5,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Utilisation avancée &#8212; Documentation Abeille 09.04.2024</title>
+    <title>Utilisation avancée &#8212; Documentation Abeille 11.04.2024</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
@@ -40,7 +42,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script><div class="relations">
+<script>document.getElementById('searchbox').style.display = "block"</script><div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
@@ -50,6 +52,7 @@
 </ul>
 </div><h3>Navigation</h3>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenue dans le plugin “Abeille”</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devices/Equipements.html">Equipements supportés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
@@ -67,9 +70,9 @@
 <li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions fréquentes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Debug.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Support.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html">ChangeLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Plugin “Abeille”: changeLog</a></li>
 </ul>
 
 
@@ -82,30 +85,30 @@
           <div class="body" role="main">
             
   <div class="section" id="utilisation-avancee">
-<h1>Utilisation avancée<a class="headerlink" href="#utilisation-avancee" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>Utilisation avancée<a class="headerlink" href="#utilisation-avancee" title="Lien permanent vers cette rubrique">¶</a></h1>
 <p>Si vous souhaitez comprendre un peu + le fonctionnement d’Abeille, c’est le chapitre qu’il vous faut parcourir.</p>
 <div class="section" id="utilisation-sous-docker-ou-vm">
-<h2>Utilisation sous Docker ou VM<a class="headerlink" href="#utilisation-sous-docker-ou-vm" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Utilisation sous Docker ou VM<a class="headerlink" href="#utilisation-sous-docker-ou-vm" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Ce chapitre est très spécifique et pour les utilisateurs ayant de bonnes connaissances en informatique. Je partage ici mon installation <a class="reference internal" href="Docker.html"><span class="doc">Docker</span></a> qui me permet de s’implifier mon developpement et de faire des backup de mes Jeedom distant et difficilement accessibles.</p>
 </div>
 <div class="section" id="modeles-pour-nouveaux-equipements">
-<h2>Modèles pour nouveaux équipements<a class="headerlink" href="#modeles-pour-nouveaux-equipements" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Modèles pour nouveaux équipements<a class="headerlink" href="#modeles-pour-nouveaux-equipements" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Les équipements ZigBee sont representés dans Abeille par des fichiers de configuration appelés: <a class="reference internal" href="ModeleJson.html"><span class="doc">Modele et Fichier JSON</span></a>. Ces fichiers peuvent être modifiés et d’autres peuvent être créer pour ajouter de nouveau équipements.</p>
 </div>
 <div class="section" id="cron">
-<h2>Cron<a class="headerlink" href="#cron" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Cron<a class="headerlink" href="#cron" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Abeille de façon régulière fait <a class="reference internal" href="Cron.html"><span class="doc">Actions régulières (cron)</span></a> un certain nombre de taches pour maintenir/monitorer le système.</p>
 </div>
 <div class="section" id="polling">
-<h2>Polling<a class="headerlink" href="#polling" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Polling<a class="headerlink" href="#polling" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Certains équipements communiquent naturellement et échangent des messages avec la Zigate, ce qui nous permet de s’assurer qu’ils sont en vie. D’autres restent silencieux et nous devons les interroger pour savoir s’ils sont toujours dans le réseau ou simplement connaitre leur état. Abeille contient une fonction de <a class="reference internal" href="Polling.html"><span class="doc">Polling</span></a> interrogeant régulièrement les équipements.</p>
 </div>
 <div class="section" id="configuration-bind-setreport">
-<h2>Configuration Bind/setReport<a class="headerlink" href="#configuration-bind-setreport" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Configuration Bind/setReport<a class="headerlink" href="#configuration-bind-setreport" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Lors de l inclusion Abeille cherche à configurer l’équipement pour que celui ci envoit ses informations à Abeille par exemple. C’est une étape délicate surtout en environnement multi-fournisseur. Il est possible que cela ne se passe correctement. Il est possible de le refaire manuellement grace au bouton <a class="reference internal" href="ApplySettingToNE.html"><span class="doc">Configuration équipement</span></a>.</p>
 </div>
 <div class="section" id="radio">
-<h2>Radio<a class="headerlink" href="#radio" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Radio<a class="headerlink" href="#radio" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Le ZigBee fonctionne en <a class="reference internal" href="Radio.html"><span class="doc">Radio</span></a>. La <a class="reference internal" href="Radio.html"><span class="doc">Radio</span></a> est sujette à divers problèmes. Même si la norme Zigbee inclus plein de fonction pour nous faciliter la vie, il arrive que cela ne fonctionne pas aussi bien qu’attendu. Pour avoir une meilleur comprehension de ce qui se passe, Abeille inclus des informations, graphes représentant les informations <a class="reference internal" href="Radio.html"><span class="doc">Radio</span></a> récupérées par les équipements.</p>
 </div>
 </div>
@@ -122,7 +125,7 @@
       &copy;2019-24, KiwiHC16/Tcharp38.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

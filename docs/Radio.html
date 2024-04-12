@@ -5,13 +5,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Radio &#8212; Documentation Abeille 09.04.2024</title>
+    <title>Radio &#8212; Documentation Abeille 11.04.2024</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
@@ -38,7 +40,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script><div class="relations">
+<script>document.getElementById('searchbox').style.display = "block"</script><div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
@@ -46,6 +48,7 @@
 </ul>
 </div><h3>Navigation</h3>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenue dans le plugin “Abeille”</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devices/Equipements.html">Equipements supportés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
@@ -55,9 +58,9 @@
 <li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions fréquentes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Debug.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Support.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html">ChangeLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Plugin “Abeille”: changeLog</a></li>
 </ul>
 
 
@@ -70,7 +73,7 @@
           <div class="body" role="main">
             
   <div class="section" id="radio">
-<h1>Radio<a class="headerlink" href="#radio" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>Radio<a class="headerlink" href="#radio" title="Lien permanent vers cette rubrique">¶</a></h1>
 <p>La solution zigbee fonctionne sur la base d’ondes radios. Je vais essayer dans cette page de vous partager des informations pour optimiser votre installation.</p>
 <p>La bande de fréquence utilisée est autour de 2.4GHz comme le wifi. Cette bande de fréquence est sub-divisée en 16 canaux numérotés de 11 à 26 pour le zigbee. Le wifi utilise cette même bande mais de façon différente avec des canaux bien plus larges numérotés de 1 à 13. Ne pas confondre les deux. Le Bluetooth utilise lui aussi cette bande de fréquences.</p>
 <img alt="_images/Capture_d_ecran_2019_06_13_a_11_54_03.png" src="_images/Capture_d_ecran_2019_06_13_a_11_54_03.png" />
@@ -93,20 +96,20 @@ Cela veut dire Link Quality Index. C’est un indicateur de la qualité d’une 
 <p>Gardez en tête que le réseau peut évoluer (ajout, retrait d’équipement, obstacle ajouté,…) et qu’aucune information n’est valide pour l’éternité. Donc chaque valeur est conservée un certain temps puis effacée ou rafraichie si une information permet de le faire. Par example vous pouvez très bien avoir une ampoule A dire voir l ampoule B, puis 10 minutes plus tard dire ne plus la voir simplement car elle ne la pas entendu discuter depuis 20 minutes.</p>
 </div>
 <div class="section" id="network-list">
-<h2>Network List<a class="headerlink" href="#network-list" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Network List<a class="headerlink" href="#network-list" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Depuis le menu: Plugins-&gt;Protocole Domotique-&gt;Abeille-&gt;Network List vous allez arriver sur une page contenant 3 volets.</p>
 <div class="section" id="resume">
-<h3>Résumé<a class="headerlink" href="#resume" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Résumé<a class="headerlink" href="#resume" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Le résumé vous donne un aperçu de l’état du plugin.</p>
 <img alt="_images/Capture_d_ecran_2019_06_13_a_12_18_15.png" src="_images/Capture_d_ecran_2019_06_13_a_12_18_15.png" />
 </div>
 <div class="section" id="graphique">
-<h3>Graphique<a class="headerlink" href="#graphique" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Graphique<a class="headerlink" href="#graphique" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Le graphique représente la situation de votre réseau</p>
 <img alt="_images/Capture_d_ecran_2019_06_13_a_12_19_38.png" src="_images/Capture_d_ecran_2019_06_13_a_12_19_38.png" />
 </div>
 <div class="section" id="table">
-<h3>Table<a class="headerlink" href="#table" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Table<a class="headerlink" href="#table" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>La table contient les informations nécessaire à la représentation du réseau plus des informations radios très interessantes.</p>
 <img alt="_images/Capture_d_ecran_2019_06_13_a_12_19_47.png" src="_images/Capture_d_ecran_2019_06_13_a_12_19_47.png" />
 <p>Abeille demande toutes les nuits aux équipement de fournir les informations sur les équipements qu’ils ont dans leur entourage radio.
@@ -120,13 +123,13 @@ Le LQI est le « Link Quality Radio » qui représente la Qualité de la liais
 </div>
 </div>
 <div class="section" id="network-graph">
-<h2>Network Graph<a class="headerlink" href="#network-graph" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Network Graph<a class="headerlink" href="#network-graph" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Juste ouvrir le graph et les Abeilles seront disposées sur un grand cercle. Vous pourrez déplacer les Abeilles (clic, deplacement, relache).</p>
 <img alt="_images/Capture_d_ecran_2018_10_04_a_02_24_10.png" src="_images/Capture_d_ecran_2018_10_04_a_02_24_10.png" />
 <p>Le menu sous le graphe permet de modifier l’affichage:</p>
 <img alt="_images/Capture_d_ecran_2019_06_13_a_12_38_57.png" src="_images/Capture_d_ecran_2019_06_13_a_12_38_57.png" />
 <div class="section" id="filtrage">
-<h3>Filtrage<a class="headerlink" href="#filtrage" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Filtrage<a class="headerlink" href="#filtrage" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Vous pouvez choisir les équipements Dources et les équipements Destination afin de ne voir que les relations pour un équipement.</p>
 <p>Par exemple si vous souhaitez voir les équipements qui disent voir la ZiGate(Ruche) vous mettez « none » dans la source et « Ruche » dans la destination.</p>
 <p>Par exemple si vous souhaitez voir les équipements vus par la ruche vous mettez « Ruche » pour la source et « All » pour la destination.</p>
@@ -141,7 +144,7 @@ Le LQI est le « Link Quality Radio » qui représente la Qualité de la liais
 </ul>
 </div>
 <div class="section" id="positionnement">
-<h3>Positionnement<a class="headerlink" href="#positionnement" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Positionnement<a class="headerlink" href="#positionnement" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Vous pouvez positionner sur la page les équipements par un drag and drop.
 Le bouton « Ruche Centered » positionne la Ruche(ZiGate) au centre.
 Le bouton « Placement Auto » positionnera tous les équipements sur un cercle.
@@ -151,7 +154,7 @@ Le bouton « Placement Auto » positionnera tous les équipements sur un cercl
 Vous pouvez choisir un fond de page par exemple un plan de votre maison.</p>
 </div>
 <div class="section" id="exemples">
-<h3>Exemples<a class="headerlink" href="#exemples" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Exemples<a class="headerlink" href="#exemples" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Exemple avec tout positionné à la main:</p>
 <img alt="_images/Capture_d_ecran_2018_10_04_a_02_23_17.png" src="_images/Capture_d_ecran_2018_10_04_a_02_23_17.png" />
 <p>Exemple qu’avec les relations Child (Filter Child):</p>
@@ -166,13 +169,13 @@ Vous pouvez choisir un fond de page par exemple un plan de votre maison.</p>
 </div>
 </div>
 <div class="section" id="id1">
-<h2>Network Graph<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Network Graph<a class="headerlink" href="#id1" title="Lien permanent vers cette rubrique">¶</a></h2>
 </div>
 <div class="section" id="etudes">
-<h2>Etudes<a class="headerlink" href="#etudes" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Etudes<a class="headerlink" href="#etudes" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Maintenant qu’Abeille collecte des informations directement du réseau je me suis amusé à faire quelques études.</p>
 <div class="section" id="couverture">
-<h3>Couverture<a class="headerlink" href="#couverture" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Couverture<a class="headerlink" href="#couverture" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Sur la base de la collecte de ces informations, j’ai fait quelques graphes pour comprendre ce qu’on espérer en terme de couverture radio.</p>
 <p>Je n’ai pris que des routeurs dans cet exercice: prise xiaomi, prise ikea, ampoule ikea.
 Comme tout est mélangé: type de routeur, types de murs (Fenetre, Bois, Pierre,…), Distances définies à vue d’oeil,.. cela permet d’avoir une vue d’un réseau réel.</p>
@@ -188,10 +191,10 @@ Le deuxième graphe est le LQI en fonction de la distance à vol d’oiseau.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="routage">
-<h2>Routage<a class="headerlink" href="#routage" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Routage<a class="headerlink" href="#routage" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Les chapitres suivants ne sont pas disponibles dans Abeille et nécessitent un sniffer Zigbee associé à Wireshark. Disons que c’est pour les utilisateurs très très avancés. Il est fort probable d’avoir à adapter le code…</p>
 <div class="section" id="link-status">
-<h3>Link Status<a class="headerlink" href="#link-status" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Link Status<a class="headerlink" href="#link-status" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Afin de comprendre la situation radio de votre réseau, vous pouvez utiliser ce script RadioVoisinesMap.php et visualiser les résultats dans un browser web:</p>
 <p><a class="reference external" href="http://[Jeedom]/plugins/Abeille/Network/RadioVoisinesMap.php">http://[Jeedom]/plugins/Abeille/Network/RadioVoisinesMap.php</a></p>
 <p>Ce script va présenter graphiquement les informations échangées entre les routeurs dans les messages « Link Status ».</p>
@@ -227,7 +230,7 @@ Le deuxième graphe est le LQI en fonction de la distance à vol d’oiseau.</p>
 </div>
 </div>
 <div class="section" id="routes">
-<span id="radio-routes"></span><h3>Routes<a class="headerlink" href="#routes" title="Lien permanent vers ce titre">¶</a></h3>
+<span id="radio-routes"></span><h3>Routes<a class="headerlink" href="#routes" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Le ZigBee est un réseau Mesh qui permet de « router » les messages d’équipements en équipements pour rejoindre leur destination.</p>
 <p>L’organisation du routage suit des règles définies dans la norme ZigBee. Chaque équipement contient dans la stack ZigBee les taches relatives au routage. Tout est automatique et rien n’est accessible à l’utilisateur final. Une liaison radio en milieu ouvert va faire disons 20m maximum. Et sauf erreur un message est capable d’être routé 30 fois (il faudrait vérifier cette valeur). Ca permet de faire un réseau de 600m de rayon autour du coordinateur.</p>
 <p>Sauf que…</p>
@@ -262,7 +265,7 @@ Le deuxième graphe est le LQI en fonction de la distance à vol d’oiseau.</p>
       &copy;2019-24, KiwiHC16/Tcharp38.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

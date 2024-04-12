@@ -5,13 +5,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Santé &#8212; Documentation Abeille 09.04.2024</title>
+    <title>Santé &#8212; Documentation Abeille 11.04.2024</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
@@ -38,7 +40,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script><div class="relations">
+<script>document.getElementById('searchbox').style.display = "block"</script><div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
@@ -46,6 +48,7 @@
 </ul>
 </div><h3>Navigation</h3>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenue dans le plugin “Abeille”</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devices/Equipements.html">Equipements supportés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
@@ -55,9 +58,9 @@
 <li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions fréquentes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Debug.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Support.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html">ChangeLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Plugin “Abeille”: changeLog</a></li>
 </ul>
 
 
@@ -70,9 +73,9 @@
           <div class="body" role="main">
             
   <div class="section" id="sante">
-<h1>Santé<a class="headerlink" href="#sante" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>Santé<a class="headerlink" href="#sante" title="Lien permanent vers cette rubrique">¶</a></h1>
 <div class="section" id="statut-des-equipements">
-<h2>Statut des équipements<a class="headerlink" href="#statut-des-equipements" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Statut des équipements<a class="headerlink" href="#statut-des-equipements" title="Lien permanent vers cette rubrique">¶</a></h2>
 <img alt="_images/Capture_d_ecran_2018_05_11_a_13_46_17.png" src="_images/Capture_d_ecran_2018_05_11_a_13_46_17.png" />
 <p>Dans cette page vous trouverez des informations relatives à l’état de fonctionnement des équipements.</p>
 <p>Dans cette table vous trouverez:
@@ -92,7 +95,7 @@
 <p>Pour rafraichir ces informations, un cron tourne <em>toutes les minutes</em> (il faut donc attendre une minute et rafraichir la page) pour vérifier la date du dernier message reçu pour chaque équipement.</p>
 </div>
 <div class="section" id="timeout">
-<h2>TimeOut<a class="headerlink" href="#timeout" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>TimeOut<a class="headerlink" href="#timeout" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Les timeout …</p>
 <p>Je vais essayer de vous éclairer. J’ai introduit cette notion pour essayer de voir si un équipement est en vie ou non.
 Je veux dire par la qu’il est dans le réseau zigbee et en capable de faire ce qu’on lui demande.
@@ -117,7 +120,7 @@ Si un équipement est en timeout il peut y avoir plein de raison. Voici quelques
 </ul>
 </div>
 <div class="section" id="alerte">
-<h2>Alerte<a class="headerlink" href="#alerte" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Alerte<a class="headerlink" href="#alerte" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Alerte sur communications</p>
 <p>Si un équipement possède un timeout défini alors des alertes peuvent être définies.</p>
 <p>Pour les developpeurs, Il faut par exemple dans le fichier modele json avoir:</p>
@@ -143,21 +146,21 @@ Si un équipement est en timeout il peut y avoir plein de raison. Voici quelques
 <p>par exemple ici, une alarme est envoyée sur mon tél.</p>
 </div>
 <div class="section" id="batterie">
-<h2>Batterie<a class="headerlink" href="#batterie" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Batterie<a class="headerlink" href="#batterie" title="Lien permanent vers cette rubrique">¶</a></h2>
 <div class="section" id="niveau">
-<h3>Niveau<a class="headerlink" href="#niveau" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Niveau<a class="headerlink" href="#niveau" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>En utilisant le menu Analyse-&gt;Equipements, vous trouverez l’état des batteries. Ici un exemple avec des objets Zwave et Abeille/Zigbee.</p>
 <img alt="_images/Capture_d_ecran_2018_05_11_a_15_47_55.png" src="_images/Capture_d_ecran_2018_05_11_a_15_47_55.png" />
 </div>
 <div class="section" id="seuil-d-alerte">
-<h3>Seuil d’alerte<a class="headerlink" href="#seuil-d-alerte" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Seuil d’alerte<a class="headerlink" href="#seuil-d-alerte" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Menu-&gt;Roues crantées-&gt;Configuration-&gt;Equipements.</p>
 <p>Mettez les valeurs qui vous conviennent:</p>
 <img alt="_images/Capture_d_ecran_2018_07_16_a_11_28_07.png" src="_images/Capture_d_ecran_2018_07_16_a_11_28_07.png" />
 </div>
 </div>
 <div class="section" id="script-widget">
-<h2>Script / Widget<a class="headerlink" href="#script-widget" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Script / Widget<a class="headerlink" href="#script-widget" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Dans les premieres versions d’abeille, des scripts étaient nécessaires pour suivre l’état des équipements. Depuis ces scripts ont été inclus dans Abeille et ne sont plus necessaires. Je garde la doc en souvenir et on ne sait jamais pourrai servir dans le futur.</p>
 <p>Donc vous pouvez passer tout ce qui est dans le bas de cette page.</p>
 <p>Dans les premieres version d’abeille les timeout n’étaient pas implémentés alors ce script permettait d avoir des alarmes. Il n’est plus nécessaire mais je le garde car il peut servir dans des cas spécifiques avec des petites modifications.</p>
@@ -170,14 +173,14 @@ Si un équipement est en timeout il peut y avoir plein de raison. Voici quelques
 <p>Vous créez un équipement avec une Auto-Actualisation à la fréquence que vous souhaitez, ici toutes les heures.</p>
 <img alt="_images/Capture_d_ecran_2018_03_27_a_09_44_59.png" src="_images/Capture_d_ecran_2018_03_27_a_09_44_59.png" />
 <div class="section" id="script">
-<h3>Script<a class="headerlink" href="#script" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Script<a class="headerlink" href="#script" title="Lien permanent vers cette rubrique">¶</a></h3>
 <div class="section" id="code">
-<h4>Code<a class="headerlink" href="#code" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Code<a class="headerlink" href="#code" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Le script dont vous aurez besoin est <a class="reference external" href="https://github.com/KiwiHC16/Abeille/blob/master/resources/AbeilleDeamon/CheckBattery.php">https://github.com/KiwiHC16/Abeille/blob/master/resources/AbeilleDeamon/CheckBattery.php</a></p>
 <p>Faites un copy/paste dans le plugin script de Jeedom.</p>
 </div>
 <div class="section" id="parametres">
-<h4>Parametres<a class="headerlink" href="#parametres" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Parametres<a class="headerlink" href="#parametres" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Parametres internes au script</p>
 <p>Lorsque vous allez éditer le script dans les étapes suivantes, vous trouverez les lignes suivanted en début de script:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="x">$minBattery = 30; // Taux d&#39;usage de la batterie pour générer une alarme.</span>
@@ -197,7 +200,7 @@ Si un équipement est en timeout il peut y avoir plein de raison. Voici quelques
 </div>
 </div>
 <div class="section" id="id1">
-<h3>Batterie<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Batterie<a class="headerlink" href="#id1" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>TIP: Dans les premieres version d’abeille les batteries n’étaient pas implémentés alors ce script permettait d avoir des alarmes. Il n’est plus nécessaire mais je le garde car il peut servir dans des cas spécifiques avec des petites modifications.</p>
 <p>Créez deux commandes scripts:</p>
 <img alt="_images/Capture_d_ecran_2018_03_27_a_10_00_01.png" src="_images/Capture_d_ecran_2018_03_27_a_10_00_01.png" />
@@ -207,13 +210,13 @@ Si un équipement est en timeout il peut y avoir plein de raison. Voici quelques
 <p>Le second paramètre est « List » pour la seconde commande pour avoir la liste des équipements avec un niveau de Batterie inférieure au  niveau miniCheckBatteries.phpmum.</p>
 </div>
 <div class="section" id="messages">
-<h3>Messages<a class="headerlink" href="#messages" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Messages<a class="headerlink" href="#messages" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Messages échangés</p>
 <p>La même chose que pour Batterie avec pour paramètre Alive.</p>
 <img alt="_images/Capture_d_ecran_2018_03_27_a_10_15_40.png" src="_images/Capture_d_ecran_2018_03_27_a_10_15_40.png" />
 </div>
 <div class="section" id="ping">
-<h3>Ping<a class="headerlink" href="#ping" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Ping<a class="headerlink" href="#ping" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>TIP: Dans les premieres version d’abeille les polling n’étaient pas implémentés alors ce script permettait d avoir des alarmes. Il n’est plus nécessaire mais je le garde car il peut servir dans des cas spécifiques avec des petites modifications.</p>
 <p>Certains équipements ne remontent pas forcement des informations de facon régulière, comme une ampoule qu’on allume une fois par semaine. Donc pour forcer l’échange de message et vérifier la présence d’un équipement, il y a une fonction « Ping ».</p>
 <p>Pour l’instant elle fonctionne pour les ampoules Ikea.</p>
@@ -236,7 +239,7 @@ Si un équipement est en timeout il peut y avoir plein de raison. Voici quelques
       &copy;2019-24, KiwiHC16/Tcharp38.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

@@ -5,13 +5,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Actions régulières (cron) &#8212; Documentation Abeille 09.04.2024</title>
+    <title>Actions régulières (cron) &#8212; Documentation Abeille 11.04.2024</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
@@ -38,7 +40,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script><div class="relations">
+<script>document.getElementById('searchbox').style.display = "block"</script><div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
@@ -46,6 +48,7 @@
 </ul>
 </div><h3>Navigation</h3>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenue dans le plugin “Abeille”</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devices/Equipements.html">Equipements supportés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
@@ -55,9 +58,9 @@
 <li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions fréquentes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Debug.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Support.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html">ChangeLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Plugin “Abeille”: changeLog</a></li>
 </ul>
 
 
@@ -70,56 +73,56 @@
           <div class="body" role="main">
             
   <div class="section" id="actions-regulieres-cron">
-<h1>Actions régulières (cron)<a class="headerlink" href="#actions-regulieres-cron" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>Actions régulières (cron)<a class="headerlink" href="#actions-regulieres-cron" title="Lien permanent vers cette rubrique">¶</a></h1>
 <div class="section" id="daily">
-<h2>Daily<a class="headerlink" href="#daily" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Daily<a class="headerlink" href="#daily" title="Lien permanent vers cette rubrique">¶</a></h2>
 <div class="section" id="voisines">
-<h3>Voisines<a class="headerlink" href="#voisines" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Voisines<a class="headerlink" href="#voisines" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Une fois par jour, Abeille va interroger les équipements pour obtenir leurs informations radio (voisines).</p>
 </div>
 </div>
 <div class="section" id="hourly">
-<h2>Hourly<a class="headerlink" href="#hourly" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Hourly<a class="headerlink" href="#hourly" title="Lien permanent vers cette rubrique">¶</a></h2>
 <div class="section" id="ikea">
-<h3>IKEA<a class="headerlink" href="#ikea" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>IKEA<a class="headerlink" href="#ikea" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Refresh Ampoule Ikea Bind et set Report</p>
 <p>Les ampoules Ikea ont une certaine tendance à oublier leur configuration alors on refait les bind et set report.</p>
 </div>
 <div class="section" id="d-heure">
-<h3>1/4 d’heure<a class="headerlink" href="#d-heure" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>1/4 d’heure<a class="headerlink" href="#d-heure" title="Lien permanent vers cette rubrique">¶</a></h3>
 <div class="section" id="pl2303">
-<h4>pl2303<a class="headerlink" href="#pl2303" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>pl2303<a class="headerlink" href="#pl2303" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Le driver pl2303 sur les RPI qui controle le module TTL-USB n’est pas super stable donc on verifie que tout va bien sinon on redémarre.</p>
 </div>
 <div class="section" id="ping">
-<h4>Ping<a class="headerlink" href="#ping" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Ping<a class="headerlink" href="#ping" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Tous les équipements qui ont un champ « battery_type » vide vont recevoir un message auquel ils doivent répondre pour vérifier qu’ils sont bien en vie.</p>
 </div>
 <div class="section" id="poll">
-<h4>Poll<a class="headerlink" href="#poll" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Poll<a class="headerlink" href="#poll" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Les équipments qui ont une variable poll dans leur configuration à <em>_15_</em>, vont recevoir deux messages (Manufacturer/Location) auxquels ils doivent répondre pour vérifier qu’ils sont en vie.</p>
 <p>Pour vérifier la valeur, dans ce cas c’est 1 par exemple.</p>
 <img alt="_images/Capture_d_ecran_2019_03_15_a_11_46_00.png" src="_images/Capture_d_ecran_2019_03_15_a_11_46_00.png" />
 </div>
 </div>
 <div class="section" id="minutes">
-<h3>Minutes<a class="headerlink" href="#minutes" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Minutes<a class="headerlink" href="#minutes" title="Lien permanent vers cette rubrique">¶</a></h3>
 <div class="section" id="id1">
-<h4>Ping<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Ping<a class="headerlink" href="#id1" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Ping (getVersion) de la zigate pour être sûr qu’elle est présente et fonctionne.</p>
 </div>
 <div class="section" id="id2">
-<h4>Poll<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Poll<a class="headerlink" href="#id2" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>Les équipments qui ont une variable poll dans leur configuration à <em>_1_</em>, vont recevoir deux messages (Manufacturer/Location) auxquels ils doivent répondre pour vérifier qu’ils sont en vie.</p>
 <p>Pour vérifier la valeur, dans ce cas c’est 1.</p>
 <img alt="_images/Capture_d_ecran_2019_03_15_a_11_46_00.png" src="_images/Capture_d_ecran_2019_03_15_a_11_46_00.png" />
 </div>
 <div class="section" id="health">
-<h4>Health<a class="headerlink" href="#health" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Health<a class="headerlink" href="#health" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>En fonction de la date de la derniere communication avec l’équipement, les etats de TimeOut sont positionnés.</p>
 </div>
 <div class="section" id="inclusion">
-<h4>Inclusion<a class="headerlink" href="#inclusion" title="Lien permanent vers ce titre">¶</a></h4>
+<h4>Inclusion<a class="headerlink" href="#inclusion" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>On demande à la Zigate si elle est en mode Inclusion ou non.</p>
 </div>
 </div>
@@ -138,7 +141,7 @@
       &copy;2019-24, KiwiHC16/Tcharp38.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

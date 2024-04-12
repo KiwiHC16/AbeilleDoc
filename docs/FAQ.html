@@ -5,13 +5,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Questions fréquentes &#8212; Documentation Abeille 09.04.2024</title>
+    <title>Questions fréquentes &#8212; Documentation Abeille 11.04.2024</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
@@ -40,7 +42,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script><div class="relations">
+<script>document.getElementById('searchbox').style.display = "block"</script><div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
@@ -50,6 +52,7 @@
 </ul>
 </div><h3>Navigation</h3>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenue dans le plugin “Abeille”</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devices/Equipements.html">Equipements supportés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
@@ -71,9 +74,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Debug.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Support.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html">ChangeLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Plugin “Abeille”: changeLog</a></li>
 </ul>
 
 
@@ -86,16 +89,16 @@
           <div class="body" role="main">
             
   <div class="section" id="questions-frequentes">
-<h1>Questions fréquentes<a class="headerlink" href="#questions-frequentes" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>Questions fréquentes<a class="headerlink" href="#questions-frequentes" title="Lien permanent vers cette rubrique">¶</a></h1>
 <div class="section" id="support-des-telecommandes">
-<h2>Support des télécommandes<a class="headerlink" href="#support-des-telecommandes" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Support des télécommandes<a class="headerlink" href="#support-des-telecommandes" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Les télécommandes nécessitent un chapitre à elles seules tant elles peuvent avoir un comportement différent. Cela inclut tout type d’équipement pouvant envoyer un ordre (une commande Zigbee).</p>
 <ul class="simple">
 <li><p>Télécommandes diverses zigbee</p></li>
 <li><p>Interrupteurs zigbee</p></li>
 </ul>
 <div class="section" id="liens-de-communication">
-<h3>Liens de communication<a class="headerlink" href="#liens-de-communication" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Liens de communication<a class="headerlink" href="#liens-de-communication" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>3 cas de figures suivants sont possibles mais sont exclusifs. Certaines télécommandes supportent plusieurs de ces modes et d’autres sont conçues pour un seul et unique mode de fonctionnement.</p>
 <ul>
 <li><p>La télécommande envoi l’ordre vers Jeedom.</p>
@@ -118,7 +121,7 @@ Ex: La télécommande controle une prise et cette derniere renvoi son état vers
 </ul>
 </div>
 <div class="section" id="ca-se-complique">
-<h3>Ca se complique…<a class="headerlink" href="#ca-se-complique" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Ca se complique…<a class="headerlink" href="#ca-se-complique" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Ca n’est pas tout de pouvoir choisir le « tuyau » de communication (telec vers zigate, telec vers groupe, ou telec vers périph), il faudrait aussi pouvoir choisir quel ordre envoyer. Et la cette partie n’étant pas configurable, c’est mort.</p>
 <p>En d’autres termes, suivant les ordres envoyés par la télécommande (figés par leur firmware), on ne peut pas forcement la coupler directement avec un groupe ou un périph autre que celui pour lequel elle a été conçue.</p>
 <p>Exemples:</p>
@@ -131,7 +134,7 @@ Ex: La télécommande controle une prise et cette derniere renvoi son état vers
 </div>
 </div>
 <div class="section" id="pont-hue-et-zigate-abeille">
-<h2>Pont Hue et ZiGate/Abeille<a class="headerlink" href="#pont-hue-et-zigate-abeille" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Pont Hue et ZiGate/Abeille<a class="headerlink" href="#pont-hue-et-zigate-abeille" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p> » Savez vous si je peux mettre mon matos Hue dans le maillage du plugin Abeille, même si tout passe par le Pont Hue ? »</p>
 <p>La ZiGate et le Pont Hue joue le même role dans le reseau zigbee: le coordinateur.</p>
 <p>Il ne peut pas y avoir deux coordinateurs dans un réseau ZigBee. Tu ne peux pas avoir la Zigate et le pont Hue sur le même réseau.</p>
@@ -142,7 +145,7 @@ Ex: La télécommande controle une prise et cette derniere renvoi son état vers
 <p>La magie de Jeedom te permet de tout piloter meme si tu as un equipement sur le pont hue et un autre sur zigate/abeille.</p>
 </div>
 <div class="section" id="matos-hue-et-zigate-abeille">
-<h2>Matos Hue et ZiGate/Abeille<a class="headerlink" href="#matos-hue-et-zigate-abeille" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Matos Hue et ZiGate/Abeille<a class="headerlink" href="#matos-hue-et-zigate-abeille" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Pour faire simple vous pouvez faire:</p>
 <p>Matos Hue -&gt; Pont Hue -&gt; Plugin Hue -&gt; Jeedom</p>
 <p>Matos Hue -&gt; ZiGate -&gt; Plugin Abeille -&gt; Jeedom</p>
@@ -151,7 +154,7 @@ Ex: La télécommande controle une prise et cette derniere renvoi son état vers
 <p>Matos ZigBee avec Pont Hue et ZiGate dans un même réseau radio zigbee.</p>
 </div>
 <div class="section" id="le-probleme-que-je-rencontre-est-la-portee">
-<h2>Le problème que je rencontre est la portée<a class="headerlink" href="#le-probleme-que-je-rencontre-est-la-portee" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Le problème que je rencontre est la portée<a class="headerlink" href="#le-probleme-que-je-rencontre-est-la-portee" title="Lien permanent vers cette rubrique">¶</a></h2>
 <ul class="simple">
 <li><p>les murs de ta maison sont épais et le signal ne passe pas</p></li>
 <li><p>les produits Osram ont des problemes de compatibilité pour le routage</p></li>
@@ -160,7 +163,7 @@ Ex: La télécommande controle une prise et cette derniere renvoi son état vers
 </ul>
 </div>
 <div class="section" id="etat-evenement-pour-les-scenarii">
-<h2>Etat / Evenement pour les scenarii<a class="headerlink" href="#etat-evenement-pour-les-scenarii" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Etat / Evenement pour les scenarii<a class="headerlink" href="#etat-evenement-pour-les-scenarii" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p> »
 MAIS (car il y a un mais) si on test la valeur d’un des informations « état.. » et bien elle ne change pas
 en fait les info « état.. » passent difficilement de 0 à 1 et de 1 à 0.
@@ -170,7 +173,7 @@ A tel point qu’il faut de nombreux message pour chaque transition d’état..
 Certains équipements (Xiaomi par exemple) envoient l’appui(On) et le relache(Off) du bouton dans un meme message alors que d’autres envoient un message lors de l appui(On) et un autre lors de la relâche(Off). Donc on ne peut pas gérer les scenario sur la valeur d etat mais sur l’événement.</p>
 </div>
 <div class="section" id="duplication-d-equipement">
-<h2>Duplication d’équipement<a class="headerlink" href="#duplication-d-equipement" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Duplication d’équipement<a class="headerlink" href="#duplication-d-equipement" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Lors de l’inclusion d’un équipement, un modele est utilisé pour le construire dans Jeedom/Abeille. Ensuite toutes les informations collectées du réseau sont injectées dans l’équipemetn Abeille.
 Une information à une role specifique: l’adresse IEEE. Cette adresse est une valeur unique par chaque équipement zigbee. On ne peut pas trouver deux équiepments Zigbee avec la même adresse dans le monde.
 Cette information est stockée dans la commande IEEE de l’équipement lors de sa reception.
@@ -193,7 +196,7 @@ Si vous trouvez des doublons du même équipement, alors vérifiez le contenu de
       &copy;2019-24, KiwiHC16/Tcharp38.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

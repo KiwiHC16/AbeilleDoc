@@ -37,4 +37,4 @@ Le support de nouveaux équipements demande du temps de developpement mais surto
 
 **Tcharp38** [![Tcharp38](images/donate_paypal.png "Cagnotte Tcharp38")](https://paypal.me/Tcharp38)
 
-**KiwiHC16** Cagnotte originale [![Tcharp38](images/Cagnote.png "Cagnotte Tcharp38")](https://paypal.me/KiwiHC16)
+**KiwiHC16** Cagnotte originale [![Tcharp38](images/donate_paypal.png "Cagnotte Tcharp38")](https://paypal.me/KiwiHC16)

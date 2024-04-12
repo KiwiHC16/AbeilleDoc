@@ -109,7 +109,6 @@ Propositions à discuter
 .. include:: dev/IntegrityCheck.rst
 .. include:: dev/RulesLanguage.rst
 .. include:: dev/UpdateProcess.rst
-.. include:: dev/Messages.rst
 .. include:: dev/JeedomDB.rst
 .. include:: dev/InclusionProcess.rst
 .. include:: dev/DaemonsManagement.rst

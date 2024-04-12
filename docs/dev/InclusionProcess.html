@@ -5,13 +5,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Le processus d’inclusion &#8212; Documentation Abeille 09.04.2024</title>
+    <title>Le processus d’inclusion &#8212; Documentation Abeille 11.04.2024</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -38,7 +40,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script><div class="relations">
+<script>document.getElementById('searchbox').style.display = "block"</script><div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
@@ -46,6 +48,7 @@
 </ul>
 </div><h3>Navigation</h3>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Bienvenu.html">Bienvenue dans le plugin “Abeille”</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../devices/Equipements.html">Equipements supportés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
@@ -55,8 +58,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../FAQ.html">Questions fréquentes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Support.html">Le moniteur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Support.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Developpement.html">Developpement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Changelog.html">Plugin “Abeille”: changeLog</a></li>
 </ul>
 
 
@@ -69,7 +73,7 @@
           <div class="body" role="main">
             
   <div class="section" id="le-processus-d-inclusion">
-<h1>Le processus d’inclusion<a class="headerlink" href="#le-processus-d-inclusion" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>Le processus d’inclusion<a class="headerlink" href="#le-processus-d-inclusion" title="Lien permanent vers cette rubrique">¶</a></h1>
 <p>La phase d’inclusion d’un nouvel équipement est très importante. Pendant cette phase Abeille va</p>
 <ul class="simple">
 <li><p>tenter d’identifier le periphérique</p></li>
@@ -79,7 +83,7 @@
 <p>Cette phase est résumée dans le diagramme suivant:</p>
 <img alt="dev/images/inclusion_process.png" src="dev/images/inclusion_process.png" />
 <div class="section" id="phase-d-identification">
-<h2>Phase d’identification<a class="headerlink" href="#phase-d-identification" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Phase d’identification<a class="headerlink" href="#phase-d-identification" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>La Zigate est mise en mode inclusion, prête à accepter tout équipement qui se signalera.</p>
 <ul class="simple">
 <li><dl class="simple">
@@ -127,7 +131,7 @@ Ces infos ne sont actuellement pas utilisées par Abeille mais stockées dans �
 </ul>
 </div>
 <div class="section" id="identification-speciale-xiaomi">
-<h2>Identification spéciale Xiaomi<a class="headerlink" href="#identification-speciale-xiaomi" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Identification spéciale Xiaomi<a class="headerlink" href="#identification-speciale-xiaomi" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Les capteurs Xiaomi V1 ne répondent pas à la requète « Active End points ». La phase d’identification standard ne peut fonctionner dans ces conditions.</p>
 <p>Pour Xiaomi, la phase est modifiée comme suit:</p>
 <ul class="simple">
@@ -137,7 +141,7 @@ Ces infos ne sont actuellement pas utilisées par Abeille mais stockées dans �
 </ul>
 </div>
 <div class="section" id="phase-de-configuration">
-<h2>Phase de configuration<a class="headerlink" href="#phase-de-configuration" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Phase de configuration<a class="headerlink" href="#phase-de-configuration" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Si l’équipement est reconnu (modèle JSON trouvé) alors il reste à exécuter les commandes marquées “execAtCreation”.</p>
 <ul class="simple">
 <li><p>Il s’agit en general de “bind” (mise-en-place d’un chemin virtuel)</p></li>
@@ -145,7 +149,7 @@ Ces infos ne sont actuellement pas utilisées par Abeille mais stockées dans �
 </ul>
 </div>
 <div class="section" id="phase-de-decouverte">
-<h2>Phase de découverte<a class="headerlink" href="#phase-de-decouverte" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Phase de découverte<a class="headerlink" href="#phase-de-decouverte" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Si l’équipement n’a pas été reconnu, on entre alors dans cette phase de découverte.
 Il s’agit la de lister ce qu’il sait faire (liste des “End Points”, liste des clusters, et liste des attributs)</p>
 <p>Actuellement cette étape consiste juste à récuperer</p>
@@ -170,7 +174,7 @@ Il s’agit la de lister ce qu’il sait faire (liste des “End Points”, list
       &copy;2019-24, KiwiHC16/Tcharp38.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

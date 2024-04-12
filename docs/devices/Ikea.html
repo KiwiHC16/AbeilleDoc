@@ -5,13 +5,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ikea &#8212; Documentation Abeille 09.04.2024</title>
+    <title>Ikea &#8212; Documentation Abeille 11.04.2024</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -40,7 +42,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script><div class="relations">
+<script>document.getElementById('searchbox').style.display = "block"</script><div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
@@ -52,6 +54,7 @@
 </ul>
 </div><h3>Navigation</h3>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Bienvenu.html">Bienvenue dans le plugin “Abeille”</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Presentation.html">Introduction</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="Equipements.html">Equipements supportés</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="CompatibilityList.html">Liste des équipements compatibles</a></li>
@@ -106,9 +109,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../FAQ.html">Questions fréquentes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Debug.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Support.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Developpement.html">Developpement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Changelog.html">ChangeLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Changelog.html">Plugin “Abeille”: changeLog</a></li>
 </ul>
 
 
@@ -121,9 +124,9 @@
           <div class="body" role="main">
             
   <div class="section" id="ikea">
-<h1>Ikea<a class="headerlink" href="#ikea" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>Ikea<a class="headerlink" href="#ikea" title="Lien permanent vers cette rubrique">¶</a></h1>
 <div class="section" id="ampoule">
-<h2>Ampoule<a class="headerlink" href="#ampoule" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Ampoule<a class="headerlink" href="#ampoule" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p><strong>Mémo</strong></p>
 <p>Un petit mémo avec la télécommande Hue à 20€ pour ceux qui, comme moi, vont devoir ré-inclure toutes leurs ampoules Ikea avec l’upgrade en 3.0F…</p>
 <ol class="arabic simple">
@@ -195,7 +198,7 @@ Boucle qui fait 6 fois : OFF / sleep 2s / ON / sleep 0.5s .</p>
 <img alt="../_images/Capture_d_ecran_2019_04_14_a_00_44_29.png" src="../_images/Capture_d_ecran_2019_04_14_a_00_44_29.png" />
 </div>
 <div class="section" id="telecommande-ronde-5-boutons">
-<span id="telecommanderonde5boutons"></span><h2>Télécommande Ronde 5 boutons<a class="headerlink" href="#telecommande-ronde-5-boutons" title="Lien permanent vers ce titre">¶</a></h2>
+<span id="telecommanderonde5boutons"></span><h2>Télécommande Ronde 5 boutons<a class="headerlink" href="#telecommande-ronde-5-boutons" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Il s’agit la de la télécommande réelle. Le chapitre suivant décrit la télécommande virtuelle equivalente proposée par Abeille.</p>
 <p><strong>Video</strong></p>
 <p><a class="reference external" href="https://youtu.be/eDTDXg1dBzY">Inclusion Telecommande 5 Boutons Ronde Ikea et ampoule Ikea.</a></p>
@@ -263,7 +266,7 @@ Donc definir le group dans le champ Id, appui sur un bouton de la telecommande e
 </div>
 </div>
 <div class="section" id="telecommande-virtuelle">
-<h2>Télécommande Virtuelle<a class="headerlink" href="#telecommande-virtuelle" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Télécommande Virtuelle<a class="headerlink" href="#telecommande-virtuelle" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>La télécommande virtuelle est un objet Jeedom qui envoies les commandes Zigbee comme si c’était une vrai télécommande IKEA.</p>
 <p>Vidéo: <a class="reference external" href="https://youtu.be/_ScmWoSXVr8">Configuration Telecommande Ikea Réelle et simulée dans Jeedom.</a></p>
 <p>Pour créer un télécommande, utilisez les commandes cachées dans la ruche:</p>
@@ -391,7 +394,7 @@ Par exemple vous pouvez avoir une Ampoule Ikea sur le groupe de la télécommand
 <p>Le capteur IR Exterieur Ikea envoie Click-Middle lors de la detection d’une présence.</p>
 </div>
 <div class="section" id="gradateur">
-<h2>Gradateur<a class="headerlink" href="#gradateur" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Gradateur<a class="headerlink" href="#gradateur" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p><strong>Un clic sur OO</strong></p>
 <p>Un clic sur OO envoie un Beacon Request. Même si la zigate est en inclusion, il n’y a pas d’association (Probablement le cas si déjà associé à un autre réseau).</p>
 <p><strong>4 clics sur OO</strong></p>
@@ -399,7 +402,7 @@ Par exemple vous pouvez avoir une Ampoule Ikea sur le groupe de la télécommand
 <p>Voir la télécommande 5 boutons pour avoir plus de détails sur le contrôle de groupe,…</p>
 </div>
 <div class="section" id="prise">
-<h2>Prise<a class="headerlink" href="#prise" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Prise<a class="headerlink" href="#prise" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p><strong>Nouvelle inclusion</strong></p>
 <ul class="simple">
 <li><p>Mettre la Zigate en mode inclusion (Bouton Inclusion), la Led bleue de la Zigate doit clignoter…</p></li>
@@ -407,7 +410,7 @@ Par exemple vous pouvez avoir une Ampoule Ikea sur le groupe de la télécommand
 </ul>
 </div>
 <div class="section" id="telecommande">
-<h2>Télécommande<a class="headerlink" href="#telecommande" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Télécommande<a class="headerlink" href="#telecommande" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p id="telecommanderonde5boutonssimulation"><strong>Simuler la télécommande</strong></p>
 <p>Pour créer une Telecommande simulée, clic sur l icone Télécommande:</p>
 <img alt="../_images/Capture_d_ecran_2019_07_06_a_09_54_26.png" src="../_images/Capture_d_ecran_2019_07_06_a_09_54_26.png" />
@@ -446,13 +449,13 @@ Par exemple vous pouvez avoir une Ampoule Ikea sur le groupe de la télécommand
 <p>appui bouton reset 3s avec zigate en mode inclusion.</p>
 </div>
 <div class="section" id="store">
-<h2>Store<a class="headerlink" href="#store" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Store<a class="headerlink" href="#store" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Inclusion en appuyant 8s sur les deux boutons en face avant du store et zigate en mode inclusion.</p>
 <p>Un device doit se créer dans Abeille et vous pouvez commander le store.</p>
 <p>Si vous voulez controler le store avec la telecommande store, lui ajouter un groupe. Par defaut la télécommande utilise le groupe 0000.</p>
 </div>
 <div class="section" id="telecommande-store">
-<h2>Telecommande Store<a class="headerlink" href="#telecommande-store" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Telecommande Store<a class="headerlink" href="#telecommande-store" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Inclusion en 4x fois appui sur bouton arriere avec zigate en mode inclusion.</p>
 <p>Par defaut la telecommande adresse les messages au groupe 0000. Positionner l’adresse du groupe que vous souhaitez avec la command « Set Group Remote » afin que la telecommande physique utilise ce groupe. Et renseigner dans les parametres de la telecommande dans jeedom la valeur du groupe pour que la telecommande virtuelle utilise le meme groupe.</p>
 <p>Attention cette telecommande n’est pas identique à la télécommande I/O, elles n’envoient pas les même commandes. Celle ci envoie des commandes pour des stores (Up/Down) alors que celle I/O envoie des commandes de type On/Off. Donc une I/O ne peut pas commander un store et une telecommande store ne peut pas commander une prise ou une ampoule.</p>
@@ -470,12 +473,12 @@ Donc j’ai « ajouté » le groupe 0000 à mes 2 stores. (Add Group).</p>
 <p>Pour la télécommande, même procédure, je lui ai mis 0000 par contre il faut cliquer sur « Set Group Remote ». Une fois cela fait, la télécommande peut controler les stores ;-)</p>
 </div>
 <div class="section" id="routeur-repeteur">
-<h2>Routeur (Repeteur)<a class="headerlink" href="#routeur-repeteur" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Routeur (Repeteur)<a class="headerlink" href="#routeur-repeteur" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Mettre la zigate en mode inclusion et un clic sur le bouton reset du routeur et il doit rejoindre le réseau.</p>
 <p>Note: ce n’est pas un répéteur comme on peut le lire partout mais c’est un routeur.</p>
 </div>
 <div class="section" id="ir-detecteur-de-presence-e1525-e1575">
-<h2>IR - Detecteur de presence (E1525/E1575)<a class="headerlink" href="#ir-detecteur-de-presence-e1525-e1575" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>IR - Detecteur de presence (E1525/E1575)<a class="headerlink" href="#ir-detecteur-de-presence-e1525-e1575" title="Lien permanent vers cette rubrique">¶</a></h2>
 <blockquote>
 <div><p>En fait le E1575 se comporte comme le E1525 (avec de subtilités).</p>
 </div></blockquote>
@@ -507,7 +510,7 @@ declencher le capteur en bougeant devant lui et l ampoule doit s allumer.</p>
       &copy;2019-24, KiwiHC16/Tcharp38.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

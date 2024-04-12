@@ -5,13 +5,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profalux &#8212; Documentation Abeille 09.04.2024</title>
+    <title>Profalux &#8212; Documentation Abeille 11.04.2024</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -40,7 +42,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script><div class="relations">
+<script>document.getElementById('searchbox').style.display = "block"</script><div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
@@ -52,6 +54,7 @@
 </ul>
 </div><h3>Navigation</h3>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Bienvenu.html">Bienvenue dans le plugin “Abeille”</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Presentation.html">Introduction</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="Equipements.html">Equipements supportés</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="CompatibilityList.html">Liste des équipements compatibles</a></li>
@@ -98,9 +101,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../FAQ.html">Questions fréquentes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../DIY.html">Do It Yourself</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Debug.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Support.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Developpement.html">Developpement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Changelog.html">ChangeLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Changelog.html">Plugin “Abeille”: changeLog</a></li>
 </ul>
 
 
@@ -113,9 +116,9 @@
           <div class="body" role="main">
             
   <div class="section" id="profalux">
-<h1>Profalux<a class="headerlink" href="#profalux" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>Profalux<a class="headerlink" href="#profalux" title="Lien permanent vers cette rubrique">¶</a></h1>
 <div class="section" id="volet">
-<h2>Volet<a class="headerlink" href="#volet" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Volet<a class="headerlink" href="#volet" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p><strong>Inclusion d’un volet</strong></p>
 <p>Comme pour tous modules Zigbee et pour bien comprendre la procédure, il faut savoir que :</p>
 <p>La Zigate est un coordinateur Zigbee qui permet de contrôler / créer un réseau. De la même manière que le couple télécommande / ampoule Zigbee, il est important que les deux matériels appartiennent et soient authentifiés sur le même réseau.</p>
@@ -191,7 +194,7 @@ Attendre que la télécommande ne clignote plus !</p>
 * Recommencer à nouveau la procédure d’inclusion</p>
 </div>
 <div class="section" id="avance">
-<h2>Avancé<a class="headerlink" href="#avance" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Avancé<a class="headerlink" href="#avance" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Concernant le volet</p>
 <blockquote>
 <div><p>Profalux recommande de ne pas utiliser le cluster 0006 mais uniquement 0008 pour controler les volets.
@@ -241,7 +244,7 @@ location =&gt; “TS”
       &copy;2019-24, KiwiHC16/Tcharp38.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

@@ -5,13 +5,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Documentation Abeille 09.04.2024</title>
+    <title>Bienvenue dans le plugin “Abeille” &#8212; Documentation Abeille 11.04.2024</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
@@ -40,7 +42,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script><div class="relations">
+<script>document.getElementById('searchbox').style.display = "block"</script><div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
@@ -49,7 +51,11 @@
   </ul></li>
 </ul>
 </div><h3>Navigation</h3>
-<ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Bienvenue dans le plugin “Abeille”</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#un-coup-de-pouce">Un coup de pouce ?</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devices/Equipements.html">Equipements supportés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
@@ -59,8 +65,9 @@
 <li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions fréquentes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Support.html">Le moniteur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Support.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Plugin “Abeille”: changeLog</a></li>
 </ul>
 
 
@@ -72,53 +79,45 @@
 
           <div class="body" role="main">
             
-  <p># Bienvenue dans le plugin “Abeille”</p>
+  <div class="section" id="bienvenue-dans-le-plugin-abeille">
+<h1>Bienvenue dans le plugin “Abeille”<a class="headerlink" href="#bienvenue-dans-le-plugin-abeille" title="Lien permanent vers cette rubrique">¶</a></h1>
 <p><strong>Version Jeedom</strong></p>
 <p>Il n’est pas possible de supporter les anciennes versions de Jeedom par manque de temps. Nous suivons donc au mieux ses evolutions.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Jeedom &gt;= v4.1</p></li>
-</ul>
-</div></blockquote>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  - Jeedom &gt;= v4.1
+</pre></div>
+</div>
 <p><strong>Mise-à-jour de modèles</strong></p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Malgré la volonté de faire des évolutions les plus transparentes possibles, il se peut que certains équipements nécessitent d’être mis-à-jour à partir de leur dernier modèle pour à nouveau fonctionner correctement.</p>
-<ul>
-<li><p>Si ils sont sur batterie, réinclusion nécessaire.</p></li>
-<li><p>Si sur secteur, aller à la page “avancé” et bouton “mise-à-jour”.</p></li>
-</ul>
-</li>
-</ul>
-</div></blockquote>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Malgré la volonté de faire des évolutions les plus transparentes possibles, il se peut que certains équipements nécessitent d&#39;être mis-à-jour à partir de leur dernier modèle pour à nouveau fonctionner correctement.
+
+  - Si ils sont sur batterie, réinclusion nécessaire.
+  - Si sur secteur, aller à la page &#39;avancé&#39; et bouton &#39;mise-à-jour&#39;.
+</pre></div>
+</div>
 <p><strong>Zigates v2/+</strong></p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Malheureusement ne vous attendez à rien de vraiment stable avec ce modèle.</p></li>
-<li><p>La maturité de la v2 n’est pas au niveau de la v1 et malgré ça, il n’y a pas eu de mises-à-jour depuis un moment. D’après differents retours le dernier FW dispo (3.A0) n’est pas le + stable mais le précédent (<strong>3.22</strong>). Nous vous conseillons de faire la mise-à-jour vers celui ci.</p></li>
-<li><p>FW <strong>v3.22 FORTEMENT RECOMMANDE</strong>.</p></li>
-</ul>
-</div></blockquote>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Malheureusement ne vous attendez à rien de vraiment stable avec ce modèle.
+- La maturité de la v2 n&#39;est pas au niveau de la v1 et malgré ça, il n&#39;y a pas eu de mises-à-jour depuis un moment. D&#39;après differents retours le dernier FW dispo (3.A0) n&#39;est pas le + stable mais le précédent (**3.22**). Nous vous conseillons de faire la mise-à-jour vers celui ci.
+- FW **v3.22 FORTEMENT RECOMMANDE**.
+</pre></div>
+</div>
 <p><strong>Zigates v1</strong></p>
-<blockquote>
-<div><ul class="simple">
-<li><p>FW <strong>v3.23 OPDM</strong> recommandé. La version minimale est la “3.1E” mais ne sera bientot plus supportée.</p></li>
-<li><p>Le dernier FW officiel est le v3.23. Il est recommandé de basculer dessus pour ne pas faire façe à des soucis déja corrigés.</p></li>
-<li><p>D’autre part si vous n’êtes pas en version OPDM (Optimized PDM), il est fortement recommandé de basculer dessus dans les cas suivants:</p>
-<ul>
-<li><p>Toute nouvelle installation.</p></li>
-<li><p>Dès lors qu’un réappairage complet est nécéssaire.</p></li>
-<li><p>La version OPDM corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d’équipements.</p></li>
-<li><p>Les firmwares avant 3.1e sont forcement “legacy”.</p></li>
-<li><p>Mais <strong>ATTENTION</strong> si vous migrez d’une version “legacy” vers “OPDM” il vous faudra <strong>effacer la PDM et réapparairer tous vos équipements</strong>.</p></li>
-</ul>
-</li>
-</ul>
-</div></blockquote>
-<p>## Un coup de pouce ?</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- FW **v3.23 OPDM** recommandé. La version minimale est la &#39;3.1E&#39; mais ne sera bientot plus supportée.
+- Le dernier FW officiel est le v3.23. Il est recommandé de basculer dessus pour ne pas faire façe à des soucis déja corrigés.
+- D&#39;autre part si vous n&#39;êtes pas en version OPDM (Optimized PDM), il est fortement recommandé de basculer dessus dans les cas suivants:
+
+  - Toute nouvelle installation.
+  - Dès lors qu&#39;un réappairage complet est nécéssaire.
+  - La version OPDM corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d&#39;équipements.
+  - Les firmwares avant 3.1e sont forcement &#39;legacy&#39;.
+  - Mais **ATTENTION** si vous migrez d&#39;une version &#39;legacy&#39; vers &#39;OPDM&#39; il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
+</pre></div>
+</div>
+<div class="section" id="un-coup-de-pouce">
+<h2>Un coup de pouce ?<a class="headerlink" href="#un-coup-de-pouce" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Le support de nouveaux équipements demande du temps de developpement mais surtout un budget conséquent. 2 cagnottes sont ouvertes pour aider l’achat de nouveaux matériels ou simplement donner un coup de pouce.</p>
-<p><strong>Tcharp38</strong> [![Tcharp38](images/donate_paypal.png « Cagnotte Tcharp38 »)](<a class="reference external" href="https://paypal.me/Tcharp38">https://paypal.me/Tcharp38</a>)</p>
-<p><strong>KiwiHC16</strong> Cagnotte originale [![Tcharp38](images/Cagnote.png « Cagnotte Tcharp38 »)](<a class="reference external" href="https://paypal.me/KiwiHC16">https://paypal.me/KiwiHC16</a>)</p>
+<p><strong>Tcharp38</strong> <a class="reference external" href="https://paypal.me/Tcharp38"><img alt="Tcharp38" src="_images/donate_paypal.png" /></a></p>
+<p><strong>KiwiHC16</strong> Cagnotte originale <a class="reference external" href="https://paypal.me/KiwiHC16"><img alt="Tcharp38" src="images/Cagnote.png" /></a></p>
+</div>
+</div>
 
 
           </div>
@@ -132,7 +131,7 @@
       &copy;2019-24, KiwiHC16/Tcharp38.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

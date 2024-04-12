@@ -4,7 +4,7 @@
    :maxdepth: 3
    :hidden:
 
-   Bienvenu
+   Bienvenue
    Installation
    Utilisation
    UtilisationAvancee
@@ -16,3 +16,5 @@
    FAQ
    Divers
    Developpement
+
+.. include:: Bienvenue.rst

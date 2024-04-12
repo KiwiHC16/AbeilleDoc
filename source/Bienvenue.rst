@@ -1,6 +1,8 @@
-# Bienvenue dans le plugin 'Abeille'
+Bienvenue dans le plugin 'Abeille'
+==================================
 
-## Important !
+Important !
+-----------
 
 **Version Jeedom**
 
@@ -33,10 +35,17 @@ Il n'est pas possible de supporter les anciennes versions de Jeedom par manque d
       - Les firmwares avant 3.1e sont forcement 'legacy'.
       - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
 
-## Un coup de pouce ?
+Un coup de pouce ?
+------------------
 
 Le support de nouveaux équipements demande du temps de developpement mais surtout un budget conséquent. 2 cagnottes sont ouvertes pour aider l'achat de nouveaux matériels ou simplement donner un coup de pouce.
 
-**Tcharp38** [![Tcharp38](images/donate_paypal.png "Cagnotte Tcharp38")](https://paypal.me/Tcharp38)
+.. |DonateTcharp38| image:: images/donate_paypal.png
+    :target: https://paypal.me/Tcharp38
 
-**KiwiHC16** Cagnotte originale [![KiwiHC16](images/donate_paypal.png "Cagnotte KiwiHC16")](https://paypal.me/KiwiHC16)
+**Tcharp38** |DonateTcharp38|
+
+.. |DonateKiwiHC16| image:: images/donate_paypal.png
+    :target: https://paypal.me/KiwiHC16
+
+**KiwiHC16** |DonateKiwiHC16|

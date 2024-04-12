@@ -17,8 +17,7 @@
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Plugin “Abeille”: changeLog" href="Changelog.html" />
-    <link rel="prev" title="Support" href="Support.html" />
+    <link rel="prev" title="Do It Yourself" href="DIY.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -46,23 +45,23 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="Support.html" title="Chapitre précédent">Support</a></li>
-      <li>Next: <a href="Changelog.html" title="Chapitre suivant">Plugin “Abeille”: changeLog</a></li>
+      <li>Previous: <a href="DIY.html" title="Chapitre précédent">Do It Yourself</a></li>
   </ul></li>
 </ul>
 </div><h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenue dans le plugin “Abeille”</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="devices/Equipements.html">Equipements supportés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AjoutNouvelEquipement.html">Ajout d’un nouvel équipement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Support.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Plugin “Abeille”: changeLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devices/Equipements.html">Equipements supportés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions fréquentes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Support.html">Support</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Developpement</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#grandes-lignes">Grandes lignes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#vue-generale">Vue générale</a></li>
@@ -82,14 +81,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#procedures-de-mise-a-jour">Procédures de mise-à-jour</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#a-partir-du-market">A partir du market</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#a-partir-de-github">A partir de GitHub</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#format-des-messages-inter-demons">Format des messages inter démons</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#parser-vers-lqi-collector">Parser vers “LQI collector”</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#parser-vers-monitor-cmd-vers-monitor">“Parser” vers “Monitor” &amp; “Cmd” vers “Monitor”</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#serialread-vers-parser">“SerialRead” vers “Parser”</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#parser-vers-abeille">“parser” vers “Abeille”</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#parser-vers-cmd">“parser” vers “cmd”</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#format-de-la-db-jeedom">Format de la DB Jeedom</a><ul>
@@ -117,7 +108,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#normalisation-des-commandes-de-base-zigbee">Normalisation des commandes de base zigbee</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Plugin “Abeille”: changeLog</a></li>
 </ul>
 
 
@@ -351,143 +341,6 @@ Les démons n’étant rien d’autre que des codes ou classes, je suggère de c
 <li><p>Pas ou tres peu de controle à chaque étape. Un pb de manque de place peut passer inapercu jusqu’au mauvais fonctionnement du plugin.</p></li>
 <li><p>Les droits des fichiers (en particulier des scripts ou autre binaire) semblent ignorés et pas restaurés.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="format-des-messages-inter-demons">
-<h2>Format des messages inter démons<a class="headerlink" href="#format-des-messages-inter-demons" title="Lien permanent vers cette rubrique">¶</a></h2>
-<p>Ce chapitre décrit le format des messages échangés entre démons.</p>
-<p>RECOMMENDATIONS pour la suite: identifiant en minuscule puis majuscules (ex: srcAddr, type, startIndex…).</p>
-<div class="section" id="parser-vers-lqi-collector">
-<h3>Parser vers “LQI collector”<a class="headerlink" href="#parser-vers-lqi-collector" title="Lien permanent vers cette rubrique">¶</a></h3>
-<p>Pendant la collecte LQI, des requetes du type 004E sont envoyées aux équipements « routeur » et leur réponse 804E est décodée puis envoyée au « LQI collector ».</p>
-<p>Le format des messages est adapté aux infos à transférer:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$msg = array(
-    &#39;Type&#39; =&gt; string, &#39;804E&#39;,
-    &#39;SrcAddr&#39; =&gt; hex string, $SrcAddr,
-    &#39;TableEntries&#39; =&gt; hex string, $NTableEntries,
-    &#39;TableListCount&#39; =&gt; hex string, $NTableListCount,
-    &#39;StartIndex&#39; =&gt; hex string, $StartIndex,
-    &#39;List&#39; =&gt; list, $NList
-        $N = array(
-            &quot;Addr&quot;     =&gt; substr($payload, $j + 0, 4),
-            &quot;ExtPANId&quot; =&gt; substr($payload, $j + 4, 16),
-            &quot;ExtAddr&quot;  =&gt; substr($payload, $j + 20, 16),
-            &quot;Depth&quot;    =&gt; substr($payload, $j + 36, 2),
-            &quot;LQI&quot;      =&gt; substr($payload, $j + 38, 2),
-            &quot;BitMap&quot;   =&gt; substr($payload, $j + 40, 2)
-    )
-);
-</pre></div>
-</div>
-</div>
-<div class="section" id="parser-vers-monitor-cmd-vers-monitor">
-<h3>“Parser” vers “Monitor” &amp; “Cmd” vers “Monitor”<a class="headerlink" href="#parser-vers-monitor-cmd-vers-monitor" title="Lien permanent vers cette rubrique">¶</a></h3>
-<p>Le moniteur collecte les messages envoyés vers et reçus de la zigate pour un équipement particulier et les affiches dans l’ordre.</p>
-<blockquote>
-<div><dl class="simple">
-<dt>$msg = array(</dt><dd><p>“type” =&gt; string, “x2mon” or “newaddr”,
-“msg” =&gt; string, decoded msg if “x2mon” type
-“addr” =&gt; hex string, new short addr if “newaddr” type</p>
-</dd>
-</dl>
-<p>);</p>
-</div></blockquote>
-</div>
-<div class="section" id="serialread-vers-parser">
-<h3>“SerialRead” vers “Parser”<a class="headerlink" href="#serialread-vers-parser" title="Lien permanent vers cette rubrique">¶</a></h3>
-<blockquote>
-<div><dl>
-<dt>$msg = array(</dt><dd><p>“src” = string, “serialread”,
-“type” =&gt; string, “zigatemessage” or “status”,</p>
-<blockquote>
-<div><p>“zigatemessage”: There is a zigate message attached in “msg”
-“status”: There is “status” attached</p>
-</div></blockquote>
-<p>“net” =&gt; string, corresponding network (ex: “Abeille1”)
-“msg” =&gt; string, message from zigate (extracted from frame &amp; transcoded)
-“status” =&gt; “ready”, “notready”</p>
-</dd>
-</dl>
-<p>);</p>
-</div></blockquote>
-</div>
-<div class="section" id="parser-vers-abeille">
-<h3>“parser” vers “Abeille”<a class="headerlink" href="#parser-vers-abeille" title="Lien permanent vers cette rubrique">¶</a></h3>
-<p>Le format décrit ci apres est appliqué progressivement.
-Il concerne les fichiers « AbeilleParser.class.php » &amp; « Abeille.class.php »</p>
-<p>Ce format est completement flexible et permet de faire passer les infos variables reçues à chaque msg Zigbee.</p>
-<p>La partie « commune » est</p>
-<blockquote>
-<div><dl class="simple">
-<dt>$msg = array(</dt><dd><p>“src” =&gt; “parser”,
-“type” =&gt; &lt;msg_type&gt;,
-“net” =&gt; $net,</p>
-</dd>
-</dl>
-<p>);</p>
-</div></blockquote>
-<dl>
-<dt>Exemples:</dt><dd><dl class="simple">
-<dt>$msg = array(</dt><dd><p>“src” =&gt; “parser”,
-“type” =&gt; “eqAnnounce”,
-“net” =&gt; $net,
-“addr” =&gt; $addr,
-“ieee” =&gt; $eq[“ieee”],
-“ep” =&gt; $eq[“epFirst”],
-“jsonId” =&gt; $eq[“jsonId”],
-“capa” =&gt; $eq[“capa”],
-“time” =&gt; time()</p>
-</dd>
-</dl>
-<p>);</p>
-<dl class="simple">
-<dt>$msg = array(</dt><dd><p>“src” =&gt; “parser”,
-“type” =&gt; “leaveIndication”,
-“net” =&gt; $dest,
-“ieee” =&gt; $IEEE,
-“time” =&gt; time()</p>
-</dd>
-</dl>
-<p>);</p>
-<dl class="simple">
-<dt>$msg = array(</dt><dd><p>“src” =&gt; “parser”,
-“type” =&gt; “attributReport”,
-“net” =&gt; $dest,
-“addr” =&gt; $SrcAddr,
-“ep” =&gt; $EPoint,
-“name” =&gt; $ClusterId.”-“.$AttributId,
-“value” =&gt; false, // False = unsupported
-“time” =&gt; time(),
-“lqi” =&gt; $lqi</p>
-</dd>
-</dl>
-<p>);</p>
-</dd>
-</dl>
-</div>
-<div class="section" id="parser-vers-cmd">
-<h3>“parser” vers “cmd”<a class="headerlink" href="#parser-vers-cmd" title="Lien permanent vers cette rubrique">¶</a></h3>
-<p>PAS ENCORE IMPLEMENTE !!
-Juste à l’état de reflexion.</p>
-<dl>
-<dt>examples d’application:</dt><dd><p>$this-&gt;msgToCmd(« TempoCmd ».$dest. »/Ruche/ActiveEndPoint&amp;time= ».(time()+($i*2)), « address= ».$Addr );
-$this-&gt;msgToCmd(« Cmd ».$dest. »/Ruche/PDM », « req=E_SL_MSG_PDM_HOST_AVAILABLE_RESPONSE »);
-$this-&gt;msgToCmd(« Cmd ».$dest. »/Ruche/getManufacturerName », « address= ».$SrcAddr.”&amp;destinationEndPoint=”.$EP );
-$this-&gt;msgToCmd(“CmdAbeille1/”.$SrcAddr.”/IEEE_Address_request”, “shortAddress=”.$SrcAddr);</p>
-<dl class="simple">
-<dt>$msg = array(</dt><dd><p>“src” = string, “parser”,
-“type” =&gt; string, “cmd”/”delayed_cmd”
-“net” =&gt; string, corresponding network (ex: “Abeille1”)
-“addr” =&gt; hex string, equipement short address
-“ep” =&gt; ?, End Point
-“cmd” =&gt; string, command name (logical Id, part of those supported by target EQ itself)
-“payload” =&gt; string, payload/data
-“time” =&gt; ?, time for “delayed_cmd”</p>
-</dd>
-</dl>
-<p>);</p>
-</dd>
-</dl>
 </div>
 </div>
 <div class="section" id="format-de-la-db-jeedom">

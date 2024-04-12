@@ -5,15 +5,14 @@
    :hidden:
 
    Bienvenu
-   Presentation
-   devices/Equipements
    Installation
    Utilisation
    UtilisationAvancee
    AjoutNouvelEquipement
+   Support
+   Changelog
+   Presentation
+   devices/Equipements
    FAQ
    Divers
-   DIY
-   Support
    Developpement
-   Changelog

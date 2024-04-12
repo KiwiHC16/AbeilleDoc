@@ -12,7 +12,6 @@ Vous trouverez ci-dessous quelque informations ou procédures par marque pour ce
    CompatibilityList
    Eurotronics
    Danfoss
-   DIY
    Heiman
    Ikea
    Innr
@@ -28,12 +27,6 @@ Vous trouverez ci-dessous quelque informations ou procédures par marque pour ce
 
 .. include:: Eurotronics.rst
 .. include:: Danfoss.rst
-
-DIY
----
-
-Ce chapitre regroupe les informations sur les équipements :doc:`DIY`
-
 .. include:: Heiman.rst
 .. include:: Ikea.rst
 .. include:: Innr.rst

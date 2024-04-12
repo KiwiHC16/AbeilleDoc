@@ -1,5 +1,7 @@
 # Bienvenue dans le plugin 'Abeille'
 
+## Important !
+
 **Version Jeedom**
 
 Il n'est pas possible de supporter les anciennes versions de Jeedom par manque de temps. Nous suivons donc au mieux ses evolutions.
@@ -37,4 +39,4 @@ Le support de nouveaux équipements demande du temps de developpement mais surto
 
 **Tcharp38** [![Tcharp38](images/donate_paypal.png "Cagnotte Tcharp38")](https://paypal.me/Tcharp38)
 
-**KiwiHC16** Cagnotte originale [![Tcharp38](images/donate_paypal.png "Cagnotte Tcharp38")](https://paypal.me/KiwiHC16)
+**KiwiHC16** Cagnotte originale [![KiwiHC16](images/donate_paypal.png "Cagnotte KiwiHC16")](https://paypal.me/KiwiHC16)

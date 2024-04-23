@@ -1,5 +1,7 @@
 # Plugin 'Abeille': changeLog
 
+## 240423-BETA-7
+
 **Mise-à-jour de modèles**
 
     - Malgré la volonté de faire des évolutions les plus transparentes possibles, il se peut que certains équipements nécessitent d'être mis-à-jour à partir de leur dernier modèle pour à nouveau fonctionner correctement.
@@ -31,6 +33,11 @@
 -   Changelog: Migré au format markdown.
 -   sensor_switch.aq3: Mise-à-jour du modèle avec ajout section 'private'.
 -   Interne: Parser: Désactivation du support messages 8100 & 8102 (géré par 8002) pour migration mode 'raw'.
+-   Page de config: Les démons sont automatiquement redémarrés lors de la sauvegarde de la configuration.
+-   Page de gestion: 'Remplacement d'équipement' => 'Transfert d'historique'.
+-   Page maintenance: Améliorations package de logs & suppression du fichier zippé apres transfert.
+-   Interne: Correction 'update_changelog.sh'
+-   Page de config: Correction test de port pour USBv2.
 
 ## 240409-BETA-1
 

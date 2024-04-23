@@ -17,7 +17,8 @@
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="prev" title="Developpement" href="Developpement.html" />
+    <link rel="next" title="Introduction" href="Presentation.html" />
+    <link rel="prev" title="Support" href="Support.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -45,24 +46,20 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="Developpement.html" title="Chapitre précédent">Developpement</a></li>
+      <li>Previous: <a href="Support.html" title="Chapitre précédent">Support</a></li>
+      <li>Next: <a href="Presentation.html" title="Chapitre suivant">Introduction</a></li>
   </ul></li>
 </ul>
 </div><h3>Navigation</h3>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenue dans le plugin “Abeille”</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="devices/Equipements.html">Equipements supportés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bienvenue.html">Bienvenue dans le plugin “Abeille”</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AjoutNouvelEquipement.html">Ajout d’un nouvel équipement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions fréquentes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Support.html">Support</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Plugin “Abeille”: changeLog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#beta-7">240423-BETA-7</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#beta-1">240409-BETA-1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#beta-2">240403-BETA-2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id1">240329-BETA-2</a></li>
@@ -325,6 +322,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#id249">2018-01-19</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devices/Equipements.html">Equipements supportés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions fréquentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Developpement.html">Developpement</a></li>
 </ul>
 
 
@@ -338,6 +340,8 @@
             
   <div class="section" id="plugin-abeille-changelog">
 <h1>Plugin “Abeille”: changeLog<a class="headerlink" href="#plugin-abeille-changelog" title="Lien permanent vers cette rubrique">¶</a></h1>
+<div class="section" id="beta-7">
+<h2>240423-BETA-7<a class="headerlink" href="#beta-7" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p><strong>Mise-à-jour de modèles</strong></p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Malgré la volonté de faire des évolutions les plus transparentes possibles, il se peut que certains équipements nécessitent d&#39;être mis-à-jour à partir de leur dernier modèle pour à nouveau fonctionner correctement.
 
@@ -370,7 +374,13 @@
 <li><p>Changelog: Migré au format markdown.</p></li>
 <li><p>sensor_switch.aq3: Mise-à-jour du modèle avec ajout section “private”.</p></li>
 <li><p>Interne: Parser: Désactivation du support messages 8100 &amp; 8102 (géré par 8002) pour migration mode “raw”.</p></li>
+<li><p>Page de config: Les démons sont automatiquement redémarrés lors de la sauvegarde de la configuration.</p></li>
+<li><p>Page de gestion: “Remplacement d’équipement” =&gt; “Transfert d’historique”.</p></li>
+<li><p>Page maintenance: Améliorations package de logs &amp; suppression du fichier zippé apres transfert.</p></li>
+<li><p>Interne: Correction “update_changelog.sh”</p></li>
+<li><p>Page de config: Correction test de port pour USBv2.</p></li>
 </ul>
+</div>
 <div class="section" id="beta-1">
 <h2>240409-BETA-1<a class="headerlink" href="#beta-1" title="Lien permanent vers cette rubrique">¶</a></h2>
 <ul class="simple">

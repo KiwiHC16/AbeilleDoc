@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2024-03-11
+Dernière mise-à-jour le 2024-06-24
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -298,7 +298,7 @@ Danfoss, 014G2461, Dansfoss Ally radiator thermostat
 .. image:: ../images/node_GardenspotRGB.png
    :width: 200px
 
-Gledopto, GL-B-001Z, GL-B-001Z 4W Dual White And Color Candle Bulb
+Gledopto, GL-B-001Z, GL-B-001Z Dual White And Color Candle Bulb
 
 .. image:: ../images/node_GL-B-001Z.png
    :width: 200px
@@ -318,7 +318,7 @@ Gledopto, GL-C-007, GLEDOPTO RGT+CCT LED Controller
 .. image:: ../images/node_Gledopto-RGBCCTLedController.png
    :width: 200px
 
-Gledopto, ?, Gledopto GL-C-007P
+Gledopto, GL-C-007P, Gledopto RGBW Smart LED Strip Controller
 
 .. image:: ../images/node_Gledopto-GL-C-007P.png
    :width: 200px
@@ -333,12 +333,17 @@ Gledopto, GL-C-008P, Gledopto RGBW strip controller
 .. image:: ../images/node_Gledopto-GL-C-008P.png
    :width: 200px
 
+Gledopto, GL-D-002P, Gledopto downlight
+
+.. image:: ../images/node_Gledopto-Downlight.png
+   :width: 200px
+
 Gledopto, GL-FL-004P, Gledopto 10W RGB+CCT Flood Light Pro
 
 .. image:: ../images/node_Gledopto-FloodLight.png
    :width: 200px
 
-Gledopto, GL-G-001ZS, GL-G-001ZS 4W E12/E14 Bulb RGB+CCT
+Gledopto, GL-G-001ZS, GL-G-001ZS E12/E14 Bulb RGB+CCT
 
 .. image:: ../images/node_GL-G-001ZS.png
    :width: 200px
@@ -411,11 +416,6 @@ Frient, KEYZB-110, Frient keypad
 , , NEO  Inmax 07046L Keyfob-ZB3.0
 
 .. image:: ../images/node_Keyfob-ZB3.0.png
-   :width: 200px
-
-, , KiwiHC16_Test_01
-
-.. image:: ../images/node_defaultUnknown.png
    :width: 200px
 
 , , ZigBee On Off Controller
@@ -571,6 +571,11 @@ Philips, 9290018216, Philips E27 white bulb
 Philips, LWA017, Philips E27 white bulb
 
 .. image:: ../images/node_PhilipsHue-E27Bulb-White.png
+   :width: 200px
+
+Philips, 9290030514, Philips Hue filament white E27 bulb
+
+.. image:: ../images/node_PhilipsHue-E27Bulb-White-Filament.png
    :width: 200px
 
 Philips, ?, Hue white beta LWB004
@@ -948,6 +953,16 @@ NodOn, SIN-4-2-20, NodOn lighting relay switch
 .. image:: ../images/node_Nodon-SIN-4-2-20.png
    :width: 200px
 
+NodOn, SIN-4-FP-21, NodOn pilot wire heating module
+
+.. image:: ../images/node_Nodon-PilotWireHeating.png
+   :width: 200px
+
+Nodon, SIN-4-RS-20, NodOn roller shutter module
+
+.. image:: ../images/node_Nodon-RollerShutter.png
+   :width: 200px
+
 , , siren-pni-s002
 
 .. image:: ../images/node_siren-pni-s002.png
@@ -998,7 +1013,7 @@ Frient, SMSZB-120, Frient smoke alarm
 .. image:: ../images/node_Frient-SMSZB-120.png
    :width: 200px
 
-Sonoff, SNZB-02D, Sonoff temp and humidity display
+Sonoff, SNZB-02D, Sonoff temperature & humidity display
 
 .. image:: ../images/node_Sonoff-TempHumidityDisplay.png
    :width: 200px
@@ -1563,7 +1578,7 @@ NIKJEBDF, ?, NIKJEBDF temperature/humidity sensor/display
 .. image:: ../images/node_Blitzwolf-Display.png
    :width: 200px
 
-Tuya, Display, Tuya temperature and humdity display sensor
+Tuya, Display, Tuya temperature & humidity display sensor
 
 .. image:: ../images/node_Tuya-TempHumidityDisplay.png
    :width: 200px
@@ -1753,9 +1768,19 @@ Tuya, RSH-AirBox01, Tuya Smart Air Box 01
 .. image:: ../images/node_Tuya-RSH-AirBox01.png
    :width: 200px
 
+Tuya, PJ-1203A, Tuya electricity energy monitor
+
+.. image:: ../images/node_Tuya-EnergyMonitor.png
+   :width: 200px
+
 MatSee Plus, Digital meter, MatSee Plus single phase power meter
 
 .. image:: ../images/node_Tuya-DigitalMeter.png
+   :width: 200px
+
+Moes, ZM-105-M, Smart dimmer module
+
+.. image:: ../images/node_Moes-SmartDimmer-ZM-105-M.png
    :width: 200px
 
 Tuya, QS-Zigbee-D02-TRIAC-2C-LN, Tuya dual dimmer switch module

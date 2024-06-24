@@ -1,6 +1,104 @@
-# Plugin 'Abeille': changeLog
+# ChangeLog
 
-## 240423-BETA-7
+-   Analyse réseau: Corrections.
+-   Modèles d'équipement: 'Time-Time' est de retour mais 'Time-TimeStamp' définitivement supprimé.
+
+## 240622-BETA-2
+
+-   Analyse réseau: Corrections.
+-   Interne: Correction sauvegarde config dev.
+-   Mises-à-jour OTA: Amélioration interne.
+-   Interne: Cmd: Suppression support obsolete 'identifySendHue'.
+-   Modèle d'équipement: Surcharge possible de 'request'.
+-   Interne: Cmd: execute() revu pour + de clareté.
+-   NodOn SIN-4-RS-20: Inversion du 'level' (2709).
+-   'Time-TimeStamp': Caché à la création.
+-   Package de logs: Correction: Créé même si aucun 'json'.
+
+## 240618-BETA-5
+
+-   Modèles d'équipement: Réajout info 'Time-TimeStamp' si manquante.
+-   Onglet EQ/avancé: Qq mises-à-jour.
+-   Amélioration analyse réseau (Mgmt_lqi_req).
+
+## 240618-BETA-2
+
+-   GL-C-007P, GLEDOPTO: Ajout controle blanc chaud/froid (2710).
+-   Assistant modèles:
+    -   Amélioration cluster 0008.
+    -   Amélioration nommage 'level' ou 'brightness' en fonction du type 'device ID'
+-   Modèles d'équipement
+    -   Suppression des commandes 'SWBuildID' & 'Get-SWBuildID' (dispo sur onglet 'avancé').
+    -   Ajout support variable '#valueoffset#'
+-   Modèles TRAFRIbulbxxx: Mises-à-jour.
+-   Assistant de découverte: Ajout 'profile ID' + 'device ID'.
+-   Réparation: Améliorations pour support 'profile ID' + 'device ID'.
+-   Interne: 'AbeilleLQI-AbeilleX.json.lock' => 'AbeilleLQI.lock'
+-   Interne: Zigbee const: Ajout 'device ID' pour lighting.
+-   Interne: tools: Amélioration sync_all.sh
+-   Interne: Zigbee consts: Mises-à-jour cluster 0102.
+-   Interne: createDevice() revu.
+-   Interne: Cmd 'info' n'est plus mise à jour systématiquement par valeur cmd 'action'.
+-   Support EmberZnet/EZSP: Qq avancées mineures.
+-   Onglet avancé: Ajout 'Type logique' & 'MAC capabilities'.
+-   Réparation: Améliorations.
+-   Carte réseau: Utilisation du 'logical type' du node descriptor au lieu de la réponse 'LQI mgmt rsp' souvent fausse.
+-   Modèles d'équipement: Réajout info 'Time-TimeStamp' + suppression 'Time-Time'.
+
+## 240610-BETA-1
+
+-   Support EmberZnet/EZSP: Encore des tas de modifs
+-   GL-D-002P, GLEDOPTO: Ajour support preliminaire (2708).
+-   Assistant modèle: Améliorations mineures.
+-   NodOn SIN-4-RS-20: Support préliminaire (2709).
+-   Interne: Corrections pour changement d'un modèle local à officiel.
+-   NodOn SIN-4-FP-21: Support préliminaire.
+-   Interne: Améliorations 'check_json'.
+-   Modèle d'équipement: Amélioration 'valueOffset': Ajout support '#valueswitch-XXXX#'
+-   Assistant modèle: Ajout du type générique.
+-   Modèles d'équipement: Suppression info 'Time-TimeStamp'.
+-   Interne: Zigate cmd: Correction 'cmd-0102' pour 'set tilt percent'.
+-   Interne: Parser: Correction mineure pour fin OTA.
+-   Interne: Parser: Lecture attr 0006/DateCode & 4000/SWBuildId cluster 0000 si manquants.
+-   Equipement/avancé: Ajout support cmd-0102/WindowCovering.
+-   GL-C-007P, GLEDOPTO: Modèle revu.
+-   Support: Fichiers JSON réseau ajoutés au package de logs.
+-   Placement réseau: Améliorations & corrections analyse réseau.
+-   Interne: Cmd: Taille queue 'xToCmd' augmentée à 1024.
+-   Support Moes UFO-R11: Correction regression.
+
+## 240519-BETA-1
+
+-   Interne: Suppression fichiers obsoletes.
+-   Zigates: Fonctionnement en mode 'brut' à partir de maintenant.
+-   Interne: AbeilleTools::getParameters() => getConfig().
+-   Support EmberZnet: C'est parti mais rien d'utile à ce stade.
+-   DB config: évolutions:
+
+    -   Ajout 'ab::gtwType' (zigate ou ezsp)
+    -   'ab::zgEnabledX' => 'ab::gtwEnabledX'
+    -   'ab::zgTypeX' => 'ab::gtwSubTypeX'
+    -   'ab::zgPortX' => 'ab::gtwPortX'
+    -   'ab::zgIpAddrX' => 'ab::gtwIpAddrX'
+
+-   Page de config
+
+    -   Ajout support prélim clef 'EZSP'.
+    -   Améliorations support Zigate v2.
+
+-   Onglet avancé Zigate
+
+    -   Mode 'normal' désactivé. Mode 'brut' par défaut.
+    -   Amélioration aspect visuel.
+
+-   Support multi-passerelles: Des tas de modifs internes.
+-   Interne: Cmd: Mise-à-jour 'getBindingTable()' (suppression champ 'address')
+-   Dépendances nécessaires: Ajout 'pyserial'.
+-   Interne: Cmd: 'TxPower' => 'zgSetTxPower'
+-   Zigate/avancé: Ajout controle puissance TX.
+-   Interne: Corrections: Cmd averti lors de toute mise-à-jour d'un équipement.
+
+## 240501-STABLE-1
 
 **Mise-à-jour de modèles**
 
@@ -11,9 +109,9 @@
 
 **Zigates v2/+**
 
-    - Malheureusement ne vous attendez à rien de vraiment stable avec ce modèle.
+    - Malheureusement ce modèle montre de grosses instabilités et ne doit pas être considéré pour une solution robuste.
     - La maturité de la v2 n'est pas au niveau de la v1 et malgré ça, il n'y a pas eu de mises-à-jour depuis un moment. D'après differents retours le dernier FW dispo (3.A0) n'est pas le + stable mais le précédent (**3.22**). Nous vous conseillons de faire la mise-à-jour vers celui ci.
-    - FW **v3.22 FORTEMENT RECOMMANDE**.
+    - FW **v3.22 FORTEMENT RECOMMANDE** avec un **EFFACEMENT COMPLET** lors de la mise-à-jour.
 
 **Zigates v1**
 
@@ -26,6 +124,18 @@
       - La version OPDM corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
       - Les firmwares avant 3.1e sont forcement 'legacy'.
       - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
+
+-   Interne: Parser: Suppression support message 8040 pour compatibilité mode raw.
+-   Interne: Zigbee const: Ajout zbGetZDPStatus().
+-   ZLinky: Mise-à-jour du modèle (2704).
+-   Interne: Version DB config gelée => '20240430'.
+-   Page maintenance: Suppression du fichier zippé après transfert DESACTIVE. A revoir.
+
+## 240425-BETA-1
+
+-   Page config: Corrections test de port.
+
+## 240423-BETA-7
 
 -   Moes ZM-105-M: Support préliminaire (2697).
 -   Interne: Amélioration msg dbg OTA.

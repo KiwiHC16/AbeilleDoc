@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2024-06-24
+Dernière mise-à-jour le 2024-08-11
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -913,7 +913,7 @@ Xiaomi, , Xiaomi Gaz Sensor
 .. image:: ../images/node_XiaomiSensorGaz.png
    :width: 200px
 
-Xiaomi, ?, Xiaomi Smoke Sensor
+Xiaomi, JTYJ-GD-01LM/BW, Xiaomi Smoke Sensor
 
 .. image:: ../images/node_Xiaomi-SmokeSensor.png
    :width: 200px
@@ -1011,6 +1011,11 @@ Heiman, HS1SA, Heiman HS1SA smoke sensor
 Frient, SMSZB-120, Frient smoke alarm
 
 .. image:: ../images/node_Frient-SMSZB-120.png
+   :width: 200px
+
+Sonoff, SNZB-01P, Sonoff wireless button
+
+.. image:: ../images/node_Sonoff-Button.png
    :width: 200px
 
 Sonoff, SNZB-02D, Sonoff temperature & humidity display
@@ -1326,6 +1331,11 @@ Ikea, ICTC-G-1, Ikea Tradfri wireless dimmer
 Ikea, Tredansen, Ikea black-out cellular blind
 
 .. image:: ../images/node_Ikea-Tredansen-White.png
+   :width: 200px
+
+Ikea, TRETAKT, Ikea smart plug
+
+.. image:: ../images/node_Ikea-Plug.png
    :width: 200px
 
 Profalux, Remote, Profalux remote

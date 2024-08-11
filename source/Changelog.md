@@ -1,7 +1,75 @@
 # ChangeLog
 
--   Analyse réseau: Corrections.
--   Modèles d'équipement: 'Time-Time' est de retour mais 'Time-TimeStamp' définitivement supprimé.
+-   Interne: Modifications pour future fusion cmd/parser:
+    -   Parser: $GLOBALS['eqList'] => $GLOBALS['devices']
+    -   Parser: ieee/macCapa/rxOnWhenIdle déplacé dans 'zigbee'.
+-   Amélioration: Infos clefs: Ajout 'last LQI'.
+-   Correction: Parser: Erreur interne.
+-   Amélioration: Livolo TI0001: Amélioration modèle.
+- Amélioration: Xiaomi sensor smoke. Modèle revu (2723).
+- Amélioration: Cmd: Support valeur préfixée par '0x'.
+
+## 240808-BETA-1
+
+-   Amélioration: Page santé. Satus des gateways raffraichi toutes les secondes.
+-   Corrections: Modele Xiaomi detecteur fumée (2723).
+-   Module volet roulant TS130F: Modèle en cours de revue (2719).
+-   Amélioration: Plus besoin de redémarrer démons apres changement niveau de log.
+-   Amélioration: Maintenance/infos clefs.
+-   Correction: Cmd: Status TX corrigé en 'ok' meme si 'rx OFF when idle'.
+-   Amélioration: Zigate: Tentative d'ajout possibilité de changer 'Extended PAN ID' pour cas Livolo. Ne fonctionne pas !
+-   Amélioration: Cmd->Zigate: Cas Zigate 'busy'.
+-   Amélioration: Cmd/config Zigate.
+-   Correction: Parser: Suppression du message 'Requesting simple descriptor for EP '.
+
+## 240802-BETA-1
+
+-   Correction: 'Commande 0102-01- inconnue' (2719).
+-   Sonoff SNZB-01P: Mise-à-jour du modèle (2716).
+-   Correction collecte LQI: Code C1 n'est plus un timeout mais 'aucun eq en vie'.
+-   Corrections Zigate/avancé:
+    -   Affichage version FW Zigate (cmde 'FW-Version' manquante).
+    -   Affichage canal Zigate (cmde 'Network-Channel' manquante).
+    -   Affichage PAN-ID & Ext PAN-ID.
+    -   Affichage status réseau.
+    -   Affichage TX power.
+-   Amélioration infos clefs: Affichage du mode de log courant.
+
+## 240710-BETA-2
+
+-   Amélioration: OWON THS-317-ET: Lecture température avant premier reporting (2706).
+-   Profalux MAI-ZTP20F/C: Ajout modèle (2717).
+-   Sonoff SNZB-01P: Support préliminaire (2716).
+-   Ikea TRETAKTSmartplug: Support préliminaire (2718).
+
+## 240704-BETA-1
+
+-   Améliorations analyse réseau.
+-   Améliorations placement réseau
+    -   La télécommande virtuelle n'est pas affichée.
+    -   Affichage des équipements pas trouvés dans le réseau sans tête de mort jusqu'a mieux.
+-   Correction: Format padding base64 utilisé par télécommande universelle.
+
+## 240630-BETA-2
+
+-   Améliorations: Analyse réseau. Toujours pour contourner mauvaises infos remontées de certains routers.
+-   Corrections: Identification: Pas d'interrogation modelId/manufId si pas de cluster 0000.
+-   Améliorations: Analyse réseau: Indique si le routeur ne répond pas. Affichage par une tête de mort.
+-   Améliorations: Page EQ/avancé: Support extended pour 'getIeeeAddress'.
+-   Interne: Support 'Mgmt_ieee_req/rsp' pour type 'extended'.
+-   Améliorations graphique des liens: Affiche les équipements connus d'Abeille mais pas dans le réseau Zigbee (ou sans vie).
+-   Améliorations placement réseau
+    -   Alignement des couleurs avec 'Graphique des liens'.
+    -   Ajout légende.
+    -   Ajout des équipements connus de Jeedom mais plus visibles sur le réseau (sans vie).
+    -   Ajout tête de mort sur équipement sans vie.
+
+## 240624-BETA-1
+
+-   Corrections: Analyse réseau.
+-   Corrections: Modèles d'équipement: 'Time-Time' est de retour mais 'Time-TimeStamp' définitivement supprimé.
+-   Corrections: Status interne Zigate n'est pas 'rxOnWhenIdle'.
+-   Améliorations: Processus de réparation.
 
 ## 240622-BETA-2
 

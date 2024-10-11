@@ -1,13 +1,94 @@
 # ChangeLog
 
+-   Amélioration: Tuya human presence sensor. Ajout de signatures alternatives (2727).
+-   Amélioration: Tuya human presence sensor. Mise-à-jour image & modèle (2727).
+-   Amélioration interne: Moniteur. Augmentation taille queue.
+-   Amélioration interne: Support telecommandes universelles (Zosung).
+-   Amélioration modèles: Ajout support '#valueFormat-XXX#' pour formatter la valeur d'une commande.
+-   Amélioration interne: check_json
+-   Nettoyage modèles: Suppression support '#cmdInfo*XXX*#' (remplacé par '#logicidXX#')
+-   Amélioration NodOn SIN-4-FP-21: Mise-à-jour du modèle.
+-   Nouveau: Support Tuya 'PIR motion sensor' (TS0202\_\_TZ3040_bb6xaihh): Modèle preliminaire (2728).
+
+## 241008-BETA-1
+
+-   Correction: Interne: PHP8 warning.
+-   Améliorations: Modéles: Suppression cmd obsolete 'setReportLightColorSpectre' => 'act_zbConfigureReporting2'
+-   Améliorations: Modéles: Suppression cmd obsolete 'setReportPuissanceLegrand' => 'act_zbConfigureReporting2'
+-   Correction: Erreur interne cmd 'setReport'.
+-   Amélioration: Interne cmd.
+-   Amélioration interne cmd: checkZigatesStatus() => intégré dans processCmdQueues()
+-   Amélioration interne: Description clusters 0000 & 0001 pour profile ID 0000.
+-   Amélioration: Page infos clefs: Ajout 'Extended PAN ID'.
+-   Correction interne: AbeilleCmdQueue.
+-   Correction interne: Parser: Ne prend en compte que voisins dans reseau courant (Mgmt_lqi_rsp).
+-   Correction interne: Page config. Selection mode developer.
+-   Nouveau: Support Tuya human presence sensor (2727).
+-   Améliorations internes: Cmdes 'pending' nettoyées sur chaque 'device announce'
+
+## 240920-BETA-3
+
+-   Corrections: Page config & mode dev.
+-   Amélioration: Page config. Firmware proposé en fonction de la version de Zigate (v1 ou v2).
+-   Améliorations: Script ligne de commande 'checkZigate.sh'. Meilleur support de certaines erreurs.
+-   Améliorations: Scripts ligne de commande 'dumpZigate.sh' + 'flashZigate.sh'
+-   Corrections: Interne: Syntaxe PHP8.
+-   Corrections: Interne: install.php & AbeilleTools.class.php
+-   Amélioration: Flasher PI Zigate: Création package standalone.
+-   Correction: Page santé. Crash interne si plusieurs autre passerelles désactivées.
+-   Correction: Parser: mktime() sur systeme 32bits.
+
+## 240902-BETA-1
+
+-   Amélioration: Support préliminaire Sonoff SNZB-06P capteur de présence (2726).
+-   Corrections: Interne parser.
+-   Amélioration: Modèle Sonoff TH01 revu pour réduire fréquence reporting.
+-   Sirene iAlarm: Mises-à-jour du modèle (2629).
+-   Tuya detecteur fumée Tuya TS0205: Mise-à-jour du modèle (2658).
+-   Corrections: Equipement mal supprimé (parser).
+-   Améliorations: Interne (parser): eqModel['modelId'/'manufId'/'location'] => eq['zigbee']
+-   Améliorations: Interne parser: eq['manufCode'/'logicalType'] => eq['zigbee']
+
+## 240823-BETA-1
+
+-   Correction: Collecte LQI erreur ' msgToCmd() ERROR 22 in AbeilleLQI'.
+
+## 240821-BETA-1
+
+-   Amélioration: Xiaomi smoke sensor: Ajout 'Battery low' (2723).
+-   Amélioration: Maintenance/infos clefs
+-   Correction: Interne cmd 'setLevel': 'Level' => 'level'
+-   Correction: Virtual remoten cmd on/off group (2724).
+-   Correction: Xiaomi smoke sensor: Nettoyage modèle (2723).
+-   Correction: Xiaomi gaz sensor: Nettoyage modèle.
+-   Correction: Interne cmd 'setLevel': 'EP' => 'ep'
+
+## 240819-BETA-1
+
 -   Interne: Modifications pour future fusion cmd/parser:
     -   Parser: $GLOBALS['eqList'] => $GLOBALS['devices']
-    -   Parser: ieee/macCapa/rxOnWhenIdle déplacé dans 'zigbee'.
+    -   Parser: ieee/macCapa/rxOnWhenIdle/endPoints déplacé dans 'eq[zigbee]'.
+    -   Cmd: ieee/rxOnWhenIdle/txStatus déplacé dans 'eq[zigbee]'.
+    -   Cmd: jsonId remplacé par 'eq[eqModel][modelName]'.
+    -   Cmd: jsonLocation remplacé par 'eq[eqModel][modelSource]'.
+    -   Cmd: modelForced/modelPath déplacé dans 'eq[eqModel]'.
 -   Amélioration: Infos clefs: Ajout 'last LQI'.
 -   Correction: Parser: Erreur interne.
 -   Amélioration: Livolo TI0001: Amélioration modèle.
-- Amélioration: Xiaomi sensor smoke. Modèle revu (2723).
-- Amélioration: Cmd: Support valeur préfixée par '0x'.
+-   Amélioration: Xiaomi sensor smoke. Modèle revu (2723).
+-   Amélioration: Cmd: Support valeur préfixée par '0x'.
+-   Amélioration: Cmd: Ajout support 'repeat' pour repeter une action jusqu'a acquittement (Attention !! Limiter son usage).
+-   Améliorations: Interne cmd.
+-   Améliorations: Interne main daemon: Config sauvé en global.
+-   Amélioration: Interne parser: Suppression warning si queue 'main' pleine.
+-   Amélioration: Redémarrage de tous les démons si une des queues est saturée (>50 messages).
+-   Amélioration: Interne cmd: setCertificationCE/FCC => 'zgSetCertification'.
+-   Correction: Interrogation 'nwk_addr_req'.
+-   Amélioration: Ajout type de requete pour 'nwk_addr_req'.
+-   Amélioration: Interne: Clefs queues prefixées par '0xAB'.
+-   Amélioration: Interne moniteur: 1 seule queue de lecture.
+-   Correction: Cmde Zigate 'Set inclusion mode' de retour pour cas spécific Livolo TI0001 (2609).
+-   Correction: Mauvaise permission pour queue 'xToAbeille'.
 
 ## 240808-BETA-1
 

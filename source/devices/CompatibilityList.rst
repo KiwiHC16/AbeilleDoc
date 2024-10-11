@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2024-08-11
+Dernière mise-à-jour le 2024-10-11
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -1023,6 +1023,11 @@ Sonoff, SNZB-02D, Sonoff temperature & humidity display
 .. image:: ../images/node_Sonoff-TempHumidityDisplay.png
    :width: 200px
 
+Sonoff, SNZB-06P, Sonoff Human Presence Sensor
+
+.. image:: ../images/node_Sonoff-PresenceSensor.png
+   :width: 200px
+
 Schneider, WISER Unica, Schneider wiser unica plug
 
 .. image:: ../images/node_Schneider-Wiser-Plug.png
@@ -1593,6 +1598,11 @@ Tuya, Display, Tuya temperature & humidity display sensor
 .. image:: ../images/node_Tuya-TempHumidityDisplay.png
    :width: 200px
 
+Tuya, 809WZT, Tuya PIR motion sensor
+
+.. image:: ../images/node_Tuya-PIR-MotionSensor.png
+   :width: 200px
+
 Tuya, ZM-CG205, Tuya ZM-CG205 door sensor
 
 .. image:: ../images/node_Tuya-DoorSensor-ZM-CG205.png
@@ -1711,6 +1721,11 @@ Livarno home, HG07834B, Livarno home bulb
 Tuya, TS0505B, Tuya TS0505B GU10 color bulb
 
 .. image:: ../images/node_Generic-BulbGU10-Color.png
+   :width: 200px
+
+Tuya, Presence sensor, Tuya human presence sensor
+
+.. image:: ../images/node_Tuya-PresenceAndIlluminance-2.png
    :width: 200px
 
 Saswell, SAS980SWT-7-Z01(EU), Saswell irrigation valve

@@ -1,5 +1,42 @@
 # ChangeLog
 
+**Mise-à-jour de modèles d'équipement**
+
+    - Malgré la volonté de faire des évolutions les plus transparentes possibles, il se peut que certains équipements nécessitent d'être mis-à-jour à partir de leur dernier modèle pour à nouveau fonctionner correctement.
+
+      - Si ils sont sur batterie, réinclusion nécessaire.
+      - Si sur secteur, aller à la page 'avancé' et bouton 'mise-à-jour'.
+    - ATTENTION ! Modèle RWL021 modifié. Revoir vos scenarios si besoin. (voir 1243).
+
+-   Amélioration: Modèle d'équipement avec support 'private': Ajout du type 'generic'.
+-   Amélioration: Philips RWL021: Mise-à-jour modèle (1243). Attention à revoir scenario si besoin !!
+-   Amélioration: Ajout support Philips RWL020.
+-   Amélioration: Suppression de cmdes obsoletes 'boutonStateRWL021_X.json'.
+-   Amélioration: Interne parser pour lecture de config reporting.
+-   Amélioration: Nous A1Z smart socket: Modèle revu pour réduire les reportings (2729).
+
+## 241117-BETA-1
+
+-   Amélioration: Modèle pour Tuya 2 keys remote (2731).
+-   Amélioration: Support Tuya: Ajout function générique 'rcvValueEnum'.
+-   Correction: Regression telecommande virtuelle => Mise-à-jour automatique (2732).
+
+## 241115-BETA-1
+
+-   Amélioration: Philips RWL021: Mise-à-jour modèle (1243).
+-   Amélioration: Nom de qq images normalisé.
+-   Amélioration: Support section 'variables' des modeles.
+-   Amélioration: Interne cmd: Variable 'Groupe' n'est plus supportée => Section 'variables'
+
+## 241107-STABLE-1, 241107-BETA-1
+
+-   Correction: Fichiers corrompus à l'installation.
+-   Amélioration: Moes MS105B: Amélioration modèle (2473).
+
+## 241106-BETA-1
+
+-   Correction: Regression sur envoie cmdes Tuya (2467).
+
 ## 241104-STABLE-1, 241104-BETA-1
 
 **Mise-à-jour de modèles**

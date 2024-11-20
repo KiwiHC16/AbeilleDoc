@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2024-11-04
+Dernière mise-à-jour le 2024-11-20
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -83,9 +83,19 @@ Orvibo, CM10ZW, Orvibo multi-functional relay
 .. image:: ../images/node_Orvibo-CM10ZW.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Orvibo, ST30, Orvibo ST30 temperature/humidity sensor
 
 .. image:: ../images/node_Orvibo-ST30.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Ledvance, AC33907, Ledvance E27 tunable white bulb
@@ -178,6 +188,31 @@ Heiman, HS1CA ?, Heiman smart CO sensor
 .. image:: ../images/node_Heiman-COSensor.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 , , Heiman HS1CA (détecteur de monoxyde de carbone)
 
 .. image:: ../images/node_COSensor-EM.png
@@ -261,6 +296,36 @@ Sonoff, SNZB-04, Sonoff Door/Window Sensor
 Danfoss, 014G2461, Dansfoss Ally radiator thermostat
 
 .. image:: ../images/node_Danfoss-Ally-Thermostat.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 , , Flex RGBW OSRAM
@@ -386,6 +451,36 @@ Gledopto, GL-SD-001, Gledopto GL-SD-001 AC dimmer
 Heiman, HS1HT, Heiman temp and humidity sensor
 
 .. image:: ../images/node_Heiman-TempHumidity.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Icasa, ICZB-DC11, Icasa LED dimmer
@@ -533,6 +628,16 @@ Philips, LTW001, Philips Hue white ambiance
 .. image:: ../images/node_PhilipsHue-E27Bulb-WhiteAmbiance.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 , , Philips Hue white ambiance
 
 .. image:: ../images/node_LTW010.png
@@ -623,6 +728,16 @@ Profalux, MAI-ZTS, Profalux gen 2 remote control
 .. image:: ../images/node_Profalux-Remote.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Legrand, 064888, Legrand micro module switch
 
 .. image:: ../images/node_Legrand-MicromoduleSwitch.png
@@ -631,6 +746,41 @@ Legrand, 064888, Legrand micro module switch
 Profalux, Shutter gen 2, Profalux shutter gen 2
 
 .. image:: ../images/node_Profalux-Shutter.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Xiaomi, RTCGQ14LM/MS-S02, Xiaomi Aqara motion sensor P1
@@ -651,6 +801,11 @@ Osram, MR16TW, Osram Smart+ MR16 bulb
 Sonoff, SNZB-03, Sonoff motion sensor
 
 .. image:: ../images/node_Sonoff-SNZB-03.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Aeotec, GP-AEOMPSEU, Aeotec Multipurpose Sensor
@@ -716,6 +871,11 @@ Osram, Plug, Osram Smart+ plug
 Ledvance, Plug Z3, Ledvance on/off plug
 
 .. image:: ../images/node_Ledvance-PlugZ3.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 , , PROFALUX Light
@@ -850,7 +1010,12 @@ Ikea, E2201, Ikea RODRET dimmer
 
 Philips, RWL021, Hue Dimmer Switch RWL021
 
-.. image:: ../images/node_RWL021.png
+.. image:: ../images/node_Philips-Remote.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Sonoff, S26R2ZB, Sonoff S26R2ZB Smart Plug
@@ -871,6 +1036,11 @@ Xiaomi, WXKG03LM, Xiaomi single rocker switch
 Xiaomi, WXKG02LM, Xiaomi double rocker switch
 
 .. image:: ../images/node_XiaomiButtonSW861.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Xiaomi, , Xiaomi Cube
@@ -933,6 +1103,11 @@ Xiaomi, WXKG12LM, Xiaomi Aqara mini switch
 .. image:: ../images/node_Xiaomi-Button-2.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Xiaomi, , Xiaomi Aqara water leak sensor
 
 .. image:: ../images/node_Xiaomi-LeakSensor.png
@@ -941,6 +1116,11 @@ Xiaomi, , Xiaomi Aqara water leak sensor
 Xiaomi, GZCGQ01LM, Xiaomi smart light sensor
 
 .. image:: ../images/node_Xiaomi-LightSensor-1.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Legrand, 067726, Céliane Wired Roller Shutter Switch
@@ -996,6 +1176,46 @@ Philips, SML004, Philips Hue outdoor sensor
 Heiman, HS1SA, Heiman Smoke Sensor
 
 .. image:: ../images/node_SmokeSensor-EM.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 , , Heiman Smoke Sensor
@@ -1111,6 +1331,11 @@ Legrand, 16AX, Legrand 16AX Teleruptor
 Sonoff, SNZB-02, Sonoff temp and humidity sensor
 
 .. image:: ../images/node_Sonoff-SNZB-02.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Schneider, ?, Schneider thermostat
@@ -1318,6 +1543,11 @@ Ikea, 10400408, Ikea signal repeater
 .. image:: ../images/node_Ikea-SignalRepeater.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Ikea, 30W transformer, Ikea 10W transformer
 
 .. image:: ../images/node_Ikea-Transformer.png
@@ -1348,14 +1578,19 @@ Profalux, Remote, Profalux remote
 .. image:: ../images/node_Profalux-Remote.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 , , Zemismart 1 boutons
 
 .. image:: ../images/node_TS0001.png
    :width: 200px
 
-Girier, JR-ZDS01, Girier DIY Smart Switch
+, , 
 
-.. image:: ../images/node_Girier-JR-ZDS01.png
+.. image:: ../images/node_.png
    :width: 200px
 
 Tuya, iHSW02, Tuya mini smart switch
@@ -1363,9 +1598,19 @@ Tuya, iHSW02, Tuya mini smart switch
 .. image:: ../images/node_Tuya-MiniSmartSwitch.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Tuya, 1ch switch, Tuya 1ch switch module
 
 .. image:: ../images/node_Tuya-1ChanSwitchModule.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 , , Zemismart 2 boutons
@@ -1381,6 +1626,16 @@ Tuya, 1ch switch, Tuya 1ch switch module
 MHCOZY, ZG-005-RF, Smart Switch 4 chan relay
 
 .. image:: ../images/node_Mhcozy-ZG-005-RF.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 , , Yagusmart Tuya ZigBee Smart Switch 1 Bang
@@ -1403,6 +1658,11 @@ Avatto, Z-N-WSM01, Avatto 1 channel switch module
 .. image:: ../images/node_defaultUnknown.png
    :width: 200px
 
+Tuya, LKWSZ211, Tuya 2 keys remote
+
+.. image:: ../images/node_Tuya-2KeysRemote.png
+   :width: 200px
+
 , , Zemismart Remote 1 bouton sur pile
 
 .. image:: ../images/node_TS0041.png
@@ -1421,6 +1681,21 @@ Zemismart, YC-ZS-LO3C-A, Zemismart 2 buttons wireless switch
 LoraTap, SS600ZB, LoraTap 3 gang remote
 
 .. image:: ../images/node_LoraTap-3GangRemote.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Tuya, TS0044, Tuya 4 buttons scene switch
@@ -1446,6 +1721,11 @@ Loratap, SS9600ZB-YA, Loratap 6 buttons remote
 Moes, ZN358218, Moes IP55 smart button
 
 .. image:: ../images/node_Tuya-SmartButton.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Silvercrest, HG08164, Silvercrest smart button
@@ -1498,9 +1778,54 @@ Sixwgh, WH025, Sixwgh WH025 plug
 .. image:: ../images/node_Tuya-SmartSocket-2.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Tuya, TS011F, Tuya smart plug
 
 .. image:: ../images/node_Tuya-SmartSocket.png
+   :width: 200px
+
+Nous, A1Z, Nous smart socket
+
+.. image:: ../images/node_Nous-SmartSocket.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Aubess, Plug, Aubess smart plug
@@ -1508,9 +1833,9 @@ Aubess, Plug, Aubess smart plug
 .. image:: ../images/node_Tuya-SmartSocket-2.png
    :width: 200px
 
-Nous, A1Z, Nous smart socket
+, , 
 
-.. image:: ../images/node_Nous-SmartSocket.png
+.. image:: ../images/node_.png
    :width: 200px
 
 UseeLink, SM-SO306, 4 gang switch, with USB
@@ -1533,6 +1858,31 @@ Silvercrest, HG06338-FR, Silvercrest power strip USB SPSZ 3 A1
 .. image:: ../images/node_TS011F__TZ3000_vzopcetz.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Silvercrest, HG06337-FR, Silvercrest connected plug
 
 .. image:: ../images/node_Silvercrest-HG06337-FR.png
@@ -1546,6 +1896,16 @@ Tuya, Wall plug, Tuya wall plug
 Silvercrest, HG08673-FR, Silvercrest smart plug
 
 .. image:: ../images/node_Silvercrest-SmartPlug-Power.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Tuya, TS0121, Tuya TS0121
@@ -1578,14 +1938,39 @@ Blitzwolf, BW-IS4, Blitzwolf temp/humidity display
 .. image:: ../images/node_Blitzwolf-Display.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Tuya, IH-K009, Tuya temperature & humidity sensor
 
 .. image:: ../images/node_Tuya-IH-K009.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Tuya, Temp, Tuya temp and humidity
 
 .. image:: ../images/node_Tuya-TempHumidity.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 NIKJEBDF, ?, NIKJEBDF temperature/humidity sensor/display
@@ -1603,9 +1988,59 @@ Tuya, 809WZT, Tuya PIR motion sensor
 .. image:: ../images/node_Tuya-PIR-MotionSensor.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Tuya, ZM-CG205, Tuya ZM-CG205 door sensor
 
 .. image:: ../images/node_Tuya-DoorSensor-ZM-CG205.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Zemismart, ZXZDS, Zemismart door & window sensor
@@ -1623,9 +2058,39 @@ Tuya, RP280, Tuya zigbee 3.0 repeater
 .. image:: ../images/node_Tuya-Repeater-RP280.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Tuya, TS0210, Tuya vibration sensor
 
 .. image:: ../images/node_Tuya-VibrationSensor.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Moes,  ZSS-ZK-THL, Moes smart brightness thermometer
@@ -1656,6 +2121,16 @@ Tuya, Tuya human presence detector, ZG-205x
 Tuya, TS0501B , Tuya Single Color LED Controller
 
 .. image:: ../images/node_Tuya-TS0501B-LedController.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Lidl, HG07878C, Lidl E27 dimmable bulb
@@ -1723,9 +2198,29 @@ Tuya, TS0505B, Tuya TS0505B GU10 color bulb
 .. image:: ../images/node_Generic-BulbGU10-Color.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Tuya, Presence sensor, Tuya human presence sensor
 
 .. image:: ../images/node_Tuya-PresenceAndIlluminance-2.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Saswell, SAS980SWT-7-Z01(EU), Saswell irrigation valve
@@ -1738,6 +2233,21 @@ Moes, BHT-002-GCLZBW, Moes thermostat
 .. image:: ../images/node_Moes-Thermostat.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Moes, BRT-100, Moes thermostatic head
 
 .. image:: ../images/node_Moes-ThermostaticHead.png
@@ -1748,6 +2258,21 @@ Moes, MS-105BZ, Moes dual dimmer module
 .. image:: ../images/node_Generic-2GangDimmerModule.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Tuya, PIR+illuminance, Tuya PIR + illuminance sensor
 
 .. image:: ../images/node_Tuya-PIR-Illuminance.png
@@ -1756,6 +2281,21 @@ Tuya, PIR+illuminance, Tuya PIR + illuminance sensor
 Tuya, TV02, Tuya TV02
 
 .. image:: ../images/node_Tuya-TV02.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Moes, MS-105Z, Moes smart dimmer
@@ -1788,9 +2328,24 @@ Aubess, ?, Aubess smoke sensor
 .. image:: ../images/node_Aubess-SmokeSensor.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Tuya, RSH-AirBox01, Tuya Smart Air Box 01
 
 .. image:: ../images/node_Tuya-RSH-AirBox01.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Tuya, PJ-1203A, Tuya electricity energy monitor
@@ -1823,6 +2378,11 @@ Moes, UFO-R11, Moes universal smart IR remote control
 .. image:: ../images/node_Moes-UniversalRemote.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Moes, TS130F, Moes curtain module
 
 .. image:: ../images/node_Moes-CurtainModule.png
@@ -1833,6 +2393,11 @@ Girier, Curtain, Girier curtain module
 .. image:: ../images/node_Tuya-CurtainModule.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Loratap, SC400ZB-EU v2, Loratap roller shutter touch switch v2
 
 .. image:: ../images/node_Loratap-RollerShutterTouchSwitch-v2.png
@@ -1841,6 +2406,11 @@ Loratap, SC400ZB-EU v2, Loratap roller shutter touch switch v2
 Loratap, SC500ZBv2, Loratap roller shutter module
 
 .. image:: ../images/node_Loratap-RollerShutterModule.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Tuya, QS-zigbee-C01, Tuya QS-zigbee-C01 curtain module
@@ -1888,9 +2458,39 @@ Heiman, HS2WD, Heiman warning device
 .. image:: ../images/node_Heiman-IndoorSiren.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Heiman, HS1WL/HS3WL, Heiman water leakage sensor
 
 .. image:: ../images/node_Heiman-WaterSensor.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Sonoff, SNZB-01, Sonoff wireless button

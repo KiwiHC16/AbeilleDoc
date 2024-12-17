@@ -17,7 +17,7 @@
     <script src="_static/translations.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="prev" title="Do It Yourself" href="DIY.html" />
+    <link rel="prev" title="Divers" href="Divers.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -45,23 +45,22 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="DIY.html" title="Chapitre précédent">Do It Yourself</a></li>
+      <li>Previous: <a href="Divers.html" title="Chapitre précédent">Divers</a></li>
   </ul></li>
 </ul>
 </div><h3>Navigation</h3>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="Bienvenu.html">Bienvenue dans le plugin “Abeille”</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bienvenue.html">Bienvenue dans le plugin “Abeille”</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Utilisation.html">Utilisation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UtilisationAvancee.html">Utilisation avancée</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AjoutNouvelEquipement.html">Ajout d’un nouvel équipement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Support.html">Support</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Plugin “Abeille”: changeLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Changelog.html">ChangeLog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentation.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devices/Equipements.html">Equipements supportés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions fréquentes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Divers.html">Divers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DIY.html">Do It Yourself</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Developpement</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#grandes-lignes">Grandes lignes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#vue-generale">Vue générale</a></li>
@@ -81,12 +80,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#procedures-de-mise-a-jour">Procédures de mise-à-jour</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#a-partir-du-market">A partir du market</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#a-partir-de-github">A partir de GitHub</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#format-de-la-db-jeedom">Format de la DB Jeedom</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#configuration-table-config">Configuration (table config)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#equipement-table-eqlogic">Equipement (table eqLogic)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#commandes-table-cmd">Commandes (table cmd)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#le-processus-d-inclusion">Le processus d’inclusion</a><ul>
@@ -340,180 +333,6 @@ Les démons n’étant rien d’autre que des codes ou classes, je suggère de c
 <ul class="simple">
 <li><p>Pas ou tres peu de controle à chaque étape. Un pb de manque de place peut passer inapercu jusqu’au mauvais fonctionnement du plugin.</p></li>
 <li><p>Les droits des fichiers (en particulier des scripts ou autre binaire) semblent ignorés et pas restaurés.</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="format-de-la-db-jeedom">
-<h2>Format de la DB Jeedom<a class="headerlink" href="#format-de-la-db-jeedom" title="Lien permanent vers cette rubrique">¶</a></h2>
-<p>Ce chapitre décrit le format de la database Jeedom appliqué au plugin « Abeille ».</p>
-<p>CE DOCUMENT EST INCOMPLET !!!
-Derniere update: 07/oct/22</p>
-<div class="section" id="configuration-table-config">
-<h3>Configuration (table config)<a class="headerlink" href="#configuration-table-config" title="Lien permanent vers cette rubrique">¶</a></h3>
-<ul>
-<li><p>plugin: « Abeille »</p></li>
-<li><p>key</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>ab::zgEnabled1 .. 10: Indique si la Zigate X est activée.</p></li>
-<li><p>ab::zgIeeeAddrOk1 .. 10: Indique si la vérification de l’adresse IEEE est correcte pour éviter les switchs de port.</p></li>
-<li><p>ab::zgIeeeAddr1 .. 10: Adresse IEEE de la Zigate X.</p></li>
-<li><p>ab::defaultParent: Objet parent par défaut utilisé lors de l’inclusion d’un nouvel équipement.</p></li>
-<li><p>ab::zgPort1 .. 10: port (ex: /dev/ttyS1)</p></li>
-<li><p>ab::zgType1 .. 10: Type de Zigate X.</p></li>
-<li><p>ab::dbVersion</p></li>
-<li><p>ab::zgIdAddr1 .. 10: Adresse IP de la zigate Wifi</p></li>
-<li><p>ab::monitorId: ID de l’équipement à surveiller par AbeilleMonitor.</p></li>
-<li><p>ab::preventLQIAutoUpdate: Option avancée pour empecher (si “yes”) les requètes LQI à minuit. Certains équipements rebootent suite à ça.</p></li>
-<li><p>Autre clefs ne commencant pas par “ab::” sont des clefs spécifiques Jeedom.</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li></li>
-<li><p>value</p></li>
-</ul>
-</div>
-<div class="section" id="equipement-table-eqlogic">
-<h3>Equipement (table eqLogic)<a class="headerlink" href="#equipement-table-eqlogic" title="Lien permanent vers cette rubrique">¶</a></h3>
-<ul class="simple">
-<li><dl class="simple">
-<dt>id:</dt><dd><p>ID de l’équipement. Affecté par Jeedom.</p>
-</dd>
-</dl>
-</li>
-<li><p>name</p></li>
-<li><p>generic_type</p></li>
-<li><p>logicalId</p></li>
-<li><p>object_id</p></li>
-<li><p>eqType_name</p></li>
-<li><p>configuration</p>
-<ul>
-<li><p>createtime: mis-à-jour par Jeedom à la création de l’équipement.</p></li>
-<li><p>updatetime: mis-à-jour par Jeedom à chaque changement de la configuration.</p></li>
-<li><p>batterytime: mis-à-jour par Jeedom</p></li>
-<li><p>battery_type: Utilisé par Jeedom. Mis à jour par Abeille à partir de « batteryType » du JSON.</p></li>
-<li><p>“ab::jsonId”: Signature zigbee utilisée pour identifier le JSON correspondant (anciennement “modeleJson”).</p></li>
-<li><p>“ab::jsonLocation”: Localisation du JSON (officiel=Abeille, custom/user=local)</p></li>
-</ul>
-</li>
-<li><p>isVisible</p></li>
-<li><p>isEnable</p></li>
-<li><p>status</p>
-<ul>
-<li><dl class="simple">
-<dt>lastCommunication: date(“Y-m-d H:i:s”), mis-à-jour par</dt><dd><ul>
-<li><p>cmd.class.php, event()</p></li>
-<li><p>eqLogic.class.php, checkAlive()</p></li>
-<li><p>eqLogic.class.php, checkAndUpdateCmd()</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</li>
-<li><p>timeout</p></li>
-<li><p>category</p></li>
-<li><p>display</p></li>
-<li><p>order</p></li>
-<li><p>comment</p></li>
-<li><p>tags</p></li>
-</ul>
-</div>
-<div class="section" id="commandes-table-cmd">
-<h3>Commandes (table cmd)<a class="headerlink" href="#commandes-table-cmd" title="Lien permanent vers cette rubrique">¶</a></h3>
-<p>La table « cmd » de Jeedom est formatée comme suit:</p>
-<ul>
-<li><dl class="simple">
-<dt>id: int</dt><dd><p>ID de la commande. Affecté par Jeedom.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>eqLogic_id: int</dt><dd><p>ID de l’équipement auquel la commande est rattachée.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>eqType: varchar</dt><dd><p>« Abeille »</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>logicalId: varchar</dt><dd><p>Nom « logique » de la commande.
-Prend actuellement la clef d’entrée de la commande mais semble inutilisé &amp; redondant avec « topic ».
-A REVOIR côté Abeille !!</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>order: int</dt><dd><p>Ordre d’apparition de la commande (si visible) dans le widget.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>name: varchar</dt><dd><p>Nom Jeedom de la commande.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>configuration: text</dt><dd><p>A priori libre d’utilisation par Abeille donc ne contient que des champs spécifiques Abeille.
-Correct ?</p>
-</dd>
-</dl>
-<ul class="simple">
-<li><p>calculValueOffset: utilisé par Jeedom (cmd.class.php). Ex: « calculValueOffset »: »#value#*10 »</p></li>
-</ul>
-</li>
-<li><dl class="simple">
-<dt>template: text</dt><dd><p>??</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>isHistorized: varchar</dt><dd><p>0 ou 1</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>type: varchar</dt><dd><p>Type de commande: « info » ou « action »</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>subType: varchar</dt><dd><p>Type d’information: « string », « binary », « numeric », « other »</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>unite: varchar</dt><dd><p>Unité de l’information (si cmde info): ex “%”</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>display: text</dt><dd><p>Options d’affichage dans le widget.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>isVisible: int</dt><dd><p>0 ou 1</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>value: varchar</dt><dd><p>??</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>alert: text</dt><dd><p>??</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>generic_type: varchar</dt><dd><p>??</p>
-</dd>
-</dl>
-</li>
 </ul>
 </div>
 </div>

@@ -25,7 +25,7 @@ Il n'est pas possible de supporter les anciennes versions de Jeedom par manque d
 
 **Zigates v1**
 
-    - FW **v3.23 OPDM** recommandé. La version minimale est la '3.1E' mais ne sera bientot plus supportée.
+    - FW **v3.23 OPDM** recommandé.
     - Le dernier FW officiel est le v3.23. Il est recommandé de basculer dessus pour ne pas faire façe à des soucis déja corrigés.
     - D'autre part si vous n'êtes pas en version OPDM (Optimized PDM), il est fortement recommandé de basculer dessus dans les cas suivants:
 

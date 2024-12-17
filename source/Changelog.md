@@ -1,5 +1,20 @@
 # ChangeLog
 
+-   Nouveau: Support Legrand wireless switch (2736).
+-   Amélioration: Interne parser. Cmdes de cluster gérées de maniere generique (EP-CLUST-cmdCC).
+-   Amélioration: Ajout cmde 'inf_batteryVoltToPercent'.
+
+## 241205-BETA-1
+
+-   Correction: Page santé: Erreur 'getHealthDatas' si équipement orphelin sans gateway. (2735)
+
+## 241126-BETA-1
+
+-   Correction: Commande 'Identify'.
+-   Correction: Parser: Support section 'private' pour 'attribut report'.
+
+## 241120-BETA-1
+
 **Mise-à-jour de modèles d'équipement**
 
     - Malgré la volonté de faire des évolutions les plus transparentes possibles, il se peut que certains équipements nécessitent d'être mis-à-jour à partir de leur dernier modèle pour à nouveau fonctionner correctement.

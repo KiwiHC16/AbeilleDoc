@@ -66,29 +66,14 @@ En cas de soucis ou questions n'ayant pas trouvé réponse dans le forum, vous p
 - soit réouvrir un sujet déja clos si le problème existe toujours
 - ou enfin créer un nouveau sujet.
 
-Si vous ouvrez une "issue" merci de fournir le plus d'information possible et en particulier:
+Si vous ouvrez une "issue" merci de
 
-Votre configuration Jeedom:
+Fournir le package de logs
 
-- Le HW sur lequel vous faite tourner le plugin,
-- la Version de l'OS,
-- la version de Jeedom
-- ...
+- Basculer en mode debug si pas déja le cas.
+- Fournir le package de logs disponible via la page "maintenance" + "Telecharger tout"
 
-Votre configuration Gateway
-
-- Type de Zigate
-- quel firmware
-- ...
-
-Les logs, aussi nombreux que possibles surtout
-
-- AbeilleParser
-- AbeilleMQTT
-- Abeille
-- ...
-
-Description
+Bien décrire votre souci
 
 - ce que vous cherchez à faire
 - les résultats

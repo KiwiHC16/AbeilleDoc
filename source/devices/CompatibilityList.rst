@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2024-11-20
+Dernière mise-à-jour le 2024-12-17
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -1121,6 +1121,11 @@ Xiaomi, GZCGQ01LM, Xiaomi smart light sensor
 , , 
 
 .. image:: ../images/node_.png
+   :width: 200px
+
+Legrand, 067646, Legrand wireless shutter switch
+
+.. image:: ../images/node_Legrand-ShutterSwitch.png
    :width: 200px
 
 Legrand, 067726, Céliane Wired Roller Shutter Switch

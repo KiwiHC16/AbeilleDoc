@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2024-12-17
+Dernière mise-à-jour le 2025-02-16
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -291,6 +291,11 @@ Legrand, 067774, Legrand double gang remote switch
 Sonoff, SNZB-04, Sonoff Door/Window Sensor
 
 .. image:: ../images/node_Sonoff-SNZB-04.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Danfoss, 014G2461, Dansfoss Ally radiator thermostat
@@ -788,7 +793,7 @@ Xiaomi, RTCGQ14LM/MS-S02, Xiaomi Aqara motion sensor P1
 .. image:: ../images/node_Xiaomi-MotionSensorP1.png
    :width: 200px
 
-, , Osram Motion Sensor-A
+Osram, AC01353010G, Osram Motion Sensor-A
 
 .. image:: ../images/node_MotionSensor-A.png
    :width: 200px
@@ -1978,6 +1983,31 @@ Tuya, Temp, Tuya temp and humidity
 .. image:: ../images/node_.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 NIKJEBDF, ?, NIKJEBDF temperature/humidity sensor/display
 
 .. image:: ../images/node_Blitzwolf-Display.png
@@ -2046,6 +2076,11 @@ Tuya, ZM-CG205, Tuya ZM-CG205 door sensor
 , , 
 
 .. image:: ../images/node_.png
+   :width: 200px
+
+Moes, ZSS-S01-GWM-C-MS, Moes door sensor
+
+.. image:: ../images/node_Moes-DoorSensor.png
    :width: 200px
 
 Zemismart, ZXZDS, Zemismart door & window sensor
@@ -2303,6 +2338,16 @@ Tuya, TV02, Tuya TV02
 .. image:: ../images/node_.png
    :width: 200px
 
+Tuya, ZG-204ZM, Tuya PIR+24G radar+light sensor
+
+.. image:: ../images/node_Tuya-PresenceAndIlluminance-2.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Moes, MS-105Z, Moes smart dimmer
 
 .. image:: ../images/node_Moes-MS-105Z.png
@@ -2533,6 +2578,11 @@ eWeLink, ZB-SW01, eWeLink ZB-SW01 smart light switch
 .. image:: ../images/node_eWeLink-ZB-SW01.png
    :width: 200px
 
+Lexman, IC-CDZFB2AC005HA-MZN, Lexman E14 white bulb
+
+.. image:: ../images/node_Generic-BulbE14.png
+   :width: 200px
+
 Lexman, CRI80, Lexman GU10 bulb
 
 .. image:: ../images/node_Generic-BulbGU10.png
@@ -2568,11 +2618,6 @@ Sonoff, ZBMINIL2/Extreme, Sonoff Smart Switch
 .. image:: ../images/node_zigbeeExtendedcolorlight.png
    :width: 200px
 
-, , zigbeeIASZone
-
-.. image:: ../images/node_defaultUnknown.png
-   :width: 200px
-
 , , Template for ZigBee - Non Color Scene Controller
 
 .. image:: ../images/node_zigbeeNon-colorscenecontroller.png
@@ -2581,11 +2626,6 @@ Sonoff, ZBMINIL2/Extreme, Sonoff Smart Switch
 , , zigbee Non color controller
 
 .. image:: ../images/node_zigbeeNoncolorcontroller.png
-   :width: 200px
-
-, , zigbeeOccupencySensor
-
-.. image:: ../images/node_defaultUnknown.png
    :width: 200px
 
 , , zigbeeOnOffLight

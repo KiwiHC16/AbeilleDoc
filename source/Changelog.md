@@ -1,5 +1,77 @@
 # ChangeLog
 
+## 250216-BETA-1
+
+**Modèles d'équipement**
+
+    - ATTENTION ! Modèle RWL021 modifié. Revoir vos scenarios si besoin. (voir 1243).
+    - ATTENTION ! Modèle DS01/SBZB-04 modifié. Revoir vos scenarios si besoin.
+
+**Zigates v2/+**
+
+    - Malheureusement ce modèle montre de grosses instabilités et ne doit pas être considéré pour une solution robuste.
+    - Le FW **v3.22** est le meilleur FW du moment (éviter 3.A0, trop de soucis).
+
+**Zigates v1**
+
+    - FW **v3.23 OPDM** ou **AB01-0000** recommandé.
+    - Le dernier FW officiel est le v3.23. Il est FORTEMENT recommandé de basculer dessus pour ne pas faire façe à des soucis déja corrigés.
+    - D'autre part si vous n'êtes pas en version OPDM (Optimized PDM), il est fortement recommandé de basculer dessus dans les cas suivants:
+
+      - Toute nouvelle installation.
+      - Dès lors qu'un réappairage complet est nécéssaire.
+      - La version OPDM corrige bon nombre de potentielles corruptions et supporte un plus grand nombre d'équipements.
+      - Les firmwares avant 3.1e sont forcement 'legacy'.
+      - Mais **ATTENTION** si vous migrez d'une version 'legacy' vers 'OPDM' il vous faudra **effacer la PDM et réapparairer tous vos équipements**.
+
+-   Améliorations: Sonoff SNZB-04 (DS01), modèle revu (2743).
+-   Corrections: Mise-à-jour OTA, otaImageBlockResponse, ajout ACK + prio LOW.
+
+## 250203-BETA-3, ## 250203-BETA-2, ## 250203-BETA-1
+
+-   Corrections: Regression AbeilleMainD + Abeille.class
+-   Améliorations: Sonoff SNZB-04, modèle revu (2743).
+-   Améliorations: Redémarrage des démons si niveau de log modifié (page de config).
+
+## 250128-BETA-2, ## 250128-BETA-1
+
+-   Amélioration: Ajout info 'click' pour Legrand wireless switch (2736).
+-   Amélioration: Outil 'check_json.php' pour commandes inexistantes.
+-   Amélioration: Suppression cmds obsoletes 'presence.json' & 'presenceEP2.json'.
+-   Amélioration: Support Tuya PIR+24G_radar+light ZG-204ZM (2741).
+-   Amélioration: Outil 'check_json.php' pour subType 'slider'.
+-   Amélioration: Script 'resources/scripts/checkZigate.sh'
+-   Corrections: Regression au redémarrage démons (createDevice()).
+-   Corrections: Interne.
+
+## 250115-BETA-2, ## 250115-BETA-1
+
+-   Amélioration: Interne: Démon principal isolé => 'AbeilleMainD'.
+-   Correction: Page de config: liste des FW crée dynamiquement en fonction du type de gateway.
+-   Nouveau: Support Tuya PIR+24G_radar+light ZG-204ZM (2741).
+-   Correction: Config du device utilise dernier modele pour cmds à jour.
+-   Nouveau: Support préliminaire Moes ZSS-S01-GWM-C-MS (2742).
+-   Correction: Les démons ne sont plus relancés 2 fois suite au bouton 'Redémarrer'.
+-   Amélioration: Outil 'check_json.php' pour commandes vides.
+-   Amélioration: Support cmd avec variable (#xxx#).
+
+## 250105-BETA-1
+
+-   Nouveau: Support TS0201, \_TZ3000_fllyghyj (2738).
+-   Correction: Interne: formatAttribute => zbFormatData.
+
+## 250103-BETA-1
+
+-   Correction: Parser: 'Dev announce' ignoré que si FW version < 3.22 (2592).
+-   Correction: Repair.
+-   Correction: Placement réseau. Erreurs PHP.
+-   Amélioration: Interne: Ajout 'AbeilleZigbee'.
+-   Amélioration: Abeille repond 0 à l'attribut 0002 (time cluster).
+-   Amélioration: Assistant modèle.
+-   Nouveau: Support Lexman ampoule E14 (2739).
+
+## 241220-BETA-1
+
 -   Nouveau: Support Legrand wireless switch (2736).
 -   Amélioration: Interne parser. Cmdes de cluster gérées de maniere generique (EP-CLUST-cmdCC).
 -   Amélioration: Ajout cmde 'inf_batteryVoltToPercent'.

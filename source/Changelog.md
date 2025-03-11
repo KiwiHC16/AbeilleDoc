@@ -1,5 +1,20 @@
 # ChangeLog
 
+## 250311-BETA-1
+
+-   Améliorations: 'Repair' nettoie les EP invalides de la partie 'zigbee[groups]'.
+-   Améliorations: Assistant modèle.
+-   Améliorations: Support INNR SP240 (2750).
+-   Améliorations: Modèle SonOff SNZB-02P revu pour réduire le reporting (2748).
+-   Améliorations: Support INNR outdoor smartplug OSP210 (2752).
+
+## 250302-BETA-1
+
+-   Améliorations: Ajout support SonOff SNZB-02P (2748)
+-   Améliorations: Affichage onglet 'avancé'.
+-   Corrections: Suppression 'adresse groupe' onglet avancé => 'variables'
+-   Corrections: Affichage des groupes Zigbee.
+
 ## 250216-BETA-1
 
 **Modèles d'équipement**

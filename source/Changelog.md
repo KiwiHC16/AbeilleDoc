@@ -1,5 +1,36 @@
 # ChangeLog
 
+-   Améliorations: Support variateur Legrand 077701LA (2756).
+-   Améliorations: Interne: Warnings 'check_json.php'.
+-   Améliorations: Remplacement cmdes obsolètes 'setLegrandLEDOff.json' & 'setLegrandLEDOn.json'.
+-   Améliorations: Remplacement cmdes obsolètes 'setLegrandLEDOff_if_on.json' & 'setLegrandLEDOn_if_on.json'.
+-   Améliorations: Commandes: Support préliminaire de groupes de commandes (Ex: 'grp_legrand-Dimmer.json').
+-   Corrections: Modele 'sensor_motion.aq2' revu pour 'Occupancy' dont l'historique s'arrète (2757).
+-   Nouveau: Support nouveaux modeles TS044 (2758).
+-   Améliorations: Interne. 'AbeilleCmd.class' utilisé par 'Abeille.class' seulement.
+-   Améliorations: Onglet 'avancé'.
+
+## 250426-BETA-1
+
+-   Améliorations: Repair: Collecte 'image type'.
+-   Améliorations: Modèles 'CLA60 TW OSRAM' & 'ClassicB40TW-LIGHTIFY'.
+-   Améliorations: check_json: Vérification valeurs de 'Polling'.
+-   Améliorations: Assistant modèle pour device 'lightning'.
+-   Améliorations: Interne Abeille.class (publishMosquitto => msgToCmd).
+-   Nouveau: Support TRADFRIbulbE27WSglobe1055lm (2755).
+-   Améliorations: Images des devices déplacées dans 'core/config/devices_images'.
+-   Nouveau: Support variateur Legrand 077701LA (2756).
+-   Améliorations: Interne constantes Zigbee cluster 0301/Ballast control.
+-   Améliorations: Interne: Support types 08 (8-bit data) a 0F (64-bit data).
+
+## 250318-BETA-1
+
+-   Améliorations: Support INNR SP240 (2750).
+-   Améliorations: Assistant modèle.
+-   Améliorations: Interne Cmd: 'getNodeDescriptor' avec ACK.
+-   Améliorations: OTA: Collecte 'image type'.
+-   Améliorations: OTA: Relecture 'DateCode', 'SWBuildID' & node desc si mise-à-jour terminée avec succés.
+
 ## 250311-BETA-1
 
 -   Améliorations: 'Repair' nettoie les EP invalides de la partie 'zigbee[groups]'.

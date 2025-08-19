@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2025-02-16
+Dernière mise-à-jour le 2025-08-19
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -133,12 +133,12 @@ Legrand, Cable outlet, Legrand cable outlet
 .. image:: ../images/node_Legrand-Cableoutlet.png
    :width: 200px
 
-, , CLA60RGBWOSRAM
+Osram, ?, CLA60RGBWOSRAM
 
 .. image:: ../images/node_CLA60RGBWOSRAM.png
    :width: 200px
 
-Osram, , Osram CLA60 TW
+Osram, AC03642, Osram CLA60 TW
 
 .. image:: ../images/node_OSRAMClassicE27Dimmable.png
    :width: 200px
@@ -261,6 +261,11 @@ Iolloi, ID-EU20FWB4L, Iolloi flush-mounted dimmer switch 5-250 W, trailing edge 
 , , Legrand Dimmer Switch w/o neutral
 
 .. image:: ../images/node_Dimmerswitchwoneutral.png
+   :width: 200px
+
+Legrand, 077701LA, Legrand wired switch without neutral
+
+.. image:: ../images/node_Legrand-Switch.png
    :width: 200px
 
 , , diy-amp-router
@@ -823,6 +828,11 @@ Legrand, 067772, Legrand Celiane 067772 double switch
 .. image:: ../images/node_Legrand-Celiane-Double-Gray.png
    :width: 200px
 
+Innr, OSP210, Innr outdoor smart plug
+
+.. image:: ../images/node_Innr-SmartPlug-Outdoor.png
+   :width: 200px
+
 , , OSRAMSwitch
 
 .. image:: ../images/node_Switch4xEU-LIGHTIFY.png
@@ -1253,6 +1263,11 @@ Sonoff, SNZB-02D, Sonoff temperature & humidity display
 .. image:: ../images/node_Sonoff-TempHumidityDisplay.png
    :width: 200px
 
+Sonoff, SNZB-02P, Sonoff temperature & humidity sensor
+
+.. image:: ../images/node_Sonoff-TempHumidity-2.png
+   :width: 200px
+
 Sonoff, SNZB-06P, Sonoff Human Presence Sensor
 
 .. image:: ../images/node_Sonoff-PresenceSensor.png
@@ -1266,6 +1281,11 @@ Schneider, WISER Unica, Schneider wiser unica plug
 , , SP220 Innr
 
 .. image:: ../images/node_SP220.png
+   :width: 200px
+
+Innr, SP240, Innr smart plug with monitoring
+
+.. image:: ../images/node_Innr-SmartPlug.png
    :width: 200px
 
 Frient, SPLZB-131, Frient Smart Plug Mini Type F
@@ -1446,6 +1466,11 @@ Ikea, , TRADFRI bulb E27 WS clear 806lm
 Ikea, , TRADFRI bulb E27 WS clear 950lm
 
 .. image:: ../images/node_TRADFRIbulbE27WSclear950lm.png
+   :width: 200px
+
+Ikea, LED2201G8, IKEA Ampoule TRADFRI bulb E27 White Spectre globe 1055 lm
+
+.. image:: ../images/node_Ikea-BulbE27.png
    :width: 200px
 
 Ikea, , IKEA Ampoule TRADFRI bulb E27 White Spectre opal 1055 lm
@@ -1691,6 +1716,41 @@ Zemismart, YC-ZS-LO3C-A, Zemismart 2 buttons wireless switch
 LoraTap, SS600ZB, LoraTap 3 gang remote
 
 .. image:: ../images/node_LoraTap-3GangRemote.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+Moes, ZT-SR-EU4, 4 buttons switch
+
+.. image:: ../images/node_Tuya-4ButtonsSwitch-White.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 , , 
@@ -2008,7 +2068,7 @@ Tuya, Temp, Tuya temp and humidity
 .. image:: ../images/node_.png
    :width: 200px
 
-NIKJEBDF, ?, NIKJEBDF temperature/humidity sensor/display
+NIKJEBDF, TS0201, NIKJEBDF temperature/humidity/display sensor
 
 .. image:: ../images/node_Blitzwolf-Display.png
    :width: 200px

@@ -2,6 +2,9 @@
 
 echo "Generating HTML doc with Sphinx"
 
+echo "Note: Using /c/Python37/Scripts"
+export PATH=/c/Python37/Scripts:$PATH
+
 # Testing Sphinx installation
 command -v sphinx-build >/dev/null
 if [ $? -ne 0 ]; then

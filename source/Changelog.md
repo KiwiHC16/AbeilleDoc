@@ -1,5 +1,10 @@
 # ChangeLog
 
+-   Améliorations: Interne MainD: Mise-à-jour du device au max toutes les 10sec.
+-   Améliorations: Interne MainD/Parser: Récupération de l'info 'ImageType'.
+
+## 250830-BETA-1
+
 -   Améliorations: Support variateur Legrand 077701LA (2756).
 -   Améliorations: Interne: Warnings 'check_json.php'.
 -   Améliorations: Remplacement cmdes obsolètes 'setLegrandLEDOff.json' & 'setLegrandLEDOn.json'.
@@ -9,6 +14,7 @@
 -   Nouveau: Support nouveaux modeles TS044 (2758).
 -   Améliorations: Interne. 'AbeilleCmd.class' utilisé par 'Abeille.class' seulement.
 -   Améliorations: Onglet 'avancé'.
+-   Corrections: Interne, 'execTempoCmdAbeille()' revu (commandes oubliées).
 
 ## 250426-BETA-1
 

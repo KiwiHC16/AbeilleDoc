@@ -1,5 +1,23 @@
 # ChangeLog
 
+## 250929-BETA-1
+
+-   Améliorations: Interne: Eq assist pour cluster 0500.
+-   Améliorations: Support SonOff SNZB-04P (2763)
+-   Corrections: Page équipements: Changement mineur pour utilisation barre de recherche.
+-   Améliorations: Support SonOff SNZB-03P (2762)
+-   Améliorations: Interne. Message dbg main daemon.
+-   Améliorations: Suppression commandes obsoletes (etatSwitchSimple/etatSwitchDouble_X).
+-   Améliorations: AbeilleMainD: Test 'battery percent' revu.
+-   Améliorations: Affichage équipements supportés.
+-   Corrections: Pb de casse sur plusieurs noms d'icone.
+
+## 250911-BETA-1
+
+-   Nouveau: Ajout support SonOff SNZB-03P (2762)
+-   Nouveau: Ajout support SonOff SNZB-04P (2763)
+-   Corrections: Crash 'call to undefined getDeviceModel()' (2764)
+
 ## 250901-BETA-1
 
 -   Améliorations: Interne MainD: Mise-à-jour du device au max toutes les 10sec.
@@ -81,13 +99,13 @@
 -   Améliorations: Sonoff SNZB-04 (DS01), modèle revu (2743).
 -   Corrections: Mise-à-jour OTA, otaImageBlockResponse, ajout ACK + prio LOW.
 
-## 250203-BETA-3, ## 250203-BETA-2, ## 250203-BETA-1
+## 250203-BETA-3, 250203-BETA-2, 250203-BETA-1
 
 -   Corrections: Regression AbeilleMainD + Abeille.class
 -   Améliorations: Sonoff SNZB-04, modèle revu (2743).
 -   Améliorations: Redémarrage des démons si niveau de log modifié (page de config).
 
-## 250128-BETA-2, ## 250128-BETA-1
+## 250128-BETA-2, 250128-BETA-1
 
 -   Amélioration: Ajout info 'click' pour Legrand wireless switch (2736).
 -   Amélioration: Outil 'check_json.php' pour commandes inexistantes.
@@ -98,7 +116,7 @@
 -   Corrections: Regression au redémarrage démons (createDevice()).
 -   Corrections: Interne.
 
-## 250115-BETA-2, ## 250115-BETA-1
+## 250115-BETA-2, 250115-BETA-1
 
 -   Amélioration: Interne: Démon principal isolé => 'AbeilleMainD'.
 -   Correction: Page de config: liste des FW crée dynamiquement en fonction du type de gateway.

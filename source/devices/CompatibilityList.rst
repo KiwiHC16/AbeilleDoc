@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2025-09-01
+Dernière mise-à-jour le 2025-09-29
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -1268,6 +1268,16 @@ Sonoff, SNZB-02P, Sonoff temperature & humidity sensor
 .. image:: ../images/node_Sonoff-TempHumidity-2.png
    :width: 200px
 
+Sonoff, SNZB-03P, Sonoff motion sensor
+
+.. image:: ../images/node_Sonoff-MotionSensor.png
+   :width: 200px
+
+SonOff, SNZB-04P, Sonoff door sensor
+
+.. image:: ../images/node_Sonoff-DoorSensor.png
+   :width: 200px
+
 Sonoff, SNZB-06P, Sonoff Human Presence Sensor
 
 .. image:: ../images/node_Sonoff-PresenceSensor.png
@@ -1680,7 +1690,7 @@ MHCOZY, ZG-005-RF, Smart Switch 4 chan relay
 
 Avatto, Z-N-WSM01, Avatto 1 channel switch module
 
-.. image:: ../images/node_Tuya-1chanSwitchModule.png
+.. image:: ../images/node_Tuya-1ChanSwitchModule.png
    :width: 200px
 
 , , Zemismart tactile 2gang sans neutre
@@ -1715,7 +1725,7 @@ Zemismart, YC-ZS-LO3C-A, Zemismart 2 buttons wireless switch
 
 LoraTap, SS600ZB, LoraTap 3 gang remote
 
-.. image:: ../images/node_LoraTap-3GangRemote.png
+.. image:: ../images/node_Loratap-3GangRemote.png
    :width: 200px
 
 , , 
@@ -2535,7 +2545,7 @@ Tuya, QS-Zigbee-C01, Tuya QS-Zigbee-C01 Curtain Module
 
 dOOWifi, DWF-0205ZB-PN-2, dOOWifi window module
 
-.. image:: ../images/node_dOOWifi-DWF-0205ZB-PN.png
+.. image:: ../images/node_Doowifi-DWF-0205ZB-PN.png
    :width: 200px
 
 Silvercrest, SMSZ-1-B2/HG07310, Silvercrest motion sensor
@@ -2650,7 +2660,7 @@ Lexman, CRI80, Lexman GU10 bulb
 
 Sonoff, ZBMini-L, Sonoff smart switch
 
-.. image:: ../images/node_Sonoff-ZbminiL.png
+.. image:: ../images/node_Sonoff-ZBMiniL.png
    :width: 200px
 
 Sonoff, ZBMINIL2/Extreme, Sonoff Smart Switch

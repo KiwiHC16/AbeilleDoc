@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2025-09-29
+Dernière mise-à-jour le 2025-10-20
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -2426,6 +2426,21 @@ Moes, MS-105Z, Moes smart dimmer
 Dongguan, PJ-ZGD01, Tuya Garage Door Controller with Sensor
 
 .. image:: ../images/node_Tuya-GarageDoorController.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Tuya, TS0601, Tuya smoke detector

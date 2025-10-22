@@ -1,11 +1,14 @@
 # ChangeLog
 
+## 251022-BETA-1
+
 -   Améliorations: Page santé. Réarrangement mineur des colonnes.
 -   Corrections: Page équipements: Nouveau changement pour utilisation barre de recherche.
 -   Améliorations: Page équipements: Optimizations d'accès DB.
 -   Corrections: Icone de l'équipement mal affiché.
 -   Nouveau: Support Tuya garage door opener (2765).
 -   Nouveau: Doc dev pour support Tuya (docs/dev).
+-   Améliorations: Support Zigate USB plantée (powerCycleUsb.sh).
 
 ## 250929-BETA-1
 

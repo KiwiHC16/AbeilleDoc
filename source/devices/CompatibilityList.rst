@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2025-10-24
+Dernière mise-à-jour le 2025-11-25
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -2181,6 +2181,16 @@ Tuya, RP280, Tuya zigbee 3.0 repeater
 , , 
 
 .. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+Tuya, RB-SRAIN01, Tuya Solar rain sensor
+
+.. image:: ../images/node_Tuya-SolarRainSensor.png
    :width: 200px
 
 , , 

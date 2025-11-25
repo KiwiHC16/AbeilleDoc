@@ -1,5 +1,20 @@
 # ChangeLog
 
+## 251125-BETA-1
+
+-   Nouveau: Support Tuya Solar Rain Sensor (2768).
+-   Améliorations: Interne: check_json.
+-   Corrections: Regression sur création de package de logs.
+-   Améliorations: Page config. Amélioration mineure pour lien Github.
+-   Améliorations: Ajout LQI dans trace debug parser.
+-   Améliorations: Page config. Liste des ports revue. Suppression utilisation getUsbMapping() bugguée.
+-   Améliorations: Interne, changement nom démons: AbeilleCmd/Parser => AbeilleCmdD/ParserD.
+-   Corrections: Pages santé. Status des démons revu.
+-   Corrections: Placement réseau. Image par défaut si plan utilisateur plus disponible.
+-   Améliorations: Modèle 'TS130F\_\_TZ3000_fccpjz5z': Ajout 'Calibration'.
+-   Améliorations: Onglet avancé Zigate: Ajout 'Get devices list'.
+-   Corrections: Assistant de découverte. Crash.
+
 ## 251024-BETA-1
 
 -   Améliorations: Reset de Zigate plantée: Support '/dev/serial/by-id...'

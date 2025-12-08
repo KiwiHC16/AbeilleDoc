@@ -1,6 +1,14 @@
 # ChangeLog
 
-## 251125-BETA-2, ## 251125-BETA-1
+## 251209-BETA-1
+
+-   Nouveau: Support Xiaomi temp/humidité LCD LYWSD03MMC (2777).
+-   Nouveau: Support Wiser Odace S520513W (2774).
+-   Nouveau: Zigate: Support cmd interne AB05 (FW >= AB010001)
+-   Nouveau: Support Xiaomi temp/humidité LCD LYWSD03MMC avec FW TLC (2779).
+-   Nouveau: Support Philips Tendo color panel (2778).
+
+## 251125-BETA-2, 251125-BETA-1
 
 -   Nouveau: Support Tuya Solar Rain Sensor (2768).
 -   Améliorations: Interne: check_json.

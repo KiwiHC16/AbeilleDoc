@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2025-11-25
+Dernière mise-à-jour le 2025-12-08
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -96,6 +96,11 @@ Orvibo, ST30, Orvibo ST30 temperature/humidity sensor
 , , 
 
 .. image:: ../images/node_.png
+   :width: 200px
+
+Philips, Tendo color panel, Philips color ceiling panel
+
+.. image:: ../images/node_Philips-ColorPanel.png
    :width: 200px
 
 Ledvance, AC33907, Ledvance E27 tunable white bulb
@@ -728,6 +733,21 @@ Zemismart, ZW-EC-01, Zemismart curtain switch
 .. image:: ../images/node_Zemismart-LXX60-CS27LX1.0.png
    :width: 200px
 
+Xiaomi, LYWSD03MMC-TLC, Xiaomi temperature/humidity display
+
+.. image:: ../images/node_Xiaomi-TempHumidityDisplay.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+Xiaomi, LYWSD03MMC, Xiaomi temperature/humidity display
+
+.. image:: ../images/node_Xiaomi-TempHumidityDisplay.png
+   :width: 200px
+
 Xiaomi, MCCGQ14LM, Xiaomi Aqara door sensor
 
 .. image:: ../images/node_Xiaomi-DoorSensor.png
@@ -821,6 +841,11 @@ Sonoff, SNZB-03, Sonoff motion sensor
 Aeotec, GP-AEOMPSEU, Aeotec Multipurpose Sensor
 
 .. image:: ../images/node_Aeotec-MultiPurposeSensor.png
+   :width: 200px
+
+Schneider, S520513W, Schneider rotary dimmer
+
+.. image:: ../images/node_Schneider-RotaryDimmer.png
    :width: 200px
 
 Legrand, 067772, Legrand Celiane 067772 double switch

@@ -1,6 +1,6 @@
 # ChangeLog
 
-## 251219-BETA-1
+## 251219-BETA-2, 251219-BETA-1
 
 **Modèles d'équipement**
 
@@ -31,6 +31,7 @@
 -   Améliorations: Support modèle Profalux 'MOT-C1Z06C' (2721).
 -   Améliorations: Interne. Constantes cluster 0B04.
 -   Améliorations: Migration d'équipement possible que si plusieurs réseaux Abeille actifs (2780).
+-   Nouveau: Onglet avancé: Support préliminaire 'move to hue'.
 
 ## 251209-BETA-1
 

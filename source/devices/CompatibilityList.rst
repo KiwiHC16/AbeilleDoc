@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2025-12-08
+Dernière mise-à-jour le 2025-12-19
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -511,6 +511,11 @@ Icasa, ICZB-IW11D, Icasa AC Dimmer
 Icasa, ICZB-IW11SW, Icasa LED switch
 
 .. image:: ../images/node_Icasa-ICZB-IW11SW.png
+   :width: 200px
+
+Ikea, INSPELNING, Ikea smart plug with energy monitor
+
+.. image:: ../images/node_Ikea-Plug-EnergyMonitor.png
    :width: 200px
 
 , , KADRILJ roller blind

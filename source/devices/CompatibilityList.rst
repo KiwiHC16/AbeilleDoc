@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2025-12-19
+Dernière mise-à-jour le 2025-12-28
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -443,7 +443,7 @@ Gledopto, GL-C-004Z, Gledopto Spectre Blanc
 .. image:: ../images/node_Gledopto-BulbGU10.png
    :width: 200px
 
-Gledopto, GL-S-007Z, Gledopto GL-S-007Z GU10 Bulb RGB+CCT
+Gledopto, GL-S-007Z, Gledopto GU10 Bulb RGB+CCT
 
 .. image:: ../images/node_ZLL-DimmableLigh.png
    :width: 200px

@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2026-01-04
+Dernière mise-à-jour le 2026-01-25
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -448,6 +448,11 @@ Gledopto, GL-S-007Z, Gledopto GU10 Bulb RGB+CCT
 .. image:: ../images/node_ZLL-DimmableLigh.png
    :width: 200px
 
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
 Gledopto, GL-SD-001, Gledopto GL-SD-001 AC dimmer
 
 .. image:: ../images/node_Gledopto-GL-SD-001.png
@@ -628,14 +633,19 @@ Philips, LOM008, Philips Hue Smart Plug
 .. image:: ../images/node_LST001.png
    :width: 200px
 
-, , lightstripe philips hue plus
+Philips, LST002, lightstripe philips hue plus
 
 .. image:: ../images/node_LST002.png
    :width: 200px
 
-, , Philips Hue Ampoules LED Connectées White Ambiance E27
+Philips, LTA001, Philips Hue E27 bulb
 
 .. image:: ../images/node_LTA001.png
+   :width: 200px
+
+Philips, LTA009, Philips E27 bulb
+
+.. image:: ../images/node_PhilipsHue-E27Bulb-WhiteAmbiance-2.png
    :width: 200px
 
 Philips, LTE002, Philips Hue Candle E14 White Ambiance

@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2026-02-02
+Dernière mise-à-jour le 2026-03-17
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -1111,6 +1111,11 @@ Xiaomi, MFKZQ01LM, Xiaomi Cube
 Xiaomi, Temp, Xiaomi temp sensor
 
 .. image:: ../images/node_Xiaomi-TempSensor-1.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 Xiaomi, , Xiaomi door sensor
@@ -2268,7 +2273,7 @@ iAlarm, Siren, iAlarm siren
 .. image:: ../images/node_iAlarm-Siren.png
    :width: 200px
 
-Tuya, Tuya human presence detector, ZG-205x
+Tuya, Tuya 5.8/24Ghz human presence sensor, ZG-205Z
 
 .. image:: ../images/node_Tuya-PresenceAndIlluminance.png
    :width: 200px
@@ -2458,9 +2463,19 @@ Tuya, TV02, Tuya TV02
 .. image:: ../images/node_.png
    :width: 200px
 
-Tuya, ZG-204ZM, Tuya PIR+24G radar+light sensor
+Tuya, ZG-204ZM, Tuya PIR 24Ghz human presnce sensor
 
 .. image:: ../images/node_Tuya-PresenceAndIlluminance-2.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 , , 
@@ -2683,7 +2698,7 @@ Sonoff, SNZB-01, Sonoff wireless button
 .. image:: ../images/node_Sonoff-SNZB-01.png
    :width: 200px
 
-Xiaomi, WSDCGQ11LM, Xiaomi temp/humidity/pressure sensor
+Xiaomi, WSDCGQ11LM, Xiaomi temp-humidity-pressure sensor
 
 .. image:: ../images/node_Xiaomi-TempSensor-2.png
    :width: 200px

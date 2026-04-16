@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2026-03-17
+Dernière mise-à-jour le 2026-04-16
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -2746,6 +2746,31 @@ Sonoff, ZBMini-L, Sonoff smart switch
 Sonoff, ZBMINIL2/Extreme, Sonoff Smart Switch
 
 .. image:: ../images/node_Sonoff-ZBMiniL2.png
+   :width: 200px
+
+HOBEIAN, ZG-204Z, Hobeian motion sensor
+
+.. image:: ../images/node_Tuya-MotionSensor.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
+   :width: 200px
+
+, , 
+
+.. image:: ../images/node_.png
    :width: 200px
 
 , , Template for ZigBee - Color Dimmable Light

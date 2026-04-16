@@ -2,8 +2,10 @@
 
 echo "Generating HTML doc with Sphinx"
 
-echo "Note: Using /c/Python37/Scripts"
-export PATH=/c/Python37/Scripts:$PATH
+PYTHON_ROOT=/c/Python39-32
+
+echo "Note: Using ${PYTHON_ROOT}"
+export PATH=${PYTHON_ROOT}/Scripts:$PATH
 
 # Testing Sphinx installation
 command -v sphinx-build >/dev/null

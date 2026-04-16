@@ -4,7 +4,7 @@ Si vous avez des questions, rencontrez des problèmes, ou demandez le support d'
 
 **Pour toute demande de support, merci avant tout**
 
-- d'être sur d'être en **'mode debug'** (voir ci-dessous)
+- de vérifier que vous êtes bien en **'mode debug'** (voir ci-dessous)
 - d'avoir modifié le nombre de lignes de log de 500 à 5000 via la configuration Jeedom (voir ci-dessous)
   Pensez à **redémarrer** Abeille après ce genre de changement.
 
@@ -22,7 +22,6 @@ Après changement, penser à (dans l'ordre)
 Pour toute livraison de logs pour besoins de support, il est recommandé de
 
 - Passer le nombre de lignes à AU MOINS 5000 par log (500 par défaut = trop court).
-
   - Reglages > Systeme > Configuration > Logs
   - puis encore 'Logs'
 

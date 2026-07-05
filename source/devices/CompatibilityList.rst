@@ -2133,6 +2133,11 @@ NIKJEBDF, TS0201, NIKJEBDF temperature/humidity/display sensor
 .. image:: ../images/node_Blitzwolf-Display.png
    :width: 200px
 
+Tuya, NAS-TH02B2, Tuya temperature & humidity display sensor
+
+.. image:: ../images/node_Tuya-TempHumidityLargeDisplay.png
+   :width: 200px
+
 Tuya, Display, Tuya temperature & humidity display sensor
 
 .. image:: ../images/node_Tuya-TempHumidityDisplay.png

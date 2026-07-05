@@ -1,11 +1,16 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2026-04-16
+Dernière mise-à-jour le 2026-07-05
 
 Sonoff, SBMINI, Sonoff smart switch
 
 .. image:: ../images/node_Sonoff-01MINIZB.png
+   :width: 200px
+
+IKEAofSweden, 09BA, TRADFRI Bilresa remote control with scroll wheel
+
+.. image:: ../images/node_Ikea-Bilresa-Scrollwheel.png
    :width: 200px
 
 DIY, 1-digital-input, 1-digital-input

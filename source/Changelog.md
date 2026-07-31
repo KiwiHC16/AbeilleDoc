@@ -1,5 +1,20 @@
 # ChangeLog
 
+## 260731-BETA-1
+
+- Amélioration: Suppression cmde obsolete 'Up-Down' => 'inf_zbCmdC-0008-MoveToLevel'.
+- Correction: Interne CmdD (configureZigate()).
+- Amélioration: Ajout version Jeedom dans les infos clefs.
+- Amélioration: Interne AbeilleCmdQueue: processCmdQueues() revu.
+- Amélioration: Interne: Ajout description 'logicalType'.
+- Amélioration: Assistant découverte: Ajout 'MAC capa' + 'logical type'.
+- Nouveauté: Support Sonoff MINI-ZBRBS (2791).
+- Amélioration: Reduction latence si plusieurs devices ne repondent pas.
+- Amélioration: Assistant découverte: Erreur de lecture manuf/model sur EP multiples.
+- Nouveauté: Support Sonoff SNZB-01M (2792).
+- Correction: Interne ParserD: Cmds 00 & 04 (move to level) cluster 0008 retourne 'level' au lieu de 1.
+- Nouveauté: Détecteur de monoxyde de carbone Heiman HS-720ES (2793).
+
 ## 260705-BETA-2, 260705-BETA-1
 
 - Nouveauté: Support capteur Hobeian ZG-204Z (2785).

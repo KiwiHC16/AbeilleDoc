@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2026-07-05
+Dernière mise-à-jour le 2026-07-31
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -528,6 +528,11 @@ Ikea, INSPELNING, Ikea smart plug with energy monitor
 .. image:: ../images/node_Ikea-Plug-EnergyMonitor.png
    :width: 200px
 
+Heiman, HS-720ES, Heiman smart CO sensor
+
+.. image:: ../images/node_Heiman-COSensor2.png
+   :width: 200px
+
 , , KADRILJ roller blind
 
 .. image:: ../images/node_FYRTURblock-outrollerblind.png
@@ -791,6 +796,11 @@ Profalux, MAI-ZTS, Profalux gen 2 remote control
 Legrand, 064888, Legrand micro module switch
 
 .. image:: ../images/node_Legrand-MicromoduleSwitch.png
+   :width: 200px
+
+Sonoff, MINI-ZBRBS, Smart roller shutter switch
+
+.. image:: ../images/node_Sonoff-MiniZBRBS.png
    :width: 200px
 
 Profalux, Shutter gen 2, Profalux shutter gen 2
@@ -1301,6 +1311,11 @@ Heiman, HS1SA, Heiman HS1SA smoke sensor
 Frient, SMSZB-120, Frient smoke alarm
 
 .. image:: ../images/node_Frient-SMSZB-120.png
+   :width: 200px
+
+Sonoff, SNZB-01M, Smart Scene button ORB 4-in-1
+
+.. image:: ../images/node_Sonoff-SNZB-01M.png
    :width: 200px
 
 Sonoff, SNZB-01P, Sonoff wireless button

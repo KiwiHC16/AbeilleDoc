@@ -1,5 +1,14 @@
 # ChangeLog
 
+## 260810-BETA-1
+
+- Amélioration: Détecteur de monoxyde de carbone Heiman HS-720ES (2793).
+- Correction: Interne ParserD: Cmds 00 & 04 (move to level) cluster 0008 retourne 'level' au lieu de 1.
+- Amélioration: Formattage infos clefs revu pour compatibilité JSON et lisibilité.
+- Amélioration: Interne assistant découverte.
+- Amélioration: Electrovanne Saswell SAS980SWT (2388): 'rcvValve-Status' => 'rcvValueEnum'.
+- Amélioration: Suppression cmde Tuya obsolete: 'rcvThermostat-Mode' => 'rcvValueEnum'
+
 ## 260731-BETA-1
 
 - Amélioration: Suppression cmde obsolete 'Up-Down' => 'inf_zbCmdC-0008-MoveToLevel'.

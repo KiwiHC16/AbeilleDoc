@@ -1,5 +1,17 @@
 # ChangeLog
 
+## 260820-BETA-1
+
+- Amélioration: Interne MainD: 'createRemote' sorti de 'message()'.
+- Amélioration: Interne MainD: 'updateFromModel'/'resetFromModel' sorti de 'message()'.
+- Amélioration: Interne MainD: Status zigbee (joined/left) mis-à-jour.
+- Amélioration: Sonoff SNZB-02D: Ajout type de batterie.
+- Amélioration: Onglet avancé équipement: Ajout detail MAC capabilities.
+- Amélioration: Page santé: N'affiche 'NO-ACK' que si le device est en écoute permanente.
+- Amélioration: Onglet avancé équipement: Ajout date pour status Zigbee 'joined' or 'left'.
+- Amélioration: Interne Abeille.class + AbeilleTools. Optimisations.
+- Amélioration: Interne. Optimisations.
+
 ## 260810-BETA-1
 
 - Amélioration: Détecteur de monoxyde de carbone Heiman HS-720ES (2793).

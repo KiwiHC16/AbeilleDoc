@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2026-08-10
+Dernière mise-à-jour le 2026-08-20
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -373,7 +373,7 @@ Danfoss, 014G2461, Dansfoss Ally radiator thermostat
 .. image:: ../images/node_Fuel-tank-level.png
    :width: 200px
 
-, , FYRTUR blind
+Ikea, E1757, FYRTUR Blackout Roller Blind
 
 .. image:: ../images/node_FYRTURblock-outrollerblind.png
    :width: 200px
@@ -468,7 +468,7 @@ Gledopto, GL-SD-001, Gledopto GL-SD-001 AC dimmer
 .. image:: ../images/node_Gledopto-BulbGU10.png
    :width: 200px
 
-, , IKEA GUNNARP
+Ikea, Gunnarp, IKEA GUNNARP
 
 .. image:: ../images/node_GUNNARPpanelround.png
    :width: 200px
@@ -533,7 +533,7 @@ Heiman, HS-720ES, Heiman smart CO sensor
 .. image:: ../images/node_Heiman-COSensor2.png
    :width: 200px
 
-, , KADRILJ roller blind
+Ikea, KADRILJ, KADRILJ roller blind
 
 .. image:: ../images/node_FYRTURblock-outrollerblind.png
    :width: 200px

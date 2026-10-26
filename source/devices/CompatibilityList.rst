@@ -1,7 +1,7 @@
 Liste des équipements compatibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dernière mise-à-jour le 2026-08-27
+Dernière mise-à-jour le 2026-10-26
 
 Sonoff, SBMINI, Sonoff smart switch
 
@@ -1323,9 +1323,19 @@ Sonoff, SNZB-01P, Sonoff wireless button
 .. image:: ../images/node_Sonoff-Button.png
    :width: 200px
 
+Sonoff, SNZB-02DR2, Sonoff temperature & humidity display with min/max
+
+.. image:: ../images/node_Sonoff-TempHumidityDisplay-2.png
+   :width: 200px
+
 Sonoff, SNZB-02D, Sonoff temperature & humidity display
 
 .. image:: ../images/node_Sonoff-TempHumidityDisplay.png
+   :width: 200px
+
+Sonoff, SNZB-02LD, Sonoff IP65 temperature display
+
+.. image:: ../images/node_Sonoff-TempDisplay.png
    :width: 200px
 
 Sonoff, SNZB-02M, AirGuard TH Pressure Temperature Humidity Sensor
